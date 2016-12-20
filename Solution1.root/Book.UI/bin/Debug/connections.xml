@@ -1,0 +1,32 @@
+<connections>
+
+  <connection>
+    <type>Common.SQLServerConnection</type>
+    <name>EDERP</name>
+    <datafile>.</datafile>
+    <initialcatalog>EDERP</initialcatalog>
+    <username>sa</username>
+    <password>daobataotie</password>
+    <authentication>SQLServer</authentication>
+  </connection>
+
+  <connection>
+    <type>Common.SQLServerConnection</type>
+    <name>Other</name>
+    <datafile>.</datafile>
+    <initialcatalog>Other</initialcatalog>
+    <username>sa</username>
+    <password>daobataotie</password>
+    <authentication>SQLServer</authentication>
+  </connection>
+
+  <connection>
+    <type>Common.SQLServerConnection</type>
+    <name>Test</name>
+    <datafile>59.120.242.56</datafile>
+    <initialcatalog>Test</initialcatalog>
+    <username>sa</username>
+    <password>!@stan888@!</password>
+    <authentication>SQLServer</authentication>
+  </connection>  
+</connections>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<sqlMap namespace="PronoteProceduresAbilityDetail" xmlns="http://ibatis.apache.org/mapping" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <select id="getByHeader" resultMap="PronoteProceduresAbilityDetailResult" parameterClass="string">
+      SELECT * FROM dbo.PronoteProceduresAbilityDetail WHERE PronoteProceduresAbilityId=#value#
+    </select>
+
+    <select id="SelectByProductAndProcedures" resultMap="PronoteProceduresAbilityDetailResult" parameterClass="Map">
+      <![CDATA[
+      select top 1 d.* from PronoteProceduresAbilityDetail d left join PronoteProceduresAbility p on d.PronoteProceduresAbilityId=p.PronoteProceduresAbilityId where p.ProceduresId=#proceduresId# and d.ProductId=#productid# and d.PronoteMachineId like #pronoteMachineId#
+      ]]>
+    </select>
+  </statements>
+</sqlMap>

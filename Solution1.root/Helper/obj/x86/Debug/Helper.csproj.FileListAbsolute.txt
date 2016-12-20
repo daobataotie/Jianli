@@ -1,0 +1,25 @@
+D:\公司项目\易达ERP\Solution1.root\Helper\bin\x86\Debug\Helper.dll
+D:\公司项目\易达ERP\Solution1.root\Helper\bin\x86\Debug\Helper.pdb
+D:\公司项目\易达ERP\Solution1.root\Helper\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\公司项目\易达ERP\Solution1.root\Helper\obj\x86\Debug\Helper.dll
+D:\公司项目\易达ERP\Solution1.root\Helper\obj\x86\Debug\Helper.pdb
+D:\Company Project\易达ERP\Solution1.root\Helper\bin\x86\Debug\Helper.dll
+D:\Company Project\易达ERP\Solution1.root\Helper\bin\x86\Debug\Helper.pdb
+D:\Company Project\易达ERP\Solution1.root\Helper\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Company Project\易达ERP\Solution1.root\Helper\obj\x86\Debug\Helper.dll
+D:\Company Project\易达ERP\Solution1.root\Helper\obj\x86\Debug\Helper.pdb
+D:\Company Project\OtherERP\Solution1.root\Helper\bin\x86\Debug\Helper.dll
+D:\Company Project\OtherERP\Solution1.root\Helper\bin\x86\Debug\Helper.pdb
+D:\Company Project\OtherERP\Solution1.root\Helper\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Company Project\OtherERP\Solution1.root\Helper\obj\x86\Debug\Helper.dll
+D:\Company Project\OtherERP\Solution1.root\Helper\obj\x86\Debug\Helper.pdb
+D:\Company Project\OtherERP 繁体版\Solution1.root\Helper\bin\x86\Debug\Helper.dll
+D:\Company Project\OtherERP 繁体版\Solution1.root\Helper\bin\x86\Debug\Helper.pdb
+D:\Company Project\OtherERP 繁体版\Solution1.root\Helper\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Company Project\OtherERP 繁体版\Solution1.root\Helper\obj\x86\Debug\Helper.dll
+D:\Company Project\OtherERP 繁体版\Solution1.root\Helper\obj\x86\Debug\Helper.pdb
+D:\Company Project\OtherERP -ch\Solution1.root\Helper\bin\x86\Debug\Helper.dll
+D:\Company Project\OtherERP -ch\Solution1.root\Helper\bin\x86\Debug\Helper.pdb
+D:\Company Project\OtherERP -ch\Solution1.root\Helper\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Company Project\OtherERP -ch\Solution1.root\Helper\obj\x86\Debug\Helper.dll
+D:\Company Project\OtherERP -ch\Solution1.root\Helper\obj\x86\Debug\Helper.pdb

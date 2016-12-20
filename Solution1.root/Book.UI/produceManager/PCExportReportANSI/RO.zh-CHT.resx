@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="lblQuYangShu3.Text" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblPanDing3.Text" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="xrLabel121.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1363.26917, 2548.48047</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="xrLabel121.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>632.375, 55.5625</value>
+  </data>
+  <data name="xrLabel121.Text" xml:space="preserve">
+    <value>                         R7-08-03-1B</value>
+  </data>
+  <assembly alias="DevExpress.Data.v10.2" name="DevExpress.Data.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="xrLabel121.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="lblQuYangShu2.Text" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblQuYangShu4.Text" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblQuYangShu5.Text" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblQuYangShu6.Text" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblQuYangShu7.Text" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblQuYangShu8.Text" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblQuYangShu9.Text" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblQuYangShu10.Text" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblQuYangShu11.Text" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblQuYangShu1.Text" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblPanDing2.Text" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblPanDing4.Text" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblPanDing5.Text" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblPanDing6.Text" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblPanDing7.Text" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblPanDing8.Text" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblPanDing9.Text" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblPanDing10.Text" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblPanDing11.Text" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblPanDing1.Text" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblPanDing0.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel22.Text" xml:space="preserve">
+    <value>TEST RESULTS/測試結果</value>
+  </data>
+  <data name="xrLabel21.Text" xml:space="preserve">
+    <value>CRITERIA/規範</value>
+  </data>
+  <data name="xrLabel20.Text" xml:space="preserve">
+    <value>TEST/測試項目</value>
+  </data>
+  <data name="lblCeShiBiaoZhun.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1449.16675, 294.770752</value>
+  </data>
+  <data name="lblCeShiBiaoZhun.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>540.6499, 57.2916565</value>
+  </data>
+  <data name="lblCeShiBiaoZhun.Text" xml:space="preserve">
+    <value>ANSI  Z87.1-2012</value>
+  </data>
+  <data name="lblCeShiShuLiang.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1449.16675, 200.437454</value>
+  </data>
+  <data name="lblCeShiShuLiang.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>540.650146, 62.58339</value>
+  </data>
+  <data name="lblKehu.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1367.27087, 11.7708416</value>
+  </data>
+  <data name="lblCeShiBaoGaoRiQi.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1449.16675, 114.041649</value>
+  </data>
+  <data name="lblCeShiBaoGaoRiQi.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>540.6499, 59.9375534</value>
+  </data>
+  <data name="lblZhiXingCeShiYuan.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>396.875153, 294.770752</value>
+  </data>
+  <data name="lblZhiXingCeShiYuan.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>661.457642, 57.29181</value>
+  </data>
+  <data name="xrLabel12.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1058.334, 89.04164</value>
+  </data>
+  <data name="xrLabel12.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>390.832764, 100.812485</value>
+  </data>
+  <data name="xrLabel12.Text" xml:space="preserve">
+    <value>REPORT    DATE          (測試報告日期)         ：</value>
+  </data>
+  <data name="xrLabel11.Font" type="System.Drawing.Font, System.Drawing">
+    <value>PMingLiU, 9pt, style=Bold</value>
+  </data>
+  <data name="xrLabel11.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1058.33411, 0</value>
+  </data>
+  <data name="xrLabel11.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>308.937378, 89.04164</value>
+  </data>
+  <data name="xrLabel11.Text" xml:space="preserve">
+    <value>BUYER                           (客戶)                ：</value>
+  </data>
+  <data name="xrLabel10.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1058.33411, 189.854126</value>
+  </data>
+  <data name="xrLabel10.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>390.832642, 91.68747</value>
+  </data>
+  <data name="xrLabel10.Text" xml:space="preserve">
+    <value>AMOUNT TESTED      
+(測試數量)                ：</value>
+  </data>
+  <data name="xrLabel9.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1058.33264, 281.5416</value>
+  </data>
+  <data name="xrLabel9.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>390.8341, 86.39566</value>
+  </data>
+  <data name="xrLabel9.Text" xml:space="preserve">
+    <value>SPECIFICATION               (測試標準)                ：   </value>
+  </data>
+  <data name="lblDingDanBianHao.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>396.875519, 11.7708416</value>
+  </data>
+  <data name="xrLabel7.Text" xml:space="preserve">
+    <value>QTY      TESTED       (受測數)</value>
+  </data>
+  <data name="xrLabel6.Text" xml:space="preserve">
+    <value>AMT  TESTED   (取樣數)</value>
+  </data>
+  <data name="xrLabel5.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2.64605546, 189.854126</value>
+  </data>
+  <data name="xrLabel5.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>394.2291, 91.68747</value>
+  </data>
+  <data name="xrLabel5.Text" xml:space="preserve">
+    <value>AMOUNT                        (訂單數量)                ： </value>
+  </data>
+  <data name="xrLabel3.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2.64603519, 89.04164</value>
+  </data>
+  <data name="xrLabel3.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>394.2291, 100.812485</value>
+  </data>
+  <data name="xrLabel3.Text" xml:space="preserve">
+    <value>PRODUCT  
+(產品品名)                ： </value>
+  </data>
+  <data name="xrLabel2.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>0, 281.5416</value>
+  </data>
+  <data name="xrLabel2.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>396.875153, 86.39572</value>
+  </data>
+  <data name="xrLabel2.Text" xml:space="preserve">
+    <value>TECHNICIAN                          (執行測試員)             ： </value>
+  </data>
+  <data name="xrLabel4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>PMingLiU, 9pt, style=Bold</value>
+  </data>
+  <data name="xrLabel4.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2.64603519, 0</value>
+  </data>
+  <data name="xrLabel4.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>394.2291, 89.04164</value>
+  </data>
+  <data name="xrLabel4.Text" xml:space="preserve">
+    <value>P.O.#                                  (訂單編號)                    ：</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="PageHeader.HeightF" type="System.Single, mscorlib">
+    <value>2604.043</value>
+  </data>
+</root>

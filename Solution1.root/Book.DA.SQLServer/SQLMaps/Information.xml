@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<sqlMap namespace="Information" xmlns="http://ibatis.apache.org/mapping" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <select id="SelectByEmployee" resultMap="InformationResult" parameterClass="Map">
+      <![CDATA[
+        select * from Information where DATEDIFF(d,InformationDate,getdate())<30 and InformationId not in (select InformationId from InformationState where EmployeeId=#EmployeeId#) $sql$ order by InformationDate asc
+      ]]>
+    </select>
+  </statements>
+</sqlMap>

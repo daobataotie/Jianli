@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="ProductBarCodeSet" xmlns="http://ibatis.apache.org/mapping"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="ProductBarCodeSet" type="Book.Model.ProductBarCodeSet, Book.Model" />
+  </alias>
+  <resultMaps>
+    <resultMap id="ProductBarCodeSetResult" class="ProductBarCodeSet">
+      <result property="ProductBarCodeSetId" column="ProductBarCodeSetId" />
+      <result property="NationalCode" column="NationalCode" />
+      <result property="CompanyCode" column="CompanyCode" />
+      <result property="ValueKey" column="ValueKey"/>
+    </resultMap>
+  </resultMaps>
+
+  <statements>
+    <select id="has_rows_of" resultClass="bool">
+      <![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[ProductBarCodeSet]
+				WHERE
+				[ProductBarCodeSetId] = #ProductBarCodeSetId#
+                        			                   
+				) then 1 else 0 end
+                ]]>
+    </select>
+    <select id="has_rows" resultClass="bool">
+      <![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[ProductBarCodeSet]
+ 								
+				) then 1 else 0 end
+                ]]>
+    </select>
+    <!-- select by primary key -->
+    <select id="select_by_primary_key" resultMap="ProductBarCodeSetResult" parameterClass="ProductBarCodeSet">
+      <![CDATA[SELECT
+				[ProductBarCodeSetId],
+				[NationalCode],
+				[CompanyCode],
+        [ValueKey]
+			FROM
+				[dbo].[ProductBarCodeSet]
+			WHERE
+				[ProductBarCodeSetId] = #ProductBarCodeSetId#
+                			          
+         		]]>
+    </select>
+
+    <!-- delete -->
+    <delete id="delete" parameterClass="string">
+      <![CDATA[                
+                DELETE FROM [dbo].[ProductBarCodeSet]
+			WHERE            
+				[ProductBarCodeSetId] = #ProductBarCodeSetId#
+                    		]]>
+    </delete>
+
+    <!-- select all -->
+    <select id="select_all" resultMap="ProductBarCodeSetResult" >
+      <![CDATA[SELECT *
+			FROM 
+				[dbo].[ProductBarCodeSet]
+                			                   
+
+			]]>
+    </select>
+
+    <select id="count_all" resultClass="int">
+      <![CDATA[	select count(*)
+			from 
+				[dbo].[ProductBarCodeSet]
+                			          
+         ]]>
+    </select>
+
+    <select id="select_all_with_paging" resultMap="ProductBarCodeSetResult">
+      <![CDATA[    SELECT *
+            FROM
+            (
+                SELECT *, row_number() over(order by $OrderStatement$) rownumber
+                FROM    
+                    [dbo].[ProductBarCodeSet]
+                    			          
+         
+            ) t
+            WHERE t.rownumber between #Row1# and #Row2#
+             ]]>
+    </select>
+
+    <!-- insert -->
+    <insert id="insert" parameterClass="ProductBarCodeSet">
+      <![CDATA[ INSERT INTO [dbo].[ProductBarCodeSet] 
+			(
+				[ProductBarCodeSetId],
+				[NationalCode],
+				[CompanyCode],
+        [ValueKey]
+			) 
+			VALUES 
+			(
+				#ProductBarCodeSetId#,
+				#NationalCode#,
+				#CompanyCode#,
+        #ValueKey#
+			)
+             ]]>
+    </insert>
+
+    <!-- update -->
+    <update id="update" parameterClass="ProductBarCodeSet">
+      <![CDATA[ 	UPDATE [ProductBarCodeSet] SET
+				[NationalCode] = #NationalCode#,
+				[CompanyCode] = #CompanyCode#,
+        [ValueKey]=#ValueKey#
+			WHERE
+				[ProductBarCodeSetId] = #ProductBarCodeSetId#
+                    ]]>
+    </update>
+    <select id="existsPrimary" resultClass="bool" parameterClass="string">
+      <![CDATA[
+			select case when exists(
+				select *
+				from [dbo].[ProductBarCodeSet]
+				where  ProductBarCodeSetId = #value#                 			                   
+				)
+				then 1 else 0 end
+			]]>
+    </select>
+
+  </statements>
+</sqlMap>

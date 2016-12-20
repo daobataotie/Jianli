@@ -1,0 +1,13 @@
+SCC = This is a Source Code Control file
+
+[Solution1.sln]
+SCC_Aux_Path = "D:\VSS Data"
+SCC_Project_Name = "$/ED/Solution1.root/Solution1", LOZBAAAA
+
+[OtherERP.sln]
+SCC_Aux_Path = "\\µ¶°Í÷Ò÷Ñ\VSS Data"
+SCC_Project_Name = "$/Other-CH/OtherERP.root/OtherERP", PTQDAAAA
+
+[OtherERP-ch.sln]
+SCC_Aux_Path = "D:\VSS Data"
+SCC_Project_Name = "$/Other-CH/OtherERP.root/OtherERP", PTQDAAAA

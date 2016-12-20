@@ -1,0 +1,11 @@
+D:\Company Project\OtherERP -ch\Solution1.root\Book.DA\bin\Release\Book.DA.dll
+D:\Company Project\OtherERP -ch\Solution1.root\Book.DA\bin\Release\Book.DA.pdb
+D:\Company Project\OtherERP -ch\Solution1.root\Book.DA\bin\Release\Book.Model.dll
+D:\Company Project\OtherERP -ch\Solution1.root\Book.DA\bin\Release\Helper.dll
+D:\Company Project\OtherERP -ch\Solution1.root\Book.DA\bin\Release\Book.Model.pdb
+D:\Company Project\OtherERP -ch\Solution1.root\Book.DA\bin\Release\Helper.pdb
+D:\Company Project\OtherERP -ch\Solution1.root\Book.DA\bin\Release\zh-CHS\Book.Model.resources.dll
+D:\Company Project\OtherERP -ch\Solution1.root\Book.DA\bin\Release\zh-CHT\Book.Model.resources.dll
+D:\Company Project\OtherERP -ch\Solution1.root\Book.DA\obj\Release\ResolveAssemblyReference.cache
+D:\Company Project\OtherERP -ch\Solution1.root\Book.DA\obj\Release\Book.DA.dll
+D:\Company Project\OtherERP -ch\Solution1.root\Book.DA\obj\Release\Book.DA.pdb

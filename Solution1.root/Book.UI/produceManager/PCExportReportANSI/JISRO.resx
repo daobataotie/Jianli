@@ -1,0 +1,2889 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Detail.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="Detail.HeightF" type="System.Single, mscorlib">
+    <value>0.211711884</value>
+  </data>
+  <assembly alias="DevExpress.Data.v10.2" name="DevExpress.Data.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="Detail.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>TopLeft</value>
+  </data>
+  <data name="TopMargin.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="TopMargin.HeightF" type="System.Single, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="TopMargin.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>TopLeft</value>
+  </data>
+  <data name="BottomMargin.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="BottomMargin.HeightF" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="BottomMargin.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>TopLeft</value>
+  </data>
+  <data name="xrLabel1.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="xrLabel1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>PMingLiU, 14.25pt, style=Bold</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="xrLabel1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>0, 0</value>
+  </data>
+  <data name="xrLabel1.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>2195, 129.6458</value>
+  </data>
+  <data name="xrLabel1.Text" xml:space="preserve">
+    <value>镜片品质标准检验表(Test Report)</value>
+  </data>
+  <data name="xrLabel1.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>BottomCenter</value>
+  </data>
+  <data name="ReportHeader.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="ReportHeader.HeightF" type="System.Single, mscorlib">
+    <value>129.6458</value>
+  </data>
+  <data name="xrLabel191.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel191.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>984.2502, 3760.97681</value>
+  </data>
+  <data name="xrLabel191.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>182.5621, 47.625</value>
+  </data>
+  <data name="xrLabel191.Text" xml:space="preserve">
+    <value>主管签核:</value>
+  </data>
+  <data name="xrLabel190.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel190.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2.64595437, 3760.97681</value>
+  </data>
+  <data name="xrLabel190.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>346.6042, 58.41968</value>
+  </data>
+  <data name="xrLabel190.Text" xml:space="preserve">
+    <value>W-06附件二</value>
+  </data>
+  <data name="xrLabel189.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel189.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>95.25379, 2998.999</value>
+  </data>
+  <data name="xrLabel189.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>330.7286, 198.64624</value>
+  </data>
+  <data name="xrLabel189.Text" xml:space="preserve">
+    <value>6、构造 Construction</value>
+  </data>
+  <data name="xrLabel189.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="lbFinJudgeIM.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lbFinJudgeIM.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2003.31958, 3621.60864</value>
+  </data>
+  <data name="lbFinJudgeIM.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>191.26001, 127.209961</value>
+  </data>
+  <data name="lbFinJudgeIM.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel187.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel187.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1598.29651, 3621.60962</value>
+  </data>
+  <data name="xrLabel187.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>404.8126, 127.2097</value>
+  </data>
+  <data name="xrLabel187.Text" xml:space="preserve">
+    <value>参照开发设计资料</value>
+  </data>
+  <data name="xrLabel187.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel186.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel186.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>981.608765, 3621.60742</value>
+  </data>
+  <data name="xrLabel186.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>616.6877, 127.2112</value>
+  </data>
+  <data name="xrLabel186.Text" xml:space="preserve">
+    <value>a)清洁或消毒方式b)使用时注意事项c)维修方式d)其他事项</value>
+  </data>
+  <data name="xrLabel186.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrLabel185.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel185.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>719.6758, 3621.61</value>
+  </data>
+  <data name="xrLabel185.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>261.931519, 126.99707</value>
+  </data>
+  <data name="xrLabel185.Text" xml:space="preserve">
+    <value>目视</value>
+  </data>
+  <data name="xrLabel185.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel184.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel184.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>425.985718, 3621.81738</value>
+  </data>
+  <data name="xrLabel184.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>293.6883, 127</value>
+  </data>
+  <data name="xrLabel184.Text" xml:space="preserve">
+    <value>应附于产品</value>
+  </data>
+  <data name="xrLabel184.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrLabel183.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel183.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2.6491034, 3621.81763</value>
+  </data>
+  <data name="xrLabel183.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>92.60336, 126.789063</value>
+  </data>
+  <data name="xrLabel183.Text" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="xrLabel183.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="lbFinJudgeMfpac.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lbFinJudgeMfpac.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2003.10742, 3481.38013</value>
+  </data>
+  <data name="lbFinJudgeMfpac.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>191.479492, 140.2273</value>
+  </data>
+  <data name="lbFinJudgeMfpac.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="FinTestMfpac.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="FinTestMfpac.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1786.15259, 3481.37817</value>
+  </data>
+  <data name="FinTestMfpac.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>216.954346, 140.229248</value>
+  </data>
+  <data name="FinTestMfpac.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="lbFinTestMfpro.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lbFinTestMfpro.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1786.14941, 3343.377</value>
+  </data>
+  <data name="lbFinTestMfpro.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>216.9574, 138.000488</value>
+  </data>
+  <data name="lbFinTestMfpro.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel179.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel179.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1598.29846, 3481.38013</value>
+  </data>
+  <data name="xrLabel179.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>187.85437, 140.2273</value>
+  </data>
+  <data name="xrLabel179.Text" xml:space="preserve">
+    <value>1/500</value>
+  </data>
+  <data name="xrLabel179.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel178.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel178.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>981.6074, 3481.38013</value>
+  </data>
+  <data name="xrLabel178.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>616.6909, 140.2273</value>
+  </data>
+  <data name="xrLabel178.Text" xml:space="preserve">
+    <value>a)标准名称b)划分标示c)生产者名称或名称简化英文字母d)生产年月或DOM</value>
+  </data>
+  <data name="xrLabel178.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrLabel177.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel177.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>719.6758, 3481.38013</value>
+  </data>
+  <data name="xrLabel177.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>261.931519, 140.2273</value>
+  </data>
+  <data name="xrLabel177.Text" xml:space="preserve">
+    <value>目视</value>
+  </data>
+  <data name="xrLabel177.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel176.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel176.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>425.982147, 3481.38013</value>
+  </data>
+  <data name="xrLabel176.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>293.693726, 140.437256</value>
+  </data>
+  <data name="xrLabel176.Text" xml:space="preserve">
+    <value>10.2包装上记号 Marking for packaging</value>
+  </data>
+  <data name="xrLabel176.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrLabel173.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel173.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>981.610535, 3343.37671</value>
+  </data>
+  <data name="xrLabel173.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>616.680969, 138.001465</value>
+  </data>
+  <data name="xrLabel173.Text" xml:space="preserve">
+    <value>制造商之名称或英文简化字母名称应永久固定之方式印于镜片尚且不会妨碍视线处</value>
+  </data>
+  <data name="xrLabel173.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrLabel174.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel174.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1598.29846, 3343.377</value>
+  </data>
+  <data name="xrLabel174.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>187.850952, 138.00293</value>
+  </data>
+  <data name="xrLabel174.Text" xml:space="preserve">
+    <value>1/500</value>
+  </data>
+  <data name="xrLabel174.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="lbFinJudgeMfpro.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lbFinJudgeMfpro.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2003.10742, 3343.377</value>
+  </data>
+  <data name="lbFinJudgeMfpro.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>191.479614, 138.001465</value>
+  </data>
+  <data name="lbFinJudgeMfpro.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel172.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel172.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>719.6758, 3343.37671</value>
+  </data>
+  <data name="xrLabel172.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>261.934753, 138.003174</value>
+  </data>
+  <data name="xrLabel172.Text" xml:space="preserve">
+    <value>目视</value>
+  </data>
+  <data name="xrLabel172.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel161.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel161.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>425.982147, 3343.377</value>
+  </data>
+  <data name="xrLabel161.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>293.6938, 138.0022</value>
+  </data>
+  <data name="xrLabel161.Text" xml:space="preserve">
+    <value>10.1记号标示 Marking for product</value>
+  </data>
+  <data name="xrLabel161.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrLabel169.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel169.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2.6491034, 3343.377</value>
+  </data>
+  <data name="xrLabel169.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>92.60196, 278.44043</value>
+  </data>
+  <data name="xrLabel169.Text" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="xrLabel169.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel171.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel171.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>95.2583542, 3343.377</value>
+  </data>
+  <data name="xrLabel171.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>330.7238, 278.230957</value>
+  </data>
+  <data name="xrLabel171.Text" xml:space="preserve">
+    <value>10.记号标示 Marking</value>
+  </data>
+  <data name="xrLabel171.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="lbFinJudgeMat.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lbFinJudgeMat.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2003.31824, 3197.64526</value>
+  </data>
+  <data name="lbFinJudgeMat.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>191.6847, 145.730957</value>
+  </data>
+  <data name="lbFinJudgeMat.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel168.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel168.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1598.29517, 3197.64624</value>
+  </data>
+  <data name="xrLabel168.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>404.812744, 145.72998</value>
+  </data>
+  <data name="xrLabel168.Text" xml:space="preserve">
+    <value>参照材料设计表</value>
+  </data>
+  <data name="xrLabel168.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel167.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel167.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>981.6075, 3197.64624</value>
+  </data>
+  <data name="xrLabel167.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>616.6878, 145.730469</value>
+  </data>
+  <data name="xrLabel167.Text" xml:space="preserve">
+    <value>1.触及皮肤之部分不应造成皮肤不适或伤害 2.材料本身的强度与弹性应符合使用</value>
+  </data>
+  <data name="xrLabel167.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrLabel166.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel166.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>719.6727, 3197.64624</value>
+  </data>
+  <data name="xrLabel166.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>261.9347, 145.730469</value>
+  </data>
+  <data name="xrLabel166.Text" xml:space="preserve">
+    <value>MSDS</value>
+  </data>
+  <data name="xrLabel166.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel165.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel165.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>425.9844, 2858.55933</value>
+  </data>
+  <data name="xrLabel165.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>293.688477, 140.4397</value>
+  </data>
+  <data name="xrLabel165.Text" xml:space="preserve">
+    <value>8.4e)耐消毒性 Test for Suitability for disinfection</value>
+  </data>
+  <data name="xrLabel165.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrLabel164.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel164.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>95.25375, 3197.64526</value>
+  </data>
+  <data name="xrLabel164.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>330.7285, 145.731445</value>
+  </data>
+  <data name="xrLabel164.Text" xml:space="preserve">
+    <value>7.材料 Material</value>
+  </data>
+  <data name="xrLabel164.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrLabel163.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel163.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2.64702439, 3197.64526</value>
+  </data>
+  <data name="xrLabel163.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>92.60415, 145.731689</value>
+  </data>
+  <data name="xrLabel163.Text" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="xrLabel163.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel160.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel160.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1598.29846, 2998.999</value>
+  </data>
+  <data name="xrLabel160.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>404.8059, 198.646484</value>
+  </data>
+  <data name="xrLabel160.Text" xml:space="preserve">
+    <value>参照开发设计资料</value>
+  </data>
+  <data name="xrLabel160.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel159.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel159.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>981.6077, 2998.999</value>
+  </data>
+  <data name="xrLabel159.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>616.6878, 198.647461</value>
+  </data>
+  <data name="xrLabel159.Text" xml:space="preserve">
+    <value>1.容易使用 不易损坏 2.使用时不会有不舒适感 3.使用者不会因使用此护具而行动受限制 4.不可有特别之角度或不平滑而令使用者受伤 5.各部位应可被更换</value>
+  </data>
+  <data name="xrLabel159.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="lbFinJudgeCon.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lbFinJudgeCon.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2003.1084, 2998.999</value>
+  </data>
+  <data name="lbFinJudgeCon.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>191.4762, 198.64624</value>
+  </data>
+  <data name="lbFinJudgeCon.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel156.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel156.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>95.2584, 3621.81763</value>
+  </data>
+  <data name="xrLabel156.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>330.723755, 126.789795</value>
+  </data>
+  <data name="xrLabel156.Text" xml:space="preserve">
+    <value>12.使用手册 Instruction manual</value>
+  </data>
+  <data name="xrLabel156.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrLabel155.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel155.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2.6491034, 2998.999</value>
+  </data>
+  <data name="xrLabel155.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>92.6041641, 198.64624</value>
+  </data>
+  <data name="xrLabel155.Text" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="xrLabel155.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel158.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel158.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>719.6727, 2998.999</value>
+  </data>
+  <data name="xrLabel158.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>261.9347, 198.646484</value>
+  </data>
+  <data name="xrLabel158.Text" xml:space="preserve">
+    <value>圆面</value>
+  </data>
+  <data name="xrLabel158.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel157.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel157.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>425.985718, 2998.999</value>
+  </data>
+  <data name="xrLabel157.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>293.684448, 198.64624</value>
+  </data>
+  <data name="xrLabel157.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="lbFinJudgeSFD.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lbFinJudgeSFD.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2003.1084, 2858.55835</value>
+  </data>
+  <data name="lbFinJudgeSFD.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>191.6847, 140.440674</value>
+  </data>
+  <data name="lbFinJudgeSFD.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="lbFinTestSFD.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lbFinTestSFD.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1786.14966, 2858.55957</value>
+  </data>
+  <data name="lbFinTestSFD.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>216.9541, 140.439453</value>
+  </data>
+  <data name="lbFinTestSFD.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel152.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel152.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1598.29517, 2858.55835</value>
+  </data>
+  <data name="xrLabel152.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>187.85083, 140.440674</value>
+  </data>
+  <data name="xrLabel152.Text" xml:space="preserve">
+    <value>1/500</value>
+  </data>
+  <data name="xrLabel152.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel151.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel151.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>981.6075, 2858.55957</value>
+  </data>
+  <data name="xrLabel151.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>616.6879, 140.439453</value>
+  </data>
+  <data name="xrLabel151.Text" xml:space="preserve">
+    <value>经测试后不应有可见之损伤</value>
+  </data>
+  <data name="xrLabel151.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel150.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel150.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>719.6727, 2858.55957</value>
+  </data>
+  <data name="xrLabel150.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>261.931458, 140.439453</value>
+  </data>
+  <data name="xrLabel150.Text" xml:space="preserve">
+    <value>消毒剂</value>
+  </data>
+  <data name="xrLabel150.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel149.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel149.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>425.9844, 3197.64526</value>
+  </data>
+  <data name="xrLabel149.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>293.688477, 145.731445</value>
+  </data>
+  <data name="xrLabel148.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel148.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>95.25327, 2858.55615</value>
+  </data>
+  <data name="xrLabel148.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>330.7291, 140.442871</value>
+  </data>
+  <data name="xrLabel148.Text" xml:space="preserve">
+    <value>e)耐消毒性 Suitability for disinfection</value>
+  </data>
+  <data name="xrLabel148.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrLabel147.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel147.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2.6491034, 2858.55615</value>
+  </data>
+  <data name="xrLabel147.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>92.6041641, 140.442871</value>
+  </data>
+  <data name="xrLabel147.Text" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="xrLabel147.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="lbFinJudgeSOHAS.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lbFinJudgeSOHAS.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2003.10645, 2670.49146</value>
+  </data>
+  <data name="lbFinJudgeSOHAS.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>191.897583, 188.06543</value>
+  </data>
+  <data name="lbFinJudgeSOHAS.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="lbFinTestSOHAS.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lbFinTestSOHAS.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1786.14966, 2670.49146</value>
+  </data>
+  <data name="lbFinTestSOHAS.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>216.9541, 188.064941</value>
+  </data>
+  <data name="lbFinTestSOHAS.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel144.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel144.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1598.29517, 2670.49146</value>
+  </data>
+  <data name="xrLabel144.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>187.85083, 188.064941</value>
+  </data>
+  <data name="xrLabel144.Text" xml:space="preserve">
+    <value>1/500</value>
+  </data>
+  <data name="xrLabel144.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel143.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel143.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>981.6075, 2670.49146</value>
+  </data>
+  <data name="xrLabel143.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>616.6878, 188.065186</value>
+  </data>
+  <data name="xrLabel143.Text" xml:space="preserve">
+    <value>不可有裂开或脱离之情形</value>
+  </data>
+  <data name="xrLabel143.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel142.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel142.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>719.6727, 2670.49146</value>
+  </data>
+  <data name="xrLabel142.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>261.934631, 188.064453</value>
+  </data>
+  <data name="xrLabel142.Text" xml:space="preserve">
+    <value>头带拉伸
+测试机</value>
+  </data>
+  <data name="xrLabel142.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel141.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel141.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>425.9844, 2670.49146</value>
+  </data>
+  <data name="xrLabel141.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>293.688477, 188.064941</value>
+  </data>
+  <data name="xrLabel141.Text" xml:space="preserve">
+    <value>8.4d)头带强度测试 Test for Strength of headband attached section</value>
+  </data>
+  <data name="xrLabel141.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrLabel140.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel140.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>95.25327, 2670.49146</value>
+  </data>
+  <data name="xrLabel140.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>330.7291, 188.064453</value>
+  </data>
+  <data name="xrLabel140.Text" xml:space="preserve">
+    <value>d)头带强度测试 Strength of headband attached section</value>
+  </data>
+  <data name="xrLabel140.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrLabel139.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel139.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2.6491034, 2670.49146</value>
+  </data>
+  <data name="xrLabel139.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>92.6041641, 188.064453</value>
+  </data>
+  <data name="xrLabel139.Text" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="xrLabel139.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel136.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel136.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1598.28906, 2524.76</value>
+  </data>
+  <data name="xrLabel136.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>187.851074, 145.731445</value>
+  </data>
+  <data name="xrLabel136.Text" xml:space="preserve">
+    <value>1/500</value>
+  </data>
+  <data name="xrLabel136.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="lbFinTestHCOS.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lbFinTestHCOS.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1786.14307, 2524.76</value>
+  </data>
+  <data name="lbFinTestHCOS.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>216.95813, 145.731445</value>
+  </data>
+  <data name="lbFinTestHCOS.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="lbFinJudgeHCOS.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lbFinJudgeHCOS.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2005.10156, 2524.76</value>
+  </data>
+  <data name="lbFinJudgeHCOS.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>189.478027, 145.731445</value>
+  </data>
+  <data name="lbFinJudgeHCOS.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel133.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel133.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>425.976746, 2524.75977</value>
+  </data>
+  <data name="xrLabel133.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>293.6872, 145.731689</value>
+  </data>
+  <data name="xrLabel133.Text" xml:space="preserve">
+    <value>8.4c2)紧密性试验 第二试验 Test for holding</value>
+  </data>
+  <data name="xrLabel133.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrLabel134.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel134.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>719.6665, 2524.76</value>
+  </data>
+  <data name="xrLabel134.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>261.9347, 145.731445</value>
+  </data>
+  <data name="xrLabel134.Text" xml:space="preserve">
+    <value>中梁吊挂测试机</value>
+  </data>
+  <data name="xrLabel134.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel135.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel135.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>981.601257, 2524.76</value>
+  </data>
+  <data name="xrLabel135.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>616.6877, 145.731445</value>
+  </data>
+  <data name="xrLabel135.Text" xml:space="preserve">
+    <value>框变形时镜片不应脱出镜沟凹槽</value>
+  </data>
+  <data name="xrLabel135.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="lbFinJudgeHCOSTE.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lbFinJudgeHCOSTE.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2003.102, 2386.964</value>
+  </data>
+  <data name="lbFinJudgeHCOSTE.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>191.684448, 137.79541</value>
+  </data>
+  <data name="lbFinJudgeHCOSTE.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="lbFinTestHCOSTE.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lbFinTestHCOSTE.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1786.14307, 2386.964</value>
+  </data>
+  <data name="lbFinTestHCOSTE.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>216.958252, 137.79541</value>
+  </data>
+  <data name="lbFinTestHCOSTE.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel132.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel132.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1598.28906, 2386.964</value>
+  </data>
+  <data name="xrLabel132.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>187.85083, 137.795654</value>
+  </data>
+  <data name="xrLabel132.Text" xml:space="preserve">
+    <value>1/500</value>
+  </data>
+  <data name="xrLabel132.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel131.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel131.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>981.601257, 2386.96533</value>
+  </data>
+  <data name="xrLabel131.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>616.6877, 137.794189</value>
+  </data>
+  <data name="xrLabel131.Text" xml:space="preserve">
+    <value>框变形时镜片不应脱出镜沟凹槽</value>
+  </data>
+  <data name="xrLabel131.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel126.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel126.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>719.6636, 2386.966</value>
+  </data>
+  <data name="xrLabel126.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>261.937744, 137.793457</value>
+  </data>
+  <data name="xrLabel126.Text" xml:space="preserve">
+    <value>镜脚拉伸
+测试机</value>
+  </data>
+  <data name="xrLabel126.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel125.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel125.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>425.976746, 2386.964</value>
+  </data>
+  <data name="xrLabel125.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>293.6872, 137.79541</value>
+  </data>
+  <data name="xrLabel125.Text" xml:space="preserve">
+    <value>8.4c1)紧密性试验 第一试验 Test for holding</value>
+  </data>
+  <data name="xrLabel125.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrLabel128.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel128.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>95.2479, 2386.964</value>
+  </data>
+  <data name="xrLabel128.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>330.7291, 283.527344</value>
+  </data>
+  <data name="xrLabel128.Text" xml:space="preserve">
+    <value>c)紧密性、把持性测试 Holding characteristics of spectacle tpe eye-protectors</value>
+  </data>
+  <data name="xrLabel128.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrLabel127.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel127.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2.64375424, 2386.964</value>
+  </data>
+  <data name="xrLabel127.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>92.6041641, 283.527344</value>
+  </data>
+  <data name="xrLabel127.Text" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="xrLabel127.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel122.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel122.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1598.30054, 2270.3374</value>
+  </data>
+  <data name="xrLabel122.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>187.850952, 116.626465</value>
+  </data>
+  <data name="xrLabel122.Text" xml:space="preserve">
+    <value>1/500</value>
+  </data>
+  <data name="xrLabel122.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel121.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel121.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>981.612732, 2270.338</value>
+  </data>
+  <data name="xrLabel121.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>616.6878, 116.626221</value>
+  </data>
+  <data name="xrLabel121.Text" xml:space="preserve">
+    <value>镜片边缘不应有缺口、伤痕或脱框</value>
+  </data>
+  <data name="xrLabel121.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="lbFinJudgeShock.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lbFinJudgeShock.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2003.11353, 2270.338</value>
+  </data>
+  <data name="lbFinJudgeShock.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>191.466064, 116.625977</value>
+  </data>
+  <data name="lbFinJudgeShock.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="lbFinTestShock.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lbFinTestShock.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1786.15454, 2270.338</value>
+  </data>
+  <data name="lbFinTestShock.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>216.946045, 116.625977</value>
+  </data>
+  <data name="lbFinTestShock.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel118.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel118.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>95.25852, 2270.337</value>
+  </data>
+  <data name="xrLabel118.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>330.7291, 116.626953</value>
+  </data>
+  <data name="xrLabel118.Text" xml:space="preserve">
+    <value>b)耐冲击性 Shock resistance</value>
+  </data>
+  <data name="xrLabel118.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrLabel117.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel117.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2.654352, 2270.3374</value>
+  </data>
+  <data name="xrLabel117.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>92.6041641, 116.626221</value>
+  </data>
+  <data name="xrLabel117.Text" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="xrLabel117.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel120.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel120.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>719.6765, 2270.338</value>
+  </data>
+  <data name="xrLabel120.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>261.936157, 116.625977</value>
+  </data>
+  <data name="xrLabel120.Text" xml:space="preserve">
+    <value>落球测试机</value>
+  </data>
+  <data name="xrLabel120.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel119.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel119.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>425.98822, 2270.3374</value>
+  </data>
+  <data name="xrLabel119.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>293.688171, 116.626465</value>
+  </data>
+  <data name="xrLabel119.Text" xml:space="preserve">
+    <value>8.4b)耐冲击性 Test for Shock resistance</value>
+  </data>
+  <data name="xrLabel119.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="lbFinJudgeApp.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lbFinJudgeApp.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2005.113, 2172.23022</value>
+  </data>
+  <data name="lbFinJudgeApp.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>189.896, 98.107666</value>
+  </data>
+  <data name="lbFinJudgeApp.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="lbFinTestApp.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lbFinTestApp.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1786.15454, 2172.23145</value>
+  </data>
+  <data name="lbFinTestApp.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>216.954346, 98.1064453</value>
+  </data>
+  <data name="lbFinTestApp.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel116.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel116.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1598.30054, 2172.23022</value>
+  </data>
+  <data name="xrLabel116.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>187.851074, 98.10693</value>
+  </data>
+  <data name="xrLabel116.Text" xml:space="preserve">
+    <value>1/500</value>
+  </data>
+  <data name="xrLabel116.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel115.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel115.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>981.6129, 2172.2312</value>
+  </data>
+  <data name="xrLabel115.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>616.687, 98.10669</value>
+  </data>
+  <data name="xrLabel115.Text" xml:space="preserve">
+    <value>不应有缺陷、裂缝、肮脏 同时各部组装组合制造应完美</value>
+  </data>
+  <data name="xrLabel115.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel110.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel110.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>719.678162, 2172.23022</value>
+  </data>
+  <data name="xrLabel110.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>261.934448, 98.10742</value>
+  </data>
+  <data name="xrLabel110.Text" xml:space="preserve">
+    <value>目视</value>
+  </data>
+  <data name="xrLabel110.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel109.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel109.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>425.987549, 2172.23145</value>
+  </data>
+  <data name="xrLabel109.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>293.6888, 98.10596</value>
+  </data>
+  <data name="xrLabel109.Text" xml:space="preserve">
+    <value>8.4a)外观 Test for Appearance</value>
+  </data>
+  <data name="xrLabel109.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrLabel112.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel112.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>95.25852, 2172.23022</value>
+  </data>
+  <data name="xrLabel112.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>330.728973, 98.10693</value>
+  </data>
+  <data name="xrLabel112.Text" xml:space="preserve">
+    <value>a)外观 Appearance</value>
+  </data>
+  <data name="xrLabel112.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrLabel111.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel111.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2.654352, 2172.23022</value>
+  </data>
+  <data name="xrLabel111.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>92.60196, 98.10693</value>
+  </data>
+  <data name="xrLabel111.Text" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="xrLabel111.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel108.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Gainsboro</value>
+  </data>
+  <data name="xrLabel108.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel108.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>0.008518537, 2113.8103</value>
+  </data>
+  <data name="xrLabel108.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>2195, 58.41992</value>
+  </data>
+  <data name="xrLabel108.Text" xml:space="preserve">
+    <value>5.4完成品(Finished Product)</value>
+  </data>
+  <data name="xrLabel108.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrLabel105.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel105.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1598.3009, 1928.3905</value>
+  </data>
+  <data name="xrLabel105.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>187.850586, 185.419067</value>
+  </data>
+  <data name="xrLabel105.Text" xml:space="preserve">
+    <value>半年/次</value>
+  </data>
+  <data name="xrLabel105.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel104.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel104.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>981.601257, 1928.3905</value>
+  </data>
+  <data name="xrLabel104.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>616.687439, 185.418823</value>
+  </data>
+  <data name="xrLabel104.Text" xml:space="preserve">
+    <value>不可有起火现象 但护目镜贴脸部分的软垫不在此限</value>
+  </data>
+  <data name="xrLabel104.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="lblensJudgeIgn.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lblensJudgeIgn.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2005.113, 1928.3905</value>
+  </data>
+  <data name="lblensJudgeIgn.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>189.474854, 185.419067</value>
+  </data>
+  <data name="lblensJudgeIgn.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="lblensTestIgn.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lblensTestIgn.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1786.15454, 1928.3905</value>
+  </data>
+  <data name="lblensTestIgn.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>216.954346, 185.419067</value>
+  </data>
+  <data name="lblensTestIgn.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel101.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel101.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>95.2479, 1928.39038</value>
+  </data>
+  <data name="xrLabel101.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>330.729065, 185.419678</value>
+  </data>
+  <data name="xrLabel101.Text" xml:space="preserve">
+    <value>5.3 耐燃性 Ignition</value>
+  </data>
+  <data name="xrLabel101.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrLabel100.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel100.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>0.00839742, 1928.3905</value>
+  </data>
+  <data name="xrLabel100.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>95.2395, 185.418823</value>
+  </data>
+  <data name="xrLabel100.Text" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="xrLabel100.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel103.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel103.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>719.675, 1928.3905</value>
+  </data>
+  <data name="xrLabel103.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>261.9261, 185.419556</value>
+  </data>
+  <data name="xrLabel103.Text" xml:space="preserve">
+    <value>阻燃测试机</value>
+  </data>
+  <data name="xrLabel103.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel102.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel102.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>425.9875, 1928.3905</value>
+  </data>
+  <data name="xrLabel102.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>293.6875, 185.419556</value>
+  </data>
+  <data name="xrLabel102.Text" xml:space="preserve">
+    <value>8.3 各部位耐燃性试验 Test for ignition of each section</value>
+  </data>
+  <data name="lblensJudgeRTC.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lblensJudgeRTC.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2003.32263, 1780.01147</value>
+  </data>
+  <data name="lblensJudgeRTC.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>191.265015, 148.378784</value>
+  </data>
+  <data name="lblensJudgeRTC.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="lblensTestRTC.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lblensTestRTC.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1786.15271, 1780.01147</value>
+  </data>
+  <data name="lblensTestRTC.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>216.9596, 148.3789</value>
+  </data>
+  <data name="lblensTestRTC.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel99.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel99.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1598.29944, 1780.01147</value>
+  </data>
+  <data name="xrLabel99.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>187.849, 148.3789</value>
+  </data>
+  <data name="xrLabel99.Text" xml:space="preserve">
+    <value>半年/次</value>
+  </data>
+  <data name="xrLabel99.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel98.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel98.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>981.6042, 1780.01147</value>
+  </data>
+  <data name="xrLabel98.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>616.695, 148.379028</value>
+  </data>
+  <data name="xrLabel98.Text" xml:space="preserve">
+    <value>金属部分不能有腐蚀现象</value>
+  </data>
+  <data name="xrLabel98.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel93.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel93.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>719.6757, 1780.01147</value>
+  </data>
+  <data name="xrLabel93.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>261.925537, 148.379028</value>
+  </data>
+  <data name="xrLabel93.Text" xml:space="preserve">
+    <value>食盐水、码表</value>
+  </data>
+  <data name="xrLabel93.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel92.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel92.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>425.987457, 1780.01147</value>
+  </data>
+  <data name="xrLabel92.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>293.684418, 148.378784</value>
+  </data>
+  <data name="xrLabel92.Text" xml:space="preserve">
+    <value>8.2 耐蚀性 Test for Resistance to corrosion</value>
+  </data>
+  <data name="xrLabel95.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel95.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>95.25779, 1780.01147</value>
+  </data>
+  <data name="xrLabel95.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>330.7291, 148.3789</value>
+  </data>
+  <data name="xrLabel95.Text" xml:space="preserve">
+    <value>5.2 耐蚀性 Resistance to corrosion</value>
+  </data>
+  <data name="xrLabel95.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrLabel94.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel94.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>0, 1780.01147</value>
+  </data>
+  <data name="xrLabel94.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>95.2479, 148.378784</value>
+  </data>
+  <data name="xrLabel94.Text" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="xrLabel94.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel89.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel89.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1598.29736, 1623.69568</value>
+  </data>
+  <data name="xrLabel89.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>187.853027, 156.3158</value>
+  </data>
+  <data name="xrLabel89.Text" xml:space="preserve">
+    <value>1/500</value>
+  </data>
+  <data name="xrLabel89.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel88.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel88.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>981.6095, 1623.69543</value>
+  </data>
+  <data name="xrLabel88.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>616.6877, 156.315918</value>
+  </data>
+  <data name="xrLabel88.Text" xml:space="preserve">
+    <value>经测试后镜片不能有明显变形 且光学要符合5.1b要求</value>
+  </data>
+  <data name="xrLabel88.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="lblensJudgeSAET.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lblensJudgeSAET.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2003.11035, 1623.69543</value>
+  </data>
+  <data name="lblensJudgeSAET.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>191.4751, 156.315918</value>
+  </data>
+  <data name="lblensJudgeSAET.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="lblensTestSAET.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lblensTestSAET.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1786.15137, 1623.6958</value>
+  </data>
+  <data name="lblensTestSAET.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>216.956665, 156.314941</value>
+  </data>
+  <data name="lblensTestSAET.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel85.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel85.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>95.25529, 1623.69543</value>
+  </data>
+  <data name="xrLabel85.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>330.7291, 156.315918</value>
+  </data>
+  <data name="xrLabel85.Text" xml:space="preserve">
+    <value>f)耐热性 Stability at elevated temperature</value>
+  </data>
+  <data name="xrLabel85.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrLabel84.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel84.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>0.00528875971, 1623.69543</value>
+  </data>
+  <data name="xrLabel84.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>95.25, 156.315918</value>
+  </data>
+  <data name="xrLabel84.Text" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="xrLabel84.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel87.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel87.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>719.6725, 1623.69543</value>
+  </data>
+  <data name="xrLabel87.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>261.937, 156.31543</value>
+  </data>
+  <data name="xrLabel87.Text" xml:space="preserve">
+    <value>烤箱、码表</value>
+  </data>
+  <data name="xrLabel87.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel86.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel86.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>425.984375, 1623.69531</value>
+  </data>
+  <data name="xrLabel86.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>293.6876, 156.31604</value>
+  </data>
+  <data name="xrLabel86.Text" xml:space="preserve">
+    <value>8.1f)耐热性 Test for Stability at elevated temperature</value>
+  </data>
+  <data name="lblensJudgeSfr.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lblensJudgeSfr.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2003.11255, 1483.25415</value>
+  </data>
+  <data name="lblensJudgeSfr.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>191.895508, 140.440918</value>
+  </data>
+  <data name="lblensJudgeSfr.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="lblensTestSfr.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lblensTestSfr.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1786.15356, 1483.25391</value>
+  </data>
+  <data name="lblensTestSfr.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>216.95813, 140.44104</value>
+  </data>
+  <data name="lblensTestSfr.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel83.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel83.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1598.30054, 1483.25391</value>
+  </data>
+  <data name="xrLabel83.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>187.853027, 140.441162</value>
+  </data>
+  <data name="xrLabel83.Text" xml:space="preserve">
+    <value>半年/次</value>
+  </data>
+  <data name="xrLabel83.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel82.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel82.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>981.612732, 1483.25415</value>
+  </data>
+  <data name="xrLabel82.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>616.6878, 140.44104</value>
+  </data>
+  <data name="xrLabel82.Text" xml:space="preserve">
+    <value>镜片经400公克落砂后清洁以雾度计测之不可超过8%</value>
+  </data>
+  <data name="xrLabel82.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel77.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel77.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>719.6757, 1483.25415</value>
+  </data>
+  <data name="xrLabel77.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>261.937073, 140.44104</value>
+  </data>
+  <data name="xrLabel77.Text" xml:space="preserve">
+    <value>落砂测试机</value>
+  </data>
+  <data name="xrLabel77.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel76.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel76.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>425.987671, 1483.25415</value>
+  </data>
+  <data name="xrLabel76.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>293.687347, 140.441162</value>
+  </data>
+  <data name="xrLabel76.Text" xml:space="preserve">
+    <value>8.1e)表面耐磨抵抗 Test for Surface friction resistance</value>
+  </data>
+  <data name="xrLabel79.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel79.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>95.25852, 1483.25415</value>
+  </data>
+  <data name="xrLabel79.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>330.7291, 140.44104</value>
+  </data>
+  <data name="xrLabel79.Text" xml:space="preserve">
+    <value>e)表面耐磨耗抵抗 Surface friction resistance</value>
+  </data>
+  <data name="xrLabel79.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrLabel78.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel78.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>0.008518537, 1483.25391</value>
+  </data>
+  <data name="xrLabel78.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>95.25, 140.441162</value>
+  </data>
+  <data name="xrLabel78.Text" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="xrLabel78.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel73.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel73.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1598.2915, 1329.58533</value>
+  </data>
+  <data name="xrLabel73.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>187.851563, 153.668335</value>
+  </data>
+  <data name="xrLabel73.Text" xml:space="preserve">
+    <value>1/500</value>
+  </data>
+  <data name="xrLabel73.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel72.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel72.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>981.6075, 1329.58533</value>
+  </data>
+  <data name="xrLabel72.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>616.684, 153.668335</value>
+  </data>
+  <data name="xrLabel72.Text" xml:space="preserve">
+    <value>铁球不可穿透或受测片不可被打裂成两片或多片(若仅有裂痕应可接受 但不应发生)</value>
+  </data>
+  <data name="xrLabel72.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="lblensJudgeShock.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lblensJudgeShock.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2005.10486, 1329.58533</value>
+  </data>
+  <data name="lblensJudgeShock.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>189.474731, 153.668335</value>
+  </data>
+  <data name="lblensJudgeShock.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="lblensTestShock.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lblensTestShock.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1786.143, 1329.58533</value>
+  </data>
+  <data name="lblensTestShock.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>216.95752, 153.668335</value>
+  </data>
+  <data name="lblensTestShock.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel69.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel69.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>95.2479, 1329.58521</value>
+  </data>
+  <data name="xrLabel69.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>330.731262, 153.668945</value>
+  </data>
+  <data name="xrLabel69.Text" xml:space="preserve">
+    <value>d)耐冲击性 Shock resistance</value>
+  </data>
+  <data name="xrLabel69.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrLabel68.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel68.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>0, 1329.58533</value>
+  </data>
+  <data name="xrLabel68.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>95.24792, 153.668579</value>
+  </data>
+  <data name="xrLabel68.Text" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="xrLabel68.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel71.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel71.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>719.6705, 1329.58533</value>
+  </data>
+  <data name="xrLabel71.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>261.933716, 153.668335</value>
+  </data>
+  <data name="xrLabel71.Text" xml:space="preserve">
+    <value>落球测试机</value>
+  </data>
+  <data name="xrLabel71.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel70.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel70.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>425.9791, 1329.58521</value>
+  </data>
+  <data name="xrLabel70.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>293.687469, 153.668579</value>
+  </data>
+  <data name="xrLabel70.Text" xml:space="preserve">
+    <value>8.1d)耐冲击性 Test for Shock resistance</value>
+  </data>
+  <data name="lblensJudgeTran.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lblensJudgeTran.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2003.107, 1186.4989</value>
+  </data>
+  <data name="lblensJudgeTran.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>191.894653, 143.086426</value>
+  </data>
+  <data name="lblensJudgeTran.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="lblensTestTran.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lblensTestTran.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1786.14917, 1186.498</value>
+  </data>
+  <data name="lblensTestTran.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>216.954712, 143.08728</value>
+  </data>
+  <data name="lblensTestTran.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel67.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel67.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1598.29517, 1186.498</value>
+  </data>
+  <data name="xrLabel67.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>187.853027, 143.087158</value>
+  </data>
+  <data name="xrLabel67.Text" xml:space="preserve">
+    <value>1/500</value>
+  </data>
+  <data name="xrLabel67.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel66.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel66.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>981.607666, 1186.49731</value>
+  </data>
+  <data name="xrLabel66.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>616.687744, 143.087891</value>
+  </data>
+  <data name="xrLabel66.Text" xml:space="preserve">
+    <value>光谱仪要测380nm至780nm 测得结果不得小于85%</value>
+  </data>
+  <data name="xrLabel66.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel61.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel61.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>719.6702, 1186.498</value>
+  </data>
+  <data name="xrLabel61.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>261.9372, 143.087158</value>
+  </data>
+  <data name="xrLabel61.Text" xml:space="preserve">
+    <value>U-4100 光谱
+分析仪</value>
+  </data>
+  <data name="xrLabel61.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel60.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel60.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>425.982544, 1186.498</value>
+  </data>
+  <data name="xrLabel60.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>293.687622, 143.087158</value>
+  </data>
+  <data name="xrLabel60.Text" xml:space="preserve">
+    <value>8.1c)透光率 Test for Luminous transmittance</value>
+  </data>
+  <data name="xrLabel63.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel63.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>95.25323, 1186.498</value>
+  </data>
+  <data name="xrLabel63.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>330.7291, 143.087158</value>
+  </data>
+  <data name="xrLabel63.Text" xml:space="preserve">
+    <value>c)透光率 Luminous transmittance  </value>
+  </data>
+  <data name="xrLabel63.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrLabel62.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel62.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>0.003229777, 1186.4989</value>
+  </data>
+  <data name="xrLabel62.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>95.24469, 143.086426</value>
+  </data>
+  <data name="xrLabel62.Text" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="xrLabel62.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel57.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel57.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1598.29517, 1059.28577</value>
+  </data>
+  <data name="xrLabel57.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>187.8534, 127.212</value>
+  </data>
+  <data name="xrLabel57.Text" xml:space="preserve">
+    <value>1/500</value>
+  </data>
+  <data name="xrLabel57.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel56.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel56.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>981.6074, 1059.28674</value>
+  </data>
+  <data name="xrLabel56.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>616.6879, 127.2106</value>
+  </data>
+  <data name="xrLabel56.Text" xml:space="preserve">
+    <value>40mm直径范围内选择4点(其中一点为光学中心)任两点之间相差0.12-1之内</value>
+  </data>
+  <data name="xrLabel56.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="lblensJudgeAti.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lblensJudgeAti.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2003.1062, 1059.28577</value>
+  </data>
+  <data name="lblensJudgeAti.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>191.8959, 127.2115</value>
+  </data>
+  <data name="lblensJudgeAti.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="lblensTestAti.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lblensTestAti.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1786.14917, 1059.28577</value>
+  </data>
+  <data name="lblensTestAti.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>216.9546, 127.2116</value>
+  </data>
+  <data name="lblensTestAti.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel53.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel53.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>95.25323, 1059.28577</value>
+  </data>
+  <data name="xrLabel53.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>330.7292, 127.2118</value>
+  </data>
+  <data name="xrLabel53.Text" xml:space="preserve">
+    <value>b)3)散光度 Atigmatic power</value>
+  </data>
+  <data name="xrLabel53.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrLabel52.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel52.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>0.003229777, 1059.28577</value>
+  </data>
+  <data name="xrLabel52.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>95.25, 127.2119</value>
+  </data>
+  <data name="xrLabel52.Text" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="xrLabel52.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel55.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel55.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>719.6699, 1059.28577</value>
+  </data>
+  <data name="xrLabel55.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>261.9375, 127.212</value>
+  </data>
+  <data name="xrLabel55.Text" xml:space="preserve">
+    <value>Topcon CL-2800</value>
+  </data>
+  <data name="xrLabel55.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel54.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel54.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>425.98233, 1059.28577</value>
+  </data>
+  <data name="xrLabel54.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>293.6877, 127.2117</value>
+  </data>
+  <data name="xrLabel54.Text" xml:space="preserve">
+    <value>8.1b)3)散光度 Test for Atigmatic power</value>
+  </data>
+  <data name="lblensJudgeRef.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lblensJudgeRef.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2003.1062, 932.0746</value>
+  </data>
+  <data name="lblensJudgeRef.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>191.8956, 127.2115</value>
+  </data>
+  <data name="lblensJudgeRef.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="lblensTestRef.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lblensTestRef.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1786.14819, 932.0746</value>
+  </data>
+  <data name="lblensTestRef.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>216.958, 127.2115</value>
+  </data>
+  <data name="lblensTestRef.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel51.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel51.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1598.29517, 932.0741</value>
+  </data>
+  <data name="xrLabel51.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>187.853, 127.2117</value>
+  </data>
+  <data name="xrLabel51.Text" xml:space="preserve">
+    <value>1/500</value>
+  </data>
+  <data name="xrLabel51.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel50.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel50.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>981.607544, 932.0746</value>
+  </data>
+  <data name="xrLabel50.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>616.6876, 127.21106</value>
+  </data>
+  <data name="xrLabel50.Text" xml:space="preserve">
+    <value>任何方向应再0m-1±0.12m-1   </value>
+  </data>
+  <data name="xrLabel50.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel45.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel45.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>719.6699, 932.0744</value>
+  </data>
+  <data name="xrLabel45.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>261.9376, 127.2119</value>
+  </data>
+  <data name="xrLabel45.Text" xml:space="preserve">
+    <value>Topcon CL-2800</value>
+  </data>
+  <data name="xrLabel45.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel44.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel44.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>425.982544, 932.0741</value>
+  </data>
+  <data name="xrLabel44.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>293.6873, 127.2118</value>
+  </data>
+  <data name="xrLabel44.Text" xml:space="preserve">
+    <value>8.1b)2)曲光度 Test for Refractive power</value>
+  </data>
+  <data name="xrLabel47.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel47.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>95.25323, 932.0741</value>
+  </data>
+  <data name="xrLabel47.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>330.7292, 127.2118</value>
+  </data>
+  <data name="xrLabel47.Text" xml:space="preserve">
+    <value>b)2)曲光度 Refractive power</value>
+  </data>
+  <data name="xrLabel47.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrLabel46.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel46.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>0.003229777, 932.0742</value>
+  </data>
+  <data name="xrLabel46.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>95.25, 127.2119</value>
+  </data>
+  <data name="xrLabel46.Text" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="xrLabel46.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel41.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel41.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1598.29517, 804.8624</value>
+  </data>
+  <data name="xrLabel41.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>187.8531, 127.2118</value>
+  </data>
+  <data name="xrLabel41.Text" xml:space="preserve">
+    <value>1/500</value>
+  </data>
+  <data name="xrLabel41.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel40.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel40.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>981.607544, 804.8628</value>
+  </data>
+  <data name="xrLabel40.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>616.6877, 127.211487</value>
+  </data>
+  <data name="xrLabel40.Text" xml:space="preserve">
+    <value>不得超过0.16cm/m</value>
+  </data>
+  <data name="xrLabel40.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="lblensJudgePri.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lblensJudgePri.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2003.10718, 804.8626</value>
+  </data>
+  <data name="lblensJudgePri.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>191.8956, 127.2115</value>
+  </data>
+  <data name="lblensJudgePri.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="lblensTestPri.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lblensTestPri.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1786.14917, 804.8628</value>
+  </data>
+  <data name="lblensTestPri.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>216.9581, 127.2115</value>
+  </data>
+  <data name="lblensTestPri.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel37.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel37.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>95.25323, 804.8624</value>
+  </data>
+  <data name="xrLabel37.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>330.7292, 127.2118</value>
+  </data>
+  <data name="xrLabel37.Text" xml:space="preserve">
+    <value>b)1)棱镜度 Prismatic power</value>
+  </data>
+  <data name="xrLabel37.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrLabel36.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel36.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>0.003229777, 804.8624</value>
+  </data>
+  <data name="xrLabel36.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>95.24792, 127.2116</value>
+  </data>
+  <data name="xrLabel36.Text" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="xrLabel36.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel39.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel39.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>719.6699, 804.8624</value>
+  </data>
+  <data name="xrLabel39.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>261.9376, 127.2118</value>
+  </data>
+  <data name="xrLabel39.Text" xml:space="preserve">
+    <value>INSPEC 雷射测试仪</value>
+  </data>
+  <data name="xrLabel39.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel38.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel38.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>425.98233, 804.8626</value>
+  </data>
+  <data name="xrLabel38.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>293.6876, 127.2115</value>
+  </data>
+  <data name="xrLabel38.Text" xml:space="preserve">
+    <value>8.1b)1)棱镜度 Test for Prismatic power</value>
+  </data>
+  <data name="lblensJudgeApp.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lblensJudgeApp.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2003.10718, 656.4839</value>
+  </data>
+  <data name="lblensJudgeApp.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>191.896, 148.378357</value>
+  </data>
+  <data name="lblensJudgeApp.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="lblensTestApp.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lblensTestApp.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1786.14612, 656.4839</value>
+  </data>
+  <data name="lblensTestApp.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>216.957642, 148.378357</value>
+  </data>
+  <data name="lblensTestApp.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel33.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel33.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1598.29517, 656.4839</value>
+  </data>
+  <data name="xrLabel33.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>187.850952, 148.378235</value>
+  </data>
+  <data name="xrLabel33.Text" xml:space="preserve">
+    <value>1/500</value>
+  </data>
+  <data name="xrLabel33.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel32.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel32.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>981.607544, 656.4838</value>
+  </data>
+  <data name="xrLabel32.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>616.6877, 148.37854</value>
+  </data>
+  <data name="xrLabel32.Text" xml:space="preserve">
+    <value>镜片边缘5mm之内的部分不可有阻碍视觉之处，如气泡、刮伤、黑点、细纹、杂质、破洞、模具痕、刮痕</value>
+  </data>
+  <data name="xrLabel32.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrLabel31.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel31.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>719.6699, 656.4839</value>
+  </data>
+  <data name="xrLabel31.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>261.937561, 148.378357</value>
+  </data>
+  <data name="xrLabel31.Text" xml:space="preserve">
+    <value>目视</value>
+  </data>
+  <data name="xrLabel31.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel30.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel30.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>425.9824, 656.4839</value>
+  </data>
+  <data name="xrLabel30.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>293.687347, 148.3783</value>
+  </data>
+  <data name="xrLabel30.Text" xml:space="preserve">
+    <value>8.1a)外观试验 Test for appearance</value>
+  </data>
+  <data name="xrLabel30.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrLabel29.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel29.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>95.25323, 656.4839</value>
+  </data>
+  <data name="xrLabel29.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>330.7291, 148.3783</value>
+  </data>
+  <data name="xrLabel29.Text" xml:space="preserve">
+    <value>a)外观 Appearance</value>
+  </data>
+  <data name="xrLabel29.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrLabel28.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel28.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>0.003229777, 656.4838</value>
+  </data>
+  <data name="xrLabel28.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>95.25, 148.378418</value>
+  </data>
+  <data name="xrLabel28.Text" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="xrLabel28.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel6.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Gainsboro</value>
+  </data>
+  <data name="xrLabel6.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel6.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>0.003229777, 598.0641</value>
+  </data>
+  <data name="xrLabel6.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>2195, 58.41968</value>
+  </data>
+  <data name="xrLabel6.Text" xml:space="preserve">
+    <value>5.1镜片(lens and eyepiece)</value>
+  </data>
+  <data name="xrLabel6.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrLabel27.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel27.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2003.104, 449.897522</value>
+  </data>
+  <data name="xrLabel27.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>191.895508, 148.166565</value>
+  </data>
+  <data name="xrLabel27.Text" xml:space="preserve">
+    <value>判定
+(Judgement)</value>
+  </data>
+  <data name="xrLabel27.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel26.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel26.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1786.143, 449.897522</value>
+  </data>
+  <data name="xrLabel26.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>216.9607, 148.166565</value>
+  </data>
+  <data name="xrLabel26.Text" xml:space="preserve">
+    <value>检测数/受测数(Qty)</value>
+  </data>
+  <data name="xrLabel26.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel25.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel25.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1598.292, 449.897522</value>
+  </data>
+  <data name="xrLabel25.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>187.850952, 148.166565</value>
+  </data>
+  <data name="xrLabel25.Text" xml:space="preserve">
+    <value>检测比例
+(%)频率(max 12pcs)</value>
+  </data>
+  <data name="xrLabel25.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel24.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel24.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1598.292, 397.086548</value>
+  </data>
+  <data name="xrLabel24.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>596.708, 52.81097</value>
+  </data>
+  <data name="xrLabel24.Text" xml:space="preserve">
+    <value>测试结果(Test Result)</value>
+  </data>
+  <data name="xrLabel24.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel23.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel23.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>981.6042, 397.086548</value>
+  </data>
+  <data name="xrLabel23.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>616.6877, 200.9776</value>
+  </data>
+  <data name="xrLabel23.Text" xml:space="preserve">
+    <value>品质要求(Criterion)</value>
+  </data>
+  <data name="xrLabel23.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel22.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel22.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>719.6665, 397.086548</value>
+  </data>
+  <data name="xrLabel22.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>261.9377, 200.9776</value>
+  </data>
+  <data name="xrLabel22.Text" xml:space="preserve">
+    <value>检测设备(Equipment)</value>
+  </data>
+  <data name="xrLabel22.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel21.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel21.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>425.9791, 397.086548</value>
+  </data>
+  <data name="xrLabel21.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>293.6875, 200.9776</value>
+  </data>
+  <data name="xrLabel21.Text" xml:space="preserve">
+    <value>检测方法(9 Test)</value>
+  </data>
+  <data name="xrLabel21.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel20.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel20.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>95.25, 397.086548</value>
+  </data>
+  <data name="xrLabel20.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>330.7291, 200.9775</value>
+  </data>
+  <data name="xrLabel20.Text" xml:space="preserve">
+    <value>品质要求项目
+(5 Quality)</value>
+  </data>
+  <data name="xrLabel20.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel19.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel19.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>0, 397.086548</value>
+  </data>
+  <data name="xrLabel19.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>95.25, 200.9775</value>
+  </data>
+  <data name="xrLabel19.Text" xml:space="preserve">
+    <value>NO.
+</value>
+  </data>
+  <data name="xrLabel19.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel18.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel18.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1193.271, 296.333344</value>
+  </data>
+  <data name="xrLabel18.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>254, 58.42</value>
+  </data>
+  <data name="xrLabel18.Text" xml:space="preserve">
+    <value>台南厂</value>
+  </data>
+  <data name="xrLabel18.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>BottomLeft</value>
+  </data>
+  <data name="xrLabel17.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel17.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1042.458, 296.333344</value>
+  </data>
+  <data name="xrLabel17.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>150.8125, 58.41995</value>
+  </data>
+  <data name="xrLabel17.Text" xml:space="preserve">
+    <value>PLEASE:</value>
+  </data>
+  <data name="xrLabel17.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>BottomLeft</value>
+  </data>
+  <data name="xrLabel16.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel16.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1497.542, 193.04</value>
+  </data>
+  <data name="xrLabel16.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>254, 58.42</value>
+  </data>
+  <data name="xrLabel16.Text" xml:space="preserve">
+    <value>JIS T8147:2003</value>
+  </data>
+  <data name="xrLabel16.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>BottomLeft</value>
+  </data>
+  <data name="xrLabel15.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel15.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1042.458, 193.04</value>
+  </data>
+  <data name="xrLabel15.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>455.0834, 58.42</value>
+  </data>
+  <data name="xrLabel15.Text" xml:space="preserve">
+    <value>SPECIFICATION(测试标准):</value>
+  </data>
+  <data name="xrLabel15.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>BottomLeft</value>
+  </data>
+  <data name="LbReportDate.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="LbReportDate.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>510.645844, 296.3334</value>
+  </data>
+  <data name="LbReportDate.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>373.0626, 58.41995</value>
+  </data>
+  <data name="LbReportDate.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>BottomLeft</value>
+  </data>
+  <data name="xrLabel13.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel13.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>0, 296.333344</value>
+  </data>
+  <data name="xrLabel13.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>510.6458, 58.41995</value>
+  </data>
+  <data name="xrLabel13.Text" xml:space="preserve">
+    <value>REPORT DATE(测试报告日期):</value>
+  </data>
+  <data name="xrLabel13.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>BottomLeft</value>
+  </data>
+  <data name="LbTesrPerson.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="LbTesrPerson.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>449.7917, 193.04</value>
+  </data>
+  <data name="LbTesrPerson.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>267.2291, 58.42</value>
+  </data>
+  <data name="LbTesrPerson.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>BottomLeft</value>
+  </data>
+  <data name="xrLabel11.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel11.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>0, 193.04</value>
+  </data>
+  <data name="xrLabel11.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>449.7917, 58.42</value>
+  </data>
+  <data name="xrLabel11.Text" xml:space="preserve">
+    <value>TECHNICIAN(执行测试员):</value>
+  </data>
+  <data name="xrLabel11.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>BottomLeft</value>
+  </data>
+  <data name="LbOrderAmount.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="LbOrderAmount.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1394.354, 95.14414</value>
+  </data>
+  <data name="LbOrderAmount.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>254, 58.42</value>
+  </data>
+  <data name="LbOrderAmount.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>BottomLeft</value>
+  </data>
+  <data name="xrLabel9.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel9.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1042.458, 95.14414</value>
+  </data>
+  <data name="xrLabel9.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>351.8959, 58.42001</value>
+  </data>
+  <data name="xrLabel9.Text" xml:space="preserve">
+    <value>AMOUNT(订单数量):</value>
+  </data>
+  <data name="xrLabel9.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>BottomLeft</value>
+  </data>
+  <data name="LbProduct.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="LbProduct.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>362.4792, 95.14414</value>
+  </data>
+  <data name="LbProduct.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>322.7917, 58.42001</value>
+  </data>
+  <data name="LbProduct.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>BottomLeft</value>
+  </data>
+  <data name="xrLabel7.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel7.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>0, 95.14414</value>
+  </data>
+  <data name="xrLabel7.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>362.4792, 58.42001</value>
+  </data>
+  <data name="xrLabel7.Text" xml:space="preserve">
+    <value>PRODUCT(产品品名):</value>
+  </data>
+  <data name="xrLabel7.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>BottomLeft</value>
+  </data>
+  <data name="LbCustomer.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="LbCustomer.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1296.458, 0</value>
+  </data>
+  <data name="LbCustomer.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>296.3333, 58.42</value>
+  </data>
+  <data name="LbCustomer.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>BottomLeft</value>
+  </data>
+  <data name="xrLabel4.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel4.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1042.458, 0</value>
+  </data>
+  <data name="xrLabel4.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>254, 58.42</value>
+  </data>
+  <data name="xrLabel4.Text" xml:space="preserve">
+    <value>BUYER(客户):</value>
+  </data>
+  <data name="xrLabel4.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>BottomLeft</value>
+  </data>
+  <data name="LbOrderId.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="LbOrderId.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>288.3958, 0</value>
+  </data>
+  <data name="LbOrderId.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>563.5625, 58.42</value>
+  </data>
+  <data name="LbOrderId.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>BottomLeft</value>
+  </data>
+  <data name="xrLabel2.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel2.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>0, 0</value>
+  </data>
+  <data name="xrLabel2.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>288.3958, 58.42</value>
+  </data>
+  <data name="xrLabel2.Text" xml:space="preserve">
+    <value>P.O  #(订单号码):</value>
+  </data>
+  <data name="xrLabel2.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>BottomLeft</value>
+  </data>
+  <data name="PageHeader.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="PageHeader.HeightF" type="System.Single, mscorlib">
+    <value>3849.68823</value>
+  </data>
+  <data name="PageFooter.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="PageFooter.HeightF" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>PMingLiU, 9.75pt</value>
+  </data>
+  <assembly alias="DevExpress.XtraReports.v10.2" name="DevExpress.XtraReports.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="$this.ReportUnit" type="DevExpress.XtraReports.UI.ReportUnit, DevExpress.XtraReports.v10.2">
+    <value>TenthsOfAMillimeter</value>
+  </data>
+  <data name="$this.SnapGridSize" type="System.Single, mscorlib">
+    <value>31.75</value>
+  </data>
+</root>
