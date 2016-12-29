@@ -172,6 +172,9 @@ namespace Book.BL
                 product.OrderOnWayQuantity = 0;
                 product.ProductVersion = customerProducts.Version;
                 product.ProductDeadDate = customerProducts.VersionDate;
+                product.EmployeeCreator = BL.V.ActiveOperator.Employee;
+                product.EmployeeCreatorId = product.EmployeeCreator == null ? null : product.EmployeeCreator.EmployeeId;
+                product.InsertTime = DateTime.Now;
 
                 //商品条码
                 product.ProductBarCode = ProductBarCodeSetManager.RandomBarCode();
@@ -408,8 +411,8 @@ namespace Book.BL
                 product.SellUnitId = customerProducts.SellUnitId;
                 product.DepotUnitId = customerProducts.DepotUnitId;
                 product.ProduceUnitId = customerProducts.ProduceUnitId;
-
-
+                product.EmployeeChangeId = BL.V.ActiveOperator.EmployeeId;
+                product.UpdateTime = DateTime.Now;
 
                 if (product.Customer != null)
                     product.CustomerId = product.Customer.CustomerId;

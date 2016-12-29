@@ -699,7 +699,7 @@ namespace Book.UI.Settings.BasicData.Products
             }
             this.product.EmployeeCreator = BL.V.ActiveOperator.Employee;
             this.product.EmployeeCreatorId = this.product.EmployeeCreator == null ? null : this.product.EmployeeCreator.EmployeeId;
-
+            this.product.InsertTime = DateTime.Now;
             //try
             //{
             this.product.ProductBarCode = new BL.ProductBarCodeSetManager().RandomBarCode();
@@ -1127,6 +1127,8 @@ namespace Book.UI.Settings.BasicData.Products
             this.spinEditChakuang.EditValue = this.product.Chakuang;
             this.spinEditPaihe.EditValue = this.product.Paihe;
             this.spinEditMoshu.EditValue = this.product.Moshu;
+            this.dateEditInsertTime.EditValue = this.product.InsertTime;
+
 
             if (!string.IsNullOrEmpty(this.product.SunhaoRage))
             {
@@ -2103,6 +2105,8 @@ namespace Book.UI.Settings.BasicData.Products
 
             this.radioGroupBarCode.Properties.ReadOnly = true;
             this.textEditProductBarCode.Properties.ReadOnly = true;
+
+            this.dateEditInsertTime.Enabled = false;
         }
 
         protected override bool HasRows()

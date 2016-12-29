@@ -23,3 +23,8 @@ D:\Company Project\OtherERP -ch\Solution1.root\Helper\bin\x86\Debug\Helper.pdb
 D:\Company Project\OtherERP -ch\Solution1.root\Helper\obj\x86\Debug\ResolveAssemblyReference.cache
 D:\Company Project\OtherERP -ch\Solution1.root\Helper\obj\x86\Debug\Helper.dll
 D:\Company Project\OtherERP -ch\Solution1.root\Helper\obj\x86\Debug\Helper.pdb
+D:\Company Project\Git - ERP\Jianli\Solution1.root\Helper\bin\x86\Debug\Helper.dll
+D:\Company Project\Git - ERP\Jianli\Solution1.root\Helper\bin\x86\Debug\Helper.pdb
+D:\Company Project\Git - ERP\Jianli\Solution1.root\Helper\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Company Project\Git - ERP\Jianli\Solution1.root\Helper\obj\x86\Debug\Helper.dll
+D:\Company Project\Git - ERP\Jianli\Solution1.root\Helper\obj\x86\Debug\Helper.pdb

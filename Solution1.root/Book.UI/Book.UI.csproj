@@ -10,10 +10,14 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Book.UI</RootNamespace>
     <AssemblyName>Book.UI</AssemblyName>
-    <SccProjectName>SAK</SccProjectName>
-    <SccLocalPath>SAK</SccLocalPath>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccProvider>SAK</SccProvider>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
     <StartupObject>Book.UI.Program</StartupObject>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <ManifestCertificateThumbprint>7D2964952C7A52AE1D733AD7FAB05C1BCFD39649</ManifestCertificateThumbprint>
@@ -4706,6 +4710,14 @@
       <DependentUpon>RO.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\MPSheader\RO1ZYD.resx">
+      <DependentUpon>RO1ZYD.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\MPSheader\RO1ZYD.zh-CHT.resx">
+      <DependentUpon>RO1ZYD.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="produceManager\MRSHeader\SelectMrsHeaderAndDetails.zh-CHS.resx">
       <DependentUpon>SelectMrsHeaderAndDetails.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -4739,6 +4751,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\ProduceMaterialExit\ConditionForList.zh-CHT.resx">
       <DependentUpon>ConditionForList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\ProduceOtherCompact\ROA4.resx">
+      <DependentUpon>ROA4.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\ProduceOtherCompact\ROA4.zh-CHT.resx">
+      <DependentUpon>ROA4.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\ProduceOtherExitMaterial\ChooseOtherExitMaterial.resx">
@@ -11707,6 +11727,12 @@
     <Compile Include="produceManager\MouldCategory\ProductMouldSizeList.Designer.cs">
       <DependentUpon>ProductMouldSizeList.cs</DependentUpon>
     </Compile>
+    <Compile Include="produceManager\MPSheader\RO1ZYD.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="produceManager\MPSheader\RO1ZYD.Designer.cs">
+      <DependentUpon>RO1ZYD.cs</DependentUpon>
+    </Compile>
     <Compile Include="produceManager\PCPGOnlineCheck\RoList.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -11718,6 +11744,12 @@
     </Compile>
     <Compile Include="produceManager\PCPGOnlineCheck\subReportDetail.Designer.cs">
       <DependentUpon>subReportDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="produceManager\ProduceOtherCompact\ROA4.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="produceManager\ProduceOtherCompact\ROA4.Designer.cs">
+      <DependentUpon>ROA4.cs</DependentUpon>
     </Compile>
     <Compile Include="produceManager\ProduceOtherExitMaterial\ChooseOtherExitMaterial.cs">
       <SubType>Form</SubType>

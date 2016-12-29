@@ -119,11 +119,11 @@
   </resheader>
   <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="xrLabelDate.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1402.38635, 81.95826</value>
+    <value>1399.74414, 81.95826</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="xrLabelDate.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>499.2295, 49.9999771</value>
+    <value>504.52124, 49.9999771</value>
   </data>
   <data name="xrLabel4.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>166.866913, 50.0000153</value>
@@ -172,7 +172,7 @@
     <value>1559.68726, 131.958267</value>
   </data>
   <data name="xrLabelMPSEndDate.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>341.9287, 50.0000153</value>
+    <value>334.313, 50.0000153</value>
   </data>
   <data name="xrLabel17.Text" xml:space="preserve">
     <value>結束日期:</value>
@@ -181,7 +181,7 @@
     <value>1559.68726, 181.958282</value>
   </data>
   <data name="xrLabelZhiJian.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>341.9287, 50.00003</value>
+    <value>334.313, 50.00003</value>
   </data>
   <data name="xrLabel13.Text" xml:space="preserve">
     <value>客戶訂單編號:</value>

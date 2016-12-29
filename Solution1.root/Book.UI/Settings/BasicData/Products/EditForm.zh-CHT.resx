@@ -555,7 +555,7 @@
     <value> 至     無限大</value>
   </data>
   <data name="layoutControlItem113.Text" xml:space="preserve">
-    <value>區間一  從：</value>
+    <value>創建時間：</value>
   </data>
   <data name="layoutControlItem114.Text" xml:space="preserve">
     <value>  至  ：</value>

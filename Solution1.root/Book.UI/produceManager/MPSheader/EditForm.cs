@@ -1775,5 +1775,11 @@ namespace Book.UI.produceManager.MPSheader
             return "MPSheader" + "," + this.mpsheader.MPSheaderId;
         }
         #endregion
+
+        private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+           RO1ZYD ro =new RO1ZYD(mpsheader.MPSheaderId);
+           ro.ShowPreviewDialog();
+        }
     }
 }

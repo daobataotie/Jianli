@@ -1,6 +1,6 @@
 ﻿namespace Book.UI.produceManager.MPSheader
 {
-    partial class RO1
+    partial class RO1ZYD
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RO1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RO1ZYD));
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.xrTable2 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow2 = new DevExpress.XtraReports.UI.XRTableRow();
@@ -454,7 +454,7 @@
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel1.StylePriority.UseTextAlignment = false;
             // 
-            // RO1
+            // RO1ZYD
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
             this.Detail,
@@ -465,10 +465,11 @@
             this.bottomMarginBand1,
             this.PageHeader});
             resources.ApplyResources(this, "$this");
-            this.ExportOptions.Xls.SheetName = resources.GetString("RO1.ExportOptions.Xls.SheetName");
-            this.Margins = new System.Drawing.Printing.Margins(150, 89, 79, 79);
-            this.PageHeight = 2794;
+            this.ExportOptions.Xls.SheetName = resources.GetString("RO1ZYD.ExportOptions.Xls.SheetName");
+            this.Margins = new System.Drawing.Printing.Margins(150, 90, 79, 79);
+            this.PageHeight = 1397;
             this.PageWidth = 2159;
+            this.PaperKind = System.Drawing.Printing.PaperKind.Custom;
             this.Version = "10.2";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();

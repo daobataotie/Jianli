@@ -117,94 +117,55 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-  <data name="xrLabelDate.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1402.38635, 81.95826</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="xrLabelDate.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>499.2295, 49.9999771</value>
-  </data>
-  <data name="xrLabel4.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>166.866913, 50.0000153</value>
+  <data name="xrLabel12.Text" xml:space="preserve">
+    <value>商品描述：</value>
   </data>
   <data name="xrLabel4.Text" xml:space="preserve">
-    <value>備     註:</value>
+    <value>批        號：</value>
   </data>
-  <data name="xrLabel2.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>169.512741, 0</value>
+  <data name="xrLabel15.Text" xml:space="preserve">
+    <value>客        戶：</value>
   </data>
-  <data name="xrLabelEmployee0.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>169.512741, 113.770836</value>
+  <data name="xrLabel14.Text" xml:space="preserve">
+    <value>檢測標準：</value>
   </data>
-  <data name="xrLabel6.Text" xml:space="preserve">
-    <value>制 單 人:</value>
-  </data>
-  <data name="xrLabel12.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>199.971069, 50.0000076</value>
-  </data>
-  <data name="xrLabel12.Text" xml:space="preserve">
-    <value>審  核  人:</value>
-  </data>
-  <data name="xrLabelEmployee1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>772.772034, 113.770836</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ReportFooter.HeightF" type="System.Single, mscorlib">
-    <value>163.770874</value>
+  <data name="xrLabel8.Text" xml:space="preserve">
+    <value>客戶訂單號：</value>
   </data>
   <data name="xrTableCell1.Text" xml:space="preserve">
-    <value>序號</value>
-  </data>
-  <data name="xrTableCell2.Text" xml:space="preserve">
     <value>貨品名稱</value>
   </data>
-  <data name="xrTableCell5.Text" xml:space="preserve">
+  <data name="xrTableCell3.Text" xml:space="preserve">
     <value>數量</value>
   </data>
-  <data name="xrTableCell6.Text" xml:space="preserve">
+  <data name="xrTableCell2.Text" xml:space="preserve">
     <value>單位</value>
   </data>
-  <data name="xrLabel21.Text" xml:space="preserve">
-    <value>出貨客戶:</value>
+  <data name="xrTableCell91.Text" xml:space="preserve">
+    <value>下個生產站</value>
   </data>
-  <data name="xrLabelMPSEndDate.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1559.68726, 131.958267</value>
+  <data name="xrTableCell7.Text" xml:space="preserve">
+    <value>備註</value>
   </data>
-  <data name="xrLabelMPSEndDate.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>341.9287, 50.0000153</value>
-  </data>
-  <data name="xrLabel17.Text" xml:space="preserve">
-    <value>結束日期:</value>
-  </data>
-  <data name="xrLabelZhiJian.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1559.68726, 181.958282</value>
-  </data>
-  <data name="xrLabelZhiJian.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>341.9287, 50.00003</value>
-  </data>
-  <data name="xrLabel13.Text" xml:space="preserve">
-    <value>客戶訂單編號:</value>
-  </data>
-  <data name="xrLabelCusXOId.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>875.9503, 181.958282</value>
-  </data>
-  <data name="xrLabelMPSStartDate.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>875.950256, 131.958267</value>
-  </data>
-  <data name="xrLabelCustomer.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>238.125, 181.958282</value>
-  </data>
-  <data name="xrLabel5.Text" xml:space="preserve">
-    <value>開始日期:</value>
-  </data>
-  <data name="xrLabel3.Text" xml:space="preserve">
-    <value>客         戶:</value>
-  </data>
-  <data name="xrLabelMPSheaderId.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>238.125, 131.958267</value>
+  <data name="xrLabel2.Text" xml:space="preserve">
+    <value>供應商：</value>
   </data>
   <data name="xrLabel1.Text" xml:space="preserve">
-    <value>編         號:</value>
+    <value>編        號：</value>
+  </data>
+  <data name="xrLabelDate.Text" xml:space="preserve">
+    <value>列表日期：</value>
+  </data>
+  <data name="xrLabel7.Text" xml:space="preserve">
+    <value>備   註：</value>
+  </data>
+  <data name="xrLabel5.Text" xml:space="preserve">
+    <value>制單人：</value>
+  </data>
+  <data name="xrLabel10.Text" xml:space="preserve">
+    <value>廠商簽名:</value>
+  </data>
+  <data name="xrLabel6.Text" xml:space="preserve">
+    <value>審核人：</value>
   </data>
 </root>

@@ -427,7 +427,7 @@ namespace Book.UI.Settings.BasicData.Customs
 
                     break;
                 case "update":
-                    this.textEditCreator.Text = BL.V.ActiveOperator.OperatorName;
+                    //this.textEditCreator.Text = BL.V.ActiveOperator.OperatorName;
                     this.newChooseUpdateEmployee.EditValue = BL.V.ActiveOperator.Employee;
                     this.dateEditUpdate.EditValue = DateTime.Now;
                     this._customer = this._customerProduct.Customer;

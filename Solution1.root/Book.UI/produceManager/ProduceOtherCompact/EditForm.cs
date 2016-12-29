@@ -414,6 +414,11 @@ namespace Book.UI.produceManager.ProduceOtherCompact
             }
         }
 
+        protected override DevExpress.XtraReports.UI.XtraReport GetReport()
+        {
+            return new ROA4(_produceOtherCompact.ProduceOtherCompactId);
+        }
+
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             ChooseProductForm f = new ChooseProductForm();
@@ -653,11 +658,6 @@ namespace Book.UI.produceManager.ProduceOtherCompact
                 }
                 this.gridControl1.RefreshDataSource();
             }
-        }
-
-        protected override DevExpress.XtraReports.UI.XtraReport GetReport()
-        {
-            return new RO(_produceOtherCompact.ProduceOtherCompactId);
         }
 
         private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
@@ -1020,6 +1020,12 @@ namespace Book.UI.produceManager.ProduceOtherCompact
             else
                 this.barClose.Caption = "強制結案";
             this.barClose.Enabled = this.action == "view" ? true : false;
+        }
+
+        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            RO ro=new  RO(_produceOtherCompact.ProduceOtherCompactId);
+            ro.ShowPreviewDialog();
         }
     }
 }

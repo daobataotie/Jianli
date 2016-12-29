@@ -23,3 +23,8 @@ D:\Company Project\OtherERP -ch\Solution1.root\UT\bin\x86\Debug\UT.pdb
 D:\Company Project\OtherERP -ch\Solution1.root\UT\obj\x86\Debug\ResolveAssemblyReference.cache
 D:\Company Project\OtherERP -ch\Solution1.root\UT\obj\x86\Debug\UT.dll
 D:\Company Project\OtherERP -ch\Solution1.root\UT\obj\x86\Debug\UT.pdb
+D:\Company Project\Git - ERP\Jianli\Solution1.root\UT\bin\x86\Debug\UT.dll
+D:\Company Project\Git - ERP\Jianli\Solution1.root\UT\bin\x86\Debug\UT.pdb
+D:\Company Project\Git - ERP\Jianli\Solution1.root\UT\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Company Project\Git - ERP\Jianli\Solution1.root\UT\obj\x86\Debug\UT.dll
+D:\Company Project\Git - ERP\Jianli\Solution1.root\UT\obj\x86\Debug\UT.pdb

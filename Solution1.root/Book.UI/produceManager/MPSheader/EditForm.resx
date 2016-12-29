@@ -120,24 +120,6 @@
   <metadata name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>172, 17</value>
   </metadata>
-  <data name="barButtonItem1.Caption" xml:space="preserve">
-    <value>導出</value>
-  </data>
-  <metadata name="popupMenu1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>481, 17</value>
-  </metadata>
-  <data name="barButtonItem2.Caption" xml:space="preserve">
-    <value>PDF</value>
-  </data>
-  <data name="barButtonItem3.Caption" xml:space="preserve">
-    <value>XLS</value>
-  </data>
-  <data name="barButtonItem4.Caption" xml:space="preserve">
-    <value>DOC</value>
-  </data>
-  <data name="barButtonItemSearch.Caption" xml:space="preserve">
-    <value>查詢</value>
-  </data>
   <metadata name="imageCollection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -374,10 +356,10 @@
     <value>Panel1</value>
   </data>
   <data name="EmpAudit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>344, 348</value>
+    <value>366, 348</value>
   </data>
   <data name="EmpAudit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 21</value>
+    <value>222, 21</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="EmpAudit.TabIndex" type="System.Int32, mscorlib">
@@ -396,10 +378,10 @@
     <value>4</value>
   </data>
   <data name="textEditPiHao.Location" type="System.Drawing.Point, System.Drawing">
-    <value>324, 62</value>
+    <value>344, 62</value>
   </data>
   <data name="textEditPiHao.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 21</value>
+    <value>169, 21</value>
   </data>
   <data name="textEditPiHao.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
@@ -417,7 +399,7 @@
     <value>5</value>
   </data>
   <data name="textEditAuditState.Location" type="System.Drawing.Point, System.Drawing">
-    <value>344, 323</value>
+    <value>366, 323</value>
   </data>
   <data name="textEditAuditState.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -432,7 +414,7 @@
     <value>False</value>
   </data>
   <data name="textEditAuditState.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 21</value>
+    <value>222, 21</value>
   </data>
   <data name="textEditAuditState.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
@@ -453,7 +435,7 @@
     <value>80, 37</value>
   </data>
   <data name="newChooseContorlCustomer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 21</value>
+    <value>192, 21</value>
   </data>
   <data name="newChooseContorlCustomer.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -471,10 +453,10 @@
     <value>7</value>
   </data>
   <data name="textEditXOId.Location" type="System.Drawing.Point, System.Drawing">
-    <value>324, 37</value>
+    <value>344, 37</value>
   </data>
   <data name="textEditXOId.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 21</value>
+    <value>169, 21</value>
   </data>
   <data name="textEditXOId.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -492,10 +474,10 @@
     <value>8</value>
   </data>
   <data name="textEditCustomerXOId.Location" type="System.Drawing.Point, System.Drawing">
-    <value>546, 37</value>
+    <value>585, 37</value>
   </data>
   <data name="textEditCustomerXOId.Size" type="System.Drawing.Size, System.Drawing">
-    <value>249, 21</value>
+    <value>276, 21</value>
   </data>
   <data name="textEditCustomerXOId.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -513,10 +495,10 @@
     <value>9</value>
   </data>
   <data name="simpleButton3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>276, 297</value>
+    <value>298, 297</value>
   </data>
   <data name="simpleButton3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 22</value>
+    <value>243, 22</value>
   </data>
   <data name="simpleButton3.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -537,10 +519,10 @@
     <value>10</value>
   </data>
   <data name="textMPSheaderDesc.Location" type="System.Drawing.Point, System.Drawing">
-    <value>615, 323</value>
+    <value>660, 323</value>
   </data>
   <data name="textMPSheaderDesc.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 45</value>
+    <value>201, 45</value>
   </data>
   <data name="textMPSheaderDesc.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -561,7 +543,7 @@
     <value>12, 62</value>
   </data>
   <data name="simpleButtonXO.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 22</value>
+    <value>260, 22</value>
   </data>
   <data name="simpleButtonXO.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -582,13 +564,13 @@
     <value>12</value>
   </data>
   <data name="checkEditIsAdvisementSafetyStock.Location" type="System.Drawing.Point, System.Drawing">
-    <value>553, 62</value>
+    <value>598, 62</value>
   </data>
   <data name="checkEditIsAdvisementSafetyStock.Properties.Caption" xml:space="preserve">
     <value>考虑安全库存</value>
   </data>
   <data name="checkEditIsAdvisementSafetyStock.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 19</value>
+    <value>103, 19</value>
   </data>
   <data name="checkEditIsAdvisementSafetyStock.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -612,7 +594,7 @@
     <value>12, 297</value>
   </data>
   <data name="simpleButton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 22</value>
+    <value>137, 22</value>
   </data>
   <data name="simpleButton1.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -633,13 +615,13 @@
     <value>14</value>
   </data>
   <data name="checkEditIsAdvisementOnWay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>478, 62</value>
+    <value>517, 62</value>
   </data>
   <data name="checkEditIsAdvisementOnWay.Properties.Caption" xml:space="preserve">
     <value>考虑在途</value>
   </data>
   <data name="checkEditIsAdvisementOnWay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 19</value>
+    <value>77, 19</value>
   </data>
   <data name="checkEditIsAdvisementOnWay.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -663,7 +645,7 @@
     <value>81, 348</value>
   </data>
   <data name="newChooseEmployee1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 21</value>
+    <value>213, 21</value>
   </data>
   <data name="newChooseEmployee1.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -681,10 +663,10 @@
     <value>16</value>
   </data>
   <data name="simpleButton2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>142, 297</value>
+    <value>153, 297</value>
   </data>
   <data name="simpleButton2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 22</value>
+    <value>141, 22</value>
   </data>
   <data name="simpleButton2.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -705,13 +687,13 @@
     <value>17</value>
   </data>
   <data name="dateMPSStartDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>324, 12</value>
+    <value>344, 12</value>
   </data>
   <data name="dateMPSStartDate.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="dateMPSStartDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 21</value>
+    <value>169, 21</value>
   </data>
   <data name="dateMPSStartDate.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -886,7 +868,7 @@
     <value>74</value>
   </data>
   <data name="gridControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>783, 205</value>
+    <value>849, 205</value>
   </data>
   <data name="gridControl1.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -904,13 +886,13 @@
     <value>19</value>
   </data>
   <data name="dateMPSEndDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>546, 12</value>
+    <value>585, 12</value>
   </data>
   <data name="dateMPSEndDate.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="dateMPSEndDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>249, 21</value>
+    <value>276, 21</value>
   </data>
   <data name="dateMPSEndDate.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -931,7 +913,7 @@
     <value>81, 323</value>
   </data>
   <data name="newChooseEmployee0.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 21</value>
+    <value>213, 21</value>
   </data>
   <data name="newChooseEmployee0.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -952,7 +934,7 @@
     <value>80, 12</value>
   </data>
   <data name="textMPSheaderId.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 21</value>
+    <value>192, 21</value>
   </data>
   <data name="textMPSheaderId.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1108,7 +1090,7 @@
     <value>Root</value>
   </data>
   <data name="layoutControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>807, 380</value>
+    <value>873, 380</value>
   </data>
   <data name="layoutControl1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1132,7 +1114,7 @@
     <value>Panel2</value>
   </data>
   <data name="splitContainerControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>818, 380</value>
+    <value>884, 380</value>
   </data>
   <data name="splitContainerControl1.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -1152,9 +1134,27 @@
   <data name="&gt;&gt;splitContainerControl1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="popupMenu1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>481, 17</value>
+  </metadata>
+  <data name="barButtonItem2.Caption" xml:space="preserve">
+    <value>PDF</value>
+  </data>
+  <data name="barButtonItem3.Caption" xml:space="preserve">
+    <value>XLS</value>
+  </data>
+  <data name="barButtonItem4.Caption" xml:space="preserve">
+    <value>DOC</value>
+  </data>
+  <data name="barButtonItem1.Caption" xml:space="preserve">
+    <value>導出</value>
+  </data>
   <metadata name="saveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>613, 17</value>
   </metadata>
+  <data name="barButtonItemSearch.Caption" xml:space="preserve">
+    <value>查詢</value>
+  </data>
   <data name="layoutControlItem21.CustomizationFormText" xml:space="preserve">
     <value>客户批号:</value>
   </data>
@@ -1173,6 +1173,9 @@
   <data name="layoutControlItem19.Text" xml:space="preserve">
     <value>审核状态：</value>
   </data>
+  <data name="barButtonItem5.Caption" xml:space="preserve">
+    <value>列印中一刀</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1183,7 +1186,7 @@
     <value>7, 14</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>818, 427</value>
+    <value>884, 427</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>WindowsDefaultLocation</value>
@@ -1508,6 +1511,12 @@
   </data>
   <data name="&gt;&gt;layoutControlItem19.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem5.Name" xml:space="preserve">
+    <value>barButtonItem5</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem5.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>EditForm</value>
