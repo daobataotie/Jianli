@@ -96,7 +96,7 @@ namespace Book.UI.Query
             this.xrTable2.SizeF = new System.Drawing.SizeF(1987.021F, 63.5F);
             this.xrTable2.StylePriority.UseBorders = false;
             this.xrTable2.StylePriority.UseTextAlignment = false;
-            this.xrTable2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrTable2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrTableRow2
             // 
@@ -124,14 +124,14 @@ namespace Book.UI.Query
             this.TCSupplier.Name = "TCSupplier";
             this.TCSupplier.StylePriority.UseBorders = false;
             this.TCSupplier.Text = "厂商";
-            this.TCSupplier.Weight = 0.69791712723379051;
+            this.TCSupplier.Weight = 0.7708334690264057;
             // 
             // TCProduceOtherCompactId
             // 
             this.TCProduceOtherCompactId.Dpi = 254F;
             this.TCProduceOtherCompactId.Name = "TCProduceOtherCompactId";
             this.TCProduceOtherCompactId.Text = "委外单号";
-            this.TCProduceOtherCompactId.Weight = 1.0208329328401822;
+            this.TCProduceOtherCompactId.Weight = 0.98958329520380339;
             // 
             // TCProductName
             // 
@@ -142,7 +142,7 @@ namespace Book.UI.Query
             this.TCProductName.StylePriority.UseTextAlignment = false;
             this.TCProductName.Text = "货品名称";
             this.TCProductName.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.TCProductName.Weight = 1.2343756608136993;
+            this.TCProductName.Weight = 1.1927089566574629;
             // 
             // TCCustomerProduct
             // 
@@ -159,35 +159,45 @@ namespace Book.UI.Query
             // 
             this.TCQuantity.Dpi = 254F;
             this.TCQuantity.Name = "TCQuantity";
+            this.TCQuantity.StylePriority.UseTextAlignment = false;
             this.TCQuantity.Text = "数量";
+            this.TCQuantity.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.TCQuantity.Weight = 0.40494831715981766;
             // 
             // TCInDepotCount
             // 
             this.TCInDepotCount.Dpi = 254F;
             this.TCInDepotCount.Name = "TCInDepotCount";
+            this.TCInDepotCount.StylePriority.UseTextAlignment = false;
             this.TCInDepotCount.Text = "进货数量";
+            this.TCInDepotCount.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.TCInDepotCount.Weight = 0.56184834758127755;
             // 
             // TCCancelQuantity
             // 
             this.TCCancelQuantity.Dpi = 254F;
             this.TCCancelQuantity.Name = "TCCancelQuantity";
+            this.TCCancelQuantity.StylePriority.UseTextAlignment = false;
             this.TCCancelQuantity.Text = "退货数量";
+            this.TCCancelQuantity.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.TCCancelQuantity.Weight = 0.5673818362979437;
             // 
             // TCUnit
             // 
             this.TCUnit.Dpi = 254F;
             this.TCUnit.Name = "TCUnit";
+            this.TCUnit.StylePriority.UseTextAlignment = false;
             this.TCUnit.Text = "单位";
+            this.TCUnit.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.TCUnit.Weight = 0.32015152428093874;
             // 
             // TCJQ
             // 
             this.TCJQ.Dpi = 254F;
             this.TCJQ.Name = "TCJQ";
+            this.TCJQ.StylePriority.UseTextAlignment = false;
             this.TCJQ.Text = "交期 ";
+            this.TCJQ.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.TCJQ.Weight = 0.72257405003224784;
             // 
             // xrTableCell22
@@ -200,30 +210,38 @@ namespace Book.UI.Query
             // 
             // TCProductDesc
             // 
+            this.TCProductDesc.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.TCProductDesc.CanShrink = true;
             this.TCProductDesc.Dpi = 254F;
-            this.TCProductDesc.LocationFloat = new DevExpress.Utils.PointFloat(0F, 5.080036F);
+            this.TCProductDesc.KeepTogether = true;
+            this.TCProductDesc.LocationFloat = new DevExpress.Utils.PointFloat(0.0001220703F, 0F);
             this.TCProductDesc.Name = "TCProductDesc";
             this.TCProductDesc.SerializableRtfString = resources.GetString("TCProductDesc.SerializableRtfString");
-            this.TCProductDesc.SizeF = new System.Drawing.SizeF(180.4026F, 58.42001F);
+            this.TCProductDesc.SizeF = new System.Drawing.SizeF(180F, 63.50004F);
+            this.TCProductDesc.StylePriority.UseBorders = false;
             // 
             // TCNote
             // 
             this.TCNote.Dpi = 254F;
             this.TCNote.Name = "TCNote";
+            this.TCNote.StylePriority.UseTextAlignment = false;
             this.TCNote.Text = "备注";
+            this.TCNote.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.TCNote.Weight = 0.56866502667975261;
             // 
             // TCCloesd
             // 
             this.TCCloesd.Dpi = 254F;
             this.TCCloesd.Name = "TCCloesd";
+            this.TCCloesd.StylePriority.UseTextAlignment = false;
             this.TCCloesd.Text = "结案";
+            this.TCCloesd.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.TCCloesd.Weight = 0.32908041176833513;
             // 
             // TopMargin
             // 
             this.TopMargin.Dpi = 254F;
-            this.TopMargin.HeightF = 80F;
+            this.TopMargin.HeightF = 79F;
             this.TopMargin.Name = "TopMargin";
             this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -231,7 +249,7 @@ namespace Book.UI.Query
             // BottomMargin
             // 
             this.BottomMargin.Dpi = 254F;
-            this.BottomMargin.HeightF = 80F;
+            this.BottomMargin.HeightF = 79F;
             this.BottomMargin.Name = "BottomMargin";
             this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -240,10 +258,10 @@ namespace Book.UI.Query
             // 
             this.ReportName.Dpi = 254F;
             this.ReportName.Font = new System.Drawing.Font("新細明體-ExtB", 16F, System.Drawing.FontStyle.Bold);
-            this.ReportName.LocationFloat = new DevExpress.Utils.PointFloat(40.75016F, 0F);
+            this.ReportName.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.ReportName.Name = "ReportName";
             this.ReportName.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.ReportName.SizeF = new System.Drawing.SizeF(1915.917F, 83F);
+            this.ReportName.SizeF = new System.Drawing.SizeF(1987.021F, 83F);
             this.ReportName.StylePriority.UseFont = false;
             this.ReportName.StylePriority.UseTextAlignment = false;
             this.ReportName.Text = "ReportName";
@@ -253,10 +271,10 @@ namespace Book.UI.Query
             // 
             this.ReportTitle.Dpi = 254F;
             this.ReportTitle.Font = new System.Drawing.Font("新細明體-ExtB", 14F, System.Drawing.FontStyle.Bold);
-            this.ReportTitle.LocationFloat = new DevExpress.Utils.PointFloat(40.75016F, 0F);
+            this.ReportTitle.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.ReportTitle.Name = "ReportTitle";
             this.ReportTitle.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.ReportTitle.SizeF = new System.Drawing.SizeF(1915.917F, 68.00001F);
+            this.ReportTitle.SizeF = new System.Drawing.SizeF(1987.021F, 68.00001F);
             this.ReportTitle.StylePriority.UseFont = false;
             this.ReportTitle.StylePriority.UseTextAlignment = false;
             this.ReportTitle.Text = "ReportTitle";
@@ -279,16 +297,16 @@ namespace Book.UI.Query
             this.xrTable1,
             this.ReportTitle});
             this.PageHeader.Dpi = 254F;
-            this.PageHeader.HeightF = 211.6667F;
+            this.PageHeader.HeightF = 189.9201F;
             this.PageHeader.Name = "PageHeader";
             // 
             // lblPrintDate
             // 
             this.lblPrintDate.Dpi = 254F;
-            this.lblPrintDate.LocationFloat = new DevExpress.Utils.PointFloat(1508.333F, 68.00005F);
+            this.lblPrintDate.LocationFloat = new DevExpress.Utils.PointFloat(1578.591F, 68.00005F);
             this.lblPrintDate.Name = "lblPrintDate";
             this.lblPrintDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.lblPrintDate.SizeF = new System.Drawing.SizeF(465.6666F, 58.42001F);
+            this.lblPrintDate.SizeF = new System.Drawing.SizeF(408.4294F, 58.42001F);
             this.lblPrintDate.StylePriority.UseTextAlignment = false;
             this.lblPrintDate.Text = "列印日期：";
             this.lblPrintDate.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
@@ -299,7 +317,7 @@ namespace Book.UI.Query
             this.lblInvoiceDate.LocationFloat = new DevExpress.Utils.PointFloat(195.7917F, 68.00005F);
             this.lblInvoiceDate.Name = "lblInvoiceDate";
             this.lblInvoiceDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.lblInvoiceDate.SizeF = new System.Drawing.SizeF(703.7916F, 58.42001F);
+            this.lblInvoiceDate.SizeF = new System.Drawing.SizeF(554.3023F, 58.42001F);
             this.lblInvoiceDate.StylePriority.UseTextAlignment = false;
             this.lblInvoiceDate.Text = "xrLabel1";
             this.lblInvoiceDate.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
@@ -321,7 +339,7 @@ namespace Book.UI.Query
                         | DevExpress.XtraPrinting.BorderSide.Right)
                         | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrTable1.Dpi = 254F;
-            this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 148.1667F);
+            this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 126.4201F);
             this.xrTable1.Name = "xrTable1";
             this.xrTable1.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow1});
@@ -358,21 +376,21 @@ namespace Book.UI.Query
             this.xrTableCell1.Name = "xrTableCell1";
             this.xrTableCell1.StylePriority.UseBorders = false;
             this.xrTableCell1.Text = "厂商";
-            this.xrTableCell1.Weight = 0.69791712723379051;
+            this.xrTableCell1.Weight = 0.7708334690264057;
             // 
             // xrTableCell2
             // 
             this.xrTableCell2.Dpi = 254F;
             this.xrTableCell2.Name = "xrTableCell2";
             this.xrTableCell2.Text = "委外单号";
-            this.xrTableCell2.Weight = 1.0208329328401822;
+            this.xrTableCell2.Weight = 0.98958329520380339;
             // 
             // xrTableCell3
             // 
             this.xrTableCell3.Dpi = 254F;
             this.xrTableCell3.Name = "xrTableCell3";
             this.xrTableCell3.Text = "货品名称";
-            this.xrTableCell3.Weight = 1.2343756608136993;
+            this.xrTableCell3.Weight = 1.1927089566574629;
             // 
             // xrTableCell4
             // 
@@ -464,7 +482,7 @@ namespace Book.UI.Query
             this.PageFooter});
             this.Dpi = 254F;
             this.Font = new System.Drawing.Font("新細明體-ExtB", 9.75F);
-            this.Margins = new System.Drawing.Printing.Margins(80, 80, 80, 80);
+            this.Margins = new System.Drawing.Printing.Margins(79, 79, 79, 79);
             this.PageHeight = 2794;
             this.PageWidth = 2159;
             this.ReportUnit = DevExpress.XtraReports.UI.ReportUnit.TenthsOfAMillimeter;
