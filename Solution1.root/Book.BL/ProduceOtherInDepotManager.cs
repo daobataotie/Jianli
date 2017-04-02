@@ -263,6 +263,13 @@ namespace Book.BL
             //{
             //    throw new Helper.RequireValueException(Model.ProduceOtherInDepot.PROPERTY_WORKHOUSEID);
             //}
+            foreach (var item in produceOtherInDepot.Details)
+            {
+                if (string.IsNullOrEmpty(item.DepotPositionId))
+                    throw new Helper.RequireValueException(Model.ProduceOtherInDepotDetail.PRO_DepotPositionId);
+                if (item.ProduceInDepotQuantity == null || item.ProduceInDepotQuantity == 0)
+                    throw new Helper.RequireValueException(Model.ProduceOtherInDepotDetail.PRO_ProduceInDepotQuantity);
+            }
         }
 
         public IList<Model.ProduceOtherInDepot> SelectByCondition(DateTime startdate, DateTime enddate, Model.Supplier supper1, Model.Supplier supper2, string ProduceOtherCompactId1, string ProduceOtherCompactId2, Model.Product startPro, Model.Product endPro, string invouceCusidStart, string invouceCusidEnd)
