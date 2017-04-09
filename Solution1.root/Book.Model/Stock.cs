@@ -108,6 +108,19 @@ namespace Book.Model
     }
     public class StockSeach
     {
+        /// <summary>
+        /// 0 出 1人 2调拨 3盘点
+        /// </summary>
+        private int _invoiceTypeIndex;
+        /// <summary>
+        /// 订单类别
+        /// </summary>
+        public int InvoiceTypeIndex
+        {
+            get { return _invoiceTypeIndex; }
+            set { _invoiceTypeIndex = value; }
+        }
+
         private string _invoiceType;
         /// <summary>
         /// 订单类别

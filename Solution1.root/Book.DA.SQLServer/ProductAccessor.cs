@@ -280,6 +280,13 @@ namespace Book.DA.SQLServer
             return sqlmapper.QueryForObject<Model.Product>("Product.SelectByBarCode", productBarCode);
         }
 
+        public IList<Model.Product> SelectAll()
+        {
+            string sql = "select p.StocksQuantity,p.ProductId,p.Id,p.ProductName,p.CustomerProductName,pc.ProductCategoryName from Product p left join ProductCategory pc on p.ProductCategoryId=pc.ProductCategoryId";
+
+            return this.DataReaderBind<Model.Product>(sql, null, CommandType.Text);
+        }
+
         #endregion
 
 

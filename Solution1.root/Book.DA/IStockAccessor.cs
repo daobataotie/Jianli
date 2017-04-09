@@ -53,6 +53,7 @@ namespace Book.DA
         DataTable SelectProductNoDepotout(double years);
         string GetLastDepotoutDate(string productid);
         double GetQuantityByStockAndProduct(string ProductId);
+        IList<Model.StockSeach> SelectJiShi(string productId, DateTime startDate, DateTime endDate);
     }
 }
 

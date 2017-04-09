@@ -201,6 +201,11 @@ namespace Book.BL
         {
             return accessor.GetQuantityByStockAndProduct(ProductId);
         }
+
+        public IList<Model.StockSeach> SelectJiShi(string productId, DateTime startDate, DateTime endDate)
+        {
+            return accessor.SelectJiShi(productId, startDate, endDate);
+        }
     }
 }
 

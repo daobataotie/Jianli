@@ -10307,6 +10307,9 @@
       <DependentUpon>EditForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Settings\StockLimitations\LastMonthStock.resx">
+      <DependentUpon>LastMonthStock.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Settings\StockLimitations\MainForm.resx">
       <SubType>Designer</SubType>
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -10398,6 +10401,9 @@
     <EmbeddedResource Include="Settings\StockLimitations\OutStockReport.zh-CHT.resx">
       <DependentUpon>OutStockReport.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\StockLimitations\SearchProductForm.resx">
+      <DependentUpon>SearchProductForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\StockLimitations\StockCheckForm.resx">
       <DependentUpon>StockCheckForm.cs</DependentUpon>
@@ -12819,6 +12825,12 @@
     <Compile Include="Settings\StockLimitations\ChooseInStockDepot.Designer.cs">
       <DependentUpon>ChooseInStockDepot.cs</DependentUpon>
     </Compile>
+    <Compile Include="Settings\StockLimitations\LastMonthStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\StockLimitations\LastMonthStock.Designer.cs">
+      <DependentUpon>LastMonthStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="Settings\StockLimitations\NoDepotOutProducts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -12830,6 +12842,12 @@
     </Compile>
     <Compile Include="Settings\StockLimitations\NoDepotOutProductsReport.Designer.cs">
       <DependentUpon>NoDepotOutProductsReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\StockLimitations\SearchProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\StockLimitations\SearchProductForm.Designer.cs">
+      <DependentUpon>SearchProductForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings\StockLimitations\StockCheckList.cs">
       <SubType>Form</SubType>

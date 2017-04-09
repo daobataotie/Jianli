@@ -753,6 +753,11 @@ namespace Book.BL
         {
             return accessor.SelectByBarCode(productBarCode);
         }
+
+        public IList<Model.Product> SelectAll()
+        {
+            return accessor.SelectAll();
+        }
     }
 }
 

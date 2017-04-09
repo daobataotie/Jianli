@@ -728,6 +728,9 @@ namespace Book.UI
 
             //商品条码查询
             operations.Add("Settings.BasicData.Products.BarCodeSearchForm", (D1)delegate(System.Windows.Forms.Form form) { M1("Settings.BasicData.Products.BarCodeSearchForm", form); });
+
+            //上月庫存查詢
+            operations.Add("Settings.StockLimitations.LastMonthStock", (D1)delegate(System.Windows.Forms.Form form) { M1("Settings.StockLimitations.LastMonthStock", form); });
         }
 
         static Form CreateForm(string formTypeName)

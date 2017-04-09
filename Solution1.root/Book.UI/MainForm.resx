@@ -504,6 +504,9 @@
   <data name="barButtonItem306.Caption" xml:space="preserve">
     <value>货品一览</value>
   </data>
+  <data name="barButtonItem477.Caption" xml:space="preserve">
+    <value>上月庫存查詢</value>
+  </data>
   <data name="barSubItem49.Caption" xml:space="preserve">
     <value>生产管理</value>
   </data>
@@ -1949,6 +1952,12 @@
     <value>barButtonItem475</value>
   </data>
   <data name="&gt;&gt;barButtonItem475.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem476.Name" xml:space="preserve">
+    <value>barButtonItem476</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem476.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;barButtonItem246.Name" xml:space="preserve">
@@ -5281,10 +5290,10 @@
   <data name="&gt;&gt;defaultLookAndFeel1.Type" xml:space="preserve">
     <value>DevExpress.LookAndFeel.DefaultLookAndFeel, DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;barButtonItem476.Name" xml:space="preserve">
-    <value>barButtonItem476</value>
+  <data name="&gt;&gt;barButtonItem477.Name" xml:space="preserve">
+    <value>barButtonItem477</value>
   </data>
-  <data name="&gt;&gt;barButtonItem476.Type" xml:space="preserve">
+  <data name="&gt;&gt;barButtonItem477.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
