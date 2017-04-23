@@ -4462,6 +4462,18 @@
     <EmbeddedResource Include="Invoices\CT\ConditionForm.resx">
       <DependentUpon>ConditionForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\CT\RO1ZYD.resx">
+      <DependentUpon>RO1ZYD.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\CT\RO1ZYD.zh-CHS.resx">
+      <DependentUpon>RO1ZYD.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\CT\RO1ZYD.zh-CHT.resx">
+      <DependentUpon>RO1ZYD.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Invoices\PT\ConditionPT.resx">
       <DependentUpon>ConditionPT.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -11534,6 +11546,12 @@
     </Compile>
     <Compile Include="Invoices\CT\ConditionForm.Designer.cs">
       <DependentUpon>ConditionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\CT\RO1ZYD.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Invoices\CT\RO1ZYD.Designer.cs">
+      <DependentUpon>RO1ZYD.cs</DependentUpon>
     </Compile>
     <Compile Include="Invoices\PT\ConditionPT.cs">
       <SubType>Form</SubType>

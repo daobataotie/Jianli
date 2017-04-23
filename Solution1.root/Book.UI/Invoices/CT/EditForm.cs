@@ -53,7 +53,7 @@ namespace Book.UI.Invoices.CT
             this.action = "update";
         }
 
-        public EditForm(string invoiceid,string action)
+        public EditForm(string invoiceid, string action)
             : this()
         {
             this.invoice = this.invoiceManager.Get(invoiceid);
@@ -791,6 +791,12 @@ namespace Book.UI.Invoices.CT
                     break;
             }
 
+        }
+
+        private void barBtn_ZYD_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            RO1ZYD ro = new CT.RO1ZYD(this.invoice.InvoiceId);
+            ro.ShowPreviewDialog();
         }
     }
 }
