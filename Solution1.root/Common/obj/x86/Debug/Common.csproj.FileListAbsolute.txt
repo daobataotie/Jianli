@@ -28,3 +28,8 @@ D:\Company Project\Git - ERP\Jianli\Solution1.root\Common\bin\x86\Debug\Common.p
 D:\Company Project\Git - ERP\Jianli\Solution1.root\Common\obj\x86\Debug\ResolveAssemblyReference.cache
 D:\Company Project\Git - ERP\Jianli\Solution1.root\Common\obj\x86\Debug\Common.dll
 D:\Company Project\Git - ERP\Jianli\Solution1.root\Common\obj\x86\Debug\Common.pdb
+D:\Projects\Git - ERP\Jianli\Solution1.root\Common\bin\x86\Debug\Common.dll
+D:\Projects\Git - ERP\Jianli\Solution1.root\Common\bin\x86\Debug\Common.pdb
+D:\Projects\Git - ERP\Jianli\Solution1.root\Common\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Projects\Git - ERP\Jianli\Solution1.root\Common\obj\x86\Debug\Common.dll
+D:\Projects\Git - ERP\Jianli\Solution1.root\Common\obj\x86\Debug\Common.pdb

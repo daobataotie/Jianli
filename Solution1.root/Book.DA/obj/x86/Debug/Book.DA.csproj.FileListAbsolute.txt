@@ -64,3 +64,14 @@ D:\Company Project\Git - ERP\Jianli\Solution1.root\Book.DA\bin\x86\Debug\zh-CHT\
 D:\Company Project\Git - ERP\Jianli\Solution1.root\Book.DA\obj\x86\Debug\ResolveAssemblyReference.cache
 D:\Company Project\Git - ERP\Jianli\Solution1.root\Book.DA\obj\x86\Debug\Book.DA.dll
 D:\Company Project\Git - ERP\Jianli\Solution1.root\Book.DA\obj\x86\Debug\Book.DA.pdb
+D:\Projects\Git - ERP\Jianli\Solution1.root\Book.DA\bin\x86\Debug\Book.DA.dll
+D:\Projects\Git - ERP\Jianli\Solution1.root\Book.DA\bin\x86\Debug\Book.DA.pdb
+D:\Projects\Git - ERP\Jianli\Solution1.root\Book.DA\bin\x86\Debug\Book.Model.dll
+D:\Projects\Git - ERP\Jianli\Solution1.root\Book.DA\bin\x86\Debug\Helper.dll
+D:\Projects\Git - ERP\Jianli\Solution1.root\Book.DA\bin\x86\Debug\Book.Model.pdb
+D:\Projects\Git - ERP\Jianli\Solution1.root\Book.DA\bin\x86\Debug\Helper.pdb
+D:\Projects\Git - ERP\Jianli\Solution1.root\Book.DA\bin\x86\Debug\zh-CHS\Book.Model.resources.dll
+D:\Projects\Git - ERP\Jianli\Solution1.root\Book.DA\bin\x86\Debug\zh-CHT\Book.Model.resources.dll
+D:\Projects\Git - ERP\Jianli\Solution1.root\Book.DA\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Projects\Git - ERP\Jianli\Solution1.root\Book.DA\obj\x86\Debug\Book.DA.dll
+D:\Projects\Git - ERP\Jianli\Solution1.root\Book.DA\obj\x86\Debug\Book.DA.pdb

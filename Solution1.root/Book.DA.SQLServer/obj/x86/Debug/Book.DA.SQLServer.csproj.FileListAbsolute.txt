@@ -97,3 +97,17 @@ D:\Company Project\Git - ERP\Jianli\Solution1.root\Book.DA.SQLServer\bin\x86\Deb
 D:\Company Project\Git - ERP\Jianli\Solution1.root\Book.DA.SQLServer\obj\x86\Debug\ResolveAssemblyReference.cache
 D:\Company Project\Git - ERP\Jianli\Solution1.root\Book.DA.SQLServer\obj\x86\Debug\Book.DA.SQLServer.dll
 D:\Company Project\Git - ERP\Jianli\Solution1.root\Book.DA.SQLServer\obj\x86\Debug\Book.DA.SQLServer.pdb
+D:\Projects\Git - ERP\Jianli\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\Book.DA.SQLServer.dll
+D:\Projects\Git - ERP\Jianli\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\Book.DA.SQLServer.pdb
+D:\Projects\Git - ERP\Jianli\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\Book.DA.dll
+D:\Projects\Git - ERP\Jianli\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\Book.Model.dll
+D:\Projects\Git - ERP\Jianli\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\Helper.dll
+D:\Projects\Git - ERP\Jianli\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\System.dll
+D:\Projects\Git - ERP\Jianli\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\Book.Model.pdb
+D:\Projects\Git - ERP\Jianli\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\Book.DA.pdb
+D:\Projects\Git - ERP\Jianli\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\Helper.pdb
+D:\Projects\Git - ERP\Jianli\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\zh-CHS\Book.Model.resources.dll
+D:\Projects\Git - ERP\Jianli\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\zh-CHT\Book.Model.resources.dll
+D:\Projects\Git - ERP\Jianli\Solution1.root\Book.DA.SQLServer\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Projects\Git - ERP\Jianli\Solution1.root\Book.DA.SQLServer\obj\x86\Debug\Book.DA.SQLServer.dll
+D:\Projects\Git - ERP\Jianli\Solution1.root\Book.DA.SQLServer\obj\x86\Debug\Book.DA.SQLServer.pdb
