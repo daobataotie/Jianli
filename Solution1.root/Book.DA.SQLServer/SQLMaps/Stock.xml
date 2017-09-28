@@ -115,5 +115,15 @@
       select isnull(Sum(StockQuantity1),0) from Stock where DepotId='6326657f-2160-42ee-94cd-11b302676192' and ProductId=#value#
       ]]>
     </select>
+    <select id="SelectJiShidistributioned" resultClass="Double" parameterClass="Map">
+      <![CDATA[
+      SELECT isnull(p.ProduceMaterialDistributioned,0)+isnull(p.OtherMaterialDistributioned,0)-(
+SELECT isnull(Sum(Materialprocessum),0) FROM ProduceMaterialdetails pm WHERE pm.ProductId=p.ProductId AND pm.ProduceMaterialID IN 
+(SELECT ProduceMaterialID FROM ProduceMaterial WHERE ProduceMaterial.ProduceMaterialDate BETWEEN #StartDate# AND #EndDate#))-
+(SELECT isnull(Sum(OtherMaterialQuantity),0) FROM ProduceOtherMaterialDetail po WHERE po.ProductId=p.ProductId AND po.ProduceOtherMaterialId IN
+(SELECT ProduceOtherMaterialId FROM ProduceOtherMaterial WHERE ProduceOtherMaterial.ProduceOtherMaterialDate BETWEEN #StartDate# AND #EndDate#))
+ FROM Product p WHERE p.ProductId=#ProductId#
+      ]]>
+    </select>
   </statements>
 </sqlMap>

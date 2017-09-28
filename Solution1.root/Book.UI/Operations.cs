@@ -731,6 +731,9 @@ namespace Book.UI
 
             //上月庫存查詢
             operations.Add("Settings.StockLimitations.LastMonthStock", (D1)delegate(System.Windows.Forms.Form form) { M1("Settings.StockLimitations.LastMonthStock", form); });
+
+            //即使库存查询
+            operations.Add("Query.Q15JiShiForm", (D1)delegate(System.Windows.Forms.Form form) { M1("Query.Q15JiShiForm", form); });
         }
 
         static Form CreateForm(string formTypeName)

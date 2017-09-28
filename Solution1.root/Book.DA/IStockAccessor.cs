@@ -54,6 +54,7 @@ namespace Book.DA
         string GetLastDepotoutDate(string productid);
         double GetQuantityByStockAndProduct(string ProductId);
         IList<Model.StockSeach> SelectJiShi(string productId, DateTime startDate, DateTime endDate);
+        double SelectJiShidistributioned(string productId, DateTime startDate, DateTime endDate);
     }
 }
 

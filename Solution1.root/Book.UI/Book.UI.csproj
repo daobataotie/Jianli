@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{ECCEF5A5-BC9A-4CA4-9879-A8E1B170F7B6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -3365,6 +3365,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Accounting\AccountingCategories\ChooseAccountCategoriesForm.en.resx">
       <DependentUpon>ChooseAccountCategoriesForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AccountingCategories\ChooseAccountCategoriesForm.resx">
       <DependentUpon>ChooseAccountCategoriesForm.cs</DependentUpon>
@@ -3376,6 +3377,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AccountingCategories\ListForm.en.resx">
       <DependentUpon>ListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AccountingCategories\ListForm.resx">
       <DependentUpon>ListForm.cs</DependentUpon>
@@ -3387,6 +3389,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AccountingCategory\ChooseAccountingCategoryForm.en.resx">
       <DependentUpon>ChooseAccountingCategoryForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AccountingCategory\ChooseAccountingCategoryForm.resx">
       <DependentUpon>ChooseAccountingCategoryForm.cs</DependentUpon>
@@ -3398,6 +3401,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AccountingCategory\EditForm.en.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AccountingCategory\EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
@@ -3409,6 +3413,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtAccountSubject\ChooseAccountSubjectForm.en.resx">
       <DependentUpon>ChooseAccountSubjectForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtAccountSubject\ChooseAccountSubjectForm.resx">
       <DependentUpon>ChooseAccountSubjectForm.cs</DependentUpon>
@@ -3420,6 +3425,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtAccountSubject\EditForm.en.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtAccountSubject\EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
@@ -3431,6 +3437,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtAccountSubject\TheirBalanceForm.en.resx">
       <DependentUpon>TheirBalanceForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtAccountSubject\TheirBalanceForm.resx">
       <DependentUpon>TheirBalanceForm.cs</DependentUpon>
@@ -3442,6 +3449,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtBankAccount\ChooseAtBankAccountForm.en.resx">
       <DependentUpon>ChooseAtBankAccountForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtBankAccount\ChooseAtBankAccountForm.resx">
       <DependentUpon>ChooseAtBankAccountForm.cs</DependentUpon>
@@ -3453,6 +3461,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtBankAccount\EditForm.en.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtBankAccount\EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
@@ -3464,6 +3473,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtBankAccount\ListForm.en.resx">
       <DependentUpon>ListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtBankAccount\ListForm.resx">
       <DependentUpon>ListForm.cs</DependentUpon>
@@ -3475,6 +3485,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtBankSaveUp\EditForm.en.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtBankSaveUp\EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
@@ -3486,6 +3497,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtBankTransfer\EditForm.en.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtBankTransfer\EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
@@ -3497,9 +3509,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtBillsIncome\ConditionForm.resx">
       <DependentUpon>ConditionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtBillsIncome\ConditionForm.zh-CHT.resx">
       <DependentUpon>ConditionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtBillsIncome\EditFormo.resx">
       <DependentUpon>EditFormo.cs</DependentUpon>
@@ -3519,45 +3533,59 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtBillsIncome\ListForm.resx">
       <DependentUpon>ListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtBillsIncome\ListForm.zh-CHT.resx">
       <DependentUpon>ListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtBillsIncome\RO.en.resx">
       <DependentUpon>RO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtBillsIncome\RO.resx">
       <DependentUpon>RO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtBillsIncome\RO.zh-CHT.resx">
       <DependentUpon>RO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtBillsIncome\ROList.resx">
       <DependentUpon>ROList.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtBillsIncome\ROList.zh-CHT.resx">
       <DependentUpon>ROList.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtCashAccount\EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtCashAccount\EditForm.zh-CHT.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtCashAccount\RO.resx">
       <DependentUpon>RO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtCashAccount\RO.zh-CHT.resx">
       <DependentUpon>RO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtCashAccount\ROList.resx">
       <DependentUpon>ROList.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtCashAccount\ROList.zh-CHT.resx">
       <DependentUpon>ROList.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtDepreciationDetail\EditForm.en.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtDepreciationDetail\EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
@@ -3569,6 +3597,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtParameterSet\EditForm.en.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtParameterSet\EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
@@ -3580,27 +3609,35 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtProject\EditForm.en.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtProperty\ChoosePropertyForm.en.resx">
       <DependentUpon>ChoosePropertyForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtProperty\EditForm.en.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtProperty\ListForm.en.resx">
       <DependentUpon>ListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtSummon\ConditionForm.en.resx">
       <DependentUpon>ConditionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtSummon\ConditionForm.resx">
       <DependentUpon>ConditionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtSummon\ConditionForm.zh-CHT.resx">
       <DependentUpon>ConditionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtSummon\EditForm.en.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtSummon\List.resx">
       <DependentUpon>List.cs</DependentUpon>
@@ -3664,18 +3701,23 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtSummon\RO.resx">
       <DependentUpon>RO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtSummon\RO1.resx">
       <DependentUpon>RO1.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtSummon\RO2.resx">
       <DependentUpon>RO2.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtSummon\RO3.en.resx">
       <DependentUpon>RO3.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtSummon\RO3.resx">
       <DependentUpon>RO3.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\BankBill\BackleToCashForm.resx">
       <DependentUpon>BackleToCashForm.cs</DependentUpon>
@@ -3691,6 +3733,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\BankBill\BillCollectionForm.en.resx">
       <DependentUpon>BillCollectionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\BankBill\BillCollectionForm.resx">
       <DependentUpon>BillCollectionForm.cs</DependentUpon>
@@ -3710,6 +3753,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\BankBill\BillsToCash.en.resx">
       <DependentUpon>BillsToCash.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\BankBill\BillsToCash.resx">
       <DependentUpon>BillsToCash.cs</DependentUpon>
@@ -3721,6 +3765,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\CurrencyCategory\CategoryEditForm.en.resx">
       <DependentUpon>CategoryEditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\CurrencyCategory\CategoryEditForm.resx">
       <DependentUpon>CategoryEditForm.cs</DependentUpon>
@@ -3732,6 +3777,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\CurrencyCategory\ChooseAtCurrencyCategoryForm.en.resx">
       <DependentUpon>ChooseAtCurrencyCategoryForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\CurrencyCategory\ChooseAtCurrencyCategoryForm.resx">
       <DependentUpon>ChooseAtCurrencyCategoryForm.cs</DependentUpon>
@@ -3739,6 +3785,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\CurrencyCategory\EditForm.en.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\CurrencyCategory\EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
@@ -3754,6 +3801,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\InvoiceSet\EditForm.en.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\InvoiceSet\EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
@@ -3765,6 +3813,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\ProfitLoss\EditForm.en.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\ProfitLoss\EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
@@ -3784,6 +3833,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\PropertyDebt\EditForm.en.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\PropertyDebt\EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
@@ -3803,15 +3853,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\CashCreditSlipRO.en.resx">
       <DependentUpon>CashCreditSlipRO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\CashCreditSlipRO.resx">
       <DependentUpon>CashCreditSlipRO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\CashCreditSlipRO.zh-CHT.resx">
       <DependentUpon>CashCreditSlipRO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\ConditionAdiaryChooseForm.en.resx">
       <DependentUpon>ConditionAdiaryChooseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\ConditionAdiaryChooseForm.resx">
       <DependentUpon>ConditionAdiaryChooseForm.cs</DependentUpon>
@@ -3823,6 +3877,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\ConditionBankSaveUpChooseForm.en.resx">
       <DependentUpon>ConditionBankSaveUpChooseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\ConditionBankSaveUpChooseForm.resx">
       <DependentUpon>ConditionBankSaveUpChooseForm.cs</DependentUpon>
@@ -3834,6 +3889,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\ConditionCashDebtChooseForm.en.resx">
       <DependentUpon>ConditionCashDebtChooseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\ConditionCashDebtChooseForm.resx">
       <DependentUpon>ConditionCashDebtChooseForm.cs</DependentUpon>
@@ -3849,6 +3905,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\ConditionDatePropertyChooseForm.en.resx">
       <DependentUpon>ConditionDatePropertyChooseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\ConditionDatePropertyChooseForm.resx">
       <DependentUpon>ConditionDatePropertyChooseForm.cs</DependentUpon>
@@ -3860,6 +3917,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\ConditionGeneralAccountChooseForm.en.resx">
       <DependentUpon>ConditionGeneralAccountChooseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\ConditionGeneralAccountChooseForm.resx">
       <DependentUpon>ConditionGeneralAccountChooseForm.cs</DependentUpon>
@@ -3871,6 +3929,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\ConditionNCashYFChooseForm.en.resx">
       <DependentUpon>ConditionNCashYFChooseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\ConditionNCashYFChooseForm.resx">
       <DependentUpon>ConditionNCashYFChooseForm.cs</DependentUpon>
@@ -3886,6 +3945,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\ConditionNCashYSChooseForm.en.resx">
       <DependentUpon>ConditionNCashYSChooseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\ConditionNCashYSChooseForm.resx">
       <DependentUpon>ConditionNCashYSChooseForm.cs</DependentUpon>
@@ -3913,6 +3973,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\ConditionProfitLossChooseForm.en.resx">
       <DependentUpon>ConditionProfitLossChooseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\ConditionProfitLossChooseForm.resx">
       <DependentUpon>ConditionProfitLossChooseForm.cs</DependentUpon>
@@ -3924,6 +3985,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\ConditionPropertyChooseForm.en.resx">
       <DependentUpon>ConditionPropertyChooseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\ConditionPropertyChooseForm.resx">
       <DependentUpon>ConditionPropertyChooseForm.cs</DependentUpon>
@@ -3939,6 +4001,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\ConditionPropertyDebtChooseForm.en.resx">
       <DependentUpon>ConditionPropertyDebtChooseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\ConditionPropertyDebtChooseForm.resx">
       <DependentUpon>ConditionPropertyDebtChooseForm.cs</DependentUpon>
@@ -3950,6 +4013,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\ConditionSubjectPropertyChooseForm.en.resx">
       <DependentUpon>ConditionSubjectPropertyChooseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\ConditionSubjectPropertyChooseForm.resx">
       <DependentUpon>ConditionSubjectPropertyChooseForm.cs</DependentUpon>
@@ -3961,6 +4025,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\ConditionTryToChooseForm.en.resx">
       <DependentUpon>ConditionTryToChooseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\ConditionTryToChooseForm.resx">
       <DependentUpon>ConditionTryToChooseForm.cs</DependentUpon>
@@ -3976,6 +4041,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\ConditionYF1ChooseForm.en.resx">
       <DependentUpon>ConditionYF1ChooseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\ConditionYF1ChooseForm.resx">
       <DependentUpon>ConditionYF1ChooseForm.cs</DependentUpon>
@@ -3987,6 +4053,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\ConditionYF2ChooseForm.en.resx">
       <DependentUpon>ConditionYF2ChooseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\ConditionYF2ChooseForm.resx">
       <DependentUpon>ConditionYF2ChooseForm.cs</DependentUpon>
@@ -3998,6 +4065,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\ConditionYS1ChooseForm.en.resx">
       <DependentUpon>ConditionYS1ChooseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\ConditionYS1ChooseForm.resx">
       <DependentUpon>ConditionYS1ChooseForm.cs</DependentUpon>
@@ -4009,6 +4077,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\ConditionYS2ChooseForm.en.resx">
       <DependentUpon>ConditionYS2ChooseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\ConditionYS2ChooseForm.resx">
       <DependentUpon>ConditionYS2ChooseForm.cs</DependentUpon>
@@ -4028,6 +4097,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\XRBankSaveUp.en.resx">
       <DependentUpon>XRBankSaveUp.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\XRBankSaveUp.resx">
       <DependentUpon>XRBankSaveUp.cs</DependentUpon>
@@ -4187,21 +4257,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\YPFP\EditForm.en.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\YPFP\EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\YPFP\EditForm.zh-CHT.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\YPFP\ListForm.resx">
       <DependentUpon>ListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\YPFP\ListForm.zh-CHT.resx">
       <DependentUpon>ListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AccountPayable\AcbeginAccountPayable\EditForm.en.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AccountPayable\AcbeginAccountPayable\EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
@@ -4213,6 +4289,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AccountPayable\AcbeginAccountPayable\ListForm.en.resx">
       <DependentUpon>ListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AccountPayable\AcbeginAccountPayable\ListForm.resx">
       <DependentUpon>ListForm.cs</DependentUpon>
@@ -4232,6 +4309,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AccountPayable\AcbeginbillReceivable\EditForm.en.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AccountPayable\AcbeginbillReceivable\EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
@@ -4243,6 +4321,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AccountPayable\AcbeginbillReceivable\ListForm.en.resx">
       <DependentUpon>ListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AccountPayable\AcbeginbillReceivable\ListForm.resx">
       <DependentUpon>ListForm.cs</DependentUpon>
@@ -4254,6 +4333,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AccountPayable\AcbeginbillReceivable\Ro.en.resx">
       <DependentUpon>Ro.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AccountPayable\AcbeginbillReceivable\Ro.resx">
       <DependentUpon>Ro.cs</DependentUpon>
@@ -4265,6 +4345,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AccountPayable\AcCollection\EditForm.en.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AccountPayable\AcCollection\EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
@@ -4276,6 +4357,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AccountPayable\AcCollection\ListForm.en.resx">
       <DependentUpon>ListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AccountPayable\AcCollection\ListForm.resx">
       <DependentUpon>ListForm.cs</DependentUpon>
@@ -4287,6 +4369,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AccountPayable\AcCollection\XR.en.resx">
       <DependentUpon>XR.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AccountPayable\AcCollection\XR.resx">
       <DependentUpon>XR.cs</DependentUpon>
@@ -4310,6 +4393,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AccountPayable\AccQuery\ConditionAcInvoiceXOBillChooseForm.en.resx">
       <DependentUpon>ConditionAcInvoiceXOBillChooseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AccountPayable\AccQuery\ConditionAcInvoiceXOBillChooseForm.resx">
       <DependentUpon>ConditionAcInvoiceXOBillChooseForm.cs</DependentUpon>
@@ -4317,6 +4401,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AccountPayable\AccQuery\CustomerMayChooseForm.en.resx">
       <DependentUpon>CustomerMayChooseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AccountPayable\AccQuery\CustomerMayChooseForm.resx">
       <DependentUpon>CustomerMayChooseForm.cs</DependentUpon>
@@ -4340,9 +4425,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AccountPayable\AccQuery\SupplierMayChooseForm.en.resx">
       <DependentUpon>SupplierMayChooseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AccountPayable\AccQuery\SupplierMayDetail.en.resx">
       <DependentUpon>SupplierMayDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomsClearance\BGHandbookForm.resx">
       <DependentUpon>BGHandbookForm.cs</DependentUpon>
@@ -4406,15 +4493,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InformationForm.resx">
       <DependentUpon>InformationForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices\CG\BarCodeForm.resx">
       <DependentUpon>BarCodeForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices\CG\ROLable.resx">
       <DependentUpon>ROLable.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices\CG\ROLableHelp.resx">
       <DependentUpon>ROLableHelp.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices\CG\R01ZYD.resx">
       <DependentUpon>R01ZYD.cs</DependentUpon>
@@ -4430,15 +4521,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices\CO\R0ch.zh-CHT.resx">
       <DependentUpon>R0ch.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices\CO\RO.resx">
       <DependentUpon>RO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices\CO\RO.zh-CHT.resx">
       <DependentUpon>RO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices\CO\ROSub.resx">
       <DependentUpon>ROSub.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices\CO\R0ch.resx">
       <DependentUpon>R0ch.cs</DependentUpon>
@@ -4454,6 +4549,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices\CO\R0chZYD.zh-CHT.resx">
       <DependentUpon>R0chZYD.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices\CO\ROenZYD.resx">
       <DependentUpon>ROenZYD.cs</DependentUpon>
@@ -4461,6 +4557,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices\CT\ConditionForm.resx">
       <DependentUpon>ConditionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices\CT\RO1ZYD.resx">
       <DependentUpon>RO1ZYD.cs</DependentUpon>
@@ -4744,6 +4841,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCImpactCheck\ListForm.zh-CHT.resx">
       <DependentUpon>ListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCPGOnlineCheck\RoList.resx">
       <DependentUpon>RoList.cs</DependentUpon>
@@ -4775,15 +4873,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\ProduceOtherExitMaterial\ChooseOtherExitMaterial.resx">
       <DependentUpon>ChooseOtherExitMaterial.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\ProduceOtherExitMaterial\ChooseOtherExitMaterial.zh-CHT.resx">
       <DependentUpon>ChooseOtherExitMaterial.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\ProduceOtherMaterial\ChooseForm.resx">
       <DependentUpon>ChooseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\ProduceOtherMaterial\ChooseForm.zh-CHT.resx">
       <DependentUpon>ChooseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\ProductOnlineCheck\Editform.resx">
       <DependentUpon>Editform.cs</DependentUpon>
@@ -4939,9 +5041,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PronoteHeader\ProduceProceduresForm.resx">
       <DependentUpon>ProduceProceduresForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PronoteHeader\ProduceProceduresForm.zh-CHT.resx">
       <DependentUpon>ProduceProceduresForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PronoteHeader\ROProductIndepot.resx">
       <DependentUpon>ROProductIndepot.cs</DependentUpon>
@@ -5026,9 +5130,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Query\FormFP.resx">
       <DependentUpon>FormFP.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Query\FormFP.zh-CHT.resx">
       <DependentUpon>FormFP.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Query\InDepotDetail.resx">
       <DependentUpon>InDepotDetail.cs</DependentUpon>
@@ -5044,6 +5150,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Query\OtherCompact.resx">
       <DependentUpon>OtherCompact.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Query\OutDepotDetail.zh-CHT.resx">
       <DependentUpon>OutDepotDetail.cs</DependentUpon>
@@ -5061,8 +5168,13 @@
       <DependentUpon>OutDepotDetail.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Query\Q15JiShiForm.resx">
+      <DependentUpon>Q15JiShiForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Query\ROFP.resx">
       <DependentUpon>ROFP.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Query\ROInvoiceCGlistBiao.zh-CHT.resx">
       <DependentUpon>ROInvoiceCGlistBiao.cs</DependentUpon>
@@ -5070,9 +5182,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Query\ROInvoiceCGlistSub.resx">
       <DependentUpon>ROInvoiceCGlistSub.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Query\ROInvoiceCGlistSub.zh-CHT.resx">
       <DependentUpon>ROInvoiceCGlistSub.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Query\ROInvoiceXSlistBiao.resx">
       <DependentUpon>ROInvoiceXSlistBiao.cs</DependentUpon>
@@ -7592,6 +7706,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Query\ROInvoiceXSlistBiaoSub.resx">
       <DependentUpon>ROInvoiceXSlistBiaoSub.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Query\ROJD_PronoteHeader.resx">
       <DependentUpon>ROJD_PronoteHeader.cs</DependentUpon>
@@ -7619,18 +7734,23 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Query\ShouldPayForm.zh-CHT.resx">
       <DependentUpon>ShouldPayForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Query\ShouldPayFormList.resx">
       <DependentUpon>ShouldPayFormList.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Query\ShouldPayFormList.zh-CHT.resx">
       <DependentUpon>ShouldPayFormList.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Query\ShouldPayFormSearch.resx">
       <DependentUpon>ShouldPayFormSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Query\ShouldPayFormSearch.zh-CHT.resx">
       <DependentUpon>ShouldPayFormSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Query\SupplierTransactionsRank.resx">
       <DependentUpon>SupplierTransactionsRank.cs</DependentUpon>
@@ -7666,6 +7786,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Query\ShouldPayForm.resx">
       <DependentUpon>ShouldPayForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ROStockPrompt.resx">
       <DependentUpon>ROStockPrompt.cs</DependentUpon>
@@ -7725,9 +7846,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\BaseChooseForm.en.resx">
       <DependentUpon>BaseChooseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\BaseEditForm.en.resx">
       <DependentUpon>BaseEditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\BaseEditForm.zh-CHT.resx">
       <DependentUpon>BaseEditForm.cs</DependentUpon>
@@ -7743,6 +7866,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\BaseListForm.en.resx">
       <DependentUpon>BaseListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\BaseListForm.sq.resx">
       <DependentUpon>BaseListForm.cs</DependentUpon>
@@ -7782,6 +7906,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Customs\AddFP.resx">
       <DependentUpon>AddFP.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Customs\ConditionForm.resx">
       <DependentUpon>ConditionForm.cs</DependentUpon>
@@ -7893,18 +8018,23 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Customs\RO1.resx">
       <DependentUpon>RO1.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Customs\RO1.zh-CHT.resx">
       <DependentUpon>RO1.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Customs\ROCustomer.resx">
       <DependentUpon>ROCustomer.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Customs\ROCustomerProductPrice.resx">
       <DependentUpon>ROCustomerProductPrice.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Customs\ROCustomerProductPrice.zh-CHT.resx">
       <DependentUpon>ROCustomerProductPrice.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Depots\AddDepotpositionForm.resx">
       <DependentUpon>AddDepotpositionForm.cs</DependentUpon>
@@ -7916,6 +8046,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Depots\ChooseForm.zh-CHT.resx">
       <DependentUpon>ChooseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Duty\EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
@@ -7927,9 +8058,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Employees\AttendanceJJDays.resx">
       <DependentUpon>AttendanceJJDays.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Employees\AttendanceJJDays.zh-CHT.resx">
       <DependentUpon>AttendanceJJDays.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Employees\ChooseEmployeeForm.resx">
       <SubType>Designer</SubType>
@@ -9788,12 +9921,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Products\BarCodeSearchForm.resx">
       <DependentUpon>BarCodeSearchForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Products\BarForm.resx">
       <DependentUpon>BarForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Products\BarForm.zh-CHT.resx">
       <DependentUpon>BarForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Products\ChooseForm.resx">
       <SubType>Designer</SubType>
@@ -9825,9 +9961,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Products\ReportHelpForm.resx">
       <DependentUpon>ReportHelpForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Products\ReportLable.resx">
       <DependentUpon>ReportLable.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Products\ROList1FormReport.resx">
       <DependentUpon>ROList1FormReport.cs</DependentUpon>
@@ -9943,12 +10081,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Supplier\RO1.resx">
       <DependentUpon>RO1.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Supplier\RO1.zh-CHT.resx">
       <DependentUpon>RO1.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Supplier\ROSupplier.resx">
       <DependentUpon>ROSupplier.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Supplier\ROSupplierProcesscategory.resx">
       <DependentUpon>ROSupplierProcesscategory.cs</DependentUpon>
@@ -10188,12 +10329,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\ProduceManager\ROBOM.resx">
       <DependentUpon>ROBOM.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\ProduceManager\ROBOMPackage.resx">
       <DependentUpon>ROBOMPackage.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\ProduceManager\ROBOMProcess.resx">
       <DependentUpon>ROBOMProcess.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\ProduceManager\Techonlogy\ChooseMachineForm.resx">
       <DependentUpon>ChooseMachineForm.cs</DependentUpon>
@@ -10321,6 +10465,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\StockLimitations\LastMonthStock.resx">
       <DependentUpon>LastMonthStock.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\StockLimitations\MainForm.resx">
       <SubType>Designer</SubType>
@@ -10416,6 +10561,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\StockLimitations\SearchProductForm.resx">
       <DependentUpon>SearchProductForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\StockLimitations\StockCheckForm.resx">
       <DependentUpon>StockCheckForm.cs</DependentUpon>
@@ -11998,6 +12144,12 @@
     </Compile>
     <Compile Include="Query\OutDepotDetail.Designer.cs">
       <DependentUpon>OutDepotDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Query\Q15JiShiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Query\Q15JiShiForm.designer.cs">
+      <DependentUpon>Q15JiShiForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Query\ROFP.cs">
       <SubType>Component</SubType>

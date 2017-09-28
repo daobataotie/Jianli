@@ -425,5 +425,14 @@ namespace Book.DA.SQLServer
             return list;
 
         }
+
+        public double SelectJiShidistributioned(string productId, DateTime startDate, DateTime endDate)
+        {
+            Hashtable ht = new Hashtable();
+            ht.Add("ProductId", productId);
+            ht.Add("StartDate", startDate);
+            ht.Add("EndDate", endDate);
+            return sqlmapper.QueryForObject<double>("Stock.SelectJiShidistributioned", ht);
+        }
     }
 }

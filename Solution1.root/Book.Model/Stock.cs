@@ -149,7 +149,15 @@ namespace Book.Model
             get { return _invoiceDate; }
             set { _invoiceDate = value; }
         }
-
+        private DateTime? _insertTime;
+        /// <summary>
+        /// 日期
+        /// </summary>
+        public DateTime? InsertTime
+        {
+            get { return _insertTime; }
+            set { _insertTime = value; }
+        }
 
         private double? _invoiceQuantity;
         /// <summary>

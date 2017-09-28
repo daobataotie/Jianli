@@ -206,6 +206,11 @@ namespace Book.BL
         {
             return accessor.SelectJiShi(productId, startDate, endDate);
         }
+
+        public double SelectJiShidistributioned(string productId, DateTime startDate, DateTime endDate)
+        {
+            return accessor.SelectJiShidistributioned(productId, startDate, endDate);
+        }
     }
 }
 

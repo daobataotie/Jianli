@@ -77,7 +77,7 @@ namespace Book.UI.Query
 
             else
             {
-                miscDatas = this.miscDataManager.SelectByCondition("Q14", this.lookUpEditDepot.EditValue == null ? null : this.lookUpEditDepot.EditValue.ToString(), this.lookUpEditDepotPosition.EditValue == null ? null : this.lookUpEditDepotPosition.EditValue.ToString(), this.lookUpEditProductType.EditValue == null ? null : this.lookUpEditProductType.EditValue.ToString(), this.textProductNameOrId.Text);
+                miscDatas = this.miscDataManager.SelectByCondition("Q14", this.lookUpEditDepot.EditValue == null ? null : this.lookUpEditDepot.EditValue.ToString(), this.lookUpEditDepotPosition.EditValue == null ? null : this.lookUpEditDepotPosition.EditValue.ToString(), this.lookUpEditProductType.EditValue == null ? null : this.lookUpEditProductType.EditValue.ToString(), this.textProductNameOrId.Text,null, null, null, null, false);
             }
             this.bindingSource1.DataSource = miscDatas;
             this.gridView1.GroupPanelText = "¿‚Ó›ä›: " + miscDatas.Rows.Count;
