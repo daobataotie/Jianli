@@ -57,6 +57,16 @@ namespace Book.BL
             else
                 accessor.Insert(sequence);
         }
+
+        public static void Decrement(string key)
+        {
+            Model.Sequence sequence = accessor.Get(key);
+            if (sequence != null)
+            {
+                sequence.Val--;
+                accessor.Update(sequence);
+            }
+        }
         //public static void IncrementVal(string key,int val)
         //{
         //    Model.Sequence sequence = accessor.Get(key);

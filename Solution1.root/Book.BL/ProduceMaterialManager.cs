@@ -25,6 +25,12 @@ namespace Book.BL
             //
             // todo:add other logic here
             //
+
+            Model.ProduceMaterial model = this.Get(produceMaterialID);
+            string invoiceKind = this.GetInvoiceKind().ToLower();
+            string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, model.InsertTime.Value.ToString("yyyy-MM-dd"));
+            SequenceManager.Decrement(sequencekey_d);
+
             accessor.Delete(produceMaterialID);
         }
 
@@ -78,15 +84,15 @@ namespace Book.BL
                 produceMaterial.UpdateTime = DateTime.Now;
                 TiGuiExists(produceMaterial);
                 string invoiceKind = this.GetInvoiceKind().ToLower();
-                string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, produceMaterial.InsertTime.Value.Year);
-                string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, produceMaterial.InsertTime.Value.Year, produceMaterial.InsertTime.Value.Month);
+                //string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, produceMaterial.InsertTime.Value.Year);
+                //string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, produceMaterial.InsertTime.Value.Year, produceMaterial.InsertTime.Value.Month);
                 string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, produceMaterial.InsertTime.Value.ToString("yyyy-MM-dd"));
-                string sequencekey = string.Format(invoiceKind);
+                //string sequencekey = string.Format(invoiceKind);
 
-                SequenceManager.Increment(sequencekey_y);
-                SequenceManager.Increment(sequencekey_m);
+                //SequenceManager.Increment(sequencekey_y);
+                //SequenceManager.Increment(sequencekey_m);
                 SequenceManager.Increment(sequencekey_d);
-                SequenceManager.Increment(sequencekey);
+                //SequenceManager.Increment(sequencekey);
                 accessor.Insert(produceMaterial);
                 foreach (Model.ProduceMaterialdetails produceMaterialdetails in produceMaterial.Details)
                 {
@@ -165,15 +171,15 @@ namespace Book.BL
                 produceMaterial.UpdateTime = DateTime.Now;
                 TiGuiExists(produceMaterial);
                 string invoiceKind = this.GetInvoiceKind().ToLower();
-                string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, produceMaterial.InsertTime.Value.Year);
-                string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, produceMaterial.InsertTime.Value.Year, produceMaterial.InsertTime.Value.Month);
+                //string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, produceMaterial.InsertTime.Value.Year);
+                //string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, produceMaterial.InsertTime.Value.Year, produceMaterial.InsertTime.Value.Month);
                 string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, produceMaterial.InsertTime.Value.ToString("yyyy-MM-dd"));
-                string sequencekey = string.Format(invoiceKind);
+                //string sequencekey = string.Format(invoiceKind);
 
-                SequenceManager.Increment(sequencekey_y);
-                SequenceManager.Increment(sequencekey_m);
+                //SequenceManager.Increment(sequencekey_y);
+                //SequenceManager.Increment(sequencekey_m);
                 SequenceManager.Increment(sequencekey_d);
-                SequenceManager.Increment(sequencekey);
+                //SequenceManager.Increment(sequencekey);
                 accessor.Insert(produceMaterial);
                 foreach (Model.ProduceMaterialdetails produceMaterialdetails in produceMaterial.Details)
                 {
@@ -241,6 +247,52 @@ namespace Book.BL
             }
         }
 
+        public override string GetId(DateTime dt)
+        {
+            string settingId = this.GetSettingId();
+            string invoiceKind = this.GetInvoiceKind().ToLower();
+            DateTime datetime = dt;
+            if (string.IsNullOrEmpty(invoiceKind) || string.IsNullOrEmpty(settingId))
+                return string.Empty;
+
+            string rule = Settings.Get(settingId);
+
+            if (string.IsNullOrEmpty(rule))
+                return string.Empty;
+
+            //string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, datetime.Year);
+            //string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, datetime.Year, datetime.Month);
+            string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, datetime.ToString("yyyy-MM-dd"));
+            //string sequencekey = invoiceKind;
+            //if (rule.IndexOf("{D2}") >= 0)
+            string sequencekey = sequencekey_d;
+            //else if (rule.IndexOf("{M2}") >= 0)
+            //    sequencekey = sequencekey_m;
+            //else if (rule.IndexOf("{Y2}") >= 0 || rule.IndexOf("{Y4}") >= 0)
+            //    sequencekey = sequencekey_y;
+            //else
+            //    sequencekey = invoiceKind;
+
+
+            int sequenceval = SequenceManager.GetCurrentVal(sequencekey);
+
+            int a = sequenceval;
+            sequenceval++;
+
+            string d2 = string.Format("{0:d2}", datetime.Day);
+            string m2 = string.Format("{0:d2}", datetime.Month);
+            string y2 = string.Format("{0:d2}", datetime.Year).Substring(2, 2);
+            string y4 = string.Format("{0:d4}", datetime.Year);
+
+            string n1 = string.Format("{0:d1}", sequenceval);
+            string n2 = string.Format("{0:d2}", sequenceval);
+            string n3 = string.Format("{0:d3}", sequenceval);
+            string n4 = string.Format("{0:d4}", sequenceval);
+
+
+            return rule.Replace("{D2}", d2).Replace("{M2}", m2).Replace("{Y2}", y2).Replace("{Y4}", y4).Replace("{N}", n4).Replace("{N1}", n1).Replace("{N2}", n2).Replace("{N3}", n3).Replace("{N4}", n4);
+        }
+
         protected override string GetSettingId()
         {
             return "pdmRule";
@@ -277,14 +329,14 @@ namespace Book.BL
             {
                 //设置KEY值
                 string invoiceKind = this.GetInvoiceKind().ToLower();
-                string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, model.InsertTime.Value.Year);
-                string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, model.InsertTime.Value.Year, model.InsertTime.Value.Month);
+                //string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, model.InsertTime.Value.Year);
+                //string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, model.InsertTime.Value.Year, model.InsertTime.Value.Month);
                 string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, model.InsertTime.Value.ToString("yyyy-MM-dd"));
-                string sequencekey = string.Format(invoiceKind);
-                SequenceManager.Increment(sequencekey_y);
-                SequenceManager.Increment(sequencekey_m);
+                //string sequencekey = string.Format(invoiceKind);
+                //SequenceManager.Increment(sequencekey_y);
+                //SequenceManager.Increment(sequencekey_m);
                 SequenceManager.Increment(sequencekey_d);
-                SequenceManager.Increment(sequencekey);
+                //SequenceManager.Increment(sequencekey);
                 model.ProduceMaterialID = this.GetId(model.InsertTime.Value);
                 TiGuiExists(model);
                 //throw new Helper.InvalidValueException(Model.Product.PRO_Id);               

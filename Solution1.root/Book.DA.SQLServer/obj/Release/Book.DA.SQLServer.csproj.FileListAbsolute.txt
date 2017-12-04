@@ -1,1 +1,0 @@
-D:\Company Project\OtherERP -ch\Solution1.root\Book.DA.SQLServer\obj\Release\ResolveAssemblyReference.cache

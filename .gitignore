@@ -25,3 +25,19 @@ bld/
 # Visual Studio 2015 cache/options directory
 .vs/
 # Uncomment if you have tasks that create the
+/Solution1.root/Book.BL/bin
+/Solution1.root/Book.BL/obj
+/Solution1.root/Book.DA/bin
+/Solution1.root/Book.DA/obj
+/Solution1.root/Book.DA.SQLServer/bin
+/Solution1.root/Book.DA.SQLServer/obj
+/Solution1.root/Book.DA.SQLServer/bin
+/Solution1.root/Book.DA.SQLServer/obj
+/Solution1.root/Book.Model/bin
+/Solution1.root/Book.Model/obj
+/Solution1.root/Common/bin
+/Solution1.root/Common/obj
+/Solution1.root/Helper/bin
+/Solution1.root/Helper/obj
+/Solution1.root/UT/bin
+/Solution1.root/UT/obj

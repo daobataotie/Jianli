@@ -639,7 +639,7 @@ namespace Book.UI.produceManager.ProduceMaterial
             if (this._pronoteHeader == null)
             {
                 this._produceMaterial = new Model.ProduceMaterial();
-                this._produceMaterial.ProduceMaterialID = this.produceMaterialManager.GetId();// Guid.NewGuid().ToString();
+                this._produceMaterial.ProduceMaterialID = this.produceMaterialManager.GetId(DateTime.Now);// Guid.NewGuid().ToString();
                 this._produceMaterial.Employee0 = BL.V.ActiveOperator.Employee;
                 this._produceMaterial.ProduceMaterialDate = DateTime.Now;
                 this._produceMaterial.Details = new List<Model.ProduceMaterialdetails>();
