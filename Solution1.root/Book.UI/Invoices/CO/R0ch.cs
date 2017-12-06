@@ -64,6 +64,8 @@ namespace Book.UI.Invoices.CO
             this.xrTableCellNextWorkHouse.DataBindings.Add("Text", this.DataSource, "NextWorkHouse." + Model.WorkHouse.PROPERTY_WORKHOUSENAME);
 
             this.xrRichTextProductDescription.DataBindings.Add("Rtf", this.DataSource, "Product." + Model.Product.PRO_ProductDescription);
+
+            this.TCProductID.DataBindings.Add("Text", this. DataSource, "Product." + Model.Product.PRO_Id);
         }
 
     }
