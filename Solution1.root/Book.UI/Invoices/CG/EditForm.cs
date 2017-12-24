@@ -440,7 +440,8 @@ namespace Book.UI.Invoices.CG
         protected override void AddNew()
         {
             invoicecg = new Model.InvoiceCG();
-            invoicecg.InvoiceId = this.invoiceManager.GetNewId();
+            //invoicecg.InvoiceId = this.invoiceManager.GetNewId();
+            invoicecg.InvoiceId = this.invoiceManager.GetIdSimple(DateTime.Now);
             invoicecg.InvoiceDate = DateTime.Now;
             invoicecg.Details = new List<Model.InvoiceCGDetail>();
             invoicecg.InvoiceHisDate = DateTime.Now;

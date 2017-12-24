@@ -149,6 +149,9 @@ namespace Book.BL
             return Id;
 
         }
+
+       
+
         private string _invoiceName;
 
         public string InvoiceName
@@ -229,7 +232,8 @@ namespace Book.BL
                 throw;
             }
         }
-        private void TiGuiExists(Model.Invoice model)
+
+        protected virtual void TiGuiExists(Model.Invoice model)
         {
             MethodInfo methodinfo = this.GetType().GetMethod("HasRows", new Type[] { typeof(string) });
             bool f = (bool)methodinfo.Invoke(this, new object[] { model.InvoiceId });
@@ -381,7 +385,7 @@ namespace Book.BL
         }
 
 
-        protected abstract string GetInvoiceKind();
+        //protected abstract string GetInvoiceKind();
         protected abstract void _Insert(Model.Invoice invoice);
         protected abstract void _Update(Model.Invoice invoice);
         protected abstract void _TurnNormal(Model.Invoice invoice);

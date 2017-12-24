@@ -345,7 +345,8 @@ namespace Book.UI.Invoices.XS
         {
             invoice = new Model.InvoiceXS();
             invoice.InvoiceDate = DateTime.Now;
-            invoice.InvoiceId = this.invoiceManager.GetNewId();
+            //invoice.InvoiceId = this.invoiceManager.GetNewId();
+            invoice.InvoiceId = this.invoiceManager.GetIdSimple(DateTime.Now);
             invoice.Details = new List<Model.InvoiceXSDetail>();
             invoice.Employee0 = BL.V.ActiveOperator.Employee;
             invoice.Setdetails.Clear();

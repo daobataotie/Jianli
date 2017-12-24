@@ -66,7 +66,8 @@ namespace Book.UI.Settings.StockLimitations
         protected override void AddNew()
         {
             this._depotIn = new Book.Model.DepotIn();
-            this._depotIn.DepotInId = this._depotInManager.GetId(DateTime.Now.Date);
+            //this._depotIn.DepotInId = this._depotInManager.GetId(DateTime.Now.Date);
+            this._depotIn.DepotInId = this._depotInManager.GetIdSimple(DateTime.Now.Date);
             this._depotIn.DepotId = null;
             this._depotIn.Details = new List<Model.DepotInDetail>();
             this._depotIn.Employee = BL.V.ActiveOperator.Employee;

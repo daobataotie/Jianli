@@ -432,7 +432,8 @@ namespace Book.UI.Invoices.CO
         {
             this.invoice = new Model.InvoiceCO();
             this.invoice.InvoiceYjrq = DateTime.Now.AddDays(7).Date;
-            this.invoice.InvoiceId = this.invoiceManager.GetNewId();
+            //this.invoice.InvoiceId = this.invoiceManager.GetNewId();
+            this.invoice.InvoiceId = this.invoiceManager.GetIdSimple(DateTime.Now);
             this.invoice.InvoiceDate = DateTime.Now;
             this.invoice.IsClose = false;
             this.invoice.Details = new List<Model.InvoiceCODetail>();

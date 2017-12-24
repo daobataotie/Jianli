@@ -18,71 +18,83 @@ namespace Book.DA.SQLServer
 {
     public partial class InvoiceCOAccessor
     {
-		public Model.InvoiceCO Get(string id)
-		{
-			return this.Get<Model.InvoiceCO>(id);
-		}
-		
-		public void Insert(Model.InvoiceCO e)
-		{
-			this.Insert<Model.InvoiceCO>(e);
-		}
-		
-		public void Update(Model.InvoiceCO e)
-		{
-			this.Update<Model.InvoiceCO>(e);
-		}
-		
-		public IList<Model.InvoiceCO> Select()
-		{
-			return this.Select<Model.InvoiceCO>();
-		}
-		
-		public IList<Model.InvoiceCO> Select(Helper.OrderDescription orderDescription, Helper.PagingDescription pagingDescription)
-		{
-			return this.Select<Model.InvoiceCO>(orderDescription,pagingDescription);
-		}
-		public void Delete(string id)
-		{
-			this.Delete<Model.InvoiceCO>(id);
-		}
-		public bool HasRows(string id)
-		{
-			return this.HasRows<Model.InvoiceCO>(id);
-		}
-		public bool HasRows()
-		{
-			return this.HasRows<Model.InvoiceCO>();
-		}
-		public int Count()
-		{
-			return this.Count<Model.InvoiceCO>();
-		}
-		public bool HasRowsBefore(Model.InvoiceCO e)
-		{
-			return sqlmapper.QueryForObject<bool>("InvoiceCO.has_rows_before", e);
-		}
-		public bool HasRowsAfter(Model.InvoiceCO e)
-		{
-			return sqlmapper.QueryForObject<bool>("InvoiceCO.has_rows_after", e);
-		}
-		public Model.InvoiceCO GetFirst()
-		{
-			return sqlmapper.QueryForObject<Model.InvoiceCO>("InvoiceCO.get_first", null);
-		}
-		public Model.InvoiceCO GetLast()
-		{
-			return sqlmapper.QueryForObject<Model.InvoiceCO>("InvoiceCO.get_last", null);
-		}
-		public Model.InvoiceCO GetNext(Model.InvoiceCO e)
-		{
-			return sqlmapper.QueryForObject<Model.InvoiceCO>("InvoiceCO.get_next", e);
-		}
-		public Model.InvoiceCO GetPrev(Model.InvoiceCO e)
-		{
-			return sqlmapper.QueryForObject<Model.InvoiceCO>("InvoiceCO.get_prev", e);
-		}
-		
+        public Model.InvoiceCO Get(string id)
+        {
+            return this.Get<Model.InvoiceCO>(id);
+        }
+
+        public void Insert(Model.InvoiceCO e)
+        {
+            this.Insert<Model.InvoiceCO>(e);
+        }
+
+        public void Update(Model.InvoiceCO e)
+        {
+            this.Update<Model.InvoiceCO>(e);
+        }
+
+        public IList<Model.InvoiceCO> Select()
+        {
+            return this.Select<Model.InvoiceCO>();
+        }
+
+        public IList<Model.InvoiceCO> Select(Helper.OrderDescription orderDescription, Helper.PagingDescription pagingDescription)
+        {
+            return this.Select<Model.InvoiceCO>(orderDescription, pagingDescription);
+        }
+        public void Delete(string id)
+        {
+            #region 编号递减
+            Model.InvoiceCO model = this.Get(id);
+            string invoiceKind = "CO".ToLower();
+            string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, model.InsertTime.Value.ToString("yyyy-MM-dd"));
+            Model.Sequence sequence = new SequenceAccessor().Get(sequencekey_d);
+            if (sequence != null)
+            {
+                sequence.Val--;
+                new SequenceAccessor().Update(sequence);
+            }
+            #endregion
+
+            this.Delete<Model.InvoiceCO>(id);
+        }
+        public bool HasRows(string id)
+        {
+            return this.HasRows<Model.InvoiceCO>(id);
+        }
+        public bool HasRows()
+        {
+            return this.HasRows<Model.InvoiceCO>();
+        }
+        public int Count()
+        {
+            return this.Count<Model.InvoiceCO>();
+        }
+        public bool HasRowsBefore(Model.InvoiceCO e)
+        {
+            return sqlmapper.QueryForObject<bool>("InvoiceCO.has_rows_before", e);
+        }
+        public bool HasRowsAfter(Model.InvoiceCO e)
+        {
+            return sqlmapper.QueryForObject<bool>("InvoiceCO.has_rows_after", e);
+        }
+        public Model.InvoiceCO GetFirst()
+        {
+            return sqlmapper.QueryForObject<Model.InvoiceCO>("InvoiceCO.get_first", null);
+        }
+        public Model.InvoiceCO GetLast()
+        {
+            return sqlmapper.QueryForObject<Model.InvoiceCO>("InvoiceCO.get_last", null);
+        }
+        public Model.InvoiceCO GetNext(Model.InvoiceCO e)
+        {
+            return sqlmapper.QueryForObject<Model.InvoiceCO>("InvoiceCO.get_next", e);
+        }
+        public Model.InvoiceCO GetPrev(Model.InvoiceCO e)
+        {
+            return sqlmapper.QueryForObject<Model.InvoiceCO>("InvoiceCO.get_prev", e);
+        }
+
 
     }
 }

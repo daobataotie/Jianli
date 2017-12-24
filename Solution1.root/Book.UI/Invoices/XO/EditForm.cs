@@ -688,7 +688,8 @@ namespace Book.UI.Invoices.XO
         {
             this.invoice = new Model.InvoiceXO();
 
-            this.invoice.InvoiceId = this.invoiceManager.GetNewId();
+            //this.invoice.InvoiceId = this.invoiceManager.GetNewId();
+            this.invoice.InvoiceId = this.invoiceManager.GetIdSimple(DateTime.Now);
             this.invoice.InvoiceDate = DateTime.Now;
             this.invoice.IsClose = false;
             this.invoice.Employee0 = BL.V.ActiveOperator.Employee;

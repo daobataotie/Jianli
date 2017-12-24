@@ -44,6 +44,18 @@ namespace Book.DA.SQLServer
 		}
 		public void Delete(string id)
 		{
+            #region 编号递减
+            Model.InvoiceXS model = this.Get(id);
+            string invoiceKind = "XS".ToLower();
+            string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, model.InsertTime.Value.ToString("yyyy-MM-dd"));
+            Model.Sequence sequence = new SequenceAccessor().Get(sequencekey_d);
+            if (sequence != null)
+            {
+                sequence.Val--;
+                new SequenceAccessor().Update(sequence);
+            }
+            #endregion
+
 			this.Delete<Model.InvoiceXS>(id);
 		}
 		public bool HasRows(string id)

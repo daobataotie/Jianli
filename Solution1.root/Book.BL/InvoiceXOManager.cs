@@ -7,6 +7,7 @@
 //------------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 
 namespace Book.BL
 {
@@ -89,6 +90,26 @@ namespace Book.BL
         protected override string GetInvoiceKind()
         {
             return "XO";
+        }
+
+        protected override string GetSettingId()
+        {
+            return "InvoiceNumberRuleOfXO";
+        }
+
+        protected override void TiGuiExists(Book.Model.Invoice model)
+        {
+            MethodInfo methodinfo = this.GetType().GetMethod("HasRows", new Type[] { typeof(string) });
+            bool f = (bool)methodinfo.Invoke(this, new object[] { model.InvoiceId });
+            if (f)
+            {
+                //设置KEY值
+                string invoiceKind = this.GetInvoiceKind().ToLower();
+                string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, model.InsertTime.Value.ToString("yyyy-MM-dd"));
+                SequenceManager.Increment(sequencekey_d);
+                model.InvoiceId = this.GetIdSimple(model.InsertTime.Value);
+                TiGuiExists(model);
+            }
         }
 
         protected override Book.DA.IInvoiceAccessor GetAccessor()

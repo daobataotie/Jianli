@@ -7,6 +7,7 @@
 //------------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 
 namespace Book.BL
 {
@@ -129,6 +130,26 @@ namespace Book.BL
         protected override string GetInvoiceKind()
         {
             return "CG";
+        }
+
+        protected override string GetSettingId()
+        {
+            return "InvoiceNumberRuleOfCG";
+        }
+
+        protected override void TiGuiExists(Book.Model.Invoice model)
+        {
+            MethodInfo methodinfo = this.GetType().GetMethod("HasRows", new Type[] { typeof(string) });
+            bool f = (bool)methodinfo.Invoke(this, new object[] { model.InvoiceId });
+            if (f)
+            {
+                //设置KEY值
+                string invoiceKind = this.GetInvoiceKind().ToLower();
+                string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, model.InsertTime.Value.ToString("yyyy-MM-dd"));
+                SequenceManager.Increment(sequencekey_d);
+                model.InvoiceId = this.GetIdSimple(model.InsertTime.Value);
+                TiGuiExists(model);
+            }
         }
 
         protected override Book.DA.IInvoiceAccessor GetAccessor()
@@ -405,17 +426,17 @@ namespace Book.BL
                                 //更新产品信息
                                 //if (detail.DepotPosition != null)
                                 //{
-                                    Model.Product pro = detail.Product;
-                                    pro.OrderOnWayQuantity = Convert.ToDouble(pro.OrderOnWayQuantity) + Convert.ToDouble(detail.InvoiceCGDetailQuantity);
-                                    pro.ProductNearCGDate = DateTime.Now;
-                                    if (!string.IsNullOrEmpty(detail.DepotPositionId) && detail.InvoiceCGDetaiInQuantity != 0)
-                                    {
-                                        pro.StocksQuantity = Convert.ToDouble(pro.StocksQuantity) - Convert.ToDouble(detail.InvoiceCGDetaiInQuantity);
+                                Model.Product pro = detail.Product;
+                                pro.OrderOnWayQuantity = Convert.ToDouble(pro.OrderOnWayQuantity) + Convert.ToDouble(detail.InvoiceCGDetailQuantity);
+                                pro.ProductNearCGDate = DateTime.Now;
+                                if (!string.IsNullOrEmpty(detail.DepotPositionId) && detail.InvoiceCGDetaiInQuantity != 0)
+                                {
+                                    pro.StocksQuantity = Convert.ToDouble(pro.StocksQuantity) - Convert.ToDouble(detail.InvoiceCGDetaiInQuantity);
 
-                                        //修改货位库存。
-                                        stockAccessor.Decrement(detail.DepotPosition, pro, detail.InvoiceCGDetaiInQuantity);
-                                    }
-                                    productManager.update(pro);
+                                    //修改货位库存。
+                                    stockAccessor.Decrement(detail.DepotPosition, pro, detail.InvoiceCGDetaiInQuantity);
+                                }
+                                productManager.update(pro);
                                 //}
                                 // 成本
                                 //productAccessor.UpdateCost1(p, p.ProductCurrentCGPrice,cgQuantity);

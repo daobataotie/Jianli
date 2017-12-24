@@ -7,6 +7,7 @@
 //------------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 
 namespace Book.BL
 {
@@ -79,11 +80,16 @@ namespace Book.BL
             return "CO";
         }
 
+        protected override string GetSettingId()
+        {
+            return "InvoiceNumberRuleOfCO";
+        }
+
+
         protected override Book.DA.IInvoiceAccessor GetAccessor()
         {
             return accessor;
         }
-
         #endregion
 
         #region Validation
@@ -102,32 +108,32 @@ namespace Book.BL
             Validate((Model.InvoiceCO)invoice);
         }
 
-        public void InsertInvoiceCO(Model.InvoiceCO invoiceCO)
-        {
-            try
-            {
-                V.BeginTransaction();
-                accessor.Insert(invoiceCO);
-                string invoiceKind = this.GetInvoiceKind().ToLower();
+        //public void InsertInvoiceCO(Model.InvoiceCO invoiceCO)
+        //{
+        //    try
+        //    {
+        //        V.BeginTransaction();
+        //        accessor.Insert(invoiceCO);
+        //        string invoiceKind = this.GetInvoiceKind().ToLower();
 
-                string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, DateTime.Now.Year);
-                string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, DateTime.Now.Year, DateTime.Now.Month);
-                string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, DateTime.Now.ToString("yyyy-MM-dd"));
-                string sequencekey = string.Format(invoiceKind);
+        //        string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, DateTime.Now.Year);
+        //        string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, DateTime.Now.Year, DateTime.Now.Month);
+        //        string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, DateTime.Now.ToString("yyyy-MM-dd"));
+        //        string sequencekey = string.Format(invoiceKind);
 
-                SequenceManager.Increment(sequencekey_y);
-                SequenceManager.Increment(sequencekey_m);
-                SequenceManager.Increment(sequencekey_d);
-                SequenceManager.Increment(sequencekey);
-                V.CommitTransaction();
-            }
-            catch
-            {
-                V.RollbackTransaction();
-                throw;
+        //        SequenceManager.Increment(sequencekey_y);
+        //        SequenceManager.Increment(sequencekey_m);
+        //        SequenceManager.Increment(sequencekey_d);
+        //        SequenceManager.Increment(sequencekey);
+        //        V.CommitTransaction();
+        //    }
+        //    catch
+        //    {
+        //        V.RollbackTransaction();
+        //        throw;
 
-            }
-        }
+        //    }
+        //}
 
         private void Validate(Book.Model.InvoiceCO invoice)
         {
@@ -179,7 +185,6 @@ namespace Book.BL
 
         private void _Insert(Model.InvoiceCO invoice)
         {
-
             invoice.InvoiceFlag = 0;
             invoice.InsertTime = DateTime.Now;
             invoice.UpdateTime = DateTime.Now;
@@ -233,7 +238,7 @@ namespace Book.BL
 
                         case Helper.InvoiceStatus.Draft:
 
-                            invoice.UpdateTime = DateTime.Now; ;
+                            invoice.UpdateTime = DateTime.Now; 
                             invoice.SupplierId = invoice.Supplier.SupplierId;
                             invoice.Employee0Id = invoice.Employee0.EmployeeId;
                             accessor.Update(invoice);
@@ -437,6 +442,21 @@ namespace Book.BL
         public DateTime GetInvoiceYjrq(string id)
         {
             return accessor.GetInvoiceYjrq(id);
+        }
+
+        protected override void TiGuiExists(Book.Model.Invoice model)
+        {
+            MethodInfo methodinfo = this.GetType().GetMethod("HasRows", new Type[] { typeof(string) });
+            bool f = (bool)methodinfo.Invoke(this, new object[] { model.InvoiceId });
+            if (f)
+            {
+                //设置KEY值
+                string invoiceKind = this.GetInvoiceKind().ToLower();
+                string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, model.InsertTime.Value.ToString("yyyy-MM-dd"));
+                SequenceManager.Increment(sequencekey_d);
+                model.InvoiceId = this.GetIdSimple(model.InsertTime.Value);
+                TiGuiExists(model);
+            }
         }
     }
 }

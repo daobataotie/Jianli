@@ -94,12 +94,10 @@ namespace Book.UI.Settings.StockLimitations
 
         protected override void AddNew()
         {
-
-
-
             this._depotOut = new Book.Model.DepotOut();
             this._depotOut.DepotOutDate = DateTime.Now;
-            this._depotOut.DepotOutId = this._depotOutManager.GetId(DateTime.Now.Date);
+            //this._depotOut.DepotOutId = this._depotOutManager.GetId(DateTime.Now.Date);
+            this._depotOut.DepotOutId = this._depotOutManager.GetIdSimple(DateTime.Now);
             this._depotOut.Employee = BL.V.ActiveOperator.Employee;
             this._depotOut.Details = new List<Model.DepotOutDetail>();
 
