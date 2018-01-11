@@ -375,6 +375,10 @@ namespace Book.UI.produceManager.ProduceMaterial
             //    this.produceMaterial.DepotId = this.produceMaterial.Depot.DepotId;
             //}
 
+            //2018-1-11 
+            this._produceMaterial.InvoiceCusXOId = this.textEditCustomerXOId.Text;
+            this._produceMaterial.Pihao = this.textEditPiHao.Text;
+
             if (!this.gridView1.PostEditor() || !this.gridView1.UpdateCurrentRow())
                 return;
 
@@ -528,18 +532,23 @@ namespace Book.UI.produceManager.ProduceMaterial
                 this.textEditProduct.EditValue = null;
                 this.calcEditInvoiceSum.EditValue = null;
             }
-            if (!string.IsNullOrEmpty(this._produceMaterial.InvoiceXOId))
-            {
-                Model.InvoiceXO invoiceXO = invoiceXOManager.Get(this._produceMaterial.InvoiceXOId);
-                this.textEditCustomerXOId.Text = invoiceXO == null ? null : invoiceXO.CustomerInvoiceXOId;
-                this.textEditPiHao.Text = invoiceXO == null ? null : invoiceXO.CustomerLotNumber;
-            }
-            else
-            {
-                this.textEditCustomerXOId.Text = string.Empty;
-                this.textEditPiHao.Text = string.Empty;
-                // this.textEditXOId.Text = string.Empty;
-            }
+            //if (!string.IsNullOrEmpty(this._produceMaterial.InvoiceXOId))
+            //{
+            //    Model.InvoiceXO invoiceXO = invoiceXOManager.Get(this._produceMaterial.InvoiceXOId);
+            //    this.textEditCustomerXOId.Text = invoiceXO == null ? null : invoiceXO.CustomerInvoiceXOId;
+            //    this.textEditPiHao.Text = invoiceXO == null ? null : invoiceXO.CustomerLotNumber;
+            //}
+            //else
+            //{
+            //    this.textEditCustomerXOId.Text = string.Empty;
+            //    this.textEditPiHao.Text = string.Empty;
+            //    // this.textEditXOId.Text = string.Empty;
+            //}
+
+            //2018-1-11 
+            this.textEditCustomerXOId.Text = this._produceMaterial.InvoiceCusXOId;
+            this.textEditPiHao.Text = this._produceMaterial.Pihao;
+
 
             foreach (Model.ProduceMaterialdetails item in this._produceMaterial.Details)
             {

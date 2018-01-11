@@ -154,6 +154,9 @@
   <data name="xrLabel15.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
+  <data name="xrLabel15.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10.25pt</value>
+  </data>
   <data name="xrLabel15.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>1284.321, 404.6667</value>
   </data>
@@ -161,7 +164,7 @@
     <value>220.464966, 50</value>
   </data>
   <data name="xrLabel15.Text" xml:space="preserve">
-    <value>客 户批号：</value>
+    <value>客户批号：</value>
   </data>
   <data name="xrLabel15.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
@@ -209,7 +212,7 @@
     <value>1121.16882, 404.6667</value>
   </data>
   <data name="xrLabelInvoiceSum.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>163.152222, 50.00003</value>
+    <value>139.948853, 50</value>
   </data>
   <data name="xrLabelInvoiceSum.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
@@ -384,10 +387,10 @@
     <value>Times New Roman, 10.25pt</value>
   </data>
   <data name="xrLabel3.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1283.948, 304.666718</value>
+    <value>1284.32117, 304.666718</value>
   </data>
   <data name="xrLabel3.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>218.221191, 50.0000153</value>
+    <value>217.848145, 50.00003</value>
   </data>
   <data name="xrLabel3.Text" xml:space="preserve">
     <value>生  产  站：</value>
@@ -417,10 +420,10 @@
     <value>Times New Roman, 10.25pt</value>
   </data>
   <data name="xrLabel5.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>711.2035, 304.666718</value>
+    <value>706.1332, 304.666718</value>
   </data>
   <data name="xrLabel5.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>215.146057, 50.00003</value>
+    <value>220.21637, 50.00003</value>
   </data>
   <data name="xrLabel5.Text" xml:space="preserve">
     <value>领料日期：</value>
@@ -453,7 +456,7 @@
     <value>212.37265, 354.666656</value>
   </data>
   <data name="xrLabelXOId.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>334.66684, 50</value>
+    <value>379.645782, 50.00003</value>
   </data>
   <data name="xrLabelXOId.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>

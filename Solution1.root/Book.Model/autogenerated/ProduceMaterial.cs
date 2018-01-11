@@ -560,5 +560,28 @@ namespace Book.Model
 
 
         #endregion
+
+        private string _invoiceCusXOId;
+
+        /// <summary>
+        /// 客户订单编号
+        /// </summary>
+        public string InvoiceCusXOId
+        {
+            get { return _invoiceCusXOId; }
+            set { _invoiceCusXOId = value; }
+        }
+
+        private string _pihao;
+
+        public string Pihao
+        {
+            get { return _pihao; }
+            set { _pihao = value; }
+        }
+
+        public static string PRO_InvoiceCusXOId = "InvoiceCusXOId";
+
+        public static string PRO_Pihao = "Pihao";
     }
 }

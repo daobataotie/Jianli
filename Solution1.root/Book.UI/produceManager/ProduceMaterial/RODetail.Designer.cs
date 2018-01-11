@@ -130,6 +130,7 @@
             resources.ApplyResources(this.xrLabel15, "xrLabel15");
             this.xrLabel15.Name = "xrLabel15";
             this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel15.StylePriority.UseFont = false;
             this.xrLabel15.StylePriority.UseTextAlignment = false;
             // 
             // xrLabelSourceType

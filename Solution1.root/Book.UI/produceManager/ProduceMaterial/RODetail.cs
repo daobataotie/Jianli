@@ -17,10 +17,10 @@ namespace Book.UI.produceManager.ProduceMaterial
         public RODetail(ConditionMaterial condition)
         {
             InitializeComponent();
-            IList<Model.ProduceMaterial> list = produceMaterialManager.SelectBycondition(condition.StartDate, condition.EndDate, condition.ProduceMaterialId0, condition.ProduceMaterialId1, condition.Product0, condition.Product1, condition.DepartmentId0, condition.DepartmentId1, condition.PronoteHeaderId0, condition.PronoteHeaderId1,condition.CusInvoiceXOId);
+            IList<Model.ProduceMaterial> list = produceMaterialManager.SelectBycondition(condition.StartDate, condition.EndDate, condition.ProduceMaterialId0, condition.ProduceMaterialId1, condition.Product0, condition.Product1, condition.DepartmentId0, condition.DepartmentId1, condition.PronoteHeaderId0, condition.PronoteHeaderId1, condition.CusInvoiceXOId);
             if (list == null || list.Count <= 0)
             {
-                throw new global::Helper.MessageValueException("无数据");              
+                throw new global::Helper.MessageValueException("无数据");
             }
             foreach (Model.ProduceMaterial pm in list)
             {
@@ -58,8 +58,8 @@ namespace Book.UI.produceManager.ProduceMaterial
             this.xrLabelPronoteHeaderID.DataBindings.Add("Text", this.DataSource, Model.ProduceMaterial.PRO_InvoiceId);
             this.xrLabelProduceMaterialDate.DataBindings.Add("Text", this.DataSource, Model.ProduceMaterial.PRO_ProduceMaterialDate, "{0:yyyy-MM-dd}");
             this.xrLabelProduct.DataBindings.Add("Text", this.DataSource, "ParenProductName");
-            this.xrLabelXOId.DataBindings.Add("Text", this.DataSource, "CusXOId");
-            this.xrLabelPiHao.DataBindings.Add("Text", this.DataSource, "InvoiceXO." + Model.InvoiceXO.PRO_CustomerLotNumber);
+            this.xrLabelXOId.DataBindings.Add("Text", this.DataSource, Model.ProduceMaterial.PRO_InvoiceCusXOId);
+            this.xrLabelPiHao.DataBindings.Add("Text", this.DataSource, Model.ProduceMaterial.PRO_Pihao);
             this.xrLabelInvoiceSum.DataBindings.Add("Text", this.DataSource, "PronoteHeader." + Model.PronoteHeader.PRO_InvoiceXODetailQuantity);
             this.xrLabelSourceType.DataBindings.Add("Text", this.DataSource, "SourceTypeName");
             this.xrLabel1ProduceMaterialdesc.DataBindings.Add("Text", this.DataSource, Model.ProduceMaterial.PRO_ProduceMaterialdesc);

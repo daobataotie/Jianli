@@ -1271,7 +1271,7 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem52),
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem55),
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem56, true),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem49, true),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem49),
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem53),
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem54),
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem59),

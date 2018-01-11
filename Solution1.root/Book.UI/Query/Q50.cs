@@ -71,7 +71,10 @@ namespace Book.UI.Query
             this.xrLabelProduceMaterialDate.DataBindings.Add("Text", this.DataSource, Model.ProduceMaterial.PRO_ProduceMaterialDate, "{0:yyyy-MM-dd}");
             this.xrLabelProduct.DataBindings.Add("Text", this.DataSource, Model.ProduceMaterial.PRO_ParenProductName, "{0:yyyy-MM-dd}");
             this.xrSubreport1.ReportSource = new Q50_1();
-            this.xrLabelCusXOId.DataBindings.Add("Text", this.DataSource, "CusXOId");
+
+            //2018-1-11
+            //this.xrLabelCusXOId.DataBindings.Add("Text", this.DataSource, "CusXOId");
+            this.xrLabelCusXOId.DataBindings.Add("Text", this.DataSource, Model.ProduceMaterial.PRO_InvoiceCusXOId);
 
             //数据加总
             StringBuilder str = new StringBuilder();

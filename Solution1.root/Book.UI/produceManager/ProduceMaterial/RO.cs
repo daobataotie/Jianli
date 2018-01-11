@@ -94,11 +94,13 @@ namespace Book.UI.produceManager.ProduceMaterial
                 Model.InvoiceXO invoiceXO = new BL.InvoiceXOManager().Get(produceMaterial.InvoiceXOId);
                 if (invoiceXO != null)
                 {
-                    this.xrLabelXOId.Text = invoiceXO.CustomerInvoiceXOId;
                     this.xrLabelCustomer.Text = invoiceXO.xocustomer == null ? null : invoiceXO.xocustomer.ToString();
-                    this.lblCustomerPH.Text = invoiceXO.CustomerLotNumber;
+                    //this.xrLabelXOId.Text = invoiceXO.CustomerInvoiceXOId;
+                    //this.lblCustomerPH.Text = invoiceXO.CustomerLotNumber;
                 }
             }
+            this.xrLabelXOId.Text = this.produceMaterial.InvoiceCusXOId;
+            this.lblCustomerPH.Text = this.produceMaterial.Pihao;
 
             //明细
             this.xrTableCell5.DataBindings.Add("Text", this.DataSource, Model.ProduceMaterialdetails.PRO_Inumber);

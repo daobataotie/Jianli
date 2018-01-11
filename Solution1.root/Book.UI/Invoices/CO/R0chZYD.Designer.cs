@@ -315,6 +315,7 @@ namespace Book.UI.Invoices.CO
             this.xrBarCode1.StylePriority.UseBackColor = false;
             this.xrBarCode1.StylePriority.UseTextAlignment = false;
             eaN128Generator1.CharacterSet = DevExpress.XtraPrinting.BarCode.Code128Charset.CharsetAuto;
+            eaN128Generator1.HumanReadableText = false;
             this.xrBarCode1.Symbology = eaN128Generator1;
             // 
             // xrTable2
