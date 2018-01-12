@@ -4859,6 +4859,9 @@
       <DependentUpon>subReportDetail.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCScrap\EditForm.resx">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="produceManager\ProduceMaterialExit\ConditionForList.zh-CHT.resx">
       <DependentUpon>ConditionForList.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -11915,6 +11918,12 @@
     <Compile Include="produceManager\PCPGOnlineCheck\subReportDetail.Designer.cs">
       <DependentUpon>subReportDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="produceManager\PCScrap\EditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produceManager\PCScrap\EditForm.Designer.cs">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="produceManager\ProduceOtherCompact\ROA4.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -13146,7 +13155,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AccountPayable\AcQuery\" />
-    <Folder Include="produceManager\PCScrap\" />
     <Folder Include="Settings\Privileges\Perm\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
