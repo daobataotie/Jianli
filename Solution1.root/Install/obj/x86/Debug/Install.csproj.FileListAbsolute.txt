@@ -33,3 +33,8 @@ D:\Projects\Git - ERP\Jianli\Solution1.root\Install\bin\x86\Debug\Install.pdb
 D:\Projects\Git - ERP\Jianli\Solution1.root\Install\obj\x86\Debug\ResolveAssemblyReference.cache
 D:\Projects\Git - ERP\Jianli\Solution1.root\Install\obj\x86\Debug\Install.dll
 D:\Projects\Git - ERP\Jianli\Solution1.root\Install\obj\x86\Debug\Install.pdb
+C:\Users\刀巴饕餮\Documents\Git\Jianli\Solution1.root\Install\bin\x86\Debug\Install.dll
+C:\Users\刀巴饕餮\Documents\Git\Jianli\Solution1.root\Install\bin\x86\Debug\Install.pdb
+C:\Users\刀巴饕餮\Documents\Git\Jianli\Solution1.root\Install\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\刀巴饕餮\Documents\Git\Jianli\Solution1.root\Install\obj\x86\Debug\Install.dll
+C:\Users\刀巴饕餮\Documents\Git\Jianli\Solution1.root\Install\obj\x86\Debug\Install.pdb

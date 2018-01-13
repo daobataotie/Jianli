@@ -4859,7 +4859,7 @@
       <DependentUpon>subReportDetail.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="produceManager\PCScrap\EditForm.resx">
+    <EmbeddedResource Include="produceManager\ProductScrap\EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\ProduceMaterialExit\ConditionForList.zh-CHT.resx">
@@ -11918,10 +11918,10 @@
     <Compile Include="produceManager\PCPGOnlineCheck\subReportDetail.Designer.cs">
       <DependentUpon>subReportDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="produceManager\PCScrap\EditForm.cs">
+    <Compile Include="produceManager\ProductScrap\EditForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="produceManager\PCScrap\EditForm.Designer.cs">
+    <Compile Include="produceManager\ProductScrap\EditForm.Designer.cs">
       <DependentUpon>EditForm.cs</DependentUpon>
     </Compile>
     <Compile Include="produceManager\ProduceOtherCompact\ROA4.cs">
