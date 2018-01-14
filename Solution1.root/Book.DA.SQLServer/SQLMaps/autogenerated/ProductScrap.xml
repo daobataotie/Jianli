@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<sqlMap namespace="ProductScrap" xmlns="http://ibatis.apache.org/mapping" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <alias>
+        <typeAlias alias="ProductScrap" type="Book.Model.ProductScrap, Book.Model" />
+    </alias>
+    <resultMaps>                                    
+        <resultMap id="ProductScrapResult" class="ProductScrap">
+			<result property="ProductScrapId" column="ProductScrapId" />
+			<result property="ProductScrapDate" column="ProductScrapDate" />
+			<result property="EmployeeId" column="EmployeeId" />
+			<result property="InsertTime" column="InsertTime" />
+			<result property="UpdateTime" column="UpdateTime" />
+			<result property="DepotId" column="DepotId" />
+			<result property="Note" column="Note" />
+		<result property="Depot" column="DepotId" lazyLoad="false" select="Depot.select_by_primary_key" />		<result property="Employee" column="EmployeeId" lazyLoad="false" select="Employee.select_by_primary_key" />        </resultMap>
+    </resultMaps>
+		
+    <statements>
+		<select id="has_rows_of" resultClass="bool">
+			<![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[ProductScrap]
+				WHERE
+				[ProductScrapId] = #ProductScrapId#
+                        			                   
+				) then 1 else 0 end
+                ]]>
+		</select>
+		<select id="has_rows" resultClass="bool">
+			<![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[ProductScrap]
+ 								
+				) then 1 else 0 end
+                ]]>
+		</select>
+		<select id="get_first" resultMap="ProductScrapResult">
+			<![CDATA[
+			select top 1 *
+			from dbo.ProductScrap
+			 
+			order by InsertTime 
+			]]>
+		</select>
+		<select id="get_last" resultMap="ProductScrapResult">
+			<![CDATA[
+			select top 1 *
+			from dbo.ProductScrap
+						
+            order by InsertTime desc
+			]]>
+            
+		</select>
+		<select id="get_prev" resultMap="ProductScrapResult" parameterClass="ProductScrap">
+			<![CDATA[
+			select top 1 *
+			from dbo.ProductScrap
+			where InsertTime < #InsertTime#	
+            			          
+            order by InsertTime desc
+			]]>
+		</select>
+		<select id="get_next" resultMap="ProductScrapResult" parameterClass="ProductScrap">
+			<![CDATA[
+			select top 1 *
+			from dbo.ProductScrap
+			where InsertTime > #InsertTime#	
+                			                   
+            order by InsertTime
+			]]>
+		</select>
+		
+		<select id="has_rows_before" resultClass="bool" parameterClass="ProductScrap">
+			<![CDATA[
+			select case when exists(
+				select * 
+				from dbo.ProductScrap
+				where InsertTime < #InsertTime#
+                			                   
+				) then 1 else 0 end
+			]]>
+		</select>
+		
+		<select id="has_rows_after" resultClass="bool" parameterClass="ProductScrap">
+			<![CDATA[
+			select case when exists(
+				select * 
+				from dbo.ProductScrap
+				where InsertTime > #InsertTime#
+                			          
+         
+				) then 1 else 0 end
+			]]>
+		</select>
+		<!-- select by primary key -->
+        <select id="select_by_primary_key" resultMap="ProductScrapResult" parameterClass="ProductScrap">
+			<![CDATA[SELECT
+				[ProductScrapId],
+				[ProductScrapDate],
+				[EmployeeId],
+				[InsertTime],
+				[UpdateTime],
+				[DepotId],
+				[Note]
+			FROM
+				[dbo].[ProductScrap]
+			WHERE
+				[ProductScrapId] = #ProductScrapId#
+                			          
+         		]]>
+        </select>
+		
+		<!-- delete -->
+        <delete id="delete" parameterClass="string">
+				<![CDATA[                
+                DELETE FROM [dbo].[ProductScrap]
+			WHERE            
+				[ProductScrapId] = #ProductScrapId#
+                    		]]>
+        </delete>
+
+		<!-- select all -->
+        <select id="select_all" resultMap="ProductScrapResult" >
+			<![CDATA[SELECT *
+			FROM 
+				[dbo].[ProductScrap]
+                			                   
+  ORDER BY InsertTime DESC  
+			]]>
+        </select>
+        
+		<select id="count_all" resultClass="int">
+		<![CDATA[	select count(*)
+			from 
+				[dbo].[ProductScrap]
+                			          
+         ]]>
+		</select>
+		
+		<select id="select_all_with_paging" resultMap="ProductScrapResult">
+        <![CDATA[    SELECT *
+            FROM
+            (
+                SELECT *, row_number() over(order by $OrderStatement$) rownumber
+                FROM    
+                    [dbo].[ProductScrap]
+                    			          
+         
+            ) t
+            WHERE t.rownumber between #Row1# and #Row2#
+             ]]>
+		</select>
+		
+		<!-- insert -->
+        <insert id="insert" parameterClass="ProductScrap">
+			 <![CDATA[ INSERT INTO [dbo].[ProductScrap] 
+			(
+				[ProductScrapId],
+				[ProductScrapDate],
+				[EmployeeId],
+				[InsertTime],
+				[UpdateTime],
+				[DepotId],
+				[Note]
+			) 
+			VALUES 
+			(
+				#ProductScrapId#,
+				#ProductScrapDate#,
+				#EmployeeId#,
+				#InsertTime#,
+				#UpdateTime#,
+				#DepotId#,
+				#Note#
+			)
+             ]]>
+        </insert>
+		
+		<!-- update -->
+        <update id="update" parameterClass="ProductScrap">
+		 <![CDATA[ 	UPDATE [ProductScrap] SET
+				[ProductScrapDate] = #ProductScrapDate#,
+				[EmployeeId] = #EmployeeId#,
+				[InsertTime] = #InsertTime#,
+				[UpdateTime] = #UpdateTime#,
+				[DepotId] = #DepotId#,
+				[Note] = #Note#
+			WHERE
+				[ProductScrapId] = #ProductScrapId#
+                    ]]>
+        </update>
+		<select id="existsPrimary" resultClass="bool" parameterClass="string">
+			<![CDATA[
+			select case when exists(
+				select *
+				from [dbo].[ProductScrap]
+				where  ProductScrapId = #value#                 			                   
+				)
+				then 1 else 0 end
+			]]>
+		</select>
+		
+    </statements>
+</sqlMap>

@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<sqlMap namespace="ProductScrapDetail" xmlns="http://ibatis.apache.org/mapping" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <alias>
+        <typeAlias alias="ProductScrapDetail" type="Book.Model.ProductScrapDetail, Book.Model" />
+    </alias>
+    <resultMaps>                                    
+        <resultMap id="ProductScrapDetailResult" class="ProductScrapDetail">
+			<result property="ProductScrapDetailId" column="ProductScrapDetailId" />
+			<result property="ProductScrapId" column="ProductScrapId" />
+			<result property="ProductId" column="ProductId" />
+			<result property="ScrapQuantity" column="ScrapQuantity" />
+			<result property="DepotPositionId" column="DepotPositionId" />
+			<result property="Note" column="Note" />
+		<result property="DepotPosition" column="DepotPositionId" lazyLoad="false" select="DepotPosition.select_by_primary_key" />		<result property="ProductScrap" column="ProductScrapId" lazyLoad="false" select="ProductScrap.select_by_primary_key" />        </resultMap>
+    </resultMaps>
+		
+    <statements>
+		<select id="has_rows_of" resultClass="bool">
+			<![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[ProductScrapDetail]
+				WHERE
+				[ProductScrapDetailId] = #ProductScrapDetailId#
+                        			                   
+				) then 1 else 0 end
+                ]]>
+		</select>
+		<select id="has_rows" resultClass="bool">
+			<![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[ProductScrapDetail]
+ 								
+				) then 1 else 0 end
+                ]]>
+		</select>
+		<!-- select by primary key -->
+        <select id="select_by_primary_key" resultMap="ProductScrapDetailResult" parameterClass="ProductScrapDetail">
+			<![CDATA[SELECT
+				[ProductScrapDetailId],
+				[ProductScrapId],
+				[ProductId],
+				[ScrapQuantity],
+				[DepotPositionId],
+				[Note]
+			FROM
+				[dbo].[ProductScrapDetail]
+			WHERE
+				[ProductScrapDetailId] = #ProductScrapDetailId#
+                			          
+         		]]>
+        </select>
+		
+		<!-- delete -->
+        <delete id="delete" parameterClass="string">
+				<![CDATA[                
+                DELETE FROM [dbo].[ProductScrapDetail]
+			WHERE            
+				[ProductScrapDetailId] = #ProductScrapDetailId#
+                    		]]>
+        </delete>
+
+		<!-- select all -->
+        <select id="select_all" resultMap="ProductScrapDetailResult" >
+			<![CDATA[SELECT *
+			FROM 
+				[dbo].[ProductScrapDetail]
+                			                   
+
+			]]>
+        </select>
+        
+		<select id="count_all" resultClass="int">
+		<![CDATA[	select count(*)
+			from 
+				[dbo].[ProductScrapDetail]
+                			          
+         ]]>
+		</select>
+		
+		<select id="select_all_with_paging" resultMap="ProductScrapDetailResult">
+        <![CDATA[    SELECT *
+            FROM
+            (
+                SELECT *, row_number() over(order by $OrderStatement$) rownumber
+                FROM    
+                    [dbo].[ProductScrapDetail]
+                    			          
+         
+            ) t
+            WHERE t.rownumber between #Row1# and #Row2#
+             ]]>
+		</select>
+		
+		<!-- insert -->
+        <insert id="insert" parameterClass="ProductScrapDetail">
+			 <![CDATA[ INSERT INTO [dbo].[ProductScrapDetail] 
+			(
+				[ProductScrapDetailId],
+				[ProductScrapId],
+				[ProductId],
+				[ScrapQuantity],
+				[DepotPositionId],
+				[Note]
+			) 
+			VALUES 
+			(
+				#ProductScrapDetailId#,
+				#ProductScrapId#,
+				#ProductId#,
+				#ScrapQuantity#,
+				#DepotPositionId#,
+				#Note#
+			)
+             ]]>
+        </insert>
+		
+		<!-- update -->
+        <update id="update" parameterClass="ProductScrapDetail">
+		 <![CDATA[ 	UPDATE [ProductScrapDetail] SET
+				[ProductScrapId] = #ProductScrapId#,
+				[ProductId] = #ProductId#,
+				[ScrapQuantity] = #ScrapQuantity#,
+				[DepotPositionId] = #DepotPositionId#,
+				[Note] = #Note#
+			WHERE
+				[ProductScrapDetailId] = #ProductScrapDetailId#
+                    ]]>
+        </update>
+		<select id="existsPrimary" resultClass="bool" parameterClass="string">
+			<![CDATA[
+			select case when exists(
+				select *
+				from [dbo].[ProductScrapDetail]
+				where  ProductScrapDetailId = #value#                 			                   
+				)
+				then 1 else 0 end
+			]]>
+		</select>
+		
+    </statements>
+</sqlMap>
