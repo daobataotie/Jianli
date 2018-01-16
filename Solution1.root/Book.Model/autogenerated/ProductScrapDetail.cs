@@ -10,204 +10,211 @@
 using System;
 namespace Book.Model
 {
-	public partial class ProductScrapDetail
-	{
-		#region Data
+    public partial class ProductScrapDetail
+    {
+        #region Data
 
-		/// <summary>
-		/// 
-		/// </summary>
-		private string _productScrapDetailId;
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		private string _productScrapId;
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		private string _productId;
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		private decimal? _scrapQuantity;
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		private string _depotPositionId;
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		private string _note;
-		
-		/// <summary>
-		/// 库库货位
-		/// </summary>
-		private DepotPosition _depotPosition;
-		/// <summary>
-		/// 
-		/// </summary>
-		private ProductScrap _productScrap;
-		 
-		#endregion
-		
-		#region Properties
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		public string ProductScrapDetailId
-		{
-			get 
-			{
-				return this._productScrapDetailId;
-			}
-			set 
-			{
-				this._productScrapDetailId = value;
-			}
-		}
+        /// <summary>
+        /// 
+        /// </summary>
+        private string _productScrapDetailId;
 
-		/// <summary>
-		/// 
-		/// </summary>
-		public string ProductScrapId
-		{
-			get 
-			{
-				return this._productScrapId;
-			}
-			set 
-			{
-				this._productScrapId = value;
-			}
-		}
+        /// <summary>
+        /// 
+        /// </summary>
+        private string _productScrapId;
 
-		/// <summary>
-		/// 
-		/// </summary>
-		public string ProductId
-		{
-			get 
-			{
-				return this._productId;
-			}
-			set 
-			{
-				this._productId = value;
-			}
-		}
+        /// <summary>
+        /// 
+        /// </summary>
+        private string _productId;
 
-		/// <summary>
-		/// 
-		/// </summary>
-		public decimal? ScrapQuantity
-		{
-			get 
-			{
-				return this._scrapQuantity;
-			}
-			set 
-			{
-				this._scrapQuantity = value;
-			}
-		}
+        /// <summary>
+        /// 
+        /// </summary>
+        private decimal? _scrapQuantity;
 
-		/// <summary>
-		/// 
-		/// </summary>
-		public string DepotPositionId
-		{
-			get 
-			{
-				return this._depotPositionId;
-			}
-			set 
-			{
-				this._depotPositionId = value;
-			}
-		}
+        /// <summary>
+        /// 
+        /// </summary>
+        private string _depotPositionId;
 
-		/// <summary>
-		/// 
-		/// </summary>
-		public string Note
-		{
-			get 
-			{
-				return this._note;
-			}
-			set 
-			{
-				this._note = value;
-			}
-		}
-	
-		/// <summary>
-		/// 库库货位
-		/// </summary>
-		public virtual DepotPosition DepotPosition
-		{
-			get
-			{
-				return this._depotPosition;
-			}
-			set
-			{
-				this._depotPosition = value;
-			}
-			
-		}
-		/// <summary>
-		/// 
-		/// </summary>
-		public virtual ProductScrap ProductScrap
-		{
-			get
-			{
-				return this._productScrap;
-			}
-			set
-			{
-				this._productScrap = value;
-			}
-			
-		}
-		/// <summary>
-		/// 
-		/// </summary>
-		public readonly static string PRO_ProductScrapDetailId = "ProductScrapDetailId";
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		public readonly static string PRO_ProductScrapId = "ProductScrapId";
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		public readonly static string PRO_ProductId = "ProductId";
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		public readonly static string PRO_ScrapQuantity = "ScrapQuantity";
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		public readonly static string PRO_DepotPositionId = "DepotPositionId";
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		public readonly static string PRO_Note = "Note";
-		
+        /// <summary>
+        /// 
+        /// </summary>
+        private string _note;
 
-		#endregion
-	}
+        /// <summary>
+        /// 库库货位
+        /// </summary>
+        private DepotPosition _depotPosition;
+        /// <summary>
+        /// 
+        /// </summary>
+        private ProductScrap _productScrap;
+
+        private Product _product;
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string ProductScrapDetailId
+        {
+            get
+            {
+                return this._productScrapDetailId;
+            }
+            set
+            {
+                this._productScrapDetailId = value;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string ProductScrapId
+        {
+            get
+            {
+                return this._productScrapId;
+            }
+            set
+            {
+                this._productScrapId = value;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string ProductId
+        {
+            get
+            {
+                return this._productId;
+            }
+            set
+            {
+                this._productId = value;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public decimal? ScrapQuantity
+        {
+            get
+            {
+                return this._scrapQuantity;
+            }
+            set
+            {
+                this._scrapQuantity = value;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string DepotPositionId
+        {
+            get
+            {
+                return this._depotPositionId;
+            }
+            set
+            {
+                this._depotPositionId = value;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string Note
+        {
+            get
+            {
+                return this._note;
+            }
+            set
+            {
+                this._note = value;
+            }
+        }
+
+        /// <summary>
+        /// 库库货位
+        /// </summary>
+        public virtual DepotPosition DepotPosition
+        {
+            get
+            {
+                return this._depotPosition;
+            }
+            set
+            {
+                this._depotPosition = value;
+            }
+
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public virtual ProductScrap ProductScrap
+        {
+            get
+            {
+                return this._productScrap;
+            }
+            set
+            {
+                this._productScrap = value;
+            }
+
+        }
+
+        public Product Product
+        {
+            get { return _product; }
+            set { _product = value; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public readonly static string PRO_ProductScrapDetailId = "ProductScrapDetailId";
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public readonly static string PRO_ProductScrapId = "ProductScrapId";
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public readonly static string PRO_ProductId = "ProductId";
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public readonly static string PRO_ScrapQuantity = "ScrapQuantity";
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public readonly static string PRO_DepotPositionId = "DepotPositionId";
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public readonly static string PRO_Note = "Note";
+
+
+        #endregion
+    }
 }

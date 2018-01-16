@@ -1,5 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?> 
 <sqlMap namespace="ProductScrapDetail" xmlns="http://ibatis.apache.org/mapping" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <select id="SelectByPrimaryId" resultMap="ProductScrapDetailResult" parameterClass="string">
+      select * from ProductScrapDetail where ProductScrapId=#value#
+    </select>
 
+    <delete id ="DeleteByPrimaryId" parameterClass="string">
+      delete from ProductScrapDetail where ProductScrapId=#value#
+    </delete>
+
+    <select id ="SelectByCondition" resultMap="ProductScrapDetailResult" parameterClass="Map">
+      select psd.* from ProductScrapDetail psd left join  ProductScrap ps on psd.ProductScrapId=ps.ProductScrapId $sql$ order by psd.ProductScrapId
+    </select>
+  </statements>
 </sqlMap>

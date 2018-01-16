@@ -4859,6 +4859,9 @@
       <DependentUpon>subReportDetail.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\ProductScrap\ConditionForm.resx">
+      <DependentUpon>ConditionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="produceManager\ProductScrap\EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -5041,6 +5044,13 @@
     <EmbeddedResource Include="produceManager\ProductOnlineCheck\RO.zh-CHT.resx">
       <DependentUpon>RO.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\ProductScrap\List.resx">
+      <DependentUpon>List.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\ProductScrap\RO.resx">
+      <DependentUpon>RO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PronoteHeader\ProduceProceduresForm.resx">
       <DependentUpon>ProduceProceduresForm.cs</DependentUpon>
@@ -11918,6 +11928,12 @@
     <Compile Include="produceManager\PCPGOnlineCheck\subReportDetail.Designer.cs">
       <DependentUpon>subReportDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="produceManager\ProductScrap\ConditionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produceManager\ProductScrap\ConditionForm.Designer.cs">
+      <DependentUpon>ConditionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="produceManager\ProductScrap\EditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -12056,6 +12072,18 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="produceManager\ProductOnlineCheck\RO.Designer.cs">
+      <DependentUpon>RO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="produceManager\ProductScrap\List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produceManager\ProductScrap\List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="produceManager\ProductScrap\RO.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="produceManager\ProductScrap\RO.Designer.cs">
       <DependentUpon>RO.cs</DependentUpon>
     </Compile>
     <Compile Include="produceManager\PronoteHeader\ProduceProceduresForm.cs">

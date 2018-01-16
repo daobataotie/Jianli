@@ -16,5 +16,10 @@ namespace Book.DA
     /// </summary>
     public partial interface IProductScrapDetailAccessor : IAccessor
     {
+        IList<Model.ProductScrapDetail> SelectByPrimaryId(string id);
+
+        void DeleteByPrimaryId(string id);
+
+        IList<Model.ProductScrapDetail> SelectByCondition(DateTime dateTime, DateTime dateTime_2, string productId);
     }
 }

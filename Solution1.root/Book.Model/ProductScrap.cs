@@ -6,6 +6,8 @@
 //
 //------------------------------------------------------------------------------
 using System;
+using System.Collections.Generic;
+
 namespace Book.Model
 {
 	/// <summary>
@@ -14,6 +16,12 @@ namespace Book.Model
 	[Serializable]
 	public partial class ProductScrap
 	{
+        private IList<Model.ProductScrapDetail> _details = new List<Model.ProductScrapDetail>();
 
+        public IList<Model.ProductScrapDetail> Details
+        {
+            get { return _details; }
+            set { _details = value; }
+        }
 	}
 }
