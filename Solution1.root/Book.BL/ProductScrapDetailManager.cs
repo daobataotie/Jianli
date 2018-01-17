@@ -15,38 +15,53 @@ namespace Book.BL
     /// </summary>
     public partial class ProductScrapDetailManager
     {
-		
-		/// <summary>
-		/// Delete ProductScrapDetail by primary key.
-		/// </summary>
-		public void Delete(string productScrapDetailId)
-		{
-			//
-			// todo:add other logic here
-			//
-			accessor.Delete(productScrapDetailId);
-		}
 
-		/// <summary>
-		/// Insert a ProductScrapDetail.
-		/// </summary>
+        /// <summary>
+        /// Delete ProductScrapDetail by primary key.
+        /// </summary>
+        public void Delete(string productScrapDetailId)
+        {
+            //
+            // todo:add other logic here
+            //
+            accessor.Delete(productScrapDetailId);
+        }
+
+        /// <summary>
+        /// Insert a ProductScrapDetail.
+        /// </summary>
         public void Insert(Model.ProductScrapDetail productScrapDetail)
         {
-			//
-			// todo:add other logic here
-			//
+            //
+            // todo:add other logic here
+            //
             accessor.Insert(productScrapDetail);
         }
-		
-		/// <summary>
-		/// Update a ProductScrapDetail.
-		/// </summary>
+
+        /// <summary>
+        /// Update a ProductScrapDetail.
+        /// </summary>
         public void Update(Model.ProductScrapDetail productScrapDetail)
         {
-			//
-			// todo: add other logic here.
-			//
+            //
+            // todo: add other logic here.
+            //
             accessor.Update(productScrapDetail);
+        }
+
+        public IList<Model.ProductScrapDetail> SelectByPrimaryId(string id)
+        {
+            return accessor.SelectByPrimaryId(id);
+        }
+
+        public void DeleteByPrimaryId(string id)
+        {
+            accessor.Delete(id);
+        }
+
+        public IList<Model.ProductScrapDetail> SelectByCondition(DateTime startDate, DateTime endDate, string productId)
+        {
+            return accessor.SelectByCondition(startDate, endDate, productId);
         }
     }
 }

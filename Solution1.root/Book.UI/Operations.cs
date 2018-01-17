@@ -734,6 +734,9 @@ namespace Book.UI
 
             //即使库存查询
             operations.Add("Query.Q15JiShiForm", (D1)delegate(System.Windows.Forms.Form form) { M1("Query.Q15JiShiForm", form); });
+
+            //商品報廢單
+            operations.Add("produceManager.ProductScrap.EditForm", (D1)delegate(System.Windows.Forms.Form form) { M1("produceManager.ProductScrap.EditForm", form); });
         }
 
         static Form CreateForm(string formTypeName)
