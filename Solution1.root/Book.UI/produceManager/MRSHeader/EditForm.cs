@@ -479,7 +479,8 @@ namespace Book.UI.produceManager.MRSHeader
         protected override void AddNew()
         {
             this.mrsheader = new Model.MRSHeader();
-            this.mrsheader.MRSHeaderId = this.mrsheaderManager.GetId(); ;// Guid.NewGuid().ToString();
+            //this.mrsheader.MRSHeaderId = this.mrsheaderManager.GetId(); // Guid.NewGuid().ToString();
+            this.mrsheader.MRSHeaderId = this.mrsheaderManager.GetIdSimple(DateTime.Now);
             this.mrsheader.Employee0 = BL.V.ActiveOperator.Employee;
             this.mrsheader.Details = new List<Model.MRSdetails>();
             if (this.action == "insert")

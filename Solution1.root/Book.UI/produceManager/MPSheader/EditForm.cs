@@ -576,7 +576,8 @@ namespace Book.UI.produceManager.MPSheader
                 return;
             }
             this.mpsheader = new Model.MPSheader();
-            this.mpsheader.MPSheaderId = this.mpsheaderManager.GetId();//  Guid.NewGuid().ToString();
+            //this.mpsheader.MPSheaderId = this.mpsheaderManager.GetId();//  Guid.NewGuid().ToString();
+            this.mpsheader.MPSheaderId = this.mpsheaderManager.GetIdSimple(DateTime.Now);
             this.mpsheader.Employee0 = BL.V.ActiveOperator.Employee;
             this.mpsheader.MPSStartDate = DateTime.Now;
             this.mpsheader.Details = new List<Model.MPSdetails>();
@@ -1778,8 +1779,8 @@ namespace Book.UI.produceManager.MPSheader
 
         private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-           RO1ZYD ro =new RO1ZYD(mpsheader.MPSheaderId);
-           ro.ShowPreviewDialog();
+            RO1ZYD ro = new RO1ZYD(mpsheader.MPSheaderId);
+            ro.ShowPreviewDialog();
         }
     }
 }

@@ -14,95 +14,99 @@ namespace Book.BL
 {
     public partial class MRSHeaderManager
     {
-		///<summary>
-		/// Data accessor of dbo.MRSHeader
-		///</summary>
-		private static readonly DA.IMRSHeaderAccessor accessor = (DA.IMRSHeaderAccessor)Accessors.Get("MRSHeaderAccessor");
-		
-		/// <summary>
-		/// Select by primary key.
-		/// </summary>		
-		public Model.MRSHeader Get(string mRSHeaderId)
-		{
-			return accessor.Get(mRSHeaderId);
-		}
-		
-		public bool HasRows(string mRSHeaderId)
-		{
-			return accessor.HasRows(mRSHeaderId);
-		}
-		
-		public bool HasRows()
-		{
-			return accessor.HasRows();
-		}
-		
-		public bool Exists(string id)
-		{
-			return accessor.Exists(id);
-		}
-		
-		public Model.MRSHeader GetById(string id)
-		{
-			return accessor.GetById(id);
-		}
-		
-		public bool ExistsExcept(Model.MRSHeader e)
-		{
-			return accessor.ExistsExcept(e);
-		}
-		public bool HasRowsBefore(Model.MRSHeader e)
-		{
-			return accessor.HasRowsBefore(e);
-		}
-		
-		public bool HasRowsAfter(Model.MRSHeader e)
-		{
-			return accessor.HasRowsAfter(e);
-		}
-		
-		public Model.MRSHeader GetFirst()
-		{
-			return accessor.GetFirst();
-		}
-		
-		public Model.MRSHeader GetLast()
-		{
-			return accessor.GetLast();
-		}
-		
-		public Model.MRSHeader GetPrev(Model.MRSHeader e)
-		{
-			return accessor.GetPrev(e);
-		}
-		
-		public Model.MRSHeader GetNext(Model.MRSHeader e)
-		{
-			return accessor.GetNext(e);
-		}
-		/// <summary>
-		/// Select all.
-		/// </summary>
-		public IList<Model.MRSHeader> Select()
-		{
-			return accessor.Select();
-		}
-		
-		/// <summary>
-		/// 获取记录总数
-		/// </summary>
-		public int Count()
-		{
-			return accessor.Count();
-		}
-		
-		/// <summary>
-		/// 获取指定状态、指定分页，并按指定要求排序的记录
-		/// </summary>
-		public IList<Model.MRSHeader> Select(Helper.OrderDescription orderDescription, Helper.PagingDescription pagingDescription)
-		{
-			return accessor.Select(orderDescription, pagingDescription);
-		}
-		
+        ///<summary>
+        /// Data accessor of dbo.MRSHeader
+        ///</summary>
+        private static readonly DA.IMRSHeaderAccessor accessor = (DA.IMRSHeaderAccessor)Accessors.Get("MRSHeaderAccessor");
+
+        /// <summary>
+        /// Select by primary key.
+        /// </summary>		
+        public Model.MRSHeader Get(string mRSHeaderId)
+        {
+            return accessor.Get(mRSHeaderId);
+        }
+
+        public bool HasRows(string mRSHeaderId)
+        {
+            return accessor.HasRows(mRSHeaderId);
+        }
+
+        public bool HasRows()
+        {
+            return accessor.HasRows();
+        }
+
+        public bool Exists(string id)
+        {
+            return accessor.Exists(id);
+        }
+
+        public Model.MRSHeader GetById(string id)
+        {
+            return accessor.GetById(id);
+        }
+
+        public bool ExistsExcept(Model.MRSHeader e)
+        {
+            return accessor.ExistsExcept(e);
+        }
+        public bool HasRowsBefore(Model.MRSHeader e)
+        {
+            return accessor.HasRowsBefore(e);
+        }
+
+        public bool HasRowsAfter(Model.MRSHeader e)
+        {
+            return accessor.HasRowsAfter(e);
+        }
+
+        public Model.MRSHeader GetFirst()
+        {
+            return accessor.GetFirst();
+        }
+
+        public Model.MRSHeader GetLast()
+        {
+            return accessor.GetLast();
+        }
+
+        public Model.MRSHeader GetPrev(Model.MRSHeader e)
+        {
+            return accessor.GetPrev(e);
+        }
+
+        public Model.MRSHeader GetNext(Model.MRSHeader e)
+        {
+            return accessor.GetNext(e);
+        }
+        /// <summary>
+        /// Select all.
+        /// </summary>
+        public IList<Model.MRSHeader> Select()
+        {
+            return accessor.Select();
+        }
+
+        /// <summary>
+        /// 获取记录总数
+        /// </summary>
+        public int Count()
+        {
+            return accessor.Count();
+        }
+
+        /// <summary>
+        /// 获取指定状态、指定分页，并按指定要求排序的记录
+        /// </summary>
+        public IList<Model.MRSHeader> Select(Helper.OrderDescription orderDescription, Helper.PagingDescription pagingDescription)
+        {
+            return accessor.Select(orderDescription, pagingDescription);
+        }
+
+        public bool ExistsPrimary(string id)
+        {
+            return accessor.ExistsPrimary(id);
+        }
     }
 }

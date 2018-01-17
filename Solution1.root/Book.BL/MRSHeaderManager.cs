@@ -27,6 +27,11 @@ namespace Book.BL
             //
             // todo:add other logic here
             //
+            Model.MRSHeader model = this.Get(mRSHeaderID);
+            string invoiceKind = this.GetInvoiceKind().ToLower();
+            string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, model.InsertTime.Value.ToString("yyyy-MM-dd"));
+            SequenceManager.Decrement(sequencekey_d);
+
 
             accessor.Delete(mRSHeaderID);
 
@@ -105,14 +110,14 @@ namespace Book.BL
 
                 BL.V.BeginTransaction();
                 string invoiceKind = this.GetInvoiceKind().ToLower();
-                string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, mRSHeader.InsertTime.Value.Year);
-                string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, mRSHeader.InsertTime.Value.Year, mRSHeader.InsertTime.Value.Month);
+                //string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, mRSHeader.InsertTime.Value.Year);
+                //string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, mRSHeader.InsertTime.Value.Year, mRSHeader.InsertTime.Value.Month);
                 string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, mRSHeader.InsertTime.Value.ToString("yyyy-MM-dd"));
-                string sequencekey = string.Format(invoiceKind);
-                SequenceManager.Increment(sequencekey_y);
-                SequenceManager.Increment(sequencekey_m);
+                //string sequencekey = string.Format(invoiceKind);
+                //SequenceManager.Increment(sequencekey_y);
+                //SequenceManager.Increment(sequencekey_m);
                 SequenceManager.Increment(sequencekey_d);
-                SequenceManager.Increment(sequencekey);
+                //SequenceManager.Increment(sequencekey);
                 if (mRSHeader.Employee0 != null)
                     mRSHeader.Employee0Id = mRSHeader.Employee0.EmployeeId;
                 if (mRSHeader.Employee1 != null)
@@ -255,6 +260,27 @@ namespace Book.BL
         public string SelectByInvoiceCusIdAndType(string CustomerInvoiceXOId, string SourceType)
         {
             return accessor.SelectByInvoiceCusIdAndType(CustomerInvoiceXOId, SourceType);
+        }
+
+        private void TiGuiExists(Model.MRSHeader model)
+        {
+            if (this.ExistsPrimary(model.MRSHeaderId))
+            {
+                //设置KEY值
+                string invoiceKind = this.GetInvoiceKind().ToLower();
+                //string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, model.InsertTime.Value.Year);
+                //string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, model.InsertTime.Value.Year, model.InsertTime.Value.Month);
+                string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, model.InsertTime.Value.ToString("yyyy-MM-dd"));
+                //string sequencekey = string.Format(invoiceKind);
+                //SequenceManager.Increment(sequencekey_y);
+                //SequenceManager.Increment(sequencekey_m);
+                SequenceManager.Increment(sequencekey_d);
+                //SequenceManager.Increment(sequencekey);
+                model.MRSHeaderId = this.GetIdSimple(model.InsertTime.Value);
+                TiGuiExists(model);
+                //throw new Helper.InvalidValueException(Model.Product.PRO_Id);               
+            }
+
         }
     }
 }

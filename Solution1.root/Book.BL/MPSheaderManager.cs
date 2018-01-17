@@ -33,6 +33,11 @@ namespace Book.BL
             //
             // todo:add other logic here
             //
+            Model.MPSheader model = this.Get(mPSheaderId);
+            string invoiceKind = this.GetInvoiceKind().ToLower();
+            string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, model.InsertTime.Value.ToString("yyyy-MM-dd"));
+            SequenceManager.Decrement(sequencekey_d);
+
             accessor.Delete(mPSheaderId);
         }
 
@@ -73,7 +78,7 @@ namespace Book.BL
                     }
                 }
 
-                accessor.Delete(mPSheader.MPSheaderId);
+                this.Delete(mPSheader.MPSheaderId);
 
                 BL.V.CommitTransaction();
             }
@@ -108,15 +113,15 @@ namespace Book.BL
                 TiGuiExists(mPSheader);
                 mPSheader.UpdateTime = DateTime.Now;
                 string invoiceKind = this.GetInvoiceKind().ToLower();
-                string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, mPSheader.InsertTime.Value.Year);
-                string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, mPSheader.InsertTime.Value.Year, mPSheader.InsertTime.Value.Month);
+                //string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, mPSheader.InsertTime.Value.Year);
+                //string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, mPSheader.InsertTime.Value.Year, mPSheader.InsertTime.Value.Month);
                 string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, mPSheader.InsertTime.Value.ToString("yyyy-MM-dd"));
-                string sequencekey = string.Format(invoiceKind);
+                //string sequencekey = string.Format(invoiceKind);
 
-                SequenceManager.Increment(sequencekey_y);
-                SequenceManager.Increment(sequencekey_m);
+                //SequenceManager.Increment(sequencekey_y);
+                //SequenceManager.Increment(sequencekey_m);
                 SequenceManager.Increment(sequencekey_d);
-                SequenceManager.Increment(sequencekey);
+                //SequenceManager.Increment(sequencekey);
 
                 if (mPSheader.Details != null && mPSheader.Details.Count > 0)
                     mPSheader.InvoiceXOId = mPSheader.Details[0].InvoiceXOId;
@@ -362,19 +367,18 @@ namespace Book.BL
             {
                 //设置KEY值
                 string invoiceKind = this.GetInvoiceKind().ToLower();
-                string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, model.InsertTime.Value.Year);
-                string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, model.InsertTime.Value.Year, model.InsertTime.Value.Month);
+                //string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, model.InsertTime.Value.Year);
+                //string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, model.InsertTime.Value.Year, model.InsertTime.Value.Month);
                 string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, model.InsertTime.Value.ToString("yyyy-MM-dd"));
-                string sequencekey = string.Format(invoiceKind);
-                SequenceManager.Increment(sequencekey_y);
-                SequenceManager.Increment(sequencekey_m);
+                //string sequencekey = string.Format(invoiceKind);
+                //SequenceManager.Increment(sequencekey_y);
+                //SequenceManager.Increment(sequencekey_m);
                 SequenceManager.Increment(sequencekey_d);
-                SequenceManager.Increment(sequencekey);
-                model.MPSheaderId = this.GetId(model.InsertTime.Value);
+                //SequenceManager.Increment(sequencekey);
+                model.MPSheaderId = this.GetIdSimple(model.InsertTime.Value);
                 TiGuiExists(model);
                 //throw new Helper.InvalidValueException(Model.Product.PRO_Id);               
             }
-
         }
 
     }
