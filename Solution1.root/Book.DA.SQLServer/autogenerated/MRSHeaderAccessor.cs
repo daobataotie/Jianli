@@ -101,5 +101,10 @@ namespace Book.DA.SQLServer
             paras.Add("oldId", Get(e.MRSHeaderId).Id);
 			return sqlmapper.QueryForObject<bool>("MRSHeader.existsexcept", paras);
 		}
+
+        public bool ExistsPrimary(string id)
+        {
+            return sqlmapper.QueryForObject<bool>("MRSHeader.existsPrimary", id);
+        }
     }
 }

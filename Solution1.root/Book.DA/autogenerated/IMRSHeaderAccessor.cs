@@ -49,6 +49,8 @@ namespace Book.DA
 		Model.MRSHeader GetById(string id);
 		
 		bool ExistsExcept(Model.MRSHeader e);
+
+        bool ExistsPrimary(string id);
 	}
 }
 
