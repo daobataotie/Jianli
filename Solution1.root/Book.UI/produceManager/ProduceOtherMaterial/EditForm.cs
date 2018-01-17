@@ -314,7 +314,8 @@ namespace Book.UI.produceManager.ProduceOtherMaterial
             this.bindingSourceDepotPositionId.DataSource = null;
             this._produceOtherMaterial = new Model.ProduceOtherMaterial();
             this._produceOtherMaterial.ProduceOtherMaterialDate = DateTime.Now;
-            this._produceOtherMaterial.ProduceOtherMaterialId = this.produceOtherMaterialManager.GetId();// Guid.NewGuid().ToString();
+            //this._produceOtherMaterial.ProduceOtherMaterialId = this.produceOtherMaterialManager.GetId();// Guid.NewGuid().ToString();
+            this._produceOtherMaterial.ProduceOtherMaterialId = this.produceOtherMaterialManager.GetIdSimple(DateTime.Now);
             this._produceOtherMaterial.Employee0 = BL.V.ActiveOperator.Employee;
             if (this._produceOtherMaterial.Employee0 != null)
                 this._produceOtherMaterial.Employee0Id = this._produceOtherMaterial.Employee0.EmployeeId;

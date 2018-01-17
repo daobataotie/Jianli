@@ -62,6 +62,12 @@ namespace Book.BL
             try
             {
                 BL.V.BeginTransaction();
+
+                Model.ProduceOtherInDepot model = this.Get(produceOtherInDepotId);
+                string invoiceKind = this.GetInvoiceKind().ToLower();
+                string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, model.InsertTime.Value.ToString("yyyy-MM-dd"));
+                SequenceManager.Decrement(sequencekey_d);
+
                 CancelAffect(accessor.Get(produceOtherInDepotId), 1);
                 accessor.Delete(produceOtherInDepotId);
                 BL.V.CommitTransaction();
@@ -104,15 +110,15 @@ namespace Book.BL
                 BL.V.BeginTransaction();
 
                 string invoiceKind = this.GetInvoiceKind().ToLower();
-                string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, produceOtherInDepot.InsertTime.Value.Year);
-                string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, produceOtherInDepot.InsertTime.Value.Year, produceOtherInDepot.InsertTime.Value.Month);
+                //string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, produceOtherInDepot.InsertTime.Value.Year);
+                //string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, produceOtherInDepot.InsertTime.Value.Year, produceOtherInDepot.InsertTime.Value.Month);
                 string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, produceOtherInDepot.InsertTime.Value.ToString("yyyy-MM-dd"));
-                string sequencekey = string.Format(invoiceKind);
+                //string sequencekey = string.Format(invoiceKind);
 
-                SequenceManager.Increment(sequencekey_y);
-                SequenceManager.Increment(sequencekey_m);
+                //SequenceManager.Increment(sequencekey_y);
+                //SequenceManager.Increment(sequencekey_m);
                 SequenceManager.Increment(sequencekey_d);
-                SequenceManager.Increment(sequencekey);
+                //SequenceManager.Increment(sequencekey);
 
 
                 accessor.Insert(produceOtherInDepot);
@@ -295,15 +301,15 @@ namespace Book.BL
             {
                 //设置KEY值
                 string invoiceKind = this.GetInvoiceKind().ToLower();
-                string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, model.InsertTime.Value.Year);
-                string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, model.InsertTime.Value.Year, model.InsertTime.Value.Month);
+                //string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, model.InsertTime.Value.Year);
+                //string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, model.InsertTime.Value.Year, model.InsertTime.Value.Month);
                 string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, model.InsertTime.Value.ToString("yyyy-MM-dd"));
-                string sequencekey = string.Format(invoiceKind);
-                SequenceManager.Increment(sequencekey_y);
-                SequenceManager.Increment(sequencekey_m);
+                //string sequencekey = string.Format(invoiceKind);
+                //SequenceManager.Increment(sequencekey_y);
+                //SequenceManager.Increment(sequencekey_m);
                 SequenceManager.Increment(sequencekey_d);
-                SequenceManager.Increment(sequencekey);
-                model.ProduceOtherInDepotId = this.GetId(model.InsertTime.Value);
+                //SequenceManager.Increment(sequencekey);
+                model.ProduceOtherInDepotId = this.GetIdSimple(model.InsertTime.Value);
                 TiGuiExists(model);
                 //throw new Helper.InvalidValueException(Model.Product.PRO_Id);               
             }

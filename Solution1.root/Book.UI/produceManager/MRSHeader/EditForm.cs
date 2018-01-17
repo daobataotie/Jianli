@@ -1244,7 +1244,7 @@ namespace Book.UI.produceManager.MRSHeader
                 {
                     this._invoiceCO = new Book.Model.InvoiceCO();
                     this._invoiceCO.Details = new List<Model.InvoiceCODetail>();
-                    this._invoiceCO.InvoiceId = this._invoiceCOManager.GetNewId();
+                    this._invoiceCO.InvoiceId = this._invoiceCOManager.GetIdSimple(DateTime.Now);
                     this._invoiceCO.Employee1Id = BL.V.ActiveOperator.EmployeeId;
                     this._invoiceCO.Employee1 = BL.V.ActiveOperator.Employee;
                     this._invoiceCO.Employee0Id = BL.V.ActiveOperator.EmployeeId;
@@ -1488,7 +1488,8 @@ namespace Book.UI.produceManager.MRSHeader
                 foreach (IGrouping<string, Model.MRSdetails> groups in compacts)
                 {
                     this._produceOtherCompact = new Model.ProduceOtherCompact();
-                    this._produceOtherCompact.ProduceOtherCompactId = this._produceOtherCompactManager.GetId();
+                    //this._produceOtherCompact.ProduceOtherCompactId = this._produceOtherCompactManager.GetId();
+                    this._produceOtherCompact.ProduceOtherCompactId = this._produceOtherCompactManager.GetIdSimple(DateTime.Now);
                     this._produceOtherCompact.SupplierId = groups.Key;
                     this._produceOtherCompact.Supplier = new BL.SupplierManager().Get(groups.Key);
                     this._produceOtherCompact.Employee0Id = BL.V.ActiveOperator.EmployeeId;

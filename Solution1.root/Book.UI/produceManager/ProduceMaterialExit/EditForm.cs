@@ -58,7 +58,7 @@ namespace Book.UI.produceManager.ProduceMaterialExit
         }
 
         public EditForm(string id)
-            :this()
+            : this()
         {
             this._produceMaterialExit = this.produceMaterialExitManager.Get(id);
             this._produceMaterialExit.Detail = this.produceExitDetailManager.Select(_produceMaterialExit);
@@ -296,7 +296,8 @@ namespace Book.UI.produceManager.ProduceMaterialExit
         {
 
             this._produceMaterialExit = new Model.ProduceMaterialExit();
-            this._produceMaterialExit.ProduceMaterialExitId = this.produceMaterialExitManager.GetId();// Guid.NewGuid().ToString();
+            //this._produceMaterialExit.ProduceMaterialExitId = this.produceMaterialExitManager.GetId();// Guid.NewGuid().ToString();
+            this._produceMaterialExit.ProduceMaterialExitId = this.produceMaterialExitManager.GetIdSimple(DateTime.Now);
             this._produceMaterialExit.ProduceExitMaterialDate = DateTime.Now;
             this._produceMaterialExit.Employee0 = BL.V.ActiveOperator.Employee;
             this._produceMaterialExit.Detail = new List<Model.ProduceMaterialExitDetail>();

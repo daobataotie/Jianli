@@ -79,7 +79,8 @@ namespace Book.UI.produceManager.ProduceOtherReturnMaterial
         protected override void AddNew()
         {
             this._produceOtherReturnMaterial = new Model.ProduceOtherReturnMaterial();
-            this._produceOtherReturnMaterial.ProduceOtherReturnMaterialId = this._produceOtherReturnMaterialManager.GetId();
+            //this._produceOtherReturnMaterial.ProduceOtherReturnMaterialId = this._produceOtherReturnMaterialManager.GetId();
+            this._produceOtherReturnMaterial.ProduceOtherReturnMaterialId = this._produceOtherReturnMaterialManager.GetIdSimple(DateTime.Now);
             this._produceOtherReturnMaterial.ProduceOtherReturnMaterialDate = DateTime.Now;
             this._produceOtherReturnMaterial.PayDate = DateTime.Now;
             this._produceOtherReturnMaterial.Employee0 = BL.V.ActiveOperator.Employee;

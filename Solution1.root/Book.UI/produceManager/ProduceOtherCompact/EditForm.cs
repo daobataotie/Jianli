@@ -347,7 +347,8 @@ namespace Book.UI.produceManager.ProduceOtherCompact
         {
             this._produceOtherCompact = new Model.ProduceOtherCompact();
             this._produceOtherCompact.ProduceOtherCompactDate = DateTime.Now;
-            this._produceOtherCompact.ProduceOtherCompactId = this.produceOtherCompactManager.GetId();// Guid.NewGuid().ToString();
+            //this._produceOtherCompact.ProduceOtherCompactId = this.produceOtherCompactManager.GetId();// Guid.NewGuid().ToString();
+            this._produceOtherCompact.ProduceOtherCompactId = this.produceOtherCompactManager.GetIdSimple(DateTime.Now);
             this._produceOtherCompact.Employee0 = BL.V.ActiveOperator.Employee;
             this._produceOtherCompact.Details = new List<Model.ProduceOtherCompactDetail>();
             this._produceOtherCompact.DetailMaterial = new List<Model.ProduceOtherCompactMaterial>();
@@ -1024,7 +1025,7 @@ namespace Book.UI.produceManager.ProduceOtherCompact
 
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            RO ro=new  RO(_produceOtherCompact.ProduceOtherCompactId);
+            RO ro = new RO(_produceOtherCompact.ProduceOtherCompactId);
             ro.ShowPreviewDialog();
         }
     }

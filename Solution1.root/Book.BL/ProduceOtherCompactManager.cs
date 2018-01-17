@@ -27,6 +27,12 @@ namespace Book.BL
             //
             // todo:add other logic here
             //
+
+            Model.ProduceOtherCompact model = this.Get(produceOtherCompactId);
+            string invoiceKind = this.GetInvoiceKind().ToLower();
+            string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, model.InsertTime.Value.ToString("yyyy-MM-dd"));
+            SequenceManager.Decrement(sequencekey_d);
+
             accessor.Delete(produceOtherCompactId);
         }
         public void Delete(Model.ProduceOtherCompact produceOtherCompact)
@@ -34,7 +40,7 @@ namespace Book.BL
             //
             // todo:add other logic here
             //
-            accessor.Delete(produceOtherCompact.ProduceOtherCompactId);
+            this.Delete(produceOtherCompact.ProduceOtherCompactId);
         }
         public Model.ProduceOtherCompact GetDetails(string produceOtherCompactId)
         {
@@ -55,6 +61,7 @@ namespace Book.BL
             // todo:add other logic here
             //
             Validate(produceOtherCompact);
+            TiGuiExists(produceOtherCompact);
             try
             {
                 if (this.ExistsPrimary(produceOtherCompact.ProduceOtherCompactId))
@@ -66,15 +73,15 @@ namespace Book.BL
                 produceOtherCompact.UpdateTime = DateTime.Now;
                 BL.V.BeginTransaction();
                 string invoiceKind = this.GetInvoiceKind().ToLower();
-                string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, produceOtherCompact.InsertTime.Value.Year);
-                string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, produceOtherCompact.InsertTime.Value.Year, produceOtherCompact.InsertTime.Value.Month);
+                //string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, produceOtherCompact.InsertTime.Value.Year);
+                //string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, produceOtherCompact.InsertTime.Value.Year, produceOtherCompact.InsertTime.Value.Month);
                 string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, produceOtherCompact.InsertTime.Value.ToString("yyyy-MM-dd"));
-                string sequencekey = string.Format(invoiceKind);
+                //string sequencekey = string.Format(invoiceKind);
 
-                SequenceManager.Increment(sequencekey_y);
-                SequenceManager.Increment(sequencekey_m);
+                //SequenceManager.Increment(sequencekey_y);
+                //SequenceManager.Increment(sequencekey_m);
                 SequenceManager.Increment(sequencekey_d);
-                SequenceManager.Increment(sequencekey);
+                //SequenceManager.Increment(sequencekey);
                 produceOtherCompact.InvoiceStatus = 1;
                 accessor.Insert(produceOtherCompact);
 
@@ -205,6 +212,27 @@ namespace Book.BL
         public void UpdateAccess(Model.ProduceOtherCompact produceOtherCompact)
         {
             accessor.Update(produceOtherCompact);
+        }
+
+        private void TiGuiExists(Model.ProduceOtherCompact model)
+        {
+            if (this.ExistsPrimary(model.ProduceOtherCompactId))
+            {
+                //设置KEY值
+                string invoiceKind = this.GetInvoiceKind().ToLower();
+                //string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, model.InsertTime.Value.Year);
+                //string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, model.InsertTime.Value.Year, model.InsertTime.Value.Month);
+                string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, model.InsertTime.Value.ToString("yyyy-MM-dd"));
+                //string sequencekey = string.Format(invoiceKind);
+                //SequenceManager.Increment(sequencekey_y);
+                //SequenceManager.Increment(sequencekey_m);
+                SequenceManager.Increment(sequencekey_d);
+                //SequenceManager.Increment(sequencekey);
+                model.ProduceOtherCompactId = this.GetIdSimple(model.InsertTime.Value);
+                TiGuiExists(model);
+                //throw new Helper.InvalidValueException(Model.Product.PRO_Id);               
+            }
+
         }
     }
 }

@@ -26,6 +26,12 @@ namespace Book.BL
         /// </summary>
         public void Delete(string produceInDepotId)
         {
+            Model.ProduceInDepot model = this.Get(produceInDepotId);
+            string invoiceKind = this.GetInvoiceKind().ToLower();
+            string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, model.InsertTime.Value.ToString("yyyy-MM-dd"));
+            SequenceManager.Decrement(sequencekey_d);
+
+
             accessor.Delete(produceInDepotId);
         }
 
@@ -38,7 +44,7 @@ namespace Book.BL
             {
                 BL.V.BeginTransaction();
                 calEffectDelete(DetailAccessor.Select(produceInDepot));
-                accessor.Delete(produceInDepot.ProduceInDepotId);
+                this.Delete(produceInDepot.ProduceInDepotId);
                 //修改详细合计生产数量,合计合格数量 2012年6月7日10:38:42
                 this.UpdateDetailHjSum(produceInDepot);
                 BL.V.CommitTransaction();
@@ -72,14 +78,14 @@ namespace Book.BL
                 TiGuiExists(produceInDepot);
 
                 string invoiceKind = this.GetInvoiceKind().ToLower();
-                string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, produceInDepot.InsertTime.Value.Year);
-                string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, produceInDepot.InsertTime.Value.Year, produceInDepot.InsertTime.Value.Month);
+                //string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, produceInDepot.InsertTime.Value.Year);
+                //string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, produceInDepot.InsertTime.Value.Year, produceInDepot.InsertTime.Value.Month);
                 string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, produceInDepot.InsertTime.Value.ToString("yyyy-MM-dd"));
-                string sequencekey = string.Format(invoiceKind);
-                SequenceManager.Increment(sequencekey_y);
-                SequenceManager.Increment(sequencekey_m);
+                //string sequencekey = string.Format(invoiceKind);
+                //SequenceManager.Increment(sequencekey_y);
+                //SequenceManager.Increment(sequencekey_m);
                 SequenceManager.Increment(sequencekey_d);
-                SequenceManager.Increment(sequencekey);
+                //SequenceManager.Increment(sequencekey);
                 accessor.Insert(produceInDepot);
                 addDetail(produceInDepot);
                 BL.V.CommitTransaction();
@@ -309,15 +315,15 @@ namespace Book.BL
             {
                 //设置KEY值
                 string invoiceKind = this.GetInvoiceKind().ToLower();
-                string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, model.ProduceInDepotDate.Value.Year);
-                string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, model.ProduceInDepotDate.Value.Year, model.ProduceInDepotDate.Value.Month);
+                //string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, model.ProduceInDepotDate.Value.Year);
+                //string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, model.ProduceInDepotDate.Value.Year, model.ProduceInDepotDate.Value.Month);
                 string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, model.ProduceInDepotDate.Value.ToString("yyyy-MM-dd"));
-                string sequencekey = string.Format(invoiceKind);
-                SequenceManager.Increment(sequencekey_y);
-                SequenceManager.Increment(sequencekey_m);
+                //string sequencekey = string.Format(invoiceKind);
+                //SequenceManager.Increment(sequencekey_y);
+                //SequenceManager.Increment(sequencekey_m);
                 SequenceManager.Increment(sequencekey_d);
-                SequenceManager.Increment(sequencekey);
-                model.ProduceInDepotId = this.GetId(model.ProduceInDepotDate.Value);
+                //SequenceManager.Increment(sequencekey);
+                model.ProduceInDepotId = this.GetIdSimple(model.ProduceInDepotDate.Value);
                 TiGuiExists(model);
             }
 

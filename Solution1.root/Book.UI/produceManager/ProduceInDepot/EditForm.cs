@@ -345,6 +345,7 @@ namespace Book.UI.produceManager.ProduceInDepot
             this.produceInDepot.PayDate = DateTime.Now;
             this.produceInDepot.Employee0 = BL.V.ActiveOperator.Employee;
             this.produceInDepot.ProduceInDepotId = this.produceInDepotManager.GetId();// Guid.NewGuid().ToString();
+            this.produceInDepot.ProduceInDepotId = this.produceInDepotManager.GetIdSimple(DateTime.Now);
 
             this.produceInDepot.Details = new List<Model.ProduceInDepotDetail>();
             this.action = "insert";

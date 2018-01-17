@@ -28,12 +28,17 @@ namespace Book.BL
             //
             // todo:add other logic here
             //
+            Model.ProduceOtherExitMaterial model = this.Get(produceOtherExitMaterialId);
+            string invoiceKind = this.GetInvoiceKind().ToLower();
+            string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, model.InsertTime.Value.ToString("yyyy-MM-dd"));
+            SequenceManager.Decrement(sequencekey_d);
+
             accessor.Delete(produceOtherExitMaterialId);
         }
         public void Delete(Model.ProduceOtherExitMaterial produceOtherExitMaterial)
         {
             cancelAffect(produceOtherExitMaterial);
-            accessor.Delete(produceOtherExitMaterial.ProduceOtherExitMaterialId);
+            this.Delete(produceOtherExitMaterial.ProduceOtherExitMaterialId);
         }
         public Model.ProduceOtherExitMaterial GetDetails(string produceOtherExitMaterialId)
         {
@@ -56,14 +61,14 @@ namespace Book.BL
                 produceOtherExitMaterial.InsertTime = DateTime.Now;
                 TiGuiExists(produceOtherExitMaterial);
                 string invoiceKind = this.GetInvoiceKind().ToLower();
-                string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, produceOtherExitMaterial.InsertTime.Value.Year);
-                string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, produceOtherExitMaterial.InsertTime.Value.Year, produceOtherExitMaterial.InsertTime.Value.Month);
+                //string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, produceOtherExitMaterial.InsertTime.Value.Year);
+                //string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, produceOtherExitMaterial.InsertTime.Value.Year, produceOtherExitMaterial.InsertTime.Value.Month);
                 string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, produceOtherExitMaterial.InsertTime.Value.ToString("yyyy-MM-dd"));
-                string sequencekey = string.Format(invoiceKind);
-                SequenceManager.Increment(sequencekey_y);
-                SequenceManager.Increment(sequencekey_m);
+                //string sequencekey = string.Format(invoiceKind);
+                //SequenceManager.Increment(sequencekey_y);
+                //SequenceManager.Increment(sequencekey_m);
                 SequenceManager.Increment(sequencekey_d);
-                SequenceManager.Increment(sequencekey);
+                //SequenceManager.Increment(sequencekey);
 
                 accessor.Insert(produceOtherExitMaterial);
                 addDetail(produceOtherExitMaterial);
@@ -168,15 +173,15 @@ namespace Book.BL
             {
                 //设置KEY值
                 string invoiceKind = this.GetInvoiceKind().ToLower();
-                string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, model.InsertTime.Value.Year);
-                string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, model.InsertTime.Value.Year, model.InsertTime.Value.Month);
+                //string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, model.InsertTime.Value.Year);
+                //string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, model.InsertTime.Value.Year, model.InsertTime.Value.Month);
                 string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, model.InsertTime.Value.ToString("yyyy-MM-dd"));
-                string sequencekey = string.Format(invoiceKind);
-                SequenceManager.Increment(sequencekey_y);
-                SequenceManager.Increment(sequencekey_m);
+                //string sequencekey = string.Format(invoiceKind);
+                //SequenceManager.Increment(sequencekey_y);
+                //SequenceManager.Increment(sequencekey_m);
                 SequenceManager.Increment(sequencekey_d);
-                SequenceManager.Increment(sequencekey);
-                model.ProduceOtherExitMaterialId = this.GetId(model.InsertTime.Value);
+                //SequenceManager.Increment(sequencekey);
+                model.ProduceOtherExitMaterialId = this.GetIdSimple(model.InsertTime.Value);
                 TiGuiExists(model);
                 //throw new Helper.InvalidValueException(Model.Product.PRO_Id);               
             }

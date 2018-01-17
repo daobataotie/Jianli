@@ -24,6 +24,7 @@ namespace Book.BL
 			//
 			// todo:add other logic here
 			//
+
 			accessor.Delete(produceOtherExitDetailId);
 		}
 

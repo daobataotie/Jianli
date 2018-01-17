@@ -1012,7 +1012,7 @@ namespace Book.UI.produceManager.MPSheader
             {
                 //if (mrpid1 == null)
                 //{
-                mrpid1 = this.mRSHeaderManager.GetId();
+                mrpid1 = this.mRSHeaderManager.GetIdSimple(DateTime.Now);
                 mRSHeader4 = new Model.MRSHeader();
                 mRSHeader4.MRSHeaderId = mrpid1;
                 mRSHeader4.MPSheaderId = this.mpsheader.MPSheaderId;
@@ -1086,7 +1086,7 @@ namespace Book.UI.produceManager.MPSheader
                 //if (mrpid1 == null)
                 //{
 
-                mrpid1 = this.mRSHeaderManager.GetId();
+                mrpid1 = this.mRSHeaderManager.GetIdSimple(DateTime.Now);
                 mRSHeader5 = new Model.MRSHeader();
                 mRSHeader5.MRSHeaderId = mrpid1;
                 mRSHeader5.MPSheaderId = this.mpsheader.MPSheaderId;
@@ -1176,7 +1176,7 @@ namespace Book.UI.produceManager.MPSheader
                 //if (mrpid1 == null)
                 //{
 
-                mrpid1 = this.mRSHeaderManager.GetId();
+                mrpid1 = this.mRSHeaderManager.GetIdSimple(DateTime.Now);
                 mRSHeader6 = new Model.MRSHeader();
                 mRSHeader6.MRSHeaderId = mrpid1;
                 mRSHeader6.MPSheaderId = this.mpsheader.MPSheaderId;
@@ -1265,7 +1265,7 @@ namespace Book.UI.produceManager.MPSheader
             {
                 //if (mrpid1 == null)
                 //{
-                mrpid1 = this.mRSHeaderManager.GetId();
+                mrpid1 = this.mRSHeaderManager.GetIdSimple(DateTime.Now);
                 mRSHeader1 = new Model.MRSHeader();
                 mRSHeader1.MRSHeaderId = mrpid1;
                 mRSHeader1.MPSheaderId = this.mpsheader.MPSheaderId;
@@ -1392,7 +1392,7 @@ namespace Book.UI.produceManager.MPSheader
                 //if (mrpid1 == null)
                 //{
 
-                mrpid1 = this.mRSHeaderManager.GetId();
+                mrpid1 = this.mRSHeaderManager.GetIdSimple(DateTime.Now);
                 mRSHeader2 = new Model.MRSHeader();
                 mRSHeader2.MRSHeaderId = mrpid1;
                 mRSHeader2.MPSheaderId = this.mpsheader.MPSheaderId;
@@ -1504,7 +1504,7 @@ namespace Book.UI.produceManager.MPSheader
             {
                 //if (mrpid3 == null)
                 //{
-                mrpid1 = this.mRSHeaderManager.GetId();
+                mrpid1 = this.mRSHeaderManager.GetIdSimple(DateTime.Now);
                 mRSHeader3 = new Model.MRSHeader();
                 mRSHeader3.MRSHeaderId = mrpid1;
                 mRSHeader3.MPSheaderId = this.mpsheader.MPSheaderId;

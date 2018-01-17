@@ -85,7 +85,8 @@ namespace Book.UI.produceManager.ProduceOtherInDepot
             this._produceOtherInDepot = new Model.ProduceOtherInDepot();
             this._produceOtherInDepot.ProduceOtherInDepotDate = DateTime.Now;
             this._produceOtherInDepot.PayDate = DateTime.Now;
-            this._produceOtherInDepot.ProduceOtherInDepotId = this.produceOtherInDepotManager.GetId();// Guid.NewGuid().ToString();
+            //this._produceOtherInDepot.ProduceOtherInDepotId = this.produceOtherInDepotManager.GetId();// Guid.NewGuid().ToString();
+            this._produceOtherInDepot.ProduceOtherInDepotId = this.produceOtherInDepotManager.GetIdSimple(DateTime.Now);
             this._produceOtherInDepot.Employee0 = BL.V.ActiveOperator.Employee;
             this._produceOtherInDepot.Details = new List<Model.ProduceOtherInDepotDetail>();
             if (this.action == "insert")
@@ -315,7 +316,7 @@ namespace Book.UI.produceManager.ProduceOtherInDepot
                     this.gridColumn5.OptionsColumn.AllowEdit = true;
                     this.gridColumn8.OptionsColumn.AllowEdit = true;
                     this.gridColumn6.OptionsColumn.AllowEdit = true;
-                   
+
                     this.barButtonItem1.Enabled = true;
                     break;
                 case "view":

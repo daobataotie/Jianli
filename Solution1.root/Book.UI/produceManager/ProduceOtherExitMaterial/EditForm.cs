@@ -137,7 +137,17 @@ namespace Book.UI.produceManager.ProduceOtherExitMaterial
 
         protected override void Delete()
         {
-            this.produceOtherExitMaterialManager.Delete(this.produceOtherExitMaterial.ProduceOtherExitMaterialId);
+            if (this.produceOtherExitMaterial == null)
+                return;
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+                return;
+            this.produceOtherExitMaterialManager.Delete(this.produceOtherExitMaterial);
+            this.produceOtherExitMaterial = this.produceOtherExitMaterialManager.GetNext(this.produceOtherExitMaterial);
+            if (this.produceOtherExitMaterial == null)
+            {
+                this.produceOtherExitMaterial = this.produceOtherExitMaterialManager.GetLast();
+            }
+
         }
 
         public override void Refresh()
@@ -256,7 +266,8 @@ namespace Book.UI.produceManager.ProduceOtherExitMaterial
             this.produceOtherExitMaterial = new Model.ProduceOtherExitMaterial();
             this.produceOtherExitMaterial.ProduceOtherExitMaterialDate = DateTime.Now;
             this.produceOtherExitMaterial.Employee0 = BL.V.ActiveOperator.Employee;
-            this.produceOtherExitMaterial.ProduceOtherExitMaterialId = this.produceOtherExitMaterialManager.GetId();// Guid.NewGuid().ToString();
+            //this.produceOtherExitMaterial.ProduceOtherExitMaterialId = this.produceOtherExitMaterialManager.GetId();// Guid.NewGuid().ToString();
+            this.produceOtherExitMaterial.ProduceOtherExitMaterialId = this.produceOtherExitMaterialManager.GetIdSimple(DateTime.Now);
 
             this.produceOtherExitMaterial.Details = new List<Model.ProduceOtherExitDetail>();
             if (this.action == "insert")
