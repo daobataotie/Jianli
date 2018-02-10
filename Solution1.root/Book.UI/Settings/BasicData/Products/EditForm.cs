@@ -2883,6 +2883,7 @@ namespace Book.UI.Settings.BasicData.Products
 
         public static Model.Product _product;
 
+        //搜索
         private void barButtonItemSeach_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
@@ -2890,7 +2891,6 @@ namespace Book.UI.Settings.BasicData.Products
             {
                 MessageBox.Show(Properties.Resources.NoData, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
-
             }
 
             Invoices.ChooseProductForm f = new Invoices.ChooseProductForm();
@@ -2898,6 +2898,7 @@ namespace Book.UI.Settings.BasicData.Products
             if (f.ShowDialog(this) == DialogResult.OK)
             {
                 this.product = f.SelectedItem as Model.Product;
+                this.product = this.productManager.Get(this.product.ProductId);
                 this.action = "view";
                 this.Refresh();
                 GC.Collect();
