@@ -100,7 +100,7 @@ namespace Book.BL
             Model.InvoiceBY invoiceBY = invoice as Model.InvoiceBY;
 
             if (invoiceBY.Depot == null)
-               throw new Helper.RequireValueException("Depot");
+                throw new Helper.RequireValueException("Depot");
 
             if (invoiceBY.Details.Count == 0)
                 throw new Helper.RequireValueException("Details");
@@ -124,11 +124,11 @@ namespace Book.BL
         protected override void _ValidateForInsert(Book.Model.Invoice invoice)
         {
             base._ValidateForInsert(invoice);
-            
+
             Model.InvoiceBY invoiceBS = invoice as Model.InvoiceBY;
 
-           if (invoiceBS.Depot == null)
-               throw new Helper.RequireValueException("Depot");
+            if (invoiceBS.Depot == null)
+                throw new Helper.RequireValueException("Depot");
 
             if (invoiceBS.Details.Count == 0)
                 throw new Helper.RequireValueException("Details");
@@ -220,7 +220,7 @@ namespace Book.BL
                             invoiceBYDetailAccessor.Delete(invoiceOriginal);
                             accessor.Delete(invoiceOriginal.InvoiceId);
                             invoice.InsertTime = invoiceOriginal.InsertTime;
-                            invoice.UpdateTime = DateTime.Now;                            
+                            invoice.UpdateTime = DateTime.Now;
                             _Insert(invoice);
                             break;
 
@@ -229,7 +229,7 @@ namespace Book.BL
                             foreach (Model.InvoiceBYDetail detail in invoice.Details)
                             {
                                 if (detail.Product == null || string.IsNullOrEmpty(detail.Product.ProductId)) continue;
-                               // double? quantity = 0;
+                                // double? quantity = 0;
                                 //if (detail.InvoiceProductUnit == detail.Product.ProductOuterPackagingUnit)
                                 //{
                                 //    quantity = detail.InvoiceBYDetailQuantity * detail.Product.ProductInnerUnitRelationship * detail.Product.ProductBaseUnitRelationship;
@@ -244,6 +244,7 @@ namespace Book.BL
                                 //}
                                 //productAccessor.UpdateCost1(detail.Product, 0, -quantity);
                                 stockAccessor.Decrement(detail.DepotPosition, detail.Product, detail.InvoiceBYDetailQuantity);
+                                productAccessor.UpdateProduct_Stock(detail.Product);
                             }
                             break;
                     }
@@ -263,18 +264,18 @@ namespace Book.BL
 
             //invoice.DepotId = invoice.Depot.DepotId;
             invoice.Employee0Id = invoice.Employee0.EmployeeId;
-            if(invoice.Employee1!=null)
-            invoice.Employee1Id = invoice.Employee1.EmployeeId;
+            if (invoice.Employee1 != null)
+                invoice.Employee1Id = invoice.Employee1.EmployeeId;
             if ((Helper.InvoiceStatus)invoice.InvoiceStatus.Value == Helper.InvoiceStatus.Normal)
             {
-                if(invoice.Employee2!=null)
-                invoice.Employee2Id = invoice.Employee2.EmployeeId;
+                if (invoice.Employee2 != null)
+                    invoice.Employee2Id = invoice.Employee2.EmployeeId;
                 invoice.InvoiceGZTime = DateTime.Now;
             }
             accessor.Insert(invoice);
             foreach (Model.InvoiceBYDetail detail in invoice.Details)
-            {             
-            
+            {
+
                 detail.InvoiceId = invoice.InvoiceId;
                 invoiceBYDetailAccessor.Insert(detail);
             }
@@ -283,7 +284,7 @@ namespace Book.BL
             {
                 // 库存
                 foreach (Model.InvoiceBYDetail detail in invoice.Details)
-                {                  
+                {
                     if (detail.Product == null || string.IsNullOrEmpty(detail.Product.ProductId)) continue;
                     //double? quantity = 0;
                     //if (detail.InvoiceProductUnit == detail.Product.ProductOuterPackagingUnit)
@@ -298,9 +299,10 @@ namespace Book.BL
                     //{
                     //    quantity = detail.InvoiceBYDetailQuantity;
                     //}
-                   // productAccessor.UpdateCost1(detail.Product, 0, quantity);
+                    // productAccessor.UpdateCost1(detail.Product, 0, quantity);
 
-                   stockAccessor.Increment(detail.DepotPosition, detail.Product,detail.InvoiceBYDetailQuantity);
+                    stockAccessor.Increment(detail.DepotPosition, detail.Product, detail.InvoiceBYDetailQuantity);
+                    productAccessor.UpdateProduct_Stock(detail.Product);
                 }
             }
         }

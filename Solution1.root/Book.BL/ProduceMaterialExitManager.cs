@@ -32,6 +32,7 @@ namespace Book.BL
             string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, model.InsertTime.Value.ToString("yyyy-MM-dd"));
             SequenceManager.Decrement(sequencekey_d);
 
+            cancelAffect(model);
             accessor.Delete(produceExitMaterialId);
         }
 
@@ -148,7 +149,7 @@ namespace Book.BL
             //
             // todo:add other logic here
             //
-            cancelAffect(produceMaterialExit);
+            //cancelAffect(produceMaterialExit);  在下个方法中执行
             this.Delete(produceMaterialExit.ProduceMaterialExitId);
         }
         private void Validate(Model.ProduceMaterialExit produceMaterialExit)
@@ -189,6 +190,7 @@ namespace Book.BL
                 if (oldDetail.Product == null || oldDetail.Product.ProductId == null) continue;
                 oldDetail.DepotPosition = depotPositionAccessor.Get(oldDetail.DepotPositionId);
                 stockAccessor.Decrement(oldDetail.DepotPosition, oldDetail.Product, oldDetail.ProduceQuantity);
+                productAccessor.UpdateProduct_Stock(oldDetail.Product);
             }
         }
 
