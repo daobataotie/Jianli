@@ -1274,6 +1274,19 @@ namespace Book.UI.produceManager.ProduceInDepot
                 //r.ShowPreviewDialog();
             }
         }
+
+        private void newChooseWorkHorseId_EditValueChanged(object sender, EventArgs e)
+        {
+            if (newChooseWorkHorseId.EditValue != null)
+            {
+                foreach (var item in this.produceInDepot.Details)
+                {
+                    item.beforeTransferQuantity = this.produceInDepotDetailManager.select_TransferSumyPronHeaderWorkHouse(item.PronoteHeaderId, (this.newChooseWorkHorseId.EditValue as Model.WorkHouse).WorkHouseId);
+                }
+
+                this.gridControl1.RefreshDataSource();
+            }
+        }
     }
 }
 

@@ -121,6 +121,8 @@
             this.gridColumn47 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn48 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn49 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.bindingSourceProductId = new System.Windows.Forms.BindingSource(this.components);
             this.repositoryItemLookUpEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
@@ -163,8 +165,6 @@
             this.barButtonItemExport = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnPrintMonth = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.gridColumn49 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -195,6 +195,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceWorkHouse)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichTextEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceProductId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit2)).BeginInit();
@@ -229,7 +230,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -342,6 +342,7 @@
             this.newChooseWorkHorseId.EditValue = null;
             resources.ApplyResources(this.newChooseWorkHorseId, "newChooseWorkHorseId");
             this.newChooseWorkHorseId.Name = "newChooseWorkHorseId";
+            this.newChooseWorkHorseId.EditValueChanged += new System.EventHandler(this.newChooseWorkHorseId_EditValueChanged);
             // 
             // newChooseEmployee0
             // 
@@ -990,6 +991,18 @@
             this.gridColumn48.FieldName = "BadTotal";
             this.gridColumn48.Name = "gridColumn48";
             // 
+            // gridColumn49
+            // 
+            resources.ApplyResources(this.gridColumn49, "gridColumn49");
+            this.gridColumn49.ColumnEdit = this.repositoryItemCheckEdit1;
+            this.gridColumn49.FieldName = "BarCodeCheck";
+            this.gridColumn49.Name = "gridColumn49";
+            // 
+            // repositoryItemCheckEdit1
+            // 
+            resources.ApplyResources(this.repositoryItemCheckEdit1, "repositoryItemCheckEdit1");
+            this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
+            // 
             // repositoryItemLookUpEdit1
             // 
             resources.ApplyResources(this.repositoryItemLookUpEdit1, "repositoryItemLookUpEdit1");
@@ -1383,18 +1396,6 @@
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick_1);
             // 
-            // gridColumn49
-            // 
-            resources.ApplyResources(this.gridColumn49, "gridColumn49");
-            this.gridColumn49.ColumnEdit = this.repositoryItemCheckEdit1;
-            this.gridColumn49.FieldName = "BarCodeCheck";
-            this.gridColumn49.Name = "gridColumn49";
-            // 
-            // repositoryItemCheckEdit1
-            // 
-            resources.ApplyResources(this.repositoryItemCheckEdit1, "repositoryItemCheckEdit1");
-            this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
-            // 
             // EditForm
             // 
             resources.ApplyResources(this, "$this");
@@ -1433,6 +1434,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceWorkHouse)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichTextEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceProductId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit2)).EndInit();
@@ -1467,7 +1469,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             this.ResumeLayout(false);
 
         }
