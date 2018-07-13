@@ -254,7 +254,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[SourceType] = #SourceType#,
 				[InvoiceXOId] = #InvoiceXOId#,
 				[AuditState] = #AuditState#,
-				[AuditEmpId] = #AuditEmpId#，
+				[AuditEmpId] = #AuditEmpId#,
         [InvoiceCusXOId]=#InvoiceCusXOId#,
         [Pihao]=#Pihao#
 			WHERE

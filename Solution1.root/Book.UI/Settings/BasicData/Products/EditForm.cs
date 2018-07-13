@@ -1176,6 +1176,8 @@ namespace Book.UI.Settings.BasicData.Products
                     this.richTextCeMai.ReadOnly = false;
                     this.barButtonItem3.Enabled = false;
                     this.gridView3.OptionsBehavior.Editable = true;
+                    this.calcEditMateriaFenPei.Enabled = true;
+                    this.calcEditMateriaOtherFenPei.Enabled = true;
                     if (this.product.IsCustomerProduct == null || !(bool)this.product.IsCustomerProduct)
                     {
                         this.newChooseContorlProductType.Properties.Buttons[0].Enabled = true;
@@ -1392,6 +1394,8 @@ namespace Book.UI.Settings.BasicData.Products
                     this.richTextCeMai.ReadOnly = false;
                     this.barButtonItem3.Enabled = false;
                     this.gridView3.OptionsBehavior.Editable = true;
+                    this.calcEditMateriaFenPei.Enabled = true;
+                    this.calcEditMateriaOtherFenPei.Enabled = true;
                     if (this.product.IsCustomerProduct == null || !(bool)this.product.IsCustomerProduct)
                     {
                         this.lookUpBasedUnitGroupId.Properties.ReadOnly = false;
@@ -1610,6 +1614,8 @@ namespace Book.UI.Settings.BasicData.Products
 
                     this.comboBoxEditAbcCategory.Properties.ReadOnly = true;
 
+                    this.calcEditMateriaFenPei.Enabled = false;
+                    this.calcEditMateriaOtherFenPei.Enabled = false;
                     //this.newChooseContorlBasedUnitGroupId.ShowButton = false;
                     //this.newChooseContorlBasedUnitGroupId.ButtonReadOnly = true;
 
