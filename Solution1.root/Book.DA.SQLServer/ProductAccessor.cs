@@ -296,5 +296,10 @@ namespace Book.DA.SQLServer
             sqlmapper.Update("Product.update_stock", pro.ProductId);
         }
         #endregion
+
+        public double SelectStocksQuantityByStock(string productId)
+        {
+            return sqlmapper.QueryForObject<double>("Product.SelectStocksQuantityByStock", productId);
+        }
     }
 }

@@ -796,5 +796,11 @@ where ProductId = #productid#
       select ProductId,Id,ProductName from Product where ProductBarCode=#value#
       ]]>
     </select>
+
+    <select id="SelectStocksQuantityByStock" resultClass="double" parameterClass="string">
+      <![CDATA[
+      select ISNULL(sum(stockquantity1),0) from Stock where ProductId=#value#
+      ]]>
+    </select>
   </statements>
 </sqlMap>

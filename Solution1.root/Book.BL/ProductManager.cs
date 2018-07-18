@@ -542,6 +542,9 @@ namespace Book.BL
         {
             product.UpdateTime = DateTime.Now;
 
+            //2018年7月18日16:11:45  矫正商品库存
+            product.StocksQuantity = this.SelectStocksQuantityByStock(product.ProductId);
+
             accessor.UpdateSimple(product);
         }
 
@@ -757,6 +760,11 @@ namespace Book.BL
         public IList<Model.Product> SelectAll()
         {
             return accessor.SelectAll();
+        }
+
+        public double SelectStocksQuantityByStock(string productId)
+        {
+            return accessor.SelectStocksQuantityByStock(productId);
         }
     }
 }

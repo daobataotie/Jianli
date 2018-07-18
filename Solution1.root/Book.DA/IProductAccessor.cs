@@ -64,6 +64,7 @@ namespace Book.DA
         bool BarCodeIsExists(string productBarCode);
         Book.Model.Product SelectByBarCode(string productBarCode);
         IList<Model.Product> SelectAll();
+        double SelectStocksQuantityByStock(string productId);
     }
 }
 
