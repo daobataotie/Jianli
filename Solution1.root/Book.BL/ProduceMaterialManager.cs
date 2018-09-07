@@ -55,6 +55,8 @@ namespace Book.BL
                 Model.ProduceMaterial produceMaterialOld = this.GetDetails(produceMaterial.ProduceMaterialID);
                 foreach (Model.ProduceMaterialdetails produceMaterialdetails in produceMaterialOld.Details)
                 {
+                    produceMaterialdetails.Product = productManager.Get(produceMaterialdetails.ProductId);
+
                     produceMaterialdetails.Product.ProduceMaterialDistributioned = (produceMaterialdetails.Product.ProduceMaterialDistributioned == null ? 0 : produceMaterialdetails.Product.ProduceMaterialDistributioned) - (produceMaterialdetails.Materialprocessum == null ? 0 : produceMaterialdetails.Materialprocessum) + (produceMaterialdetails.Materialprocesedsum == null ? 0 : produceMaterialdetails.Materialprocesedsum);
                     productManager.update(produceMaterialdetails.Product);
                 }
@@ -161,6 +163,8 @@ namespace Book.BL
                 Model.ProduceMaterial produceMaterialOld = this.GetDetails(produceMaterial.ProduceMaterialID);
                 foreach (Model.ProduceMaterialdetails produceMaterialdetails in produceMaterialOld.Details)
                 {
+                    produceMaterialdetails.Product = productManager.Get(produceMaterialdetails.ProductId);
+
                     produceMaterialdetails.Product.ProduceMaterialDistributioned = (produceMaterialdetails.Product.ProduceMaterialDistributioned == null ? 0 : produceMaterialdetails.Product.ProduceMaterialDistributioned) - (produceMaterialdetails.Materialprocessum == null ? 0 : produceMaterialdetails.Materialprocessum) + (produceMaterialdetails.Materialprocesedsum == null ? 0 : produceMaterialdetails.Materialprocesedsum);
                     productManager.update(produceMaterialdetails.Product);
                 }
