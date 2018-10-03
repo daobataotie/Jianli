@@ -239,6 +239,7 @@
       <result property="Chakuang" column="Chakuang"/>
       <result property="Paihe" column="Paihe"/>
       <result property="Moshu" column="Moshu"/>
+      <result property="InternalDescription" column="InternalDescription"/>
       <result property="ProductCategory" column="ProductCategoryId" lazyLoad="false" select="ProductCategory.select_by_primary_key" />
       <result property="BuyUnit" column="BuyUnitId" lazyLoad="false" select="ProductUnit.select_by_primary_key" />
       <result property="SellUnit" column="SellUnitId" lazyLoad="false" select="ProductUnit.select_by_primary_key" />
@@ -265,6 +266,7 @@
       <result property="AttrZhengMai" column="AttrZhengMai"/>
       <result property="AttrCeMai" column="AttrCeMai"/>
       <result property="ChangeModelTime" column="ChangeModelTime"/>
+      <result property="InternalDescription" column="InternalDescription"/>
     </resultMap>
   </resultMaps>
   <statements>
@@ -312,7 +314,8 @@
       IsNoQiangFang,
       Chakuang,
       Paihe,
-      Moshu
+      Moshu,
+      InternalDescription
       from product
       WHERE
 				[ProductId] = #ProductId#
@@ -340,7 +343,8 @@
       ProductVersion,
       AttrZhengMai,
       AttrCeMai,
-      ChangeModelTime
+      ChangeModelTime,
+      InternalDescription
       from product
       WHERE
 				[ProductId] = #ProductId#
@@ -434,7 +438,8 @@ where ProductId = #productid#
       IsNoQiangFang,
       Chakuang,
       Paihe,
-      Moshu
+      Moshu,
+      InternalDescription
       from product
       WHERE ProductCategoryId = #value# order by Id
     </select>

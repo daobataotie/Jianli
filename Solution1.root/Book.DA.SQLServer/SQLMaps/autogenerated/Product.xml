@@ -114,6 +114,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="Moshu" column="Moshu"/>
       <result property="SunhaoRage" column="SunhaoRage"/>
       <result property="ChangeModelTime" column="ChangeModelTime"/>
+      <result property="InternalDescription" column="InternalDescription"/>
       <result property="Customer" column="CustomerId" lazyLoad="false" select="Customer.select_SimpleCustomer" />
       <result property="EmployeeChange" column="EmployeeChangeId" lazyLoad="false" select="Employee.select_SimpleEmployee" />
       <result property="EmployeeCreator" column="EmployeeCreatorId" lazyLoad="false" select="Employee.select_SimpleEmployee" />
@@ -329,7 +330,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       [Paihe],
       [Moshu],
       [SunhaoRage],
-      [ChangeModelTime]
+      [ChangeModelTime],
+      [InternalDescription]
       FROM
       [dbo].[Product]
       WHERE
@@ -491,7 +493,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       [Paihe],
       [Moshu],
       [SunhaoRage],
-      [ChangeModelTime]
+      [ChangeModelTime],
+      [InternalDescription]
       )
       VALUES
       (
@@ -602,7 +605,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       #Paihe#,
       #Moshu#,
       #SunhaoRage#,
-      #ChangeModelTime#
+      #ChangeModelTime#,
+      #InternalDescription#
       )
 
     </insert>
@@ -716,7 +720,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       [Paihe]=#Paihe#,
       [Moshu]=#Moshu#,
       [SunhaoRage]=#SunhaoRage#,
-      [ChangeModelTime]=#ChangeModelTime#
+      [ChangeModelTime]=#ChangeModelTime#,
+      [InternalDescription]=#InternalDescription#
       WHERE
       [ProductId] = #ProductId#
 

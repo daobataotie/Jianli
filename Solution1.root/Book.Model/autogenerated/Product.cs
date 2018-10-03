@@ -527,6 +527,9 @@ namespace Book.Model
         /// </summary>
         private decimal _changeModelTime;
 
+        private string _internalDescription;
+
+
         /// <summary>
         /// 客户
         /// </summary>
@@ -2160,6 +2163,15 @@ namespace Book.Model
         }
 
         /// <summary>
+        /// 內部描述
+        /// </summary>
+        public string InternalDescription
+        {
+            get { return _internalDescription; }
+            set { _internalDescription = value; }
+        }
+        
+        /// <summary>
         /// 客户
         /// </summary>
         public virtual Customer Customer
@@ -3019,6 +3031,8 @@ namespace Book.Model
         public readonly static string PRO_SunhaoRage = "SunhaoRage";
 
         public readonly static string PRO_ChangeModelTime = "ChangeModelTime";
+
+        public readonly static string PRO_InternalDescription = "InternalDescription";
 
         #endregion
     }

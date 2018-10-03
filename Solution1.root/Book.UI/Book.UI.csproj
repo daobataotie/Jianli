@@ -4655,6 +4655,22 @@
       <DependentUpon>RO1ZYD.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\XO\RO_New.resx">
+      <DependentUpon>RO_New.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\XO\RO_New.zh-CHT.resx">
+      <DependentUpon>RO_New.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\XO\RO_NewNoPrice.resx">
+      <DependentUpon>RO_NewNoPrice.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\XO\RO_NewNoPrice.zh-CHT.resx">
+      <DependentUpon>RO_NewNoPrice.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Invoices\XS\RO1ZYD.resx">
       <DependentUpon>RO1ZYD.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -11780,6 +11796,18 @@
     </Compile>
     <Compile Include="Invoices\XO\RO1ZYD.Designer.cs">
       <DependentUpon>RO1ZYD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\XO\RO_New.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Invoices\XO\RO_New.Designer.cs">
+      <DependentUpon>RO_New.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\XO\RO_NewNoPrice.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Invoices\XO\RO_NewNoPrice.Designer.cs">
+      <DependentUpon>RO_NewNoPrice.cs</DependentUpon>
     </Compile>
     <Compile Include="Invoices\XS\RO1ZYD.cs">
       <SubType>Component</SubType>

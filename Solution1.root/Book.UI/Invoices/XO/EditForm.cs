@@ -900,7 +900,10 @@ namespace Book.UI.Invoices.XO
 
         protected override DevExpress.XtraReports.UI.XtraReport GetReport()
         {
-            return new R01(this.invoice.InvoiceId);
+            //return new R01(this.invoice.InvoiceId);
+
+            //默認顯示單價
+            return new RO_New(this.invoice.InvoiceId);
         }
 
         protected override bool HasRows()
@@ -1526,7 +1529,6 @@ namespace Book.UI.Invoices.XO
         {
             CO.EditForm f = new CO.EditForm(this.invoice);
             f.Show();
-
         }
 
         private void gridView1_Click(object sender, EventArgs e)
@@ -1553,9 +1555,17 @@ namespace Book.UI.Invoices.XO
             }
         }
 
+        //打印 中一刀
         private void bar_ZYD_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             RO1ZYD ro = new RO1ZYD(this.invoice.InvoiceId);
+            ro.ShowPreviewDialog();
+        }
+
+        //打印無單價
+        private void barButtonItem11_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            RO_NewNoPrice ro = new RO_NewNoPrice(this.invoice.InvoiceId);
             ro.ShowPreviewDialog();
         }
     }

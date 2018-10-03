@@ -604,6 +604,10 @@ namespace Book.UI.Settings.BasicData.Products
             this.product.Moshu = Convert.ToDouble(this.spinEditMoshu.EditValue);
             this.product.SunhaoRage = Convert.ToDouble(this.spinEditSunhaoStart1.EditValue).ToString() + "/" + Convert.ToDouble(this.spinEditSunhaoEnd1.EditValue).ToString() + "/" + Convert.ToDouble(this.spinEditSunhao1.EditValue).ToString() + "," + Convert.ToDouble(this.spinEditSunhaoStart2.EditValue).ToString() + "/" + Convert.ToDouble(this.spinEditSunhaoEnd2.EditValue).ToString() + "/" + Convert.ToDouble(this.spinEditSunhao2.EditValue).ToString() + "," + Convert.ToDouble(this.spinEditSunhaoStart3.EditValue).ToString() + "/" + Convert.ToDouble(this.spinEditSunhaoEnd3.EditValue).ToString() + "/" + Convert.ToDouble(this.spinEditSunhao3.EditValue).ToString();
             this.product.ChangeModelTime = Convert.ToDecimal(this.calcEditChangeModelTime.EditValue);
+
+            //2018年10月3日22:32:46
+            this.product.InternalDescription = this.txt_InternalDescription.Text;
+
             switch (this.action)
             {
                 case "insert":
@@ -1129,6 +1133,8 @@ namespace Book.UI.Settings.BasicData.Products
             this.spinEditMoshu.EditValue = this.product.Moshu;
             this.dateEditInsertTime.EditValue = this.product.InsertTime;
 
+            //2018年10月3日22:31:12
+            this.txt_InternalDescription.EditValue = this.product.InternalDescription;
 
             if (!string.IsNullOrEmpty(this.product.SunhaoRage))
             {
