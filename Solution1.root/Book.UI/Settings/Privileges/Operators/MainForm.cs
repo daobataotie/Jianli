@@ -21,7 +21,7 @@ namespace Book.UI.Settings.Privileges.Operators
     public partial class MainForm : DevExpress.XtraEditors.XtraForm
     {
         protected BL.OperatorsManager operatorsManager = new Book.BL.OperatorsManager();
-       
+
         public MainForm()
         {
             InitializeComponent();
@@ -35,12 +35,12 @@ namespace Book.UI.Settings.Privileges.Operators
 
             switch (e.Item.Tag.ToString())
             {
-                case"insert":
+                case "insert":
                     f = new EditForm();
                     result = f.ShowDialog(this);
                     break;
                 case "update":
-                    if (_operator != null) 
+                    if (_operator != null)
                     {
                         f = new EditForm(_operator);
                         result = f.ShowDialog(this);
@@ -50,14 +50,14 @@ namespace Book.UI.Settings.Privileges.Operators
                     if (_operator != null)
                     {
                         if (MessageBox.Show(Properties.Resources.ConfirmToDelete, "text", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) != DialogResult.OK) return;
-                        operatorsManager.Delete(_operator);                    
+                        operatorsManager.Delete(_operator);
                         result = DialogResult.OK;
                     }
                     break;
                 default:
                     break;
             }
-            if (result == DialogResult.OK) 
+            if (result == DialogResult.OK)
             {
                 this.employeeBindingSource.DataSource = this.operatorsManager.SelectOperators();
             }
@@ -66,7 +66,8 @@ namespace Book.UI.Settings.Privileges.Operators
         //¼ÓÔØ
         private void MainForm_Load(object sender, EventArgs e)
         {
-            this.employeeBindingSource.DataSource = this.operatorsManager.Select();
+            //this.employeeBindingSource.DataSource = this.operatorsManager.Select();
+            this.RefreshData();
         }
 
         //controlË«»÷ÊÂ¼þ
@@ -74,25 +75,32 @@ namespace Book.UI.Settings.Privileges.Operators
         {
             Model.Operators _operator = this.employeeBindingSource.Current as Model.Operators;
             RoleToOperators f = new RoleToOperators(_operator);
-            if (f.ShowDialog(this) != DialogResult.OK)     return;
-
+            if (f.ShowDialog(this) != DialogResult.OK)
+                return;
+            else
+                this.RefreshData();
         }
 
         private void gridView1_CustomColumnDisplayText(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventArgs e)
         {
-            if (e.ListSourceRowIndex < 0) return;
-            IList<Model.Operators> details = this.employeeBindingSource.DataSource as IList<Model.Operators>;
-            if (details == null || details.Count < 1) return;
-            Model.Employee emp = details[e.ListSourceRowIndex].Employee;
-            if (emp == null) return;
-            switch (e.Column.Name)
-            {
-                case "gridColumndepot":
-          
-                    e.DisplayText =emp.Department==null?"": emp.Department.ToString();
-                    break;
+            //if (e.ListSourceRowIndex < 0) return;
+            //IList<Model.Operators> details = this.employeeBindingSource.DataSource as IList<Model.Operators>;
+            //if (details == null || details.Count < 1) return;
+            //Model.Employee emp = details[e.ListSourceRowIndex].Employee;
+            //if (emp == null) return;
+            //switch (e.Column.Name)
+            //{
+            //    case "gridColumndepot":
 
-            }
+            //        e.DisplayText = emp.Department == null ? "" : emp.Department.ToString();
+            //        break;
+            //}
+        }
+
+        private void RefreshData()
+        {
+            this.employeeBindingSource.DataSource = this.operatorsManager.SelectRelationEmployeeInfo();
+            this.gridControl1.RefreshDataSource();
         }
     }
 }

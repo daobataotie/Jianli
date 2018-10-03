@@ -3,7 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <statements>
     <select id="select_operators" resultMap="OperatorsResult">
-      select * from Operators 
+      select * from Operators
       order by OperatorsId asc
     </select>
     <select id="get_byName" parameterClass="string" resultMap="OperatorsResult">
@@ -11,9 +11,9 @@
       FROM [dbo].[Operators]
       WHERE [OperatorName] = #value#
       order by OperatorsId asc
-    </select> 
-	<select id="selectOrderByName"  resultMap="OperatorsResult">
-    SELECT * FROM Operators WHERE Employeeid IN (SELECT EmployeeId FROM Employee WHERE EmployeeLeaveDate IS NULL) ORDER BY OperatorName asc
-  </select>
+    </select>
+    <select id="selectOrderByName"  resultMap="OperatorsResult">
+      SELECT * FROM Operators WHERE Employeeid IN (SELECT EmployeeId FROM Employee WHERE EmployeeLeaveDate IS NULL) ORDER BY OperatorName asc
+    </select>
   </statements>
 </sqlMap>

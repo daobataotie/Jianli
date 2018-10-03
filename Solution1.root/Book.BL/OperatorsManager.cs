@@ -85,5 +85,10 @@ namespace Book.BL
         {
             return accessor.SelectOrderByName();
         }
+
+        public IList<Book.Model.Operators> SelectRelationEmployeeInfo()
+        {
+            return accessor.SelectRelationEmployeeInfo();
+        }
     }
 }

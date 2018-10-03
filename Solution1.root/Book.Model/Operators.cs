@@ -8,15 +8,21 @@
 using System;
 namespace Book.Model
 {
-	/// <summary>
-	/// 操作员
-	/// </summary>
-	[Serializable]
-	public partial class Operators
-	{
+    /// <summary>
+    /// 操作员
+    /// </summary>
+    [Serializable]
+    public partial class Operators
+    {
         public override string ToString()
         {
             return _operatorName;
         }
-	}
+
+        public string RoleName { get; set; }
+
+        public string EmployeeName { get; set; }
+
+        public string DepartmentName { get; set; }
+    }
 }

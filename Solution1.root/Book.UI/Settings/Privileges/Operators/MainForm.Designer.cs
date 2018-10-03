@@ -45,6 +45,7 @@ namespace Book.UI.Settings.Privileges.Operators
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colEmployeeId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEmployeeName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumndepot = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -91,8 +92,6 @@ namespace Book.UI.Settings.Privileges.Operators
             // 
             // barButtonItem1
             // 
-            this.barButtonItem1.AccessibleDescription = null;
-            this.barButtonItem1.AccessibleName = null;
             resources.ApplyResources(this.barButtonItem1, "barButtonItem1");
             this.barButtonItem1.Id = 0;
             this.barButtonItem1.ImageIndex = 3;
@@ -102,8 +101,6 @@ namespace Book.UI.Settings.Privileges.Operators
             // 
             // barButtonItem2
             // 
-            this.barButtonItem2.AccessibleDescription = null;
-            this.barButtonItem2.AccessibleName = null;
             resources.ApplyResources(this.barButtonItem2, "barButtonItem2");
             this.barButtonItem2.Id = 1;
             this.barButtonItem2.ImageIndex = 2;
@@ -113,8 +110,6 @@ namespace Book.UI.Settings.Privileges.Operators
             // 
             // barButtonItem3
             // 
-            this.barButtonItem3.AccessibleDescription = null;
-            this.barButtonItem3.AccessibleName = null;
             resources.ApplyResources(this.barButtonItem3, "barButtonItem3");
             this.barButtonItem3.Id = 2;
             this.barButtonItem3.ImageIndex = 0;
@@ -124,43 +119,23 @@ namespace Book.UI.Settings.Privileges.Operators
             // 
             // barDockControlTop
             // 
-            this.barDockControlTop.AccessibleDescription = null;
-            this.barDockControlTop.AccessibleName = null;
-            resources.ApplyResources(this.barDockControlTop, "barDockControlTop");
-            this.barDockControlTop.Appearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("barDockControlTop.Appearance.GradientMode")));
-            this.barDockControlTop.Appearance.Image = null;
             this.barDockControlTop.CausesValidation = false;
-            this.barDockControlTop.Font = null;
+            resources.ApplyResources(this.barDockControlTop, "barDockControlTop");
             // 
             // barDockControlBottom
             // 
-            this.barDockControlBottom.AccessibleDescription = null;
-            this.barDockControlBottom.AccessibleName = null;
-            resources.ApplyResources(this.barDockControlBottom, "barDockControlBottom");
-            this.barDockControlBottom.Appearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("barDockControlBottom.Appearance.GradientMode")));
-            this.barDockControlBottom.Appearance.Image = null;
             this.barDockControlBottom.CausesValidation = false;
-            this.barDockControlBottom.Font = null;
+            resources.ApplyResources(this.barDockControlBottom, "barDockControlBottom");
             // 
             // barDockControlLeft
             // 
-            this.barDockControlLeft.AccessibleDescription = null;
-            this.barDockControlLeft.AccessibleName = null;
-            resources.ApplyResources(this.barDockControlLeft, "barDockControlLeft");
-            this.barDockControlLeft.Appearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("barDockControlLeft.Appearance.GradientMode")));
-            this.barDockControlLeft.Appearance.Image = null;
             this.barDockControlLeft.CausesValidation = false;
-            this.barDockControlLeft.Font = null;
+            resources.ApplyResources(this.barDockControlLeft, "barDockControlLeft");
             // 
             // barDockControlRight
             // 
-            this.barDockControlRight.AccessibleDescription = null;
-            this.barDockControlRight.AccessibleName = null;
-            resources.ApplyResources(this.barDockControlRight, "barDockControlRight");
-            this.barDockControlRight.Appearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("barDockControlRight.Appearance.GradientMode")));
-            this.barDockControlRight.Appearance.Image = null;
             this.barDockControlRight.CausesValidation = false;
-            this.barDockControlRight.Font = null;
+            resources.ApplyResources(this.barDockControlRight, "barDockControlRight");
             // 
             // imageCollection1
             // 
@@ -169,23 +144,8 @@ namespace Book.UI.Settings.Privileges.Operators
             // 
             // gridControl1
             // 
-            this.gridControl1.AccessibleDescription = null;
-            this.gridControl1.AccessibleName = null;
-            resources.ApplyResources(this.gridControl1, "gridControl1");
-            this.gridControl1.BackgroundImage = null;
             this.gridControl1.DataSource = this.employeeBindingSource;
-            this.gridControl1.EmbeddedNavigator.AccessibleDescription = null;
-            this.gridControl1.EmbeddedNavigator.AccessibleName = null;
-            this.gridControl1.EmbeddedNavigator.AllowHtmlTextInToolTip = ((DevExpress.Utils.DefaultBoolean)(resources.GetObject("gridControl1.EmbeddedNavigator.AllowHtmlTextInToolTip")));
-            this.gridControl1.EmbeddedNavigator.Anchor = ((System.Windows.Forms.AnchorStyles)(resources.GetObject("gridControl1.EmbeddedNavigator.Anchor")));
-            this.gridControl1.EmbeddedNavigator.BackgroundImage = null;
-            this.gridControl1.EmbeddedNavigator.BackgroundImageLayout = ((System.Windows.Forms.ImageLayout)(resources.GetObject("gridControl1.EmbeddedNavigator.BackgroundImageLayout")));
-            this.gridControl1.EmbeddedNavigator.ImeMode = ((System.Windows.Forms.ImeMode)(resources.GetObject("gridControl1.EmbeddedNavigator.ImeMode")));
-            this.gridControl1.EmbeddedNavigator.TextLocation = ((DevExpress.XtraEditors.NavigatorButtonsTextLocation)(resources.GetObject("gridControl1.EmbeddedNavigator.TextLocation")));
-            this.gridControl1.EmbeddedNavigator.ToolTip = resources.GetString("gridControl1.EmbeddedNavigator.ToolTip");
-            this.gridControl1.EmbeddedNavigator.ToolTipIconType = ((DevExpress.Utils.ToolTipIconType)(resources.GetObject("gridControl1.EmbeddedNavigator.ToolTipIconType")));
-            this.gridControl1.EmbeddedNavigator.ToolTipTitle = resources.GetString("gridControl1.EmbeddedNavigator.ToolTipTitle");
-            this.gridControl1.Font = null;
+            resources.ApplyResources(this.gridControl1, "gridControl1");
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -195,10 +155,10 @@ namespace Book.UI.Settings.Privileges.Operators
             // 
             // gridView1
             // 
-            resources.ApplyResources(this.gridView1, "gridView1");
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colEmployeeId,
             this.colEmployeeName,
+            this.gridColumn2,
             this.gridColumn1,
             this.gridColumndepot});
             this.gridView1.GridControl = this.gridControl1;
@@ -210,12 +170,8 @@ namespace Book.UI.Settings.Privileges.Operators
             // 
             // colEmployeeId
             // 
-            this.colEmployeeId.AppearanceCell.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("colEmployeeId.AppearanceCell.GradientMode")));
-            this.colEmployeeId.AppearanceCell.Image = null;
             this.colEmployeeId.AppearanceCell.Options.UseTextOptions = true;
             this.colEmployeeId.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-            this.colEmployeeId.AppearanceHeader.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("colEmployeeId.AppearanceHeader.GradientMode")));
-            this.colEmployeeId.AppearanceHeader.Image = null;
             this.colEmployeeId.AppearanceHeader.Options.UseTextOptions = true;
             this.colEmployeeId.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             resources.ApplyResources(this.colEmployeeId, "colEmployeeId");
@@ -229,12 +185,8 @@ namespace Book.UI.Settings.Privileges.Operators
             // 
             // colEmployeeName
             // 
-            this.colEmployeeName.AppearanceCell.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("colEmployeeName.AppearanceCell.GradientMode")));
-            this.colEmployeeName.AppearanceCell.Image = null;
             this.colEmployeeName.AppearanceCell.Options.UseTextOptions = true;
             this.colEmployeeName.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colEmployeeName.AppearanceHeader.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("colEmployeeName.AppearanceHeader.GradientMode")));
-            this.colEmployeeName.AppearanceHeader.Image = null;
             this.colEmployeeName.AppearanceHeader.Options.UseTextOptions = true;
             this.colEmployeeName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             resources.ApplyResources(this.colEmployeeName, "colEmployeeName");
@@ -246,35 +198,37 @@ namespace Book.UI.Settings.Privileges.Operators
             this.colEmployeeName.OptionsColumn.ReadOnly = true;
             this.colEmployeeName.OptionsFilter.AllowFilter = false;
             // 
+            // gridColumn2
+            // 
+            resources.ApplyResources(this.gridColumn2, "gridColumn2");
+            this.gridColumn2.FieldName = "RoleName";
+            this.gridColumn2.Name = "gridColumn2";
+            // 
             // gridColumn1
             // 
             resources.ApplyResources(this.gridColumn1, "gridColumn1");
-            this.gridColumn1.FieldName = "Employee";
+            this.gridColumn1.FieldName = "EmployeeName";
             this.gridColumn1.Name = "gridColumn1";
             // 
             // gridColumndepot
             // 
             resources.ApplyResources(this.gridColumndepot, "gridColumndepot");
-            this.gridColumndepot.FieldName = "depot";
+            this.gridColumndepot.FieldName = "DepartmentName";
             this.gridColumndepot.Name = "gridColumndepot";
             // 
             // gridView2
             // 
-            resources.ApplyResources(this.gridView2, "gridView2");
             this.gridView2.GridControl = this.gridControl1;
             this.gridView2.Name = "gridView2";
             // 
             // MainForm
             // 
-            this.AccessibleDescription = null;
-            this.AccessibleName = null;
             resources.ApplyResources(this, "$this");
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.Icon = null;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainForm";
@@ -310,5 +264,6 @@ namespace Book.UI.Settings.Privileges.Operators
         private DevExpress.Utils.ImageCollection imageCollection1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumndepot;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
     }
 }
