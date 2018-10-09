@@ -120,27 +120,6 @@
   <metadata name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>172, 17</value>
   </metadata>
-  <data name="barButtonItem9.Caption" xml:space="preserve">
-    <value>搜寻</value>
-  </data>
-  <data name="barButtonItem10.Caption" xml:space="preserve">
-    <value>复制</value>
-  </data>
-  <data name="barButtonItemList.Caption" xml:space="preserve">
-    <value>商品一览</value>
-  </data>
-  <data name="barInputExcle.Caption" xml:space="preserve">
-    <value>導入Excle</value>
-  </data>
-  <data name="barButtonItem11.Caption" xml:space="preserve">
-    <value>下載Excle範例</value>
-  </data>
-  <data name="barButtonItem12.Caption" xml:space="preserve">
-    <value>下載Excle模版</value>
-  </data>
-  <data name="barButtonItem13.Caption" xml:space="preserve">
-    <value>列印條碼</value>
-  </data>
   <metadata name="imageCollection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -461,8 +440,23 @@
   <data name="gridColumn26.VisibleIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
+  <data name="gridColumn26.Width" type="System.Int32, mscorlib">
+    <value>300</value>
+  </data>
   <data name="gridColumn27.Caption" xml:space="preserve">
     <value>gridColumn27</value>
+  </data>
+  <data name="gridColumn52.Caption" xml:space="preserve">
+    <value>內部描述</value>
+  </data>
+  <data name="gridColumn52.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn52.VisibleIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="gridColumn52.Width" type="System.Int32, mscorlib">
+    <value>100</value>
   </data>
   <data name="gridControl5.Size" type="System.Drawing.Size, System.Drawing">
     <value>165, 423</value>
@@ -517,6 +511,468 @@
   </data>
   <data name="xtraTabControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.Name" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.Parent" xml:space="preserve">
+    <value>xtraTabPage1</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="xtraTabPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>695, 395</value>
+  </data>
+  <data name="xtraTabPage1.Text" xml:space="preserve">
+    <value>基本资料</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage1.Name" xml:space="preserve">
+    <value>xtraTabPage1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage1.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage1.Parent" xml:space="preserve">
+    <value>xtraTabControl1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="xtraTabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>701, 423</value>
+  </data>
+  <data name="xtraTabControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;layoutControl4.Name" xml:space="preserve">
+    <value>layoutControl4</value>
+  </data>
+  <data name="&gt;&gt;layoutControl4.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControl4.Parent" xml:space="preserve">
+    <value>xtraTabPage7</value>
+  </data>
+  <data name="&gt;&gt;layoutControl4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="xtraTabPage7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>695, 395</value>
+  </data>
+  <data name="xtraTabPage7.Text" xml:space="preserve">
+    <value>成本</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage7.Name" xml:space="preserve">
+    <value>xtraTabPage7</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage7.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage7.Parent" xml:space="preserve">
+    <value>xtraTabControl1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage7.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;layoutControl5.Name" xml:space="preserve">
+    <value>layoutControl5</value>
+  </data>
+  <data name="&gt;&gt;layoutControl5.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControl5.Parent" xml:space="preserve">
+    <value>xtraTabPage8</value>
+  </data>
+  <data name="&gt;&gt;layoutControl5.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="xtraTabPage8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>695, 395</value>
+  </data>
+  <data name="xtraTabPage8.Text" xml:space="preserve">
+    <value>控制</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage8.Name" xml:space="preserve">
+    <value>xtraTabPage8</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage8.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage8.Parent" xml:space="preserve">
+    <value>xtraTabControl1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage8.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;layoutControl6.Name" xml:space="preserve">
+    <value>layoutControl6</value>
+  </data>
+  <data name="&gt;&gt;layoutControl6.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControl6.Parent" xml:space="preserve">
+    <value>xtraTabPage4</value>
+  </data>
+  <data name="&gt;&gt;layoutControl6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="xtraTabPage4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>695, 395</value>
+  </data>
+  <data name="xtraTabPage4.Text" xml:space="preserve">
+    <value>其他</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage4.Name" xml:space="preserve">
+    <value>xtraTabPage4</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage4.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage4.Parent" xml:space="preserve">
+    <value>xtraTabControl1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage4.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;layoutControl8.Name" xml:space="preserve">
+    <value>layoutControl8</value>
+  </data>
+  <data name="&gt;&gt;layoutControl8.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControl8.Parent" xml:space="preserve">
+    <value>xtraTabPage5</value>
+  </data>
+  <data name="&gt;&gt;layoutControl8.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="xtraTabPage5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>695, 395</value>
+  </data>
+  <data name="xtraTabPage5.Text" xml:space="preserve">
+    <value>质检</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage5.Name" xml:space="preserve">
+    <value>xtraTabPage5</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage5.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage5.Parent" xml:space="preserve">
+    <value>xtraTabControl1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage5.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;layoutControl3.Name" xml:space="preserve">
+    <value>layoutControl3</value>
+  </data>
+  <data name="&gt;&gt;layoutControl3.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControl3.Parent" xml:space="preserve">
+    <value>xtraTabPage2</value>
+  </data>
+  <data name="&gt;&gt;layoutControl3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="xtraTabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>695, 395</value>
+  </data>
+  <data name="xtraTabPage2.Text" xml:space="preserve">
+    <value>库存数量</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage2.Name" xml:space="preserve">
+    <value>xtraTabPage2</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage2.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage2.Parent" xml:space="preserve">
+    <value>xtraTabControl1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage2.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;layoutControl7.Name" xml:space="preserve">
+    <value>layoutControl7</value>
+  </data>
+  <data name="&gt;&gt;layoutControl7.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControl7.Parent" xml:space="preserve">
+    <value>xtraTabPage6</value>
+  </data>
+  <data name="&gt;&gt;layoutControl7.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="xtraTabPage6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>695, 395</value>
+  </data>
+  <data name="xtraTabPage6.Text" xml:space="preserve">
+    <value>图档</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage6.Name" xml:space="preserve">
+    <value>xtraTabPage6</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage6.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage6.Parent" xml:space="preserve">
+    <value>xtraTabControl1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage6.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;layoutControl2.Name" xml:space="preserve">
+    <value>layoutControl2</value>
+  </data>
+  <data name="&gt;&gt;layoutControl2.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControl2.Parent" xml:space="preserve">
+    <value>xtraTabPageProcee</value>
+  </data>
+  <data name="&gt;&gt;layoutControl2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="xtraTabPageProcee.Size" type="System.Drawing.Size, System.Drawing">
+    <value>695, 395</value>
+  </data>
+  <data name="xtraTabPageProcee.Text" xml:space="preserve">
+    <value>加工讯息</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPageProcee.Name" xml:space="preserve">
+    <value>xtraTabPageProcee</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPageProcee.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPageProcee.Parent" xml:space="preserve">
+    <value>xtraTabControl1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPageProcee.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;layoutControl9.Name" xml:space="preserve">
+    <value>layoutControl9</value>
+  </data>
+  <data name="&gt;&gt;layoutControl9.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControl9.Parent" xml:space="preserve">
+    <value>xtraTabPage9</value>
+  </data>
+  <data name="&gt;&gt;layoutControl9.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="xtraTabPage9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>695, 395</value>
+  </data>
+  <data name="xtraTabPage9.Text" xml:space="preserve">
+    <value>模具信息</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage9.Name" xml:space="preserve">
+    <value>xtraTabPage9</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage9.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage9.Parent" xml:space="preserve">
+    <value>xtraTabControl1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage9.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;layoutControl10.Name" xml:space="preserve">
+    <value>layoutControl10</value>
+  </data>
+  <data name="&gt;&gt;layoutControl10.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControl10.Parent" xml:space="preserve">
+    <value>xtraTabPage10</value>
+  </data>
+  <data name="&gt;&gt;layoutControl10.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="xtraTabPage10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>695, 395</value>
+  </data>
+  <data name="xtraTabPage10.Text" xml:space="preserve">
+    <value>采购记录</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage10.Name" xml:space="preserve">
+    <value>xtraTabPage10</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage10.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage10.Parent" xml:space="preserve">
+    <value>xtraTabControl1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage10.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;layoutControl11.Name" xml:space="preserve">
+    <value>layoutControl11</value>
+  </data>
+  <data name="&gt;&gt;layoutControl11.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControl11.Parent" xml:space="preserve">
+    <value>xtraTabPage11</value>
+  </data>
+  <data name="&gt;&gt;layoutControl11.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="xtraTabPage11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>695, 395</value>
+  </data>
+  <data name="xtraTabPage11.Text" xml:space="preserve">
+    <value>销售记录</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage11.Name" xml:space="preserve">
+    <value>xtraTabPage11</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage11.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage11.Parent" xml:space="preserve">
+    <value>xtraTabControl1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage11.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;layoutControl12.Name" xml:space="preserve">
+    <value>layoutControl12</value>
+  </data>
+  <data name="&gt;&gt;layoutControl12.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControl12.Parent" xml:space="preserve">
+    <value>xtraTabPageStock</value>
+  </data>
+  <data name="&gt;&gt;layoutControl12.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="xtraTabPageStock.Size" type="System.Drawing.Size, System.Drawing">
+    <value>695, 395</value>
+  </data>
+  <data name="xtraTabPageStock.Text" xml:space="preserve">
+    <value>库存记录</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPageStock.Name" xml:space="preserve">
+    <value>xtraTabPageStock</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPageStock.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPageStock.Parent" xml:space="preserve">
+    <value>xtraTabControl1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPageStock.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;layoutControl16.Name" xml:space="preserve">
+    <value>layoutControl16</value>
+  </data>
+  <data name="&gt;&gt;layoutControl16.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControl16.Parent" xml:space="preserve">
+    <value>xtraTabPageOtherCompact</value>
+  </data>
+  <data name="&gt;&gt;layoutControl16.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="xtraTabPageOtherCompact.Size" type="System.Drawing.Size, System.Drawing">
+    <value>695, 395</value>
+  </data>
+  <data name="xtraTabPageOtherCompact.Text" xml:space="preserve">
+    <value>委外合同記錄</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPageOtherCompact.Name" xml:space="preserve">
+    <value>xtraTabPageOtherCompact</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPageOtherCompact.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPageOtherCompact.Parent" xml:space="preserve">
+    <value>xtraTabControl1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPageOtherCompact.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;layoutControl17.Name" xml:space="preserve">
+    <value>layoutControl17</value>
+  </data>
+  <data name="&gt;&gt;layoutControl17.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControl17.Parent" xml:space="preserve">
+    <value>xtraTabproduceMaterial</value>
+  </data>
+  <data name="&gt;&gt;layoutControl17.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="xtraTabproduceMaterial.Size" type="System.Drawing.Size, System.Drawing">
+    <value>695, 395</value>
+  </data>
+  <data name="xtraTabproduceMaterial.Text" xml:space="preserve">
+    <value>領料記錄</value>
+  </data>
+  <data name="&gt;&gt;xtraTabproduceMaterial.Name" xml:space="preserve">
+    <value>xtraTabproduceMaterial</value>
+  </data>
+  <data name="&gt;&gt;xtraTabproduceMaterial.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;xtraTabproduceMaterial.Parent" xml:space="preserve">
+    <value>xtraTabControl1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabproduceMaterial.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;xtraTabControl1.Name" xml:space="preserve">
+    <value>xtraTabControl1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabControl, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;xtraTabControl1.Parent" xml:space="preserve">
+    <value>splitContainerControl1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;xtraTabControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="splitContainerControl1.Panel2.Text" xml:space="preserve">
+    <value>Panel2</value>
+  </data>
+  <data name="splitContainerControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>990, 423</value>
+  </data>
+  <data name="splitContainerControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="splitContainerControl1.Text" xml:space="preserve">
+    <value>splitContainerControl1</value>
+  </data>
+  <data name="&gt;&gt;splitContainerControl1.Name" xml:space="preserve">
+    <value>splitContainerControl1</value>
+  </data>
+  <data name="&gt;&gt;splitContainerControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SplitContainerControl, DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;splitContainerControl1.Parent" xml:space="preserve">
+    <value>dataLayoutControl1</value>
+  </data>
+  <data name="&gt;&gt;splitContainerControl1.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="txt_InternalDescription.Location" type="System.Drawing.Point, System.Drawing">
     <value>92, 63</value>
@@ -1789,6 +2245,30 @@
   <data name="layoutControlGroup2.CustomizationFormText" xml:space="preserve">
     <value>Root</value>
   </data>
+  <data name="layoutControlGroup2.Text" xml:space="preserve">
+    <value>Root</value>
+  </data>
+  <data name="layoutControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>695, 395</value>
+  </data>
+  <data name="layoutControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="layoutControl1.Text" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.Name" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.Parent" xml:space="preserve">
+    <value>xtraTabPage1</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="layoutControlItem5.CustomizationFormText" xml:space="preserve">
     <value>条码:</value>
   </data>
@@ -2011,137 +2491,8 @@
   <data name="layoutControlItem114.Text" xml:space="preserve">
     <value>內部描述：</value>
   </data>
-  <data name="layoutControlGroup2.Text" xml:space="preserve">
-    <value>Root</value>
-  </data>
-  <data name="layoutControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>695, 395</value>
-  </data>
-  <data name="layoutControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="layoutControl1.Text" xml:space="preserve">
-    <value>layoutControl1</value>
-  </data>
-  <data name="&gt;&gt;layoutControl1.Name" xml:space="preserve">
-    <value>layoutControl1</value>
-  </data>
-  <data name="&gt;&gt;layoutControl1.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControl1.Parent" xml:space="preserve">
-    <value>xtraTabPage1</value>
-  </data>
-  <data name="&gt;&gt;layoutControl1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="xtraTabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>695, 395</value>
-  </data>
-  <data name="xtraTabPage1.Text" xml:space="preserve">
-    <value>基本资料</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage1.Name" xml:space="preserve">
-    <value>xtraTabPage1</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage1.Type" xml:space="preserve">
-    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage1.Parent" xml:space="preserve">
-    <value>xtraTabControl1</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="xtraTabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>701, 423</value>
-  </data>
-  <data name="xtraTabControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
   <data name="xtraTabControl2.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 37</value>
-  </data>
-  <data name="richTextCeMai.Location" type="System.Drawing.Point, System.Drawing">
-    <value>374, 12</value>
-  </data>
-  <data name="richTextCeMai.Size" type="System.Drawing.Size, System.Drawing">
-    <value>279, 195</value>
-  </data>
-  <data name="richTextCeMai.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="richTextCeMai.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;richTextCeMai.Name" xml:space="preserve">
-    <value>richTextCeMai</value>
-  </data>
-  <data name="&gt;&gt;richTextCeMai.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;richTextCeMai.Parent" xml:space="preserve">
-    <value>layoutControl15</value>
-  </data>
-  <data name="&gt;&gt;richTextCeMai.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="richTextZhengMai.Location" type="System.Drawing.Point, System.Drawing">
-    <value>52, 12</value>
-  </data>
-  <data name="richTextZhengMai.Size" type="System.Drawing.Size, System.Drawing">
-    <value>278, 195</value>
-  </data>
-  <data name="richTextZhengMai.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="richTextZhengMai.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;richTextZhengMai.Name" xml:space="preserve">
-    <value>richTextZhengMai</value>
-  </data>
-  <data name="&gt;&gt;richTextZhengMai.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;richTextZhengMai.Parent" xml:space="preserve">
-    <value>layoutControl15</value>
-  </data>
-  <data name="&gt;&gt;richTextZhengMai.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="layoutControl15.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="layoutControl15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="layoutControlGroup16.CustomizationFormText" xml:space="preserve">
-    <value>layoutControlGroup16</value>
-  </data>
-  <data name="layoutControlItem159.CustomizationFormText" xml:space="preserve">
-    <value>正麦：</value>
-  </data>
-  <data name="layoutControlItem159.Text" xml:space="preserve">
-    <value>正麦：</value>
-  </data>
-  <data name="layoutControlItem160.CustomizationFormText" xml:space="preserve">
-    <value>侧麦：</value>
-  </data>
-  <data name="layoutControlItem160.Text" xml:space="preserve">
-    <value>侧麦：</value>
-  </data>
-  <data name="layoutControlGroup16.Text" xml:space="preserve">
-    <value>layoutControlGroup16</value>
-  </data>
-  <data name="layoutControl15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>665, 219</value>
-  </data>
-  <data name="layoutControl15.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="layoutControl15.Text" xml:space="preserve">
-    <value>layoutControl15</value>
   </data>
   <data name="&gt;&gt;layoutControl15.Name" xml:space="preserve">
     <value>layoutControl15</value>
@@ -2542,6 +2893,123 @@
   <data name="layoutControlGroup5.CustomizationFormText" xml:space="preserve">
     <value>layoutControlGroup5</value>
   </data>
+  <data name="layoutControlGroup5.Text" xml:space="preserve">
+    <value>Root</value>
+  </data>
+  <data name="layoutControl4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>695, 395</value>
+  </data>
+  <data name="layoutControl4.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="layoutControl4.Text" xml:space="preserve">
+    <value>layoutControl4</value>
+  </data>
+  <data name="&gt;&gt;layoutControl4.Name" xml:space="preserve">
+    <value>layoutControl4</value>
+  </data>
+  <data name="&gt;&gt;layoutControl4.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControl4.Parent" xml:space="preserve">
+    <value>xtraTabPage7</value>
+  </data>
+  <data name="&gt;&gt;layoutControl4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="richTextCeMai.Location" type="System.Drawing.Point, System.Drawing">
+    <value>374, 12</value>
+  </data>
+  <data name="richTextCeMai.Size" type="System.Drawing.Size, System.Drawing">
+    <value>279, 195</value>
+  </data>
+  <data name="richTextCeMai.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="richTextCeMai.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;richTextCeMai.Name" xml:space="preserve">
+    <value>richTextCeMai</value>
+  </data>
+  <data name="&gt;&gt;richTextCeMai.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;richTextCeMai.Parent" xml:space="preserve">
+    <value>layoutControl15</value>
+  </data>
+  <data name="&gt;&gt;richTextCeMai.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="richTextZhengMai.Location" type="System.Drawing.Point, System.Drawing">
+    <value>52, 12</value>
+  </data>
+  <data name="richTextZhengMai.Size" type="System.Drawing.Size, System.Drawing">
+    <value>278, 195</value>
+  </data>
+  <data name="richTextZhengMai.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="richTextZhengMai.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;richTextZhengMai.Name" xml:space="preserve">
+    <value>richTextZhengMai</value>
+  </data>
+  <data name="&gt;&gt;richTextZhengMai.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;richTextZhengMai.Parent" xml:space="preserve">
+    <value>layoutControl15</value>
+  </data>
+  <data name="&gt;&gt;richTextZhengMai.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="layoutControl15.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="layoutControl15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="layoutControlGroup16.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlGroup16</value>
+  </data>
+  <data name="layoutControlGroup16.Text" xml:space="preserve">
+    <value>layoutControlGroup16</value>
+  </data>
+  <data name="layoutControl15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>665, 219</value>
+  </data>
+  <data name="layoutControl15.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="layoutControl15.Text" xml:space="preserve">
+    <value>layoutControl15</value>
+  </data>
+  <data name="&gt;&gt;layoutControl15.Name" xml:space="preserve">
+    <value>layoutControl15</value>
+  </data>
+  <data name="&gt;&gt;layoutControl15.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControl15.Parent" xml:space="preserve">
+    <value>xtraTabPage13</value>
+  </data>
+  <data name="&gt;&gt;layoutControl15.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="layoutControlItem159.CustomizationFormText" xml:space="preserve">
+    <value>正麦：</value>
+  </data>
+  <data name="layoutControlItem159.Text" xml:space="preserve">
+    <value>正麦：</value>
+  </data>
+  <data name="layoutControlItem160.CustomizationFormText" xml:space="preserve">
+    <value>侧麦：</value>
+  </data>
+  <data name="layoutControlItem160.Text" xml:space="preserve">
+    <value>侧麦：</value>
+  </data>
   <data name="layoutControlItem136.CustomizationFormText" xml:space="preserve">
     <value>layoutControlItem136</value>
   </data>
@@ -2607,48 +3075,6 @@
   </data>
   <data name="layoutControlItem49.Text" xml:space="preserve">
     <value>默认仓库:</value>
-  </data>
-  <data name="layoutControlGroup5.Text" xml:space="preserve">
-    <value>Root</value>
-  </data>
-  <data name="layoutControl4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>695, 395</value>
-  </data>
-  <data name="layoutControl4.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="layoutControl4.Text" xml:space="preserve">
-    <value>layoutControl4</value>
-  </data>
-  <data name="&gt;&gt;layoutControl4.Name" xml:space="preserve">
-    <value>layoutControl4</value>
-  </data>
-  <data name="&gt;&gt;layoutControl4.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControl4.Parent" xml:space="preserve">
-    <value>xtraTabPage7</value>
-  </data>
-  <data name="&gt;&gt;layoutControl4.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="xtraTabPage7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>695, 395</value>
-  </data>
-  <data name="xtraTabPage7.Text" xml:space="preserve">
-    <value>成本</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage7.Name" xml:space="preserve">
-    <value>xtraTabPage7</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage7.Type" xml:space="preserve">
-    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage7.Parent" xml:space="preserve">
-    <value>xtraTabControl1</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage7.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="simpleButton1.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 236</value>
@@ -3163,6 +3589,30 @@
   <data name="layoutControlGroup6.CustomizationFormText" xml:space="preserve">
     <value>Root</value>
   </data>
+  <data name="layoutControlGroup6.Text" xml:space="preserve">
+    <value>Root</value>
+  </data>
+  <data name="layoutControl5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>695, 395</value>
+  </data>
+  <data name="layoutControl5.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="layoutControl5.Text" xml:space="preserve">
+    <value>layoutControl5</value>
+  </data>
+  <data name="&gt;&gt;layoutControl5.Name" xml:space="preserve">
+    <value>layoutControl5</value>
+  </data>
+  <data name="&gt;&gt;layoutControl5.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControl5.Parent" xml:space="preserve">
+    <value>xtraTabPage8</value>
+  </data>
+  <data name="&gt;&gt;layoutControl5.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="layoutControlItem53.CustomizationFormText" xml:space="preserve">
     <value>最低库存:</value>
   </data>
@@ -3270,48 +3720,6 @@
   </data>
   <data name="emptySpaceItem17.Text" xml:space="preserve">
     <value>emptySpaceItem17</value>
-  </data>
-  <data name="layoutControlGroup6.Text" xml:space="preserve">
-    <value>Root</value>
-  </data>
-  <data name="layoutControl5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>695, 395</value>
-  </data>
-  <data name="layoutControl5.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="layoutControl5.Text" xml:space="preserve">
-    <value>layoutControl5</value>
-  </data>
-  <data name="&gt;&gt;layoutControl5.Name" xml:space="preserve">
-    <value>layoutControl5</value>
-  </data>
-  <data name="&gt;&gt;layoutControl5.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControl5.Parent" xml:space="preserve">
-    <value>xtraTabPage8</value>
-  </data>
-  <data name="&gt;&gt;layoutControl5.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="xtraTabPage8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>695, 395</value>
-  </data>
-  <data name="xtraTabPage8.Text" xml:space="preserve">
-    <value>控制</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage8.Name" xml:space="preserve">
-    <value>xtraTabPage8</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage8.Type" xml:space="preserve">
-    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage8.Parent" xml:space="preserve">
-    <value>xtraTabControl1</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage8.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="calcEditChangeModelTime.Location" type="System.Drawing.Point, System.Drawing">
     <value>423, 249</value>
@@ -3940,6 +4348,78 @@
   <data name="&gt;&gt;newChooseContorlVolumeUnitGroup.ZOrder" xml:space="preserve">
     <value>24</value>
   </data>
+  <data name="&gt;&gt;layoutControl18.Name" xml:space="preserve">
+    <value>layoutControl18</value>
+  </data>
+  <data name="&gt;&gt;layoutControl18.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControl18.Parent" xml:space="preserve">
+    <value>groupControl1</value>
+  </data>
+  <data name="&gt;&gt;layoutControl18.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="groupControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 274</value>
+  </data>
+  <data name="groupControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>671, 20</value>
+  </data>
+  <data name="groupControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="groupControl1.Text" xml:space="preserve">
+    <value>損耗：</value>
+  </data>
+  <data name="groupControl1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;groupControl1.Name" xml:space="preserve">
+    <value>groupControl1</value>
+  </data>
+  <data name="&gt;&gt;groupControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;groupControl1.Parent" xml:space="preserve">
+    <value>layoutControl6</value>
+  </data>
+  <data name="&gt;&gt;groupControl1.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="layoutControl6.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="layoutControl6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="layoutControlGroup7.CustomizationFormText" xml:space="preserve">
+    <value>Root</value>
+  </data>
+  <data name="layoutControlGroup7.Text" xml:space="preserve">
+    <value>Root</value>
+  </data>
+  <data name="layoutControl6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>695, 395</value>
+  </data>
+  <data name="layoutControl6.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="layoutControl6.Text" xml:space="preserve">
+    <value>layoutControl6</value>
+  </data>
+  <data name="&gt;&gt;layoutControl6.Name" xml:space="preserve">
+    <value>layoutControl6</value>
+  </data>
+  <data name="&gt;&gt;layoutControl6.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControl6.Parent" xml:space="preserve">
+    <value>xtraTabPage4</value>
+  </data>
+  <data name="&gt;&gt;layoutControl6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="spinEditSunhao3.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
   </data>
@@ -4165,6 +4645,30 @@
   <data name="layoutControlGroup19.CustomizationFormText" xml:space="preserve">
     <value>layoutControlGroup19</value>
   </data>
+  <data name="layoutControlGroup19.Text" xml:space="preserve">
+    <value>layoutControlGroup19</value>
+  </data>
+  <data name="layoutControl18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>667, 17</value>
+  </data>
+  <data name="layoutControl18.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="layoutControl18.Text" xml:space="preserve">
+    <value>layoutControl18</value>
+  </data>
+  <data name="&gt;&gt;layoutControl18.Name" xml:space="preserve">
+    <value>layoutControl18</value>
+  </data>
+  <data name="&gt;&gt;layoutControl18.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControl18.Parent" xml:space="preserve">
+    <value>groupControl1</value>
+  </data>
+  <data name="&gt;&gt;layoutControl18.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="layoutControlItem181.CustomizationFormText" xml:space="preserve">
     <value>數量 從：</value>
   </data>
@@ -4218,66 +4722,6 @@
   </data>
   <data name="layoutControlItem189.Text" xml:space="preserve">
     <value>損耗量%：</value>
-  </data>
-  <data name="layoutControlGroup19.Text" xml:space="preserve">
-    <value>layoutControlGroup19</value>
-  </data>
-  <data name="layoutControl18.Size" type="System.Drawing.Size, System.Drawing">
-    <value>667, 17</value>
-  </data>
-  <data name="layoutControl18.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="layoutControl18.Text" xml:space="preserve">
-    <value>layoutControl18</value>
-  </data>
-  <data name="&gt;&gt;layoutControl18.Name" xml:space="preserve">
-    <value>layoutControl18</value>
-  </data>
-  <data name="&gt;&gt;layoutControl18.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControl18.Parent" xml:space="preserve">
-    <value>groupControl1</value>
-  </data>
-  <data name="&gt;&gt;layoutControl18.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="groupControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 274</value>
-  </data>
-  <data name="groupControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>671, 20</value>
-  </data>
-  <data name="groupControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>34</value>
-  </data>
-  <data name="groupControl1.Text" xml:space="preserve">
-    <value>損耗：</value>
-  </data>
-  <data name="groupControl1.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;groupControl1.Name" xml:space="preserve">
-    <value>groupControl1</value>
-  </data>
-  <data name="&gt;&gt;groupControl1.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;groupControl1.Parent" xml:space="preserve">
-    <value>layoutControl6</value>
-  </data>
-  <data name="&gt;&gt;groupControl1.ZOrder" xml:space="preserve">
-    <value>25</value>
-  </data>
-  <data name="layoutControl6.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="layoutControl6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="layoutControlGroup7.CustomizationFormText" xml:space="preserve">
-    <value>Root</value>
   </data>
   <data name="layoutControlItem67.CustomizationFormText" xml:space="preserve">
     <value>体积单位组:</value>
@@ -4422,48 +4866,6 @@
   </data>
   <data name="emptySpaceItem1.Text" xml:space="preserve">
     <value>emptySpaceItem1</value>
-  </data>
-  <data name="layoutControlGroup7.Text" xml:space="preserve">
-    <value>Root</value>
-  </data>
-  <data name="layoutControl6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>695, 395</value>
-  </data>
-  <data name="layoutControl6.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="layoutControl6.Text" xml:space="preserve">
-    <value>layoutControl6</value>
-  </data>
-  <data name="&gt;&gt;layoutControl6.Name" xml:space="preserve">
-    <value>layoutControl6</value>
-  </data>
-  <data name="&gt;&gt;layoutControl6.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControl6.Parent" xml:space="preserve">
-    <value>xtraTabPage4</value>
-  </data>
-  <data name="&gt;&gt;layoutControl6.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="xtraTabPage4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>695, 395</value>
-  </data>
-  <data name="xtraTabPage4.Text" xml:space="preserve">
-    <value>其他</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage4.Name" xml:space="preserve">
-    <value>xtraTabPage4</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage4.Type" xml:space="preserve">
-    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage4.Parent" xml:space="preserve">
-    <value>xtraTabControl1</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage4.ZOrder" xml:space="preserve">
-    <value>3</value>
   </data>
   <data name="lookUpEditQualityTestUnitId.Location" type="System.Drawing.Point, System.Drawing">
     <value>428, 64</value>
@@ -4756,6 +5158,30 @@
   <data name="layoutControlGroup9.CustomizationFormText" xml:space="preserve">
     <value>layoutControlGroup9</value>
   </data>
+  <data name="layoutControlGroup9.Text" xml:space="preserve">
+    <value>Root</value>
+  </data>
+  <data name="layoutControl8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>695, 395</value>
+  </data>
+  <data name="layoutControl8.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="layoutControl8.Text" xml:space="preserve">
+    <value>layoutControl8</value>
+  </data>
+  <data name="&gt;&gt;layoutControl8.Name" xml:space="preserve">
+    <value>layoutControl8</value>
+  </data>
+  <data name="&gt;&gt;layoutControl8.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControl8.Parent" xml:space="preserve">
+    <value>xtraTabPage5</value>
+  </data>
+  <data name="&gt;&gt;layoutControl8.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="layoutControlItem84.CustomizationFormText" xml:space="preserve">
     <value>layoutControlItem84</value>
   </data>
@@ -4809,48 +5235,6 @@
   </data>
   <data name="layoutControlItem31.Text" xml:space="preserve">
     <value>检验计量单位:</value>
-  </data>
-  <data name="layoutControlGroup9.Text" xml:space="preserve">
-    <value>Root</value>
-  </data>
-  <data name="layoutControl8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>695, 395</value>
-  </data>
-  <data name="layoutControl8.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="layoutControl8.Text" xml:space="preserve">
-    <value>layoutControl8</value>
-  </data>
-  <data name="&gt;&gt;layoutControl8.Name" xml:space="preserve">
-    <value>layoutControl8</value>
-  </data>
-  <data name="&gt;&gt;layoutControl8.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControl8.Parent" xml:space="preserve">
-    <value>xtraTabPage5</value>
-  </data>
-  <data name="&gt;&gt;layoutControl8.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="xtraTabPage5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>695, 395</value>
-  </data>
-  <data name="xtraTabPage5.Text" xml:space="preserve">
-    <value>质检</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage5.Name" xml:space="preserve">
-    <value>xtraTabPage5</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage5.Type" xml:space="preserve">
-    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage5.Parent" xml:space="preserve">
-    <value>xtraTabControl1</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage5.ZOrder" xml:space="preserve">
-    <value>4</value>
   </data>
   <data name="calcEditMateriaOtherFenPei.Location" type="System.Drawing.Point, System.Drawing">
     <value>477, 114</value>
@@ -5257,6 +5641,30 @@
   <data name="layoutControlGroup4.CustomizationFormText" xml:space="preserve">
     <value>layoutControlGroup4</value>
   </data>
+  <data name="layoutControlGroup4.Text" xml:space="preserve">
+    <value>Root</value>
+  </data>
+  <data name="layoutControl3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>695, 395</value>
+  </data>
+  <data name="layoutControl3.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="layoutControl3.Text" xml:space="preserve">
+    <value>layoutControl3</value>
+  </data>
+  <data name="&gt;&gt;layoutControl3.Name" xml:space="preserve">
+    <value>layoutControl3</value>
+  </data>
+  <data name="&gt;&gt;layoutControl3.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControl3.Parent" xml:space="preserve">
+    <value>xtraTabPage2</value>
+  </data>
+  <data name="&gt;&gt;layoutControl3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="layoutControlItem8.CustomizationFormText" xml:space="preserve">
     <value>最近进货日:</value>
   </data>
@@ -5322,48 +5730,6 @@
   </data>
   <data name="layoutControlItem104.Text" xml:space="preserve">
     <value>委外发料单已分配数量:</value>
-  </data>
-  <data name="layoutControlGroup4.Text" xml:space="preserve">
-    <value>Root</value>
-  </data>
-  <data name="layoutControl3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>695, 395</value>
-  </data>
-  <data name="layoutControl3.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="layoutControl3.Text" xml:space="preserve">
-    <value>layoutControl3</value>
-  </data>
-  <data name="&gt;&gt;layoutControl3.Name" xml:space="preserve">
-    <value>layoutControl3</value>
-  </data>
-  <data name="&gt;&gt;layoutControl3.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControl3.Parent" xml:space="preserve">
-    <value>xtraTabPage2</value>
-  </data>
-  <data name="&gt;&gt;layoutControl3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="xtraTabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>695, 395</value>
-  </data>
-  <data name="xtraTabPage2.Text" xml:space="preserve">
-    <value>库存数量</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage2.Name" xml:space="preserve">
-    <value>xtraTabPage2</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage2.Type" xml:space="preserve">
-    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage2.Parent" xml:space="preserve">
-    <value>xtraTabControl1</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage2.ZOrder" xml:space="preserve">
-    <value>5</value>
   </data>
   <data name="simpleButtonselectpic.Location" type="System.Drawing.Point, System.Drawing">
     <value>326, 12</value>
@@ -5548,6 +5914,30 @@
   <data name="layoutControlGroup8.CustomizationFormText" xml:space="preserve">
     <value>layoutControlGroup8</value>
   </data>
+  <data name="layoutControlGroup8.Text" xml:space="preserve">
+    <value>layoutControlGroup8</value>
+  </data>
+  <data name="layoutControl7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>695, 395</value>
+  </data>
+  <data name="layoutControl7.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="layoutControl7.Text" xml:space="preserve">
+    <value>layoutControl7</value>
+  </data>
+  <data name="&gt;&gt;layoutControl7.Name" xml:space="preserve">
+    <value>layoutControl7</value>
+  </data>
+  <data name="&gt;&gt;layoutControl7.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControl7.Parent" xml:space="preserve">
+    <value>xtraTabPage6</value>
+  </data>
+  <data name="&gt;&gt;layoutControl7.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="layoutControlItem83.CustomizationFormText" xml:space="preserve">
     <value>layoutControlItem83</value>
   </data>
@@ -5589,48 +5979,6 @@
   </data>
   <data name="layoutControlItem82.Text" xml:space="preserve">
     <value>layoutControlItem82</value>
-  </data>
-  <data name="layoutControlGroup8.Text" xml:space="preserve">
-    <value>layoutControlGroup8</value>
-  </data>
-  <data name="layoutControl7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>695, 395</value>
-  </data>
-  <data name="layoutControl7.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="layoutControl7.Text" xml:space="preserve">
-    <value>layoutControl7</value>
-  </data>
-  <data name="&gt;&gt;layoutControl7.Name" xml:space="preserve">
-    <value>layoutControl7</value>
-  </data>
-  <data name="&gt;&gt;layoutControl7.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControl7.Parent" xml:space="preserve">
-    <value>xtraTabPage6</value>
-  </data>
-  <data name="&gt;&gt;layoutControl7.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="xtraTabPage6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>695, 395</value>
-  </data>
-  <data name="xtraTabPage6.Text" xml:space="preserve">
-    <value>图档</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage6.Name" xml:space="preserve">
-    <value>xtraTabPage6</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage6.Type" xml:space="preserve">
-    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage6.Parent" xml:space="preserve">
-    <value>xtraTabControl1</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage6.ZOrder" xml:space="preserve">
-    <value>6</value>
   </data>
   <data name="simpleBProceduresDelete.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 201</value>
@@ -5737,6 +6085,9 @@
   <data name="gridColumnWH.Caption" xml:space="preserve">
     <value>生产站</value>
   </data>
+  <metadata name="bindingSourceProcessCategory.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>780, 17</value>
+  </metadata>
   <data name="repositoryItemLookUpEdit1.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -5776,9 +6127,6 @@
   <data name="repositoryItemLookUpEdit1.Columns10" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v10.2">
     <value>Default</value>
   </data>
-  <metadata name="bindingSourceProcessCategory.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>780, 17</value>
-  </metadata>
   <data name="repositoryItemLookUpEdit1.NullText" xml:space="preserve">
     <value />
   </data>
@@ -5842,6 +6190,33 @@
   <data name="layoutControlGroup3.CustomizationFormText" xml:space="preserve">
     <value>Root</value>
   </data>
+  <data name="layoutControlGroup3.Text" xml:space="preserve">
+    <value>Root</value>
+  </data>
+  <data name="layoutControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>695, 395</value>
+  </data>
+  <data name="layoutControl2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="layoutControl2.Text" xml:space="preserve">
+    <value>layoutControl2</value>
+  </data>
+  <data name="&gt;&gt;layoutControl2.Name" xml:space="preserve">
+    <value>layoutControl2</value>
+  </data>
+  <data name="&gt;&gt;layoutControl2.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControl2.Parent" xml:space="preserve">
+    <value>xtraTabPageProcee</value>
+  </data>
+  <data name="&gt;&gt;layoutControl2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="bindingSourceProcessCategory.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>780, 17</value>
+  </metadata>
   <data name="emptySpaceItem11.CustomizationFormText" xml:space="preserve">
     <value>emptySpaceItem11</value>
   </data>
@@ -5883,48 +6258,6 @@
   </data>
   <data name="emptySpaceItem15.Text" xml:space="preserve">
     <value>emptySpaceItem15</value>
-  </data>
-  <data name="layoutControlGroup3.Text" xml:space="preserve">
-    <value>Root</value>
-  </data>
-  <data name="layoutControl2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>695, 395</value>
-  </data>
-  <data name="layoutControl2.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="layoutControl2.Text" xml:space="preserve">
-    <value>layoutControl2</value>
-  </data>
-  <data name="&gt;&gt;layoutControl2.Name" xml:space="preserve">
-    <value>layoutControl2</value>
-  </data>
-  <data name="&gt;&gt;layoutControl2.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControl2.Parent" xml:space="preserve">
-    <value>xtraTabPageProcee</value>
-  </data>
-  <data name="&gt;&gt;layoutControl2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="xtraTabPageProcee.Size" type="System.Drawing.Size, System.Drawing">
-    <value>695, 395</value>
-  </data>
-  <data name="xtraTabPageProcee.Text" xml:space="preserve">
-    <value>加工讯息</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPageProcee.Name" xml:space="preserve">
-    <value>xtraTabPageProcee</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPageProcee.Type" xml:space="preserve">
-    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPageProcee.Parent" xml:space="preserve">
-    <value>xtraTabControl1</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPageProcee.ZOrder" xml:space="preserve">
-    <value>7</value>
   </data>
   <data name="simpleButton7.Location" type="System.Drawing.Point, System.Drawing">
     <value>142, 209</value>
@@ -6106,6 +6439,30 @@
   <data name="layoutControlGroup10.CustomizationFormText" xml:space="preserve">
     <value>Root</value>
   </data>
+  <data name="layoutControlGroup10.Text" xml:space="preserve">
+    <value>Root</value>
+  </data>
+  <data name="layoutControl9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>695, 395</value>
+  </data>
+  <data name="layoutControl9.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="layoutControl9.Text" xml:space="preserve">
+    <value>layoutControl9</value>
+  </data>
+  <data name="&gt;&gt;layoutControl9.Name" xml:space="preserve">
+    <value>layoutControl9</value>
+  </data>
+  <data name="&gt;&gt;layoutControl9.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControl9.Parent" xml:space="preserve">
+    <value>xtraTabPage9</value>
+  </data>
+  <data name="&gt;&gt;layoutControl9.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="layoutControlItem99.CustomizationFormText" xml:space="preserve">
     <value>layoutControlItem99</value>
   </data>
@@ -6135,48 +6492,6 @@
   </data>
   <data name="layoutControlItem101.Text" xml:space="preserve">
     <value>layoutControlItem101</value>
-  </data>
-  <data name="layoutControlGroup10.Text" xml:space="preserve">
-    <value>Root</value>
-  </data>
-  <data name="layoutControl9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>695, 395</value>
-  </data>
-  <data name="layoutControl9.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="layoutControl9.Text" xml:space="preserve">
-    <value>layoutControl9</value>
-  </data>
-  <data name="&gt;&gt;layoutControl9.Name" xml:space="preserve">
-    <value>layoutControl9</value>
-  </data>
-  <data name="&gt;&gt;layoutControl9.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControl9.Parent" xml:space="preserve">
-    <value>xtraTabPage9</value>
-  </data>
-  <data name="&gt;&gt;layoutControl9.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="xtraTabPage9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>695, 395</value>
-  </data>
-  <data name="xtraTabPage9.Text" xml:space="preserve">
-    <value>模具信息</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage9.Name" xml:space="preserve">
-    <value>xtraTabPage9</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage9.Type" xml:space="preserve">
-    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage9.Parent" xml:space="preserve">
-    <value>xtraTabControl1</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage9.ZOrder" xml:space="preserve">
-    <value>8</value>
   </data>
   <data name="simpleButton_search.Location" type="System.Drawing.Point, System.Drawing">
     <value>518, 12</value>
@@ -6430,30 +6745,6 @@
   <data name="layoutControlGroup11.CustomizationFormText" xml:space="preserve">
     <value>layoutControlGroup11</value>
   </data>
-  <data name="layoutControlItem105.CustomizationFormText" xml:space="preserve">
-    <value>layoutControlItem105</value>
-  </data>
-  <data name="layoutControlItem105.Text" xml:space="preserve">
-    <value>layoutControlItem105</value>
-  </data>
-  <data name="layoutControlItem106.CustomizationFormText" xml:space="preserve">
-    <value>起始日期:</value>
-  </data>
-  <data name="layoutControlItem106.Text" xml:space="preserve">
-    <value>起始日期:</value>
-  </data>
-  <data name="layoutControlItem107.CustomizationFormText" xml:space="preserve">
-    <value>截止日期:</value>
-  </data>
-  <data name="layoutControlItem107.Text" xml:space="preserve">
-    <value>截止日期:</value>
-  </data>
-  <data name="layoutControlItem108.CustomizationFormText" xml:space="preserve">
-    <value>layoutControlItem108</value>
-  </data>
-  <data name="layoutControlItem108.Text" xml:space="preserve">
-    <value>layoutControlItem108</value>
-  </data>
   <data name="layoutControlGroup11.Text" xml:space="preserve">
     <value>layoutControlGroup11</value>
   </data>
@@ -6478,23 +6769,29 @@
   <data name="&gt;&gt;layoutControl10.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="xtraTabPage10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>695, 395</value>
+  <data name="layoutControlItem105.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem105</value>
   </data>
-  <data name="xtraTabPage10.Text" xml:space="preserve">
-    <value>采购记录</value>
+  <data name="layoutControlItem105.Text" xml:space="preserve">
+    <value>layoutControlItem105</value>
   </data>
-  <data name="&gt;&gt;xtraTabPage10.Name" xml:space="preserve">
-    <value>xtraTabPage10</value>
+  <data name="layoutControlItem106.CustomizationFormText" xml:space="preserve">
+    <value>起始日期:</value>
   </data>
-  <data name="&gt;&gt;xtraTabPage10.Type" xml:space="preserve">
-    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="layoutControlItem106.Text" xml:space="preserve">
+    <value>起始日期:</value>
   </data>
-  <data name="&gt;&gt;xtraTabPage10.Parent" xml:space="preserve">
-    <value>xtraTabControl1</value>
+  <data name="layoutControlItem107.CustomizationFormText" xml:space="preserve">
+    <value>截止日期:</value>
   </data>
-  <data name="&gt;&gt;xtraTabPage10.ZOrder" xml:space="preserve">
-    <value>9</value>
+  <data name="layoutControlItem107.Text" xml:space="preserve">
+    <value>截止日期:</value>
+  </data>
+  <data name="layoutControlItem108.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem108</value>
+  </data>
+  <data name="layoutControlItem108.Text" xml:space="preserve">
+    <value>layoutControlItem108</value>
   </data>
   <data name="simpleButtonMation.Location" type="System.Drawing.Point, System.Drawing">
     <value>519, 12</value>
@@ -6664,30 +6961,6 @@
   <data name="layoutControlGroup12.CustomizationFormText" xml:space="preserve">
     <value>layoutControlGroup12</value>
   </data>
-  <data name="layoutControlItem109.CustomizationFormText" xml:space="preserve">
-    <value>layoutControlItem109</value>
-  </data>
-  <data name="layoutControlItem109.Text" xml:space="preserve">
-    <value>layoutControlItem109</value>
-  </data>
-  <data name="layoutControlItem110.CustomizationFormText" xml:space="preserve">
-    <value>起始日期:</value>
-  </data>
-  <data name="layoutControlItem110.Text" xml:space="preserve">
-    <value>起始日期:</value>
-  </data>
-  <data name="layoutControlItem111.CustomizationFormText" xml:space="preserve">
-    <value>截止日期:</value>
-  </data>
-  <data name="layoutControlItem111.Text" xml:space="preserve">
-    <value>截止日期:</value>
-  </data>
-  <data name="layoutControlItem112.CustomizationFormText" xml:space="preserve">
-    <value>layoutControlItem112</value>
-  </data>
-  <data name="layoutControlItem112.Text" xml:space="preserve">
-    <value>layoutControlItem112</value>
-  </data>
   <data name="layoutControlGroup12.Text" xml:space="preserve">
     <value>layoutControlGroup12</value>
   </data>
@@ -6712,23 +6985,29 @@
   <data name="&gt;&gt;layoutControl11.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="xtraTabPage11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>695, 395</value>
+  <data name="layoutControlItem109.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem109</value>
   </data>
-  <data name="xtraTabPage11.Text" xml:space="preserve">
-    <value>销售记录</value>
+  <data name="layoutControlItem109.Text" xml:space="preserve">
+    <value>layoutControlItem109</value>
   </data>
-  <data name="&gt;&gt;xtraTabPage11.Name" xml:space="preserve">
-    <value>xtraTabPage11</value>
+  <data name="layoutControlItem110.CustomizationFormText" xml:space="preserve">
+    <value>起始日期:</value>
   </data>
-  <data name="&gt;&gt;xtraTabPage11.Type" xml:space="preserve">
-    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="layoutControlItem110.Text" xml:space="preserve">
+    <value>起始日期:</value>
   </data>
-  <data name="&gt;&gt;xtraTabPage11.Parent" xml:space="preserve">
-    <value>xtraTabControl1</value>
+  <data name="layoutControlItem111.CustomizationFormText" xml:space="preserve">
+    <value>截止日期:</value>
   </data>
-  <data name="&gt;&gt;xtraTabPage11.ZOrder" xml:space="preserve">
-    <value>10</value>
+  <data name="layoutControlItem111.Text" xml:space="preserve">
+    <value>截止日期:</value>
+  </data>
+  <data name="layoutControlItem112.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem112</value>
+  </data>
+  <data name="layoutControlItem112.Text" xml:space="preserve">
+    <value>layoutControlItem112</value>
   </data>
   <data name="calcEditStock1.Location" type="System.Drawing.Point, System.Drawing">
     <value>592, 12</value>
@@ -7051,6 +7330,30 @@
   <data name="layoutControlGroup13.CustomizationFormText" xml:space="preserve">
     <value>Root</value>
   </data>
+  <data name="layoutControlGroup13.Text" xml:space="preserve">
+    <value>Root</value>
+  </data>
+  <data name="layoutControl12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>695, 395</value>
+  </data>
+  <data name="layoutControl12.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="layoutControl12.Text" xml:space="preserve">
+    <value>layoutControl12</value>
+  </data>
+  <data name="&gt;&gt;layoutControl12.Name" xml:space="preserve">
+    <value>layoutControl12</value>
+  </data>
+  <data name="&gt;&gt;layoutControl12.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControl12.Parent" xml:space="preserve">
+    <value>xtraTabPageStock</value>
+  </data>
+  <data name="&gt;&gt;layoutControl12.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="layoutControlItem89.CustomizationFormText" xml:space="preserve">
     <value>layoutControlItem89</value>
   </data>
@@ -7086,48 +7389,6 @@
   </data>
   <data name="layoutControlItem96.Text" xml:space="preserve">
     <value>当前库存:</value>
-  </data>
-  <data name="layoutControlGroup13.Text" xml:space="preserve">
-    <value>Root</value>
-  </data>
-  <data name="layoutControl12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>695, 395</value>
-  </data>
-  <data name="layoutControl12.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="layoutControl12.Text" xml:space="preserve">
-    <value>layoutControl12</value>
-  </data>
-  <data name="&gt;&gt;layoutControl12.Name" xml:space="preserve">
-    <value>layoutControl12</value>
-  </data>
-  <data name="&gt;&gt;layoutControl12.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControl12.Parent" xml:space="preserve">
-    <value>xtraTabPageStock</value>
-  </data>
-  <data name="&gt;&gt;layoutControl12.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="xtraTabPageStock.Size" type="System.Drawing.Size, System.Drawing">
-    <value>695, 395</value>
-  </data>
-  <data name="xtraTabPageStock.Text" xml:space="preserve">
-    <value>库存记录</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPageStock.Name" xml:space="preserve">
-    <value>xtraTabPageStock</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPageStock.Type" xml:space="preserve">
-    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPageStock.Parent" xml:space="preserve">
-    <value>xtraTabControl1</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPageStock.ZOrder" xml:space="preserve">
-    <value>11</value>
   </data>
   <data name="btn_OtherCompactSearch.Location" type="System.Drawing.Point, System.Drawing">
     <value>499, 12</value>
@@ -7333,30 +7594,6 @@
   <data name="layoutControlGroup17.CustomizationFormText" xml:space="preserve">
     <value>layoutControlGroup17</value>
   </data>
-  <data name="layoutControlItem169.CustomizationFormText" xml:space="preserve">
-    <value>layoutControlItem169</value>
-  </data>
-  <data name="layoutControlItem169.Text" xml:space="preserve">
-    <value>layoutControlItem169</value>
-  </data>
-  <data name="layoutControlItem170.CustomizationFormText" xml:space="preserve">
-    <value>起始日期：</value>
-  </data>
-  <data name="layoutControlItem170.Text" xml:space="preserve">
-    <value>起始日期：</value>
-  </data>
-  <data name="layoutControlItem171.CustomizationFormText" xml:space="preserve">
-    <value>結束日期：</value>
-  </data>
-  <data name="layoutControlItem171.Text" xml:space="preserve">
-    <value>結束日期：</value>
-  </data>
-  <data name="layoutControlItem172.CustomizationFormText" xml:space="preserve">
-    <value>layoutControlItem172</value>
-  </data>
-  <data name="layoutControlItem172.Text" xml:space="preserve">
-    <value>layoutControlItem172</value>
-  </data>
   <data name="layoutControlGroup17.Text" xml:space="preserve">
     <value>layoutControlGroup17</value>
   </data>
@@ -7381,23 +7618,29 @@
   <data name="&gt;&gt;layoutControl16.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="xtraTabPageOtherCompact.Size" type="System.Drawing.Size, System.Drawing">
-    <value>695, 395</value>
+  <data name="layoutControlItem169.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem169</value>
   </data>
-  <data name="xtraTabPageOtherCompact.Text" xml:space="preserve">
-    <value>委外合同記錄</value>
+  <data name="layoutControlItem169.Text" xml:space="preserve">
+    <value>layoutControlItem169</value>
   </data>
-  <data name="&gt;&gt;xtraTabPageOtherCompact.Name" xml:space="preserve">
-    <value>xtraTabPageOtherCompact</value>
+  <data name="layoutControlItem170.CustomizationFormText" xml:space="preserve">
+    <value>起始日期：</value>
   </data>
-  <data name="&gt;&gt;xtraTabPageOtherCompact.Type" xml:space="preserve">
-    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="layoutControlItem170.Text" xml:space="preserve">
+    <value>起始日期：</value>
   </data>
-  <data name="&gt;&gt;xtraTabPageOtherCompact.Parent" xml:space="preserve">
-    <value>xtraTabControl1</value>
+  <data name="layoutControlItem171.CustomizationFormText" xml:space="preserve">
+    <value>結束日期：</value>
   </data>
-  <data name="&gt;&gt;xtraTabPageOtherCompact.ZOrder" xml:space="preserve">
-    <value>12</value>
+  <data name="layoutControlItem171.Text" xml:space="preserve">
+    <value>結束日期：</value>
+  </data>
+  <data name="layoutControlItem172.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem172</value>
+  </data>
+  <data name="layoutControlItem172.Text" xml:space="preserve">
+    <value>layoutControlItem172</value>
   </data>
   <data name="dateEditProduceMaterialEnd.Location" type="System.Drawing.Point, System.Drawing">
     <value>321, 12</value>
@@ -7588,30 +7831,6 @@
   <data name="layoutControlGroup18.CustomizationFormText" xml:space="preserve">
     <value>layoutControlGroup18</value>
   </data>
-  <data name="layoutControlItem173.CustomizationFormText" xml:space="preserve">
-    <value>layoutControlItem173</value>
-  </data>
-  <data name="layoutControlItem173.Text" xml:space="preserve">
-    <value>layoutControlItem173</value>
-  </data>
-  <data name="layoutControlItem174.CustomizationFormText" xml:space="preserve">
-    <value>layoutControlItem174</value>
-  </data>
-  <data name="layoutControlItem174.Text" xml:space="preserve">
-    <value>layoutControlItem174</value>
-  </data>
-  <data name="layoutControlItem175.CustomizationFormText" xml:space="preserve">
-    <value>起始日期：</value>
-  </data>
-  <data name="layoutControlItem175.Text" xml:space="preserve">
-    <value>起始日期：</value>
-  </data>
-  <data name="layoutControlItem176.CustomizationFormText" xml:space="preserve">
-    <value>結束日期：</value>
-  </data>
-  <data name="layoutControlItem176.Text" xml:space="preserve">
-    <value>結束日期：</value>
-  </data>
   <data name="layoutControlGroup18.Text" xml:space="preserve">
     <value>layoutControlGroup18</value>
   </data>
@@ -7636,59 +7855,29 @@
   <data name="&gt;&gt;layoutControl17.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="xtraTabproduceMaterial.Size" type="System.Drawing.Size, System.Drawing">
-    <value>695, 395</value>
+  <data name="layoutControlItem173.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem173</value>
   </data>
-  <data name="xtraTabproduceMaterial.Text" xml:space="preserve">
-    <value>領料記錄</value>
+  <data name="layoutControlItem173.Text" xml:space="preserve">
+    <value>layoutControlItem173</value>
   </data>
-  <data name="&gt;&gt;xtraTabproduceMaterial.Name" xml:space="preserve">
-    <value>xtraTabproduceMaterial</value>
+  <data name="layoutControlItem174.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem174</value>
   </data>
-  <data name="&gt;&gt;xtraTabproduceMaterial.Type" xml:space="preserve">
-    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="layoutControlItem174.Text" xml:space="preserve">
+    <value>layoutControlItem174</value>
   </data>
-  <data name="&gt;&gt;xtraTabproduceMaterial.Parent" xml:space="preserve">
-    <value>xtraTabControl1</value>
+  <data name="layoutControlItem175.CustomizationFormText" xml:space="preserve">
+    <value>起始日期：</value>
   </data>
-  <data name="&gt;&gt;xtraTabproduceMaterial.ZOrder" xml:space="preserve">
-    <value>13</value>
+  <data name="layoutControlItem175.Text" xml:space="preserve">
+    <value>起始日期：</value>
   </data>
-  <data name="&gt;&gt;xtraTabControl1.Name" xml:space="preserve">
-    <value>xtraTabControl1</value>
+  <data name="layoutControlItem176.CustomizationFormText" xml:space="preserve">
+    <value>結束日期：</value>
   </data>
-  <data name="&gt;&gt;xtraTabControl1.Type" xml:space="preserve">
-    <value>DevExpress.XtraTab.XtraTabControl, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;xtraTabControl1.Parent" xml:space="preserve">
-    <value>splitContainerControl1.Panel2</value>
-  </data>
-  <data name="&gt;&gt;xtraTabControl1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="splitContainerControl1.Panel2.Text" xml:space="preserve">
-    <value>Panel2</value>
-  </data>
-  <data name="splitContainerControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>990, 423</value>
-  </data>
-  <data name="splitContainerControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="splitContainerControl1.Text" xml:space="preserve">
-    <value>splitContainerControl1</value>
-  </data>
-  <data name="&gt;&gt;splitContainerControl1.Name" xml:space="preserve">
-    <value>splitContainerControl1</value>
-  </data>
-  <data name="&gt;&gt;splitContainerControl1.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.SplitContainerControl, DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;splitContainerControl1.Parent" xml:space="preserve">
-    <value>dataLayoutControl1</value>
-  </data>
-  <data name="&gt;&gt;splitContainerControl1.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="layoutControlItem176.Text" xml:space="preserve">
+    <value>結束日期：</value>
   </data>
   <metadata name="bindingSourceProduct.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>596, 17</value>
@@ -7846,15 +8035,36 @@
   <data name="barButtonItem.Caption" xml:space="preserve">
     <value>搜索</value>
   </data>
+  <data name="barButtonItem9.Caption" xml:space="preserve">
+    <value>搜寻</value>
+  </data>
+  <data name="barButtonItem10.Caption" xml:space="preserve">
+    <value>复制</value>
+  </data>
+  <data name="barButtonItemList.Caption" xml:space="preserve">
+    <value>商品一览</value>
+  </data>
   <data name="layoutControlItem161.CustomizationFormText" xml:space="preserve">
     <value>客户货品名称:</value>
   </data>
   <data name="layoutControlItem161.Text" xml:space="preserve">
     <value>客户货品名称:</value>
   </data>
+  <data name="barInputExcle.Caption" xml:space="preserve">
+    <value>導入Excle</value>
+  </data>
   <metadata name="openFileDialog2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1178, 17</value>
   </metadata>
+  <data name="barButtonItem11.Caption" xml:space="preserve">
+    <value>下載Excle範例</value>
+  </data>
+  <data name="barButtonItem12.Caption" xml:space="preserve">
+    <value>下載Excle模版</value>
+  </data>
+  <data name="barButtonItem13.Caption" xml:space="preserve">
+    <value>列印條碼</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -9651,6 +9861,12 @@
   </data>
   <data name="&gt;&gt;barButtonItem13.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn52.Name" xml:space="preserve">
+    <value>gridColumn52</value>
+  </data>
+  <data name="&gt;&gt;gridColumn52.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>EditForm</value>

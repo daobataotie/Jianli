@@ -505,6 +505,7 @@ namespace Book.UI.Settings.BasicData.Products
             this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem13 = new DevExpress.XtraBars.BarButtonItem();
+            this.gridColumn52 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -976,13 +977,15 @@ namespace Book.UI.Settings.BasicData.Products
             // 
             this.gridView5.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn26,
-            this.gridColumn27});
+            this.gridColumn27,
+            this.gridColumn52});
             this.gridView5.GridControl = this.gridControl5;
             this.gridView5.Name = "gridView5";
             this.gridView5.OptionsBehavior.Editable = false;
             this.gridView5.OptionsCustomization.AllowSort = false;
             this.gridView5.OptionsFind.AlwaysVisible = true;
             this.gridView5.OptionsFind.ShowCloseButton = false;
+            this.gridView5.OptionsView.ColumnAutoWidth = false;
             this.gridView5.OptionsView.ShowColumnHeaders = false;
             this.gridView5.OptionsView.ShowGroupPanel = false;
             this.gridView5.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView5_FocusedRowChanged);
@@ -5826,6 +5829,12 @@ namespace Book.UI.Settings.BasicData.Products
             this.barButtonItem13.Name = "barButtonItem13";
             this.barButtonItem13.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem13_ItemClick);
             // 
+            // gridColumn52
+            // 
+            resources.ApplyResources(this.gridColumn52, "gridColumn52");
+            this.gridColumn52.FieldName = "InternalDescription";
+            this.gridColumn52.Name = "gridColumn52";
+            // 
             // EditForm
             // 
             resources.ApplyResources(this, "$this");
@@ -6719,5 +6728,6 @@ namespace Book.UI.Settings.BasicData.Products
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem113;
         private DevExpress.XtraEditors.TextEdit txt_InternalDescription;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem114;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn52;
     }
 }

@@ -55,8 +55,8 @@ namespace Book.UI.Invoices.XO
             this.TCYujiaoriqi.DataBindings.Add("Text", this.DataSource, "Invoice." + Model.InvoiceXO.PRO_InvoiceYjrq, "{0:yyyy-MM-dd}");
             this.lbl_ProductName.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProductName);
             this.lbl_ProductInternalDesc.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_InternalDescription);
-            this.lblRemark.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_Remark);
-
+            //this.lblRemark.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_Remark);
+            this.lblRemark.DataBindings.Add("Rtf", this.DataSource, "Product." + Model.Product.PRO_ProductDescription);
 
         }
 

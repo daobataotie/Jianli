@@ -3318,6 +3318,7 @@ namespace Book.UI.Settings.BasicData.Products
             }
         }
 
+        //點擊商品類別
         private void listBoxControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (flag5 == 1)
@@ -3397,6 +3398,7 @@ namespace Book.UI.Settings.BasicData.Products
             }
         }
 
+        //點擊左側商品
         private void gridView5_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             this.grid5Click();
