@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{ECCEF5A5-BC9A-4CA4-9879-A8E1B170F7B6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -4655,6 +4655,9 @@
       <DependentUpon>RO1ZYD.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\XO\ROInvoiceXOlist.resx">
+      <DependentUpon>ROInvoiceXOlist.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Invoices\XO\RO_New.resx">
       <DependentUpon>RO_New.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -5219,6 +5222,9 @@
     <EmbeddedResource Include="Query\ROInvoiceCGlistSub.zh-CHT.resx">
       <DependentUpon>ROInvoiceCGlistSub.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Query\ROInvoiceXOlist.resx">
+      <DependentUpon>ROInvoiceXOlist.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Query\ROInvoiceXSlistBiao.resx">
       <DependentUpon>ROInvoiceXSlistBiao.cs</DependentUpon>
@@ -7696,12 +7702,12 @@
       <DependentUpon>ROInvoiceXO.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Query\ROInvoiceXOlist.resx">
-      <DependentUpon>ROInvoiceXOlist.cs</DependentUpon>
+    <EmbeddedResource Include="Query\ROInvoiceXOlist_Back.resx">
+      <DependentUpon>ROInvoiceXOlist_Back.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Query\ROInvoiceXOlist.zh-CHT.resx">
-      <DependentUpon>ROInvoiceXOlist.cs</DependentUpon>
+    <EmbeddedResource Include="Query\ROInvoiceXOlist_Back.zh-CHT.resx">
+      <DependentUpon>ROInvoiceXOlist_Back.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Query\ROInvoiceXO_1.resx">
@@ -11797,6 +11803,12 @@
     <Compile Include="Invoices\XO\RO1ZYD.Designer.cs">
       <DependentUpon>RO1ZYD.cs</DependentUpon>
     </Compile>
+    <Compile Include="Invoices\XO\ROInvoiceXOlist.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Invoices\XO\ROInvoiceXOlist.Designer.cs">
+      <DependentUpon>ROInvoiceXOlist.cs</DependentUpon>
+    </Compile>
     <Compile Include="Invoices\XO\RO_New.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -12230,6 +12242,12 @@
     </Compile>
     <Compile Include="Query\ROInvoiceCGlistSub.Designer.cs">
       <DependentUpon>ROInvoiceCGlistSub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Query\ROInvoiceXOlist.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Query\ROInvoiceXOlist.Designer.cs">
+      <DependentUpon>ROInvoiceXOlist.cs</DependentUpon>
     </Compile>
     <Compile Include="Query\ROInvoiceXSlistBiao.cs">
       <SubType>Component</SubType>
@@ -12763,11 +12781,11 @@
     <Compile Include="Query\ROInvoiceXO.Designer.cs">
       <DependentUpon>ROInvoiceXO.cs</DependentUpon>
     </Compile>
-    <Compile Include="Query\ROInvoiceXOlist.cs">
+    <Compile Include="Query\ROInvoiceXOlist_Back.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Query\ROInvoiceXOlist.Designer.cs">
-      <DependentUpon>ROInvoiceXOlist.cs</DependentUpon>
+    <Compile Include="Query\ROInvoiceXOlist_Back.Designer.cs">
+      <DependentUpon>ROInvoiceXOlist_Back.cs</DependentUpon>
     </Compile>
     <Compile Include="Query\ROInvoiceXO_1.cs">
       <SubType>Component</SubType>

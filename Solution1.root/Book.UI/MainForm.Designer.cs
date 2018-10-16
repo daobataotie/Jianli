@@ -179,6 +179,7 @@
             this.barButtonItem324 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem203 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem202 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem479 = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem77 = new DevExpress.XtraBars.BarSubItem();
             this.barButtonItem304 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem317 = new DevExpress.XtraBars.BarButtonItem();
@@ -632,14 +633,13 @@
             this.barLinkContainerItem1 = new DevExpress.XtraBars.BarLinkContainerItem();
             this.barButtonItem458 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem459 = new DevExpress.XtraBars.BarButtonItem();
+            this.barLinkContainerItem2 = new DevExpress.XtraBars.BarLinkContainerItem();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
-            this.barLinkContainerItem2 = new DevExpress.XtraBars.BarLinkContainerItem();
-            this.barButtonItem479 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
@@ -2467,6 +2467,13 @@
             this.barButtonItem202.Id = 302;
             this.barButtonItem202.Name = "barButtonItem202";
             this.barButtonItem202.Tag = "produceManager.ProduceOtherExitReturnMaterial";
+            // 
+            // barButtonItem479
+            // 
+            resources.ApplyResources(this.barButtonItem479, "barButtonItem479");
+            this.barButtonItem479.Id = 638;
+            this.barButtonItem479.Name = "barButtonItem479";
+            this.barButtonItem479.Tag = "produceManager.ProductScrap.EditForm";
             // 
             // barSubItem77
             // 
@@ -6020,6 +6027,12 @@
             this.barButtonItem459.Name = "barButtonItem459";
             this.barButtonItem459.Tag = "CustomsClearance.PassNoteBook.EditForm";
             // 
+            // barLinkContainerItem2
+            // 
+            resources.ApplyResources(this.barLinkContainerItem2, "barLinkContainerItem2");
+            this.barLinkContainerItem2.Id = 637;
+            this.barLinkContainerItem2.Name = "barLinkContainerItem2";
+            // 
             // imageCollection1
             // 
             resources.ApplyResources(this.imageCollection1, "imageCollection1");
@@ -6048,19 +6061,6 @@
             // helpProvider1
             // 
             resources.ApplyResources(this.helpProvider1, "helpProvider1");
-            // 
-            // barLinkContainerItem2
-            // 
-            resources.ApplyResources(this.barLinkContainerItem2, "barLinkContainerItem2");
-            this.barLinkContainerItem2.Id = 637;
-            this.barLinkContainerItem2.Name = "barLinkContainerItem2";
-            // 
-            // barButtonItem479
-            // 
-            resources.ApplyResources(this.barButtonItem479, "barButtonItem479");
-            this.barButtonItem479.Id = 638;
-            this.barButtonItem479.Name = "barButtonItem479";
-            this.barButtonItem479.Tag = "produceManager.ProductScrap.EditForm";
             // 
             // MainForm
             // 

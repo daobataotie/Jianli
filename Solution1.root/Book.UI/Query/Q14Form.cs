@@ -69,15 +69,12 @@ namespace Book.UI.Query
             //}
             if (this.barEditItem3.EditValue.ToString() == "True")
             {
-
-
                 miscDatas = s.SelectStock(this.lookUpEditDepot.EditValue == null ? null : this.lookUpEditDepot.EditValue.ToString(), this.lookUpEditDepotPosition.EditValue == null ? null : this.lookUpEditDepotPosition.EditValue.ToString(), this.lookUpEditProductType.EditValue == null ? null : this.lookUpEditProductType.EditValue.ToString(), this.textProductNameOrId.Text);
-
             }
 
             else
             {
-                miscDatas = this.miscDataManager.SelectByCondition("Q14", this.lookUpEditDepot.EditValue == null ? null : this.lookUpEditDepot.EditValue.ToString(), this.lookUpEditDepotPosition.EditValue == null ? null : this.lookUpEditDepotPosition.EditValue.ToString(), this.lookUpEditProductType.EditValue == null ? null : this.lookUpEditProductType.EditValue.ToString(), this.textProductNameOrId.Text,null, null, null, null, false);
+                miscDatas = this.miscDataManager.SelectStock(this.lookUpEditDepot.EditValue == null ? null : this.lookUpEditDepot.EditValue.ToString(), this.lookUpEditDepotPosition.EditValue == null ? null : this.lookUpEditDepotPosition.EditValue.ToString(), this.lookUpEditProductType.EditValue == null ? null : this.lookUpEditProductType.EditValue.ToString(), this.textProductNameOrId.Text, this.txt_ProductId.Text, this.txt_ProductCustomerName.Text);
             }
             this.bindingSource1.DataSource = miscDatas;
             this.gridView1.GroupPanelText = "¿‚Ó›ä›: " + miscDatas.Rows.Count;
@@ -88,9 +85,35 @@ namespace Book.UI.Query
         {
             if (this.lookUpEditDepot.EditValue != null)
             {
-                //if (this.barEditItem3.EditValue.ToString() == "True")
                 this.bindingSourceDepotPosition.DataSource = this.depotPositionMananger.Select(this.depotManager.Get(this.lookUpEditDepot.EditValue.ToString()));
-                this.lookUpEditDepotPosition.EditValue = null;
+            }
+            else
+                this.bindingSourceDepotPosition.DataSource = null;
+
+            this.lookUpEditDepotPosition.EditValue = null;
+        }
+
+        private void lookUpEditDepot_Properties_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            switch (e.Button.Index)
+            {
+                case 0:
+                    break;
+                case 1:
+                    this.lookUpEditDepot.EditValue = null;
+                    break;
+            }
+        }
+
+        private void lookUpEditDepotPosition_Properties_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            switch (e.Button.Index)
+            {
+                case 0:
+                    break;
+                case 1:
+                    this.lookUpEditDepotPosition.EditValue = null;
+                    break;
             }
         }
 
@@ -102,19 +125,6 @@ namespace Book.UI.Query
                     break;
                 case 1:
                     this.lookUpEditProductType.EditValue = null;
-                    break;
-            }
-
-        }
-
-        private void lookUpEditDepotPosition_Properties_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
-        {
-            switch (e.Button.Index)
-            {
-                case 0:
-                    break;
-                case 1:
-                    this.lookUpEditDepotPosition.EditValue = null;
                     break;
             }
         }
@@ -174,17 +184,5 @@ namespace Book.UI.Query
 
         }
 
-        //private void sbtSeach_Click(object sender, EventArgs e)
-        //{
-        //    if (string.IsNullOrEmpty( this.textEditProName.Text))
-        //        this.bindingSource1.DataSource = this.miscDataManager.SelectDataTable("Q14");
-        //    else
-        //    this.bindingSource1.DataSource = this.stockManager.SelectDataTableProName(this.textEditProName.Text);
-        //}
-
-        //private void simpleButton1_Click(object sender, EventArgs e)
-        //{
-        //    this.bindingSource1.DataSource = this.miscDataManager.SelectDataTable("Q14");
-        //}
     }
 }

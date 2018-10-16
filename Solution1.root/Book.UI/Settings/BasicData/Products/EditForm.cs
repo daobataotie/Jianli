@@ -1228,13 +1228,6 @@ namespace Book.UI.Settings.BasicData.Products
 
                         //this.newChooseContorlDepotUnit.ShowButton = true;
                         //this.newChooseContorlDepotUnit.ButtonReadOnly = false;
-
-                        this.newChooseContorlEmployeeChange.ShowButton = true;
-                        this.newChooseContorlEmployeeChange.ButtonReadOnly = false;
-
-                        this.newChooseContorlEmployeeCreator.ShowButton = true;
-                        this.newChooseContorlEmployeeCreator.ButtonReadOnly = false;
-
                         this.spinEditGrossWeight.Properties.ReadOnly = false;
                         this.spinEditHeight.Properties.ReadOnly = false;
                         this.spinEditHighestPurchasingPrice.Properties.ReadOnly = false;
@@ -1333,9 +1326,6 @@ namespace Book.UI.Settings.BasicData.Products
 
                         this.dateEditProductNearXSDate.Properties.ReadOnly = false;
                         this.dateEditProductNearXSDate.Properties.Buttons[0].Visible = true;
-
-                        this.dateEditUpdateTime.Properties.ReadOnly = false;
-                        this.dateEditUpdateTime.Properties.Buttons[0].Visible = true;
 
                         //this.textEditProcess.Properties.ReadOnly = true;
                         //this.buttonEditProcessGroup.Properties.ReadOnly = true;
@@ -1447,12 +1437,6 @@ namespace Book.UI.Settings.BasicData.Products
                         //this.newChooseContorlDepotUnit.ShowButton = true;
                         //this.newChooseContorlDepotUnit.ButtonReadOnly = false;
 
-                        this.newChooseContorlEmployeeChange.ShowButton = true;
-                        this.newChooseContorlEmployeeChange.ButtonReadOnly = false;
-
-                        this.newChooseContorlEmployeeCreator.ShowButton = true;
-                        this.newChooseContorlEmployeeCreator.ButtonReadOnly = false;
-
                         this.spinEditGrossWeight.Properties.ReadOnly = false;
                         this.spinEditHeight.Properties.ReadOnly = false;
                         this.spinEditHighestPurchasingPrice.Properties.ReadOnly = false;
@@ -1553,9 +1537,6 @@ namespace Book.UI.Settings.BasicData.Products
                         this.dateEditProductNearXSDate.Properties.ReadOnly = false;
                         this.dateEditProductNearXSDate.Properties.Buttons[0].Visible = true;
 
-                        this.dateEditUpdateTime.Properties.ReadOnly = false;
-                        this.dateEditUpdateTime.Properties.Buttons[0].Visible = true;
-
                         //    this.textEditProcess.Properties.ReadOnly = true;
                         //this.buttonEditProcessGroup.Properties.ReadOnly = false;
                         //this.buttonEditProcessGroup.Properties.Buttons[0].Enabled = true;
@@ -1653,12 +1634,6 @@ namespace Book.UI.Settings.BasicData.Products
 
                     //this.newChooseContorlDepotUnit.ShowButton = false;
                     //this.newChooseContorlDepotUnit.ButtonReadOnly = true;
-
-                    this.newChooseContorlEmployeeChange.ShowButton = false;
-                    this.newChooseContorlEmployeeChange.ButtonReadOnly = true;
-
-                    this.newChooseContorlEmployeeCreator.ShowButton = false;
-                    this.newChooseContorlEmployeeCreator.ButtonReadOnly = true;
 
                     this.spinEditGrossWeight.Properties.ReadOnly = true;
                     this.spinEditHeight.Properties.ReadOnly = true;
@@ -1758,9 +1733,6 @@ namespace Book.UI.Settings.BasicData.Products
 
                     this.dateEditProductNearXSDate.Properties.ReadOnly = true;
                     this.dateEditProductNearXSDate.Properties.Buttons[0].Visible = false;
-
-                    this.dateEditUpdateTime.Properties.ReadOnly = true;
-                    this.dateEditUpdateTime.Properties.Buttons[0].Visible = false;
 
                     //   this.textEditProcess.Properties.ReadOnly = true;
 
@@ -1901,12 +1873,6 @@ namespace Book.UI.Settings.BasicData.Products
                     //this.newChooseContorlDepotUnit.ShowButton = false;
                     //this.newChooseContorlDepotUnit.ButtonReadOnly = true;
 
-                    this.newChooseContorlEmployeeChange.ShowButton = false;
-                    this.newChooseContorlEmployeeChange.ButtonReadOnly = true;
-
-                    this.newChooseContorlEmployeeCreator.ShowButton = false;
-                    this.newChooseContorlEmployeeCreator.ButtonReadOnly = true;
-
                     this.spinEditGrossWeight.Properties.ReadOnly = true;
                     this.spinEditHeight.Properties.ReadOnly = true;
                     this.spinEditHighestPurchasingPrice.Properties.ReadOnly = true;
@@ -2003,9 +1969,6 @@ namespace Book.UI.Settings.BasicData.Products
 
                     this.dateEditProductNearXSDate.Properties.ReadOnly = true;
                     this.dateEditProductNearXSDate.Properties.Buttons[0].Visible = false;
-
-                    this.dateEditUpdateTime.Properties.ReadOnly = true;
-                    this.dateEditUpdateTime.Properties.Buttons[0].Visible = false;
 
                     this.checkEditHomeMade.Properties.ReadOnly = false;
                     this.checkEditConsume.Properties.ReadOnly = false;
@@ -2154,8 +2117,7 @@ namespace Book.UI.Settings.BasicData.Products
                 this.spinEditVolume, this.spinEditWidth,
                 this.newChooseContorlBuyEmployee, 
                 this.newChooseContorlCustomInspectionRule, this.newChooseContorlDepot,
-                this.newChooseContorlDepotPosition, this.newChooseContorlEmployeeChange,
-                this.newChooseContorlEmployeeCreator, this.newChooseContorlInsteadOfProduct, 
+                this.newChooseContorlDepotPosition, this.newChooseContorlInsteadOfProduct, 
                 this.newChooseContorlPackageType, this.newChooseContorlQualityTestPlan, 
                 this.newChooseContorlVolumeUnitGroup, 
                // this.newChooseContorMainUnitId, this.newChooseContorProduceUnitId, this.newChooseContorSellUnitId, 
@@ -3469,6 +3431,8 @@ namespace Book.UI.Settings.BasicData.Products
 
         private void barInputExcle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            this.openFileDialog2.InitialDirectory = "C:";
+
             if (this.openFileDialog2.ShowDialog() == DialogResult.OK)
             {
                 String configFile = "ErrorLog.xml";
@@ -3622,6 +3586,9 @@ namespace Book.UI.Settings.BasicData.Products
                             throw new Exception("類型輸入有誤，請在0-4之間選擇");
                         }
 
+                        //2018年10月10日20:41:58 增加内部描述
+                        p.InternalDescription = ((Microsoft.Office.Interop.Excel.Range)ss.Cells[i, 11]).Text.ToString();
+
                         p.Consume = false;
 
                         p.ProductType = 0;
@@ -3644,7 +3611,7 @@ namespace Book.UI.Settings.BasicData.Products
                         p.ChangeModelTime = 0;
 
                         p.EmployeeCreator = BL.V.ActiveOperator.Employee;
-                        p.EmployeeCreatorId = this.product.EmployeeCreator == null ? null : this.product.EmployeeCreator.EmployeeId;
+                        p.EmployeeCreatorId = this.product.EmployeeCreator == null ? null : p.EmployeeCreator.EmployeeId;
 
                         this.productManager.Insert(p);
                         a++;

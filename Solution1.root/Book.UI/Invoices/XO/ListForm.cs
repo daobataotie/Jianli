@@ -10,6 +10,11 @@ namespace Book.UI.Invoices.XO
 {
     public partial class ListForm : BaseListForm
     {
+        DateTime? StartDate = null;
+        DateTime? EndDate = null;
+
+        private BL.InvoiceXODetailManager invoicexoDetailManager = new Book.BL.InvoiceXODetailManager();
+
         public ListForm()
         {
             InitializeComponent();
@@ -33,7 +38,14 @@ namespace Book.UI.Invoices.XO
 
         protected override DevExpress.XtraReports.UI.XtraReport GetReport()
         {
-            return new R02(this.bindingSource1.DataSource as IList<Model.InvoiceXO>);
+            //return new R02(this.bindingSource1.DataSource as IList<Model.InvoiceXO>);
+            IList<Model.InvoiceXODetail> list = this.bindingSource1.DataSource as IList<Model.InvoiceXODetail>;
+            if (list == null || list.Count == 0)
+            {
+                MessageBox.Show("Ÿo”µ“þ£¡", this.Text, MessageBoxButtons.OK);
+                return null;
+            }
+            return new ROInvoiceXOlist(list, StartDate.Value, EndDate.Value);
         }
 
         protected override DevExpress.XtraGrid.Views.Grid.GridView MainView
@@ -66,8 +78,12 @@ namespace Book.UI.Invoices.XO
             if (f.ShowDialog(this) == DialogResult.OK)
             {
                 Query.ConditionX condition = f.Condition as Query.ConditionX;
-                this.bindingSource1.DataSource = ((BL.InvoiceXOManager)this.invoiceManager).SelectByYJRQCustomEmpCusXOId(condition.Customer1, condition.Customer2, condition.StartDate, condition.EndDate, condition.Yjri1, condition.Yjri2, condition.Employee1, condition.Employee2, condition.XOId1, condition.XOId2, condition.CusXOId, condition.Product, condition.Product2, condition.IsClose, false, false);
+                //this.bindingSource1.DataSource = ((BL.InvoiceXOManager)this.invoiceManager).SelectByYJRQCustomEmpCusXOId(condition.Customer1, condition.Customer2, condition.StartDate, condition.EndDate, condition.Yjri1, condition.Yjri2, condition.Employee1, condition.Employee2, condition.XOId1, condition.XOId2, condition.CusXOId, condition.Product, condition.Product2, condition.IsClose, false, false);
 
+                this.bindingSource1.DataSource = invoicexoDetailManager.Select(condition.Customer1, condition.Customer2, condition.StartDate, condition.EndDate, condition.Yjri1, condition.Yjri2, condition.Employee1, condition.Employee2, condition.XOId1, condition.XOId2, condition.CusXOId, condition.Product, condition.Product2, condition.IsClose, false, condition.OrderColumn, condition.OrderType, condition.DetailFlag);
+
+                this.StartDate = condition.StartDate;
+                this.EndDate = condition.EndDate;
             }
             f.Dispose();
             GC.Collect();

@@ -83,17 +83,17 @@ namespace Book.UI.Settings.BasicData.Customs
             this.bindingSourceCustom.DataSource = customerManager.Select();
 
             //IList<Model.Setting> list = new BL.SettingManager().SelectTagOrderDefault("FP");
-            IList<Model.Company> list = new BL.CompanyManager().Select();
-            foreach (var item in list)
-            {
-                this.comboBoxEditFP.Properties.Items.Add(item.CompanyName);
-            }
+            //IList<Model.Company> list = new BL.CompanyManager().Select();
+            //foreach (var item in list)
+            //{
+            //    this.comboBoxEditFP.Properties.Items.Add(item.CompanyName);
+            //}
 
-            IList<Model.CustomInspectionRule> list2 = new BL.CustomInspectionRuleManager().Select();
-            foreach (var item in list2)
-            {
-                this.cobCheckedStandard.Properties.Items.Add(item.CustomInspectionRuleName);
-            }
+            //IList<Model.CustomInspectionRule> list2 = new BL.CustomInspectionRuleManager().Select();
+            //foreach (var item in list2)
+            //{
+            //    this.cobCheckedStandard.Properties.Items.Add(item.CustomInspectionRuleName);
+            //}
         }
         #endregion
 
@@ -101,7 +101,8 @@ namespace Book.UI.Settings.BasicData.Customs
 
         protected override void IMECtrl()
         {
-            Book.UI.Tools.IMEControl.IMECtrl(new Control[] { this.CompanyIdTextEdit, this.textEditCompanyEMail, this.textEditCompanyMobile, this.textEditCompanyNumber, this.textEditCompanyPhone1, this.textEditCompanyWebSiteAddress, this.textEditCompanyPhone, this.CompanyFaxTextEdit, this.spinEditCompanyPayDate, this.textEditName, this.textEditPhone, this.textEditMobile, this.textEditEmail, this.memoEditRemarks, this });
+            //Book.UI.Tools.IMEControl.IMECtrl(new Control[] { this.CompanyIdTextEdit, this.textEditCompanyEMail, this.textEditCompanyMobile, this.textEditCompanyNumber, this.textEditCompanyPhone1, this.textEditCompanyWebSiteAddress, this.textEditCompanyPhone, this.CompanyFaxTextEdit, this.spinEditCompanyPayDate, this.textEditName, this.textEditPhone, this.textEditMobile, this.textEditEmail, this.memoEditRemarks, this });
+            Book.UI.Tools.IMEControl.IMECtrl(new Control[] { this.CompanyIdTextEdit, this.textEditCompanyEMail, this.textEditCompanyMobile, this.textEditCompanyNumber, this.textEditCompanyWebSiteAddress, this.textEditCompanyPhone, this.CompanyFaxTextEdit, this.spinEditCompanyPayDate, this.textEditName, this.textEditPhone, this.textEditMobile, this.textEditEmail, this.memoEditRemarks, this });
         }
         public override object EditedItem
         {
@@ -147,7 +148,7 @@ namespace Book.UI.Settings.BasicData.Customs
             this._customer.CustomerManager = this.textEditCompanyManager.Text;
             this._customer.CustomerMobile = this.textEditCompanyMobile.Text;
             this._customer.CustomerNumber = this.textEditCompanyNumber.Text;
-            this._customer.CustomerPhone1 = this.textEditCompanyPhone1.Text;
+            //this._customer.CustomerPhone1 = this.textEditCompanyPhone1.Text;
             this._customer.CustomerWebSiteAddress = this.textEditCompanyWebSiteAddress.Text;
             this._customer.CustomerPayDate = int.Parse(this.spinEditCompanyPayDate.Text == "" ? "1" : this.spinEditCompanyPayDate.Text);
             this._customer.CustomerContact = this.textEditContact.Text;
@@ -166,7 +167,6 @@ namespace Book.UI.Settings.BasicData.Customs
             {
                 this._customer.LastTransactionDate = this.dateEditCompanyExchangeDay.DateTime;
             }
-            this._customer.CheckedStandard = this.cobCheckedStandard.Text;
 
             if (!string.IsNullOrEmpty(this.richTextBoxMarks1.Text))
                 this._customer.Marks1 = this.richTextBoxMarks1.Rtf;
@@ -174,7 +174,14 @@ namespace Book.UI.Settings.BasicData.Customs
                 this._customer.Marks2 = this.richTextBoxMarks2.Rtf;
             if (!string.IsNullOrEmpty(this.richTextBoxMarks3.Text))
                 this._customer.Marks3 = this.richTextBoxMarks3.Rtf;
-            this._customer.CustomerFP = this.comboBoxEditFP.Text;
+
+            //this._customer.CheckedStandard = this.cobCheckedStandard.Text;
+            //this._customer.CustomerFP = this.comboBoxEditFP.Text;
+
+            //2018年10月11日22:51:05
+            this._customer.TradingCondition = this.txt_TradingCondition.Text;
+            this._customer.PayCondition = this.txt_PayCondition.Text;
+
 
             switch (this.action)
             {
@@ -272,11 +279,11 @@ namespace Book.UI.Settings.BasicData.Customs
             this.textEditCompanyManager.Text = this._customer.CustomerManager;
             this.textEditCompanyMobile.Text = this._customer.CustomerMobile;
             this.textEditCompanyNumber.Text = this._customer.CustomerNumber;
-            this.textEditCompanyPhone1.Text = this._customer.CustomerPhone1;
             this.textEditCompanyWebSiteAddress.Text = this._customer.CustomerWebSiteAddress;
             this.spinEditCompanyPayDate.EditValue = this._customer.CustomerPayDate;
             this.lookUpEditBusiness.EditValue = this._customer.EmployeesBusinessId;
-            this.cobCheckedStandard.Text = this._customer.CheckedStandard;
+            //this.textEditCompanyPhone1.Text = this._customer.CustomerPhone1;
+            //this.cobCheckedStandard.Text = this._customer.CheckedStandard;
             this.textEditContact.Text = this._customer.CustomerContact;
             if (global::Helper.DateTimeParse.DateTimeEquls(this._customer.LastTransactionDate, global::Helper.DateTimeParse.NullDate))
             {
@@ -300,7 +307,7 @@ namespace Book.UI.Settings.BasicData.Customs
             this.richTextBoxMarks1.Rtf = this._customer.Marks1;
             this.richTextBoxMarks2.Rtf = this._customer.Marks2;
             this.richTextBoxMarks3.Rtf = this._customer.Marks3;
-            this.comboBoxEditFP.EditValue = this._customer.CustomerFP;
+            //this.comboBoxEditFP.EditValue = this._customer.CustomerFP;
 
             //联系人
             this.textEditEmail.Text = "";
@@ -308,6 +315,10 @@ namespace Book.UI.Settings.BasicData.Customs
             this.textEditName.Text = "";
             this.textEditPhone.Text = "";
             this.memoEditRemarks.Text = "";
+
+            //2018年10月11日22:51:05
+            this.txt_TradingCondition.Text = this._customer.TradingCondition;
+            this.txt_PayCondition.Text = this._customer.PayCondition;
 
             //this._customer.Marks = this.customerMarksManager.SelectByCustomerId(this._customer.CustomerId);
             //this.bindingSourceCustomerMarks.DataSource = this._customer.Marks;
@@ -658,14 +669,14 @@ namespace Book.UI.Settings.BasicData.Customs
 
         private void simpleButtonAddFP_Click(object sender, EventArgs e)
         {
-            AddFP f = new AddFP();
-            f.ShowDialog();
-            this.comboBoxEditFP.Properties.Items.Clear();
-            IList<Model.Setting> list = new BL.SettingManager().SelectTagOrderDefault("FP");
-            foreach (var item in list)
-            {
-                this.comboBoxEditFP.Properties.Items.Add(item.SettingCurrentValue);
-            }
+            //AddFP f = new AddFP();
+            //f.ShowDialog();
+            //this.comboBoxEditFP.Properties.Items.Clear();
+            //IList<Model.Setting> list = new BL.SettingManager().SelectTagOrderDefault("FP");
+            //foreach (var item in list)
+            //{
+            //    this.comboBoxEditFP.Properties.Items.Add(item.SettingCurrentValue);
+            //}
         }
 
     }

@@ -397,7 +397,7 @@
     <value>客户询价单一览</value>
   </data>
   <data name="barButtonItem73.Caption" xml:space="preserve">
-    <value>客户订单一览</value>
+    <value>客户订单明细表</value>
   </data>
   <data name="barButtonItem32.Caption" xml:space="preserve">
     <value>出货单一览</value>
@@ -2588,6 +2588,12 @@
     <value>barButtonItem202</value>
   </data>
   <data name="&gt;&gt;barButtonItem202.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem479.Name" xml:space="preserve">
+    <value>barButtonItem479</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem479.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;barSubItem77.Name" xml:space="preserve">
@@ -5284,6 +5290,12 @@
   <data name="&gt;&gt;barButtonItem459.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;barLinkContainerItem2.Name" xml:space="preserve">
+    <value>barLinkContainerItem2</value>
+  </data>
+  <data name="&gt;&gt;barLinkContainerItem2.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarLinkContainerItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;imageCollection1.Name" xml:space="preserve">
     <value>imageCollection1</value>
   </data>
@@ -5307,18 +5319,6 @@
   </data>
   <data name="&gt;&gt;defaultLookAndFeel1.Type" xml:space="preserve">
     <value>DevExpress.LookAndFeel.DefaultLookAndFeel, DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;barLinkContainerItem2.Name" xml:space="preserve">
-    <value>barLinkContainerItem2</value>
-  </data>
-  <data name="&gt;&gt;barLinkContainerItem2.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.BarLinkContainerItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;barButtonItem479.Name" xml:space="preserve">
-    <value>barButtonItem479</value>
-  </data>
-  <data name="&gt;&gt;barButtonItem479.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainForm</value>

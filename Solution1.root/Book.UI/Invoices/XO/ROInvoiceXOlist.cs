@@ -5,7 +5,7 @@ using System.ComponentModel;
 using DevExpress.XtraReports.UI;
 using System.Collections.Generic;
 
-namespace Book.UI.Query
+namespace Book.UI.Invoices.XO
 {
     public partial class ROInvoiceXOlist : DevExpress.XtraReports.UI.XtraReport
     {
@@ -16,21 +16,15 @@ namespace Book.UI.Query
             InitializeComponent();
         }
 
-        public ROInvoiceXOlist(ConditionX condition)
+        public ROInvoiceXOlist(IList<Model.InvoiceXODetail> Details, DateTime StartDate, DateTime EndDate)
             : this()
         {
-            DateTime start = condition.StartDate;
-            DateTime end = condition.EndDate;
+            DateTime start = StartDate;
+            DateTime end = EndDate;
 
             this.lblCompanyName.Text = BL.Settings.CompanyChineseName;
-            this.lbl_ReportName.Text = Properties.Resources.InvoiceXODetail;
-
+            this.lbl_ReportName.Text = "客戶訂單明細表";
             this.lbl_ReportDate.Text += string.Format("{0} ~ {1}", start.ToString("yyyy-MM-dd"), end.ToString("yyyy/MM/dd"));
-
-            IList<Model.InvoiceXODetail> Details = invoicexoDetailManager.Select(condition.Customer1, condition.Customer2, condition.StartDate, condition.EndDate, condition.Yjri1, condition.Yjri2, condition.Employee1, condition.Employee2, condition.XOId1, condition.XOId2, condition.CusXOId, condition.Product, condition.Product2, condition.IsClose, false, condition.OrderColumn, condition.OrderType, condition.DetailFlag);
-
-            if (Details == null || Details.Count == 0)
-                throw new Helper.InvalidValueException("無記錄");
 
             this.DataSource = Details;
 
@@ -44,7 +38,6 @@ namespace Book.UI.Query
             this.TCshuliang.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceXODetailQuantity);
             this.TCInvoiceXODetailBeenQuantity.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceXODetailBeenQuantity);
             this.TCWeichu.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_WeichuQty);
-            this.TCjinge.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceXODetailMoney, "{0:0.#}");
 
             this.TotalQty.Summary.FormatString = "{0:0.#}";
             this.TotalQty.Summary.Func = SummaryFunc.Sum;

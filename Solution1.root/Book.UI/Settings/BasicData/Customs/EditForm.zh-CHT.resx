@@ -423,10 +423,10 @@
     <value>客戶簡稱:</value>
   </data>
   <data name="layoutControlItem16.CustomizationFormText" xml:space="preserve">
-    <value>聯絡電話2:</value>
+    <value>付款條件:</value>
   </data>
   <data name="layoutControlItem16.Text" xml:space="preserve">
-    <value>分機:</value>
+    <value>付款條件:</value>
   </data>
   <data name="layoutControlItem12.CustomizationFormText" xml:space="preserve">
     <value>聯絡電話1:</value>
@@ -456,7 +456,7 @@
     <value>聯絡人:</value>
   </data>
   <data name="layoutControlItem5.Text" xml:space="preserve">
-    <value>質檢標準:</value>
+    <value>交易條件:</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lookUpEditBusiness.Location" type="System.Drawing.Point, System.Drawing">

@@ -84,6 +84,15 @@ namespace Book.Model
 
         public string CustomerProductName { get; set; }
 
+        public double? WeichuQty
+        {
+            get
+            {
+                return
+                    (this.InvoiceXODetailQuantity.HasValue ? this.InvoiceXODetailQuantity : 0) - (this.InvoiceXODetailBeenQuantity.HasValue ? this.InvoiceXODetailBeenQuantity : 0);
+            }
+        }
+
         public readonly static string PRO_InvoiceDate = "InvoiceDate";
 
         public readonly static string PRO_InvoiceYjrq = "InvoiceYjrq";
@@ -97,5 +106,7 @@ namespace Book.Model
         public readonly static string PRO_ProductName = "ProductName";
 
         public readonly static string PRO_CustomerProductName = "CustomerProductName";
+
+        public readonly static string PRO_WeichuQty = "WeichuQty";
     }
 }

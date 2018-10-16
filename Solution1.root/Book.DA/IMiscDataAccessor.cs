@@ -25,6 +25,8 @@ namespace Book.DA
         System.Data.DataTable SelectProductStock();
         System.Data.DataTable SelectByCondition(string queryId, string depotId, string depotPositionId, string productCategoryId, string ProductNameOrId, string proname1, string proname2, string protype1, string protype2, bool check);
 
+        System.Data.DataTable SelectStock(string depotId, string depotPositionId, string productCategoryId, string ProductNameOrId, string pId, string customerProductName);
+
         DataTable SelectDataTable(DateTime endDate);
         /// <summary>
         /// 查询应请款情况

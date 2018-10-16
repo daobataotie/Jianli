@@ -42,8 +42,8 @@ namespace Book.UI.Settings.BasicData.Customs
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.cobCheckedStandard = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEditFP = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.txt_PayCondition = new DevExpress.XtraEditors.TextEdit();
+            this.txt_TradingCondition = new DevExpress.XtraEditors.TextEdit();
             this.textEditContact = new DevExpress.XtraEditors.TextEdit();
             this.CompanyDescriptionMemoEdit = new System.Windows.Forms.RichTextBox();
             this.comboBoxEditCompanyLevel = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -62,7 +62,6 @@ namespace Book.UI.Settings.BasicData.Customs
             this.CustomerShortNameTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.CompanyIdTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.textEditCompanyMobile = new DevExpress.XtraEditors.TextEdit();
-            this.textEditCompanyPhone1 = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -71,21 +70,20 @@ namespace Book.UI.Settings.BasicData.Customs
             this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem22 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem24 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem37 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.lookUpEditBusiness = new DevExpress.XtraEditors.LookUpEdit();
@@ -148,8 +146,8 @@ namespace Book.UI.Settings.BasicData.Customs
             this.xtraTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cobCheckedStandard.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditFP.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_PayCondition.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TradingCondition.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditContact.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditCompanyLevel.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinEditCompanyPayDate.Properties)).BeginInit();
@@ -168,7 +166,6 @@ namespace Book.UI.Settings.BasicData.Customs
             ((System.ComponentModel.ISupportInitialize)(this.CustomerShortNameTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CompanyIdTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditCompanyMobile.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditCompanyPhone1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
@@ -177,21 +174,20 @@ namespace Book.UI.Settings.BasicData.Customs
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
@@ -326,8 +322,8 @@ namespace Book.UI.Settings.BasicData.Customs
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.cobCheckedStandard);
-            this.layoutControl1.Controls.Add(this.comboBoxEditFP);
+            this.layoutControl1.Controls.Add(this.txt_PayCondition);
+            this.layoutControl1.Controls.Add(this.txt_TradingCondition);
             this.layoutControl1.Controls.Add(this.textEditContact);
             this.layoutControl1.Controls.Add(this.CompanyDescriptionMemoEdit);
             this.layoutControl1.Controls.Add(this.comboBoxEditCompanyLevel);
@@ -346,30 +342,24 @@ namespace Book.UI.Settings.BasicData.Customs
             this.layoutControl1.Controls.Add(this.CustomerShortNameTextEdit);
             this.layoutControl1.Controls.Add(this.CompanyIdTextEdit);
             this.layoutControl1.Controls.Add(this.textEditCompanyMobile);
-            this.layoutControl1.Controls.Add(this.textEditCompanyPhone1);
             resources.ApplyResources(this.layoutControl1, "layoutControl1");
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(131, 257, 250, 350);
             this.layoutControl1.Root = this.layoutControlGroup2;
             // 
-            // cobCheckedStandard
+            // txt_PayCondition
             // 
-            resources.ApplyResources(this.cobCheckedStandard, "cobCheckedStandard");
-            this.cobCheckedStandard.MenuManager = this.barManager1;
-            this.cobCheckedStandard.Name = "cobCheckedStandard";
-            this.cobCheckedStandard.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("cobCheckedStandard.Properties.Buttons"))))});
-            this.cobCheckedStandard.StyleController = this.layoutControl1;
+            resources.ApplyResources(this.txt_PayCondition, "txt_PayCondition");
+            this.txt_PayCondition.MenuManager = this.barManager1;
+            this.txt_PayCondition.Name = "txt_PayCondition";
+            this.txt_PayCondition.StyleController = this.layoutControl1;
             // 
-            // comboBoxEditFP
+            // txt_TradingCondition
             // 
-            resources.ApplyResources(this.comboBoxEditFP, "comboBoxEditFP");
-            this.comboBoxEditFP.MenuManager = this.barManager1;
-            this.comboBoxEditFP.Name = "comboBoxEditFP";
-            this.comboBoxEditFP.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("comboBoxEditFP.Properties.Buttons"))))});
-            this.comboBoxEditFP.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.comboBoxEditFP.StyleController = this.layoutControl1;
+            resources.ApplyResources(this.txt_TradingCondition, "txt_TradingCondition");
+            this.txt_TradingCondition.MenuManager = this.barManager1;
+            this.txt_TradingCondition.Name = "txt_TradingCondition";
+            this.txt_TradingCondition.StyleController = this.layoutControl1;
             // 
             // textEditContact
             // 
@@ -614,19 +604,6 @@ namespace Book.UI.Settings.BasicData.Customs
             this.textEditCompanyMobile.Properties.NullValuePrompt = null;
             this.textEditCompanyMobile.StyleController = this.layoutControl1;
             // 
-            // textEditCompanyPhone1
-            // 
-            this.textEditCompanyPhone1.EnterMoveNextControl = true;
-            resources.ApplyResources(this.textEditCompanyPhone1, "textEditCompanyPhone1");
-            this.textEditCompanyPhone1.Name = "textEditCompanyPhone1";
-            this.textEditCompanyPhone1.Properties.AutoHeight = ((bool)(resources.GetObject("textEditCompanyPhone1.Properties.AutoHeight")));
-            this.textEditCompanyPhone1.Properties.Mask.EditMask = null;
-            this.textEditCompanyPhone1.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("textEditCompanyPhone1.Properties.Mask.IgnoreMaskBlank")));
-            this.textEditCompanyPhone1.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("textEditCompanyPhone1.Properties.Mask.SaveLiteral")));
-            this.textEditCompanyPhone1.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("textEditCompanyPhone1.Properties.Mask.ShowPlaceHolders")));
-            this.textEditCompanyPhone1.Properties.NullValuePrompt = null;
-            this.textEditCompanyPhone1.StyleController = this.layoutControl1;
-            // 
             // layoutControlGroup2
             // 
             resources.ApplyResources(this.layoutControlGroup2, "layoutControlGroup2");
@@ -638,21 +615,20 @@ namespace Book.UI.Settings.BasicData.Customs
             this.layoutControlItem21,
             this.layoutControlItem11,
             this.layoutControlItem22,
-            this.layoutControlItem13,
             this.layoutControlItem17,
-            this.layoutControlItem9,
             this.layoutControlItem10,
             this.layoutControlItem18,
             this.layoutControlItem4,
-            this.layoutControlItem16,
             this.layoutControlItem12,
             this.layoutControlItem24,
             this.layoutControlItem1,
             this.emptySpaceItem2,
             this.layoutControlItem6,
             this.layoutControlItem7,
-            this.layoutControlItem37,
-            this.layoutControlItem5});
+            this.layoutControlItem13,
+            this.layoutControlItem9,
+            this.layoutControlItem5,
+            this.layoutControlItem16});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "Root";
             this.layoutControlGroup2.Size = new System.Drawing.Size(455, 369);
@@ -662,7 +638,7 @@ namespace Book.UI.Settings.BasicData.Customs
             // 
             this.layoutControlItem14.Control = this.CompanyAddressTextEdit;
             resources.ApplyResources(this.layoutControlItem14, "layoutControlItem14");
-            this.layoutControlItem14.Location = new System.Drawing.Point(0, 175);
+            this.layoutControlItem14.Location = new System.Drawing.Point(0, 200);
             this.layoutControlItem14.Name = "layoutControlItem14";
             this.layoutControlItem14.Size = new System.Drawing.Size(435, 25);
             this.layoutControlItem14.TextSize = new System.Drawing.Size(64, 14);
@@ -671,18 +647,18 @@ namespace Book.UI.Settings.BasicData.Customs
             // 
             this.layoutControlItem19.Control = this.textEditCompanyJinChuAddress;
             resources.ApplyResources(this.layoutControlItem19, "layoutControlItem19");
-            this.layoutControlItem19.Location = new System.Drawing.Point(0, 200);
+            this.layoutControlItem19.Location = new System.Drawing.Point(0, 225);
             this.layoutControlItem19.Name = "layoutControlItem19";
-            this.layoutControlItem19.Size = new System.Drawing.Size(296, 25);
+            this.layoutControlItem19.Size = new System.Drawing.Size(340, 25);
             this.layoutControlItem19.TextSize = new System.Drawing.Size(64, 14);
             // 
             // layoutControlItem20
             // 
             this.layoutControlItem20.Control = this.checkEditSongHuoTongDengji;
             resources.ApplyResources(this.layoutControlItem20, "layoutControlItem20");
-            this.layoutControlItem20.Location = new System.Drawing.Point(296, 200);
+            this.layoutControlItem20.Location = new System.Drawing.Point(340, 225);
             this.layoutControlItem20.Name = "layoutControlItem20";
-            this.layoutControlItem20.Size = new System.Drawing.Size(139, 25);
+            this.layoutControlItem20.Size = new System.Drawing.Size(95, 25);
             this.layoutControlItem20.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem20.TextToControlDistance = 0;
             this.layoutControlItem20.TextVisible = false;
@@ -702,9 +678,9 @@ namespace Book.UI.Settings.BasicData.Customs
             // 
             this.layoutControlItem21.Control = this.textEditCompanyEMail;
             resources.ApplyResources(this.layoutControlItem21, "layoutControlItem21");
-            this.layoutControlItem21.Location = new System.Drawing.Point(0, 150);
+            this.layoutControlItem21.Location = new System.Drawing.Point(0, 175);
             this.layoutControlItem21.Name = "layoutControlItem21";
-            this.layoutControlItem21.Size = new System.Drawing.Size(210, 25);
+            this.layoutControlItem21.Size = new System.Drawing.Size(209, 25);
             this.layoutControlItem21.TextSize = new System.Drawing.Size(64, 14);
             // 
             // layoutControlItem11
@@ -720,54 +696,36 @@ namespace Book.UI.Settings.BasicData.Customs
             // 
             this.layoutControlItem22.Control = this.textEditCompanyWebSiteAddress;
             resources.ApplyResources(this.layoutControlItem22, "layoutControlItem22");
-            this.layoutControlItem22.Location = new System.Drawing.Point(0, 225);
+            this.layoutControlItem22.Location = new System.Drawing.Point(0, 250);
             this.layoutControlItem22.Name = "layoutControlItem22";
-            this.layoutControlItem22.Size = new System.Drawing.Size(435, 26);
+            this.layoutControlItem22.Size = new System.Drawing.Size(435, 25);
             this.layoutControlItem22.TextSize = new System.Drawing.Size(64, 14);
-            // 
-            // layoutControlItem13
-            // 
-            this.layoutControlItem13.Control = this.CompanyFaxTextEdit;
-            resources.ApplyResources(this.layoutControlItem13, "layoutControlItem13");
-            this.layoutControlItem13.Location = new System.Drawing.Point(0, 100);
-            this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(209, 25);
-            this.layoutControlItem13.TextSize = new System.Drawing.Size(64, 14);
             // 
             // layoutControlItem17
             // 
             this.layoutControlItem17.Control = this.textEditCompanyMobile;
             resources.ApplyResources(this.layoutControlItem17, "layoutControlItem17");
-            this.layoutControlItem17.Location = new System.Drawing.Point(209, 100);
+            this.layoutControlItem17.Location = new System.Drawing.Point(209, 75);
             this.layoutControlItem17.Name = "layoutControlItem17";
             this.layoutControlItem17.Size = new System.Drawing.Size(226, 25);
             this.layoutControlItem17.TextSize = new System.Drawing.Size(64, 14);
-            // 
-            // layoutControlItem9
-            // 
-            this.layoutControlItem9.Control = this.spinEditCompanyPayDate;
-            resources.ApplyResources(this.layoutControlItem9, "layoutControlItem9");
-            this.layoutControlItem9.Location = new System.Drawing.Point(0, 125);
-            this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(122, 25);
-            this.layoutControlItem9.TextSize = new System.Drawing.Size(64, 14);
             // 
             // layoutControlItem10
             // 
             this.layoutControlItem10.Control = this.textEditCompanyManager;
             resources.ApplyResources(this.layoutControlItem10, "layoutControlItem10");
-            this.layoutControlItem10.Location = new System.Drawing.Point(251, 125);
+            this.layoutControlItem10.Location = new System.Drawing.Point(209, 150);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(184, 25);
+            this.layoutControlItem10.Size = new System.Drawing.Size(226, 25);
             this.layoutControlItem10.TextSize = new System.Drawing.Size(64, 14);
             // 
             // layoutControlItem18
             // 
             this.layoutControlItem18.Control = this.dateEditCompanyExchangeDay;
             resources.ApplyResources(this.layoutControlItem18, "layoutControlItem18");
-            this.layoutControlItem18.Location = new System.Drawing.Point(210, 150);
+            this.layoutControlItem18.Location = new System.Drawing.Point(209, 175);
             this.layoutControlItem18.Name = "layoutControlItem18";
-            this.layoutControlItem18.Size = new System.Drawing.Size(225, 25);
+            this.layoutControlItem18.Size = new System.Drawing.Size(226, 25);
             this.layoutControlItem18.TextSize = new System.Drawing.Size(64, 14);
             // 
             // layoutControlItem4
@@ -780,15 +738,6 @@ namespace Book.UI.Settings.BasicData.Customs
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(209, 25);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(64, 14);
-            // 
-            // layoutControlItem16
-            // 
-            this.layoutControlItem16.Control = this.textEditCompanyPhone1;
-            resources.ApplyResources(this.layoutControlItem16, "layoutControlItem16");
-            this.layoutControlItem16.Location = new System.Drawing.Point(209, 75);
-            this.layoutControlItem16.Name = "layoutControlItem16";
-            this.layoutControlItem16.Size = new System.Drawing.Size(226, 25);
-            this.layoutControlItem16.TextSize = new System.Drawing.Size(64, 14);
             // 
             // layoutControlItem12
             // 
@@ -831,37 +780,55 @@ namespace Book.UI.Settings.BasicData.Customs
             // 
             this.layoutControlItem6.Control = this.CompanyDescriptionMemoEdit;
             resources.ApplyResources(this.layoutControlItem6, "layoutControlItem6");
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 276);
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 275);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(435, 73);
+            this.layoutControlItem6.Size = new System.Drawing.Size(435, 74);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(64, 14);
             // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.textEditContact;
             resources.ApplyResources(this.layoutControlItem7, "layoutControlItem7");
-            this.layoutControlItem7.Location = new System.Drawing.Point(122, 125);
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 150);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(129, 25);
+            this.layoutControlItem7.Size = new System.Drawing.Size(209, 25);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(64, 14);
             // 
-            // layoutControlItem37
+            // layoutControlItem13
             // 
-            this.layoutControlItem37.Control = this.comboBoxEditFP;
-            resources.ApplyResources(this.layoutControlItem37, "layoutControlItem37");
-            this.layoutControlItem37.Location = new System.Drawing.Point(214, 251);
-            this.layoutControlItem37.Name = "layoutControlItem37";
-            this.layoutControlItem37.Size = new System.Drawing.Size(221, 25);
-            this.layoutControlItem37.TextSize = new System.Drawing.Size(64, 14);
+            this.layoutControlItem13.Control = this.CompanyFaxTextEdit;
+            resources.ApplyResources(this.layoutControlItem13, "layoutControlItem13");
+            this.layoutControlItem13.Location = new System.Drawing.Point(209, 100);
+            this.layoutControlItem13.Name = "layoutControlItem13";
+            this.layoutControlItem13.Size = new System.Drawing.Size(226, 25);
+            this.layoutControlItem13.TextSize = new System.Drawing.Size(64, 14);
+            // 
+            // layoutControlItem9
+            // 
+            this.layoutControlItem9.Control = this.spinEditCompanyPayDate;
+            resources.ApplyResources(this.layoutControlItem9, "layoutControlItem9");
+            this.layoutControlItem9.Location = new System.Drawing.Point(0, 100);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(209, 25);
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(64, 14);
             // 
             // layoutControlItem5
             // 
-            this.layoutControlItem5.Control = this.cobCheckedStandard;
+            this.layoutControlItem5.Control = this.txt_TradingCondition;
             resources.ApplyResources(this.layoutControlItem5, "layoutControlItem5");
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 251);
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 125);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(214, 25);
+            this.layoutControlItem5.Size = new System.Drawing.Size(209, 25);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(64, 14);
+            // 
+            // layoutControlItem16
+            // 
+            this.layoutControlItem16.Control = this.txt_PayCondition;
+            resources.ApplyResources(this.layoutControlItem16, "layoutControlItem16");
+            this.layoutControlItem16.Location = new System.Drawing.Point(209, 125);
+            this.layoutControlItem16.Name = "layoutControlItem16";
+            this.layoutControlItem16.Size = new System.Drawing.Size(226, 25);
+            this.layoutControlItem16.TextSize = new System.Drawing.Size(64, 14);
             // 
             // xtraTabPage2
             // 
@@ -1331,8 +1298,8 @@ namespace Book.UI.Settings.BasicData.Customs
             this.xtraTabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.cobCheckedStandard.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditFP.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_PayCondition.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TradingCondition.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditContact.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditCompanyLevel.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinEditCompanyPayDate.Properties)).EndInit();
@@ -1351,7 +1318,6 @@ namespace Book.UI.Settings.BasicData.Customs
             ((System.ComponentModel.ISupportInitialize)(this.CustomerShortNameTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CompanyIdTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditCompanyMobile.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditCompanyPhone1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
@@ -1360,21 +1326,20 @@ namespace Book.UI.Settings.BasicData.Customs
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
@@ -1429,7 +1394,6 @@ namespace Book.UI.Settings.BasicData.Customs
         private DevExpress.XtraEditors.TextEdit textEditCompanyJinChuAddress;
         private DevExpress.XtraEditors.DateEdit dateEditCompanyExchangeDay;
         private DevExpress.XtraEditors.TextEdit textEditCompanyMobile;
-        private DevExpress.XtraEditors.TextEdit textEditCompanyPhone1;
         private DevExpress.XtraEditors.TextEdit textEditCompanyNumber;
         private DevExpress.XtraEditors.TextEdit textEditCompanyWebSiteAddress;
         private DevExpress.XtraEditors.SpinEdit spinEditCompanyPayDate;
@@ -1445,7 +1409,6 @@ namespace Book.UI.Settings.BasicData.Customs
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem17;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem22;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem19;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
@@ -1518,10 +1481,10 @@ namespace Book.UI.Settings.BasicData.Customs
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem15;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem23;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEditFP;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem37;
-        private DevExpress.XtraEditors.ComboBoxEdit cobCheckedStandard;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5; 
+        private DevExpress.XtraEditors.TextEdit txt_PayCondition;
+        private DevExpress.XtraEditors.TextEdit txt_TradingCondition;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16; 
 
     }
 }
