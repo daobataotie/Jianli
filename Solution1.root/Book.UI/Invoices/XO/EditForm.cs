@@ -64,6 +64,17 @@ namespace Book.UI.Invoices.XO
             this.newChooseContorlEmp4.Choose = new ChooseEmployee();
             // this.newChooseXSCustomer.Choose = new Settings.BasicData.Customs.ChooseCustoms();
             this.EmpAudit.Choose = new ChooseEmployee();
+
+            this.repositoryItemGridLookUpEdit1.DataSource = this.bindingSourceproduct;
+            this.repositoryItemGridLookUpEdit1.DisplayMember = "Id";
+            this.repositoryItemGridLookUpEdit1.ValueMember = "ProductId";
+            this.repositoryItemGridLookUpEdit1.View.Columns.Add(new GridColumn() { FieldName = "Id", Caption = "編號", Width = 150, Visible = true, VisibleIndex = 0 });
+            this.repositoryItemGridLookUpEdit1.View.Columns.Add(new GridColumn() { FieldName = "ProductName", Caption = "名稱", Width = 150, Visible = true, VisibleIndex = 1 });
+            this.repositoryItemGridLookUpEdit1.View.Columns.Add(new GridColumn() { FieldName = "CustomerProductName", Caption = "客戶商品名稱", Width = 150, Visible = true, VisibleIndex = 2 });
+            this.repositoryItemGridLookUpEdit1.View.Columns.Add(new GridColumn() { FieldName = "ProductVersion", Caption = "版本", Width = 50, Visible = true, VisibleIndex = 3 });
+
+            this.repositoryItemGridLookUpEdit1.View.OptionsView.ShowColumnHeaders = true;
+            this.repositoryItemGridLookUpEdit1.View.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.Never;
         }
 
         public EditForm(string invoiceId)

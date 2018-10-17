@@ -43,6 +43,13 @@
       <result property="Id" column="Id" />
       <result property="ProductName" column="ProductName" />
     </resultMap>
+    <resultMap id="ProductResult6" class="Product">
+      <result property="ProductId" column="ProductId" />
+      <result property="Id" column="Id" />
+      <result property="ProductName" column="ProductName" />
+      <result property="CustomerProductName" column="CustomerProductName"/>
+      <result property="ProductVersion" column="ProductVersion"/>
+    </resultMap>
     <resultMap id="ProductResult4" class="Product">
       <result property="ProductId" column="ProductId" />
       <result property="Id" column="Id" />
@@ -478,10 +485,9 @@ where ProductId = #productid#
       <!--CustomerProductName desc-->
     </select>
     <!--查询指定客户的货品-->
-    <select id="SelectProductByCustomer" resultMap="ProductResult1" parameterClass="Map">
+    <select id="SelectProductByCustomer" resultMap="ProductResult6" parameterClass="Map">
       <![CDATA[
-      select ProductId,ProductName,ProductBarCode,product.ProductCategoryId,ProductVersion,ProduceUnitId,SupplierId,StocksQuantity,ProductCategoryName,DepotPositionId,DepotUnitId,ProductDescription, product.Id,MainUnitId,BasedUnitGroupId,CustomerProductName,CustomerId from product left join ProductCategory
-      on ProductCategory.ProductCategoryId=Product.ProductCategoryId
+      select ProductId,ProductName,Id,CustomerProductName,ProductVersion from product 
       where customerid=#CustomerId# 
       AND (ProductDeadDate IS NULL 
       OR (year(ProductDeadDate) = '1900' AND month(ProductDeadDate) = '01' AND day(ProductDeadDate) = '01') 
