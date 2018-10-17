@@ -1426,7 +1426,7 @@
             this.colInvoiceXODetailNote.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             resources.ApplyResources(this.colInvoiceXODetailNote, "colInvoiceXODetailNote");
             this.colInvoiceXODetailNote.ColumnEdit = this.repositoryItemRichTextEdit1;
-            this.colInvoiceXODetailNote.FieldName = "InvoiceXODetailNote";
+            this.colInvoiceXODetailNote.FieldName = "Product.ProductDescription";
             this.colInvoiceXODetailNote.Name = "colInvoiceXODetailNote";
             this.colInvoiceXODetailNote.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
             this.colInvoiceXODetailNote.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;

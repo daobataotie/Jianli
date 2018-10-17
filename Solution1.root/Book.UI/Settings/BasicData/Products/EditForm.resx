@@ -477,10 +477,10 @@
     <value>1</value>
   </data>
   <data name="gridColumn52.Width" type="System.Int32, mscorlib">
-    <value>100</value>
+    <value>200</value>
   </data>
   <data name="gridControl5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 423</value>
+    <value>247, 423</value>
   </data>
   <data name="gridControl5.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -501,7 +501,7 @@
     <value>Panel2</value>
   </data>
   <data name="splitContainerControl2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>284, 423</value>
+    <value>366, 423</value>
   </data>
   <data name="splitContainerControl2.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -537,7 +537,7 @@
     <value>92, 63</value>
   </data>
   <data name="txt_InternalDescription.Size" type="System.Drawing.Size, System.Drawing">
-    <value>591, 21</value>
+    <value>509, 21</value>
   </data>
   <data name="txt_InternalDescription.TabIndex" type="System.Int32, mscorlib">
     <value>46</value>
@@ -561,7 +561,7 @@
     <value>Combo</value>
   </data>
   <data name="dateEditInsertTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 21</value>
+    <value>70, 21</value>
   </data>
   <data name="dateEditInsertTime.TabIndex" type="System.Int32, mscorlib">
     <value>45</value>
@@ -579,13 +579,13 @@
     <value>5</value>
   </data>
   <data name="de_UpdateTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>571, 362</value>
+    <value>530, 362</value>
   </data>
   <data name="de_UpdateTime.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="de_UpdateTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 21</value>
+    <value>71, 21</value>
   </data>
   <data name="de_UpdateTime.TabIndex" type="System.Int32, mscorlib">
     <value>44</value>
@@ -603,7 +603,7 @@
     <value>6</value>
   </data>
   <data name="textEditVersion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>560, 240</value>
+    <value>503, 240</value>
   </data>
   <data name="textEditVersion.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -618,7 +618,7 @@
     <value>False</value>
   </data>
   <data name="textEditVersion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>123, 21</value>
+    <value>98, 21</value>
   </data>
   <data name="textEditVersion.TabIndex" type="System.Int32, mscorlib">
     <value>34</value>
@@ -693,7 +693,7 @@
     <value>特殊</value>
   </data>
   <data name="radioProductType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 23</value>
+    <value>136, 23</value>
   </data>
   <data name="radioProductType.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -711,13 +711,13 @@
     <value>10</value>
   </data>
   <data name="checkEditIsProcess.Location" type="System.Drawing.Point, System.Drawing">
-    <value>504, 265</value>
+    <value>444, 265</value>
   </data>
   <data name="checkEditIsProcess.Properties.Caption" xml:space="preserve">
     <value>半成品加工</value>
   </data>
   <data name="checkEditIsProcess.Size" type="System.Drawing.Size, System.Drawing">
-    <value>108, 19</value>
+    <value>95, 19</value>
   </data>
   <data name="checkEditIsProcess.TabIndex" type="System.Int32, mscorlib">
     <value>41</value>
@@ -738,7 +738,7 @@
     <value>92, 329</value>
   </data>
   <data name="memoEditProductDescription.Size" type="System.Drawing.Size, System.Drawing">
-    <value>591, 29</value>
+    <value>509, 29</value>
   </data>
   <data name="memoEditProductDescription.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
@@ -759,7 +759,7 @@
     <value>12</value>
   </data>
   <data name="checkEditFang.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 292</value>
+    <value>121, 292</value>
   </data>
   <data name="checkEditFang.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -768,7 +768,7 @@
     <value>防雾</value>
   </data>
   <data name="checkEditFang.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 19</value>
+    <value>107, 19</value>
   </data>
   <data name="checkEditFang.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -792,7 +792,7 @@
     <value>92, 240</value>
   </data>
   <data name="newChooseContorlCustomer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 21</value>
+    <value>136, 21</value>
   </data>
   <data name="newChooseContorlCustomer.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
@@ -810,7 +810,7 @@
     <value>14</value>
   </data>
   <data name="textEditCustomProductName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>342, 240</value>
+    <value>312, 240</value>
   </data>
   <data name="textEditCustomProductName.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -825,7 +825,7 @@
     <value>False</value>
   </data>
   <data name="textEditCustomProductName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 21</value>
+    <value>107, 21</value>
   </data>
   <data name="textEditCustomProductName.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -913,7 +913,7 @@
     <value />
   </data>
   <data name="lookUpDepotUnit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 21</value>
+    <value>136, 21</value>
   </data>
   <data name="lookUpDepotUnit.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -940,7 +940,7 @@
     <value>强化</value>
   </data>
   <data name="checkEditQiang.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 19</value>
+    <value>105, 19</value>
   </data>
   <data name="checkEditQiang.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -1009,7 +1009,7 @@
     <value />
   </data>
   <data name="lookUpBasedUnitGroupId.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 21</value>
+    <value>136, 21</value>
   </data>
   <data name="lookUpBasedUnitGroupId.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
@@ -1027,7 +1027,7 @@
     <value>18</value>
   </data>
   <data name="checkEditNoQiang.Location" type="System.Drawing.Point, System.Drawing">
-    <value>262, 292</value>
+    <value>232, 292</value>
   </data>
   <data name="checkEditNoQiang.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1036,7 +1036,7 @@
     <value>無強化防霧</value>
   </data>
   <data name="checkEditNoQiang.Size" type="System.Drawing.Size, System.Drawing">
-    <value>421, 19</value>
+    <value>369, 19</value>
   </data>
   <data name="checkEditNoQiang.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -1057,7 +1057,7 @@
     <value>19</value>
   </data>
   <data name="lookUpSellUnit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>342, 215</value>
+    <value>312, 215</value>
   </data>
   <data name="lookUpSellUnit.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1123,7 +1123,7 @@
     <value />
   </data>
   <data name="lookUpSellUnit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 21</value>
+    <value>107, 21</value>
   </data>
   <data name="lookUpSellUnit.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
@@ -1141,7 +1141,7 @@
     <value>20</value>
   </data>
   <data name="lookUpProduceUnitId.Location" type="System.Drawing.Point, System.Drawing">
-    <value>560, 190</value>
+    <value>503, 190</value>
   </data>
   <data name="lookUpProduceUnitId.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1207,7 +1207,7 @@
     <value />
   </data>
   <data name="lookUpProduceUnitId.Size" type="System.Drawing.Size, System.Drawing">
-    <value>123, 21</value>
+    <value>98, 21</value>
   </data>
   <data name="lookUpProduceUnitId.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
@@ -1225,7 +1225,7 @@
     <value>21</value>
   </data>
   <data name="newChooseContorlProductType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>432, 12</value>
+    <value>391, 12</value>
   </data>
   <data name="newChooseContorlProductType.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1240,7 +1240,7 @@
     <value>False</value>
   </data>
   <data name="newChooseContorlProductType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>251, 22</value>
+    <value>210, 22</value>
   </data>
   <data name="newChooseContorlProductType.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -1258,10 +1258,10 @@
     <value>22</value>
   </data>
   <data name="newChooseContorSupplierId.Location" type="System.Drawing.Point, System.Drawing">
-    <value>433, 38</value>
+    <value>392, 38</value>
   </data>
   <data name="newChooseContorSupplierId.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 21</value>
+    <value>209, 21</value>
   </data>
   <data name="newChooseContorSupplierId.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
@@ -1279,7 +1279,7 @@
     <value>23</value>
   </data>
   <data name="checkEditOutSourcing.Location" type="System.Drawing.Point, System.Drawing">
-    <value>345, 265</value>
+    <value>305, 265</value>
   </data>
   <data name="checkEditOutSourcing.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1288,7 +1288,7 @@
     <value>外购</value>
   </data>
   <data name="checkEditOutSourcing.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+    <value>65, 23</value>
   </data>
   <data name="checkEditOutSourcing.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -1309,7 +1309,7 @@
     <value>2011-02-11</value>
   </data>
   <data name="dateEditProductDeadDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>433, 113</value>
+    <value>392, 113</value>
   </data>
   <data name="dateEditProductDeadDate.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1346,7 +1346,7 @@
     <value>False</value>
   </data>
   <data name="dateEditProductDeadDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 21</value>
+    <value>209, 21</value>
   </data>
   <data name="dateEditProductDeadDate.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -1364,7 +1364,7 @@
     <value>25</value>
   </data>
   <data name="lookUpCJUnit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>342, 190</value>
+    <value>312, 190</value>
   </data>
   <data name="lookUpCJUnit.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1430,7 +1430,7 @@
     <value />
   </data>
   <data name="lookUpCJUnit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 21</value>
+    <value>107, 21</value>
   </data>
   <data name="lookUpCJUnit.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
@@ -1448,7 +1448,7 @@
     <value>26</value>
   </data>
   <data name="textEditProductBatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>433, 138</value>
+    <value>392, 138</value>
   </data>
   <data name="textEditProductBatch.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1463,7 +1463,7 @@
     <value>False</value>
   </data>
   <data name="textEditProductBatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 23</value>
+    <value>209, 23</value>
   </data>
   <data name="textEditProductBatch.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -1496,7 +1496,7 @@
     <value>False</value>
   </data>
   <data name="textEditProductPlace.Size" type="System.Drawing.Size, System.Drawing">
-    <value>590, 21</value>
+    <value>508, 21</value>
   </data>
   <data name="textEditProductPlace.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -1514,7 +1514,7 @@
     <value>28</value>
   </data>
   <data name="checkEditHomeMade.Location" type="System.Drawing.Point, System.Drawing">
-    <value>262, 265</value>
+    <value>232, 265</value>
   </data>
   <data name="checkEditHomeMade.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1523,7 +1523,7 @@
     <value>自制</value>
   </data>
   <data name="checkEditHomeMade.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 23</value>
+    <value>69, 23</value>
   </data>
   <data name="checkEditHomeMade.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -1556,7 +1556,7 @@
     <value>False</value>
   </data>
   <data name="textEditProduceCounty.Size" type="System.Drawing.Size, System.Drawing">
-    <value>255, 21</value>
+    <value>214, 21</value>
   </data>
   <data name="textEditProduceCounty.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1592,7 +1592,7 @@
     <value>自动生成</value>
   </data>
   <data name="radioGroupBarCode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>336, 23</value>
+    <value>295, 23</value>
   </data>
   <data name="radioGroupBarCode.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -1625,7 +1625,7 @@
     <value>False</value>
   </data>
   <data name="textEditId.Size" type="System.Drawing.Size, System.Drawing">
-    <value>255, 22</value>
+    <value>214, 22</value>
   </data>
   <data name="textEditId.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1643,7 +1643,7 @@
     <value>32</value>
   </data>
   <data name="checkEditConsume.Location" type="System.Drawing.Point, System.Drawing">
-    <value>616, 265</value>
+    <value>543, 265</value>
   </data>
   <data name="checkEditConsume.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1652,7 +1652,7 @@
     <value>耗用</value>
   </data>
   <data name="checkEditConsume.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 23</value>
+    <value>58, 23</value>
   </data>
   <data name="checkEditConsume.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -1670,7 +1670,7 @@
     <value>33</value>
   </data>
   <data name="checkEditTrustOut.Location" type="System.Drawing.Point, System.Drawing">
-    <value>424, 265</value>
+    <value>374, 265</value>
   </data>
   <data name="checkEditTrustOut.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1679,7 +1679,7 @@
     <value>委外</value>
   </data>
   <data name="checkEditTrustOut.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 23</value>
+    <value>66, 23</value>
   </data>
   <data name="checkEditTrustOut.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -1697,7 +1697,7 @@
     <value>34</value>
   </data>
   <data name="textEditProductSpecification.Location" type="System.Drawing.Point, System.Drawing">
-    <value>433, 88</value>
+    <value>392, 88</value>
   </data>
   <data name="textEditProductSpecification.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1712,7 +1712,7 @@
     <value>False</value>
   </data>
   <data name="textEditProductSpecification.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 21</value>
+    <value>209, 21</value>
   </data>
   <data name="textEditProductSpecification.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -1745,7 +1745,7 @@
     <value>False</value>
   </data>
   <data name="textEditProductName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>255, 21</value>
+    <value>214, 21</value>
   </data>
   <data name="textEditProductName.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1778,7 +1778,7 @@
     <value>False</value>
   </data>
   <data name="textEditProductBarCode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>255, 21</value>
+    <value>214, 21</value>
   </data>
   <data name="textEditProductBarCode.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -2030,7 +2030,7 @@
     <value>Root</value>
   </data>
   <data name="layoutControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>695, 395</value>
+    <value>613, 395</value>
   </data>
   <data name="layoutControl1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2051,7 +2051,7 @@
     <value>0</value>
   </data>
   <data name="xtraTabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>695, 395</value>
+    <value>613, 395</value>
   </data>
   <data name="xtraTabPage1.Text" xml:space="preserve">
     <value>基本资料</value>
@@ -2069,7 +2069,7 @@
     <value>0</value>
   </data>
   <data name="xtraTabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>701, 423</value>
+    <value>619, 423</value>
   </data>
   <data name="xtraTabControl1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
