@@ -236,6 +236,7 @@
       <result property="IsCustomerProduct" column="IsCustomerProduct" />
       <result property="CustomerProductName" column="CustomerProductName" />
       <result property="CustomerBeforeProductName" column="CustomerBeforeProductName"/>
+      <result property="CustomerId" column="CustomerId"/>
       <result property="MRSStockQuantity" column="MRSStockQuantity"/>
       <result property="ProduceMaterialDistributioned" column="ProduceMaterialDistributioned"/>
       <result property="OtherMaterialDistributioned" column="OtherMaterialDistributioned"/>
@@ -312,6 +313,7 @@
       IsCustomerProduct,
       CustomerProductName,
       CustomerBeforeProductName,
+      CustomerId,
       MRSStockQuantity,
       ProduceMaterialDistributioned,
       OtherMaterialDistributioned,
@@ -436,6 +438,7 @@ where ProductId = #productid#
       IsCustomerProduct,
       CustomerProductName,
       CustomerBeforeProductName,
+      CustomerId,
       MRSStockQuantity,
       ProduceMaterialDistributioned,
       OtherMaterialDistributioned,

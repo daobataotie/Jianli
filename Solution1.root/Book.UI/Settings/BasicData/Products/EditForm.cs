@@ -3079,6 +3079,7 @@ namespace Book.UI.Settings.BasicData.Products
             //}
         }
 
+        //商品一览
         private void barButtonItemList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             //if (!productManager.HasRows())
@@ -3095,7 +3096,7 @@ namespace Book.UI.Settings.BasicData.Products
             //    this.Refresh();
 
             //}
-            f.Show();
+            f.ShowDialog();
         }
         //SqlDataReader sd;
         //private void treeList1_Click(object sender, EventArgs e)

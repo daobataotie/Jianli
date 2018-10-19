@@ -627,7 +627,7 @@
     <value>審核人：</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>訂單裝箱</value>
+    <value>出貨裝箱</value>
   </data>
   <data name="gridColumn19.Caption" xml:space="preserve">
     <value>總價</value>

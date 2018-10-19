@@ -36,7 +36,7 @@ namespace Book.UI.Settings.BasicData.Products
             string id = dt.Rows[this.bindingSource1.IndexOf(this.bindingSource1.Current)][0].ToString();
             EditForm._product = ((BL.ProductManager)this.manager).Get(id);
             //this.DialogResult = DialogResult.OK;
-            EditForm f = new EditForm(EditForm._product,"view");
+            EditForm f = new EditForm(EditForm._product, "view");
             f.ShowDialog(this);
         }
 
@@ -48,7 +48,7 @@ namespace Book.UI.Settings.BasicData.Products
         protected override void RefreshData()
         {
             //为了查询速度，暂将ProductSpecification，ProductDescription去掉
-            this.bindingSource1.DataSource = this.dt = ((BL.ProductManager)this.manager).Query("SELECT product.ProductId,product.Id,ProductName,ProductCategoryName,SupplierFullName ,CustomerProductName,isnull(StocksQuantity,0) StocksQuantity,isnull(ReferenceCost,0) ReferenceCost,isnull(StocksQuantity,0)*isnull(ReferenceCost,0) TotalCost,pu.CnName as DepotUnitName FROM Product left join ProductCategory ca  on ca.ProductCategoryId=Product.ProductCategoryId  left join Supplier s on  s.SupplierId=Product.SupplierId left join ProductUnit pu on Product.DepotUnitId=pu.ProductUnitId order by  ProductName", 240, "pro").Tables[0];
+            this.bindingSource1.DataSource = this.dt = ((BL.ProductManager)this.manager).Query("SELECT product.ProductId,product.Id,ProductName,ProductCategoryName,SupplierFullName ,CustomerProductName,isnull(StocksQuantity,0) StocksQuantity,isnull(ReferenceCost,0) ReferenceCost,isnull(StocksQuantity,0)*isnull(ReferenceCost,0) TotalCost,pu.CnName as DepotUnitName,c.CustomerShortName FROM Product left join ProductCategory ca  on ca.ProductCategoryId=Product.ProductCategoryId  left join Supplier s on  s.SupplierId=Product.SupplierId left join ProductUnit pu on Product.DepotUnitId=pu.ProductUnitId  left join Customer c on Product.CustomerId=c.CustomerId order by  ProductName", 240, "pro").Tables[0];
 
         }
 
@@ -63,15 +63,22 @@ namespace Book.UI.Settings.BasicData.Products
             ROList1FormReport ro = new ROList1FormReport(this.dt);
             ro.ShowPreviewDialog();
         }
-        //protected override BaseEditForm GetEditForm()
-        //{
-        //    return new EditForm(this.productCate);
-        //}
 
-        //protected override BaseEditForm GetEditForm(object[] args)
-        //{
-        //    Type type = typeof(EditForm);
-        //    return (EditForm)type.Assembly.CreateInstance(type.FullName, false, System.Reflection.BindingFlags.CreateInstance, null, args, null, null);
-        //}
+        protected override BaseEditForm GetEditForm()
+        {
+            return new EditForm();
+        }
+
+        protected override BaseEditForm GetEditForm(object[] args)
+        {
+            Type type = typeof(EditForm);
+            DataRowView dr = args[0] as DataRowView;
+            if (dr != null)
+            {
+                Model.Product pro = ((BL.ProductManager)this.manager).Get(dr["ProductId"].ToString());
+                args[0] = pro;
+            }
+            return (EditForm)type.Assembly.CreateInstance(type.FullName, false, System.Reflection.BindingFlags.CreateInstance, null, args, null, null);
+        }
     }
 }

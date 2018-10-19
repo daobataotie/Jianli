@@ -76,7 +76,7 @@ namespace Book.UI.Invoices.ZX
             // xrTable2
             // 
             this.xrTable2.Dpi = 254F;
-            this.xrTable2.Font = new System.Drawing.Font("PMingLiU", 9.75F);
+            this.xrTable2.Font = new System.Drawing.Font("新細明體", 9.75F);
             this.xrTable2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrTable2.Name = "xrTable2";
             this.xrTable2.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
@@ -203,7 +203,7 @@ namespace Book.UI.Invoices.ZX
             // xrTable3
             // 
             this.xrTable3.Dpi = 254F;
-            this.xrTable3.Font = new System.Drawing.Font("PMingLiU", 9.75F);
+            this.xrTable3.Font = new System.Drawing.Font("新細明體", 9.75F);
             this.xrTable3.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrTable3.Name = "xrTable3";
             this.xrTable3.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
@@ -293,7 +293,7 @@ namespace Book.UI.Invoices.ZX
             // xrTable4
             // 
             this.xrTable4.Dpi = 254F;
-            this.xrTable4.Font = new System.Drawing.Font("PMingLiU", 9.75F);
+            this.xrTable4.Font = new System.Drawing.Font("新細明體", 9.75F);
             this.xrTable4.LocationFloat = new DevExpress.Utils.PointFloat(0F, 63.5F);
             this.xrTable4.Name = "xrTable4";
             this.xrTable4.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
@@ -437,7 +437,7 @@ namespace Book.UI.Invoices.ZX
             this.BottomMargin,
             this.ReportFooter});
             this.Dpi = 254F;
-            this.Font = new System.Drawing.Font("PMingLiU", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margins = new System.Drawing.Printing.Margins(80, 80, 80, 127);
             this.PageHeight = 2794;
             this.PageWidth = 2159;

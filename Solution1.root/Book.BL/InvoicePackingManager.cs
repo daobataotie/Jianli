@@ -24,9 +24,21 @@ namespace Book.BL
             //
             // todo:add other logic here
             //
-            (new BL.InvoicePackingDetailManager()).DeleteByInvoicePackingId(invoicePackingId);
-            (new BL.CustomerMarksManager()).DeleteByInvoicePackingId(invoicePackingId);
-            accessor.Delete(invoicePackingId);
+            try
+            {
+                BL.V.BeginTransaction();
+
+                (new BL.InvoicePackingDetailManager()).DeleteByInvoicePackingId(invoicePackingId);
+                (new BL.CustomerMarksManager()).DeleteByInvoicePackingId(invoicePackingId);
+                accessor.Delete(invoicePackingId);
+
+                BL.V.CommitTransaction();
+            }
+            catch (Exception ex)
+            {
+                BL.V.RollbackTransaction();
+                throw new Exception(ex.Message);
+            }
         }
 
         /// <summary>
@@ -37,17 +49,31 @@ namespace Book.BL
             //
             // todo:add other logic here
             //
-            this.Validate(invoicePacking);
-            invoicePacking.InsertTime = DateTime.Now;
-            invoicePacking.UpdateTime = DateTime.Now;
-            accessor.Insert(invoicePacking);
-            foreach (Model.InvoicePackingDetail detail in invoicePacking.Details)
+
+            try
             {
-                (new BL.InvoicePackingDetailManager()).Insert(detail);
+                BL.V.BeginTransaction();
+
+                this.Validate(invoicePacking);
+                invoicePacking.InsertTime = DateTime.Now;
+                invoicePacking.UpdateTime = DateTime.Now;
+                accessor.Insert(invoicePacking);
+                foreach (Model.InvoicePackingDetail detail in invoicePacking.Details)
+                {
+                    (new BL.InvoicePackingDetailManager()).Insert(detail);
+                }
+                foreach (Model.CustomerMarks mark in invoicePacking.Marks)
+                {
+                    (new BL.CustomerMarksManager()).Insert(mark);
+                }
+
+
+                BL.V.CommitTransaction();
             }
-            foreach (Model.CustomerMarks mark in invoicePacking.Marks)
+            catch (Exception ex)
             {
-                (new BL.CustomerMarksManager()).Insert(mark);
+                BL.V.RollbackTransaction();
+                throw new Exception(ex.Message);
             }
         }
 
@@ -59,18 +85,30 @@ namespace Book.BL
             //
             // todo: add other logic here.
             //
-            this.Validate(invoicePacking);
-            invoicePacking.UpdateTime = DateTime.Now;
-            accessor.Update(invoicePacking);
-            (new BL.InvoicePackingDetailManager()).DeleteByInvoicePackingId(invoicePacking.InvoicePackingId);
-            foreach (Model.InvoicePackingDetail detail in invoicePacking.Details)
+            try
             {
-                (new BL.InvoicePackingDetailManager()).Insert(detail);
+                BL.V.BeginTransaction();
+
+                this.Validate(invoicePacking);
+                invoicePacking.UpdateTime = DateTime.Now;
+                accessor.Update(invoicePacking);
+                (new BL.InvoicePackingDetailManager()).DeleteByInvoicePackingId(invoicePacking.InvoicePackingId);
+                foreach (Model.InvoicePackingDetail detail in invoicePacking.Details)
+                {
+                    (new BL.InvoicePackingDetailManager()).Insert(detail);
+                }
+                (new BL.CustomerMarksManager()).DeleteByInvoicePackingId(invoicePacking.InvoicePackingId);
+                foreach (Model.CustomerMarks mark in invoicePacking.Marks)
+                {
+                    (new BL.CustomerMarksManager()).Insert(mark);
+                }
+
+                BL.V.CommitTransaction();
             }
-            (new BL.CustomerMarksManager()).DeleteByInvoicePackingId(invoicePacking.InvoicePackingId);
-            foreach (Model.CustomerMarks mark in invoicePacking.Marks)
+            catch (Exception ex)
             {
-                (new BL.CustomerMarksManager()).Insert(mark);
+                BL.V.RollbackTransaction();
+                throw new Exception(ex.Message);
             }
         }
 

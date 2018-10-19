@@ -26,7 +26,6 @@ namespace Book.UI.Invoices.ZX
             this.TCJWeightUnit.DataBindings.Add("Text", this.DataSource, Model.InvoicePackingDetail.PRO_WeightUnit);
             this.TCMWeight.DataBindings.Add("Text", this.DataSource, Model.InvoicePackingDetail.PRO_UnitMWeightReport, "{0:f2}");
             this.TCMWeightUnit.DataBindings.Add("Text", this.DataSource, Model.InvoicePackingDetail.PRO_WeightUnit);
-            this.TCHandBookProductId.DataBindings.Add("Text", this.DataSource, Model.InvoicePackingDetail.PRO_HandbookProductId);
 
             this.TCSumQuantity.DataBindings.Add("Text", this.DataSource, Model.InvoicePackingDetail.PRO_PackingNum, "{0:f2}");
             this.TCSumQuantityUnit.DataBindings.Add("Text", this.DataSource, Model.InvoicePackingDetail.PRO_ProductUnit);

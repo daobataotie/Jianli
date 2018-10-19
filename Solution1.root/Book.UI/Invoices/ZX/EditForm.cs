@@ -384,7 +384,6 @@ namespace Book.UI.Invoices.ZX
                             invoicePackingDetail.AllCaiji = invoicePackingDetail.UnitCaiji;
                             invoicePackingDetail.WeightUnit = "KGS";
                             invoicePackingDetail.PriceUnit = "USD";
-                            invoicePackingDetail.BGHandBookProduct = packingDetail.BGHandBookProduct;
 
                             this._invoicePacking.Details.Add(invoicePackingDetail);
                         }
@@ -397,8 +396,11 @@ namespace Book.UI.Invoices.ZX
                 }
                 this.txt_TotalAmount.Text = amount.ToString();
                 this.bindingSourceDetail.DataSource = _invoicePacking.Details;
+                this.bindingSourceMarks.DataSource = _invoicePacking.Marks;
                 this.gridControl1.RefreshDataSource();
+                this.gridControl2.RefreshDataSource();
                 this.bindingSourceDetail.MoveLast();
+
             }
         }
 

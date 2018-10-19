@@ -110,15 +110,13 @@ namespace Book.UI.Settings.BasicData
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem8, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem2, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem3, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem3, "", false, true, false, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem4, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar1.OptionsBar.UseWholeRow = true;
             resources.ApplyResources(this.bar1, "bar1");
             // 
             // barButtonItem9
             // 
-            this.barButtonItem9.AccessibleDescription = null;
-            this.barButtonItem9.AccessibleName = null;
             resources.ApplyResources(this.barButtonItem9, "barButtonItem9");
             this.barButtonItem9.Id = 9;
             this.barButtonItem9.Name = "barButtonItem9";
@@ -126,8 +124,6 @@ namespace Book.UI.Settings.BasicData
             // 
             // barButtonItem1
             // 
-            this.barButtonItem1.AccessibleDescription = null;
-            this.barButtonItem1.AccessibleName = null;
             resources.ApplyResources(this.barButtonItem1, "barButtonItem1");
             this.barButtonItem1.CategoryGuid = new System.Guid("6e5eabab-ed61-46e5-8577-dbf07eb34820");
             this.barButtonItem1.Id = 0;
@@ -137,8 +133,6 @@ namespace Book.UI.Settings.BasicData
             // 
             // barButtonItem8
             // 
-            this.barButtonItem8.AccessibleDescription = null;
-            this.barButtonItem8.AccessibleName = null;
             resources.ApplyResources(this.barButtonItem8, "barButtonItem8");
             this.barButtonItem8.Id = 8;
             this.barButtonItem8.ImageIndex = 10;
@@ -147,8 +141,6 @@ namespace Book.UI.Settings.BasicData
             // 
             // barButtonItem2
             // 
-            this.barButtonItem2.AccessibleDescription = null;
-            this.barButtonItem2.AccessibleName = null;
             resources.ApplyResources(this.barButtonItem2, "barButtonItem2");
             this.barButtonItem2.CategoryGuid = new System.Guid("6e5eabab-ed61-46e5-8577-dbf07eb34820");
             this.barButtonItem2.Id = 1;
@@ -158,8 +150,6 @@ namespace Book.UI.Settings.BasicData
             // 
             // barButtonItem3
             // 
-            this.barButtonItem3.AccessibleDescription = null;
-            this.barButtonItem3.AccessibleName = null;
             resources.ApplyResources(this.barButtonItem3, "barButtonItem3");
             this.barButtonItem3.CategoryGuid = new System.Guid("6e5eabab-ed61-46e5-8577-dbf07eb34820");
             this.barButtonItem3.Id = 2;
@@ -170,8 +160,6 @@ namespace Book.UI.Settings.BasicData
             // 
             // barButtonItem4
             // 
-            this.barButtonItem4.AccessibleDescription = null;
-            this.barButtonItem4.AccessibleName = null;
             this.barButtonItem4.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.DropDown;
             resources.ApplyResources(this.barButtonItem4, "barButtonItem4");
             this.barButtonItem4.DropDownControl = this.popupMenu1;
@@ -191,8 +179,6 @@ namespace Book.UI.Settings.BasicData
             // 
             // barButtonItem5
             // 
-            this.barButtonItem5.AccessibleDescription = null;
-            this.barButtonItem5.AccessibleName = null;
             resources.ApplyResources(this.barButtonItem5, "barButtonItem5");
             this.barButtonItem5.Id = 5;
             this.barButtonItem5.Name = "barButtonItem5";
@@ -200,8 +186,6 @@ namespace Book.UI.Settings.BasicData
             // 
             // barButtonItem6
             // 
-            this.barButtonItem6.AccessibleDescription = null;
-            this.barButtonItem6.AccessibleName = null;
             resources.ApplyResources(this.barButtonItem6, "barButtonItem6");
             this.barButtonItem6.Id = 6;
             this.barButtonItem6.Name = "barButtonItem6";
@@ -209,8 +193,6 @@ namespace Book.UI.Settings.BasicData
             // 
             // barButtonItem7
             // 
-            this.barButtonItem7.AccessibleDescription = null;
-            this.barButtonItem7.AccessibleName = null;
             resources.ApplyResources(this.barButtonItem7, "barButtonItem7");
             this.barButtonItem7.Id = 7;
             this.barButtonItem7.Name = "barButtonItem7";
@@ -233,8 +215,6 @@ namespace Book.UI.Settings.BasicData
             // 
             // barStaticItem1
             // 
-            this.barStaticItem1.AccessibleDescription = null;
-            this.barStaticItem1.AccessibleName = null;
             this.barStaticItem1.AutoSize = DevExpress.XtraBars.BarStaticItemSize.Spring;
             resources.ApplyResources(this.barStaticItem1, "barStaticItem1");
             this.barStaticItem1.CategoryGuid = new System.Guid("3bd2c711-938d-44d2-8632-44145ff8706c");
@@ -244,75 +224,42 @@ namespace Book.UI.Settings.BasicData
             // 
             // barDockControlTop
             // 
-            this.barDockControlTop.AccessibleDescription = null;
-            this.barDockControlTop.AccessibleName = null;
-            resources.ApplyResources(this.barDockControlTop, "barDockControlTop");
-            this.barDockControlTop.Appearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("barDockControlTop.Appearance.GradientMode")));
-            this.barDockControlTop.Appearance.Image = null;
             this.barDockControlTop.CausesValidation = false;
-            this.barDockControlTop.Font = null;
+            resources.ApplyResources(this.barDockControlTop, "barDockControlTop");
             // 
             // barDockControlBottom
             // 
-            this.barDockControlBottom.AccessibleDescription = null;
-            this.barDockControlBottom.AccessibleName = null;
-            resources.ApplyResources(this.barDockControlBottom, "barDockControlBottom");
-            this.barDockControlBottom.Appearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("barDockControlBottom.Appearance.GradientMode")));
-            this.barDockControlBottom.Appearance.Image = null;
             this.barDockControlBottom.CausesValidation = false;
-            this.barDockControlBottom.Font = null;
+            resources.ApplyResources(this.barDockControlBottom, "barDockControlBottom");
             // 
             // barDockControlLeft
             // 
-            this.barDockControlLeft.AccessibleDescription = null;
-            this.barDockControlLeft.AccessibleName = null;
-            resources.ApplyResources(this.barDockControlLeft, "barDockControlLeft");
-            this.barDockControlLeft.Appearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("barDockControlLeft.Appearance.GradientMode")));
-            this.barDockControlLeft.Appearance.Image = null;
             this.barDockControlLeft.CausesValidation = false;
-            this.barDockControlLeft.Font = null;
+            resources.ApplyResources(this.barDockControlLeft, "barDockControlLeft");
             // 
             // barDockControlRight
             // 
-            this.barDockControlRight.AccessibleDescription = null;
-            this.barDockControlRight.AccessibleName = null;
-            resources.ApplyResources(this.barDockControlRight, "barDockControlRight");
-            this.barDockControlRight.Appearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("barDockControlRight.Appearance.GradientMode")));
-            this.barDockControlRight.Appearance.Image = null;
             this.barDockControlRight.CausesValidation = false;
-            this.barDockControlRight.Font = null;
+            resources.ApplyResources(this.barDockControlRight, "barDockControlRight");
             // 
             // imageCollection1
             // 
             resources.ApplyResources(this.imageCollection1, "imageCollection1");
             this.imageCollection1.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection1.ImageStream")));
             // 
-            // saveFileDialog1
-            // 
-            resources.ApplyResources(this.saveFileDialog1, "saveFileDialog1");
-            // 
             // gridControl1
             // 
-            this.gridControl1.AccessibleDescription = null;
-            this.gridControl1.AccessibleName = null;
-            resources.ApplyResources(this.gridControl1, "gridControl1");
-            this.gridControl1.BackgroundImage = null;
             this.gridControl1.DataSource = this.bindingSource1;
-            this.gridControl1.EmbeddedNavigator.AccessibleDescription = null;
-            this.gridControl1.EmbeddedNavigator.AccessibleName = null;
             this.gridControl1.EmbeddedNavigator.AllowHtmlTextInToolTip = ((DevExpress.Utils.DefaultBoolean)(resources.GetObject("gridControl1.EmbeddedNavigator.AllowHtmlTextInToolTip")));
             this.gridControl1.EmbeddedNavigator.Anchor = ((System.Windows.Forms.AnchorStyles)(resources.GetObject("gridControl1.EmbeddedNavigator.Anchor")));
-            this.gridControl1.EmbeddedNavigator.BackgroundImage = null;
             this.gridControl1.EmbeddedNavigator.BackgroundImageLayout = ((System.Windows.Forms.ImageLayout)(resources.GetObject("gridControl1.EmbeddedNavigator.BackgroundImageLayout")));
             this.gridControl1.EmbeddedNavigator.ImeMode = ((System.Windows.Forms.ImeMode)(resources.GetObject("gridControl1.EmbeddedNavigator.ImeMode")));
             this.gridControl1.EmbeddedNavigator.TextLocation = ((DevExpress.XtraEditors.NavigatorButtonsTextLocation)(resources.GetObject("gridControl1.EmbeddedNavigator.TextLocation")));
-            this.gridControl1.EmbeddedNavigator.ToolTip = resources.GetString("gridControl1.EmbeddedNavigator.ToolTip");
             this.gridControl1.EmbeddedNavigator.ToolTipIconType = ((DevExpress.Utils.ToolTipIconType)(resources.GetObject("gridControl1.EmbeddedNavigator.ToolTipIconType")));
-            this.gridControl1.EmbeddedNavigator.ToolTipTitle = resources.GetString("gridControl1.EmbeddedNavigator.ToolTipTitle");
-            this.gridControl1.Font = null;
             gridLevelNode1.RelationName = "Level1";
             this.gridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
+            resources.ApplyResources(this.gridControl1, "gridControl1");
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -320,7 +267,6 @@ namespace Book.UI.Settings.BasicData
             // 
             // gridView1
             // 
-            resources.ApplyResources(this.gridView1, "gridView1");
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
@@ -330,12 +276,8 @@ namespace Book.UI.Settings.BasicData
             // 
             // layoutControl1
             // 
-            this.layoutControl1.AccessibleDescription = null;
-            this.layoutControl1.AccessibleName = null;
-            resources.ApplyResources(this.layoutControl1, "layoutControl1");
-            this.layoutControl1.BackgroundImage = null;
             this.layoutControl1.Controls.Add(this.gridControl1);
-            this.layoutControl1.Font = null;
+            resources.ApplyResources(this.layoutControl1, "layoutControl1");
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
             // 
@@ -365,8 +307,6 @@ namespace Book.UI.Settings.BasicData
             // 
             // BaseListForm
             // 
-            this.AccessibleDescription = null;
-            this.AccessibleName = null;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.layoutControl1);
@@ -374,7 +314,6 @@ namespace Book.UI.Settings.BasicData
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.Icon = null;
             this.Name = "BaseListForm";
             this.ShowInTaskbar = false;
             this.Load += new System.EventHandler(this.BaseListForm_Load);

@@ -32,11 +32,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="InvoiceXOQuantity" column="InvoiceXOQuantity"/>
       <result property="HasFPQuantity" column="HasFPQuantity"/>
       <result property="UnitNum" column="UnitNum"/>
-      <result property="HandbookId" column="HandbookId"/>
-      <result property="HandbookProductId" column="HandbookProductId"/>
       <result property="WeightUnit" column="WeightUnit"/>
       <result property="PriceUnit" column="PriceUnit"/>
-      <result property="BGHandBookProduct" column="BGHandBookProduct"/>
       <result property="Customer" column="CustomerId" lazyLoad="false" select="Customer.select_SimpleCustomer" />
       <result property="InvoicePacking" column="InvoicePackingId" lazyLoad="false" select="InvoicePacking.select_by_primary_key" />
       <result property="Product" column="ProductId" lazyLoad="false" select="Product.select_SimpleProduct" />
@@ -98,11 +95,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [InvoiceXOQuantity],
         [HasFPQuantity],
         [UnitNum],
-        [HandbookId],
-        [HandbookProductId],
         [WeightUnit],
-        [PriceUnit],
-        [BGHandBookProduct]
+        [PriceUnit]
 			FROM
 				[dbo].[InvoicePackingDetail]
 			WHERE
@@ -182,11 +176,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [InvoiceXOQuantity],
         [HasFPQuantity],
         [UnitNum],
-        [HandbookId],
-        [HandbookProductId],
         [WeightUnit],
-        [PriceUnit],
-        [BGHandBookProduct]
+        [PriceUnit]
 			) 
 			VALUES 
 			(
@@ -216,11 +207,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         #InvoiceXOQuantity#,
         #HasFPQuantity#,
         #UnitNum#,
-        #HandbookId#,
-        #HandbookProductId#,
         #WeightUnit#,
-        #PriceUnit#,
-        #BGHandBookProduct#
+        #PriceUnit#
 			)
              ]]>
     </insert>
@@ -253,11 +241,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [InvoiceXOQuantity]=#InvoiceXOQuantity#,
         [HasFPQuantity]=#HasFPQuantity#,
         [UnitNum]=#UnitNum#,
-        [HandbookId]=#HandbookId#,
-        [HandbookProductId]=#HandbookProductId#,
         [WeightUnit]=#WeightUnit#,
-        [PriceUnit]=#PriceUnit#,
-        [BGHandBookProduct]=#BGHandBookProduct#
+        [PriceUnit]=#PriceUnit#
 			WHERE
 				[InvoicePackingDetailId] = #InvoicePackingDetailId#
                     ]]>

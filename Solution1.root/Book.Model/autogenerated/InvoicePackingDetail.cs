@@ -142,16 +142,6 @@ namespace Book.Model
         private double? _UnitNum;
 
         /// <summary>
-        /// 手册号
-        /// </summary>
-        private string _HandbookId;
-
-        /// <summary>
-        /// 项号
-        /// </summary>
-        private string _HandbookProductId;
-
-        /// <summary>
         /// 重量单位
         /// </summary>
         private string _WeightUnit;
@@ -160,11 +150,6 @@ namespace Book.Model
         /// 价格单位
         /// </summary>
         private string _PriceUnit;
-
-        /// <summary>
-        /// 手册商品名称
-        /// </summary>
-        private string _BGHandBookProduct;
 
         /// <summary>
         /// 客户
@@ -531,24 +516,6 @@ namespace Book.Model
         }
 
         /// <summary>
-        /// 手册号
-        /// </summary>
-        public string HandbookId
-        {
-            get { return _HandbookId; }
-            set { _HandbookId = value; }
-        }
-
-        /// <summary>
-        /// 项号
-        /// </summary>
-        public string HandbookProductId
-        {
-            get { return _HandbookProductId; }
-            set { _HandbookProductId = value; }
-        }
-
-        /// <summary>
         /// 重量单位
         /// </summary>
         public string WeightUnit
@@ -564,15 +531,6 @@ namespace Book.Model
         {
             get { return _PriceUnit; }
             set { _PriceUnit = value; }
-        }
-
-        /// <summary>
-        /// 手册商品名称
-        /// </summary>
-        public string BGHandBookProduct
-        {
-            get { return _BGHandBookProduct; }
-            set { _BGHandBookProduct = value; }
         }
 
         /// <summary>
@@ -779,16 +737,6 @@ namespace Book.Model
         public readonly static string PRO_UnitNum = "UnitNum";
 
         /// <summary>
-        /// 手册号
-        /// </summary>
-        public readonly static string PRO_HandbookId = "HandbookId";
-
-        /// <summary>
-        /// 项号
-        /// </summary>
-        public readonly static string PRO_HandbookProductId = "HandbookProductId";
-
-        /// <summary>
         /// 重量单位
         /// </summary>
         public readonly static string PRO_WeightUnit = "WeightUnit";
@@ -797,11 +745,6 @@ namespace Book.Model
         /// 价格单位
         /// </summary>
         public readonly static string PRO_PriceUnit = "PriceUnit";
-
-        /// <summary>
-        /// 手册商品名称
-        /// </summary>
-        public readonly static string PRO_BGHandBookProduct = "BGHandBookProduct";
         #endregion
     }
 }

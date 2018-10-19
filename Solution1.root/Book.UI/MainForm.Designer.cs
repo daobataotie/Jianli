@@ -1276,12 +1276,12 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem55),
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem56, true),
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem49),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem53),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.None, false, this.barSubItem53, false),
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem54),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem59),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.None, false, this.barSubItem59, false),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.None, false, this.barSubItem61, false),
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem62),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem34),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.None, false, this.barSubItem34, false),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.None, false, this.barSubItem91, false),
             new DevExpress.XtraBars.LinkPersistInfo(this.barEditItem1)});
             this.bar2.OptionsBar.MultiLine = true;
@@ -1995,7 +1995,7 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem102),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.None, false, this.barButtonItem101, false),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.None, false, this.barButtonItem100, false),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.None, false, this.barButtonItem444, true),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem444, true),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem443),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem445),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem451)});
@@ -3465,9 +3465,9 @@
             this.barSubItem54.Id = 306;
             this.barSubItem54.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem33),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem71),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem67),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem68)});
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.None, false, this.barSubItem71, false),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.None, false, this.barSubItem67, false),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.None, false, this.barSubItem68, false)});
             this.barSubItem54.Name = "barSubItem54";
             // 
             // barSubItem33

@@ -28,9 +28,9 @@ namespace Book.UI.Invoices.XO
 
         protected override Form GetViewForm()
         {
-            Model.InvoiceXO invoice = this.SelectedItem as Model.InvoiceXO;
-            if (invoice != null)
-                return new EditForm(invoice.InvoiceId);
+            Model.InvoiceXODetail detail = this.bindingSource1.Current as Model.InvoiceXODetail;
+            if (detail != null)
+                return new EditForm(detail.InvoiceId);
             //        return new ViewForm(invoice.InvoiceId);
 
             return null;

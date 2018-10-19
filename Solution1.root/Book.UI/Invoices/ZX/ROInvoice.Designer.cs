@@ -41,7 +41,6 @@ namespace Book.UI.Invoices.ZX
             this.TC_ShouCeXiangHao = new DevExpress.XtraReports.UI.XRTableCell();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
-            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
             this.lbl_NO = new DevExpress.XtraReports.UI.XRLabel();
@@ -57,7 +56,7 @@ namespace Book.UI.Invoices.ZX
             this.xrTableCell5 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell6 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell7 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell3 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell2 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrLabel23 = new DevExpress.XtraReports.UI.XRLabel();
             this.lbl_Sailing = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
@@ -183,13 +182,6 @@ namespace Book.UI.Invoices.ZX
             this.BottomMargin.Name = "BottomMargin";
             this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             // 
-            // xrLabel1
-            // 
-            resources.ApplyResources(this.xrLabel1, "xrLabel1");
-            this.xrLabel1.Name = "xrLabel1";
-            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel1.StylePriority.UseTextAlignment = false;
-            // 
             // ReportHeader
             // 
             resources.ApplyResources(this.ReportHeader, "ReportHeader");
@@ -293,7 +285,7 @@ namespace Book.UI.Invoices.ZX
             this.xrTableCell5,
             this.xrTableCell6,
             this.xrTableCell7,
-            this.xrTableCell3});
+            this.xrTableCell2});
             resources.ApplyResources(this.xrTableRow1, "xrTableRow1");
             this.xrTableRow1.Name = "xrTableRow1";
             this.xrTableRow1.Weight = 1;
@@ -329,17 +321,13 @@ namespace Book.UI.Invoices.ZX
             // 
             resources.ApplyResources(this.xrTableCell7, "xrTableCell7");
             this.xrTableCell7.Name = "xrTableCell7";
-            this.xrTableCell7.Weight = 0.36330690308043989;
+            this.xrTableCell7.Weight = 0.36029935051676221;
             // 
-            // xrTableCell3
+            // xrTableCell2
             // 
-            this.xrTableCell3.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
-                        | DevExpress.XtraPrinting.BorderSide.Right)
-                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            resources.ApplyResources(this.xrTableCell3, "xrTableCell3");
-            this.xrTableCell3.Name = "xrTableCell3";
-            this.xrTableCell3.StylePriority.UseBorders = false;
-            this.xrTableCell3.Weight = 0.2341133397765191;
+            resources.ApplyResources(this.xrTableCell2, "xrTableCell2");
+            this.xrTableCell2.Name = "xrTableCell2";
+            this.xrTableCell2.Weight = 0.23712089234019687;
             // 
             // xrLabel23
             // 
@@ -451,8 +439,6 @@ namespace Book.UI.Invoices.ZX
             // 
             // ReportFooter
             // 
-            this.ReportFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLabel1});
             resources.ApplyResources(this.ReportFooter, "ReportFooter");
             this.ReportFooter.Name = "ReportFooter";
             // 
@@ -503,7 +489,6 @@ namespace Book.UI.Invoices.ZX
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell5;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell6;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell7;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell3;
         private DevExpress.XtraReports.UI.XRLabel xrLabel23;
         private DevExpress.XtraReports.UI.XRLabel lbl_Sailing;
         private DevExpress.XtraReports.UI.XRLabel xrLabel6;
@@ -526,8 +511,8 @@ namespace Book.UI.Invoices.ZX
         private DevExpress.XtraReports.UI.XRTableCell TC_Quantity;
         private DevExpress.XtraReports.UI.XRTableCell TC_UnitPrice;
         private DevExpress.XtraReports.UI.XRTableCell TC_Amount;
-        private DevExpress.XtraReports.UI.XRTableCell TC_ShouCeXiangHao;
         private DevExpress.XtraReports.UI.XRSubreport xrSubreport2;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel1;
+        private DevExpress.XtraReports.UI.XRTableCell TC_ShouCeXiangHao;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell2;
     }
 }
