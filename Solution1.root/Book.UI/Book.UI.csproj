@@ -4571,6 +4571,9 @@
       <DependentUpon>RO1ZYD.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\LH\EditForm.resx">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Invoices\PT\ConditionPT.resx">
       <DependentUpon>ConditionPT.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -11736,6 +11739,12 @@
     </Compile>
     <Compile Include="Invoices\CT\RO1ZYD.Designer.cs">
       <DependentUpon>RO1ZYD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\LH\EditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoices\LH\EditForm.Designer.cs">
+      <DependentUpon>EditForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Invoices\PT\ConditionPT.cs">
       <SubType>Form</SubType>
