@@ -23,17 +23,18 @@ namespace Book.UI.Invoices.LH
         {
             InitializeComponent();
 
-            this.requireValueExceptions.Add("Id", new AA(Properties.Resources.RequireDataForId, this.textEditInvoiceId));
-            this.requireValueExceptions.Add("Date", new AA(Properties.Resources.RequireDataOfInvoiceDate, this.dateEditInvoiceDate));
-            this.requireValueExceptions.Add("Employee0", new AA(Properties.Resources.RequiredDataOfEmployee0, this.buttonEditEmployee));
-            this.requireValueExceptions.Add("Details0", new AA(Properties.Resources.RequireDataForDetails, this.gridControlOut));
-            this.requireValueExceptions.Add("Details1", new AA(Properties.Resources.RequireDataForDetails, this.gridControlIn));
-
-            this.invalidValueExceptions.Add(Model.InvoiceLH.PROPERTY_INVOICEID, new AA(Properties.Resources.EntityExists, this.textEditInvoiceId));
+            this.requireValueExceptions.Add(Model.InvoiceLH.PRO_InvoiceId, new AA(Properties.Resources.RequireDataForId, this.txt_InvoiceId));
+            this.requireValueExceptions.Add(Model.InvoiceLH.PRO_InvoiceDate, new AA(Properties.Resources.DateIsNull, this.date_InvoiceDate));
+            this.requireValueExceptions.Add(Model.InvoiceLH.PRO_CustomerId, new AA("客户不能为空", this.ncc_Customer));
 
             this.action = "view";
-            this.buttonEditEmployee.Choose = new ChooseEmployee();
-            this.EmpAudit.Choose = new ChooseEmployee();
+            this.ncc_Customer.Choose = new Settings.BasicData.Customs.ChooseCustoms();
+            this.ncc_EmpCreater.Choose = new Settings.BasicData.Employees.ChooseEmployee();
+            this.ncc_EmpShengguan.Choose = new Settings.BasicData.Employees.ChooseEmployee();
+            this.ncc_EmpShechu.Choose = new Settings.BasicData.Employees.ChooseEmployee();
+            this.ncc_EmpPinjian.Choose = new Settings.BasicData.Employees.ChooseEmployee();
+            this.ncc_EmpDepot.Choose = new Settings.BasicData.Employees.ChooseEmployee();
+            this.EmpAudit.Choose = new Settings.BasicData.Employees.ChooseEmployee();
         }
 
         public EditForm(string invoiceId)
@@ -65,7 +66,7 @@ namespace Book.UI.Invoices.LH
             this.bindingSourceConveyanceMethod.DataSource = new BL.ConveyanceMethodManager().Select();
 
             string sql = "select CnName from ProductUnit group by CnName";
-            this.bindingSourceProductUnit.DataSource = invoiceLHManager.Query(sql, 100, "").Tables[0];
+            this.bindingSourceProductUnit.DataSource = invoiceLHManager.Query(sql, 100, "ProductUnit").Tables[0];
         }
 
         protected override string tableCode()
@@ -83,40 +84,6 @@ namespace Book.UI.Invoices.LH
             string formName = this.GetType().FullName;
             formName = formName.Substring(formName.IndexOf('.') + 1).Substring(formName.Substring(formName.IndexOf('.') + 1).IndexOf('.') + 1);
             return formName;
-        }
-
-        private void update()
-        {
-            this.invoice.DetailsIn = invoiceLHDetailManager.Select("I", this.invoice);
-            this.invoice.DetailsOut = invoiceLHDetailManager.Select("O", this.invoice);
-
-
-        }
-
-        private void simpleButtonAppendIn_Click(object sender, EventArgs e)
-        {
-            ChooseProductForm f = new ChooseProductForm();
-            if (f.ShowDialog(this) == DialogResult.OK)
-            {
-                Model.InvoiceLHDetail detail = new Book.Model.InvoiceLHDetail();
-                detail.InvoiceLHDetailId = Guid.NewGuid().ToString();
-                detail.Invoice = this.invoice;
-                detail.Product = f.SelectedItem as Model.Product;
-                detail.ProductId = (f.SelectedItem as Model.Product).ProductId;
-            }
-        }
-
-        private void simpleButtonRemoveIn_Click(object sender, EventArgs e)
-        {
-            if (this.bindingSourceIn.Current != null)
-            {
-                this.invoice.DetailsIn.Remove(this.bindingSourceIn.Current as Model.InvoiceLHDetail);
-                if (this.invoice.DetailsIn.Count == 0)
-                {
-                    Model.InvoiceLHDetail detail = new Model.InvoiceLHDetail();
-                    detail.InvoiceLHDetailId = Guid.NewGuid().ToString();
-                }
-            }
         }
 
         public override BaseListForm GetListForm()
@@ -139,49 +106,13 @@ namespace Book.UI.Invoices.LH
             }
         }
 
-        private void simpleButtonAppendOut_Click(object sender, EventArgs e)
-        {
-            ChooseProductForm f = new ChooseProductForm();
-            if (f.ShowDialog(this) == DialogResult.OK)
-            {
-                Model.InvoiceLHDetail detail = new Book.Model.InvoiceLHDetail();
-                detail.InvoiceLHDetailId = Guid.NewGuid().ToString();
-                detail.Invoice = this.invoice;
-                detail.Product = f.SelectedItem as Model.Product;
-                detail.ProductId = (f.SelectedItem as Model.Product).ProductId;
-
-            }
-        }
-
-        private void simpleButtonRemoveOut_Click(object sender, EventArgs e)
-        {
-            if (this.bindingSourceOut.Current != null)
-            {
-                this.invoice.DetailsOut.Remove(this.bindingSourceOut.Current as Model.InvoiceLHDetail);
-                if (this.invoice.DetailsOut.Count == 0)
-                {
-                    Model.InvoiceLHDetail detail = new Model.InvoiceLHDetail();
-                    detail.InvoiceLHDetailId = Guid.NewGuid().ToString();
-
-                }
-                //this.gridControlOut.RefreshDataSource();
-            }
-        }
-
         protected override void AddNew()
         {
             this.invoice = new Model.InvoiceLH();
 
-            this.invoice.InvoiceId = this.invoiceLHManager.GetNewId();
+            this.invoice.InvoiceId = this.invoiceLHManager.GetIdSimple(DateTime.Now);
             this.invoice.InvoiceDate = DateTime.Now;
-
-
-            if (this.action == "insert")
-            {
-                Model.InvoiceLHDetail detailOut = new Model.InvoiceLHDetail();
-                detailOut.InvoiceLHDetailId = Guid.NewGuid().ToString();
-
-            }
+            this.invoice.EmpCreater = BL.V.ActiveOperator.Employee;
         }
 
         protected override void MoveNext()
@@ -238,45 +169,68 @@ namespace Book.UI.Invoices.LH
             else
             {
                 if (this.action == "view")
-                    this.invoice = this.invoiceLHManager.Get(invoice.InvoiceId);
+                    this.invoice = this.invoiceLHManager.GetDetail(invoice.InvoiceId);
             }
 
+            this.txt_InvoiceId.EditValue = this.invoice.InvoiceId;
+            this.date_InvoiceDate.EditValue = this.invoice.InvoiceDate;
+            this.ncc_Customer.EditValue = this.invoice.Customer;
+            this.ncc_EmpCreater.EditValue = this.invoice.EmpCreater;
+            this.ncc_EmpShengguan.EditValue = this.invoice.EmpShengguan;
+            this.ncc_EmpShechu.EditValue = this.invoice.EmpShechu;
+            this.ncc_EmpPinjian.EditValue = this.invoice.EmpPinjian;
+            this.ncc_EmpDepot.EditValue = this.invoice.EmpDepot;
             this.EmpAudit.EditValue = this.invoice.AuditEmp;
             this.textEditAuditState.Text = this.invoice.AuditStateName;
+
+            this.bindingSourceDetail.DataSource = this.invoice.Detail;
 
             switch (this.action)
             {
                 case "insert":
-
-                    //this.gridViewIn.OptionsBehavior.Editable = true;
-                    //this.gridViewOut.OptionsBehavior.Editable = true;
+                    this.gridView1.OptionsBehavior.Editable = true;
                     break;
 
                 case "update":
-
-                    //this.gridViewIn.OptionsBehavior.Editable = true;
-                    //this.gridViewOut.OptionsBehavior.Editable = true;
-
+                    this.gridView1.OptionsBehavior.Editable = true;
                     break;
-                case "view":
 
-                    //this.gridViewIn.OptionsBehavior.Editable = false;
-                    //this.gridViewOut.OptionsBehavior.Editable = false;
+                case "view":
+                    this.gridView1.OptionsBehavior.Editable = false;
                     break;
                 default:
                     break;
             }
             base.Refresh();
+
+            this.txt_InvoiceId.Properties.ReadOnly = true;
+            this.ncc_EmpCreater.Enabled = false;
         }
 
         protected override void Save(Helper.InvoiceStatus status)
         {
             this.invoice.InvoiceStatus = (int)status;
 
-            //if (!this.gridViewIn.PostEditor() || !this.gridViewIn.UpdateCurrentRow())
-            //    return;
-            //if (!this.gridViewOut.PostEditor() || !this.gridViewOut.UpdateCurrentRow())
-            //    return;
+            if (!this.gridView1.PostEditor() || !this.gridView1.UpdateCurrentRow())
+                return;
+
+            this.invoice.InvoiceId = this.txt_InvoiceId.Text;
+            if (date_InvoiceDate.EditValue != null)
+                this.invoice.InvoiceDate = date_InvoiceDate.DateTime;
+            if (ncc_Customer.EditValue != null)
+                this.invoice.CustomerId = (ncc_Customer.EditValue as Model.Customer).CustomerId;
+            if (lue_ConveyanceMethod.EditValue != null)
+                this.invoice.ConveyanceMethodId = lue_ConveyanceMethod.EditValue.ToString();
+            if (ncc_EmpCreater.EditValue != null)
+                this.invoice.EmpCreaterId = (ncc_EmpCreater.EditValue as Model.Employee).EmployeeId;
+            if (ncc_EmpShengguan.EditValue != null)
+                this.invoice.EmpShengguanId = (ncc_EmpShengguan.EditValue as Model.Employee).EmployeeId;
+            if (ncc_EmpShechu.EditValue != null)
+                this.invoice.EmpShechuId = (ncc_EmpShechu.EditValue as Model.Employee).EmployeeId;
+            if (ncc_EmpPinjian.EditValue != null)
+                this.invoice.EmpPinjianId = (ncc_EmpPinjian.EditValue as Model.Employee).EmployeeId;
+            if (ncc_EmpDepot.EditValue != null)
+                this.invoice.EmpDepotId = (ncc_EmpDepot.EditValue as Model.Employee).EmployeeId;
 
             switch (this.action)
             {
@@ -290,11 +244,6 @@ namespace Book.UI.Invoices.LH
             }
         }
 
-        protected override void Delete()
-        {
-            this.invoiceLHManager.Delete(this.invoice.InvoiceId);
-        }
-
         protected override void TurnNull()
         {
             if (this.invoice == null)
@@ -302,7 +251,7 @@ namespace Book.UI.Invoices.LH
             if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
                 return;
 
-            this.invoiceLHManager.TurnNull(this.invoice.InvoiceId);
+            this.invoiceLHManager.Delete(this.invoice.InvoiceId);
             this.invoice = this.invoiceLHManager.GetNext(this.invoice);
             if (this.invoice == null)
             {
@@ -312,18 +261,61 @@ namespace Book.UI.Invoices.LH
 
         protected override DevExpress.XtraReports.UI.XtraReport GetReport()
         {
-            return new R01(this.invoice.InvoiceId);
+            return new RO(this.invoice);
         }
 
         private void btn_Remove_Click(object sender, EventArgs e)
         {
+            if (this.bindingSourceDetail.Current != null)
+            {
+                this.bindingSourceDetail.Remove(this.bindingSourceDetail.Current);
+                this.invoice.Detail.Remove(this.bindingSourceDetail.Current as Model.InvoiceLHDetail);
 
+                this.gridControl1.RefreshDataSource();
+            }
         }
 
         //選取客戶訂單
         private void barInvoiceXO_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            if (this.ncc_Customer.EditValue == null)
+            {
+                MessageBox.Show("請先選擇客戶", this.Text, MessageBoxButtons.OK);
+                return;
+            }
 
+            XS.SearcharInvoiceXSForm f = new Book.UI.Invoices.XS.SearcharInvoiceXSForm(this.ncc_Customer.EditValue as Model.Customer, true);
+            if (f.ShowDialog(this) == DialogResult.OK)
+            {
+                Model.InvoiceLHDetail model;
+                foreach (var item in f.key)
+                {
+                    model = new Book.Model.InvoiceLHDetail();
+
+                    model.InvoiceLHDetailId = Guid.NewGuid().ToString();
+                    model.Number = this.invoice.Detail.Count + 1;
+                    model.Product = item.Product;
+                    model.ProductId = item.ProductId;
+                    model.InvoiceXODetail = item;
+                    model.InvoiceXODetailId = item.InvoiceXODetailId;
+                    model.EstimateQty = Convert.ToDecimal(item.InvoiceXODetailQuantity);
+                    model.ProductUnit = item.InvoiceProductUnit;
+
+                    this.invoice.Detail.Add(model);
+                }
+
+                this.gridControl1.RefreshDataSource();
+            }
+        }
+
+        private void ncc_Customer_EditValueChanged(object sender, EventArgs e)
+        {
+            //if (ncc_Customer.EditValue != null && this.action!="view")
+            //{
+
+            //    this.invoice.Detail.Clear();
+            //    this.gridControl1.RefreshDataSource();
+            // }
         }
     }
 }

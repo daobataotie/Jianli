@@ -16,5 +16,10 @@ namespace Book.DA
     /// </summary>
     public partial interface IInvoiceLHDetailAccessor : IAccessor
     {
+        IList<Model.InvoiceLHDetail> SelectByHeaderId(string invoiceId);
+
+        void DeleteByHeaderId(string invoiceId);
+
+        IList<Model.InvoiceLHDetail> SelectByCondition(DateTime StartDate, DateTime EndDate, string CustomerId);
     }
 }

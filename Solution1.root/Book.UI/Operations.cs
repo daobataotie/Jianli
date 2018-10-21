@@ -737,6 +737,8 @@ namespace Book.UI
 
             //…Ã∆∑àÛèUÜŒ
             operations.Add("produceManager.ProductScrap.EditForm", (D1)delegate(System.Windows.Forms.Form form) { M1("produceManager.ProductScrap.EditForm", form); });
+
+            operations.Add("Invoices.LH.EditForm", (D1)delegate(System.Windows.Forms.Form form) { M1("Invoices.LH.EditForm", form); });
         }
 
         static Form CreateForm(string formTypeName)

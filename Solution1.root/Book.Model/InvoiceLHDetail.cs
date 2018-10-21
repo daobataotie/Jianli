@@ -37,5 +37,9 @@ namespace Book.Model
                 return InvoiceXODetail.Invoice.CustomerInvoiceXOId;
             }
         }
+
+        public static string PRO_ProductShortId = "ProductShortId";
+
+        public static string PRO_InvoiceXOCusId = "InvoiceXOCusId";
     }
 }

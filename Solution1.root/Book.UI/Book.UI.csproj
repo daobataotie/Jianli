@@ -4571,8 +4571,20 @@
       <DependentUpon>RO1ZYD.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\LH\ConditionForm.resx">
+      <DependentUpon>ConditionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Invoices\LH\EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\LH\ListForm.resx">
+      <DependentUpon>ListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\LH\RO.resx">
+      <DependentUpon>RO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\LH\ROList.resx">
+      <DependentUpon>ROList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices\PT\ConditionPT.resx">
       <DependentUpon>ConditionPT.cs</DependentUpon>
@@ -11740,11 +11752,35 @@
     <Compile Include="Invoices\CT\RO1ZYD.Designer.cs">
       <DependentUpon>RO1ZYD.cs</DependentUpon>
     </Compile>
+    <Compile Include="Invoices\LH\ConditionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoices\LH\ConditionForm.Designer.cs">
+      <DependentUpon>ConditionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Invoices\LH\EditForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Invoices\LH\EditForm.Designer.cs">
       <DependentUpon>EditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\LH\ListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoices\LH\ListForm.Designer.cs">
+      <DependentUpon>ListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\LH\RO.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Invoices\LH\RO.Designer.cs">
+      <DependentUpon>RO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\LH\ROList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Invoices\LH\ROList.Designer.cs">
+      <DependentUpon>ROList.cs</DependentUpon>
     </Compile>
     <Compile Include="Invoices\PT\ConditionPT.cs">
       <SubType>Form</SubType>

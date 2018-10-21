@@ -31,10 +31,12 @@ namespace Book.UI.Invoices.XS
         /// </summary>
         public IList<Model.InvoiceXO> CheckedXos { get; set; }
 
+        bool LoadSearch = true;
+
         public SearcharInvoiceXSForm()
         {
-
             InitializeComponent();
+
             this.newChooseCustom.Choose = new Settings.BasicData.Customs.ChooseCustoms();
             this.newChooseXOcustomer.Choose = new Settings.BasicData.Customs.ChooseCustoms();
             IList<Model.Employee> roles = employeeManager.Select(Book.UI.Settings.BasicData.Employees.EmployeeParameters.BUSINESS);
@@ -47,11 +49,15 @@ namespace Book.UI.Invoices.XS
             this.StartPosition = FormStartPosition.CenterParent;
         }
 
-        public SearcharInvoiceXSForm(Model.Customer customer,bool CustomerDisallowEdit)
+        public SearcharInvoiceXSForm(Model.Customer customer, bool CustomerDisallowEdit)
+            : this()
         {
             this.newChooseCustom.EditValue = customer;
             if (CustomerDisallowEdit)
+            {
                 this.newChooseCustom.Enabled = false;
+                this.LoadSearch = false;
+            }
         }
 
         private void spb_search_Click(object sender, EventArgs e)
@@ -75,6 +81,9 @@ namespace Book.UI.Invoices.XS
 
         private void SearcharInvoiceXSForm_Load(object sender, EventArgs e)
         {
+            if (!this.LoadSearch)
+                return;
+
             IList<Model.InvoiceXO> invoicesXO = invoiceXOManager.SelectByYJRQCustomEmpCusXOId(null, null, this.dateEdit1.DateTime, this.dateEdit2.DateTime, global::Helper.DateTimeParse.NullDate, global::Helper.DateTimeParse.EndDate, null, null, null, null, null, null, null, false, false, false);
             this.bindingSource1.DataSource = invoicesXO;
         }
