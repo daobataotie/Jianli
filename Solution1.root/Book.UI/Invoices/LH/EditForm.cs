@@ -30,10 +30,10 @@ namespace Book.UI.Invoices.LH
             this.action = "view";
             this.ncc_Customer.Choose = new Settings.BasicData.Customs.ChooseCustoms();
             this.ncc_EmpCreater.Choose = new Settings.BasicData.Employees.ChooseEmployee();
-            this.ncc_EmpShengguan.Choose = new Settings.BasicData.Employees.ChooseEmployee();
-            this.ncc_EmpShechu.Choose = new Settings.BasicData.Employees.ChooseEmployee();
-            this.ncc_EmpPinjian.Choose = new Settings.BasicData.Employees.ChooseEmployee();
-            this.ncc_EmpDepot.Choose = new Settings.BasicData.Employees.ChooseEmployee();
+            //this.ncc_EmpShengguan.Choose = new Settings.BasicData.Employees.ChooseEmployee();
+            //this.ncc_EmpShechu.Choose = new Settings.BasicData.Employees.ChooseEmployee();
+            //this.ncc_EmpPinjian.Choose = new Settings.BasicData.Employees.ChooseEmployee();
+            //this.ncc_EmpDepot.Choose = new Settings.BasicData.Employees.ChooseEmployee();
             this.EmpAudit.Choose = new Settings.BasicData.Employees.ChooseEmployee();
         }
 
@@ -175,11 +175,12 @@ namespace Book.UI.Invoices.LH
             this.txt_InvoiceId.EditValue = this.invoice.InvoiceId;
             this.date_InvoiceDate.EditValue = this.invoice.InvoiceDate;
             this.ncc_Customer.EditValue = this.invoice.Customer;
+            this.lue_ConveyanceMethod.EditValue = this.invoice.ConveyanceMethodId;
             this.ncc_EmpCreater.EditValue = this.invoice.EmpCreater;
-            this.ncc_EmpShengguan.EditValue = this.invoice.EmpShengguan;
-            this.ncc_EmpShechu.EditValue = this.invoice.EmpShechu;
-            this.ncc_EmpPinjian.EditValue = this.invoice.EmpPinjian;
-            this.ncc_EmpDepot.EditValue = this.invoice.EmpDepot;
+            //this.ncc_EmpShengguan.EditValue = this.invoice.EmpShengguan;
+            //this.ncc_EmpShechu.EditValue = this.invoice.EmpShechu;
+            //this.ncc_EmpPinjian.EditValue = this.invoice.EmpPinjian;
+            //this.ncc_EmpDepot.EditValue = this.invoice.EmpDepot;
             this.EmpAudit.EditValue = this.invoice.AuditEmp;
             this.textEditAuditState.Text = this.invoice.AuditStateName;
 
@@ -223,14 +224,14 @@ namespace Book.UI.Invoices.LH
                 this.invoice.ConveyanceMethodId = lue_ConveyanceMethod.EditValue.ToString();
             if (ncc_EmpCreater.EditValue != null)
                 this.invoice.EmpCreaterId = (ncc_EmpCreater.EditValue as Model.Employee).EmployeeId;
-            if (ncc_EmpShengguan.EditValue != null)
-                this.invoice.EmpShengguanId = (ncc_EmpShengguan.EditValue as Model.Employee).EmployeeId;
-            if (ncc_EmpShechu.EditValue != null)
-                this.invoice.EmpShechuId = (ncc_EmpShechu.EditValue as Model.Employee).EmployeeId;
-            if (ncc_EmpPinjian.EditValue != null)
-                this.invoice.EmpPinjianId = (ncc_EmpPinjian.EditValue as Model.Employee).EmployeeId;
-            if (ncc_EmpDepot.EditValue != null)
-                this.invoice.EmpDepotId = (ncc_EmpDepot.EditValue as Model.Employee).EmployeeId;
+            //if (ncc_EmpShengguan.EditValue != null)
+            //    this.invoice.EmpShengguanId = (ncc_EmpShengguan.EditValue as Model.Employee).EmployeeId;
+            //if (ncc_EmpShechu.EditValue != null)
+            //    this.invoice.EmpShechuId = (ncc_EmpShechu.EditValue as Model.Employee).EmployeeId;
+            //if (ncc_EmpPinjian.EditValue != null)
+            //    this.invoice.EmpPinjianId = (ncc_EmpPinjian.EditValue as Model.Employee).EmployeeId;
+            //if (ncc_EmpDepot.EditValue != null)
+            //    this.invoice.EmpDepotId = (ncc_EmpDepot.EditValue as Model.Employee).EmployeeId;
 
             switch (this.action)
             {
@@ -269,7 +270,7 @@ namespace Book.UI.Invoices.LH
             if (this.bindingSourceDetail.Current != null)
             {
                 this.bindingSourceDetail.Remove(this.bindingSourceDetail.Current);
-                this.invoice.Detail.Remove(this.bindingSourceDetail.Current as Model.InvoiceLHDetail);
+                //this.invoice.Detail.Remove(this.bindingSourceDetail.Current as Model.InvoiceLHDetail);
 
                 this.gridControl1.RefreshDataSource();
             }
@@ -278,6 +279,9 @@ namespace Book.UI.Invoices.LH
         //選取客戶訂單
         private void barInvoiceXO_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            if (this.action == "view")
+                return;
+
             if (this.ncc_Customer.EditValue == null)
             {
                 MessageBox.Show("請先選擇客戶", this.Text, MessageBoxButtons.OK);

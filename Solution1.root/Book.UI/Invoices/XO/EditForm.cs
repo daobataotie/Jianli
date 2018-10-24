@@ -75,6 +75,9 @@ namespace Book.UI.Invoices.XO
 
             this.repositoryItemGridLookUpEdit1.View.OptionsView.ShowColumnHeaders = true;
             this.repositoryItemGridLookUpEdit1.View.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.Never;
+
+            productlook = productManager.SelectProductForXO();
+            this.bindingSourceproduct.DataSource = productlook;
         }
 
         public EditForm(string invoiceId)
@@ -195,16 +198,16 @@ namespace Book.UI.Invoices.XO
                             if (id.Contains(products.ProductId)) continue;
                             id.Add(products.ProductId);
                         }
-                        foreach (Model.Product products in productDetail)
-                        {
-                            if (id.Contains(detail.ProductId))
-                            {
-                                flag = 1;
-                                break;
-                            }
-                        }
-                        if (flag == 0)
-                            productlook.Add(detail.Product);
+                        //foreach (Model.Product products in productDetail)
+                        //{
+                        //    if (id.Contains(detail.ProductId))
+                        //    {
+                        //        flag = 1;
+                        //        break;
+                        //    }
+                        //}
+                        //if (flag == 0)
+                        //    productlook.Add(detail.Product);
                     }
                 }
                 if (ChooseProductForm.ProductList == null || ChooseProductForm.ProductList.Count == 0)
@@ -238,19 +241,19 @@ namespace Book.UI.Invoices.XO
                         if (id.Contains(products.ProductId)) continue;
                         id.Add(products.ProductId);
                     }
-                    foreach (Model.Product products in productDetail)
-                    {
-                        if (id.Contains(detail.ProductId))
-                        {
-                            flag = 1;
-                            break;
-                        }
-                    }
-                    if (flag == 0)
-                        productlook.Add(detail.Product);
+                    //foreach (Model.Product products in productDetail)
+                    //{
+                    //    if (id.Contains(detail.ProductId))
+                    //    {
+                    //        flag = 1;
+                    //        break;
+                    //    }
+                    //}
+                    //if (flag == 0)
+                    //    productlook.Add(detail.Product);
 
                 }
-                this.bindingSourceproduct.DataSource = productlook;
+                //this.bindingSourceproduct.DataSource = productlook;
                 this.gridControl1.RefreshDataSource();
                 this.bindingSource1.Position = this.bindingSource1.IndexOf(detail);
             }
@@ -772,7 +775,7 @@ namespace Book.UI.Invoices.XO
                 this.invoice.Details.Add(detail);
                 this.bindingSource1.Position = this.bindingSource1.IndexOf(detail);
             }
-            productlook.Clear();
+            //productlook.Clear();
         }
 
         protected override void MoveNext()
@@ -828,18 +831,18 @@ namespace Book.UI.Invoices.XO
             this.newChooseCustomer2.EditValue = this.invoice.xocustomer;
             this.newChooseCustomer1.EditValue = this.invoice.Customer;
             IList<string> id = new List<string>();
-            foreach (Model.Product products in productlook)
-            {
-                if (id.Contains(products.ProductId)) continue;
-                id.Add(products.ProductId);
-            }
-            foreach (Model.InvoiceXODetail xodetail in this.invoice.Details)
-            {
-                if (id.Contains(xodetail.ProductId))
-                    continue;
-                productlook.Add(xodetail.Product);
-            }
-            this.bindingSourceproduct.DataSource = productlook;
+            //foreach (Model.Product products in productlook)
+            //{
+            //    if (id.Contains(products.ProductId)) continue;
+            //    id.Add(products.ProductId);
+            //}
+            //foreach (Model.InvoiceXODetail xodetail in this.invoice.Details)
+            //{
+            //    if (id.Contains(xodetail.ProductId))
+            //        continue;
+            //    productlook.Add(xodetail.Product);
+            //}
+            //this.bindingSourceproduct.DataSource = productlook;
             //if (this.lookUpEdit3.EditValue != null)
             //{
 
@@ -1456,11 +1459,11 @@ namespace Book.UI.Invoices.XO
 
         private void newChooseCustomer2_EditValueChanged(object sender, EventArgs e)
         {
-            if (this.newChooseCustomer2.EditValue != null && this.action != "view")
-            {
-                productlook = this.productManager.SelectProductByCustomer(newChooseCustomer2.EditValue as Model.Customer);
-                this.bindingSourceproduct.DataSource = productlook;
-            }
+            //if (this.newChooseCustomer2.EditValue != null && this.action != "view")
+            //{
+            //    productlook = this.productManager.SelectProductByCustomer(newChooseCustomer2.EditValue as Model.Customer);
+            //    this.bindingSourceproduct.DataSource = productlook;
+            //}
             //if (this.lookUpEdit3.EditValue != null)
             //{               
             //    this.bindingSourceproduct.DataSource = this.productManager.SelectProductByCustomer(this.CustomerManager.Get( this.lookUpEdit3.EditValue.ToString()));

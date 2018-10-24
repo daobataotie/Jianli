@@ -621,6 +621,10 @@ namespace Book.BL
             return accessor.SelectProductByCustomer(customer);
 
         }
+        public IList<Model.Product> SelectProductForXO()
+        {
+            return accessor.SelectProductForXO();
+        }
         public Model.Product Get(Model.Customer customer, Model.Product product)
         {
             return accessor.Get(customer, product);

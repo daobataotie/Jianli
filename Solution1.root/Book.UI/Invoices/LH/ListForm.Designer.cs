@@ -172,7 +172,6 @@
             // gridColumn7
             // 
             this.gridColumn7.Caption = "單位";
-            this.gridColumn7.ColumnEdit = this.repositoryItemLookUpEdit1;
             this.gridColumn7.FieldName = "ProductUnit";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;

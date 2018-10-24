@@ -33,10 +33,6 @@
             this.btn_Remove = new DevExpress.XtraEditors.SimpleButton();
             this.EmpAudit = new Book.UI.Invoices.NewChooseContorl();
             this.textEditAuditState = new DevExpress.XtraEditors.TextEdit();
-            this.ncc_EmpDepot = new Book.UI.Invoices.NewChooseContorl();
-            this.ncc_EmpPinjian = new Book.UI.Invoices.NewChooseContorl();
-            this.ncc_EmpShechu = new Book.UI.Invoices.NewChooseContorl();
-            this.ncc_EmpShengguan = new Book.UI.Invoices.NewChooseContorl();
             this.lue_ConveyanceMethod = new DevExpress.XtraEditors.LookUpEdit();
             this.bindingSourceConveyanceMethod = new System.Windows.Forms.BindingSource(this.components);
             this.ncc_EmpCreater = new Book.UI.Invoices.NewChooseContorl();
@@ -64,12 +60,8 @@
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -95,12 +87,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
@@ -127,10 +115,6 @@
             this.layoutControl1.Controls.Add(this.btn_Remove);
             this.layoutControl1.Controls.Add(this.EmpAudit);
             this.layoutControl1.Controls.Add(this.textEditAuditState);
-            this.layoutControl1.Controls.Add(this.ncc_EmpDepot);
-            this.layoutControl1.Controls.Add(this.ncc_EmpPinjian);
-            this.layoutControl1.Controls.Add(this.ncc_EmpShechu);
-            this.layoutControl1.Controls.Add(this.ncc_EmpShengguan);
             this.layoutControl1.Controls.Add(this.lue_ConveyanceMethod);
             this.layoutControl1.Controls.Add(this.ncc_EmpCreater);
             this.layoutControl1.Controls.Add(this.date_InvoiceDate);
@@ -159,14 +143,14 @@
             // EmpAudit
             // 
             this.EmpAudit.EditValue = null;
-            this.EmpAudit.Location = new System.Drawing.Point(290, 61);
+            this.EmpAudit.Location = new System.Drawing.Point(290, 37);
             this.EmpAudit.Name = "EmpAudit";
             this.EmpAudit.Size = new System.Drawing.Size(143, 21);
             this.EmpAudit.TabIndex = 29;
             // 
             // textEditAuditState
             // 
-            this.textEditAuditState.Location = new System.Drawing.Point(501, 61);
+            this.textEditAuditState.Location = new System.Drawing.Point(501, 37);
             this.textEditAuditState.Name = "textEditAuditState";
             this.textEditAuditState.Properties.AutoHeight = false;
             this.textEditAuditState.Properties.Mask.EditMask = null;
@@ -177,38 +161,6 @@
             this.textEditAuditState.Size = new System.Drawing.Size(164, 21);
             this.textEditAuditState.StyleController = this.layoutControl1;
             this.textEditAuditState.TabIndex = 30;
-            // 
-            // ncc_EmpDepot
-            // 
-            this.ncc_EmpDepot.EditValue = null;
-            this.ncc_EmpDepot.Location = new System.Drawing.Point(76, 61);
-            this.ncc_EmpDepot.Name = "ncc_EmpDepot";
-            this.ncc_EmpDepot.Size = new System.Drawing.Size(146, 21);
-            this.ncc_EmpDepot.TabIndex = 13;
-            // 
-            // ncc_EmpPinjian
-            // 
-            this.ncc_EmpPinjian.EditValue = null;
-            this.ncc_EmpPinjian.Location = new System.Drawing.Point(733, 37);
-            this.ncc_EmpPinjian.Name = "ncc_EmpPinjian";
-            this.ncc_EmpPinjian.Size = new System.Drawing.Size(149, 21);
-            this.ncc_EmpPinjian.TabIndex = 12;
-            // 
-            // ncc_EmpShechu
-            // 
-            this.ncc_EmpShechu.EditValue = null;
-            this.ncc_EmpShechu.Location = new System.Drawing.Point(501, 37);
-            this.ncc_EmpShechu.Name = "ncc_EmpShechu";
-            this.ncc_EmpShechu.Size = new System.Drawing.Size(164, 21);
-            this.ncc_EmpShechu.TabIndex = 11;
-            // 
-            // ncc_EmpShengguan
-            // 
-            this.ncc_EmpShengguan.EditValue = null;
-            this.ncc_EmpShengguan.Location = new System.Drawing.Point(290, 37);
-            this.ncc_EmpShengguan.Name = "ncc_EmpShengguan";
-            this.ncc_EmpShengguan.Size = new System.Drawing.Size(143, 21);
-            this.ncc_EmpShengguan.TabIndex = 10;
             // 
             // lue_ConveyanceMethod
             // 
@@ -272,13 +224,13 @@
             // gridControl1
             // 
             this.gridControl1.DataSource = this.bindingSourceDetail;
-            this.gridControl1.Location = new System.Drawing.Point(12, 86);
+            this.gridControl1.Location = new System.Drawing.Point(12, 62);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.MenuManager = this.barManager1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemLookUpEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(870, 390);
+            this.gridControl1.Size = new System.Drawing.Size(870, 414);
             this.gridControl1.TabIndex = 4;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -423,12 +375,8 @@
             this.layoutControlItem2,
             this.layoutControlItem3,
             this.layoutControlItem4,
-            this.layoutControlItem7,
             this.layoutControlItem5,
             this.layoutControlItem6,
-            this.layoutControlItem8,
-            this.layoutControlItem9,
-            this.layoutControlItem10,
             this.layoutControlItem11,
             this.layoutControlItem12,
             this.emptySpaceItem1,
@@ -445,9 +393,9 @@
             // 
             this.layoutControlItem1.Control = this.gridControl1;
             this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 74);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 50);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(874, 394);
+            this.layoutControlItem1.Size = new System.Drawing.Size(874, 418);
             this.layoutControlItem1.Text = "layoutControlItem1";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextToControlDistance = 0;
@@ -483,23 +431,13 @@
             this.layoutControlItem4.Text = "預交日期：";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(60, 14);
             // 
-            // layoutControlItem7
-            // 
-            this.layoutControlItem7.Control = this.ncc_EmpShengguan;
-            this.layoutControlItem7.CustomizationFormText = "生管：";
-            this.layoutControlItem7.Location = new System.Drawing.Point(214, 25);
-            this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(211, 24);
-            this.layoutControlItem7.Text = "生管：";
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(60, 14);
-            // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.ncc_EmpCreater;
             this.layoutControlItem5.CustomizationFormText = "製單人：";
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 25);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(214, 24);
+            this.layoutControlItem5.Size = new System.Drawing.Size(214, 25);
             this.layoutControlItem5.Text = "製單人：";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(60, 14);
             // 
@@ -513,41 +451,11 @@
             this.layoutControlItem6.Text = "貨運方式：";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(60, 14);
             // 
-            // layoutControlItem8
-            // 
-            this.layoutControlItem8.Control = this.ncc_EmpShechu;
-            this.layoutControlItem8.CustomizationFormText = "射出：";
-            this.layoutControlItem8.Location = new System.Drawing.Point(425, 25);
-            this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(232, 24);
-            this.layoutControlItem8.Text = "射出：";
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(60, 14);
-            // 
-            // layoutControlItem9
-            // 
-            this.layoutControlItem9.Control = this.ncc_EmpPinjian;
-            this.layoutControlItem9.CustomizationFormText = "品檢";
-            this.layoutControlItem9.Location = new System.Drawing.Point(657, 25);
-            this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(217, 24);
-            this.layoutControlItem9.Text = "品檢";
-            this.layoutControlItem9.TextSize = new System.Drawing.Size(60, 14);
-            // 
-            // layoutControlItem10
-            // 
-            this.layoutControlItem10.Control = this.ncc_EmpDepot;
-            this.layoutControlItem10.CustomizationFormText = "倉庫：";
-            this.layoutControlItem10.Location = new System.Drawing.Point(0, 49);
-            this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(214, 25);
-            this.layoutControlItem10.Text = "倉庫：";
-            this.layoutControlItem10.TextSize = new System.Drawing.Size(60, 14);
-            // 
             // layoutControlItem11
             // 
             this.layoutControlItem11.Control = this.EmpAudit;
             this.layoutControlItem11.CustomizationFormText = "審核人：";
-            this.layoutControlItem11.Location = new System.Drawing.Point(214, 49);
+            this.layoutControlItem11.Location = new System.Drawing.Point(214, 25);
             this.layoutControlItem11.Name = "layoutControlItem11";
             this.layoutControlItem11.Size = new System.Drawing.Size(211, 25);
             this.layoutControlItem11.Text = "審核人：";
@@ -557,7 +465,7 @@
             // 
             this.layoutControlItem12.Control = this.textEditAuditState;
             this.layoutControlItem12.CustomizationFormText = "審核狀態：";
-            this.layoutControlItem12.Location = new System.Drawing.Point(425, 49);
+            this.layoutControlItem12.Location = new System.Drawing.Point(425, 25);
             this.layoutControlItem12.Name = "layoutControlItem12";
             this.layoutControlItem12.Size = new System.Drawing.Size(232, 25);
             this.layoutControlItem12.Text = "審核狀態：";
@@ -566,7 +474,7 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem1.Location = new System.Drawing.Point(657, 49);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(657, 25);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
             this.emptySpaceItem1.Size = new System.Drawing.Size(217, 25);
             this.emptySpaceItem1.Text = "emptySpaceItem1";
@@ -629,12 +537,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
@@ -673,17 +577,9 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private NewChooseContorl ncc_EmpCreater;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
-        private NewChooseContorl ncc_EmpShengguan;
         private DevExpress.XtraEditors.LookUpEdit lue_ConveyanceMethod;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private System.Windows.Forms.BindingSource bindingSourceConveyanceMethod;
-        private NewChooseContorl ncc_EmpPinjian;
-        private NewChooseContorl ncc_EmpShechu;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
-        private NewChooseContorl ncc_EmpDepot;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
         private NewChooseContorl EmpAudit;
         private DevExpress.XtraEditors.TextEdit textEditAuditState;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;

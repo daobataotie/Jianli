@@ -12,7 +12,7 @@
 
     <select id="SelectByCondition" parameterClass="Map" resultMap="InvoiceLHDetailResult">
       select lhd.* from InvoiceLHDetail lhd left join InvoiceLH lh on lhd.InvoiceLHId=lh.InvoiceId
-      where lh.InvoiceDate between #StartDate# and #EndDate# $sql$
+      where lh.InvoiceDate between #StartDate# and #EndDate# $sql$  order by lhd.InvoiceLHId,Number
     </select>
   </statements>
 </sqlMap>

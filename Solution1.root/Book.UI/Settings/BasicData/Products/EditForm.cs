@@ -608,6 +608,13 @@ namespace Book.UI.Settings.BasicData.Products
             //2018年10月3日22:32:46
             this.product.InternalDescription = this.txt_InternalDescription.Text;
 
+            //2018年10月24日00:55:52
+
+            if (this.action != "view" && this.newChooseContorlCustomer.EditValue == null && !string.IsNullOrEmpty(textEditCustomProductName.Text))
+            {
+                throw new Exception("請先選擇客戶，再填寫客戶貨品名稱");
+            }
+
             switch (this.action)
             {
                 case "insert":
@@ -3745,5 +3752,26 @@ namespace Book.UI.Settings.BasicData.Products
             //Invoices.CG.ROLable r = new Book.UI.Invoices.CG.ROLable(list);
             //r.ShowPreviewDialog();
         }
+
+        //private void newChooseContorlCustomer_EditValueChanged(object sender, EventArgs e)
+        //{
+        //    if (this.newChooseContorlCustomer.EditValue == null)
+        //    {
+        //        this.textEditCustomProductName.EditValue = null;
+        //        //this.textEditCustomProductName.Enabled = false;
+        //    }
+        //}
+
+        //private void textEditCustomProductName_EditValueChanged(object sender, EventArgs e)
+        //{
+        //    if (this.action != "view" && this.newChooseContorlCustomer.EditValue == null && !string.IsNullOrEmpty(textEditCustomProductName.Text))
+        //    {
+        //        MessageBox.Show("請先選擇客戶", this.Text, MessageBoxButtons.OK);
+
+        //        this.newChooseContorlCustomer.EditValue = null;
+        //        //this.textEditCustomProductName.Text = null;
+
+        //    }
+        //}
     }
 }

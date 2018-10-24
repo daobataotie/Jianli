@@ -49,6 +49,7 @@
       <result property="ProductName" column="ProductName" />
       <result property="CustomerProductName" column="CustomerProductName"/>
       <result property="ProductVersion" column="ProductVersion"/>
+      <result property="ProductBarCode" column="ProductBarCode"/>
     </resultMap>
     <resultMap id="ProductResult4" class="Product">
       <result property="ProductId" column="ProductId" />
@@ -490,7 +491,7 @@ where ProductId = #productid#
     <!--查询指定客户的货品-->
     <select id="SelectProductByCustomer" resultMap="ProductResult6" parameterClass="Map">
       <![CDATA[
-      select ProductId,ProductName,Id,CustomerProductName,ProductVersion from product 
+      select ProductId,ProductName,Id,CustomerProductName,ProductVersion,ProductBarCode from product 
       where customerid=#CustomerId# 
       AND (ProductDeadDate IS NULL 
       OR (year(ProductDeadDate) = '1900' AND month(ProductDeadDate) = '01' AND day(ProductDeadDate) = '01') 
@@ -499,6 +500,19 @@ where ProductId = #productid#
       ]]>
       <!--CustomerProductName desc-->
     </select>
+
+   
+    <select id="SelectProductForXO" resultMap="ProductResult6" >
+      <![CDATA[
+      select ProductId,ProductName,Id,CustomerProductName,ProductVersion,ProductBarCode from product 
+      where (ProductDeadDate IS NULL 
+      OR (year(ProductDeadDate) = '1900' AND month(ProductDeadDate) = '01' AND day(ProductDeadDate) = '01') 
+      OR ProductDeadDate > GetDate())
+      order by id
+      ]]>
+      <!--CustomerProductName desc-->
+    </select>
+
     <!--查询指定类型和客户的货品和公司货品-->
 
     <select id="SelectByCategoryAndCustomer" resultMap="ProductResult" parameterClass="string">

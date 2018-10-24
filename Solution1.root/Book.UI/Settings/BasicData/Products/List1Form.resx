@@ -464,7 +464,7 @@
     <value>124</value>
   </data>
   <data name="gridColumn19.Caption" xml:space="preserve">
-    <value>數量</value>
+    <value>商品數量</value>
   </data>
   <data name="gridColumn19.Visible" type="System.Boolean, mscorlib">
     <value>True</value>

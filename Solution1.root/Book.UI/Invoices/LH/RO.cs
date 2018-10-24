@@ -34,10 +34,10 @@ namespace Book.UI.Invoices.LH
             TCNote.DataBindings.Add("Text", this.DataSource, Model.InvoiceLHDetail.PRO_Note);
 
             lbl_EmpCreater.Text = invoice.EmpCreater == null ? "" : invoice.EmpCreater.EmployeeName;
-            lbl_EmpShengguan.Text = invoice.EmpShengguan == null ? "" : invoice.EmpShengguan.EmployeeName;
-            lbl_EmpShechu.Text = invoice.EmpShechu == null ? "" : invoice.EmpShechu.EmployeeName;
-            lbl_EmpPinjian.Text=invoice.EmpPinjian==null?"":invoice.EmpPinjian.EmployeeName;
-            lbl_EmpDepot.Text = invoice.EmpDepot == null ? "" : invoice.EmpDepot.EmployeeName;
+            //lbl_EmpShengguan.Text = invoice.EmpShengguan == null ? "" : invoice.EmpShengguan.EmployeeName;
+            //lbl_EmpShechu.Text = invoice.EmpShechu == null ? "" : invoice.EmpShechu.EmployeeName;
+            //lbl_EmpPinjian.Text=invoice.EmpPinjian==null?"":invoice.EmpPinjian.EmployeeName;
+            //lbl_EmpDepot.Text = invoice.EmpDepot == null ? "" : invoice.EmpDepot.EmployeeName;
             
         }
     }

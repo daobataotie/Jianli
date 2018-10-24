@@ -128,6 +128,12 @@ namespace Book.DA.SQLServer
             ht.Add("DeadDate", DateTime.Now.Date.AddDays(1).AddSeconds(-1));
             return sqlmapper.QueryForList<Model.Product>("Product.SelectProductByCustomer", ht);
         }
+
+        public IList<Model.Product> SelectProductForXO()
+        {
+            return sqlmapper.QueryForList<Model.Product>("Product.SelectProductForXO", null);
+        }
+
         public void Delete(Book.Model.Product product, Model.Customer customer)
         {
             Hashtable table = new Hashtable();
