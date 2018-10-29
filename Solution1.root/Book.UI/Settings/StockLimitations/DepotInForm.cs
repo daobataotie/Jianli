@@ -269,6 +269,11 @@ namespace Book.UI.Settings.StockLimitations
             return this._depotInManager.HasRowsBefore(this._depotIn);
         }
 
+        protected override DevExpress.XtraReports.UI.XtraReport GetReport()
+        {
+            return new Settings.StockLimitations.DepotInReport(_depotIn.DepotInId);
+        }
+
         private void lookUpEditDepotId_Click(object sender, EventArgs e)
         {
             this.bindingSourceDepot.DataSource = this._depotManager.Select();
@@ -546,11 +551,6 @@ namespace Book.UI.Settings.StockLimitations
                 MessageBox.Show("請選擇所屬庫房！", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.lookUpEditDepotId.Focus();
             }
-        }
-
-        protected override DevExpress.XtraReports.UI.XtraReport GetReport()
-        {
-            return new Settings.StockLimitations.DepotInReport(_depotIn.DepotInId);
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)

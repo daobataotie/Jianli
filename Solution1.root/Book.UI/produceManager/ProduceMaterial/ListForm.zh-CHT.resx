@@ -163,4 +163,7 @@
   <data name="$this.Text" xml:space="preserve">
     <value>加工領料列表</value>
   </data>
+  <data name="gridColumn9.Caption" xml:space="preserve">
+    <value>說明</value>
+  </data>
 </root>

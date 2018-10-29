@@ -117,15 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>305, 17</value>
-  </metadata>
+  </data>
   <data name="barButtonItem1.Caption" xml:space="preserve">
     <value>查询</value>
   </data>
-  <metadata name="bindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="bindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>167, 17</value>
-  </metadata>
+  </data>
   <data name="gridColumn1.Caption" xml:space="preserve">
     <value>编号</value>
   </data>
@@ -209,7 +210,7 @@
     <value>83</value>
   </data>
   <data name="gridColumn9.Caption" xml:space="preserve">
-    <value>描述</value>
+    <value>说明</value>
   </data>
   <data name="gridColumn9.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -220,9 +221,9 @@
   <data name="gridColumn9.Width" type="System.Int32, mscorlib">
     <value>248</value>
   </data>
-  <metadata name="imageCollection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="imageCollection1.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>17, 17</value>
-  </metadata>
+  </data>
   <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="imageCollection1.ImageStream" type="DevExpress.Utils.ImageCollectionStreamer, DevExpress.Utils.v10.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -231,7 +232,6 @@
         ZXZFeHByZXNzLlV0aWxzLkltYWdlQ29sbGVjdGlvblN0cmVhbWVyAAAAAAIAAAAL
 </value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="layoutControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 46</value>
   </data>
@@ -271,9 +271,9 @@
   <data name="emptySpaceItem1.Text" xml:space="preserve">
     <value>emptySpaceItem1</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="$this.Localizable" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>7, 14</value>
   </data>
