@@ -106,5 +106,12 @@ namespace Book.UI.produceManager.ProduceMaterial
             //        break;
             //}
         }
+
+        public override void gridView1_DoubleClick(object sender, EventArgs e)
+        {
+            Form f = this.GetEditForm(new object[] { this.bindingSource1.Current });
+            if (f != null)
+                f.ShowDialog();
+        }
     }
 }
