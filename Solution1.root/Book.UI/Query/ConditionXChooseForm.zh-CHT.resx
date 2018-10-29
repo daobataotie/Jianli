@@ -299,6 +299,24 @@
   <data name="buttonEditPro.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="lookUpEdit2.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lookUpEdit2.Properties.NullValuePrompt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lookUpEdit2.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lookUpEdit1.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lookUpEdit1.Properties.NullValuePrompt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lookUpEdit1.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="ComboxOrderType.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -316,6 +334,18 @@
   </data>
   <data name="ComboxOrderColumn.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="checkEditSpecial.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkEditSpecial.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditSpecial.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditSpecial.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
   </data>
   <data name="buttonEditPro2.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>True</value>

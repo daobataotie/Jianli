@@ -138,6 +138,7 @@
             this.barButtonItem443 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem445 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem451 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem480 = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem56 = new DevExpress.XtraBars.BarSubItem();
             this.barButtonItem259 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem262 = new DevExpress.XtraBars.BarButtonItem();
@@ -640,7 +641,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
-            this.barButtonItem480 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
@@ -1278,7 +1278,7 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem55),
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem56, true),
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem49),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.None, false, this.barSubItem53, false),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem53),
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem54),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.None, false, this.barSubItem59, false),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.None, false, this.barSubItem61, false),
@@ -2138,6 +2138,13 @@
             this.barButtonItem451.Name = "barButtonItem451";
             this.barButtonItem451.Tag = "Invoices.ZG.EditForm";
             this.barButtonItem451.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            // 
+            // barButtonItem480
+            // 
+            resources.ApplyResources(this.barButtonItem480, "barButtonItem480");
+            this.barButtonItem480.Id = 639;
+            this.barButtonItem480.Name = "barButtonItem480";
+            this.barButtonItem480.Tag = "Invoices.LH.EditForm";
             // 
             // barSubItem56
             // 
@@ -6064,13 +6071,6 @@
             // helpProvider1
             // 
             resources.ApplyResources(this.helpProvider1, "helpProvider1");
-            // 
-            // barButtonItem480
-            // 
-            resources.ApplyResources(this.barButtonItem480, "barButtonItem480");
-            this.barButtonItem480.Id = 639;
-            this.barButtonItem480.Name = "barButtonItem480";
-            this.barButtonItem480.Tag = "Invoices.LH.EditForm";
             // 
             // MainForm
             // 

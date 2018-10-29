@@ -72,6 +72,7 @@ namespace Book.UI.Invoices.XO
                     break;
             }
         }
+
         protected override void ShowSearchForm()
         {
             Query.ConditionXChooseForm f = new Query.ConditionXChooseForm();

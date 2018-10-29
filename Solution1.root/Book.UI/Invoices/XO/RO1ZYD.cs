@@ -62,15 +62,17 @@ namespace Book.UI.Invoices.XO
             //this.xrTableCellCustomerProductName.DataBindings.Add("Text", this.DataSource, "PrimaryKey.Product." + Model.Product.PRO_Id);
             //this.xrTableCellProductUnit.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PROPERTY_INVOICEPRODUCTUNIT);
             //this.xrTableCellQuantity.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PROPERTY_INVOICEXODETAILQUANTITY);  
-            this.xrTableCellxrTableStockQuantity.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_StocksQuantity);
-            this.xrTableCellProductId.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_Inumber);
+            this.TCYujiaoRiqi.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_YuJiaoRiqi, "{0:yyyy-MM-dd}");
+            this.TCNumber.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_Inumber);
             this.xrTableCellProductName.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProductName);
+            this.TCProductId.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_Id);
             //this.xrTableCellXinghao.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProductSpecification);
             this.xrTableCellCustomerProductName.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_CustomerProductName);
             this.xrTableCellQuantity.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceProductUnit);
             this.xrTableCellProductUnit.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceXODetailQuantity);
 
-            this.lblRemark.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_Remark);
+            //this.lblRemark.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_Remark);
+            this.lblRemark.DataBindings.Add("Rtf", this.DataSource, "Product." + Model.Product.PRO_ProductDescription);
         }
 
     }

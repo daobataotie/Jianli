@@ -139,6 +139,8 @@ namespace Book.Model
         /// </summary>
         private bool _isNeedMPS;
 
+        private DateTime? _yuJiaoRiqi;
+
 
         /// <summary>
         /// 客户
@@ -524,6 +526,12 @@ namespace Book.Model
             set { _isNeedMPS = value; }
         }
 
+        public DateTime? YuJiaoRiqi
+        {
+            get { return _yuJiaoRiqi; }
+            set { _yuJiaoRiqi = value; }
+        }
+
         /// <summary>
         /// 客户
         /// </summary>
@@ -708,6 +716,9 @@ namespace Book.Model
         /// 需排单
         /// </summary>
         public readonly static string PRO_IsNeedMPS = "IsNeedMPS";
+
+        public readonly static string PRO_YuJiaoRiqi = "YuJiaoRiqi";
+
         #endregion
     }
 }

@@ -38,6 +38,7 @@
             this.bindingSourceCompany = new System.Windows.Forms.BindingSource(this.components);
             this.ComboxOrderType = new DevExpress.XtraEditors.ComboBoxEdit();
             this.ComboxOrderColumn = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.checkEditSpecial = new DevExpress.XtraEditors.CheckEdit();
             this.buttonEditPro2 = new DevExpress.XtraEditors.ButtonEdit();
             this.checkEditDetailFlag = new DevExpress.XtraEditors.CheckEdit();
             this.newChooseEmp2 = new Book.UI.Invoices.NewChooseContorl();
@@ -69,11 +70,10 @@
             this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
             this.labelCusProName = new DevExpress.XtraEditors.LabelControl();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.checkEditSpecial = new DevExpress.XtraEditors.CheckEdit();
-            this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditEndDate.Properties.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditEndDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditStartDate.Properties.VistaTimeProperties)).BeginInit();
@@ -87,6 +87,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCompany)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ComboxOrderType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ComboxOrderColumn.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEditSpecial.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEditPro2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEditDetailFlag.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ceisclose.Properties)).BeginInit();
@@ -116,10 +117,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEditSpecial.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -160,6 +160,10 @@
             new DevExpress.XtraEditors.Controls.EditorButton(),
             new DevExpress.XtraEditors.Controls.EditorButton(),
             new DevExpress.XtraEditors.Controls.EditorButton(),
+            new DevExpress.XtraEditors.Controls.EditorButton(),
+            new DevExpress.XtraEditors.Controls.EditorButton(),
+            new DevExpress.XtraEditors.Controls.EditorButton(),
+            new DevExpress.XtraEditors.Controls.EditorButton(),
             new DevExpress.XtraEditors.Controls.EditorButton()});
             // 
             // labelControl2
@@ -171,6 +175,10 @@
             this.dateEditStartDate.EditValue = null;
             resources.ApplyResources(this.dateEditStartDate, "dateEditStartDate");
             this.dateEditStartDate.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(),
+            new DevExpress.XtraEditors.Controls.EditorButton(),
+            new DevExpress.XtraEditors.Controls.EditorButton(),
+            new DevExpress.XtraEditors.Controls.EditorButton(),
             new DevExpress.XtraEditors.Controls.EditorButton(),
             new DevExpress.XtraEditors.Controls.EditorButton(),
             new DevExpress.XtraEditors.Controls.EditorButton(),
@@ -297,6 +305,13 @@
             resources.GetString("ComboxOrderColumn.Properties.Items2")});
             this.ComboxOrderColumn.StyleController = this.layoutControl1;
             // 
+            // checkEditSpecial
+            // 
+            resources.ApplyResources(this.checkEditSpecial, "checkEditSpecial");
+            this.checkEditSpecial.Name = "checkEditSpecial";
+            this.checkEditSpecial.Properties.Caption = resources.GetString("checkEditSpecial.Properties.Caption");
+            this.checkEditSpecial.StyleController = this.layoutControl1;
+            // 
             // buttonEditPro2
             // 
             resources.ApplyResources(this.buttonEditPro2, "buttonEditPro2");
@@ -409,7 +424,7 @@
             this.layoutControlItem11,
             this.layoutControlItem17,
             this.layoutControlItem20});
-            this.layoutControlGroup1.Location = new System.Drawing.Point(0, -9);
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.OptionsItemText.TextAlignMode = DevExpress.XtraLayout.TextAlignModeGroup.CustomSize;
             this.layoutControlGroup1.Size = new System.Drawing.Size(574, 241);
@@ -590,6 +605,18 @@
             this.layoutControlItem17.TextSize = new System.Drawing.Size(60, 20);
             this.layoutControlItem17.TextToControlDistance = 5;
             // 
+            // layoutControlItem20
+            // 
+            this.layoutControlItem20.Control = this.checkEditSpecial;
+            resources.ApplyResources(this.layoutControlItem20, "layoutControlItem20");
+            this.layoutControlItem20.Location = new System.Drawing.Point(414, 173);
+            this.layoutControlItem20.Name = "layoutControlItem20";
+            this.layoutControlItem20.Size = new System.Drawing.Size(140, 23);
+            this.layoutControlItem20.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem20.TextToControlDistance = 0;
+            this.layoutControlItem20.TextVisible = false;
+            this.layoutControlItem20.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            // 
             // labelCusProName
             // 
             resources.ApplyResources(this.labelCusProName, "labelCusProName");
@@ -614,24 +641,6 @@
             this.layoutControlItem12.Size = new System.Drawing.Size(264, 83);
             this.layoutControlItem12.TextSize = new System.Drawing.Size(80, 20);
             this.layoutControlItem12.TextToControlDistance = 5;
-            // 
-            // checkEditSpecial
-            // 
-            resources.ApplyResources(this.checkEditSpecial, "checkEditSpecial");
-            this.checkEditSpecial.Name = "checkEditSpecial";
-            this.checkEditSpecial.Properties.Caption = resources.GetString("checkEdit1.Properties.Caption");
-            this.checkEditSpecial.StyleController = this.layoutControl1;
-            // 
-            // layoutControlItem20
-            // 
-            this.layoutControlItem20.Control = this.checkEditSpecial;
-            resources.ApplyResources(this.layoutControlItem20, "layoutControlItem20");
-            this.layoutControlItem20.Location = new System.Drawing.Point(414, 173);
-            this.layoutControlItem20.Name = "layoutControlItem20";
-            this.layoutControlItem20.Size = new System.Drawing.Size(140, 23);
-            this.layoutControlItem20.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem20.TextToControlDistance = 0;
-            this.layoutControlItem20.TextVisible = false;
             // 
             // ConditionXChooseForm
             // 
@@ -662,6 +671,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCompany)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ComboxOrderType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ComboxOrderColumn.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEditSpecial.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEditPro2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEditDetailFlag.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ceisclose.Properties)).EndInit();
@@ -691,10 +701,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEditSpecial.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

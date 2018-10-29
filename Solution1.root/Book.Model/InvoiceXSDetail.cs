@@ -9,7 +9,7 @@ using System;
 namespace Book.Model
 {
     /// <summary>
-    /// 出货退货单货品
+    /// 出货单詳細
     /// </summary>
     [Serializable]
     public partial class InvoiceXSDetail

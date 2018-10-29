@@ -277,7 +277,7 @@
     <value>客戶訂單</value>
   </data>
   <data name="InvoiceXS" xml:space="preserve">
-    <value>出庫單</value>
+    <value>出貨單</value>
   </data>
   <data name="InvoiceXT" xml:space="preserve">
     <value>客戶退貨單</value>

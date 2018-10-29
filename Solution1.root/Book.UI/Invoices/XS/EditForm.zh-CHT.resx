@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="btn_GetNewPrice.Text" xml:space="preserve">
+    <value>獲取本頁商品最新單價</value>
+  </data>
   <data name="simpleButton_Remove.Text" xml:space="preserve">
     <value>移除(&amp;R)</value>
   </data>
@@ -131,6 +134,9 @@
   </data>
   <data name="colProduct.Caption" xml:space="preserve">
     <value>商品名稱</value>
+  </data>
+  <data name="gridColumnCusPro.Caption" xml:space="preserve">
+    <value>客戶貨品名稱</value>
   </data>
   <data name="gridColumnUnit.Caption" xml:space="preserve">
     <value>單位</value>
@@ -155,6 +161,33 @@
   </data>
   <data name="gridColumn1.Caption" xml:space="preserve">
     <value>訂單編號</value>
+  </data>
+  <data name="gridColumnCusXOId.Caption" xml:space="preserve">
+    <value>客戶訂單號</value>
+  </data>
+  <data name="colDonatetowards.Caption" xml:space="preserve">
+    <value>贈送</value>
+  </data>
+  <data name="colInvoiceAllowance.Caption" xml:space="preserve">
+    <value>折讓</value>
+  </data>
+  <data name="colInvoiceXSDetailPrice.Caption" xml:space="preserve">
+    <value>單價</value>
+  </data>
+  <data name="colInvoiceXSDetailMoney.Caption" xml:space="preserve">
+    <value>金額</value>
+  </data>
+  <data name="colInvoiceXSDetailTaxPrice.Caption" xml:space="preserve">
+    <value>含稅單價</value>
+  </data>
+  <data name="colInvoiceXSDetailTaxMoney.Caption" xml:space="preserve">
+    <value>稅價合計</value>
+  </data>
+  <data name="colInvoiceXSDetailFPQuantity.Caption" xml:space="preserve">
+    <value>已開發票數量</value>
+  </data>
+  <data name="colInvoiceXSDetailTax.Caption" xml:space="preserve">
+    <value>稅額</value>
   </data>
   <data name="gridColumn3.Caption" xml:space="preserve">
     <value>備註</value>

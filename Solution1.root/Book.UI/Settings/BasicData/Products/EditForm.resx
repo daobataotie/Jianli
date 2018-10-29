@@ -462,7 +462,7 @@
     <value>0</value>
   </data>
   <data name="gridColumn26.Width" type="System.Int32, mscorlib">
-    <value>300</value>
+    <value>94</value>
   </data>
   <data name="gridColumn27.Caption" xml:space="preserve">
     <value>gridColumn27</value>
@@ -477,7 +477,19 @@
     <value>1</value>
   </data>
   <data name="gridColumn52.Width" type="System.Int32, mscorlib">
-    <value>200</value>
+    <value>69</value>
+  </data>
+  <data name="gridColumn53.Caption" xml:space="preserve">
+    <value>商品編號</value>
+  </data>
+  <data name="gridColumn53.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn53.VisibleIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="gridColumn53.Width" type="System.Int32, mscorlib">
+    <value>66</value>
   </data>
   <data name="gridControl5.Size" type="System.Drawing.Size, System.Drawing">
     <value>247, 423</value>
@@ -9525,6 +9537,12 @@
   </data>
   <data name="&gt;&gt;barButtonItem13.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn53.Name" xml:space="preserve">
+    <value>gridColumn53</value>
+  </data>
+  <data name="&gt;&gt;gridColumn53.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>EditForm</value>

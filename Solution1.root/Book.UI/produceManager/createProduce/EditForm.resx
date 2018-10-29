@@ -469,7 +469,7 @@
     <value>0</value>
   </data>
   <data name="gridColumn8.Width" type="System.Int32, mscorlib">
-    <value>36</value>
+    <value>34</value>
   </data>
   <data name="gridColumnProductId.Caption" xml:space="preserve">
     <value>货品编号</value>
@@ -481,7 +481,7 @@
     <value>2</value>
   </data>
   <data name="gridColumnProductId.Width" type="System.Int32, mscorlib">
-    <value>58</value>
+    <value>102</value>
   </data>
   <data name="gridColumn6.Caption" xml:space="preserve">
     <value>品名</value>
@@ -493,7 +493,7 @@
     <value>3</value>
   </data>
   <data name="gridColumn6.Width" type="System.Int32, mscorlib">
-    <value>145</value>
+    <value>162</value>
   </data>
   <data name="gridColumnGuiGe.Caption" xml:space="preserve">
     <value>序号</value>
@@ -505,7 +505,7 @@
     <value>1</value>
   </data>
   <data name="gridColumnGuiGe.Width" type="System.Int32, mscorlib">
-    <value>44</value>
+    <value>41</value>
   </data>
   <data name="gridColumn10.Caption" xml:space="preserve">
     <value>数量</value>
@@ -517,7 +517,7 @@
     <value>5</value>
   </data>
   <data name="gridColumn10.Width" type="System.Int32, mscorlib">
-    <value>38</value>
+    <value>69</value>
   </data>
   <data name="gridColumn4.Caption" xml:space="preserve">
     <value>已排单数量</value>
@@ -529,7 +529,7 @@
     <value>6</value>
   </data>
   <data name="gridColumn4.Width" type="System.Int32, mscorlib">
-    <value>73</value>
+    <value>65</value>
   </data>
   <data name="gridColumnUnit.Caption" xml:space="preserve">
     <value>单位</value>
@@ -541,7 +541,7 @@
     <value>7</value>
   </data>
   <data name="gridColumnUnit.Width" type="System.Int32, mscorlib">
-    <value>40</value>
+    <value>48</value>
   </data>
   <data name="gridColumnStock.Caption" xml:space="preserve">
     <value>库存</value>
@@ -553,7 +553,7 @@
     <value>8</value>
   </data>
   <data name="gridColumnStock.Width" type="System.Int32, mscorlib">
-    <value>48</value>
+    <value>42</value>
   </data>
   <data name="gridColumnCustomProduct.Caption" xml:space="preserve">
     <value>客户货品</value>
@@ -565,7 +565,7 @@
     <value>4</value>
   </data>
   <data name="gridColumnCustomProduct.Width" type="System.Int32, mscorlib">
-    <value>84</value>
+    <value>93</value>
   </data>
   <data name="gridColumnSupplier.Caption" xml:space="preserve">
     <value>厂商</value>
@@ -577,16 +577,10 @@
     <value>9</value>
   </data>
   <data name="gridColumnSupplier.Width" type="System.Int32, mscorlib">
-    <value>242</value>
+    <value>108</value>
   </data>
   <data name="gridColumn1.Caption" xml:space="preserve">
     <value>Remark</value>
-  </data>
-  <data name="gridColumn1.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gridColumn1.VisibleIndex" type="System.Int32, mscorlib">
-    <value>10</value>
   </data>
   <data name="gridControl1.Size" type="System.Drawing.Size, System.Drawing">
     <value>782, 147</value>

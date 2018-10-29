@@ -116,6 +116,7 @@ namespace Book.UI.Settings.ProduceManager
             this._bomParmentPartInfo.EffectiveDate = DateTime.Now;
             this._bomParmentPartInfo.Id = this.bomParmentInfoManager.GetId();
             this._bomParmentPartInfo.EmployeeAdd = BL.V.ActiveOperator.Employee;
+            this._bomParmentPartInfo.DefaultQuantity = 1;
             this.treeList1.ClearNodes();
             //  Model.BOMProductProcess bomParmentPartInfo=new Book.Model.BOMProductProcess();
             // bomParmentPartInfo.BOMProductProcessId=Guid.NewGuid().ToString();
@@ -1782,7 +1783,10 @@ namespace Book.UI.Settings.ProduceManager
                 decimal.TryParse(this.gridView2.GetRowCellValue(e.RowHandle, this.gridColumnUseQuantity).ToString(), out defauleQuantity);
 
                 if (value != 0)
-                    this.gridView2.SetRowCellValue(e.RowHandle, this.gridColumnQuantity, this.spinEditDefaultQuantity.Value / defauleQuantity);
+                {
+                    decimal tempValue = Math.Ceiling(this.spinEditDefaultQuantity.Value / defauleQuantity);
+                    this.gridView2.SetRowCellValue(e.RowHandle, this.gridColumnQuantity, tempValue);
+                }
                 else
                     this.gridView2.SetRowCellValue(e.RowHandle, this.gridColumnQuantity, 1);
                 //   this.gridControl2.Refresh();

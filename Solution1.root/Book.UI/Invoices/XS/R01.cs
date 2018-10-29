@@ -50,8 +50,11 @@ namespace Book.UI.Invoices.XS
             //Ã÷Ï¸ÐÅÏ¢
             this.xrTableCellProductId.DataBindings.Add("Text", this.DataSource, Model.InvoiceXSDetail.PRO_Inumber);
             this.xrTableCellProductName.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProductName);
+            this.TCProductId.DataBindings.Add("Text", this.dataBrowser, "Product." + Model.Product.PRO_Id);
             this.xrTableCellCusPro.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_CustomerProductName);
             this.xrTableQuantity.DataBindings.Add("Text", this.DataSource, Model.InvoiceXSDetail.PRO_InvoiceXSDetailQuantity);
+            this.xrTableUnit.DataBindings.Add("Text", this.DataSource, Model.InvoiceXSDetail.PRO_InvoiceProductUnit);
+            this.xrTableDesc.DataBindings.Add("Text", this.DataSource, Model.InvoiceXSDetail.PRO_InvoiceXSDetailNote);
 
             //this.xrTablePrice.DataBindings.Add("Text", this.DataSource, Model.InvoiceXSDetail.PRO_InvoiceXSDetailPrice, global::Helper.DateTimeParse.GetFormatA(BL.V.SetDataFormat.XSDJXiao.Value));
             this.xrTablePrice.DataBindings.Add("Text", this.DataSource, Model.InvoiceXSDetail.PRO_InvoiceXSDetailPrice, "{0:N}");
@@ -64,10 +67,10 @@ namespace Book.UI.Invoices.XS
             //  this.xrTableZS.DataBindings.Add("Text", this.DataSource, Model.InvoiceCGDetail.PRO_InvoiceCGDetaiInQuantity, "{0:0.###}");
             //this.xrTableTransferQuantity.DataBindings.Add("Text", this.DataSource, Model.InvoiceCGDetail.PRO_ProduceTransferQuantity, "{0:0.###}");
             // this.xrTableZR.DataBindings.Add("Text", this.DataSource, Model.InvoiceXSDetail.PRO_InvoiceAllowance, "{0:0.###}");
-            this.xrTableUnit.DataBindings.Add("Text", this.DataSource, Model.InvoiceXSDetail.PRO_InvoiceProductUnit);
+
             //this.xrCheckBoxZS.DataBindings.Add("Checked", this.DataSource, Model.InvoiceXSDetail.PRO_Donatetowards);
             //this.xrTableCellXOId.DataBindings.Add("Text", this.DataSource,"InvoiceXO."+ Model.InvoiceXO.PRO_CustomerInvoiceXOId);
-            this.xrTableDesc.DataBindings.Add("Text", this.DataSource, "InvoiceXO." + Model.InvoiceXO.PRO_CustomerInvoiceXOId);
+
             //this.xrLabelHeji.Text += this.invoice.InvoiceHeji == null ? "0" : this.invoice.InvoiceHeji.Value.ToString(global::Helper.DateTimeParse.GetFormat(BL.V.SetDataFormat.XSZJXiao.Value));
             this.xrLabelHeji.Text += this.invoice.InvoiceHeji == null ? "0" : this.invoice.InvoiceHeji.Value.ToString("N");
             this.xrLabelTax.Text += this.invoice.InvoiceTax == null ? "0" : this.invoice.InvoiceTax.Value.ToString("N");

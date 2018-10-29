@@ -47,11 +47,18 @@ namespace Book.UI.Invoices.XO
             this.xrLabelCount.Summary.Running = SummaryRunning.Report;
             this.xrLabelCount.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceXODetailQuantity, "{0:0}");
 
+            this.lblTotalJine.Summary.FormatString = "{0:0}";
+            this.lblTotalJine.Summary.Func = SummaryFunc.Sum;
+            this.lblTotalJine.Summary.IgnoreNullValues = true;
+            this.lblTotalJine.Summary.Running = SummaryRunning.Report;
+            this.lblTotalJine.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceXODetailMoney, "{0:0}");
+
             //detail
             this.xrTableCellProductId.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_Inumber);
             this.TCProductId.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_Id);
             this.xrTableCellCustomerProductName.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_CustomerProductName);
-            this.TCPrice.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceXODetailPrice);
+            this.TCPrice.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceXODetailPrice, "{0:0.##}");
+            this.TCJinE.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceXODetailMoney, "{0:0.##}");
             this.TCUnit.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceProductUnit);
             this.xrTableCellQuantity.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceXODetailQuantity);
             this.TCYujiaoriqi.DataBindings.Add("Text", this.DataSource, "Invoice." + Model.InvoiceXO.PRO_InvoiceYjrq, "{0:yyyy-MM-dd}");
