@@ -52,23 +52,32 @@ namespace Book.UI.Query
                 throw new global::Helper.InvalidValueException("üo”õ‰õ");
 
             this.xrTableXSid.DataBindings.Add("Text", this.DataSource, Model.InvoiceXSDetail.PRO_InvoiceId);
-            this.xrTableXSDate.DataBindings.Add("Text", this.DataSource, "Invoice." + Model.InvoiceXS.PROPERTY_INVOICEDATE, "{0:yyyy-MM-dd}");
-            this.xrTableCellProductName.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProductName);
-            this.xrTableCellProductGuige.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProductSpecification);
             this.xrTableCellProductQuantity.DataBindings.Add("Text", this.DataSource, Model.InvoiceXSDetail.PRO_InvoiceXSDetailQuantity);
             this.xrTablePrice.DataBindings.Add("Text", this.DataSource, Model.InvoiceXSDetail.PRO_InvoiceXSDetailPrice, "{0:0.###}");
             this.xrTableTaxPrice.DataBindings.Add("Text", this.DataSource, Model.InvoiceXSDetail.PRO_InvoiceXSDetailTaxPrice, "{0:0.###}");
             this.xrTableHeJi.DataBindings.Add("Text", this.DataSource, Model.InvoiceXSDetail.PRO_InvoiceXSDetailMoney, "{0:0.###}");
             this.xrTableTax.DataBindings.Add("Text", this.DataSource, Model.InvoiceXSDetail.PRO_InvoiceXSDetailTax, "{0:0.###}");
             this.xrTableTaxTotal.DataBindings.Add("Text", this.DataSource, Model.InvoiceXSDetail.PRO_InvoiceXSDetailTaxMoney, "{0:0.###}");
-            this.xrTableOrderQuantity.DataBindings.Add("Text", this.DataSource, "InvoiceXODetail." + Model.InvoiceXODetail.PRO_InvoiceXODetailQuantity, "{0:0.###}");
-            this.xrTableNoXGQuantity.DataBindings.Add("Text", this.DataSource, "InvoiceXODetail." + Model.InvoiceXODetail.PRO_InvoiceXODetailQuantity0, "{0:0.###}");
-            //this.xrTableZS.DataBindings.Add("Text", this.DataSource, Model.InvoiceCGDetail.PRO_InvoiceCGDetaiInQuantity, "{0:0.###}");
-            //this.xrTableTransferQuantity.DataBindings.Add("Text", this.DataSource, Model.InvoiceCGDetail.PRO_ProduceTransferQuantity, "{0:0.###}");
+
+
+            //this.xrTableXSDate.DataBindings.Add("Text", this.DataSource, "Invoice." + Model.InvoiceXS.PROPERTY_INVOICEDATE, "{0:yyyy-MM-dd}");
+            //this.xrTableCellProductName.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProductName);
+            //this.xrTableCellProductGuige.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProductSpecification);        
+            //this.xrTableOrderQuantity.DataBindings.Add("Text", this.DataSource, "InvoiceXODetail." + Model.InvoiceXODetail.PRO_InvoiceXODetailQuantity, "{0:0.###}");
+            //this.xrTableNoXGQuantity.DataBindings.Add("Text", this.DataSource, "InvoiceXODetail." + Model.InvoiceXODetail.PRO_InvoiceXODetailQuantity0, "{0:0.###}");
+            //this.xrTableCellXOId.DataBindings.Add("Text", this.DataSource, "InvoiceXO" + Model.InvoiceXO.PRO_CustomerInvoiceXOId);
+
+            this.xrTableXSDate.DataBindings.Add("Text", this.DataSource, Model.InvoiceXS.PROPERTY_INVOICEDATE, "{0:yyyy-MM-dd}");
+            this.xrTableCellProductName.DataBindings.Add("Text", this.DataSource, Model.Product.PRO_ProductName);
+            this.xrTableCellProductGuige.DataBindings.Add("Text", this.DataSource, Model.Product.PRO_ProductSpecification);
+            this.xrTableOrderQuantity.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceXODetailQuantity + "1", "{0:0.###}");
+            this.xrTableNoXGQuantity.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceXODetailQuantity0, "{0:0.###}");
+            this.xrTableCellXOId.DataBindings.Add("Text", this.DataSource, Model.InvoiceXO.PRO_CustomerInvoiceXOId);
+
             this.xrTableZR.DataBindings.Add("Text", this.DataSource, Model.InvoiceXSDetail.PRO_InvoiceAllowance, "{0:0.###}");
             this.xrTableUnit.DataBindings.Add("Text", this.DataSource, Model.InvoiceXSDetail.PRO_InvoiceProductUnit);
             this.xrCheckBoxZS.DataBindings.Add("Checked", this.DataSource, Model.InvoiceXSDetail.PRO_Donatetowards);
-            this.xrTableCellXOId.DataBindings.Add("Text", this.DataSource, "InvoiceXO" + Model.InvoiceXO.PRO_CustomerInvoiceXOId);
+
             this.xrTableInvoiceXSDetailFPQuantity.DataBindings.Add("Text", this.DataSource, Model.InvoiceXSDetail.PRO_InvoiceXSDetailFPQuantity);
 
             this.xrlblTotalShuliang.Summary.FormatString = "{0:0}";

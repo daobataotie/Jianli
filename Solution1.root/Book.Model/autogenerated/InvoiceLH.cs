@@ -13,11 +13,6 @@ namespace Book.Model
 	public partial class InvoiceLH
 	{
 		#region Data
-
-		/// <summary>
-		/// 
-		/// </summary>
-		private string _invoiceId;
 		
 		/// <summary>
 		/// 
@@ -28,12 +23,7 @@ namespace Book.Model
 		/// 
 		/// </summary>
 		private string _conveyanceMethodId;
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		private DateTime? _invoiceDate;
-		
+				
 		/// <summary>
 		/// 
 		/// </summary>
@@ -70,20 +60,6 @@ namespace Book.Model
 		private string _empDepotId;
 		
 		/// <summary>
-		/// 
-		/// </summary>
-		private int? _auditState;
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		private string _auditEmpId;
-		
-		/// <summary>
-		/// 员工
-		/// </summary>
-		private Employee _auditEmp;
-		/// <summary>
 		/// 货运方式
 		/// </summary>
 		private ConveyanceMethod _conveyanceMethod;
@@ -119,21 +95,6 @@ namespace Book.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public string InvoiceId
-		{
-			get 
-			{
-				return this._invoiceId;
-			}
-			set 
-			{
-				this._invoiceId = value;
-			}
-		}
-
-		/// <summary>
-		/// 
-		/// </summary>
 		public string CustomerId
 		{
 			get 
@@ -158,21 +119,6 @@ namespace Book.Model
 			set 
 			{
 				this._conveyanceMethodId = value;
-			}
-		}
-
-		/// <summary>
-		/// 
-		/// </summary>
-		public DateTime? InvoiceDate
-		{
-			get 
-			{
-				return this._invoiceDate;
-			}
-			set 
-			{
-				this._invoiceDate = value;
 			}
 		}
 
@@ -281,51 +227,6 @@ namespace Book.Model
 			}
 		}
 
-		/// <summary>
-		/// 
-		/// </summary>
-		public int? AuditState
-		{
-			get 
-			{
-				return this._auditState;
-			}
-			set 
-			{
-				this._auditState = value;
-			}
-		}
-
-		/// <summary>
-		/// 
-		/// </summary>
-		public string AuditEmpId
-		{
-			get 
-			{
-				return this._auditEmpId;
-			}
-			set 
-			{
-				this._auditEmpId = value;
-			}
-		}
-	
-		/// <summary>
-		/// 员工
-		/// </summary>
-		public virtual Employee AuditEmp
-		{
-			get
-			{
-				return this._auditEmp;
-			}
-			set
-			{
-				this._auditEmp = value;
-			}
-			
-		}
 		/// <summary>
 		/// 货运方式
 		/// </summary>

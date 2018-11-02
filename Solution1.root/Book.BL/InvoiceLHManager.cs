@@ -32,13 +32,13 @@ namespace Book.BL
         /// <summary>
         /// Insert a InvoiceLH.
         /// </summary>
-        public void Insert(Model.InvoiceLH invoiceLH)
+        public void _Insert(Model.InvoiceLH invoiceLH)
         {
             //
             // todo:add other logic here
             // 
-            
-            Validate(invoiceLH);
+
+            //Validate(invoiceLH);
             invoiceLH.InsertTime = DateTime.Now;
             invoiceLH.UpdateTime = DateTime.Now;
 
@@ -77,7 +77,7 @@ namespace Book.BL
 
         protected override void _Insert(Book.Model.Invoice invoice)
         {
-            Insert(invoice);
+            _Insert((Model.InvoiceLH)invoice);
         }
 
         protected override void _Update(Book.Model.Invoice invoice)
@@ -131,6 +131,17 @@ namespace Book.BL
                 model.InvoiceId = this.GetIdSimple(model.InsertTime.Value);
                 TiGuiExists(model);
             }
+        }
+
+        protected override void _ValidateForUpdate(Book.Model.Invoice invoice)
+        {
+            Validate((Model.InvoiceLH)invoice);
+            //
+        }
+
+        protected override void _ValidateForInsert(Book.Model.Invoice invoice)
+        {
+            Validate((Model.InvoiceLH)invoice);
         }
 
         private void Validate(Model.InvoiceLH invoice)

@@ -103,6 +103,13 @@ namespace Book.Model
             set { _checked = value; }
         }
 
+        public string ProductName { get; set; }
+        public string ProductSpecification { get; set; }
+        public DateTime? InvoiceDate { get; set; }
+        public double? InvoiceXODetailQuantity1 { get; set; }
+        public double? InvoiceXODetailQuantity0 { get; set; }
+        public string CustomerInvoiceXOId { get; set; }
+
         public static readonly string PRO_xiaoji = "xiaoji";
 
     }

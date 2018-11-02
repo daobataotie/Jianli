@@ -137,6 +137,10 @@ namespace Book.BL
             {
                 throw new Helper.RequireValueException("Company");
             }
+            if (string.IsNullOrEmpty(invoice.InvoiceId))
+            {
+                throw new Helper.RequireValueException("Id");
+            }
             //if (invoice.Details.Count == 0)
             //{
             //    throw new Helper.RequireValueException("Details");

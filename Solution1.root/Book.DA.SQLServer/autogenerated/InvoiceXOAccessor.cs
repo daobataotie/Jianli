@@ -18,83 +18,88 @@ namespace Book.DA.SQLServer
 {
     public partial class InvoiceXOAccessor
     {
-		public Model.InvoiceXO Get(string id)
-		{
-			return this.Get<Model.InvoiceXO>(id);
-		}
-		
-		public void Insert(Model.InvoiceXO e)
-		{
-			this.Insert<Model.InvoiceXO>(e);
-		}
-		
-		public void Update(Model.InvoiceXO e)
-		{
-			this.Update<Model.InvoiceXO>(e);
-		}
-		
-		public IList<Model.InvoiceXO> Select()
-		{
-			return this.Select<Model.InvoiceXO>();
-		}
-		
-		public IList<Model.InvoiceXO> Select(Helper.OrderDescription orderDescription, Helper.PagingDescription pagingDescription)
-		{
-			return this.Select<Model.InvoiceXO>(orderDescription,pagingDescription);
-		}
-		public void Delete(string id)
-		{
+        public Model.InvoiceXO Get(string id)
+        {
+            return this.Get<Model.InvoiceXO>(id);
+        }
+
+        public void Insert(Model.InvoiceXO e)
+        {
+            this.Insert<Model.InvoiceXO>(e);
+        }
+
+        public void Update(Model.InvoiceXO e)
+        {
+            this.Update<Model.InvoiceXO>(e);
+        }
+
+        public IList<Model.InvoiceXO> Select()
+        {
+            return this.Select<Model.InvoiceXO>();
+        }
+
+        public IList<Model.InvoiceXO> Select(Helper.OrderDescription orderDescription, Helper.PagingDescription pagingDescription)
+        {
+            return this.Select<Model.InvoiceXO>(orderDescription, pagingDescription);
+        }
+        public void Delete(string id)
+        {
             #region 编号递减
             Model.InvoiceXO model = this.Get(id);
             string invoiceKind = "XO".ToLower();
-            string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, model.InsertTime.Value.ToString("yyyy-MM-dd"));
-            Model.Sequence sequence = new SequenceAccessor().Get(sequencekey_d);
+            string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, model.InvoiceDate.Value.Year, model.InvoiceDate.Value.Month);
+            Model.Sequence sequence = new SequenceAccessor().Get(sequencekey_m);
             if (sequence != null)
             {
-                sequence.Val--;
-                new SequenceAccessor().Update(sequence);
+                if (Convert.ToInt32(id.Substring(4)) >= sequence.Val)
+                {
+                    sequence.Val--;
+                    sequence.Val = sequence.Val < 0 ? 0 : sequence.Val;
+
+                    new SequenceAccessor().Update(sequence);
+                }
             }
             #endregion
 
-			this.Delete<Model.InvoiceXO>(id);
-		}
-		public bool HasRows(string id)
-		{
-			return this.HasRows<Model.InvoiceXO>(id);
-		}
-		public bool HasRows()
-		{
-			return this.HasRows<Model.InvoiceXO>();
-		}
-		public int Count()
-		{
-			return this.Count<Model.InvoiceXO>();
-		}
-		public bool HasRowsBefore(Model.InvoiceXO e)
-		{
-			return sqlmapper.QueryForObject<bool>("InvoiceXO.has_rows_before", e);
-		}
-		public bool HasRowsAfter(Model.InvoiceXO e)
-		{
-			return sqlmapper.QueryForObject<bool>("InvoiceXO.has_rows_after", e);
-		}
-		public Model.InvoiceXO GetFirst()
-		{
-			return sqlmapper.QueryForObject<Model.InvoiceXO>("InvoiceXO.get_first", null);
-		}
-		public Model.InvoiceXO GetLast()
-		{
-			return sqlmapper.QueryForObject<Model.InvoiceXO>("InvoiceXO.get_last", null);
-		}
-		public Model.InvoiceXO GetNext(Model.InvoiceXO e)
-		{
-			return sqlmapper.QueryForObject<Model.InvoiceXO>("InvoiceXO.get_next", e);
-		}
-		public Model.InvoiceXO GetPrev(Model.InvoiceXO e)
-		{
-			return sqlmapper.QueryForObject<Model.InvoiceXO>("InvoiceXO.get_prev", e);
-		}
-		
+            this.Delete<Model.InvoiceXO>(id);
+        }
+        public bool HasRows(string id)
+        {
+            return this.HasRows<Model.InvoiceXO>(id);
+        }
+        public bool HasRows()
+        {
+            return this.HasRows<Model.InvoiceXO>();
+        }
+        public int Count()
+        {
+            return this.Count<Model.InvoiceXO>();
+        }
+        public bool HasRowsBefore(Model.InvoiceXO e)
+        {
+            return sqlmapper.QueryForObject<bool>("InvoiceXO.has_rows_before", e);
+        }
+        public bool HasRowsAfter(Model.InvoiceXO e)
+        {
+            return sqlmapper.QueryForObject<bool>("InvoiceXO.has_rows_after", e);
+        }
+        public Model.InvoiceXO GetFirst()
+        {
+            return sqlmapper.QueryForObject<Model.InvoiceXO>("InvoiceXO.get_first", null);
+        }
+        public Model.InvoiceXO GetLast()
+        {
+            return sqlmapper.QueryForObject<Model.InvoiceXO>("InvoiceXO.get_last", null);
+        }
+        public Model.InvoiceXO GetNext(Model.InvoiceXO e)
+        {
+            return sqlmapper.QueryForObject<Model.InvoiceXO>("InvoiceXO.get_next", e);
+        }
+        public Model.InvoiceXO GetPrev(Model.InvoiceXO e)
+        {
+            return sqlmapper.QueryForObject<Model.InvoiceXO>("InvoiceXO.get_prev", e);
+        }
+
 
     }
 }

@@ -111,20 +111,36 @@ namespace Book.DA.SQLServer
 
         public IList<Book.Model.InvoiceXSDetail> SelectbyConditionX(DateTime StartDate, DateTime EndDate, DateTime Yjri1, DateTime Yjri2, Book.Model.Customer Customer1, Book.Model.Customer Customer2, string XOId1, string XOId2, Book.Model.Product Product, Book.Model.Product Product2, string CusXOId, int OrderColumn, int OrderType)
         {
+            //StringBuilder sb = new StringBuilder();
+            //if (Product != null && Product2 != null)
+            //    sb.Append(" AND ProductId BETWEEN '" + Product.Id + "' AND '" + Product2.Id + "'");
+            //if (!string.IsNullOrEmpty(CusXOId))
+            //    sb.Append(" AND InvoiceXOId IN (SELECT InvoiceId FROM InvoiceXO WHERE CustomerInvoiceXOId = '" + CusXOId + "')");
+            //sb.Append(" AND InvoiceId IN (SELECT InvoiceId FROM InvoiceXS WHERE InvoiceDate BETWEEN '" + StartDate.ToString("yyyy-MM-dd") + "' AND '" + EndDate.Date.AddDays(1).ToString("yyyy-MM-dd") + "')");
+            //if (Yjri1 != global::Helper.DateTimeParse.NullDate && Yjri2 != global::Helper.DateTimeParse.EndDate)
+            //    sb.Append(" AND InvoiceXOId IN (SELECT InvoiceId FROM InvoiceXO WHERE InvoiceYjrq BETWEEN '" + Yjri1.ToString("yyyy-MM-dd") + "' AND '" + Yjri2.Date.AddDays(1).ToString("yyyy-MM-dd") + "')");
+            //if (Customer1 != null && Customer2 != null)
+            //    sb.Append(" AND InvoiceId IN (SELECT InvoiceId FROM InvoiceXS WHERE CustomerId IN (SELECT CustomerId FROM Customer WHERE Id BETWEEN '" + Customer1.Id + "' AND '" + Customer2.Id + "'))");
+            //if (!string.IsNullOrEmpty(XOId1) && !string.IsNullOrEmpty(XOId2))
+            //    sb.Append(" AND InvoiceId BETWEEN '" + XOId1 + "' AND '" + XOId2 + "'");
+
+            //return sqlmapper.QueryForList<Model.InvoiceXSDetail>("InvoiceXSDetail.SelectbyConditionX", sb.ToString());
+
             StringBuilder sb = new StringBuilder();
+            sb.Append("  SELECT xsd.* ,p.ProductName,p.ProductSpecification,xs.InvoiceDate,xod.InvoiceXODetailQuantity as InvoiceXODetailQuantity1,xod.InvoiceXODetailQuantity0,xo.CustomerInvoiceXOId FROM InvoiceXSDetail xsd left join Product p on xsd.ProductId=p.ProductId left join InvoiceXS xs on xs.InvoiceId=xsd.InvoiceId left join InvoiceXODetail xod on xod.InvoiceXODetailId=xsd.InvoiceXODetailId left join InvoiceXO xo on xo.InvoiceId=xsd.InvoiceXOId  WHERE xs.InvoiceDate BETWEEN '" + StartDate.ToString("yyyy-MM-dd") + "' AND '" + EndDate.Date.AddDays(1).ToString("yyyy-MM-dd") + "'");
+
             if (Product != null && Product2 != null)
-                sb.Append(" AND ProductId BETWEEN '" + Product.Id + "' AND '" + Product2.Id + "'");
+                sb.Append(" AND xsd.ProductId in (Select ProductId from Product where Id BETWEEN '" + Product.Id + "' AND '" + Product2.Id + "')");
             if (!string.IsNullOrEmpty(CusXOId))
-                sb.Append(" AND InvoiceXOId IN (SELECT InvoiceId FROM InvoiceXO WHERE CustomerInvoiceXOId = '" + CusXOId + "')");
-            sb.Append(" AND InvoiceId IN (SELECT InvoiceId FROM InvoiceXS WHERE InvoiceDate BETWEEN '" + StartDate.ToString("yyyy-MM-dd") + "' AND '" + EndDate.Date.AddDays(1).ToString("yyyy-MM-dd") + "')");
+                sb.Append(" AND xo.CustomerInvoiceXOId = '" + CusXOId + "'");
             if (Yjri1 != global::Helper.DateTimeParse.NullDate && Yjri2 != global::Helper.DateTimeParse.EndDate)
-                sb.Append(" AND InvoiceXOId IN (SELECT InvoiceId FROM InvoiceXO WHERE InvoiceYjrq BETWEEN '" + Yjri1.ToString("yyyy-MM-dd") + "' AND '" + Yjri2.Date.AddDays(1).ToString("yyyy-MM-dd") + "')");
+                sb.Append(" AND xo.InvoiceYjrq BETWEEN '" + Yjri1.ToString("yyyy-MM-dd") + "' AND '" + Yjri2.Date.AddDays(1).ToString("yyyy-MM-dd") + "'");
             if (Customer1 != null && Customer2 != null)
-                sb.Append(" AND InvoiceId IN (SELECT InvoiceId FROM InvoiceXS WHERE CustomerId IN (SELECT CustomerId FROM Customer WHERE Id BETWEEN '" + Customer1.Id + "' AND '" + Customer2.Id + "'))");
+                sb.Append(" AND xs.CustomerId IN (SELECT CustomerId FROM Customer WHERE Id BETWEEN '" + Customer1.Id + "' AND '" + Customer2.Id + "')");
             if (!string.IsNullOrEmpty(XOId1) && !string.IsNullOrEmpty(XOId2))
                 sb.Append(" AND InvoiceId BETWEEN '" + XOId1 + "' AND '" + XOId2 + "'");
 
-            return sqlmapper.QueryForList<Model.InvoiceXSDetail>("InvoiceXSDetail.SelectbyConditionX", sb.ToString());
+            return this.DataReaderBind<Model.InvoiceXSDetail>(sb.ToString(), null, CommandType.Text);
         }
 
         //应收账款明细表

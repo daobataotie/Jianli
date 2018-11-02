@@ -201,6 +201,7 @@
             this.date_InvoiceDate.Size = new System.Drawing.Size(143, 21);
             this.date_InvoiceDate.StyleController = this.layoutControl1;
             this.date_InvoiceDate.TabIndex = 7;
+            this.date_InvoiceDate.EditValueChanged += new System.EventHandler(this.date_InvoiceDate_EditValueChanged);
             // 
             // ncc_Customer
             // 

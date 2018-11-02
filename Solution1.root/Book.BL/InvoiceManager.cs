@@ -215,7 +215,7 @@ namespace Book.BL
                 _Insert(invoice);
                 string invoiceKind = this.GetInvoiceKind().ToLower();
                 string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, invoice.InsertTime.Value.Year);
-                string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, invoice.InsertTime.Value.Year, invoice.InsertTime.Value.Month);
+                string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, invoice.InvoiceDate.Value.Year, invoice.InvoiceDate.Value.Month);
                 string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, invoice.InsertTime.Value.ToString("yyyy-MM-dd"));
                 string sequencekey = string.Format(invoiceKind);
                 SequenceManager.Increment(sequencekey_y);

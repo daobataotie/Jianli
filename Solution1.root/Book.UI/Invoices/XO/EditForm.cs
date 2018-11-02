@@ -65,19 +65,16 @@ namespace Book.UI.Invoices.XO
             // this.newChooseXSCustomer.Choose = new Settings.BasicData.Customs.ChooseCustoms();
             this.EmpAudit.Choose = new ChooseEmployee();
 
-            this.repositoryItemGridLookUpEdit1.DataSource = this.bindingSourceproduct;
-            this.repositoryItemGridLookUpEdit1.DisplayMember = "Id";
-            this.repositoryItemGridLookUpEdit1.ValueMember = "ProductId";
-            this.repositoryItemGridLookUpEdit1.View.Columns.Add(new GridColumn() { FieldName = "Id", Caption = "編號", Width = 150, Visible = true, VisibleIndex = 0 });
-            this.repositoryItemGridLookUpEdit1.View.Columns.Add(new GridColumn() { FieldName = "ProductName", Caption = "名稱", Width = 150, Visible = true, VisibleIndex = 1 });
-            this.repositoryItemGridLookUpEdit1.View.Columns.Add(new GridColumn() { FieldName = "CustomerProductName", Caption = "客戶商品名稱", Width = 150, Visible = true, VisibleIndex = 2 });
-            this.repositoryItemGridLookUpEdit1.View.Columns.Add(new GridColumn() { FieldName = "ProductVersion", Caption = "版本", Width = 50, Visible = true, VisibleIndex = 3 });
-
-            this.repositoryItemGridLookUpEdit1.View.OptionsView.ShowColumnHeaders = true;
-            this.repositoryItemGridLookUpEdit1.View.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.Never;
+            this.repositoryItemSearchLookUpEdit1.DisplayMember = "Id";
+            this.repositoryItemSearchLookUpEdit1.ValueMember = "ProductId";
+            this.repositoryItemSearchLookUpEdit1.View.Columns.Add(new GridColumn() { FieldName = "Id", Caption = "編號", Width = 150, Visible = true, VisibleIndex = 0 });
+            this.repositoryItemSearchLookUpEdit1.View.Columns.Add(new GridColumn() { FieldName = "ProductName", Caption = "名稱", Width = 150, Visible = true, VisibleIndex = 1 });
+            this.repositoryItemSearchLookUpEdit1.View.Columns.Add(new GridColumn() { FieldName = "CustomerProductName", Caption = "客戶商品名稱", Width = 150, Visible = true, VisibleIndex = 2 });
+            this.repositoryItemSearchLookUpEdit1.View.Columns.Add(new GridColumn() { FieldName = "ProductVersion", Caption = "版本", Width = 50, Visible = true, VisibleIndex = 3 });
 
             productlook = productManager.SelectProductForXO();
             this.bindingSourceproduct.DataSource = productlook;
+            this.repositoryItemSearchLookUpEdit1.DataSource = this.bindingSourceproduct;
         }
 
         public EditForm(string invoiceId)
@@ -703,7 +700,8 @@ namespace Book.UI.Invoices.XO
             this.invoice = new Model.InvoiceXO();
 
             //this.invoice.InvoiceId = this.invoiceManager.GetNewId();
-            this.invoice.InvoiceId = this.invoiceManager.GetIdSimple(DateTime.Now);
+            //this.invoice.InvoiceId = this.invoiceManager.GetIdSimple(DateTime.Now);
+            this.invoice.InvoiceId = this.invoiceManager.GetIdByMonth(DateTime.Now);
             this.invoice.InvoiceDate = DateTime.Now;
             this.invoice.IsClose = false;
             this.invoice.Employee0 = BL.V.ActiveOperator.Employee;
@@ -1581,6 +1579,28 @@ namespace Book.UI.Invoices.XO
         {
             RO_NewNoPrice ro = new RO_NewNoPrice(this.invoice.InvoiceId);
             ro.ShowPreviewDialog();
+        }
+
+        private void gridView1_FocusedColumnChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedColumnChangedEventArgs e)
+        {
+            if (e.FocusedColumn.Name == "colProductId")
+            {
+                repositoryItemSearchLookUpEdit1_ButtonClick(null, null);
+            }
+        }
+
+        private void repositoryItemSearchLookUpEdit1_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+
+        }
+
+        private void dateEditInvoiceDate_EditValueChanged(object sender, EventArgs e)
+        {
+            if (this.action == "insert" && dateEditInvoiceDate.EditValue != null)
+            {
+                this.invoice.InvoiceId = this.invoiceManager.GetIdByMonth(dateEditInvoiceDate.DateTime);
+                this.textEditInvoiceId.Text = this.invoice.InvoiceId;
+            }
         }
     }
 }

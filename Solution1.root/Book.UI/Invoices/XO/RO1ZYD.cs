@@ -41,8 +41,8 @@ namespace Book.UI.Invoices.XO
             //单据信息
             this.xrLabelInvoiceDate.Text = this.invoice.InvoiceDate.Value.ToString("yyyy-MM-dd");
             this.xrLabelInvoiceId.Text = this.invoice.InvoiceId;
-            this.xrLabelEmp.Text += this.invoice.Employee0 == null ? "" : this.invoice.Employee0.EmployeeName;
-            this.xrLabel25.Text += this.invoice.AuditEmp == null ? "" : this.invoice.AuditEmp.EmployeeName;
+            //this.xrLabelEmp.Text += this.invoice.Employee0 == null ? "" : this.invoice.Employee0.EmployeeName;
+            //this.xrLabel25.Text += this.invoice.AuditEmp == null ? "" : this.invoice.AuditEmp.EmployeeName;
             this.xrLabelNote.Text = this.invoice.InvoiceNote;
             this.xrLabelCustomerXOId.Text = this.invoice.CustomerInvoiceXOId;
             this.xrLabelXScustomer.Text = this.invoice.xocustomer.CustomerShortName;

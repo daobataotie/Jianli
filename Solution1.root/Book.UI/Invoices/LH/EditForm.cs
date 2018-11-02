@@ -110,7 +110,7 @@ namespace Book.UI.Invoices.LH
         {
             this.invoice = new Model.InvoiceLH();
 
-            this.invoice.InvoiceId = this.invoiceLHManager.GetIdSimple(DateTime.Now);
+            this.invoice.InvoiceId = this.invoiceLHManager.GetIdByMonth(DateTime.Now);
             this.invoice.InvoiceDate = DateTime.Now;
             this.invoice.EmpCreater = BL.V.ActiveOperator.Employee;
         }
@@ -232,6 +232,7 @@ namespace Book.UI.Invoices.LH
             //    this.invoice.EmpPinjianId = (ncc_EmpPinjian.EditValue as Model.Employee).EmployeeId;
             //if (ncc_EmpDepot.EditValue != null)
             //    this.invoice.EmpDepotId = (ncc_EmpDepot.EditValue as Model.Employee).EmployeeId;
+            this.invoice.AuditState = this.saveAuditState;
 
             switch (this.action)
             {
@@ -320,6 +321,15 @@ namespace Book.UI.Invoices.LH
             //    this.invoice.Detail.Clear();
             //    this.gridControl1.RefreshDataSource();
             // }
+        }
+
+        private void date_InvoiceDate_EditValueChanged(object sender, EventArgs e)
+        {
+            if (this.action == "insert" && date_InvoiceDate.EditValue != null)
+            {
+                this.invoice.InvoiceId = this.invoiceLHManager.GetIdByMonth(date_InvoiceDate.DateTime);
+                this.txt_InvoiceId.Text = this.invoice.InvoiceId;
+            }
         }
     }
 }
