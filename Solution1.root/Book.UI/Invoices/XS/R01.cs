@@ -36,6 +36,7 @@ namespace Book.UI.Invoices.XS
             this.xrLabelCustomTel.Text = this.invoice.XSCustomer == null ? "" : string.IsNullOrEmpty(this.invoice.XSCustomer.CustomerPhone) ? this.invoice.Customer.CustomerPhone1 : this.invoice.Customer.CustomerPhone;
             this.xrLabelTongYiNo.Text = this.invoice.XSCustomer == null ? "" : this.invoice.XSCustomer.CustomerNumber;
             this.xrLabelSongHuoAddress.Text = this.invoice.XSCustomer == null ? "" : this.invoice.XSCustomer.CustomerJinChuAddress;
+            this.xrLabelLianluoName.Text = this.invoice.XSCustomer == null ? "" : this.invoice.XSCustomer.CustomerContact;
 
             //单据信息
             this.xrLabelInvoiceDate.Text = this.invoice.InvoiceDate.Value.ToString("yyyy-MM-dd");

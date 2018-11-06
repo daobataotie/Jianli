@@ -20,6 +20,36 @@
       <result property="Invoice" column="InvoiceId" lazyLoad="false" select="InvoiceXS.select_by_primary_key" />
       <result property="Product" column="ProductId" lazyLoad="false" select="Product.select_SimpleProduct" />
     </resultMap>
+
+    <resultMap id="InvoiceXSDetailResultFast" class="InvoiceXSDetail">
+      <result property="InvoiceXSDetailId" column="InvoiceXSDetailId" />
+      <result property="InvoiceXODetailId" column="InvoiceXODetailId" />
+      <result property="DepotPositionId" column="DepotPositionId" />
+      <result property="PrimaryKeyId" column="PrimaryKeyId" />
+      <result property="InvoiceId" column="InvoiceId" />
+      <result property="IsZs" column="IsZs" />
+      <result property="InvoiceXSDetailQuantity" column="InvoiceXSDetailQuantity" />
+      <result property="InvoiceXSDetailNote" column="InvoiceXSDetailNote" />
+      <result property="InvoiceProductUnit" column="InvoiceProductUnit" />
+      <result property="ProductId" column="ProductId" />
+      <result property="IsCustomerProduct" column="IsCustomerProduct" />
+      <result property="CustomerId" column="CustomerId" />
+      <result property="Inumber" column="Inumber" />
+      <result property="InvoiceXOId" column="InvoiceXOId" />
+      <result property="Donatetowards" column="Donatetowards" />
+      <result property="InvoiceAllowance" column="InvoiceAllowance" />
+      <result property="InvoiceXSDetailPrice" column="InvoiceXSDetailPrice" />
+      <result property="InvoiceXSDetailMoney" column="InvoiceXSDetailMoney" />
+      <result property="InvoiceXSDetailTaxPrice" column="InvoiceXSDetailTaxPrice" />
+      <result property="InvoiceXSDetailTaxMoney" column="InvoiceXSDetailTaxMoney" />
+      <result property="InvoiceXSDetailFPQuantity" column="InvoiceXSDetailFPQuantity" />
+      <result property="InvoiceXSDetailTax" column="InvoiceXSDetailTax" />
+      <result property="InvoiceXO" column="InvoiceXOId" lazyLoad="false" select="InvoiceXO.select_InvoiceXOFast" />
+      <result property="Product" column="ProductId" lazyLoad="false" select="Product.select_FastProduct" />
+      <result property="DepotPosition" column="DepotPositionId" lazyLoad="false" select="DepotPosition.select_by_primary_key" />
+      <!--<result property="Invoice" column="InvoiceId" lazyLoad="false" select="InvoiceXS.select_by_primary_key" />-->
+      <result property="InvoiceXODetail" column="InvoiceXODetailId"  select="InvoiceXODetail.select_FastXODetail" />
+    </resultMap>
   </resultMaps>
   <statements>
 
@@ -27,7 +57,7 @@
       SELECT max(InvoiceXSDetailId) InvoiceXSDetailId,max(InvoiceXODetailId) InvoiceXODetailId,max(ProductId) ProductId,max(InvoiceId) InvoiceId,max(InvoiceProductUnit) InvoiceProductUnit,sum(InvoiceXSDetailQuantity) InvoiceXSDetailQuantity FROM InvoiceXSDetail WHERE InvoiceId=#value# GROUP BY InvoiceXODetailId
     </select>
 
-    <select id="select_by_invoiceid" resultMap="InvoiceXSDetailResult" parameterClass="string">
+    <select id="select_by_invoiceid" resultMap="InvoiceXSDetailResultFast" parameterClass="string">
       SELECT *
       FROM
       [dbo].[InvoiceXSDetail]

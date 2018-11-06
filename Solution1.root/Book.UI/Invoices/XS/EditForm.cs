@@ -638,6 +638,7 @@ namespace Book.UI.Invoices.XS
             if (details == null || details.Count < 1) return;
             Model.Product detail = details[e.ListSourceRowIndex].Product;
             Model.InvoiceXODetail xodetail = details[e.ListSourceRowIndex].InvoiceXODetail;
+            Model.InvoiceXO xo = details[e.ListSourceRowIndex].InvoiceXO;
             switch (e.Column.Name)
             {
                 case "Quantity":
@@ -655,8 +656,8 @@ namespace Book.UI.Invoices.XS
                     e.DisplayText = detail.CustomerProductName;
                     break;
                 case "gridColumnCusXOId":
-                    if (xodetail != null)
-                        e.DisplayText = xodetail.Invoice.CustomerInvoiceXOId;
+                    if (xo != null)
+                        e.DisplayText = xo.CustomerInvoiceXOId;
                     break;
                 case "gridColumnVersion":
                     e.DisplayText = detail.ProductVersion;

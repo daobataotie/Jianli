@@ -332,6 +332,21 @@
       ]]>
     </select>
 
+    <select id="select_FastProduct" resultMap="ProductResult6" parameterClass="Product">
+      <![CDATA[
+      select 
+      Id,
+      ProductId,
+      ProductName,
+      CustomerProductName,
+      ProductVersion,
+      ProductBarCode
+      from product
+      WHERE
+				[ProductId] = #ProductId#
+      ]]>
+    </select>
+
     <select id="select_SimpleProduct_ZCMai" resultMap="ProductResultZCMai" parameterClass="Product">
       <![CDATA[
       select 

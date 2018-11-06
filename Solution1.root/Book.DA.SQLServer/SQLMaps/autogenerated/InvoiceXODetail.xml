@@ -37,6 +37,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="PrimaryKey" column="PrimaryKeyId" lazyLoad="false" select="CustomerProducts.select_by_primary_key" />
       <result property="Invoice" column="InvoiceId" lazyLoad="false" select="InvoiceXO.select_SimpleInvoicexo" />
     </resultMap>
+
   </resultMaps>
 
   <statements>

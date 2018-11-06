@@ -725,7 +725,7 @@ namespace Book.Model
         }
 
         /// <summary>
-        /// 
+        /// 联络人
         /// </summary>
         public string CustomerContact
         {
