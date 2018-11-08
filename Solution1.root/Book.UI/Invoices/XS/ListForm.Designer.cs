@@ -46,12 +46,20 @@ namespace Book.UI.Invoices.XS
             this.colInvoiceZSE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colInvoiceYHE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // bar1
+            // 
+            this.bar1.OptionsBar.AllowQuickCustomization = false;
+            this.bar1.OptionsBar.DisableClose = true;
+            this.bar1.OptionsBar.DisableCustomization = true;
             // 
             // gridView1
             // 
@@ -70,7 +78,9 @@ namespace Book.UI.Invoices.XS
             this.colInvoiceTotal0,
             this.colInvoiceZKE,
             this.colInvoiceZSE,
-            this.colInvoiceYHE});
+            this.colInvoiceYHE,
+            this.gridColumn2,
+            this.gridColumn3});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
@@ -221,11 +231,22 @@ namespace Book.UI.Invoices.XS
             // 
             this.gridControl1.DataSource = this.bindingSource1;
             resources.ApplyResources(this.gridControl1, "gridControl1");
-            this.gridControl1.EmbeddedNavigator.Name = "";
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            // 
+            // gridColumn2
+            // 
+            resources.ApplyResources(this.gridColumn2, "gridColumn2");
+            this.gridColumn2.FieldName = "InvoiceXO.CustomerInvoiceXOId";
+            this.gridColumn2.Name = "gridColumn2";
+            // 
+            // gridColumn3
+            // 
+            resources.ApplyResources(this.gridColumn3, "gridColumn3");
+            this.gridColumn3.FieldName = "InvoiceXO.InvoiceTotal";
+            this.gridColumn3.Name = "gridColumn3";
             // 
             // ListForm
             // 
@@ -263,5 +284,7 @@ namespace Book.UI.Invoices.XS
         private DevExpress.XtraGrid.Columns.GridColumn colDepotId;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
     }
 }

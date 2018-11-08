@@ -109,7 +109,7 @@ namespace Book.DA.SQLServer
             return sqlmapper.QueryForList<Model.InvoiceXSDetail>("InvoiceXSDetail.SelectByDateRange", ht);
         }
 
-        public IList<Book.Model.InvoiceXSDetail> SelectbyConditionX(DateTime StartDate, DateTime EndDate, DateTime Yjri1, DateTime Yjri2, Book.Model.Customer Customer1, Book.Model.Customer Customer2, string XOId1, string XOId2, Book.Model.Product Product, Book.Model.Product Product2, string CusXOId, int OrderColumn, int OrderType)
+        public IList<Book.Model.InvoiceXSDetail> SelectbyConditionX(DateTime StartDate, DateTime EndDate, DateTime Yjri1, DateTime Yjri2, Book.Model.Customer Customer1, Book.Model.Customer Customer2, string XOId1, string XOId2, Book.Model.Product Product, Book.Model.Product Product2, string CusXOId, int OrderColumn, int OrderType, Model.Employee startEmp, Model.Employee endEmp, string FreightedCompanyId, string ConveyanceMethodId)
         {
             //StringBuilder sb = new StringBuilder();
             //if (Product != null && Product2 != null)
@@ -139,6 +139,14 @@ namespace Book.DA.SQLServer
                 sb.Append(" AND xs.CustomerId IN (SELECT CustomerId FROM Customer WHERE Id BETWEEN '" + Customer1.Id + "' AND '" + Customer2.Id + "')");
             if (!string.IsNullOrEmpty(XOId1) && !string.IsNullOrEmpty(XOId2))
                 sb.Append(" AND InvoiceId BETWEEN '" + XOId1 + "' AND '" + XOId2 + "'");
+            if (startEmp != null && endEmp != null)
+            {
+                sb.Append(" And xs.Employee0Id in (select EmployeeId from Employee where IDNo between '" + startEmp.IDNo + "' and '" + endEmp.IDNo + "')");
+            }
+            if (!string.IsNullOrEmpty(FreightedCompanyId))
+                sb.Append(" and  xs.InvoiceId in(select invoiceid from InvoiceXS where  TransportCompany='" + FreightedCompanyId + "') ");
+            if (!string.IsNullOrEmpty(ConveyanceMethodId))
+                sb.Append(" and  xs.InvoiceId in(select invoiceid from InvoiceXS where  ConveyanceMethodId='" + ConveyanceMethodId + "')");
 
             return this.DataReaderBind<Model.InvoiceXSDetail>(sb.ToString(), null, CommandType.Text);
         }
