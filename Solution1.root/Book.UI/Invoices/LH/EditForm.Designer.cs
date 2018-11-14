@@ -265,7 +265,7 @@
             // gridColumn2
             // 
             this.gridColumn2.Caption = "商品代號";
-            this.gridColumn2.FieldName = "ProductShortId";
+            this.gridColumn2.FieldName = "Product.Id";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
@@ -283,7 +283,7 @@
             // gridColumn4
             // 
             this.gridColumn4.Caption = "客戶商品名稱";
-            this.gridColumn4.FieldName = "Product.CustomerProductName";
+            this.gridColumn4.FieldName = "Product.ProductName";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
@@ -292,7 +292,7 @@
             // gridColumn5
             // 
             this.gridColumn5.Caption = "客戶品號";
-            this.gridColumn5.FieldName = "Product.Id";
+            this.gridColumn5.FieldName = "Product.CustomerProductName";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;

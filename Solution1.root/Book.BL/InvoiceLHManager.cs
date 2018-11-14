@@ -126,8 +126,10 @@ namespace Book.BL
             {
                 //设置KEY值
                 string invoiceKind = this.GetInvoiceKind().ToLower();
-                string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, model.InsertTime.Value.ToString("yyyy-MM-dd"));
-                SequenceManager.Increment(sequencekey_d);
+                //string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, model.InsertTime.Value.ToString("yyyy-MM-dd"));
+                //SequenceManager.Increment(sequencekey_d);
+                string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, model.InvoiceDate.Value.Year, model.InvoiceDate.Value.Month);
+                SequenceManager.Increment(sequencekey_m);
                 model.InvoiceId = this.GetIdSimple(model.InsertTime.Value);
                 TiGuiExists(model);
             }

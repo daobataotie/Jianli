@@ -738,7 +738,15 @@ namespace Book.UI
             //商品報廢單
             operations.Add("produceManager.ProductScrap.EditForm", (D1)delegate(System.Windows.Forms.Form form) { M1("produceManager.ProductScrap.EditForm", form); });
 
+            //理货单
             operations.Add("Invoices.LH.EditForm", (D1)delegate(System.Windows.Forms.Form form) { M1("Invoices.LH.EditForm", form); });
+
+            //港口
+            operations.Add("Settings.BasicData.Port.EditForm", (D1)delegate(System.Windows.Forms.Form form) { M1("Settings.BasicData.Port.EditForm", form); });
+
+            //PackingList
+            operations.Add("Invoices.IP.EditForm", (D1)delegate(System.Windows.Forms.Form form) { M1("Invoices.IP.EditForm", form); });
+
         }
 
         static Form CreateForm(string formTypeName)

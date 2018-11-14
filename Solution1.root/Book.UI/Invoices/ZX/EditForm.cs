@@ -33,6 +33,7 @@ namespace Book.UI.Invoices.ZX
             this.bindingSourceCompany.DataSource = (new BL.CompanyManager()).Select();
             this.newChooseContorlAuditEmp.Choose = new Settings.BasicData.Employees.ChooseEmployee();
             this.newChooseContorlConsignee.Choose = new Settings.BasicData.Customs.ChooseCustoms();
+
             this.requireValueExceptions.Add(Model.InvoicePacking.PRO_InvoiceNO, new AA(Properties.Resources.NoIsNotNull, this.txt_NO));
             this.requireValueExceptions.Add(Model.InvoicePacking.PRO_InvoicePackingDate, new AA(Properties.Resources.DateIsNull, this.Date_PackingDate));
             this.requireValueExceptions.Add(Model.InvoicePackingDetail.PRO_HandPackingId, new AA(Properties.Resources.HandIdNotNull, this.gridControl1));

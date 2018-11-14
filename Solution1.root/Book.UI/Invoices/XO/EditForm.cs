@@ -72,9 +72,25 @@ namespace Book.UI.Invoices.XO
             this.repositoryItemSearchLookUpEdit1.View.Columns.Add(new GridColumn() { FieldName = "CustomerProductName", Caption = "客戶商品名稱", Width = 150, Visible = true, VisibleIndex = 2 });
             this.repositoryItemSearchLookUpEdit1.View.Columns.Add(new GridColumn() { FieldName = "ProductVersion", Caption = "版本", Width = 50, Visible = true, VisibleIndex = 3 });
 
+            this.repositoryItemSearchLookUpEdit2.DisplayMember = "ProductName";
+            this.repositoryItemSearchLookUpEdit2.ValueMember = "ProductId";
+            this.repositoryItemSearchLookUpEdit2.View.Columns.Add(new GridColumn() { FieldName = "Id", Caption = "編號", Width = 150, Visible = true, VisibleIndex = 0 });
+            this.repositoryItemSearchLookUpEdit2.View.Columns.Add(new GridColumn() { FieldName = "ProductName", Caption = "名稱", Width = 150, Visible = true, VisibleIndex = 1 });
+            this.repositoryItemSearchLookUpEdit2.View.Columns.Add(new GridColumn() { FieldName = "CustomerProductName", Caption = "客戶商品名稱", Width = 150, Visible = true, VisibleIndex = 2 });
+            this.repositoryItemSearchLookUpEdit2.View.Columns.Add(new GridColumn() { FieldName = "ProductVersion", Caption = "版本", Width = 50, Visible = true, VisibleIndex = 3 });
+
+            this.repositoryItemSearchLookUpEdit3.DisplayMember = "CustomerProductName";
+            this.repositoryItemSearchLookUpEdit3.ValueMember = "ProductId";
+            this.repositoryItemSearchLookUpEdit3.View.Columns.Add(new GridColumn() { FieldName = "Id", Caption = "編號", Width = 150, Visible = true, VisibleIndex = 0 });
+            this.repositoryItemSearchLookUpEdit3.View.Columns.Add(new GridColumn() { FieldName = "ProductName", Caption = "名稱", Width = 150, Visible = true, VisibleIndex = 1 });
+            this.repositoryItemSearchLookUpEdit3.View.Columns.Add(new GridColumn() { FieldName = "CustomerProductName", Caption = "客戶商品名稱", Width = 150, Visible = true, VisibleIndex = 2 });
+            this.repositoryItemSearchLookUpEdit3.View.Columns.Add(new GridColumn() { FieldName = "ProductVersion", Caption = "版本", Width = 50, Visible = true, VisibleIndex = 3 });
+
             productlook = productManager.SelectProductForXO();
             this.bindingSourceproduct.DataSource = productlook;
             this.repositoryItemSearchLookUpEdit1.DataSource = this.bindingSourceproduct;
+            this.repositoryItemSearchLookUpEdit2.DataSource = this.bindingSourceproduct;
+            this.repositoryItemSearchLookUpEdit3.DataSource = this.bindingSourceproduct;
         }
 
         public EditForm(string invoiceId)
@@ -185,6 +201,9 @@ namespace Book.UI.Invoices.XO
                         {
                             detail.ProductId = product.ProductId;
                         }
+                        if (this.dateEditYJRQ.EditValue != null)
+                            detail.YuJiaoRiqi = this.dateEditYJRQ.DateTime;
+
                         this.invoice.Details.Add(detail);
 
                         int flag = 0;
@@ -228,6 +247,8 @@ namespace Book.UI.Invoices.XO
                     {
                         detail.ProductId = product.ProductId;
                     }
+                    if (this.dateEditYJRQ.EditValue != null)
+                        detail.YuJiaoRiqi = this.dateEditYJRQ.DateTime;
                     this.invoice.Details.Add(detail);
 
                     int flag = 0;
@@ -284,6 +305,8 @@ namespace Book.UI.Invoices.XO
                     detail.InvoiceProductUnit = "";
                     // detail.PrimaryKey = new Book.Model.CustomerProducts();
                     detail.Product = new Book.Model.Product();
+                    if (this.dateEditYJRQ.EditValue != null)
+                        detail.YuJiaoRiqi = this.dateEditYJRQ.DateTime;
                     this.invoice.Details.Add(detail);
                     this.bindingSource1.Position = this.bindingSource1.IndexOf(detail);
                 }
@@ -617,6 +640,8 @@ namespace Book.UI.Invoices.XO
                                                     XOdetail.InvoiceXODetailNote = product.ProductDescription;
                                                     XOdetail.InvoiceProductUnit = invoiceXODetail.InvoiceProductUnit;
                                                     XOdetail.Islargess = true;
+                                                    if (this.dateEditYJRQ.EditValue != null)
+                                                        XOdetail.YuJiaoRiqi = this.dateEditYJRQ.DateTime;
                                                     this.invoice.Details.Add(XOdetail);
                                                 }
                                             }
@@ -750,7 +775,9 @@ namespace Book.UI.Invoices.XO
                     //xodetail.PrimaryKey = xjdetail.PrimaryKey;
                     //xodetail.PrimaryKeyId = xjdetail.PrimaryKeyId;
                     xodetail.InvoiceProductUnit = xjdetail.InvoiceProductUnit;
-                    invoice.InvoiceHeji += xodetail.InvoiceXODetailMoney;// (xodetail.InvoiceXODetailPrice * decimal.Parse(xodetail.InvoiceXODetailQuantity.ToString()));                    
+                    invoice.InvoiceHeji += xodetail.InvoiceXODetailMoney;// (xodetail.InvoiceXODetailPrice * decimal.Parse(xodetail.InvoiceXODetailQuantity.ToString()));  
+                    if (this.dateEditYJRQ.EditValue != null)
+                        xodetail.YuJiaoRiqi = this.dateEditYJRQ.DateTime;
                     this.invoice.Details.Add(xodetail);
                 }
                 invoice.InvoiceHeji = this.GetDecimal(invoice.InvoiceHeji.HasValue ? invoice.InvoiceHeji.Value : 0, BL.V.SetDataFormat.XSDJXiao.Value);
@@ -770,6 +797,8 @@ namespace Book.UI.Invoices.XO
                 detail.TotalMoney = 0;
                 // detail.PrimaryKey = new Book.Model.CustomerProducts();
                 detail.Product = new Book.Model.Product();
+                if (this.invoice.InvoiceYjrq != null)
+                    detail.YuJiaoRiqi = this.dateEditYJRQ.DateTime;
                 this.invoice.Details.Add(detail);
                 this.bindingSource1.Position = this.bindingSource1.IndexOf(detail);
             }
@@ -1014,6 +1043,8 @@ namespace Book.UI.Invoices.XO
                         detail.InvoiceProductUnit = "";
                         // detail.PrimaryKey = new Book.Model.CustomerProducts();
                         detail.Product = new Book.Model.Product();
+                        if (this.dateEditYJRQ.EditValue != null)
+                            detail.YuJiaoRiqi = this.dateEditYJRQ.DateTime;
                         this.invoice.Details.Add(detail);
                         //this.bindingSource1.Position = this.bindingSource1.IndexOf(detail);
                     }
@@ -1600,6 +1631,18 @@ namespace Book.UI.Invoices.XO
             {
                 this.invoice.InvoiceId = this.invoiceManager.GetIdByMonth(dateEditInvoiceDate.DateTime);
                 this.textEditInvoiceId.Text = this.invoice.InvoiceId;
+            }
+        }
+
+        private void dateEditYJRQ_EditValueChanged(object sender, EventArgs e)
+        {
+            if (dateEditYJRQ.EditValue != null)
+            {
+                foreach (var item in this.invoice.Details)
+                {
+                    if (item.YuJiaoRiqi == null)
+                        item.YuJiaoRiqi = dateEditYJRQ.DateTime;
+                }
             }
         }
     }

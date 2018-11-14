@@ -852,7 +852,8 @@ namespace Book.UI.produceManager.MPSheader
                 {
                     Model.BomComponentInfo component = new Book.Model.BomComponentInfo();
                     component.Customer = details.Customer;
-                    component.UseQuantity = bompackage.Quantity;
+                    //component.UseQuantity = bompackage.Quantity;
+                    component.UseQuantity = bompackage.UseQuantity;      //2018年11月14日21:59:25：改为用“包装用量”
                     //string b = "";
                     //double? a = 0;
                     //if (details.MPSdetailssum % bompackage.UseQuantity != 0)
@@ -863,8 +864,8 @@ namespace Book.UI.produceManager.MPSheader
                     //else
                     //    a = details.MPSdetailssum / bompackage.UseQuantity;
 
-                    component.MpsQuantity = details.MPSdetailssum * bompackage.Quantity;
-                    component.MrpQuantity = details.MPSdetailssum * bompackage.Quantity - (bompackage.Product.StocksQuantity == null ? 0 : bompackage.Product.StocksQuantity - (bompackage.Product.MRSStockQuantity == null ? 0 : bompackage.Product.MRSStockQuantity)) + bompackage.Product.SafeStock;
+                    component.MpsQuantity = details.MPSdetailssum * bompackage.UseQuantity;
+                    component.MrpQuantity = details.MPSdetailssum * bompackage.UseQuantity - (bompackage.Product.StocksQuantity == null ? 0 : bompackage.Product.StocksQuantity - (bompackage.Product.MRSStockQuantity == null ? 0 : bompackage.Product.MRSStockQuantity)) + bompackage.Product.SafeStock;
                     if (component.MrpQuantity <= 0)
                     {
                         component.MrpQuantity = 0;

@@ -366,7 +366,7 @@
   <data name="checkEditChadanSave.Location" type="System.Drawing.Point, System.Drawing">
     <value>574, 298</value>
   </data>
-  <data name="checkEdit1.Properties.Caption" xml:space="preserve">
+  <data name="checkEditChadanSave.Properties.Caption" xml:space="preserve">
     <value>插單保存</value>
   </data>
   <data name="checkEditChadanSave.Size" type="System.Drawing.Size, System.Drawing">
@@ -1372,7 +1372,7 @@
     <value>1</value>
   </data>
   <data name="gridColumn24.Width" type="System.Int32, mscorlib">
-    <value>43</value>
+    <value>47</value>
   </data>
   <data name="gridColumnProductId.Caption" xml:space="preserve">
     <value>商品编号</value>
@@ -1384,7 +1384,7 @@
     <value>2</value>
   </data>
   <data name="gridColumnProductId.Width" type="System.Int32, mscorlib">
-    <value>63</value>
+    <value>69</value>
   </data>
   <data name="gridColumnName.Caption" xml:space="preserve">
     <value>商品名称</value>
@@ -1396,7 +1396,7 @@
     <value>3</value>
   </data>
   <data name="gridColumnName.Width" type="System.Int32, mscorlib">
-    <value>202</value>
+    <value>221</value>
   </data>
   <data name="gridColumnGuiGe.Caption" xml:space="preserve">
     <value>规格型号</value>
@@ -1408,7 +1408,7 @@
     <value>4</value>
   </data>
   <data name="gridColumnGuiGe.Width" type="System.Int32, mscorlib">
-    <value>82</value>
+    <value>121</value>
   </data>
   <data name="gridColumnQuantity.Caption" xml:space="preserve">
     <value>数量</value>
@@ -1420,7 +1420,7 @@
     <value>5</value>
   </data>
   <data name="gridColumnQuantity.Width" type="System.Int32, mscorlib">
-    <value>83</value>
+    <value>85</value>
   </data>
   <data name="gridColumn2.Caption" xml:space="preserve">
     <value>单位</value>
@@ -1436,12 +1436,6 @@
   </data>
   <data name="gridColumnMPSquantity.Caption" xml:space="preserve">
     <value>已领数量</value>
-  </data>
-  <data name="gridColumnMPSquantity.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gridColumnMPSquantity.VisibleIndex" type="System.Int32, mscorlib">
-    <value>7</value>
   </data>
   <data name="gridColumnMPSquantity.Width" type="System.Int32, mscorlib">
     <value>87</value>
@@ -1465,10 +1459,10 @@
     <value>True</value>
   </data>
   <data name="gridColumn8.VisibleIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>7</value>
   </data>
   <data name="gridColumn8.Width" type="System.Int32, mscorlib">
-    <value>325</value>
+    <value>339</value>
   </data>
   <data name="gridColumn25.Caption" xml:space="preserve">
     <value>選擇</value>
@@ -1483,7 +1477,7 @@
     <value>0</value>
   </data>
   <data name="gridColumn25.Width" type="System.Int32, mscorlib">
-    <value>41</value>
+    <value>44</value>
   </data>
   <data name="repositoryItemHyperLinkEdit5.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2392,6 +2386,12 @@
   <data name="&gt;&gt;emptySpaceItem3.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;layoutControlItem35.Name" xml:space="preserve">
+    <value>layoutControlItem35</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem35.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;bindingSourceDetails.Name" xml:space="preserve">
     <value>bindingSourceDetails</value>
   </data>
@@ -2492,12 +2492,6 @@
     <value>layoutControlItem29</value>
   </data>
   <data name="&gt;&gt;layoutControlItem29.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem35.Name" xml:space="preserve">
-    <value>layoutControlItem35</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem35.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

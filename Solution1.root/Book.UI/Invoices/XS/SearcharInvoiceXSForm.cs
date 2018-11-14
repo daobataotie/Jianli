@@ -49,15 +49,13 @@ namespace Book.UI.Invoices.XS
             this.StartPosition = FormStartPosition.CenterParent;
         }
 
-        public SearcharInvoiceXSForm(Model.Customer customer, bool CustomerDisallowEdit)
+        public SearcharInvoiceXSForm(Model.Customer customer)
             : this()
         {
             this.newChooseCustom.EditValue = customer;
-            if (CustomerDisallowEdit)
-            {
-                this.newChooseCustom.Enabled = false;
-                this.LoadSearch = false;
-            }
+
+            this.newChooseCustom.Enabled = false;
+            this.LoadSearch = false;
         }
 
         private void spb_search_Click(object sender, EventArgs e)

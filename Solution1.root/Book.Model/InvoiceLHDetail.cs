@@ -14,21 +14,21 @@ namespace Book.Model
     [Serializable]
     public partial class InvoiceLHDetail
     {
-        public string ProductShortId
-        {
-            get
-            {
-                if (Product != null)
-                {
-                    if (Product.Id.Contains("{"))
-                        return Product.Id.Substring(0, (Product.Id.IndexOf('{')));
-                    else
-                        return Product.Id;
-                }
-                else
-                    return "";
-            }
-        }
+        //public string ProductShortId
+        //{
+        //    get
+        //    {
+        //        if (Product != null)
+        //        {
+        //            if (Product.Id.Contains("{"))
+        //                return Product.Id.Substring(0, (Product.Id.IndexOf('{')));
+        //            else
+        //                return Product.Id;
+        //        }
+        //        else
+        //            return "";
+        //    }
+        //}
 
         public string InvoiceXOCusId
         {
@@ -38,7 +38,7 @@ namespace Book.Model
             }
         }
 
-        public static string PRO_ProductShortId = "ProductShortId";
+        //public static string PRO_ProductShortId = "ProductShortId";
 
         public static string PRO_InvoiceXOCusId = "InvoiceXOCusId";
     }

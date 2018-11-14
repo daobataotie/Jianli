@@ -48,6 +48,8 @@ namespace Book.UI.Settings.BasicData.ProductCategories
                 this.gridColumn3.VisibleIndex = 2;
                 this.gridColumn2.VisibleIndex = 1;
                 this.tag = 1;
+
+                this.Text = "商品最小領料數量";
             }
         }
         #endregion

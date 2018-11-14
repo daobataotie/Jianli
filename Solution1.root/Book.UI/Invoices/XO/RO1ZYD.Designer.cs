@@ -28,9 +28,9 @@ namespace Book.UI.Invoices.XO
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RO1ZYD));
             DevExpress.XtraReports.UI.XRSummary xrSummary1 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.XtraReports.UI.XRSummary xrSummary2 = new DevExpress.XtraReports.UI.XRSummary();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RO1ZYD));
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.xrLine1 = new DevExpress.XtraReports.UI.XRLine();
             this.lblRemark = new DevExpress.XtraReports.UI.XRRichText();
@@ -99,6 +99,8 @@ namespace Book.UI.Invoices.XO
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
+            this.xrLabel23 = new DevExpress.XtraReports.UI.XRLabel();
+            this.lbl_Note = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.lblRemark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
@@ -107,6 +109,8 @@ namespace Book.UI.Invoices.XO
             // Detail
             // 
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.lbl_Note,
+            this.xrLabel23,
             this.xrLine1,
             this.lblRemark,
             this.xrLabel3,
@@ -729,6 +733,22 @@ namespace Book.UI.Invoices.XO
             resources.ApplyResources(this.bottomMarginBand1, "bottomMarginBand1");
             this.bottomMarginBand1.Name = "bottomMarginBand1";
             // 
+            // xrLabel23
+            // 
+            resources.ApplyResources(this.xrLabel23, "xrLabel23");
+            this.xrLabel23.Name = "xrLabel23";
+            this.xrLabel23.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel23.StylePriority.UseFont = false;
+            this.xrLabel23.StylePriority.UseTextAlignment = false;
+            // 
+            // lbl_Note
+            // 
+            resources.ApplyResources(this.lbl_Note, "lbl_Note");
+            this.lbl_Note.Name = "lbl_Note";
+            this.lbl_Note.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lbl_Note.StylePriority.UseFont = false;
+            this.lbl_Note.StylePriority.UseTextAlignment = false;
+            // 
             // RO1ZYD
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -741,9 +761,9 @@ namespace Book.UI.Invoices.XO
             this.bottomMarginBand1});
             resources.ApplyResources(this, "$this");
             this.ExportOptions.Xls.SheetName = resources.GetString("RO1ZYD.ExportOptions.Xls.SheetName");
-            this.Margins = new System.Drawing.Printing.Margins(145, 84, 89, 79);
+            this.Margins = new System.Drawing.Printing.Margins(143, 82, 89, 79);
             this.PageHeight = 1400;
-            this.PageWidth = 2149;
+            this.PageWidth = 2146;
             this.PaperKind = System.Drawing.Printing.PaperKind.Custom;
             this.Version = "10.2";
             ((System.ComponentModel.ISupportInitialize)(this.lblRemark)).EndInit();
@@ -823,5 +843,7 @@ namespace Book.UI.Invoices.XO
         private DevExpress.XtraReports.UI.XRLabel xrLabel16;
         private DevExpress.XtraReports.UI.XRLabel xrLabel10;
         private DevExpress.XtraReports.UI.XRLabel xrLabel8;
+        private DevExpress.XtraReports.UI.XRLabel lbl_Note;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel23;
     }
 }

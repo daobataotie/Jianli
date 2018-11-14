@@ -33,6 +33,7 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.checkEditChadanSave = new DevExpress.XtraEditors.CheckEdit();
             this.txt_Moshu = new DevExpress.XtraEditors.TextEdit();
             this.txt_Paihe = new DevExpress.XtraEditors.TextEdit();
             this.txt_Chakuang = new DevExpress.XtraEditors.TextEdit();
@@ -151,6 +152,7 @@
             this.layoutControlItem33 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem34 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem35 = new DevExpress.XtraLayout.LayoutControlItem();
             this.bindingSourceDetails = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSourceProductId = new System.Windows.Forms.BindingSource(this.components);
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -168,12 +170,11 @@
             this.barBtnMaterialExit = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItemJieAn = new DevExpress.XtraBars.BarButtonItem();
             this.layoutControlItem29 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.checkEditChadanSave = new DevExpress.XtraEditors.CheckEdit();
-            this.layoutControlItem35 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEditChadanSave.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Moshu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Paihe.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Chakuang.Properties)).BeginInit();
@@ -253,6 +254,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem33)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem34)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDetails)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceProductId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
@@ -261,8 +263,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEditChadanSave.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -337,6 +337,14 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(47, 255, 250, 350);
             this.layoutControl1.Root = this.layoutControlGroup1;
+            // 
+            // checkEditChadanSave
+            // 
+            resources.ApplyResources(this.checkEditChadanSave, "checkEditChadanSave");
+            this.checkEditChadanSave.MenuManager = this.barManager1;
+            this.checkEditChadanSave.Name = "checkEditChadanSave";
+            this.checkEditChadanSave.Properties.Caption = resources.GetString("checkEditChadanSave.Properties.Caption");
+            this.checkEditChadanSave.StyleController = this.layoutControl1;
             // 
             // txt_Moshu
             // 
@@ -1322,6 +1330,17 @@
             this.emptySpaceItem3.Size = new System.Drawing.Size(280, 25);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
+            // layoutControlItem35
+            // 
+            this.layoutControlItem35.Control = this.checkEditChadanSave;
+            resources.ApplyResources(this.layoutControlItem35, "layoutControlItem35");
+            this.layoutControlItem35.Location = new System.Drawing.Point(562, 286);
+            this.layoutControlItem35.Name = "layoutControlItem35";
+            this.layoutControlItem35.Size = new System.Drawing.Size(87, 26);
+            this.layoutControlItem35.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem35.TextToControlDistance = 0;
+            this.layoutControlItem35.TextVisible = false;
+            // 
             // emptySpaceItem1
             // 
             resources.ApplyResources(this.emptySpaceItem1, "emptySpaceItem1");
@@ -1444,25 +1463,6 @@
             this.layoutControlItem29.TextSize = new System.Drawing.Size(51, 14);
             this.layoutControlItem29.TextToControlDistance = 5;
             // 
-            // checkEditChadanSave
-            // 
-            resources.ApplyResources(this.checkEditChadanSave, "checkEditChadanSave");
-            this.checkEditChadanSave.MenuManager = this.barManager1;
-            this.checkEditChadanSave.Name = "checkEditChadanSave";
-            this.checkEditChadanSave.Properties.Caption = resources.GetString("checkEdit1.Properties.Caption");
-            this.checkEditChadanSave.StyleController = this.layoutControl1;
-            // 
-            // layoutControlItem35
-            // 
-            this.layoutControlItem35.Control = this.checkEditChadanSave;
-            resources.ApplyResources(this.layoutControlItem35, "layoutControlItem35");
-            this.layoutControlItem35.Location = new System.Drawing.Point(562, 286);
-            this.layoutControlItem35.Name = "layoutControlItem35";
-            this.layoutControlItem35.Size = new System.Drawing.Size(87, 26);
-            this.layoutControlItem35.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem35.TextToControlDistance = 0;
-            this.layoutControlItem35.TextVisible = false;
-            // 
             // EditForm
             // 
             resources.ApplyResources(this, "$this");
@@ -1475,6 +1475,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.checkEditChadanSave.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Moshu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Paihe.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Chakuang.Properties)).EndInit();
@@ -1554,6 +1555,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem33)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem34)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDetails)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceProductId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
@@ -1562,8 +1564,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEditChadanSave.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -22,10 +22,10 @@ namespace Book.UI.Invoices.LH
             lbl_InvoiceDate.Text = invoice.InvoiceDate.Value.ToString("yyyy-MM-dd");
 
             TC_No.DataBindings.Add("Text", this.DataSource, Model.InvoiceLHDetail.PRO_Number);
-            TCProductShutId.DataBindings.Add("Text", this.DataSource, Model.InvoiceLHDetail.PRO_ProductShortId);
             TCProductId.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_Id);
+            TCKehuPinhao.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_CustomerProductName);
             TC_InvoiceXOCusId.DataBindings.Add("Text", this.DataSource, Model.InvoiceLHDetail.PRO_InvoiceXOCusId);
-            TCCustomerProductName.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_CustomerProductName);
+            TCCustomerProductName.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProductName);
             TC_EstimateQty.DataBindings.Add("Text", this.DataSource, Model.InvoiceLHDetail.PRO_EstimateQty);
             TCProductUnit.DataBindings.Add("Text", this.DataSource, Model.InvoiceLHDetail.PRO_ProductUnit);
             TC_BoxCapacityQty.DataBindings.Add("Text", this.DataSource, Model.InvoiceLHDetail.PRO_BoxCapacityQty);
@@ -38,7 +38,7 @@ namespace Book.UI.Invoices.LH
             //lbl_EmpShechu.Text = invoice.EmpShechu == null ? "" : invoice.EmpShechu.EmployeeName;
             //lbl_EmpPinjian.Text=invoice.EmpPinjian==null?"":invoice.EmpPinjian.EmployeeName;
             //lbl_EmpDepot.Text = invoice.EmpDepot == null ? "" : invoice.EmpDepot.EmployeeName;
-            
+
         }
     }
 }

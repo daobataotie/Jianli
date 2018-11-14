@@ -289,7 +289,7 @@ namespace Book.UI.Invoices.LH
                 return;
             }
 
-            XS.SearcharInvoiceXSForm f = new Book.UI.Invoices.XS.SearcharInvoiceXSForm(this.ncc_Customer.EditValue as Model.Customer, true);
+            XS.SearcharInvoiceXSForm f = new Book.UI.Invoices.XS.SearcharInvoiceXSForm(this.ncc_Customer.EditValue as Model.Customer);
             if (f.ShowDialog(this) == DialogResult.OK)
             {
                 Model.InvoiceLHDetail model;

@@ -4571,6 +4571,13 @@
       <DependentUpon>RO1ZYD.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\IP\EditForm.resx">
+      <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\IP\RO.resx">
+      <DependentUpon>RO.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Invoices\LH\ConditionForm.resx">
       <DependentUpon>ConditionForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -9940,6 +9947,10 @@
       <SubType>Designer</SubType>
       <DependentUpon>ListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Settings\BasicData\Port\EditForm.resx">
+      <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\ProcessCategory\EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -11752,6 +11763,18 @@
     <Compile Include="Invoices\CT\RO1ZYD.Designer.cs">
       <DependentUpon>RO1ZYD.cs</DependentUpon>
     </Compile>
+    <Compile Include="Invoices\IP\EditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoices\IP\EditForm.Designer.cs">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\IP\RO.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Invoices\IP\RO.Designer.cs">
+      <DependentUpon>RO.cs</DependentUpon>
+    </Compile>
     <Compile Include="Invoices\LH\ConditionForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -12993,6 +13016,12 @@
     </Compile>
     <Compile Include="Settings\BasicData\Employees\AttendanceJJDays.Designer.cs">
       <DependentUpon>AttendanceJJDays.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\BasicData\Port\EditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\BasicData\Port\EditForm.Designer.cs">
+      <DependentUpon>EditForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings\BasicData\ProductCategories\Material.cs">
       <SubType>Form</SubType>

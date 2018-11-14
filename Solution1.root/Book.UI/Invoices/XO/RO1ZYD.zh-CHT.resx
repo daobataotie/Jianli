@@ -118,16 +118,38 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lbl_Note.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lbl_Note.Font" type="System.Drawing.Font, System.Drawing">
+    <value>新細明體, 9.75pt</value>
+  </data>
+  <assembly alias="DevExpress.Data.v10.2" name="DevExpress.Data.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="lbl_Note.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrLabel23.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel23.Font" type="System.Drawing.Font, System.Drawing">
+    <value>新細明體, 9.75pt</value>
+  </data>
+  <data name="xrLabel23.Text" xml:space="preserve">
+    <value>備註：</value>
+  </data>
+  <data name="xrLabel23.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
   <data name="xrLine1.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
   <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="xrLine1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0.000847816467, 128.988419</value>
+    <value>0, 184.551071</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="xrLine1.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>1919.99915, 9.225845</value>
+    <value>1919.999, 23.9131927</value>
   </data>
   <data name="lblRemark.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>164.602676, 78.3167648</value>
@@ -147,7 +169,6 @@
   <data name="xrLabel3.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>164.602676, 50.67164</value>
   </data>
-  <assembly alias="DevExpress.Data.v10.2" name="DevExpress.Data.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="xrLabel3.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>TopLeft</value>
   </data>
@@ -170,7 +191,7 @@
     <value>MiddleCenter</value>
   </data>
   <data name="Detail.HeightF" type="System.Single, mscorlib">
-    <value>138.214264</value>
+    <value>208.464325</value>
   </data>
   <data name="xrLabel22.Dpi" type="System.Single, mscorlib">
     <value>254</value>

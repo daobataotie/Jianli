@@ -1051,11 +1051,11 @@ namespace Book.UI.produceManager.MRSHeader
                             materials.PronoteHeaderID = pronoteHeader.PronoteHeaderID;
                             materials.PronoteQuantity = Math.Truncate(Convert.ToDouble(component.UseQuantity * pronoteHeader.DetailsSum * (1 + count) * (1 + 0.01 * (component.SubLoseRate == null ? 0 : component.SubLoseRate))) * 10) / 10;    //保留一位小数 不四舍五入
                             materials.Product = new BL.ProductManager().Get(materials.ProductId);
-                            //if (materials.Product != null && this.mrsheader.GetSourceType == "自製") //依照最小领料单位取整数倍
-                            //{
-                            //    if (materials.Product.ProductCategory != null && Convert.ToDouble(materials.Product.ProductCategory.ProductMinQuantity) > 0)
-                            //        materials.PronoteQuantity = Math.Ceiling(Convert.ToDouble(materials.PronoteQuantity / materials.Product.ProductCategory.ProductMinQuantity)) * materials.Product.ProductCategory.ProductMinQuantity;
-                            //}
+                            if (materials.Product != null && this.mrsheader.GetSourceType == "自製") //依照最小领料单位取整数倍
+                            {
+                                if (materials.Product.ProductCategory != null && Convert.ToDouble(materials.Product.ProductCategory.ProductMinQuantity) > 0)
+                                    materials.PronoteQuantity = Math.Ceiling(Convert.ToDouble(materials.PronoteQuantity / materials.Product.ProductCategory.ProductMinQuantity)) * materials.Product.ProductCategory.ProductMinQuantity;
+                            }
                             materials.ProductUnit = component.Unit;
                             no = no + 1;
                             materials.Inumber = no;
@@ -1067,7 +1067,7 @@ namespace Book.UI.produceManager.MRSHeader
                         if (this.mrsheader.SourceType == "4")      //自制（组装）
                         {
 
-                            IList<Model.BomPackageDetails> packageList = this.bomPackageDetailsManager.DataReaderBind<Model.BomPackageDetails>(" SELECT ProductId,Quantity,PackageUnit  FROM   [bomPackageDetails] WHERE [BomId] = @BomId ", sqlpar, CommandType.Text);
+                            IList<Model.BomPackageDetails> packageList = this.bomPackageDetailsManager.DataReaderBind<Model.BomPackageDetails>(" SELECT ProductId,Quantity,UseQuantity,PackageUnit  FROM   [bomPackageDetails] WHERE [BomId] = @BomId ", sqlpar, CommandType.Text);
                             if (packageList != null && packageList.Count > 0)
                             {
                                 foreach (Model.BomPackageDetails item in packageList)
@@ -1089,7 +1089,9 @@ namespace Book.UI.produceManager.MRSHeader
                                     //    materials.PronoteQuantity = double.Parse(this.calcEditQuantity.Value.ToString()) / item.UseQuantity;
                                     //}
 
-                                    materials.PronoteQuantity = Math.Round(Convert.ToDouble(pronoteHeader.DetailsSum * item.Quantity), 4);
+                                    //materials.PronoteQuantity = Math.Round(Convert.ToDouble(pronoteHeader.DetailsSum * item.Quantity), 4);
+                                    //2018年11月14日21:59:25：改为用“包装用量”
+                                    materials.PronoteQuantity = Math.Round(Convert.ToDouble(pronoteHeader.DetailsSum * item.UseQuantity), 4);
 
                                     materials.Product = new BL.ProductManager().Get(materials.ProductId);
                                     //if (materials.Product != null && this.mrsheader.GetSourceType == "自製")
@@ -1098,7 +1100,8 @@ namespace Book.UI.produceManager.MRSHeader
                                     //        materials.PronoteQuantity = Math.Ceiling(Convert.ToDouble(materials.PronoteQuantity / materials.Product.ProductCategory.ProductMinQuantity)) * materials.Product.ProductCategory.ProductMinQuantity;
                                     //}
                                     materials.ProductUnit = item.PackageUnit;
-                                    materials.MPSQuantity = pronoteHeader.DetailsSum * item.Quantity;
+                                    //materials.MPSQuantity = pronoteHeader.DetailsSum * item.Quantity;
+                                    materials.MPSQuantity = pronoteHeader.DetailsSum * item.UseQuantity;
                                     // materials.MPS headerId = mrsdetail.MRSHeader.MPSheaderId;
                                     no = no + 1;
                                     materials.Inumber = no;

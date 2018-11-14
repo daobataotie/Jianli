@@ -32,6 +32,7 @@ namespace Book.UI.Invoices.XO
             DevExpress.XtraReports.UI.XRSummary xrSummary2 = new DevExpress.XtraReports.UI.XRSummary();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RO_NewNoPrice));
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.lblRemark = new DevExpress.XtraReports.UI.XRRichText();
             this.lbl_ProductInternalDesc = new DevExpress.XtraReports.UI.XRLabel();
             this.lbl_ProductName = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLine1 = new DevExpress.XtraReports.UI.XRLine();
@@ -83,15 +84,18 @@ namespace Book.UI.Invoices.XO
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
-            this.lblRemark = new DevExpress.XtraReports.UI.XRRichText();
+            this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
+            this.lbl_Note = new DevExpress.XtraReports.UI.XRLabel();
+            ((System.ComponentModel.ISupportInitialize)(this.lblRemark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblRemark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Detail
             // 
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.lbl_Note,
+            this.xrLabel2,
             this.lblRemark,
             this.lbl_ProductInternalDesc,
             this.lbl_ProductName,
@@ -101,6 +105,12 @@ namespace Book.UI.Invoices.XO
             resources.ApplyResources(this.Detail, "Detail");
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
+            // 
+            // lblRemark
+            // 
+            resources.ApplyResources(this.lblRemark, "lblRemark");
+            this.lblRemark.Name = "lblRemark";
+            this.lblRemark.SerializableRtfString = resources.GetString("lblRemark.SerializableRtfString");
             // 
             // lbl_ProductInternalDesc
             // 
@@ -579,11 +589,21 @@ namespace Book.UI.Invoices.XO
             resources.ApplyResources(this.bottomMarginBand1, "bottomMarginBand1");
             this.bottomMarginBand1.Name = "bottomMarginBand1";
             // 
-            // lblRemark
+            // xrLabel2
             // 
-            resources.ApplyResources(this.lblRemark, "lblRemark");
-            this.lblRemark.Name = "lblRemark";
-            this.lblRemark.SerializableRtfString = resources.GetString("lblRemark.SerializableRtfString");
+            resources.ApplyResources(this.xrLabel2, "xrLabel2");
+            this.xrLabel2.Name = "xrLabel2";
+            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel2.StylePriority.UseFont = false;
+            this.xrLabel2.StylePriority.UseTextAlignment = false;
+            // 
+            // lbl_Note
+            // 
+            resources.ApplyResources(this.lbl_Note, "lbl_Note");
+            this.lbl_Note.Name = "lbl_Note";
+            this.lbl_Note.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lbl_Note.StylePriority.UseFont = false;
+            this.lbl_Note.StylePriority.UseTextAlignment = false;
             // 
             // RO_NewNoPrice
             // 
@@ -601,9 +621,9 @@ namespace Book.UI.Invoices.XO
             this.PageHeight = 2794;
             this.PageWidth = 2159;
             this.Version = "10.2";
+            ((System.ComponentModel.ISupportInitialize)(this.lblRemark)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblRemark)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -663,5 +683,7 @@ namespace Book.UI.Invoices.XO
         private DevExpress.XtraReports.UI.XRLabel lbl_Bibie;
         private DevExpress.XtraReports.UI.XRLabel xrLabel8;
         private DevExpress.XtraReports.UI.XRRichText lblRemark;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel2;
+        private DevExpress.XtraReports.UI.XRLabel lbl_Note;
     }
 }

@@ -117,11 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="lbl_Note.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>273.6428, 212.015</value>
+  </data>
+  <data name="xrLabel2.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>110.479446, 212.015</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="xrLabel2.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>163.163345, 53.1283722</value>
+  </data>
   <data name="lblRemark.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 9.75pt</value>
   </data>
-  <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="lblRemark.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>273.6428, 161.343353</value>
   </data>
@@ -135,17 +144,23 @@
   <data name="lbl_ProductInternalDesc.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 9.75pt</value>
   </data>
+  <data name="lbl_ProductInternalDesc.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1783.52051, 50.0000229</value>
+  </data>
   <data name="lbl_ProductInternalDesc.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>TopLeft</value>
   </data>
   <data name="lbl_ProductName.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 9.75pt</value>
   </data>
+  <data name="lbl_ProductName.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1783.52051, 50.0000153</value>
+  </data>
   <data name="lbl_ProductName.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>TopLeft</value>
   </data>
   <data name="xrLine1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0.000244140625, 213.655075</value>
+    <value>0.000888188661, 265.143372</value>
   </data>
   <data name="xrLabel3.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 9.75pt</value>
@@ -176,10 +191,10 @@
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Detail.HeightF" type="System.Single, mscorlib">
-    <value>258.845947</value>
+    <value>299.369232</value>
   </data>
   <data name="lblTotalJine.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1371.17871, 13.0000143</value>
+    <value>1504.44336, 15.0000534</value>
   </data>
   <data name="lblTotalJine.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>209.579346, 49.9308968</value>
@@ -188,13 +203,13 @@
     <value>1907, 13</value>
   </data>
   <data name="xrLabelUnit.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1580.758, 13</value>
+    <value>1372.14587, 13</value>
   </data>
   <data name="xrLabelUnit.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>132.297485, 49.9308968</value>
   </data>
   <data name="xrLabelCount.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1139.21338, 13.0000143</value>
+    <value>1140.18054, 13</value>
   </data>
   <data name="xrLabelCount.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>231.965332, 49.9308968</value>
@@ -307,8 +322,11 @@
   <data name="xrTableCell12.Text" xml:space="preserve">
     <value>數量</value>
   </data>
-  <data name="xrTableCell13.Text" xml:space="preserve">
+  <data name="xrTableCell1.Text" xml:space="preserve">
     <value>單位</value>
+  </data>
+  <data name="xrTableCell13.Text" xml:space="preserve">
+    <value>金額</value>
   </data>
   <data name="xrTableCell3.Text" xml:space="preserve">
     <value>預交日期</value>
