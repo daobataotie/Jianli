@@ -2462,6 +2462,7 @@ namespace Book.UI.Settings.ProduceManager
                         this._bomParmentPartInfo.CreateMan = BL.V.ActiveOperator.OperatorName;
                         this._bomParmentPartInfo.EffectiveDate = DateTime.Now;
                         this._bomParmentPartInfo.Id = this.bomParmentInfoManager.GetId();
+                        this._bomParmentPartInfo.DefaultQuantity = 1;
                         this.action = "insert";
                     }
                     this.Refresh();

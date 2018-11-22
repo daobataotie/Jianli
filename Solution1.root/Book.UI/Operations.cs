@@ -744,6 +744,9 @@ namespace Book.UI
             //¸Û¿Ú
             operations.Add("Settings.BasicData.Port.EditForm", (D1)delegate(System.Windows.Forms.Form form) { M1("Settings.BasicData.Port.EditForm", form); });
 
+            //…RÂÊ
+            operations.Add("Settings.BasicData.ExchangeRate.EditForm", (D1)delegate(System.Windows.Forms.Form form) { M1("Settings.BasicData.ExchangeRate.EditForm", form); });
+
             //PackingList
             operations.Add("Invoices.IP.EditForm", (D1)delegate(System.Windows.Forms.Form form) { M1("Invoices.IP.EditForm", form); });
 

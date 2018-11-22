@@ -39,6 +39,7 @@ namespace Book.UI.Settings.ProduceManager
             this.TCUseQuantity = new DevExpress.XtraReports.UI.XRTableCell();
             this.TCSunhaolv = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell14 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrRichText1 = new DevExpress.XtraReports.UI.XRRichText();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
@@ -62,16 +63,17 @@ namespace Book.UI.Settings.ProduceManager
             this.lblBomId = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.lblReportName = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
             this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
-            this.xrRichText1 = new DevExpress.XtraReports.UI.XRRichText();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
-            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
-            this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
+            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
+            this.xrTableCell8 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.TCProId = new DevExpress.XtraReports.UI.XRTableCell();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Detail
@@ -101,6 +103,7 @@ namespace Book.UI.Settings.ProduceManager
             // 
             this.xrTableRow2.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.TCInumber,
+            this.TCProId,
             this.TCProductName,
             this.TCMaterial,
             this.TCProductUnit,
@@ -117,7 +120,7 @@ namespace Book.UI.Settings.ProduceManager
             this.TCInumber.Name = "TCInumber";
             this.TCInumber.StylePriority.UseTextAlignment = false;
             this.TCInumber.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.TCInumber.Weight = 0.33152319836504829;
+            this.TCInumber.Weight = 0.31155191413923627;
             // 
             // TCProductName
             // 
@@ -126,7 +129,7 @@ namespace Book.UI.Settings.ProduceManager
             this.TCProductName.StylePriority.UseTextAlignment = false;
             this.TCProductName.Text = "子件名稱";
             this.TCProductName.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.TCProductName.Weight = 1.0199712381552615;
+            this.TCProductName.Weight = 0.72567553248342376;
             // 
             // TCMaterial
             // 
@@ -135,7 +138,7 @@ namespace Book.UI.Settings.ProduceManager
             this.TCMaterial.StylePriority.UseTextAlignment = false;
             this.TCMaterial.Text = "原料種類";
             this.TCMaterial.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.TCMaterial.Weight = 0.31011571079488276;
+            this.TCMaterial.Weight = 0.23422470634631037;
             // 
             // TCProductUnit
             // 
@@ -166,6 +169,14 @@ namespace Book.UI.Settings.ProduceManager
             this.xrTableCell14.Name = "xrTableCell14";
             this.xrTableCell14.Text = "商品描述";
             this.xrTableCell14.Weight = 0.69617817140456217;
+            // 
+            // xrRichText1
+            // 
+            this.xrRichText1.Dpi = 254F;
+            this.xrRichText1.LocationFloat = new DevExpress.Utils.PointFloat(0.0003229777F, 0F);
+            this.xrRichText1.Name = "xrRichText1";
+            this.xrRichText1.SerializableRtfString = resources.GetString("xrRichText1.SerializableRtfString");
+            this.xrRichText1.SizeF = new System.Drawing.SizeF(461.1549F, 63.5F);
             // 
             // TopMargin
             // 
@@ -238,6 +249,7 @@ namespace Book.UI.Settings.ProduceManager
             // 
             this.xrTableRow1.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.xrTableCell1,
+            this.xrTableCell8,
             this.xrTableCell4,
             this.xrTableCell2,
             this.xrTableCell3,
@@ -253,7 +265,7 @@ namespace Book.UI.Settings.ProduceManager
             this.xrTableCell1.Dpi = 254F;
             this.xrTableCell1.Name = "xrTableCell1";
             this.xrTableCell1.Text = "序號";
-            this.xrTableCell1.Weight = 0.33152319836504829;
+            this.xrTableCell1.Weight = 0.311551891103961;
             // 
             // xrTableCell4
             // 
@@ -262,7 +274,7 @@ namespace Book.UI.Settings.ProduceManager
             this.xrTableCell4.StylePriority.UseTextAlignment = false;
             this.xrTableCell4.Text = "子件名稱";
             this.xrTableCell4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.xrTableCell4.Weight = 1.0199712381552615;
+            this.xrTableCell4.Weight = 0.7256754518599603;
             // 
             // xrTableCell2
             // 
@@ -271,7 +283,7 @@ namespace Book.UI.Settings.ProduceManager
             this.xrTableCell2.StylePriority.UseTextAlignment = false;
             this.xrTableCell2.Text = "原料種類";
             this.xrTableCell2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.xrTableCell2.Weight = 0.31011571079488276;
+            this.xrTableCell2.Weight = 0.2342247984874116;
             // 
             // xrTableCell3
             // 
@@ -397,6 +409,19 @@ namespace Book.UI.Settings.ProduceManager
             this.lblReportName.StylePriority.UseTextAlignment = false;
             this.lblReportName.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
+            // xrLabel7
+            // 
+            this.xrLabel7.Dpi = 254F;
+            this.xrLabel7.Font = new System.Drawing.Font("新細明體", 12F);
+            this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(0F, 251.1425F);
+            this.xrLabel7.Name = "xrLabel7";
+            this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel7.SizeF = new System.Drawing.SizeF(254F, 69.00333F);
+            this.xrLabel7.StylePriority.UseFont = false;
+            this.xrLabel7.StylePriority.UseTextAlignment = false;
+            this.xrLabel7.Text = "子件訊息：";
+            this.xrLabel7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
             // PageFooter
             // 
             this.PageFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
@@ -413,14 +438,6 @@ namespace Book.UI.Settings.ProduceManager
             this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrPageInfo1.SizeF = new System.Drawing.SizeF(113.7708F, 58.42F);
             // 
-            // xrRichText1
-            // 
-            this.xrRichText1.Dpi = 254F;
-            this.xrRichText1.LocationFloat = new DevExpress.Utils.PointFloat(0.0003229777F, 0F);
-            this.xrRichText1.Name = "xrRichText1";
-            this.xrRichText1.SerializableRtfString = resources.GetString("xrRichText1.SerializableRtfString");
-            this.xrRichText1.SizeF = new System.Drawing.SizeF(461.1549F, 63.5F);
-            // 
             // ReportFooter
             // 
             this.ReportFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
@@ -430,6 +447,13 @@ namespace Book.UI.Settings.ProduceManager
             this.ReportFooter.HeightF = 127.4233F;
             this.ReportFooter.Name = "ReportFooter";
             // 
+            // xrSubreport2
+            // 
+            this.xrSubreport2.Dpi = 254F;
+            this.xrSubreport2.LocationFloat = new DevExpress.Utils.PointFloat(0.0002624194F, 0F);
+            this.xrSubreport2.Name = "xrSubreport2";
+            this.xrSubreport2.SizeF = new System.Drawing.SizeF(1987.229F, 63.71163F);
+            // 
             // xrSubreport1
             // 
             this.xrSubreport1.Dpi = 254F;
@@ -437,25 +461,20 @@ namespace Book.UI.Settings.ProduceManager
             this.xrSubreport1.Name = "xrSubreport1";
             this.xrSubreport1.SizeF = new System.Drawing.SizeF(1987.229F, 63.71163F);
             // 
-            // xrLabel7
+            // xrTableCell8
             // 
-            this.xrLabel7.Dpi = 254F;
-            this.xrLabel7.Font = new System.Drawing.Font("新細明體", 12F);
-            this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(0F, 251.1425F);
-            this.xrLabel7.Name = "xrLabel7";
-            this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel7.SizeF = new System.Drawing.SizeF(254F, 69.00333F);
-            this.xrLabel7.StylePriority.UseFont = false;
-            this.xrLabel7.StylePriority.UseTextAlignment = false;
-            this.xrLabel7.Text = "子件訊息：";
-            this.xrLabel7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.xrTableCell8.Dpi = 254F;
+            this.xrTableCell8.Name = "xrTableCell8";
+            this.xrTableCell8.Text = "商品編號";
+            this.xrTableCell8.Weight = 0.39015800586385974;
             // 
-            // xrSubreport2
+            // TCProId
             // 
-            this.xrSubreport2.Dpi = 254F;
-            this.xrSubreport2.LocationFloat = new DevExpress.Utils.PointFloat(0.0002624194F, 0F);
-            this.xrSubreport2.Name = "xrSubreport2";
-            this.xrSubreport2.SizeF = new System.Drawing.SizeF(1987.229F, 63.71163F);
+            this.TCProId.Dpi = 254F;
+            this.TCProId.Name = "TCProId";
+            this.TCProId.StylePriority.UseTextAlignment = false;
+            this.TCProId.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.TCProId.Weight = 0.390157994346222;
             // 
             // ROBOM
             // 
@@ -476,8 +495,8 @@ namespace Book.UI.Settings.ProduceManager
             this.SnapGridSize = 31.75F;
             this.Version = "10.2";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -524,5 +543,7 @@ namespace Book.UI.Settings.ProduceManager
         private DevExpress.XtraReports.UI.XRSubreport xrSubreport1;
         private DevExpress.XtraReports.UI.XRLabel xrLabel7;
         private DevExpress.XtraReports.UI.XRSubreport xrSubreport2;
+        private DevExpress.XtraReports.UI.XRTableCell TCProId;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell8;
     }
 }

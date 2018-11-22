@@ -270,5 +270,11 @@
      select convert(varchar(20),InvoiceYjrq,23) from InvoiceXO where InvoiceId=#value#
       ]]>
     </select>
+
+    <select id="GetCurrencyByInvoiceId" resultClass="string" parameterClass="string">
+      <![CDATA[
+      select Currency from InvoiceXO where InvoiceId=#value#
+      ]]>
+    </select>
   </statements>
 </sqlMap>

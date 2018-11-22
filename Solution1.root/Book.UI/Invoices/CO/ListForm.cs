@@ -36,7 +36,7 @@ namespace Book.UI.Invoices.CO
 
         private void ListForm_Load(object sender, EventArgs e)
         {
-            this.popupMenu2.AddItem(this.barButtonItem1);
+            //this.popupMenu2.AddItem(this.barButtonItem1);
         }
 
         protected override void LoadInvoices(DateTime datetime1, DateTime datetime2)

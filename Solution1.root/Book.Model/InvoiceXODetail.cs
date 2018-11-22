@@ -93,6 +93,8 @@ namespace Book.Model
             }
         }
 
+        public string ProId { get; set; }
+
         public readonly static string PRO_InvoiceDate = "InvoiceDate";
 
         public readonly static string PRO_InvoiceYjrq = "InvoiceYjrq";

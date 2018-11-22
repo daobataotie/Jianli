@@ -1573,6 +1573,9 @@ namespace Book.UI.produceManager.MRSHeader
                             this._produceOtherCompactDetail.OtherCompactCount = cc.CheckNums.HasValue ? cc.CheckNums.Value : 0;
                         else
                             this._produceOtherCompactDetail.OtherCompactCount = cc.MRSdetailssum.HasValue ? cc.MRSdetailssum.Value : 0;
+                        //根据商品类别的最小领料单位计算最小领料数量
+                        if (cc.Product.ProductCategory != null && Convert.ToDouble(cc.Product.ProductCategory.ProductMinQuantity) > 0)
+                            this._produceOtherCompactDetail.OtherCompactCount = Math.Ceiling(Convert.ToDouble(this._produceOtherCompactDetail.OtherCompactCount / cc.Product.ProductCategory.ProductMinQuantity)) * cc.Product.ProductCategory.ProductMinQuantity;
 
                         this._produceOtherCompactDetail.OtherCompactPrice = BL.SupplierProductManager.CountPrice(new BL.SupplierProductManager().GetPriceRangeForSupAndProduct(groups.Key, this._produceOtherCompactDetail.ProductId), this._produceOtherCompactDetail.OtherCompactCount.Value);
 
@@ -1591,8 +1594,8 @@ namespace Book.UI.produceManager.MRSHeader
                         }
 
                         //关联物料需求详细生成委外合同,用到物料需求详细主键编号
-                        this._produceOtherCompactDetail.MRSdetailsId = cc.MRSdetailsId;
-
+                        this._produceOtherCompactDetail.MRSdetailsId = cc.MRSdetailsId; 
+                       
                         this._produceOtherCompact.Details.Add(this._produceOtherCompactDetail);
 
                         Model.Product pt = productManager.Get(cc.ProductId);
@@ -1613,6 +1616,10 @@ namespace Book.UI.produceManager.MRSHeader
                                 this._produceOtherCompactMaterial.ProduceQuantity = cc.CheckNums * com.UseQuantity * (1 + 0.01 * (com.SubLoseRate == null ? 0 : com.SubLoseRate));
                             else
                                 this._produceOtherCompactMaterial.ProduceQuantity = cc.MRSdetailssum * com.UseQuantity * (1 + 0.01 * (com.SubLoseRate == null ? 0 : com.SubLoseRate));
+                            //根据商品类别的最小领料单位计算最小领料数量
+                            if (com.Product.ProductCategory != null && Convert.ToDouble(com.Product.ProductCategory.ProductMinQuantity) > 0)
+                                this._produceOtherCompactMaterial.ProduceQuantity = Math.Ceiling(Convert.ToDouble(this._produceOtherCompactMaterial.ProduceQuantity / com.Product.ProductCategory.ProductMinQuantity)) * com.Product.ProductCategory.ProductMinQuantity;
+
                             this._produceOtherCompactMaterial.ProductId = com.Product.ProductId;
                             this._produceOtherCompactMaterial.Product = com.Product;
                             this._produceOtherCompactMaterial.ProductUnit = com.Unit;

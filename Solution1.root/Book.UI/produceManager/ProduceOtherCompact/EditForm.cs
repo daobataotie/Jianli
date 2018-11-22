@@ -691,6 +691,33 @@ namespace Book.UI.produceManager.ProduceOtherCompact
                         price = BL.SupplierProductManager.CountPrice(PriceRange, Convert.ToDouble(quantity));
                         this.gridView1.SetRowCellValue(e.RowHandle, this.ColOtherCompactPrice, price);
                     }
+
+                    //数量修改，对应的子件数量也要对应修改
+                    Model.ProduceOtherCompactDetail detailModel = this.bindingSourceDetails.Current as Model.ProduceOtherCompactDetail;
+                    if (detailModel != null && this._produceOtherCompact.DetailMaterial.Any(DM => DM.ParentProductId == detailModel.ProductId))
+                    {
+                        List<Model.ProduceOtherCompactMaterial> detailMaterialList = this._produceOtherCompact.DetailMaterial.Where(DM => DM.ParentProductId == detailModel.ProductId).ToList();
+                        Model.BomParentPartInfo bompar = this.bomParentPartInfoManager.Get(detailModel.Product);
+                        if (bompar != null)
+                        {
+                            IList<Model.BomComponentInfo> bomList = this.bomComponentInfoManager.Select(bompar);
+                            if (bomList != null)
+                            {
+                                foreach (var item in detailMaterialList)
+                                {
+                                    Model.BomComponentInfo bomInfo = bomList.FirstOrDefault(B => B.ProductId == item.ProductId);
+                                    if (bomInfo != null)
+                                    {
+                                        item.ProduceQuantity = Convert.ToDouble(quantity) * bomInfo.UseQuantity;
+
+                                        if (item.Product.ProductCategory != null && Convert.ToDouble(item.Product.ProductCategory.ProductMinQuantity) > 0)
+                                            item.ProduceQuantity = Math.Ceiling(Convert.ToDouble(item.ProduceQuantity / item.Product.ProductCategory.ProductMinQuantity)) * item.Product.ProductCategory.ProductMinQuantity;
+
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
 
                 this.gridView1.SetRowCellValue(e.RowHandle, this.ColOtherCompactMoney, price * quantity);

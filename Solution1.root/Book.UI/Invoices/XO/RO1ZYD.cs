@@ -74,6 +74,7 @@ namespace Book.UI.Invoices.XO
             //this.lblRemark.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_Remark);
             this.lblRemark.DataBindings.Add("Rtf", this.DataSource, "Product." + Model.Product.PRO_ProductDescription);
             this.lbl_Note.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_Remark);
+            this.lbl_ProductInternalDesc.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_InternalDescription);
         }
 
     }

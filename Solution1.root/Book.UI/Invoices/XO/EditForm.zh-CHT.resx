@@ -117,42 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="barButtonItemJieAn.Caption" xml:space="preserve">
-    <value>強制結案</value>
-  </data>
-  <data name="barSubItem4.Caption" xml:space="preserve">
-    <value>導出</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="checkEditChadan.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkEditChadan.Properties.DisplayValueChecked" xml:space="preserve">
-    <value />
-  </data>
-  <data name="checkEditChadan.Properties.DisplayValueGrayed" xml:space="preserve">
-    <value />
-  </data>
-  <data name="checkEditChadan.Properties.DisplayValueUnchecked" xml:space="preserve">
-    <value />
-  </data>
-  <data name="checkEditIsForeigntrade.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="checkEditIsForeigntrade.Properties.Caption" xml:space="preserve">
     <value>是否為外銷訂單</value>
-  </data>
-  <data name="checkEditIsForeigntrade.Properties.DisplayValueChecked" xml:space="preserve">
-    <value />
-  </data>
-  <data name="checkEditIsForeigntrade.Properties.DisplayValueGrayed" xml:space="preserve">
-    <value />
-  </data>
-  <data name="checkEditIsForeigntrade.Properties.DisplayValueUnchecked" xml:space="preserve">
-    <value />
-  </data>
-  <data name="comboBoxEditCurrency.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="comboBoxEditCurrency.Properties.Items" xml:space="preserve">
     <value>人民幣</value>
@@ -160,360 +126,62 @@
   <data name="comboBoxEditCurrency.Properties.Items1" xml:space="preserve">
     <value>新台幣</value>
   </data>
-  <data name="comboBoxEditCurrency.Properties.NullValuePrompt" xml:space="preserve">
-    <value />
+  <data name="comboBoxEditCurrency.Properties.Items3" xml:space="preserve">
+    <value>歐元</value>
   </data>
-  <data name="comboBoxEditCurrency.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="comboBoxEditCurrency.Properties.Items4" xml:space="preserve">
+    <value>日圓</value>
   </data>
-  <data name="textEditLotNumber.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="xtraTabPage1.Text" xml:space="preserve">
+    <value>交易明細</value>
   </data>
-  <assembly alias="DevExpress.XtraEditors.v10.2" name="DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-  <data name="textEditLotNumber.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
+  <data name="xtraTabPage2.Text" xml:space="preserve">
+    <value>發票資料</value>
   </data>
-  <data name="textEditLotNumber.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="xtraTabPage3.Text" xml:space="preserve">
+    <value>賬款資料</value>
   </data>
-  <data name="textEditLotNumber.Properties.Mask.EditMask" xml:space="preserve">
-    <value />
+  <data name="xtraTabPage4.Text" xml:space="preserve">
+    <value>相關資料</value>
   </data>
-  <data name="textEditLotNumber.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="gridColumn5.Caption" xml:space="preserve">
+    <value>選擇</value>
   </data>
-  <data name="textEditLotNumber.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>None</value>
+  <data name="gridColumn4.Caption" xml:space="preserve">
+    <value>序號</value>
   </data>
-  <data name="textEditLotNumber.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
+  <data name="colProductId.Caption" xml:space="preserve">
+    <value>商品編號</value>
   </data>
-  <data name="textEditLotNumber.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="colProduct.Caption" xml:space="preserve">
+    <value>商品名稱</value>
   </data>
-  <data name="textEditLotNumber.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="gridColumnCustomProduct.Caption" xml:space="preserve">
+    <value>客戶貨品名稱</value>
   </data>
-  <data name="textEditLotNumber.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="gridColumn1.Caption" xml:space="preserve">
+    <value>單位</value>
   </data>
-  <data name="textEditLotNumber.Properties.NullValuePrompt" xml:space="preserve">
-    <value />
+  <data name="colInvoiceXODetailPrice.Caption" xml:space="preserve">
+    <value>單價</value>
   </data>
-  <data name="textEditLotNumber.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="colInvoiceXODetailQuantity.Caption" xml:space="preserve">
+    <value>數量</value>
   </data>
-  <data name="textEditCustomerInvoiceXOID.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="gridColumnZR.Caption" xml:space="preserve">
+    <value>折讓</value>
   </data>
-  <data name="textEditCustomerInvoiceXOID.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
+  <data name="gridColumnZS.Caption" xml:space="preserve">
+    <value>贈送</value>
   </data>
-  <data name="textEditCustomerInvoiceXOID.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="gridColumn3.Caption" xml:space="preserve">
+    <value>庫存</value>
   </data>
-  <data name="textEditCustomerInvoiceXOID.Properties.Mask.EditMask" xml:space="preserve">
-    <value />
+  <data name="gridColumn9.Caption" xml:space="preserve">
+    <value>已出貨數量</value>
   </data>
-  <data name="textEditCustomerInvoiceXOID.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="textEditCustomerInvoiceXOID.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>None</value>
-  </data>
-  <data name="textEditCustomerInvoiceXOID.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="textEditCustomerInvoiceXOID.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="textEditCustomerInvoiceXOID.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="textEditCustomerInvoiceXOID.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="textEditCustomerInvoiceXOID.Properties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="textEditCustomerInvoiceXOID.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateEditYJRQ.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEditYJRQ.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="dateEditYJRQ.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateEditYJRQ.Properties.Mask.EditMask" xml:space="preserve">
-    <value>d</value>
-  </data>
-  <data name="dateEditYJRQ.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEditYJRQ.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>DateTime</value>
-  </data>
-  <data name="dateEditYJRQ.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="dateEditYJRQ.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEditYJRQ.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEditYJRQ.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateEditYJRQ.Properties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="dateEditYJRQ.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateEditYJRQ.Properties.VistaTimeProperties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEditYJRQ.Properties.VistaTimeProperties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="dateEditYJRQ.Properties.VistaTimeProperties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateEditYJRQ.Properties.VistaTimeProperties.Mask.EditMask" xml:space="preserve">
-    <value>T</value>
-  </data>
-  <data name="dateEditYJRQ.Properties.VistaTimeProperties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEditYJRQ.Properties.VistaTimeProperties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>DateTime</value>
-  </data>
-  <data name="dateEditYJRQ.Properties.VistaTimeProperties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="dateEditYJRQ.Properties.VistaTimeProperties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEditYJRQ.Properties.VistaTimeProperties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEditYJRQ.Properties.VistaTimeProperties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateEditYJRQ.Properties.VistaTimeProperties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="dateEditYJRQ.Properties.VistaTimeProperties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="textEditAuditState.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="textEditAuditState.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="textEditAuditState.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>None</value>
-  </data>
-  <data name="textEditAuditState.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="textEditAuditState.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="textEditAuditState.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="calcEditInvoiceTax1xset.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="calcEditInvoiceTax1xset.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="calcEditInvoiceTax1xset.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="calcEditInvoiceTax1xset.Properties.Mask.EditMask" xml:space="preserve">
-    <value />
-  </data>
-  <data name="calcEditInvoiceTax1xset.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="calcEditInvoiceTax1xset.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>None</value>
-  </data>
-  <data name="calcEditInvoiceTax1xset.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="calcEditInvoiceTax1xset.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="calcEditInvoiceTax1xset.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="calcEditInvoiceTax1xset.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="calcEditInvoiceTax1xset.Properties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="calcEditInvoiceTax1xset.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="textEditNote.Properties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="textEditNote.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="calcEditInvoiceTotalxset.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="calcEditInvoiceTotalxset.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="calcEditInvoiceTotalxset.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="calcEditInvoiceTotalxset.Properties.Mask.EditMask" xml:space="preserve">
-    <value />
-  </data>
-  <data name="calcEditInvoiceTotalxset.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="calcEditInvoiceTotalxset.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>None</value>
-  </data>
-  <data name="calcEditInvoiceTotalxset.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="calcEditInvoiceTotalxset.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="calcEditInvoiceTotalxset.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="calcEditInvoiceTotalxset.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="calcEditInvoiceTotalxset.Properties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="calcEditInvoiceTotalxset.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="calcEditInvoiceTotal0xset.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="calcEditInvoiceTotal0xset.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="calcEditInvoiceTotal0xset.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="calcEditInvoiceTotal0xset.Properties.Mask.EditMask" xml:space="preserve">
-    <value />
-  </data>
-  <data name="calcEditInvoiceTotal0xset.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="calcEditInvoiceTotal0xset.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>None</value>
-  </data>
-  <data name="calcEditInvoiceTotal0xset.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="calcEditInvoiceTotal0xset.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="calcEditInvoiceTotal0xset.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="calcEditInvoiceTotal0xset.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="calcEditInvoiceTotal0xset.Properties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="calcEditInvoiceTotal0xset.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="textEditInvoiceCphm.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="textEditInvoiceCphm.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="textEditInvoiceCphm.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="textEditInvoiceCphm.Properties.Mask.EditMask" xml:space="preserve">
-    <value />
-  </data>
-  <data name="textEditInvoiceCphm.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="textEditInvoiceCphm.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>None</value>
-  </data>
-  <data name="textEditInvoiceCphm.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="textEditInvoiceCphm.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="textEditInvoiceCphm.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="textEditInvoiceCphm.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="textEditInvoiceCphm.Properties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="textEditInvoiceCphm.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="spinEditInvoiceTaxRate1.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="spinEditInvoiceTaxRate1.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="spinEditInvoiceTaxRate1.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="spinEditInvoiceTaxRate1.Properties.Mask.EditMask" xml:space="preserve">
-    <value />
-  </data>
-  <data name="spinEditInvoiceTaxRate1.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="spinEditInvoiceTaxRate1.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>Numeric</value>
-  </data>
-  <data name="spinEditInvoiceTaxRate1.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="spinEditInvoiceTaxRate1.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="spinEditInvoiceTaxRate1.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="spinEditInvoiceTaxRate1.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="spinEditInvoiceTaxRate1.Properties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="spinEditInvoiceTaxRate1.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="gridColumn10.Caption" xml:space="preserve">
+    <value>退貨數量</value>
   </data>
   <data name="layoutControlItem12.Text" xml:space="preserve">
     <value>總計：</value>
@@ -539,180 +207,6 @@
   <data name="layoutControlItem36.Text" xml:space="preserve">
     <value>審核人：</value>
   </data>
-  <data name="xtraTabPage1.Text" xml:space="preserve">
-    <value>交易明細</value>
-  </data>
-  <data name="dateEditFPDate.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEditFPDate.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="dateEditFPDate.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateEditFPDate.Properties.Mask.EditMask" xml:space="preserve">
-    <value>d</value>
-  </data>
-  <data name="dateEditFPDate.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEditFPDate.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>DateTime</value>
-  </data>
-  <data name="dateEditFPDate.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="dateEditFPDate.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEditFPDate.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEditFPDate.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateEditFPDate.Properties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="dateEditFPDate.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateEditFPDate.Properties.VistaTimeProperties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEditFPDate.Properties.VistaTimeProperties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="dateEditFPDate.Properties.VistaTimeProperties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateEditFPDate.Properties.VistaTimeProperties.Mask.EditMask" xml:space="preserve">
-    <value>T</value>
-  </data>
-  <data name="dateEditFPDate.Properties.VistaTimeProperties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEditFPDate.Properties.VistaTimeProperties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>DateTime</value>
-  </data>
-  <data name="dateEditFPDate.Properties.VistaTimeProperties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="dateEditFPDate.Properties.VistaTimeProperties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEditFPDate.Properties.VistaTimeProperties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEditFPDate.Properties.VistaTimeProperties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateEditFPDate.Properties.VistaTimeProperties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="dateEditFPDate.Properties.VistaTimeProperties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="spinEditInvoiceFpje.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="spinEditInvoiceFpje.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="spinEditInvoiceFpje.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="spinEditInvoiceFpje.Properties.Mask.EditMask" xml:space="preserve">
-    <value />
-  </data>
-  <data name="spinEditInvoiceFpje.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="spinEditInvoiceFpje.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>Numeric</value>
-  </data>
-  <data name="spinEditInvoiceFpje.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="spinEditInvoiceFpje.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="spinEditInvoiceFpje.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="spinEditInvoiceFpje.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="spinEditInvoiceFpje.Properties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="spinEditInvoiceFpje.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="textEditInvoiceFpbh.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="textEditInvoiceFpbh.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="textEditInvoiceFpbh.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="textEditInvoiceFpbh.Properties.Mask.EditMask" xml:space="preserve">
-    <value />
-  </data>
-  <data name="textEditInvoiceFpbh.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="textEditInvoiceFpbh.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>None</value>
-  </data>
-  <data name="textEditInvoiceFpbh.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="textEditInvoiceFpbh.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="textEditInvoiceFpbh.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="textEditInvoiceFpbh.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="textEditInvoiceFpbh.Properties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="textEditInvoiceFpbh.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="comboBoxEditInvoiceFpls.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="comboBoxEditInvoiceFpls.Properties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="comboBoxEditInvoiceFpls.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="comboBoxEditInvoiceKslb.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="comboBoxEditInvoiceKslb.Properties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="comboBoxEditInvoiceKslb.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="comboBoxEditInvoiceKlfs.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="comboBoxEditInvoiceKlfs.Properties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="comboBoxEditInvoiceKlfs.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="layoutControlItem18.Text" xml:space="preserve">
     <value>開立方式:</value>
   </data>
@@ -731,117 +225,6 @@
   <data name="layoutControlItem15.Text" xml:space="preserve">
     <value>發票日期：</value>
   </data>
-  <data name="xtraTabPage2.Text" xml:space="preserve">
-    <value>發票資料</value>
-  </data>
-  <data name="spinEditInvoiceOwed.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="spinEditInvoiceOwed.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="spinEditInvoiceOwed.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="spinEditInvoiceOwed.Properties.Mask.EditMask" xml:space="preserve">
-    <value />
-  </data>
-  <data name="spinEditInvoiceOwed.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="spinEditInvoiceOwed.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>Numeric</value>
-  </data>
-  <data name="spinEditInvoiceOwed.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="spinEditInvoiceOwed.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="spinEditInvoiceOwed.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="spinEditInvoiceOwed.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="spinEditInvoiceOwed.Properties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="spinEditInvoiceOwed.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="spinEditYiShou.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="spinEditYiShou.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="spinEditYiShou.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="spinEditYiShou.Properties.Mask.EditMask" xml:space="preserve">
-    <value />
-  </data>
-  <data name="spinEditYiShou.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="spinEditYiShou.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>Numeric</value>
-  </data>
-  <data name="spinEditYiShou.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="spinEditYiShou.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="spinEditYiShou.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="spinEditYiShou.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="spinEditYiShou.Properties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="spinEditYiShou.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="spinEditInvoiceZKE.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="spinEditInvoiceZKE.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="spinEditInvoiceZKE.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="spinEditInvoiceZKE.Properties.Mask.EditMask" xml:space="preserve">
-    <value />
-  </data>
-  <data name="spinEditInvoiceZKE.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="spinEditInvoiceZKE.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>Numeric</value>
-  </data>
-  <data name="spinEditInvoiceZKE.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="spinEditInvoiceZKE.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="spinEditInvoiceZKE.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="spinEditInvoiceZKE.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="spinEditInvoiceZKE.Properties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="spinEditInvoiceZKE.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="layoutControlItem23.Text" xml:space="preserve">
     <value>折讓金額:</value>
   </data>
@@ -851,83 +234,8 @@
   <data name="layoutControlItem25.Text" xml:space="preserve">
     <value>未收金額:</value>
   </data>
-  <data name="xtraTabPage3.Text" xml:space="preserve">
-    <value>賬款資料</value>
-  </data>
   <data name="btn_UpdatePrice.Text" xml:space="preserve">
     <value>單價校對</value>
-  </data>
-  <data name="dateEditUpdateTime.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEditUpdateTime.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="dateEditUpdateTime.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateEditUpdateTime.Properties.Mask.EditMask" xml:space="preserve">
-    <value>d</value>
-  </data>
-  <data name="dateEditUpdateTime.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEditUpdateTime.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>DateTime</value>
-  </data>
-  <data name="dateEditUpdateTime.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="dateEditUpdateTime.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEditUpdateTime.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEditUpdateTime.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateEditUpdateTime.Properties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="dateEditUpdateTime.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateEditUpdateTime.Properties.VistaTimeProperties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEditUpdateTime.Properties.VistaTimeProperties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="dateEditUpdateTime.Properties.VistaTimeProperties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateEditUpdateTime.Properties.VistaTimeProperties.Mask.EditMask" xml:space="preserve">
-    <value>T</value>
-  </data>
-  <data name="dateEditUpdateTime.Properties.VistaTimeProperties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEditUpdateTime.Properties.VistaTimeProperties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>DateTime</value>
-  </data>
-  <data name="dateEditUpdateTime.Properties.VistaTimeProperties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="dateEditUpdateTime.Properties.VistaTimeProperties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEditUpdateTime.Properties.VistaTimeProperties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEditUpdateTime.Properties.VistaTimeProperties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateEditUpdateTime.Properties.VistaTimeProperties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="dateEditUpdateTime.Properties.VistaTimeProperties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="layoutControlItem29.Text" xml:space="preserve">
     <value>修改人：</value>
@@ -940,334 +248,6 @@
   </data>
   <data name="layoutControlItem41.Text" xml:space="preserve">
     <value>嘜頭：</value>
-  </data>
-  <data name="xtraTabPage4.Text" xml:space="preserve">
-    <value>相關資料</value>
-  </data>
-  <data name="dateEditInvoiceDate.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEditInvoiceDate.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="dateEditInvoiceDate.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateEditInvoiceDate.Properties.Mask.EditMask" xml:space="preserve">
-    <value>d</value>
-  </data>
-  <data name="dateEditInvoiceDate.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEditInvoiceDate.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>DateTime</value>
-  </data>
-  <data name="dateEditInvoiceDate.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="dateEditInvoiceDate.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEditInvoiceDate.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEditInvoiceDate.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateEditInvoiceDate.Properties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="dateEditInvoiceDate.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateEditInvoiceDate.Properties.VistaTimeProperties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEditInvoiceDate.Properties.VistaTimeProperties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="dateEditInvoiceDate.Properties.VistaTimeProperties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateEditInvoiceDate.Properties.VistaTimeProperties.Mask.EditMask" xml:space="preserve">
-    <value>T</value>
-  </data>
-  <data name="dateEditInvoiceDate.Properties.VistaTimeProperties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEditInvoiceDate.Properties.VistaTimeProperties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>DateTime</value>
-  </data>
-  <data name="dateEditInvoiceDate.Properties.VistaTimeProperties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="dateEditInvoiceDate.Properties.VistaTimeProperties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEditInvoiceDate.Properties.VistaTimeProperties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEditInvoiceDate.Properties.VistaTimeProperties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateEditInvoiceDate.Properties.VistaTimeProperties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="dateEditInvoiceDate.Properties.VistaTimeProperties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="textEditInvoiceId.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="textEditInvoiceId.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="textEditInvoiceId.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="textEditInvoiceId.Properties.Mask.EditMask" xml:space="preserve">
-    <value />
-  </data>
-  <data name="textEditInvoiceId.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="textEditInvoiceId.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>None</value>
-  </data>
-  <data name="textEditInvoiceId.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="textEditInvoiceId.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="textEditInvoiceId.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="textEditInvoiceId.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="textEditInvoiceId.Properties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="textEditInvoiceId.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <assembly alias="DevExpress.Data.v10.2" name="DevExpress.Data.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-  <data name="gridControl1.EmbeddedNavigator.AllowHtmlTextInToolTip" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v10.2">
-    <value>Default</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="gridControl1.EmbeddedNavigator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left</value>
-  </data>
-  <data name="gridControl1.EmbeddedNavigator.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Tile</value>
-  </data>
-  <data name="gridControl1.EmbeddedNavigator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>Inherit</value>
-  </data>
-  <data name="gridControl1.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v10.2">
-    <value>Center</value>
-  </data>
-  <data name="gridControl1.EmbeddedNavigator.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-  <data name="gridControl1.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v10.2">
-    <value>None</value>
-  </data>
-  <data name="gridControl1.EmbeddedNavigator.ToolTipTitle" xml:space="preserve">
-    <value />
-  </data>
-  <data name="gridColumn5.Caption" xml:space="preserve">
-    <value>選擇</value>
-  </data>
-  <data name="gridColumn4.Caption" xml:space="preserve">
-    <value>序號</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="colProductId.AppearanceCell.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
-    <value>Horizontal</value>
-  </data>
-  <data name="colProductId.AppearanceHeader.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
-    <value>Horizontal</value>
-  </data>
-  <data name="colProductId.Caption" xml:space="preserve">
-    <value>商品編號</value>
-  </data>
-  <data name="colProduct.AppearanceCell.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
-    <value>Horizontal</value>
-  </data>
-  <data name="colProduct.AppearanceHeader.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
-    <value>Horizontal</value>
-  </data>
-  <data name="colProduct.Caption" xml:space="preserve">
-    <value>商品名稱</value>
-  </data>
-  <data name="gridColumnCustomProduct.Caption" xml:space="preserve">
-    <value>客戶貨品名稱</value>
-  </data>
-  <data name="gridColumn1.AppearanceCell.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
-    <value>Horizontal</value>
-  </data>
-  <data name="gridColumn1.AppearanceHeader.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
-    <value>Horizontal</value>
-  </data>
-  <data name="gridColumn1.Caption" xml:space="preserve">
-    <value>單位</value>
-  </data>
-  <data name="colInvoiceXODetailPrice.AppearanceCell.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
-    <value>Horizontal</value>
-  </data>
-  <data name="colInvoiceXODetailPrice.AppearanceHeader.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
-    <value>Horizontal</value>
-  </data>
-  <data name="colInvoiceXODetailPrice.Caption" xml:space="preserve">
-    <value>單價</value>
-  </data>
-  <data name="repositoryItemSpinEdit1xpset.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="repositoryItemSpinEdit1xpset.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="repositoryItemSpinEdit1xpset.Mask.EditMask" xml:space="preserve">
-    <value />
-  </data>
-  <data name="repositoryItemSpinEdit1xpset.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="repositoryItemSpinEdit1xpset.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>Numeric</value>
-  </data>
-  <data name="repositoryItemSpinEdit1xpset.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="repositoryItemSpinEdit1xpset.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="repositoryItemSpinEdit1xpset.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="repositoryItemSpinEdit1xpset.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="colInvoiceXODetailQuantity.AppearanceCell.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
-    <value>Horizontal</value>
-  </data>
-  <data name="colInvoiceXODetailQuantity.AppearanceHeader.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
-    <value>Horizontal</value>
-  </data>
-  <data name="colInvoiceXODetailQuantity.Caption" xml:space="preserve">
-    <value>數量</value>
-  </data>
-  <data name="repositoryItemSpinEdit2.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="repositoryItemSpinEdit2.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="repositoryItemSpinEdit2.Mask.EditMask" xml:space="preserve">
-    <value />
-  </data>
-  <data name="repositoryItemSpinEdit2.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="repositoryItemSpinEdit2.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>Numeric</value>
-  </data>
-  <data name="repositoryItemSpinEdit2.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="repositoryItemSpinEdit2.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="repositoryItemSpinEdit2.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="repositoryItemSpinEdit2.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="gridColumnZR.Caption" xml:space="preserve">
-    <value>折讓</value>
-  </data>
-  <data name="repositoryItemSpinEdit3xset.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="repositoryItemSpinEdit3xset.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="repositoryItemSpinEdit3xset.Mask.EditMask" xml:space="preserve">
-    <value />
-  </data>
-  <data name="repositoryItemSpinEdit3xset.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="repositoryItemSpinEdit3xset.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>Numeric</value>
-  </data>
-  <data name="repositoryItemSpinEdit3xset.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="repositoryItemSpinEdit3xset.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="repositoryItemSpinEdit3xset.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="repositoryItemSpinEdit3xset.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="colInvoiceXODetailMoneyxset.AppearanceCell.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
-    <value>Horizontal</value>
-  </data>
-  <data name="colInvoiceXODetailMoneyxset.AppearanceHeader.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
-    <value>Horizontal</value>
-  </data>
-  <data name="gridColumnZS.Caption" xml:space="preserve">
-    <value>贈送</value>
-  </data>
-  <data name="gridColumn3.Caption" xml:space="preserve">
-    <value>庫存</value>
-  </data>
-  <data name="colInvoiceXODetailNote.AppearanceCell.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
-    <value>Horizontal</value>
-  </data>
-  <data name="colInvoiceXODetailNote.AppearanceHeader.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
-    <value>Horizontal</value>
-  </data>
-  <data name="gridColumn9.Caption" xml:space="preserve">
-    <value>已出貨數量</value>
-  </data>
-  <data name="gridColumn10.Caption" xml:space="preserve">
-    <value>退貨數量</value>
-  </data>
-  <data name="repositoryItemCalcEdit1.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="repositoryItemCalcEdit1.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="repositoryItemCalcEdit1.Mask.EditMask" xml:space="preserve">
-    <value />
-  </data>
-  <data name="repositoryItemCalcEdit1.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="repositoryItemCalcEdit1.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>Numeric</value>
-  </data>
-  <data name="repositoryItemCalcEdit1.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="repositoryItemCalcEdit1.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="repositoryItemCalcEdit1.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="repositoryItemCalcEdit1.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="layoutControlItem7.Text" xml:space="preserve">
     <value>訂單明細:</value>
@@ -1299,14 +279,17 @@
   <data name="barButtonItem2.Caption" xml:space="preserve">
     <value>出庫單</value>
   </data>
-  <data name="layoutControlItem6.AppearanceItemCaption.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
-    <value>Horizontal</value>
-  </data>
   <data name="layoutControlItem6.Text" xml:space="preserve">
     <value>客戶:</value>
   </data>
   <data name="layoutControlItem32.Text" xml:space="preserve">
     <value>客戶</value>
+  </data>
+  <data name="barButtonItemJieAn.Caption" xml:space="preserve">
+    <value>強制結案</value>
+  </data>
+  <data name="barSubItem4.Caption" xml:space="preserve">
+    <value>導出</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>單據輸入 - 客戶訂單</value>

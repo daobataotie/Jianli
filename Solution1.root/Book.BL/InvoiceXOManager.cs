@@ -146,6 +146,9 @@ namespace Book.BL
             //{
             //    throw new Helper.RequireValueException("Details");
             //}
+            if (string.IsNullOrEmpty(invoice.Currency))
+                throw new Helper.RequireValueException(Model.InvoiceXO.PRO_Currency);
+
             foreach (Model.InvoiceXODetail detail in invoice.Details)
             {
                 if (detail.IsConfirmed != true)
@@ -451,6 +454,11 @@ namespace Book.BL
         public Model.InvoiceXO SelectMpsIsClose(string mpsheader)
         {
             return accessor.SelectMpsIsClose(mpsheader);
+        }
+
+        public string GetCurrencyByInvoiceId(string invoiceId)
+        {
+            return accessor.GetCurrencyByInvoiceId(invoiceId);
         }
     }
 }

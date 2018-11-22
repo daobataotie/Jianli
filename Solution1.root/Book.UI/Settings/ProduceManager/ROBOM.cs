@@ -122,10 +122,12 @@ namespace Book.UI.Settings.ProduceManager
             this.TCUseQuantity.DataBindings.Add("Text", this.DataSource, Model.BomComponentInfo.PROPERTY_USEQUANTITY);
             this.TCSunhaolv.DataBindings.Add("Text", this.DataSource, Model.BomComponentInfo.PROPERTY_SUBLOSERATE);
             this.xrRichText1.DataBindings.Add("Rtf", this.DataSource, "Product." + Model.Product.PRO_ProductDescription);
+            this.TCMaterial.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProductSpecification);
+            this.TCProId.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_Id);
 
             Model.TechonlogyHeader TechonlogyHeader = this.techonlogyHeaderManager.Get(bomParentPartInfo.TechonlogyHeaderId);
-            IList<Model.Technologydetails> Technologydetails=new List<Model.Technologydetails>();
-            if(TechonlogyHeader!=null)
+            IList<Model.Technologydetails> Technologydetails = new List<Model.Technologydetails>();
+            if (TechonlogyHeader != null)
                 Technologydetails = this.technologydetailsManager.Select(TechonlogyHeader);
             //ROBOMProcess ROBOMProcess = new ROBOMProcess(Technologydetails);
             this.xrSubreport2.ReportSource = new ROBOMProcess(Technologydetails);

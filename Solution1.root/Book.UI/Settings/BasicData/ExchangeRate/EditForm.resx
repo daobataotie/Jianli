@@ -117,28 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="colInvoiceId.Caption" xml:space="preserve">
-    <value>單據編號</value>
-  </data>
-  <data name="colEmployee0Id.Caption" xml:space="preserve">
-    <value>業務員</value>
-  </data>
-  <data name="colCompanyId.Caption" xml:space="preserve">
-    <value>客戶</value>
-  </data>
-  <data name="colDepotId.Caption" xml:space="preserve">
-    <value>出貨庫房</value>
-  </data>
-  <data name="colInvoiceOwed.Caption" xml:space="preserve">
-    <value>未付款額</value>
-  </data>
-  <data name="colInvoiceTotal1.Caption" xml:space="preserve">
-    <value>總額</value>
-  </data>
-  <data name="gridColumn1.Caption" xml:space="preserve">
-    <value>備註</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>單據一覽 - 出貨單</value>
-  </data>
+  <metadata name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>162, 17</value>
+  </metadata>
+  <metadata name="bindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

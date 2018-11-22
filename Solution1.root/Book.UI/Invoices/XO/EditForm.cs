@@ -53,6 +53,7 @@ namespace Book.UI.Invoices.XO
             this.requireValueExceptions.Add("Customer", new AA("商品未核准完", this.gridControl1));
             this.requireValueExceptions.Add(Model.InvoiceXO.PRO_CustomerInvoiceXOId, new AA(Properties.Resources.RequireCusXoId, this.textEditCustomerInvoiceXOID));
             this.invalidValueExceptions.Add(Model.InvoiceXO.PRO_CustomerInvoiceXOId, new AA(Properties.Resources.InvalidCusXoId, this.textEditCustomerInvoiceXOID));
+            this.requireValueExceptions.Add(Model.InvoiceXO.PRO_Currency, new AA("貨幣種類不能為空！", this.comboBoxEditCurrency));
 
             //this.requireValueExceptions.Add(Model.InvoiceXO.PRO_CustomerInvoiceXOId,new AA())
             this.action = "view";
