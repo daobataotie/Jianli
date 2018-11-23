@@ -159,7 +159,7 @@
 </value>
   </data>
   <data name="xrTableQuantity.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
-    <value>MiddleCenter</value>
+    <value>MiddleRight</value>
   </data>
   <data name="xrTableUnit.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -184,6 +184,18 @@
   </data>
   <data name="xrTableHeJi.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleRight</value>
+  </data>
+  <data name="TCCurrency.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="TCCurrency.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="TCRate.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="TCRate.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
   </data>
   <data name="xrTableDesc.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -378,10 +390,10 @@
     <value>新細明體, 9.75pt</value>
   </data>
   <data name="xrLabelTax.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1262.124, 0</value>
+    <value>1291.22815, 0</value>
   </data>
   <data name="xrLabelTax.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>341.812256, 52.50277</value>
+    <value>312.70813, 52.50277</value>
   </data>
   <data name="xrLabelTax.Text" xml:space="preserve">
     <value>税额:</value>
@@ -417,7 +429,7 @@
     <value>992.781433, 0</value>
   </data>
   <data name="xrLabelHeji.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>269.342468, 52.50277</value>
+    <value>298.446716, 52.50277</value>
   </data>
   <data name="xrLabelHeji.Text" xml:space="preserve">
     <value>合计:</value>
@@ -935,6 +947,24 @@
   <data name="xrTableCell6.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleRight</value>
   </data>
+  <data name="xrTableCell4.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrTableCell4.Text" xml:space="preserve">
+    <value>幣別</value>
+  </data>
+  <data name="xrTableCell4.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell7.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrTableCell7.Text" xml:space="preserve">
+    <value>報關匯率</value>
+  </data>
+  <data name="xrTableCell7.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
   <data name="xrTableCell8.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
@@ -1002,13 +1032,13 @@
     <value>254</value>
   </data>
   <data name="topMarginBand1.HeightF" type="System.Single, mscorlib">
-    <value>80</value>
+    <value>79</value>
   </data>
   <data name="bottomMarginBand1.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
   <data name="bottomMarginBand1.HeightF" type="System.Single, mscorlib">
-    <value>80</value>
+    <value>79</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

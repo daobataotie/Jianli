@@ -68,23 +68,23 @@ namespace Book.UI.Invoices.XO
 
             this.repositoryItemSearchLookUpEdit1.DisplayMember = "Id";
             this.repositoryItemSearchLookUpEdit1.ValueMember = "ProductId";
-            this.repositoryItemSearchLookUpEdit1.View.Columns.Add(new GridColumn() { FieldName = "Id", Caption = "編號", Width = 150, Visible = true, VisibleIndex = 0 });
-            this.repositoryItemSearchLookUpEdit1.View.Columns.Add(new GridColumn() { FieldName = "ProductName", Caption = "名稱", Width = 150, Visible = true, VisibleIndex = 1 });
-            this.repositoryItemSearchLookUpEdit1.View.Columns.Add(new GridColumn() { FieldName = "CustomerProductName", Caption = "客戶商品名稱", Width = 150, Visible = true, VisibleIndex = 2 });
+            this.repositoryItemSearchLookUpEdit1.View.Columns.Add(new GridColumn() { FieldName = "Id", Caption = "商品編號", Width = 150, Visible = true, VisibleIndex = 0 });
+            this.repositoryItemSearchLookUpEdit1.View.Columns.Add(new GridColumn() { FieldName = "ProductName", Caption = "商品名稱", Width = 150, Visible = true, VisibleIndex = 1 });
+            this.repositoryItemSearchLookUpEdit1.View.Columns.Add(new GridColumn() { FieldName = "CustomerProductName", Caption = "客戶貨品名稱", Width = 150, Visible = true, VisibleIndex = 2 });
             this.repositoryItemSearchLookUpEdit1.View.Columns.Add(new GridColumn() { FieldName = "ProductVersion", Caption = "版本", Width = 50, Visible = true, VisibleIndex = 3 });
 
             this.repositoryItemSearchLookUpEdit2.DisplayMember = "ProductName";
             this.repositoryItemSearchLookUpEdit2.ValueMember = "ProductId";
-            this.repositoryItemSearchLookUpEdit2.View.Columns.Add(new GridColumn() { FieldName = "Id", Caption = "編號", Width = 150, Visible = true, VisibleIndex = 0 });
-            this.repositoryItemSearchLookUpEdit2.View.Columns.Add(new GridColumn() { FieldName = "ProductName", Caption = "名稱", Width = 150, Visible = true, VisibleIndex = 1 });
-            this.repositoryItemSearchLookUpEdit2.View.Columns.Add(new GridColumn() { FieldName = "CustomerProductName", Caption = "客戶商品名稱", Width = 150, Visible = true, VisibleIndex = 2 });
+            this.repositoryItemSearchLookUpEdit2.View.Columns.Add(new GridColumn() { FieldName = "Id", Caption = "商品編號", Width = 150, Visible = true, VisibleIndex = 0 });
+            this.repositoryItemSearchLookUpEdit2.View.Columns.Add(new GridColumn() { FieldName = "ProductName", Caption = "商品名稱", Width = 150, Visible = true, VisibleIndex = 1 });
+            this.repositoryItemSearchLookUpEdit2.View.Columns.Add(new GridColumn() { FieldName = "CustomerProductName", Caption = "客戶貨品名稱", Width = 150, Visible = true, VisibleIndex = 2 });
             this.repositoryItemSearchLookUpEdit2.View.Columns.Add(new GridColumn() { FieldName = "ProductVersion", Caption = "版本", Width = 50, Visible = true, VisibleIndex = 3 });
 
             this.repositoryItemSearchLookUpEdit3.DisplayMember = "CustomerProductName";
             this.repositoryItemSearchLookUpEdit3.ValueMember = "ProductId";
-            this.repositoryItemSearchLookUpEdit3.View.Columns.Add(new GridColumn() { FieldName = "Id", Caption = "編號", Width = 150, Visible = true, VisibleIndex = 0 });
-            this.repositoryItemSearchLookUpEdit3.View.Columns.Add(new GridColumn() { FieldName = "ProductName", Caption = "名稱", Width = 150, Visible = true, VisibleIndex = 1 });
-            this.repositoryItemSearchLookUpEdit3.View.Columns.Add(new GridColumn() { FieldName = "CustomerProductName", Caption = "客戶商品名稱", Width = 150, Visible = true, VisibleIndex = 2 });
+            this.repositoryItemSearchLookUpEdit3.View.Columns.Add(new GridColumn() { FieldName = "Id", Caption = "商品編號", Width = 150, Visible = true, VisibleIndex = 0 });
+            this.repositoryItemSearchLookUpEdit3.View.Columns.Add(new GridColumn() { FieldName = "ProductName", Caption = "商品名稱", Width = 150, Visible = true, VisibleIndex = 1 });
+            this.repositoryItemSearchLookUpEdit3.View.Columns.Add(new GridColumn() { FieldName = "CustomerProductName", Caption = "客戶貨品名稱", Width = 150, Visible = true, VisibleIndex = 2 });
             this.repositoryItemSearchLookUpEdit3.View.Columns.Add(new GridColumn() { FieldName = "ProductVersion", Caption = "版本", Width = 50, Visible = true, VisibleIndex = 3 });
 
             productlook = productManager.SelectProductForXO();

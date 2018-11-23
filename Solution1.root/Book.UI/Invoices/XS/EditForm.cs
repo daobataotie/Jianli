@@ -842,7 +842,8 @@ namespace Book.UI.Invoices.XS
                         xtdetail.InvoiceProductUnit = xos.InvoiceProductUnit;
                         xtdetail.Donatetowards = false;
                         //xtdetail.InvoiceXSDetailPrice = xos.InvoiceXODetailPrice;
-                        xtdetail.InvoiceXSDetailPrice = ConvertPrice(xos);
+                        //xtdetail.InvoiceXSDetailPrice = ConvertPrice(xos);
+                        ConvertPrice(xos, xtdetail);
                         xtdetail.InvoiceAllowance = 0;
                         xtdetail.InvoiceXSDetailMoney = 0;
                         xtdetail.InvoiceXSDetailTaxPrice = 0;
@@ -908,11 +909,12 @@ namespace Book.UI.Invoices.XS
         /// <summary>
         /// 根据汇率，将不同的币种全部转为台币
         /// </summary>
-        private decimal ConvertPrice(Model.InvoiceXODetail detail)
+        private void ConvertPrice(Model.InvoiceXODetail xodetail, Model.InvoiceXSDetail xsdetail)
         {
-            if (detail.InvoiceXODetailPrice == 0 || detail.Invoice.Currency == "新台幣")
+            if (xodetail.InvoiceXODetailPrice == 0 || xodetail.Invoice.Currency == "新台幣")
             {
-                return detail.InvoiceXODetailPrice.Value;
+                xsdetail.InvoiceXSDetailPrice = xodetail.InvoiceXODetailPrice.Value;
+                return;
             }
             else
             {
@@ -927,13 +929,15 @@ namespace Book.UI.Invoices.XS
                 else
                     date = DateTime.Parse(string.Format("{0}-{1}-{2}", this.dateEditInvoiceDate.DateTime.Year, this.dateEditInvoiceDate.DateTime.Month, "21"));
 
-                decimal rate = exchangeRateManager.GetRateByDateAndCurrency(date, detail.Invoice.Currency);
+                decimal rate = exchangeRateManager.GetRateByDateAndCurrency(date, xodetail.Invoice.Currency);
                 if (rate != 0)
-                    price = detail.InvoiceXODetailPrice.Value * rate;
+                    price = xodetail.InvoiceXODetailPrice.Value * rate;
                 else
-                    price = detail.InvoiceXODetailPrice.Value;
+                    price = xodetail.InvoiceXODetailPrice.Value;
 
-                return price;
+                xsdetail.InvoiceXSDetailPrice = price;
+                xsdetail.Currency = xodetail.Invoice.Currency;
+                xsdetail.ExchangeRate = rate;
             }
         }
 
@@ -1344,6 +1348,10 @@ namespace Book.UI.Invoices.XS
                         price = item.InvoiceXODetail.InvoiceXODetailPrice.Value;
 
                     item.InvoiceXSDetailPrice = price;
+                    item.Currency = currency;
+                    item.ExchangeRate = rate;
+
+
                     if (flag == 0) //免税
                     {
                         item.InvoiceXSDetailMoney = item.InvoiceXSDetailTaxMoney = this.GetDecimal(price * Convert.ToDecimal(item.InvoiceXSDetailQuantity) - Convert.ToDecimal(item.InvoiceAllowance), BL.V.SetDataFormat.XSJEXiao.Value);

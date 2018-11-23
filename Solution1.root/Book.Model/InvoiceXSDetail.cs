@@ -103,6 +103,14 @@ namespace Book.Model
             set { _checked = value; }
         }
 
+        public string CurrencyEN
+        {
+            get
+            {
+                return Model.ExchangeRate.ConvertCurrencyName(this.Currency);
+            }
+        }
+
         public string ProductName { get; set; }
         public string ProductSpecification { get; set; }
         public DateTime? InvoiceDate { get; set; }
@@ -111,6 +119,6 @@ namespace Book.Model
         public string CustomerInvoiceXOId { get; set; }
 
         public static readonly string PRO_xiaoji = "xiaoji";
-
+        public static readonly string PRO_CurrencyEN = "CurrencyEN";
     }
 }

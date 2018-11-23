@@ -44,6 +44,8 @@
       <result property="InvoiceXSDetailTaxMoney" column="InvoiceXSDetailTaxMoney" />
       <result property="InvoiceXSDetailFPQuantity" column="InvoiceXSDetailFPQuantity" />
       <result property="InvoiceXSDetailTax" column="InvoiceXSDetailTax" />
+      <result property="Currency" column="Currency"/>
+      <result property="ExchangeRate" column="ExchangeRate"/>
       <result property="InvoiceXO" column="InvoiceXOId" lazyLoad="false" select="InvoiceXO.select_InvoiceXOFast" />
       <result property="Product" column="ProductId" lazyLoad="false" select="Product.select_FastProduct" />
       <result property="DepotPosition" column="DepotPositionId" lazyLoad="false" select="DepotPosition.select_by_primary_key" />

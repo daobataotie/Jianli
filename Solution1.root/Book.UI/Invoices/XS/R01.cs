@@ -73,6 +73,10 @@ namespace Book.UI.Invoices.XS
             //this.xrTableCellXOId.DataBindings.Add("Text", this.DataSource,"InvoiceXO."+ Model.InvoiceXO.PRO_CustomerInvoiceXOId);
 
             //this.xrLabelHeji.Text += this.invoice.InvoiceHeji == null ? "0" : this.invoice.InvoiceHeji.Value.ToString(global::Helper.DateTimeParse.GetFormat(BL.V.SetDataFormat.XSZJXiao.Value));
+
+            this.TCCurrency.DataBindings.Add("Text", this.DataSource, Model.InvoiceXSDetail.PRO_CurrencyEN);
+            this.TCRate.DataBindings.Add("Text", this.DataSource, Model.InvoiceXSDetail.PRO_ExchangeRate);
+
             this.xrLabelHeji.Text += this.invoice.InvoiceHeji == null ? "0" : this.invoice.InvoiceHeji.Value.ToString("N");
             this.xrLabelTax.Text += this.invoice.InvoiceTax == null ? "0" : this.invoice.InvoiceTax.Value.ToString("N");
             this.xrLabelTatol.Text += this.invoice.InvoiceTotal == null ? "0" : this.invoice.InvoiceTotal.Value.ToString("N");

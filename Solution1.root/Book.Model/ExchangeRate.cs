@@ -53,5 +53,30 @@ namespace Book.Model
                 }
             }
         }
+
+        public static string ConvertCurrencyName(string currency)
+        {
+            string enName = "";
+            switch (currency)
+            {
+                case "人民幣":
+                    enName = "RMB";
+                    break;
+                case "新台幣":
+                    enName = "NTD";
+                    break;
+                case "美金":
+                    enName = "USD";
+                    break;
+                case "歐元":
+                    enName = "EURO";
+                    break;
+                case "日圓":
+                    enName = "JYP";
+                    break;
+            }
+
+            return enName;
+        }
     }
 }
