@@ -614,6 +614,7 @@ namespace Book.UI.produceManager.PronoteHeader
 
         protected override DevExpress.XtraReports.UI.XtraReport GetReport()
         {
+            //組裝加工
             if (FlagIsProcee == 4)
             {
                 return new RO(pronoteHeader.PronoteHeaderID, FlagIsProcee);
@@ -1726,18 +1727,18 @@ namespace Book.UI.produceManager.PronoteHeader
             #endregion
         }
 
+        //连打列印
         private void barButtonItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             //produceManager.PronoteHeader.RO3 f = new RO3(pronoteHeader.PronoteHeaderID, FlagIsProcee);
             //f.ShowPreviewDialog();
 
-            //连打
             try
             {
                 Query.ConditionPronoteHeaderChooseForm f2 = new Book.UI.Query.ConditionPronoteHeaderChooseForm(this.FlagIsProcee);
                 if (f2.ShowDialog(this) == DialogResult.OK)
                 {
-
+                    //組裝加工
                     if (this.FlagIsProcee == 4)
                     {
                         RODetail f1 = new RODetail(f2.Condition as Query.ConditionPronoteHeader);

@@ -394,6 +394,15 @@ namespace Book.Model
             get { return special; }
             set { special = value; }
         }
+
+        private decimal? _invoiceTaibiTotal;
+
+        public decimal? InvoiceTaibiTotal
+        {
+            get { return _invoiceTaibiTotal; }
+            set { _invoiceTaibiTotal = value; }
+        }
+
         /// <summary>
         /// 其他费用
         /// </summary>
@@ -464,6 +473,8 @@ namespace Book.Model
         public readonly static string PRO_InvoiceAllowance = "InvoiceAllowance";
 
         public readonly static string PRO_Special = "Special";
+
+        public readonly static string PRO_InvoiceTaibiTotal = "InvoiceTaibiTotal";
         #endregion
     }
 }

@@ -1322,6 +1322,7 @@ namespace Book.UI.produceManager.ProduceMaterial
             GC.Collect();
         }
 
+        //連打列印
         private void barButtonItemQuery_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Query.ConditionMaterialChooseForm form = new Query.ConditionMaterialChooseForm();

@@ -81,17 +81,18 @@ namespace Book.UI.produceManager.PronoteHeader
             this.xrLabelPronoteDte.DataBindings.Add("Text", this.DataSource, Model.PronoteHeader.PRO_PronoteDate, "{0:yyyy-MM-dd}");
 
             this.xrLabelCustomerXOId.DataBindings.Add("Text", this.DataSource, Model.InvoiceXO.PRO_CustomerInvoiceXOId);
+            this.lblCustomerId.DataBindings.Add("Text", this.DataSource, "InvoiceXO.Customer." + Model.Customer.PRO_Id);
             this.xrLabelCustomer.DataBindings.Add("Text", this.DataSource, "CustomerShortName");
-            this.xrLabelCheckedStandard.DataBindings.Add("Text", this.DataSource, "CustomerCheckStandard");
-            this.xrLabelCustomerProductName.DataBindings.Add("Text", this.DataSource, "CustomerProductName");
+            //this.xrLabelCheckedStandard.DataBindings.Add("Text", this.DataSource, "CustomerCheckStandard");
+            //this.xrLabelCustomerProductName.DataBindings.Add("Text", this.DataSource, "CustomerProductName");
             this.xrLabelCount.DataBindings.Add("Text", this.DataSource, Model.PronoteHeader.PRO_DetailsSum);
 
             this.xrLabelUnit.DataBindings.Add("Text", this.DataSource, Model.PronoteHeader.PRO_ProductUnit);
-            if (type != 0)
-            {
-                this.xrLabelXOJHDate.DataBindings.Add("Text", this.DataSource, "InvoiceXO." + Model.InvoiceXO.PRO_InvoiceYjrq, "{0:yyyy-MM-dd}");
-                this.xrLabelPiHao.DataBindings.Add("Text", this.DataSource, "InvoiceXO." + Model.InvoiceXO.PRO_CustomerLotNumber);
-            }
+            //if (type != 0)
+            //{
+            this.xrLabelXOJHDate.DataBindings.Add("Text", this.DataSource, "InvoiceXO." + Model.InvoiceXO.PRO_InvoiceYjrq, "{0:yyyy-MM-dd}");
+            //this.xrLabelPiHao.DataBindings.Add("Text", this.DataSource, "InvoiceXO." + Model.InvoiceXO.PRO_CustomerLotNumber);
+            //}
             this.xrLabelProductName.DataBindings.Add("Text", this.DataSource, "ProductName");
             this.xrRichTextProDesc.DataBindings.Add("Rtf", this.DataSource, "ProductDesc");
             this.xrLabelMRP.DataBindings.Add("Text", this.DataSource, Model.PronoteHeader.PRO_MRSHeaderId);

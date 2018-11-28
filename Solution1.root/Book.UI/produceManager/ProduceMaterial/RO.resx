@@ -133,7 +133,7 @@
     <value>254</value>
   </data>
   <data name="xrLabel13.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 10.25pt, style=Bold</value>
+    <value>Times New Roman, 9pt, style=Bold</value>
   </data>
   <data name="xrLabel13.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>8.074442E-05, 50.0000153</value>
@@ -160,8 +160,17 @@
   <data name="xrTableCell5.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
+  <data name="xrTableCell5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9pt</value>
+  </data>
+  <data name="TC_ProId.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
   <data name="xrTableCellProductName.Dpi" type="System.Single, mscorlib">
     <value>254</value>
+  </data>
+  <data name="xrTableCellProductName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9pt</value>
   </data>
   <data name="xrTableCellProductName.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
@@ -169,8 +178,14 @@
   <data name="xrTableCusProName.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
+  <data name="xrTableCusProName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9pt</value>
+  </data>
   <data name="xrTableCellQuantity.Dpi" type="System.Single, mscorlib">
     <value>254</value>
+  </data>
+  <data name="xrTableCellQuantity.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9pt</value>
   </data>
   <data name="xrTableCellQuantity.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
@@ -178,8 +193,14 @@
   <data name="xrTableHasOutDepot.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
+  <data name="xrTableHasOutDepot.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9pt</value>
+  </data>
   <data name="xrTableCellUnit.Dpi" type="System.Single, mscorlib">
     <value>254</value>
+  </data>
+  <data name="xrTableCellUnit.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9pt</value>
   </data>
   <data name="xrTableCellUnit.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
@@ -187,11 +208,17 @@
   <data name="xrTableCellProductSpecification.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
+  <data name="xrTableCellProductSpecification.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9pt</value>
+  </data>
   <data name="xrTableCellProductSpecification.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleRight</value>
   </data>
   <data name="xrTableCellPihao.Dpi" type="System.Single, mscorlib">
     <value>254</value>
+  </data>
+  <data name="xrTableCellPihao.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9pt</value>
   </data>
   <data name="xrTableCellPihao.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleCenter</value>
@@ -567,7 +594,7 @@
     <value>254</value>
   </data>
   <data name="xrTable1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 10.25pt</value>
+    <value>Times New Roman, 9pt</value>
   </data>
   <data name="xrTable1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>0, 417.624939</value>
@@ -576,16 +603,25 @@
     <value>254</value>
   </data>
   <data name="xrTableCell4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 10.25pt, style=Bold</value>
+    <value>Times New Roman, 9pt, style=Bold</value>
   </data>
   <data name="xrTableCell4.Text" xml:space="preserve">
     <value>序号</value>
+  </data>
+  <data name="xrTableCell10.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrTableCell10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell10.Text" xml:space="preserve">
+    <value>商品編號</value>
   </data>
   <data name="xrTableCell1.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
   <data name="xrTableCell1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 10.25pt, style=Bold</value>
+    <value>Times New Roman, 9pt, style=Bold</value>
   </data>
   <data name="xrTableCell1.Text" xml:space="preserve">
     <value>货品名称</value>
@@ -597,7 +633,7 @@
     <value>254</value>
   </data>
   <data name="xrTableCell9.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 10.25pt, style=Bold</value>
+    <value>Times New Roman, 9pt, style=Bold</value>
   </data>
   <data name="xrTableCell9.Text" xml:space="preserve">
     <value>客户型号</value>
@@ -606,7 +642,7 @@
     <value>254</value>
   </data>
   <data name="xrTableCell2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 10.25pt, style=Bold</value>
+    <value>Times New Roman, 9pt, style=Bold</value>
   </data>
   <data name="xrTableCell2.Text" xml:space="preserve">
     <value>数量</value>
@@ -618,7 +654,7 @@
     <value>254</value>
   </data>
   <data name="xrTableCell8.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 10.25pt, style=Bold</value>
+    <value>Times New Roman, 9pt, style=Bold</value>
   </data>
   <data name="xrTableCell8.Text" xml:space="preserve">
     <value>已分配量</value>
@@ -627,7 +663,7 @@
     <value>254</value>
   </data>
   <data name="xrTableCell6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 10.25pt, style=Bold</value>
+    <value>Times New Roman, 9pt, style=Bold</value>
   </data>
   <data name="xrTableCell6.Text" xml:space="preserve">
     <value>单位</value>
@@ -639,7 +675,7 @@
     <value>254</value>
   </data>
   <data name="xrTableCell3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 10.25pt, style=Bold</value>
+    <value>Times New Roman, 9pt, style=Bold</value>
   </data>
   <data name="xrTableCell3.Text" xml:space="preserve">
     <value>库存</value>
@@ -651,7 +687,7 @@
     <value>254</value>
   </data>
   <data name="xrTableCell7.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 10.25pt, style=Bold</value>
+    <value>Times New Roman, 9pt, style=Bold</value>
   </data>
   <data name="xrTableCell7.Text" xml:space="preserve">
     <value>批号
@@ -918,9 +954,9 @@
   <data name="bottomMarginBand1.HeightF" type="System.Single, mscorlib">
     <value>80</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="$this.Localizable" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="$this.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>

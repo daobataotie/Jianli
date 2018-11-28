@@ -68,13 +68,11 @@ namespace Book.UI.produceManager.MRSHeader
 
             xrLabelTpye.Text = this.mRSheader.GetSourceType;
             this.xrLabelEmployee1.Text = this.mRSheader.AuditEmp == null ? "" : this.mRSheader.AuditEmp.EmployeeName;
-
-
-
+            
 
             //明细信息
             this.xrTableCell5.DataBindings.Add("Text", this.DataSource, Model.MRSdetails.PRO_Inumber);
-            // this.xrTableMRSdetailsId.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_Id);
+            this.TCProId.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_Id);
             this.xrTableProductName.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProductName);
             this.xrTableCellCusPro.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_CustomerProductName);
             this.xrTableCellOnWay.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_OrderOnWayQuantity);
@@ -89,7 +87,7 @@ namespace Book.UI.produceManager.MRSHeader
             this.xrTableStock.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_StocksQuantity);
             this.xrTableMaterialDistributioned.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProduceMaterialDistributioned, "{0:0.####}");
             this.xrLabeOtherFenPei.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_OtherMaterialDistributioned, "{0:0.####}");
-            this.xrTableSullier.DataBindings.Add("Text", this.DataSource, "Supplier." + Model.Supplier.PROPERTY_SUPPLIERSHORTNAME);
+            //this.xrTableSullier.DataBindings.Add("Text", this.DataSource, "Supplier." + Model.Supplier.PROPERTY_SUPPLIERSHORTNAME);
             this.xrLabelJiaoQi.DataBindings.Add("Text", this.DataSource, Model.MRSdetails.PRO_JiaoHuoDate, "{0:yyyy-MM-dd}");
             this.xrTableWorkHouseNext.DataBindings.Add("Text", this.DataSource, "WorkHouseNext." + Model.WorkHouse.PROPERTY_WORKHOUSENAME);
         }

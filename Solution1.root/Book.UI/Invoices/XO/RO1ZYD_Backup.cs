@@ -7,13 +7,13 @@ using DevExpress.XtraReports.UI;
 
 namespace Book.UI.Invoices.XO
 {
-    public partial class RO1ZYD : DevExpress.XtraReports.UI.XtraReport
+    public partial class RO1ZYD_Backup : DevExpress.XtraReports.UI.XtraReport
     {
         private BL.InvoiceXOManager invoiceXOManager = new Book.BL.InvoiceXOManager();
         private BL.InvoiceXODetailManager invoiceXODetailManager = new Book.BL.InvoiceXODetailManager();
         private Model.InvoiceXO invoice;
         int pp = 0;
-        public RO1ZYD(string invoiceid)
+        public RO1ZYD_Backup(string invoiceid)
         {
             InitializeComponent();
 
@@ -33,10 +33,10 @@ namespace Book.UI.Invoices.XO
 
             //客户信息
             this.xrLabelCustomName.Text = this.invoice.Customer.CustomerShortName;
-            //this.xrLabelCustomFax.Text = this.invoice.Customer.CustomerFax;
-            //this.xrLabelCustomTel.Text = string.IsNullOrEmpty(this.invoice.Customer.CustomerPhone) ? this.invoice.Customer.CustomerPhone1 : this.invoice.Customer.CustomerPhone;
-            //this.xrLabelTongYiNo.Text = this.invoice.Customer.CustomerNumber;
-            //this.xrLabelPiHao.Text = this.invoice.CustomerLotNumber;
+            this.xrLabelCustomFax.Text = this.invoice.Customer.CustomerFax;
+            this.xrLabelCustomTel.Text = string.IsNullOrEmpty(this.invoice.Customer.CustomerPhone) ? this.invoice.Customer.CustomerPhone1 : this.invoice.Customer.CustomerPhone;
+            this.xrLabelTongYiNo.Text = this.invoice.Customer.CustomerNumber;
+            this.xrLabelPiHao.Text = this.invoice.CustomerLotNumber;
 
             //单据信息
             this.xrLabelInvoiceDate.Text = this.invoice.InvoiceDate.Value.ToString("yyyy-MM-dd");
@@ -48,7 +48,7 @@ namespace Book.UI.Invoices.XO
             this.xrLabelXScustomer.Text = this.invoice.xocustomer.CustomerShortName;
             this.xrLabelYJRQ.Text = this.invoice.InvoiceYjrq.Value.ToString("yyyy-MM-dd");
             this.xrLabelUnit.Text = this.invoice.Details[0].InvoiceProductUnit;
-            //this.xrLabeJianCe.Text = this.invoice.xocustomer.CheckedStandard;
+            this.xrLabeJianCe.Text = this.invoice.xocustomer.CheckedStandard;
             //foreach (Model.InvoiceXODetail invoicedetail in invoice.Details)
             //{
             //    this.lblRemark.Text = invoicedetail.Remark;

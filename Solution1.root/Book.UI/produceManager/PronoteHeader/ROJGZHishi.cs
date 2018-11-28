@@ -55,20 +55,22 @@ namespace Book.UI.produceManager.PronoteHeader
             {
 
                 this.xrLabelProductName.Text = pronoteHeader.Product.ProductName;
-                this.xrLabelCustomerProductName.Text = pronoteHeader.Product.CustomerProductName;
+                //this.xrLabelCustomerProductName.Text = pronoteHeader.Product.CustomerProductName;
                 this.xrRichTextProDesc.Rtf = this.pronoteHeader.Product.ProductDescription;
             }
             Model.InvoiceXO xo = new BL.InvoiceXOManager().Get(this.pronoteHeader.InvoiceXOId);
             if (xo != null)
             {
-                this.xrLabelCheckedStandard.Text = xo.xocustomer.CheckedStandard;
+                //this.xrLabelCheckedStandard.Text = xo.xocustomer.CheckedStandard;
                 this.xrLabelCustomer.Text = xo.xocustomer.CustomerShortName;
                 this.xrLabelCustomerXOId.Text = xo.CustomerInvoiceXOId;
-                if (flag != 0)
-                {
-                    this.xrLabelXOJHDate.Text = xo.InvoiceYjrq.Value.ToString("yyyy-MM-dd");
-                    this.xrLabelPiHao.Text = xo.CustomerLotNumber;
-                }
+                //if (flag != 0)
+                //{
+                this.xrLabelXOJHDate.Text = xo.InvoiceYjrq.Value.ToString("yyyy-MM-dd");
+                //this.xrLabelPiHao.Text = xo.CustomerLotNumber;
+                //}
+
+                this.lblCustomerId.Text = xo.Customer.Id;
             }
             this.xrLabelCount.Text = pronoteHeader.DetailsSum.ToString();
             this.xrLabelUnit.Text = pronoteHeader.ProductUnit;

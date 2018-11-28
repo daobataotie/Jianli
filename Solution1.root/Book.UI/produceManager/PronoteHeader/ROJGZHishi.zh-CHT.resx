@@ -117,21 +117,45 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblCustomerId.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="xrLabelPiHao.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="lblCustomerId.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 9.75pt</value>
+  </data>
+  <assembly alias="DevExpress.Data.v10.2" name="DevExpress.Data.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="lblCustomerId.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
   </data>
   <data name="xrLabel9.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 9.75pt</value>
   </data>
+  <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="xrLabel9.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>0, 165.2291</value>
+  </data>
+  <data name="xrLabel9.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>258.5208, 50.0000153</value>
+  </data>
   <data name="xrLabel9.Text" xml:space="preserve">
-    <value>客  戶  批 號：</value>
+    <value>客戶編號：</value>
   </data>
   <data name="xrLabelMRP.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 9.75pt</value>
   </data>
+  <data name="xrLabelMRP.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1548.21069, 217.658234</value>
+  </data>
+  <data name="xrLabelMRP.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>360.205933, 47.5708923</value>
+  </data>
   <data name="xrLabel20.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 9.75pt</value>
+  </data>
+  <data name="xrLabel20.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1266.46033, 217.6582</value>
   </data>
   <data name="xrLabel20.Text" xml:space="preserve">
     <value>需求計劃單：</value>
@@ -148,32 +172,44 @@
   <data name="xrLabelWorkHouse.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 9.75pt</value>
   </data>
+  <data name="xrLabelWorkHouse.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1548.21069, 265.229126</value>
+  </data>
+  <data name="xrLabelWorkHouse.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>360.205933, 47.5708923</value>
+  </data>
   <data name="xrLabel18.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 9.75pt</value>
+  </data>
+  <data name="xrLabel18.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1266.46033, 265.229126</value>
   </data>
   <data name="xrLabel18.Text" xml:space="preserve">
     <value>下個生產站：</value>
   </data>
-  <data name="xrLabelCheckedStandard.Font" type="System.Drawing.Font, System.Drawing">
-    <value>新細明體, 9.75pt</value>
-  </data>
-  <data name="xrLabel17.Font" type="System.Drawing.Font, System.Drawing">
-    <value>新細明體, 9.75pt</value>
-  </data>
-  <data name="xrLabel17.Text" xml:space="preserve">
-    <value>檢測標準：</value>
-  </data>
   <data name="xrLabelXOJHDate.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 9.75pt</value>
   </data>
+  <data name="xrLabelXOJHDate.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1549.9939, 168.249985</value>
+  </data>
+  <data name="xrLabelXOJHDate.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>359.422974, 46.979126</value>
+  </data>
   <data name="xrLabel12.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 9.75pt</value>
+  </data>
+  <data name="xrLabel12.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1266.46033, 168.249985</value>
   </data>
   <data name="xrLabel12.Text" xml:space="preserve">
     <value>訂單交貨日：</value>
   </data>
   <data name="xrLabelCustomerXOId.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 9.75pt</value>
+  </data>
+  <data name="xrLabelCustomerXOId.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>360.2058, 50.0000229</value>
   </data>
   <data name="xrLabel4.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 9.75pt</value>
@@ -193,15 +229,6 @@
   <data name="xrLabel2.Text" xml:space="preserve">
     <value>單         位：</value>
   </data>
-  <data name="xrLabelCustomerProductName.Font" type="System.Drawing.Font, System.Drawing">
-    <value>新細明體, 9.75pt</value>
-  </data>
-  <data name="xrLabel13.Font" type="System.Drawing.Font, System.Drawing">
-    <value>新細明體, 9.75pt</value>
-  </data>
-  <data name="xrLabel13.Text" xml:space="preserve">
-    <value>客  戶 型 號：</value>
-  </data>
   <data name="xrLabelProductName.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 9.75pt</value>
   </data>
@@ -214,8 +241,23 @@
   <data name="xrLabelCustomer.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 9.75pt</value>
   </data>
+  <data name="xrLabelCustomer.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>871.685, 165.2291</value>
+  </data>
+  <data name="xrLabelCustomer.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>379.999573, 50.0000153</value>
+  </data>
   <data name="xrLabel6.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 9.75pt</value>
+  </data>
+  <data name="xrLabel6.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>631.682861, 165.2291</value>
+  </data>
+  <data name="xrLabel6.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>239.999817, 50.0000153</value>
+  </data>
+  <data name="xrLabel6.Text" xml:space="preserve">
+    <value>客戶名稱：</value>
   </data>
   <data name="xrLabelCount.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 9.75pt</value>
@@ -262,14 +304,12 @@
   <data name="xrRichTextProDesc.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>792.089355, 47.5710449</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="PageHeader.HeightF" type="System.Single, mscorlib">
     <value>447.4126</value>
   </data>
   <data name="xrLabelPronotedesc.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 9.75pt</value>
   </data>
-  <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="xrLabelPronotedesc.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>172.756943, 18.520916</value>
   </data>

@@ -30,7 +30,7 @@ namespace Book.UI.produceManager.PronoteHeader
                 this.xrLabelDataName.Text = Properties.Resources.GZZhiShi;
 
             }
-            else if (flag ==4)
+            else if (flag == 4)
             {
                 this.xrLabelDataName.Text = Properties.Resources.ZZJiaGong;
             }
@@ -56,22 +56,24 @@ namespace Book.UI.produceManager.PronoteHeader
             {
 
                 this.xrLabelProductName.Text = pronoteHeader.Product.ProductName;
-                this.xrLabelCustomerProductName.Text = pronoteHeader.Product.CustomerProductName;
+                //this.xrLabelCustomerProductName.Text = pronoteHeader.Product.CustomerProductName;
                 this.xrRichTextProDesc.Rtf = this.pronoteHeader.Product.ProductDescription;
-                if (this.pronoteHeader.Product.AttrZhengMai!=null)
-                this.RichTextZhengMai.Rtf = this.pronoteHeader.Product.AttrZhengMai;
+                if (this.pronoteHeader.Product.AttrZhengMai != null)
+                    this.RichTextZhengMai.Rtf = this.pronoteHeader.Product.AttrZhengMai;
                 if (this.pronoteHeader.Product.AttrCeMai != null)
-                this.RichTextCeMai.Rtf = this.pronoteHeader.Product.AttrCeMai;
+                    this.RichTextCeMai.Rtf = this.pronoteHeader.Product.AttrCeMai;
 
             }
             Model.InvoiceXO xo = new BL.InvoiceXOManager().Get(this.pronoteHeader.InvoiceXOId);
             if (xo != null)
             {
-                this.xrLabelCheckedStandard.Text = xo.xocustomer.CheckedStandard;
+                //this.xrLabelCheckedStandard.Text = xo.xocustomer.CheckedStandard;
                 this.xrLabelCustomer.Text = xo.xocustomer.CustomerShortName;
                 this.xrLabelCustomerXOId.Text = xo.CustomerInvoiceXOId;
-                this.xrLabelPiHao.Text = xo.CustomerLotNumber;
+                //this.xrLabelPiHao.Text = xo.CustomerLotNumber;
                 this.xrLabelXOJHDate.Text = xo.InvoiceYjrq.Value.ToString("yyyy-MM-dd");
+
+                this.lblCustomerId.Text = xo.Customer.Id;
 
             }
             this.xrLabelCount.Text = pronoteHeader.DetailsSum.ToString();

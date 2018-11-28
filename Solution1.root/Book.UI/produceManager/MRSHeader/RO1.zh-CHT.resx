@@ -152,6 +152,9 @@
   <data name="xrLabel15.Text" xml:space="preserve">
     <value>生產計劃:</value>
   </data>
+  <data name="xrTableCell11.Text" xml:space="preserve">
+    <value>商品編號</value>
+  </data>
   <data name="xrTableCell7.Text" xml:space="preserve">
     <value>貨品名稱</value>
   </data>
@@ -159,7 +162,7 @@
     <value>客戶型號</value>
   </data>
   <data name="xrTableCell12.Text" xml:space="preserve">
-    <value>數量</value>
+    <value>需求數量</value>
   </data>
   <data name="xrTableCell6.Text" xml:space="preserve">
     <value>計劃數量</value>
@@ -169,9 +172,6 @@
   </data>
   <data name="xrTableCell9.Text" xml:space="preserve">
     <value>庫存</value>
-  </data>
-  <data name="xrTableCellSullier.Text" xml:space="preserve">
-    <value>供應商</value>
   </data>
   <data name="xrTableCell10.Text" xml:space="preserve">
     <value>下個生產站</value>

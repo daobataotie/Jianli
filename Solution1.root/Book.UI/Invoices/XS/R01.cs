@@ -80,6 +80,8 @@ namespace Book.UI.Invoices.XS
             this.xrLabelHeji.Text += this.invoice.InvoiceHeji == null ? "0" : this.invoice.InvoiceHeji.Value.ToString("N");
             this.xrLabelTax.Text += this.invoice.InvoiceTax == null ? "0" : this.invoice.InvoiceTax.Value.ToString("N");
             this.xrLabelTatol.Text += this.invoice.InvoiceTotal == null ? "0" : this.invoice.InvoiceTotal.Value.ToString("N");
+            this.lbl_TotalTaibi.Text += this.invoice.InvoiceTaibiTotal == null ? "0" : this.invoice.InvoiceTaibiTotal.Value.ToString("N");
+
         }
     }
 }

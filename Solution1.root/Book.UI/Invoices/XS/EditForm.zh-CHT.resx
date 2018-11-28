@@ -267,4 +267,7 @@
   <data name="$this.Text" xml:space="preserve">
     <value>單據輸入 - 出貨單</value>
   </data>
+  <data name="layoutControlItem36.Text" xml:space="preserve">
+    <value>台幣總計：</value>
+  </data>
 </root>

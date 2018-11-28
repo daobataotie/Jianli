@@ -983,7 +983,7 @@ namespace Book.UI.produceManager.MRSHeader
                             // Model.TechonlogyHeader techonlogyHeader = techonlogyHeaderManager.Get(bomP.TechonlogyHeaderId);
                             SqlParameter[] sqlte = new SqlParameter[] { new SqlParameter("@TechonlogyHeaderId", SqlDbType.VarChar, 50) };
                             sqlte[0].Value = bomP.TechonlogyHeaderId;
-                            IList<Model.Technologydetails> tedetail = technologydetailsManager.DataReaderBind<Model.Technologydetails>(" SELECT t.TechnologydetailsNo,t.ProceduresId,p.WorkHouseId,p.SupplierId,p.IsOtherProduceOther PackageUnit,t.Quantity,t.SunhaoRange  FROM   [Technologydetails] t left join Procedures p on t.ProceduresId=p.ProceduresId WHERE [TechonlogyHeaderId] = @TechonlogyHeaderId ", sqlte, CommandType.Text);
+                            IList<Model.Technologydetails> tedetail = technologydetailsManager.DataReaderBind<Model.Technologydetails>(" SELECT t.TechnologydetailsNo,t.ProceduresId,p.WorkHouseId,p.SupplierId,p.IsOtherProduceOther,t.Quantity,t.SunhaoRange  FROM   [Technologydetails] t left join Procedures p on t.ProceduresId=p.ProceduresId WHERE [TechonlogyHeaderId] = @TechonlogyHeaderId ", sqlte, CommandType.Text);
                             if (tedetail != null)
                             {
                                 foreach (Model.Technologydetails technologydetails in tedetail)
@@ -993,11 +993,11 @@ namespace Book.UI.produceManager.MRSHeader
                                     pronoteProceduresDetail.ProceduresNo = technologydetails.TechnologydetailsNo;
                                     pronoteProceduresDetail.ProceduresId = technologydetails.ProceduresId;
                                     pronoteProceduresDetail.WorkHouseId = technologydetails.WorkHouseId;
-                                    if (technologydetails.Procedures != null)
-                                    {
-                                        pronoteProceduresDetail.IsOtherProduceOther = technologydetails.IsOtherProduceOther;
-                                        pronoteProceduresDetail.SupplierId = technologydetails.SupplierId;
-                                    }
+                                    //if (technologydetails.Procedures != null)
+                                    //{
+                                    pronoteProceduresDetail.IsOtherProduceOther = technologydetails.IsOtherProduceOther;
+                                    pronoteProceduresDetail.SupplierId = technologydetails.SupplierId;
+                                    //}
                                     pronoteProceduresDetail.TechnologyQuantity = technologydetails.Quantity;
                                     pronoteHeader.DetailProcedures.Add(pronoteProceduresDetail);
                                 }
@@ -1594,8 +1594,8 @@ namespace Book.UI.produceManager.MRSHeader
                         }
 
                         //关联物料需求详细生成委外合同,用到物料需求详细主键编号
-                        this._produceOtherCompactDetail.MRSdetailsId = cc.MRSdetailsId; 
-                       
+                        this._produceOtherCompactDetail.MRSdetailsId = cc.MRSdetailsId;
+
                         this._produceOtherCompact.Details.Add(this._produceOtherCompactDetail);
 
                         Model.Product pt = productManager.Get(cc.ProductId);

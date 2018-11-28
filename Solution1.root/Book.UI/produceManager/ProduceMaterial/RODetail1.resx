@@ -132,6 +132,9 @@
   <data name="xrTableCell5.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
+  <data name="TCProductId.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
   <data name="xrTableCellProductName.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
@@ -243,6 +246,15 @@
   </data>
   <data name="xrTableCell4.Text" xml:space="preserve">
     <value>序号</value>
+  </data>
+  <data name="xrTableCell10.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrTableCell10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10.5pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell10.Text" xml:space="preserve">
+    <value>商品編號</value>
   </data>
   <data name="xrTableCell1.Dpi" type="System.Single, mscorlib">
     <value>254</value>

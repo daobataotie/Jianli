@@ -135,9 +135,6 @@
   <data name="xrLabelTax.Text" xml:space="preserve">
     <value>稅額:</value>
   </data>
-  <data name="xrLabelTatol.Text" xml:space="preserve">
-    <value>總額:</value>
-  </data>
   <data name="xrLabelHeji.Text" xml:space="preserve">
     <value>合計:</value>
   </data>

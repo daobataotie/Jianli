@@ -33,7 +33,7 @@
             this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
             this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
-            this.xrLabelPiHao = new DevExpress.XtraReports.UI.XRLabel();
+            this.lblCustomerId = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabelMRP = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel20 = new DevExpress.XtraReports.UI.XRLabel();
@@ -41,16 +41,12 @@
             this.xrLabel19 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabelWorkHouse = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel18 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabelCheckedStandard = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabelXOJHDate = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel12 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabelCustomerXOId = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabelUnit = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabelCustomerProductName = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabelProductName = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel11 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabelCustomer = new DevExpress.XtraReports.UI.XRLabel();
@@ -108,7 +104,7 @@
             // PageHeader
             // 
             this.PageHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLabelPiHao,
+            this.lblCustomerId,
             this.xrLabel9,
             this.xrLabelMRP,
             this.xrLabel20,
@@ -116,16 +112,12 @@
             this.xrLabel19,
             this.xrLabelWorkHouse,
             this.xrLabel18,
-            this.xrLabelCheckedStandard,
-            this.xrLabel17,
             this.xrLabelXOJHDate,
             this.xrLabel12,
             this.xrLabelCustomerXOId,
             this.xrLabel4,
             this.xrLabelUnit,
             this.xrLabel2,
-            this.xrLabelCustomerProductName,
-            this.xrLabel13,
             this.xrLabelProductName,
             this.xrLabel11,
             this.xrLabelCustomer,
@@ -145,13 +137,13 @@
             this.PageHeader.Name = "PageHeader";
             this.PageHeader.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             // 
-            // xrLabelPiHao
+            // lblCustomerId
             // 
-            resources.ApplyResources(this.xrLabelPiHao, "xrLabelPiHao");
-            this.xrLabelPiHao.Name = "xrLabelPiHao";
-            this.xrLabelPiHao.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabelPiHao.StylePriority.UseFont = false;
-            this.xrLabelPiHao.StylePriority.UseTextAlignment = false;
+            resources.ApplyResources(this.lblCustomerId, "lblCustomerId");
+            this.lblCustomerId.Name = "lblCustomerId";
+            this.lblCustomerId.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lblCustomerId.StylePriority.UseFont = false;
+            this.lblCustomerId.StylePriority.UseTextAlignment = false;
             // 
             // xrLabel9
             // 
@@ -209,22 +201,6 @@
             this.xrLabel18.StylePriority.UseFont = false;
             this.xrLabel18.StylePriority.UseTextAlignment = false;
             // 
-            // xrLabelCheckedStandard
-            // 
-            resources.ApplyResources(this.xrLabelCheckedStandard, "xrLabelCheckedStandard");
-            this.xrLabelCheckedStandard.Name = "xrLabelCheckedStandard";
-            this.xrLabelCheckedStandard.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabelCheckedStandard.StylePriority.UseFont = false;
-            this.xrLabelCheckedStandard.StylePriority.UseTextAlignment = false;
-            // 
-            // xrLabel17
-            // 
-            resources.ApplyResources(this.xrLabel17, "xrLabel17");
-            this.xrLabel17.Name = "xrLabel17";
-            this.xrLabel17.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel17.StylePriority.UseFont = false;
-            this.xrLabel17.StylePriority.UseTextAlignment = false;
-            // 
             // xrLabelXOJHDate
             // 
             resources.ApplyResources(this.xrLabelXOJHDate, "xrLabelXOJHDate");
@@ -272,22 +248,6 @@
             this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel2.StylePriority.UseFont = false;
             this.xrLabel2.StylePriority.UseTextAlignment = false;
-            // 
-            // xrLabelCustomerProductName
-            // 
-            resources.ApplyResources(this.xrLabelCustomerProductName, "xrLabelCustomerProductName");
-            this.xrLabelCustomerProductName.Name = "xrLabelCustomerProductName";
-            this.xrLabelCustomerProductName.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabelCustomerProductName.StylePriority.UseFont = false;
-            this.xrLabelCustomerProductName.StylePriority.UseTextAlignment = false;
-            // 
-            // xrLabel13
-            // 
-            resources.ApplyResources(this.xrLabel13, "xrLabel13");
-            this.xrLabel13.Name = "xrLabel13";
-            this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel13.StylePriority.UseFont = false;
-            this.xrLabel13.StylePriority.UseTextAlignment = false;
             // 
             // xrLabelProductName
             // 
@@ -578,8 +538,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel6;
         private DevExpress.XtraReports.UI.XRLabel xrLabelCount;
         private DevExpress.XtraReports.UI.XRLabel xrLabelqw;
-        private DevExpress.XtraReports.UI.XRLabel xrLabelCustomerProductName;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel13;
         private DevExpress.XtraReports.UI.XRLabel xrLabelProductName;
         private DevExpress.XtraReports.UI.XRLabel xrLabel11;
         private DevExpress.XtraReports.UI.XRLabel xrLabelUnit;
@@ -596,8 +554,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel15;
         private DevExpress.XtraReports.UI.XRLabel xrLabel14;
         private DevExpress.XtraReports.UI.XRLabel xrLabel10;
-        private DevExpress.XtraReports.UI.XRLabel xrLabelCheckedStandard;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel17;
         private DevExpress.XtraReports.UI.XRLabel xrLabelWorkHouse;
         private DevExpress.XtraReports.UI.XRLabel xrLabel18;
         private DevExpress.XtraReports.UI.XRSubreport xrSubreport1;
@@ -606,8 +562,8 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel19;
         private DevExpress.XtraReports.UI.XRLabel xrLabelMRP;
         private DevExpress.XtraReports.UI.XRLabel xrLabel20;
-        private DevExpress.XtraReports.UI.XRLabel xrLabelPiHao;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel9;
         private DevExpress.XtraReports.UI.GroupHeaderBand GroupHeader1;
+        private DevExpress.XtraReports.UI.XRLabel lblCustomerId;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel9;
     }
 }

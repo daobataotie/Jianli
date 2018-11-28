@@ -365,6 +365,24 @@
   <data name="xrLabel6.Text" xml:space="preserve">
     <value>数量</value>
   </data>
+  <data name="lbl_TotalTaibi.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lbl_TotalTaibi.Font" type="System.Drawing.Font, System.Drawing">
+    <value>新細明體, 9.75pt</value>
+  </data>
+  <data name="lbl_TotalTaibi.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1604.93628, 52.50277</value>
+  </data>
+  <data name="lbl_TotalTaibi.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>322.063721, 52.50277</value>
+  </data>
+  <data name="lbl_TotalTaibi.Text" xml:space="preserve">
+    <value>台幣总额:</value>
+  </data>
+  <data name="lbl_TotalTaibi.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
   <data name="xrLabel3.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
@@ -414,7 +432,7 @@
     <value>322.063721, 52.50277</value>
   </data>
   <data name="xrLabelTatol.Text" xml:space="preserve">
-    <value>总额:</value>
+    <value>原幣總額:</value>
   </data>
   <data name="xrLabelTatol.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>

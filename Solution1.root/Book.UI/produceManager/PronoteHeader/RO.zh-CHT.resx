@@ -120,9 +120,6 @@
   <data name="xrLabel21.Text" xml:space="preserve">
     <value>客戶訂單數量：</value>
   </data>
-  <data name="xrLabel9.Text" xml:space="preserve">
-    <value>客  戶  批 號：</value>
-  </data>
   <data name="xrLabel20.Text" xml:space="preserve">
     <value>需求計劃單：</value>
   </data>
@@ -131,9 +128,6 @@
   </data>
   <data name="xrLabel18.Text" xml:space="preserve">
     <value>下個生產站：</value>
-  </data>
-  <data name="xrLabel17.Text" xml:space="preserve">
-    <value>檢測標準：</value>
   </data>
   <data name="xrLabel12.Text" xml:space="preserve">
     <value>訂單交貨日：</value>
@@ -147,9 +141,6 @@
   </data>
   <data name="xrLabel2.Text" xml:space="preserve">
     <value>單         位：</value>
-  </data>
-  <data name="xrLabel13.Text" xml:space="preserve">
-    <value>客  戶 型 號：</value>
   </data>
   <data name="xrLabel11.Text" xml:space="preserve">
     <value>商品名稱：</value>
@@ -169,16 +160,16 @@
   <data name="xrLabel5.Text" xml:space="preserve">
     <value>制單人：</value>
   </data>
-  <data name="xrLabel23.Text" xml:space="preserve">
-    <value>側麥：</value>
-  </data>
   <data name="xrLabel22.Text" xml:space="preserve">
     <value>正麥：</value>
   </data>
-  <data name="xrLabel15.Text" xml:space="preserve">
-    <value>單位簽收：</value>
+  <data name="xrLabel23.Text" xml:space="preserve">
+    <value>側麥：</value>
   </data>
   <data name="xrLabel10.Text" xml:space="preserve">
     <value>審核人：</value>
+  </data>
+  <data name="xrLabel15.Text" xml:space="preserve">
+    <value>單位簽收：</value>
   </data>
 </root>

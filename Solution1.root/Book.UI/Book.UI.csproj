@@ -4669,14 +4669,6 @@
       <DependentUpon>RoSubBJ_Proc.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Invoices\XO\RO1ZYD.resx">
-      <DependentUpon>RO1ZYD.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Invoices\XO\RO1ZYD.zh-CHT.resx">
-      <DependentUpon>RO1ZYD.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="Invoices\XO\ROInvoiceXOlist.resx">
       <DependentUpon>ROInvoiceXOlist.cs</DependentUpon>
     </EmbeddedResource>
@@ -4694,6 +4686,22 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices\XO\RO_NewNoPrice.zh-CHT.resx">
       <DependentUpon>RO_NewNoPrice.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\XO\RO1ZYD_Backup.resx">
+      <DependentUpon>RO1ZYD_Backup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\XO\RO1ZYD_Backup.zh-CHT.resx">
+      <DependentUpon>RO1ZYD_Backup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\XO\RO1ZYD.resx">
+      <DependentUpon>RO1ZYD.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\XO\RO1ZYD.zh-CHT.resx">
+      <DependentUpon>RO1ZYD.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices\XS\RO1ZYD.resx">
@@ -11868,12 +11876,6 @@
     <Compile Include="Invoices\XJ\RoSubBJ_Proc.Designer.cs">
       <DependentUpon>RoSubBJ_Proc.cs</DependentUpon>
     </Compile>
-    <Compile Include="Invoices\XO\RO1ZYD.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Invoices\XO\RO1ZYD.Designer.cs">
-      <DependentUpon>RO1ZYD.cs</DependentUpon>
-    </Compile>
     <Compile Include="Invoices\XO\ROInvoiceXOlist.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -11891,6 +11893,18 @@
     </Compile>
     <Compile Include="Invoices\XO\RO_NewNoPrice.Designer.cs">
       <DependentUpon>RO_NewNoPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\XO\RO1ZYD_Backup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Invoices\XO\RO1ZYD_Backup.Designer.cs">
+      <DependentUpon>RO1ZYD_Backup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\XO\RO1ZYD.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Invoices\XO\RO1ZYD.Designer.cs">
+      <DependentUpon>RO1ZYD.cs</DependentUpon>
     </Compile>
     <Compile Include="Invoices\XS\RO1ZYD.cs">
       <SubType>Component</SubType>

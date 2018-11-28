@@ -53,6 +53,7 @@ namespace Book.UI.Invoices.XS
             this.xrLabel40 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
+            this.lbl_TotalTaibi = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabelTax = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabelTatol = new DevExpress.XtraReports.UI.XRLabel();
@@ -329,6 +330,7 @@ namespace Book.UI.Invoices.XS
             // ReportFooter
             // 
             this.ReportFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.lbl_TotalTaibi,
             this.xrLabel3,
             this.xrLabelTax,
             this.xrLabelTatol,
@@ -343,6 +345,16 @@ namespace Book.UI.Invoices.XS
             resources.ApplyResources(this.ReportFooter, "ReportFooter");
             this.ReportFooter.Name = "ReportFooter";
             this.ReportFooter.PrintAtBottom = true;
+            // 
+            // lbl_TotalTaibi
+            // 
+            resources.ApplyResources(this.lbl_TotalTaibi, "lbl_TotalTaibi");
+            this.lbl_TotalTaibi.KeepTogether = true;
+            this.lbl_TotalTaibi.Multiline = true;
+            this.lbl_TotalTaibi.Name = "lbl_TotalTaibi";
+            this.lbl_TotalTaibi.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lbl_TotalTaibi.StylePriority.UseFont = false;
+            this.lbl_TotalTaibi.StylePriority.UseTextAlignment = false;
             // 
             // xrLabel3
             // 
@@ -814,9 +826,9 @@ namespace Book.UI.Invoices.XS
             this.topMarginBand1,
             this.bottomMarginBand1});
             resources.ApplyResources(this, "$this");
-            this.Margins = new System.Drawing.Printing.Margins(150, 79, 79, 79);
+            this.Margins = new System.Drawing.Printing.Margins(149, 78, 79, 79);
             this.PageHeight = 1397;
-            this.PageWidth = 2156;
+            this.PageWidth = 2154;
             this.PaperKind = System.Drawing.Printing.PaperKind.Custom;
             this.StyleSheet.AddRange(new DevExpress.XtraReports.UI.XRControlStyle[] {
             this.xrControlStyle1});
@@ -903,5 +915,6 @@ namespace Book.UI.Invoices.XS
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell7;
         private DevExpress.XtraReports.UI.XRTableCell TCCurrency;
         private DevExpress.XtraReports.UI.XRTableCell TCRate;
+        private DevExpress.XtraReports.UI.XRLabel lbl_TotalTaibi;
     }
 }
