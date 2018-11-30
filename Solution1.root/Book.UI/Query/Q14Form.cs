@@ -27,6 +27,7 @@ namespace Book.UI.Query
         private BL.ProductCategoryManager productCategoryManager = new BL.ProductCategoryManager();
         private DataTable miscDatas;
         private ServiceReference1.Service1SoapClient s;
+        private BL.CustomerManager customerManager = new Book.BL.CustomerManager();
 
         //构造
         public Q14Form()
@@ -35,6 +36,7 @@ namespace Book.UI.Query
             this.barEditItem3.EditValue = false;
             this.bindingSourceDepot.DataSource = this.depotManager.Query(" select DepotId,DepotName from Depot order by Id", 30, "depot").Tables[0];
             this.bindingSourceCategory.DataSource = this.depotManager.Query("select ProductCategoryId,ProductCategoryName,Id from ProductCategory order by Id", 30, "ProductCategory").Tables[0];
+            this.bindingSourceCustomer.DataSource = this.customerManager.Query("select CustomerId,CustomerFullName from Customer", 30, "Customer").Tables[0];
 
         }
 
@@ -67,7 +69,7 @@ namespace Book.UI.Query
             //    lookUpEditDepot.Focus();
             //    return;
             //}
-            if (this.barEditItem3.EditValue.ToString() == "True")
+            if (this.barEditItem3.EditValue.ToString() == "True")  //遠程連接
             {
                 miscDatas = s.SelectStock(this.lookUpEditDepot.EditValue == null ? null : this.lookUpEditDepot.EditValue.ToString(), this.lookUpEditDepotPosition.EditValue == null ? null : this.lookUpEditDepotPosition.EditValue.ToString(), this.lookUpEditProductType.EditValue == null ? null : this.lookUpEditProductType.EditValue.ToString(), this.textProductNameOrId.Text);
             }

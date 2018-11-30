@@ -16,7 +16,7 @@ namespace Book.UI.produceManager.PronoteHeader
         private Model.BomParentPartInfo _bomParmentPartInfo = new Book.Model.BomParentPartInfo();
         private Model.BomParentPartInfo _bomparent = new Book.Model.BomParentPartInfo();
         private BL.BomComponentInfoManager BomComManager = new Book.BL.BomComponentInfoManager();
-        private BL.BomParentPartInfoManager bomParmentInfoManager=new Book.BL.BomParentPartInfoManager();
+        private BL.BomParentPartInfoManager bomParmentInfoManager = new Book.BL.BomParentPartInfoManager();
         private BL.MRSHeaderManager mRSHeaderManager = new BL.MRSHeaderManager();
         private BL.MPSheaderManager mPSheaderManager = new BL.MPSheaderManager();
         private BL.PronotedetailsMaterialManager pronotedetailsMaterialManager = new Book.BL.PronotedetailsMaterialManager();
@@ -24,7 +24,7 @@ namespace Book.UI.produceManager.PronoteHeader
         public RO1()
         {
             InitializeComponent();
-          
+
             //展开 数据源_comDetailss
             //// this.xrTableCellProductId.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_Id);
             //this.xrTableCellProductName.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProductName);
@@ -41,7 +41,7 @@ namespace Book.UI.produceManager.PronoteHeader
 
 
             //不展开 数据源 this.pronoteHeader.DetailsMaterial 
-            // this.xrTableCellProductId.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_Id);
+            this.TCProId.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_Id);
             this.xrTableCellProductName.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProductName);
             this.xrTableCellDetailsSum.DataBindings.Add("Text", this.DataSource, Model.PronotedetailsMaterial.PRO_PronoteQuantity);
             // this.xrTableCellMPSHeaderId.DataBindings.Add("Text", this.DataSource, Model.PronotedetailsMaterial.PRO_MPSheaderId);
@@ -71,22 +71,22 @@ namespace Book.UI.produceManager.PronoteHeader
             IList<Model.MRSdetails> mrsdetailList;
             for (int i = 0; i < this.pronoteHeader.DetailsMaterial.Count; i++)
             {
-                mrsdetailList= mrsdetailsManager.GetByMRSIDAndProId(this.pronoteHeader.DetailsMaterial[i].PronoteHeader.MRSHeaderId, this.pronoteHeader.DetailsMaterial[i].ProductId);
-                if(mrsdetailList!=null&&mrsdetailList.Count>0)             
-               {
-                   this.pronoteHeader.DetailsMaterial[i].JiaoQi = mrsdetailList[0].JiaoHuoDate;              
-           
+                mrsdetailList = mrsdetailsManager.GetByMRSIDAndProId(this.pronoteHeader.DetailsMaterial[i].PronoteHeader.MRSHeaderId, this.pronoteHeader.DetailsMaterial[i].ProductId);
+                if (mrsdetailList != null && mrsdetailList.Count > 0)
+                {
+                    this.pronoteHeader.DetailsMaterial[i].JiaoQi = mrsdetailList[0].JiaoHuoDate;
+
                 }
-            }          
-           //  this.DataSource = XRband();           
+            }
+            //  this.DataSource = XRband();           
             this.DataSource = this.pronoteHeader.DetailsMaterial;
         }
         //# region
         //public IList<Model.BomComponentInfo> XRband()
         //{                    
-      
+
         //     Model.MRSHeader mrp= this.mRSHeaderManager.Get(this.pronoteHeader.MRSHeaderId);           
-       
+
         //     IList<Model.MRSdetails> mrsdetailList=null;
 
         //        foreach (Model.PronotedetailsMaterial mater in this.pronoteHeader.DetailsMaterial)
@@ -113,20 +113,20 @@ namespace Book.UI.produceManager.PronoteHeader
         //            if(_comDetailss[i].Product.IsProcee!=true) //非半成品加工跳过
         //                continue;
         //            //在物料中查询 是否 存在此子件
-                    
+
         //            this._bomparent = this.bomParmentInfoManager.Get(_comDetailss[i].Product);
         //            if (this._bomparent != null)
         //            {                        
         //                //交期
         //            if(!string.IsNullOrEmpty( this.pronoteHeader.MRSHeaderId))
         //            {
-                         
+
         //                if(mrp!=null&&!string.IsNullOrEmpty( mrp.MPSheaderId))
         //                {                                         
         //                    mrsdetailList=this.mrsdetailsManager.SelectWhere(" MadeProductId='"+this._bomparent.ProductId+"' and MRSHeaderId in(select MRSHeaderId from MRSHeader where mpsheaderid='"+mrp.MPSheaderId+"') ");
 
         //                }
-                      
+
         //            }
         //                a = this.BomComManager.Select(this._bomparent);
         //                int m = this._comDetailss.Count;
@@ -143,7 +143,7 @@ namespace Book.UI.produceManager.PronoteHeader
         //                       if(mrpdetail.ProductId==bom.ProductId)
         //                           bom.JiaoQi=mrpdetail.JiaoHuoDate;
         //                    }
-                          
+
         //                    bom.IndexOfBom = null;
         //                    bom.Jibie = _comDetailss[i].Jibie + 1;
         //                    bom.UseQuantity = _comDetailss[i].UseQuantity * bom.UseQuantity*(1+0.01*(bom.SubLoseRate.HasValue?bom.SubLoseRate.Value:0));

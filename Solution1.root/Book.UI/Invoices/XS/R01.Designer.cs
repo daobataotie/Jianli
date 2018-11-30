@@ -239,7 +239,7 @@ namespace Book.UI.Invoices.XS
             this.xrTableDesc.SnapLineMargin = new DevExpress.XtraPrinting.PaddingInfo(5, 0, 0, 0, 254F);
             this.xrTableDesc.StylePriority.UsePadding = false;
             this.xrTableDesc.StylePriority.UseTextAlignment = false;
-            this.xrTableDesc.Weight = 0.081737808368775575;
+            this.xrTableDesc.Weight = 0.10097022127983832;
             // 
             // PageFooter
             // 
@@ -774,7 +774,7 @@ namespace Book.UI.Invoices.XS
             resources.ApplyResources(this.xrTableCell8, "xrTableCell8");
             this.xrTableCell8.Name = "xrTableCell8";
             this.xrTableCell8.StylePriority.UseTextAlignment = false;
-            this.xrTableCell8.Weight = 0.08173781560000859;
+            this.xrTableCell8.Weight = 0.10097016382938749;
             // 
             // xrLabelPrintDate
             // 
@@ -826,7 +826,7 @@ namespace Book.UI.Invoices.XS
             this.topMarginBand1,
             this.bottomMarginBand1});
             resources.ApplyResources(this, "$this");
-            this.Margins = new System.Drawing.Printing.Margins(149, 78, 79, 79);
+            this.Margins = new System.Drawing.Printing.Margins(100, 78, 79, 79);
             this.PageHeight = 1397;
             this.PageWidth = 2154;
             this.PaperKind = System.Drawing.Printing.PaperKind.Custom;

@@ -1141,7 +1141,7 @@ namespace Book.UI.Invoices.XS
                     detail.InvoiceXSDetailMoney = 0;
                 yse += detail.InvoiceXSDetailMoney.Value;
 
-                totalTaibi += Convert.ToDecimal(detail.InvoiceXSDetailPrice) * Convert.ToDecimal(detail.InvoiceXSDetailQuantity) * (detail.ExchangeRate.Value == 0 ? 1 : detail.ExchangeRate.Value);
+                totalTaibi += Convert.ToDecimal(detail.InvoiceXSDetailPrice) * Convert.ToDecimal(detail.InvoiceXSDetailQuantity) * (Convert.ToDecimal(detail.ExchangeRate) == 0 ? 1 : detail.ExchangeRate.Value);
             }
 
             yse = this.GetDecimal(yse, BL.V.SetDataFormat.XSZJXiao.Value);

@@ -1049,13 +1049,14 @@ namespace Book.UI.produceManager.MRSHeader
                             materials.PronotedetailsMaterialId = Guid.NewGuid().ToString();
                             materials.ProductId = component.ProductId;
                             materials.PronoteHeaderID = pronoteHeader.PronoteHeaderID;
-                            materials.PronoteQuantity = Math.Truncate(Convert.ToDouble(component.UseQuantity * pronoteHeader.DetailsSum * (1 + count) * (1 + 0.01 * (component.SubLoseRate == null ? 0 : component.SubLoseRate))) * 10) / 10;    //保留一位小数 不四舍五入
+                            materials.PronoteQuantity = Convert.ToDouble(component.UseQuantity * pronoteHeader.DetailsSum * (1 + count) * (1 + 0.01 * (component.SubLoseRate == null ? 0 : component.SubLoseRate)));    //保留一位小数 不四舍五入
                             materials.Product = new BL.ProductManager().Get(materials.ProductId);
                             if (materials.Product != null && this.mrsheader.GetSourceType == "自製") //依照最小领料单位取整数倍
                             {
                                 if (materials.Product.ProductCategory != null && Convert.ToDouble(materials.Product.ProductCategory.ProductMinQuantity) > 0)
                                     materials.PronoteQuantity = Math.Ceiling(Convert.ToDouble(materials.PronoteQuantity / materials.Product.ProductCategory.ProductMinQuantity)) * materials.Product.ProductCategory.ProductMinQuantity;
                             }
+                            materials.PronoteQuantity = double.Parse(materials.PronoteQuantity.Value.ToString("f0"));
                             materials.ProductUnit = component.Unit;
                             no = no + 1;
                             materials.Inumber = no;
@@ -1091,7 +1092,7 @@ namespace Book.UI.produceManager.MRSHeader
 
                                     //materials.PronoteQuantity = Math.Round(Convert.ToDouble(pronoteHeader.DetailsSum * item.Quantity), 4);
                                     //2018年11月14日21:59:25：改为用“包装用量”
-                                    materials.PronoteQuantity = Math.Round(Convert.ToDouble(pronoteHeader.DetailsSum * item.UseQuantity), 4);
+                                    materials.PronoteQuantity = double.Parse(Convert.ToDouble(pronoteHeader.DetailsSum * item.UseQuantity).ToString("f0"));
 
                                     materials.Product = new BL.ProductManager().Get(materials.ProductId);
                                     //if (materials.Product != null && this.mrsheader.GetSourceType == "自製")

@@ -128,7 +128,7 @@
   <data name="xrTableCellNo.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 9.75pt</value>
   </data>
-  <data name="xrTableJibie.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="TCProId.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 9.75pt</value>
   </data>
   <data name="xrTableCellProductName.Font" type="System.Drawing.Font, System.Drawing">
@@ -163,7 +163,7 @@
     <value>新細明體, 9.75pt</value>
   </data>
   <data name="xrTableCell3.Text" xml:space="preserve">
-    <value>級別</value>
+    <value>商品編號</value>
   </data>
   <data name="xrTableCell1.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 9.75pt</value>

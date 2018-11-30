@@ -500,51 +500,53 @@ namespace Book.UI.Invoices.XO
                 if (e.Column == this.colProductId || e.Column == this.colProduct || e.Column == this.gridColumnCustomProduct || e.Column == this.gridColumn11)
                 {
                     // Model.CustomerProducts p = customerProductsManager.Get(e.Value.ToString());
-                    Model.Product p = this.productManager.Get(e.Value.ToString());
-                    if (p != null)
+                    if (e.Value != null)
                     {
-                        detail.InvoiceXODetailId = Guid.NewGuid().ToString();
-                        detail.InvoiceXODetailMoney = 0;
-                        //if (this.productManager.Get(p.CustomerBeforeProductId) != null)
-                        //    detail.InvoiceXODetailNote = this.productManager.Get(p.CustomerBeforeProductId).ProductDescription;
-                        //计算单价
-                        //string PriceRange = (new BL.CustomerProductPriceManager()).SelectPriceByProductId((detail.ProductId));
-                        //string[] PriAndRange = (PriceRange != null && PriceRange != "") ? PriceRange.Split(',') : null;
-                        //if (PriAndRange != null)
-                        //{
-                        //    foreach (string strPAR in PriAndRange)
-                        //    {
-                        //        double mQuanStart = double.Parse((strPAR.Split('/')[0] != null && strPAR.Split('/')[0] != "") ? strPAR.Split('/')[0] : "0");
-                        //        double mQuanEnd = double.Parse((strPAR.Split('/')[1] != null && strPAR.Split('/')[1] != "") ? strPAR.Split('/')[1] : "0");
-                        //        if (detail.InvoiceXODetailQuantity <= 0)
-                        //        {
-                        //            detail.InvoiceXODetailPrice = 0;
-                        //            this.gridView1.SetRowCellValue(e.RowHandle, this.colInvoiceXODetailPrice, 0);
-                        //            break;
-                        //        }
-                        //        if (detail.InvoiceXODetailQuantity >= mQuanStart && detail.InvoiceXODetailQuantity <= mQuanEnd)
-                        //        {
-                        //            detail.InvoiceXODetailPrice = decimal.Parse((strPAR.Split('/')[2] != null && strPAR.Split('/')[2] != "") ? strPAR.Split('/')[2] : "0");
-                        //            string mDJ = (strPAR.Split('/')[2] != null && strPAR.Split('/')[2] != "") ? strPAR.Split('/')[2] : "0";
-                        //            this.gridView1.SetRowCellValue(e.RowHandle, this.colInvoiceXODetailPrice, mDJ);
-                        //            break;
-                        //        }
-                        //    }
-                        //}
+                        Model.Product p = this.productManager.Get(e.Value.ToString());
+                        if (p != null)
+                        {
+                            detail.InvoiceXODetailId = Guid.NewGuid().ToString();
+                            detail.InvoiceXODetailMoney = 0;
+                            //if (this.productManager.Get(p.CustomerBeforeProductId) != null)
+                            //    detail.InvoiceXODetailNote = this.productManager.Get(p.CustomerBeforeProductId).ProductDescription;
+                            //计算单价
+                            //string PriceRange = (new BL.CustomerProductPriceManager()).SelectPriceByProductId((detail.ProductId));
+                            //string[] PriAndRange = (PriceRange != null && PriceRange != "") ? PriceRange.Split(',') : null;
+                            //if (PriAndRange != null)
+                            //{
+                            //    foreach (string strPAR in PriAndRange)
+                            //    {
+                            //        double mQuanStart = double.Parse((strPAR.Split('/')[0] != null && strPAR.Split('/')[0] != "") ? strPAR.Split('/')[0] : "0");
+                            //        double mQuanEnd = double.Parse((strPAR.Split('/')[1] != null && strPAR.Split('/')[1] != "") ? strPAR.Split('/')[1] : "0");
+                            //        if (detail.InvoiceXODetailQuantity <= 0)
+                            //        {
+                            //            detail.InvoiceXODetailPrice = 0;
+                            //            this.gridView1.SetRowCellValue(e.RowHandle, this.colInvoiceXODetailPrice, 0);
+                            //            break;
+                            //        }
+                            //        if (detail.InvoiceXODetailQuantity >= mQuanStart && detail.InvoiceXODetailQuantity <= mQuanEnd)
+                            //        {
+                            //            detail.InvoiceXODetailPrice = decimal.Parse((strPAR.Split('/')[2] != null && strPAR.Split('/')[2] != "") ? strPAR.Split('/')[2] : "0");
+                            //            string mDJ = (strPAR.Split('/')[2] != null && strPAR.Split('/')[2] != "") ? strPAR.Split('/')[2] : "0";
+                            //            this.gridView1.SetRowCellValue(e.RowHandle, this.colInvoiceXODetailPrice, mDJ);
+                            //            break;
+                            //        }
+                            //    }
+                            //}
 
-                        detail.InvoiceXODetailPrice = 0;
-                        detail.InvoiceXODetailQuantity = 0;
-                        detail.InvoiceXODetailQuantity0 = 0;
-                        //detail.PrimaryKey = p;
-                        //detail.PrimaryKeyId = p.PrimaryKeyId;
-                        detail.Product = p;
-                        detail.ProductId = p.ProductId;
-                        if (p.SellUnit != null)
-                            detail.InvoiceProductUnit = p.SellUnit.CnName;
-                        detail.InvoiceXODetailNote = "";
-                        this.bindingSource1.Position = this.bindingSource1.IndexOf(detail);
+                            detail.InvoiceXODetailPrice = 0;
+                            detail.InvoiceXODetailQuantity = 0;
+                            detail.InvoiceXODetailQuantity0 = 0;
+                            //detail.PrimaryKey = p;
+                            //detail.PrimaryKeyId = p.PrimaryKeyId;
+                            detail.Product = p;
+                            detail.ProductId = p.ProductId;
+                            if (p.SellUnit != null)
+                                detail.InvoiceProductUnit = p.SellUnit.CnName;
+                            detail.InvoiceXODetailNote = "";
+                            this.bindingSource1.Position = this.bindingSource1.IndexOf(detail);
+                        }
                     }
-
                 }
             }
             this.gridControl1.RefreshDataSource();
