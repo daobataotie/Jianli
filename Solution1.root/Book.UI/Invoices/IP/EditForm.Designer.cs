@@ -176,6 +176,7 @@
             this.gridView3.OptionsView.ColumnAutoWidth = false;
             this.gridView3.OptionsView.RowAutoHeight = true;
             this.gridView3.OptionsView.ShowGroupPanel = false;
+            this.gridView3.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridView3_CellValueChanged);
             // 
             // gridColumn1
             // 

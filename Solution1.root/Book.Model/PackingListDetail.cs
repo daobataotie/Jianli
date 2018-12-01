@@ -67,6 +67,7 @@ namespace Book.Model
             }
         }
 
+
         public readonly static string PRO_CUSTNO = "CUSTNO";
 
         public readonly static string PRO_ShowQty = "ShowQty";

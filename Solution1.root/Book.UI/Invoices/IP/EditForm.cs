@@ -30,6 +30,9 @@ namespace Book.UI.Invoices.IP
             this.requireValueExceptions.Add(Model.PackingListHeader.PRO_FromPortId, new AA("From 不能為空！", this.lue_From));
             this.requireValueExceptions.Add(Model.PackingListHeader.PRO_ToPortId, new AA("TO 不能為空！", this.lue_TO));
 
+            this.requireValueExceptions.Add(Model.PackingListDetail.PRO_PLTNo, new AA("PLTNo 不能為空！", this.gridControl3));
+            this.requireValueExceptions.Add(Model.PackingListDetail.PRO_CartonNo, new AA("CartonNo 不能為空！", this.gridControl3));
+
             this.action = "view";
 
             this.bindingSourcePort.DataSource = portManager.Select();
@@ -95,7 +98,7 @@ namespace Book.UI.Invoices.IP
                 this.AddNew();
             else
             {
-                if (this.action == "view")
+                if (this.action == "view" || this.action == "update")  //打印時去掉PLTNO，修改時刷新一下顯示出來
                 {
                     this.packingListHeader = this.packingListHeaderManager.GetDetail(this.packingListHeader.PackingNo);
                 }
@@ -265,6 +268,7 @@ namespace Book.UI.Invoices.IP
                     foreach (Model.InvoiceXODetail detail in f.key)
                     {
                         packingDetail = new Book.Model.PackingListDetail();
+                        packingDetail.CartonQty = 1;
                         packingDetail.PackingListDetailId = Guid.NewGuid().ToString();
                         packingDetail.Product = detail.Product;
                         packingDetail.ProductId = detail.ProductId;
@@ -322,6 +326,64 @@ namespace Book.UI.Invoices.IP
         protected override int AuditState()
         {
             return this.packingListHeader.AuditState.HasValue ? this.packingListHeader.AuditState.Value : 0;
+        }
+
+        private void gridView3_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            if (e.Column.Name == "gridColumn2")
+            {
+                string str = e.Value.ToString();
+                Model.PackingListDetail detail = this.bindingSourceDetail.Current as Model.PackingListDetail;
+
+                if (!string.IsNullOrEmpty(str) && (str.Contains('-') || str.Contains('_') || str.Contains('~')))
+                {
+                    string[] cartonNos = null;
+                    if (str.Contains('-'))
+                        cartonNos = str.Split('-');
+                    else if (str.Contains('_'))
+                        cartonNos = str.Split('_');
+                    else
+                        cartonNos = str.Split('~');
+
+                    try
+                    {
+                        int startNo = int.Parse(cartonNos[0]);
+                        int endNo = int.Parse(cartonNos[1]);
+                        if (endNo >= startNo)
+                        {
+                            //还原数量到最初状态
+                            if (detail.CartonQty > 1)
+                            {
+                                detail.Quantity = (detail.Quantity.HasValue ? detail.Quantity.Value : 0) / detail.CartonQty;
+                                detail.NetWeight = (detail.NetWeight.HasValue ? detail.NetWeight.Value : 0) / detail.CartonQty;
+                                detail.GrossWeight = (detail.GrossWeight.HasValue ? detail.GrossWeight.Value : 0) / detail.CartonQty;
+                            }
+
+
+                            //根据现在的箱数计算数量
+                            detail.CartonQty = endNo - startNo + 1;
+                            detail.Quantity = (detail.Quantity.HasValue ? detail.Quantity.Value : 0) * detail.CartonQty;
+                            detail.NetWeight = (detail.NetWeight.HasValue ? detail.NetWeight.Value : 0) * detail.CartonQty;
+                            detail.GrossWeight = (detail.GrossWeight.HasValue ? detail.GrossWeight.Value : 0) * detail.CartonQty;
+                        }
+                    }
+                    catch
+                    {
+                        return;
+                    }
+                }
+                //else
+                //{
+                //    if (detail.CartonQty > 1)
+                //    {
+                //        detail.Quantity = (detail.Quantity.HasValue ? detail.Quantity.Value : 0) / detail.CartonQty;
+                //        detail.NetWeight = (detail.NetWeight.HasValue ? detail.NetWeight.Value : 0) / detail.CartonQty;
+                //        detail.GrossWeight = (detail.GrossWeight.HasValue ? detail.GrossWeight.Value : 0) / detail.CartonQty;
+                //    }
+                //}
+
+                this.gridControl3.RefreshDataSource();
+            }
         }
     }
 }

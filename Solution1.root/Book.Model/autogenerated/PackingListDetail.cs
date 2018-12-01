@@ -74,6 +74,9 @@ namespace Book.Model
         /// </summary>
         private decimal? _grossWeight;
 
+        private int _cartonQty;
+
+
         /// <summary>
         /// 
         /// </summary>
@@ -267,6 +270,12 @@ namespace Book.Model
             }
         }
 
+        public int CartonQty
+        {
+            get { return _cartonQty; }
+            set { _cartonQty = value; }
+        }
+
         /// <summary>
         /// 
         /// </summary>
@@ -357,6 +366,7 @@ namespace Book.Model
         /// </summary>
         public readonly static string PRO_GrossWeight = "GrossWeight";
 
+        public readonly static string PRO_CartonQty = "CartonQty";
 
         #endregion
     }

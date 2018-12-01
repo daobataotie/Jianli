@@ -13,6 +13,16 @@ namespace Book.UI.Invoices.IP
         {
             InitializeComponent();
 
+            var group = packingList.Details.GroupBy(P => P.PLTNo);
+            foreach (var item in group)
+            {
+                item.ToList().ForEach(D =>
+                {
+                    D.PLTNo = "";
+                });
+                item.First().PLTNo = item.Key;
+            }
+
             this.DataSource = packingList.Details;
 
             this.lbl_PackingNo.Text = packingList.PackingNo;
@@ -24,6 +34,11 @@ namespace Book.UI.Invoices.IP
             this.lbl_From.Text = packingList.FromPort.PortName;
             this.lbl_TO.Text = packingList.ToPort.PortName;
             this.lbl_marks.Text = packingList.MarkNos;
+
+            //this.lblTotal.Text = packingList.Details.Max(P => Convert.ToInt32(string.IsNullOrEmpty(P.PLTNo) ? "0" : P.PLTNo)) + " PLT / " +
+            //    (string.IsNullOrEmpty(packingList.Details.Last().CartonNo) ? "" : packingList.Details.Last().CartonNo.Substring(packingList.Details.Last().CartonNo.Length - 1)) + " CARTON";
+            this.lblTotal.Text = packingList.Details.Max(P => Convert.ToInt32(string.IsNullOrEmpty(P.PLTNo) ? "0" : P.PLTNo)) + " PLT / " +
+                                 packingList.Details.Sum(P => P.CartonQty) + " CARTON";
 
             this.lbl_TotalQTY.Text = packingList.Details.Sum(P => P.Quantity).Value.ToString("0.##") + " PCS";
             this.lbl_TotalNetWeight.Text = packingList.Details.Sum(P => P.NetWeight).Value.ToString("0.##") + " KGS";
@@ -39,6 +54,5 @@ namespace Book.UI.Invoices.IP
             TC_GrossWeight.DataBindings.Add("Text", this.DataSource, Model.PackingListDetail.PRO_ShowGrossWeight);
 
         }
-
     }
 }

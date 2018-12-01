@@ -130,6 +130,14 @@ namespace Book.BL
                 throw new Helper.RequireValueException(Model.PackingListHeader.PRO_FromPortId);
             if (string.IsNullOrEmpty(model.ToPortId))
                 throw new Helper.RequireValueException(Model.PackingListHeader.PRO_ToPortId);
+
+            foreach (var item in model.Details)
+            {
+                if (string.IsNullOrEmpty(item.PLTNo))
+                    throw new Helper.RequireValueException(Model.PackingListDetail.PRO_PLTNo);
+                if (string.IsNullOrEmpty(item.CartonNo))
+                    throw new Helper.RequireValueException(Model.PackingListDetail.PRO_CartonNo);
+            }
         }
 
         public Book.Model.PackingListHeader GetDetail(string packingNo)
