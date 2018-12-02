@@ -15,39 +15,40 @@ namespace Book.BL
     /// </summary>
     public partial class PassNoteBookDetailManager
     {
-		
-		/// <summary>
-		/// Delete PassNoteBookDetail by primary key.
-		/// </summary>
-		public void Delete(string passNoteBookDetailId)
-		{
-			//
-			// todo:add other logic here
-			//
-			accessor.Delete(passNoteBookDetailId);
-		}
 
-		/// <summary>
-		/// Insert a PassNoteBookDetail.
-		/// </summary>
+        /// <summary>
+        /// Delete PassNoteBookDetail by primary key.
+        /// </summary>
+        public void Delete(string passNoteBookDetailId)
+        {
+            //
+            // todo:add other logic here
+            //
+            accessor.Delete(passNoteBookDetailId);
+        }
+
+        /// <summary>
+        /// Insert a PassNoteBookDetail.
+        /// </summary>
         public void Insert(Model.PassNoteBookDetail passNoteBookDetail)
         {
-			//
-			// todo:add other logic here
-			//
+            //
+            // todo:add other logic here
+            //
             accessor.Insert(passNoteBookDetail);
         }
-		
-		/// <summary>
-		/// Update a PassNoteBookDetail.
-		/// </summary>
+
+        /// <summary>
+        /// Update a PassNoteBookDetail.
+        /// </summary>
         public void Update(Model.PassNoteBookDetail passNoteBookDetail)
         {
-			//
-			// todo: add other logic here.
-			//
+            //
+            // todo: add other logic here.
+            //
             accessor.Update(passNoteBookDetail);
         }
+
     }
 }
 

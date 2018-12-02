@@ -750,6 +750,8 @@ namespace Book.UI
             //PackingList
             operations.Add("Invoices.IP.EditForm", (D1)delegate(System.Windows.Forms.Form form) { M1("Invoices.IP.EditForm", form); });
 
+            //Packing Invoice
+            operations.Add("Invoices.IP.EditFormInvoice", (D1)delegate(System.Windows.Forms.Form form) { M1("Invoices.IP.EditFormInvoice", form); });
         }
 
         static Form CreateForm(string formTypeName)

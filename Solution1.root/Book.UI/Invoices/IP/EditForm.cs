@@ -23,7 +23,7 @@ namespace Book.UI.Invoices.IP
 
             this.ncc_Customer.Choose = new Settings.BasicData.Customs.ChooseCustoms();
             this.requireValueExceptions.Add(Model.PackingListHeader.PRO_PackingNo, new AA("PackingNo 不能為空！", this.txt_PackingNo));
-            this.requireValueExceptions.Add(Model.PackingListHeader.PRO_PackingDate, new AA("PackingDate 不能為空！", this.Date_PackingDate));
+            this.requireValueExceptions.Add(Model.PackingListHeader.PRO_PackingDate, new AA("Date 不能為空！", this.Date_PackingDate));
             this.requireValueExceptions.Add(Model.PackingListHeader.PRO_CustomerId, new AA("CONSIGNEE 不能為空！", this.ncc_Customer));
             this.requireValueExceptions.Add(Model.PackingListHeader.PRO_PerSS, new AA("PerSS 不能為空！", this.txt_PerSS));
             this.requireValueExceptions.Add(Model.PackingListHeader.PRO_SailingOnOrAbout, new AA("SailingOnOrAbout 不能為空！", this.date_Sailing));
@@ -237,7 +237,7 @@ namespace Book.UI.Invoices.IP
 
         public override BaseListForm GetListForm()
         {
-            return new ZX.List();
+            return new ListForm();
         }
 
         protected override DevExpress.XtraReports.UI.XtraReport GetReport()

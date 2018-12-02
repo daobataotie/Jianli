@@ -148,5 +148,10 @@ namespace Book.BL
 
             return header;
         }
+
+        public IList<Model.PackingListHeader> SelectByCondition(DateTime startDate, DateTime endDate, string customerId)
+        {
+            return accessor.SelectByCondition(startDate, endDate, customerId);
+        }
     }
 }

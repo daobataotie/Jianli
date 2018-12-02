@@ -644,6 +644,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
+            this.barButtonItem484 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
@@ -1260,10 +1261,11 @@
             this.barButtonItem480,
             this.barButtonItem481,
             this.barButtonItem482,
-            this.barButtonItem483});
+            this.barButtonItem483,
+            this.barButtonItem484});
             this.barManager1.LargeImages = this.imageCollection1;
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 643;
+            this.barManager1.MaxItemId = 644;
             this.barManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemComboBox1});
             this.barManager1.StatusBar = this.bar3;
@@ -2024,7 +2026,8 @@
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.None, false, this.barButtonItem445, false),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.None, false, this.barButtonItem451, false),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem480),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem481)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem481),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem484)});
             this.barSubItem55.Name = "barSubItem55";
             this.barSubItem55.Tag = "XOSystem";
             // 
@@ -6102,6 +6105,13 @@
             // 
             resources.ApplyResources(this.helpProvider1, "helpProvider1");
             // 
+            // barButtonItem484
+            // 
+            resources.ApplyResources(this.barButtonItem484, "barButtonItem484");
+            this.barButtonItem484.Id = 643;
+            this.barButtonItem484.Name = "barButtonItem484";
+            this.barButtonItem484.Tag = "Invoices.IP.EditFormInvoice";
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -6739,6 +6749,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem480;
         private DevExpress.XtraBars.BarButtonItem barButtonItem481;
         private DevExpress.XtraBars.BarButtonItem barButtonItem482;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem483;        
+        private DevExpress.XtraBars.BarButtonItem barButtonItem483;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem484;        
     }
 }

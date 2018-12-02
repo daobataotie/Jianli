@@ -48,5 +48,10 @@ namespace Book.BL
 			//
             accessor.Update(packingListDetail);
         }
+
+        public IList<Model.PackingListDetail> SelectByHeader(string headerId)
+        {
+            return accessor.SelectByHeader(headerId);
+        }
     }
 }
