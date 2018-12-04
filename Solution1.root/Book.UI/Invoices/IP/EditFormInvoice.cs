@@ -101,16 +101,19 @@ namespace Book.UI.Invoices.IP
             this.txt_InvoiceNo.Text = this.packingInvoiceHeader.InvoiceNo;
             this.Date_InvoiceDate.EditValue = this.packingInvoiceHeader.InvoiceDate;
             this.ncc_Customer.EditValue = this.packingInvoiceHeader.Customer;
-            if (this.packingInvoiceHeader.Customer != null)
-            {
-                this.txt_CustomerName.EditValue = this.packingInvoiceHeader.Customer.CustomerFullName;
-                this.txt_ADDRESS.EditValue = this.packingInvoiceHeader.Customer.CustomerAddress;
-            }
-            else
-            {
-                this.txt_CustomerName.EditValue = "";
-                this.txt_ADDRESS.EditValue = "";
-            }
+            //if (this.packingInvoiceHeader.Customer != null)   //客户全名和地址独立出来，不从客户带
+            //{
+            //    this.txt_CustomerName.EditValue = this.packingInvoiceHeader.Customer.CustomerFullName;
+            //    this.txt_ADDRESS.EditValue = this.packingInvoiceHeader.Customer.CustomerAddress;
+            //}
+            //else
+            //{
+            //    this.txt_CustomerName.EditValue = "";
+            //    this.txt_ADDRESS.EditValue = "";
+            //}
+            this.txt_CustomerName.EditValue = this.packingInvoiceHeader.CustomerFullName;
+            this.txt_ADDRESS.EditValue = this.packingInvoiceHeader.CustomerAddress;
+
             this.txt_PerSS.Text = this.packingInvoiceHeader.PerSS;
             this.date_Sailing.EditValue = this.packingInvoiceHeader.SailingOnOrAbout;
             this.lue_From.EditValue = this.packingInvoiceHeader.FromPortId;
@@ -159,6 +162,8 @@ namespace Book.UI.Invoices.IP
                 this.packingInvoiceHeader.CustomerId = (this.ncc_Customer.EditValue as Model.Customer).CustomerId;
                 this.packingInvoiceHeader.Customer = this.ncc_Customer.EditValue as Model.Customer;
             }
+            this.packingInvoiceHeader.CustomerFullName = this.txt_CustomerName.Text;
+            this.packingInvoiceHeader.CustomerAddress = this.txt_ADDRESS.Text;
             this.packingInvoiceHeader.PerSS = this.txt_PerSS.Text;
             if (this.date_Sailing.EditValue != null)
                 this.packingInvoiceHeader.SailingOnOrAbout = this.date_Sailing.DateTime;
@@ -285,6 +290,7 @@ namespace Book.UI.Invoices.IP
             }
         }
 
+        //选择PackingList
         private void bar_ChoosePackingList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (this.action != "view")
@@ -293,8 +299,10 @@ namespace Book.UI.Invoices.IP
                 if (f.ShowDialog(this) == DialogResult.OK)
                 {
                     this.ncc_Customer.EditValue = this.packingInvoiceHeader.Customer = f.SelectItem.Customer = new BL.CustomerManager().Get(f.SelectItem.CustomerId);
-                    this.txt_CustomerName.Text = f.SelectItem.Customer.CustomerFullName;
-                    this.txt_ADDRESS.Text = f.SelectItem.Customer.CustomerAddress;
+                    this.txt_CustomerName.EditValue = f.SelectItem.CustomerFullName;
+                    this.txt_ADDRESS.EditValue = f.SelectItem.CustomerAddress;
+                    //this.txt_CustomerName.Text = f.SelectItem.Customer.CustomerFullName;
+                    //this.txt_ADDRESS.Text = f.SelectItem.Customer.CustomerAddress;
                     this.txt_PerSS.Text = f.SelectItem.PerSS;
                     this.date_Sailing.EditValue = f.SelectItem.SailingOnOrAbout;
                     this.lue_From.EditValue = f.SelectItem.FromPortId;

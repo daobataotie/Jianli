@@ -27,8 +27,10 @@ namespace Book.UI.Invoices.IP
 
             this.lbl_PackingNo.Text = packingList.PackingNo;
             this.lbl_PackingDate.Text = packingList.PackingDate.Value.ToString("yyyy-MM-dd");
-            this.lbl_CustomerFullName.Text = packingList.Customer.CustomerFullName;
-            this.lbl_address.Text = packingList.Customer.CustomerAddress;
+            //this.lbl_CustomerFullName.Text = packingList.Customer.CustomerFullName;
+            //this.lbl_address.Text = packingList.Customer.CustomerAddress;
+            this.lbl_CustomerFullName.Text = packingList.CustomerFullName;
+            this.lbl_address.Text = packingList.CustomerAddress;
             this.lbl_PerSS.Text = packingList.PerSS;
             this.lbl_SailingDate.Text = packingList.SailingOnOrAbout.Value.ToString("yyyy-MM-dd");
             this.lbl_From.Text = packingList.FromPort.PortName;
@@ -48,7 +50,9 @@ namespace Book.UI.Invoices.IP
             TC_PLTNo.DataBindings.Add("Text", this.DataSource, Model.PackingListDetail.PRO_PLTNo);
             TC_CartonNo.DataBindings.Add("Text", this.DataSource, Model.PackingListDetail.PRO_CartonNo);
             TC_PONO.DataBindings.Add("Text", this.DataSource, Model.PackingListDetail.PRO_PONo);
-            TC_CUSTNO.DataBindings.Add("Text", this.DataSource, Model.PackingListDetail.PRO_CUSTNO);
+            //TC_CUSTNO.DataBindings.Add("Text", this.DataSource, Model.PackingListDetail.PRO_CUSTNO);
+            //TC_ProductName.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProductName);
+            TC_CUSTNO.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_CustomerProductName);
             TC_ProductName.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProductName);
             TCQTY.DataBindings.Add("Text", this.DataSource, Model.PackingListDetail.PRO_ShowQty);
             TC_NetWeight.DataBindings.Add("Text", this.DataSource, Model.PackingListDetail.PRO_ShowNetWeight);

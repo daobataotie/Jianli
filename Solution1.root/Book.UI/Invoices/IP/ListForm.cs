@@ -17,7 +17,7 @@ namespace Book.UI.Invoices.IP
         {
             InitializeComponent();
 
-            this.bindingSourceCustomer.DataSource = new BL.CustomerManager().Query("select CustomerId,CustomerFullName,CustomerAddress,* from Customer", 30, "CustomerName").Tables[0];
+            //this.bindingSourceCustomer.DataSource = new BL.CustomerManager().Query("select CustomerId,CustomerFullName,CustomerAddress,* from Customer", 30, "CustomerName").Tables[0];
             this.bindingSourcePort.DataSource = new BL.PortManager().Select();
         }
 

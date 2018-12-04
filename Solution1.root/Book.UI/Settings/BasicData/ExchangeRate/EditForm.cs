@@ -18,10 +18,21 @@ namespace Book.UI.Settings.BasicData.ExchangeRate
         public EditForm()
         {
             InitializeComponent();
-            this.requireValueExceptions.Add(Model.ExchangeRate.PRO_UseDate, new AA("日期不能為空", this.gridControl1));
+            this.requireValueExceptions.Add(Model.ExchangeRate.PRO_YearValue, new AA("年份不能為空", this.gridControl1));
+            this.requireValueExceptions.Add(Model.ExchangeRate.PRO_MonthValue, new AA("月份不能為空", this.gridControl1));
             this.requireValueExceptions.Add(Model.ExchangeRate.PRO_Currency, new AA("幣別不能為空", this.gridControl1));
 
             this.action = "view";
+
+            int year = DateTime.Now.Year + 1;
+            for (int i = 0; i < 10; i++)
+            {
+                this.repositoryItemComboBox2.Items.Add(year - i);
+            }
+            for (int i = 1; i <= 12; i++)
+            {
+                this.repositoryItemComboBox3.Items.Add(i);
+            }
         }
 
         private void EditForm_Load(object sender, EventArgs e)

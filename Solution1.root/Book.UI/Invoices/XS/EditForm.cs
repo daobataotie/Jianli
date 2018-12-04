@@ -942,15 +942,17 @@ namespace Book.UI.Invoices.XS
             //    xsdetail.ExchangeRate = rate;
             //}
 
-            int day = this.dateEditInvoiceDate.DateTime.Day;
-            DateTime date = DateTime.Now;
-            if (day < 11)
-                date = DateTime.Parse(string.Format("{0}-{1}-{2}", this.dateEditInvoiceDate.DateTime.Year, this.dateEditInvoiceDate.DateTime.Month, "1"));
-            else if (day >= 11 && day < 21)
-                date = DateTime.Parse(string.Format("{0}-{1}-{2}", this.dateEditInvoiceDate.DateTime.Year, this.dateEditInvoiceDate.DateTime.Month, "11"));
-            else
-                date = DateTime.Parse(string.Format("{0}-{1}-{2}", this.dateEditInvoiceDate.DateTime.Year, this.dateEditInvoiceDate.DateTime.Month, "21"));
-            decimal rate = exchangeRateManager.GetRateByDateAndCurrency(date, xodetail.Invoice.Currency);
+            //int day = this.dateEditInvoiceDate.DateTime.Day;
+            //DateTime date = DateTime.Now;
+            //if (day < 11)
+            //    date = DateTime.Parse(string.Format("{0}-{1}-{2}", this.dateEditInvoiceDate.DateTime.Year, this.dateEditInvoiceDate.DateTime.Month, "1"));
+            //else if (day >= 11 && day < 21)
+            //    date = DateTime.Parse(string.Format("{0}-{1}-{2}", this.dateEditInvoiceDate.DateTime.Year, this.dateEditInvoiceDate.DateTime.Month, "11"));
+            //else
+            //    date = DateTime.Parse(string.Format("{0}-{1}-{2}", this.dateEditInvoiceDate.DateTime.Year, this.dateEditInvoiceDate.DateTime.Month, "21"));
+
+
+            decimal rate = exchangeRateManager.GetRateByDateAndCurrency(this.dateEditInvoiceDate.DateTime, xodetail.Invoice.Currency);
             xsdetail.Currency = xodetail.Invoice.Currency;
             xsdetail.ExchangeRate = rate;
 
@@ -1341,16 +1343,6 @@ namespace Book.UI.Invoices.XS
             if (this.action == "view")
                 return;
 
-            int day = this.dateEditInvoiceDate.DateTime.Day;
-            DateTime date = DateTime.Now;
-
-            if (day < 11)
-                date = DateTime.Parse(string.Format("{0}-{1}-{2}", this.dateEditInvoiceDate.DateTime.Year, this.dateEditInvoiceDate.DateTime.Month, "1"));
-            else if (day >= 11 && day < 21)
-                date = DateTime.Parse(string.Format("{0}-{1}-{2}", this.dateEditInvoiceDate.DateTime.Year, this.dateEditInvoiceDate.DateTime.Month, "11"));
-            else
-                date = DateTime.Parse(string.Format("{0}-{1}-{2}", this.dateEditInvoiceDate.DateTime.Year, this.dateEditInvoiceDate.DateTime.Month, "21"));
-
             string currency = null;
 
             foreach (var item in invoice.Details)
@@ -1365,7 +1357,7 @@ namespace Book.UI.Invoices.XS
                 else
                 {
                     //decimal price = 0;
-                    decimal rate = exchangeRateManager.GetRateByDateAndCurrency(date, currency);
+                    decimal rate = exchangeRateManager.GetRateByDateAndCurrency(this.dateEditInvoiceDate.DateTime, currency);
                     //if (rate != 0)
                     //    price = item.InvoiceXODetail.InvoiceXODetailPrice.Value * rate;
                     //else

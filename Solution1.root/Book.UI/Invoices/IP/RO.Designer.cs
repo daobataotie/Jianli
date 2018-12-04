@@ -76,6 +76,7 @@
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
+            this.lblTotal = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLine2 = new DevExpress.XtraReports.UI.XRLine();
             this.xrLabel20 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel19 = new DevExpress.XtraReports.UI.XRLabel();
@@ -86,7 +87,6 @@
             this.lbl_TotalQTY = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLine1 = new DevExpress.XtraReports.UI.XRLine();
-            this.lblTotal = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -573,6 +573,16 @@
             this.ReportFooter.HeightF = 322.5F;
             this.ReportFooter.Name = "ReportFooter";
             // 
+            // lblTotal
+            // 
+            this.lblTotal.Dpi = 254F;
+            this.lblTotal.LocationFloat = new DevExpress.Utils.PointFloat(119.0625F, 5.000018F);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lblTotal.SizeF = new System.Drawing.SizeF(410.1042F, 58.42004F);
+            this.lblTotal.StylePriority.UseTextAlignment = false;
+            this.lblTotal.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
             // xrLine2
             // 
             this.xrLine2.Dpi = 254F;
@@ -676,16 +686,6 @@
             this.xrLine1.LocationFloat = new DevExpress.Utils.PointFloat(4.854617F, 0F);
             this.xrLine1.Name = "xrLine1";
             this.xrLine1.SizeF = new System.Drawing.SizeF(1976.875F, 5F);
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.Dpi = 254F;
-            this.lblTotal.LocationFloat = new DevExpress.Utils.PointFloat(119.0625F, 5.000018F);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.lblTotal.SizeF = new System.Drawing.SizeF(410.1042F, 58.42004F);
-            this.lblTotal.StylePriority.UseTextAlignment = false;
-            this.lblTotal.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // RO
             // 

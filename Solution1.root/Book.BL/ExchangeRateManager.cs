@@ -63,23 +63,17 @@ namespace Book.BL
         {
             foreach (var item in list)
             {
-                if (item.UseDate == null)
-                    throw new Helper.RequireValueException(Model.ExchangeRate.PRO_UseDate);
+                if (item.YearValue == null)
+                    throw new Helper.RequireValueException(Model.ExchangeRate.PRO_YearValue);
+                if (item.MonthValue == null)
+                    throw new Helper.RequireValueException(Model.ExchangeRate.PRO_MonthValue);
                 if (string.IsNullOrEmpty(item.Currency))
                     throw new Helper.RequireValueException(Model.ExchangeRate.PRO_Currency);
                 //if (IsExistsSame(item))
                 //    throw new Helper.RequireValueException(Model.ExchangeRate.PRO_Id);
 
-                //更改日期
-                if (item.UseDate.Value.Day < 11)
-                    item.UseDate = DateTime.Parse(string.Format("{0}-{1}-{2}", item.Year, item.Month, "1"));
-                else if (item.UseDate.Value.Day >= 11 && item.UseDate.Value.Day < 21)
-                    item.UseDate = DateTime.Parse(string.Format("{0}-{1}-{2}", item.Year, item.Month, "11"));
-                else
-                    item.UseDate = DateTime.Parse(string.Format("{0}-{1}-{2}", item.Year, item.Month, "21"));
-
                 if (IsExistsSame(item))
-                    throw new Exception(string.Format("已存在相同的日期 {0}-{1}-{2} 相同的幣別 {3}", item.Year, item.Month, item.TenDays, item.Currency));
+                    throw new Exception(string.Format("已存在相同月份 {0}-{1} 相同的幣別 {2}", item.YearValue, item.MonthValue, item.Currency));
             }
 
             foreach (var item in list)

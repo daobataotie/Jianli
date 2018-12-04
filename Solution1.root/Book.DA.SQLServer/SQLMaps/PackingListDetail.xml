@@ -3,7 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <statements>
     <select id="SelectByHeader" parameterClass="string" resultMap="PackingListDetailResult">
-      select * from PackingListDetail where PackingListHeaderId=#value# order by PLTNo,CartonNo
+      select * from PackingListDetail where PackingListHeaderId=#value# order by CartonNo
     </select>
 
     <delete id="DeleteByHeader" parameterClass="string">

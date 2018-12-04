@@ -14,46 +14,6 @@ namespace Book.Model
     [Serializable]
     public partial class ExchangeRate
     {
-        public int? Year
-        {
-            get
-            {
-                if (this.UseDate == null)
-                    return null;
-                else
-                    return this.UseDate.Value.Year;
-            }
-        }
-
-        public int? Month
-        {
-            get
-            {
-                if (this.UseDate == null)
-                    return null;
-                else
-                    return this.UseDate.Value.Month;
-            }
-        }
-
-        public string TenDays
-        {
-            get
-            {
-                if (this.UseDate == null)
-                    return null;
-                else
-                {
-                    if (this.UseDate.Value.Day < 11)
-                        return "上旬";
-                    else if (this.UseDate.Value.Day >= 11 && this.UseDate.Value.Day < 21)
-                        return "中旬";
-                    else
-                        return "下旬";
-                }
-            }
-        }
-
         public static string ConvertCurrencyName(string currency)
         {
             string enName = "";

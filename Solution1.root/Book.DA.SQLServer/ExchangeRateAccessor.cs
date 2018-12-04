@@ -22,7 +22,8 @@ namespace Book.DA.SQLServer
         public bool IsExistsSame(Model.ExchangeRate model)
         {
             Hashtable ht = new Hashtable();
-            ht.Add("UseDate", model.UseDate.Value.Date);
+            ht.Add("YearValue", model.YearValue);
+            ht.Add("MonthValue", model.MonthValue);
             ht.Add("Currency", model.Currency);
             ht.Add("Id", model.Id);
 
@@ -32,10 +33,16 @@ namespace Book.DA.SQLServer
         public decimal GetRateByDateAndCurrency(DateTime date, string currency)
         {
             Hashtable ht = new Hashtable();
-            ht.Add("UseDate", date.Date);
+            ht.Add("YearValue", date.Year);
+            ht.Add("MonthValue", date.Month);
             ht.Add("Currency", currency);
 
-            return sqlmapper.QueryForObject<decimal>("ExchangeRate.GetRateByDateAndCurrency", ht);
+            if (date.Day < 11)
+                return sqlmapper.QueryForObject<decimal>("ExchangeRate.GetUpRateByDateAndCurrency", ht);
+            else if (date.Day >= 11 && date.Day < 21)
+                return sqlmapper.QueryForObject<decimal>("ExchangeRate.GetMiddleRateByDateAndCurrency", ht);
+            else
+                return sqlmapper.QueryForObject<decimal>("ExchangeRate.GetDownRateByDateAndCurrency", ht);
         }
     }
 

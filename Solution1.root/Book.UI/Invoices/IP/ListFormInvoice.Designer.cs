@@ -138,8 +138,7 @@
             // gridColumn3
             // 
             this.gridColumn3.Caption = "For account and risk of Messrs";
-            this.gridColumn3.ColumnEdit = this.repositoryItemLookUpEdit1;
-            this.gridColumn3.FieldName = "CustomerId";
+            this.gridColumn3.FieldName = "CustomerFullName";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
@@ -161,8 +160,7 @@
             // gridColumn4
             // 
             this.gridColumn4.Caption = "Address";
-            this.gridColumn4.ColumnEdit = this.repositoryItemLookUpEdit2;
-            this.gridColumn4.FieldName = "CustomerId";
+            this.gridColumn4.FieldName = "CustomerAddress";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;

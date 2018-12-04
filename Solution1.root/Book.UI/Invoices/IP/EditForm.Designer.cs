@@ -38,7 +38,9 @@
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemRichTextEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemRichTextEdit();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemRichTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemRichTextEdit();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -86,6 +88,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichTextEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_MarkNos.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lue_TO.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourcePort)).BeginInit();
@@ -154,6 +158,9 @@
             this.gridControl3.MainView = this.gridView3;
             this.gridControl3.MenuManager = this.barManager1;
             this.gridControl3.Name = "gridControl3";
+            this.gridControl3.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemRichTextEdit1,
+            this.repositoryItemRichTextEdit2});
             this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
             // 
@@ -200,9 +207,14 @@
             // gridColumn4
             // 
             resources.ApplyResources(this.gridColumn4, "gridColumn4");
-            this.gridColumn4.FieldName = "CUSTNO";
+            this.gridColumn4.ColumnEdit = this.repositoryItemRichTextEdit2;
+            this.gridColumn4.FieldName = "Product.CustomerProductName";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowEdit = false;
+            // 
+            // repositoryItemRichTextEdit2
+            // 
+            this.repositoryItemRichTextEdit2.Name = "repositoryItemRichTextEdit2";
             // 
             // gridColumn5
             // 
@@ -210,6 +222,10 @@
             this.gridColumn5.FieldName = "Product.ProductName";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.OptionsColumn.AllowEdit = false;
+            // 
+            // repositoryItemRichTextEdit1
+            // 
+            this.repositoryItemRichTextEdit1.Name = "repositoryItemRichTextEdit1";
             // 
             // gridColumn6
             // 
@@ -341,7 +357,6 @@
             resources.ApplyResources(this.txt_CustomerName, "txt_CustomerName");
             this.txt_CustomerName.MenuManager = this.barManager1;
             this.txt_CustomerName.Name = "txt_CustomerName";
-            this.txt_CustomerName.Properties.ReadOnly = true;
             this.txt_CustomerName.StyleController = this.layoutControl1;
             // 
             // txt_ADDRESS
@@ -349,7 +364,6 @@
             resources.ApplyResources(this.txt_ADDRESS, "txt_ADDRESS");
             this.txt_ADDRESS.MenuManager = this.barManager1;
             this.txt_ADDRESS.Name = "txt_ADDRESS";
-            this.txt_ADDRESS.Properties.ReadOnly = true;
             this.txt_ADDRESS.StyleController = this.layoutControl1;
             // 
             // Date_PackingDate
@@ -615,6 +629,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichTextEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichTextEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_MarkNos.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lue_TO.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourcePort)).EndInit();
@@ -704,5 +720,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
+        private DevExpress.XtraEditors.Repository.RepositoryItemRichTextEdit repositoryItemRichTextEdit2;
+        private DevExpress.XtraEditors.Repository.RepositoryItemRichTextEdit repositoryItemRichTextEdit1;
     }
 }

@@ -133,8 +133,8 @@ namespace Book.BL
 
             foreach (var item in model.Details)
             {
-                if (string.IsNullOrEmpty(item.PLTNo))
-                    throw new Helper.RequireValueException(Model.PackingListDetail.PRO_PLTNo);
+                //if (string.IsNullOrEmpty(item.PLTNo))
+                //    throw new Helper.RequireValueException(Model.PackingListDetail.PRO_PLTNo);
                 if (string.IsNullOrEmpty(item.CartonNo))
                     throw new Helper.RequireValueException(Model.PackingListDetail.PRO_CartonNo);
             }

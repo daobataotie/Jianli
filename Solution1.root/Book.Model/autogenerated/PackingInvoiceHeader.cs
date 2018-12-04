@@ -328,5 +328,25 @@ namespace Book.Model
 		
 
 		#endregion
+
+        private string _customerFullName;
+
+        public string CustomerFullName
+        {
+            get { return _customerFullName; }
+            set { _customerFullName = value; }
+        }
+
+        private string _customerAddress;
+
+        public string CustomerAddress
+        {
+            get { return _customerAddress; }
+            set { _customerAddress = value; }
+        }
+
+        public readonly static string PRO_CustomerFullName = "CustomerFullName";
+
+        public readonly static string PRO_CustomerAddress = "CustomerAddress";
 	}
 }

@@ -7,9 +7,12 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <resultMaps>
     <resultMap id="ExchangeRateResult" class="ExchangeRate">
       <result property="Id" column="Id" />
-      <result property="UseDate" column="UseDate" />
+      <result property="YearValue" column="YearValue" />
+      <result property="MonthValue" column="MonthValue"/>      
       <result property="Currency" column="Currency" />
-      <result property="Rate" column="Rate" />
+      <result property="UpRate" column="UpRate" />
+      <result property="MiddleRate" column="MiddleRate"/>
+      <result property="DownRate" column="DownRate"/>
     </resultMap>
   </resultMaps>
 
@@ -40,9 +43,12 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <select id="select_by_primary_key" resultMap="ExchangeRateResult" parameterClass="ExchangeRate">
       <![CDATA[SELECT
 				[Id],
-				[UseDate],
+				[YearValue],
+        [MonthValue],
 				[Currency],
-				[Rate]
+        [UpRate],
+        [MiddleRate],
+				[DownRate]
 			FROM
 				[dbo].[ExchangeRate]
 			WHERE
@@ -66,7 +72,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 			FROM 
 				[dbo].[ExchangeRate]
                 			                   
-			ORDER BY UseDate DESC			
+			ORDER BY YearValue,MonthValue DESC			
 			
 			]]>
     </select>
@@ -98,16 +104,22 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <![CDATA[ INSERT INTO [dbo].[ExchangeRate] 
 			(
 				[Id],
-				[UseDate],
+				[YearValue],
+        [MonthValue],
 				[Currency],
-				[Rate]
+				[UpRate],
+        [MiddleRate],
+				[DownRate]
 			) 
 			VALUES 
 			(
 				#Id#,
-				#UseDate#,
+				#YearValue#,
+        #MonthValue#,
 				#Currency#,
-				#Rate#
+				#UpRate#,
+        #MiddleRate#,
+				#DownRate#
 			)
              ]]>
     </insert>
@@ -115,9 +127,12 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <!-- update -->
     <update id="update" parameterClass="ExchangeRate">
       <![CDATA[ 	UPDATE [ExchangeRate] SET
-				[UseDate] = #UseDate#,
+				[YearValue] = #YearValue#,
+        [MonthValue] = #MonthValue#,
 				[Currency] = #Currency#,
-				[Rate] = #Rate#
+				[UpRate] = #UpRate#,
+        [MiddleRate] = #MiddleRate#,
+				[DownRate] = #DownRate#
 			WHERE
 				[Id] = #Id#
                     ]]>

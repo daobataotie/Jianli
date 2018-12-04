@@ -21,6 +21,7 @@ namespace Book.UI.Invoices.IP
             this.date_Start.EditValue = DateTime.Now.AddMonths(-1);
             this.date_End.EditValue = DateTime.Now;
             this.ncc_Customer.Choose = new Settings.BasicData.Customs.ChooseCustoms();
+            this.bindingSourcePort.DataSource = new BL.PortManager().Select();
 
             this.StartPosition = FormStartPosition.CenterScreen;
         }

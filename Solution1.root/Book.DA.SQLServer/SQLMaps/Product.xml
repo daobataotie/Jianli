@@ -51,6 +51,13 @@
       <result property="ProductVersion" column="ProductVersion"/>
       <result property="ProductBarCode" column="ProductBarCode"/>
     </resultMap>
+    <resultMap id="ProductResult7" class="Product">
+      <result property="ProductId" column="ProductId" />
+      <result property="Id" column="Id" />
+      <result property="ProductName" column="ProductName" />
+      <result property="CustomerProductName" column="CustomerProductName"/>
+      <result property="ProductDescription" column="ProductDescription"/>
+    </resultMap>
     <resultMap id="ProductResult4" class="Product">
       <result property="ProductId" column="ProductId" />
       <result property="Id" column="Id" />
@@ -347,6 +354,20 @@
       ]]>
     </select>
 
+    <select id="select_QuickProduct" resultMap="ProductResult7" parameterClass="Product">
+      <![CDATA[
+      select 
+      Id,
+      ProductId,
+      ProductName,
+      CustomerProductName,
+      ProductDescription
+      from product
+      WHERE
+				[ProductId] = #ProductId#
+      ]]>
+    </select>
+
     <select id="select_SimpleProduct_ZCMai" resultMap="ProductResultZCMai" parameterClass="Product">
       <![CDATA[
       select 
@@ -516,7 +537,7 @@ where ProductId = #productid#
       <!--CustomerProductName desc-->
     </select>
 
-   
+
     <select id="SelectProductForXO" resultMap="ProductResult6" >
       <![CDATA[
       select ProductId,ProductName,Id,CustomerProductName,ProductVersion,ProductBarCode from product 

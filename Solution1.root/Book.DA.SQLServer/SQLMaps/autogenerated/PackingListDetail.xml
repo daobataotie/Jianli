@@ -20,7 +20,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="GrossWeight" column="GrossWeight" />
       <result property="CartonQty" column="CartonQty"/>
       <result property="PackingListHeader" column="PackingListHeaderId" lazyLoad="false" select="PackingListHeader.select_by_primary_key" />
-      <result property="Product" column="ProductId" lazyLoad="false" select="Product.select_FastProduct" />
+      <result property="Product" column="ProductId" lazyLoad="false" select="Product.select_QuickProduct" />
     </resultMap>
   </resultMaps>
 

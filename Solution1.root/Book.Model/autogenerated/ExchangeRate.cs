@@ -10,44 +10,56 @@
 using System;
 namespace Book.Model
 {
-	public partial class ExchangeRate
-	{
-		#region Data
+    public partial class ExchangeRate
+    {
+        #region Data
 
-		/// <summary>
-		/// 
-		/// </summary>
-		private string _id;
+        /// <summary>
+        /// 
+        /// </summary>
+        private string _id;
 
-        private DateTime? _useDate;
+        private int _yearValue;
+
+        private int _monthValue;
 
         private string _currency;
 
-        private decimal _rate;
-		 
-		#endregion
-		
-		#region Properties
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		public string Id
-		{
-			get 
-			{
-				return this._id;
-			}
-			set 
-			{
-				this._id = value;
-			}
-		}
-        
-        public DateTime? UseDate
+        private decimal? _upRate;
+
+        private decimal? _middleRate;
+
+        private decimal? _downRate;
+
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string Id
         {
-            get { return _useDate; }
-            set { _useDate = value; }
+            get
+            {
+                return this._id;
+            }
+            set
+            {
+                this._id = value;
+            }
+        }
+
+        public int YearValue
+        {
+            get { return _yearValue; }
+            set { _yearValue = value; }
+        }
+
+        public int MonthValue
+        {
+            get { return _monthValue; }
+            set { _monthValue = value; }
         }
 
         public string Currency
@@ -56,33 +68,43 @@ namespace Book.Model
             set { _currency = value; }
         }
 
-        public decimal Rate
+        public decimal? UpRate
         {
-            get { return _rate; }
-            set { _rate = value; }
+            get { return _upRate; }
+            set { _upRate = value; }
         }
 
-		/// <summary>
-		/// 
-		/// </summary>
-		public readonly static string PRO_Id = "Id";
-		
-		/// <summary>
-		/// 
-		/// </summary>
-        public readonly static string PRO_UseDate = "UseDate";
-		
-		/// <summary>
-		/// 
-		/// </summary>
+        public decimal? MiddleRate
+        {
+            get { return _middleRate; }
+            set { _middleRate = value; }
+        }
+
+        public decimal? DownRate
+        {
+            get { return _downRate; }
+            set { _downRate = value; }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public readonly static string PRO_Id = "Id";
+
+        public readonly static string PRO_YearValue = "YearValue";
+
+        public readonly static string PRO_MonthValue = "MonthValue";
+
+        /// <summary>
+        /// 
+        /// </summary>
         public readonly static string PRO_Currency = "Currency";
-		
-		/// <summary>
-		/// 
-		/// </summary>
-        public readonly static string PRO_Rate = "Rate";
-		
-		
-		#endregion
-	}
+
+        public readonly static string PRO_UpRate = "UpRate";
+
+        public readonly static string PRO_MiddleRate = "MiddleRate";
+
+        public readonly static string PRO_DownRate = "DownRate";
+        #endregion
+    }
 }

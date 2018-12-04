@@ -107,6 +107,8 @@ namespace Book.UI.Invoices.IP
             this.txt_PackingNo.Text = this.packingListHeader.PackingNo;
             this.Date_PackingDate.EditValue = this.packingListHeader.PackingDate;
             this.ncc_Customer.EditValue = this.packingListHeader.Customer;
+            this.txt_CustomerName.Text = this.packingListHeader.CustomerFullName;
+            this.txt_ADDRESS.Text = this.packingListHeader.CustomerAddress;
             this.txt_PerSS.Text = this.packingListHeader.PerSS;
             this.date_Sailing.EditValue = this.packingListHeader.SailingOnOrAbout;
             this.lue_From.EditValue = this.packingListHeader.FromPortId;
@@ -130,9 +132,6 @@ namespace Book.UI.Invoices.IP
 
             base.Refresh();
 
-            this.txt_CustomerName.Properties.ReadOnly = true;
-            this.txt_ADDRESS.Properties.ReadOnly = true;
-
             if (this.action == "update")
                 this.txt_PackingNo.Properties.ReadOnly = true;
         }
@@ -150,6 +149,8 @@ namespace Book.UI.Invoices.IP
                 this.packingListHeader.CustomerId = (this.ncc_Customer.EditValue as Model.Customer).CustomerId;
                 this.packingListHeader.Customer = this.ncc_Customer.EditValue as Model.Customer;
             }
+            this.packingListHeader.CustomerFullName = this.txt_CustomerName.Text;
+            this.packingListHeader.CustomerAddress = this.txt_ADDRESS.Text;
             this.packingListHeader.PerSS = this.txt_PerSS.Text;
             if (this.date_Sailing.EditValue != null)
                 this.packingListHeader.SailingOnOrAbout = this.date_Sailing.DateTime;
@@ -304,6 +305,9 @@ namespace Book.UI.Invoices.IP
 
         private void ncc_Customer_EditValueChanged(object sender, EventArgs e)
         {
+            if (this.action == "view")
+                return;
+
             this.txt_CustomerName.Text = null;
             this.txt_ADDRESS.Text = null;
 
@@ -330,11 +334,11 @@ namespace Book.UI.Invoices.IP
 
         private void gridView3_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
+            string str = e.Value.ToString();
+            Model.PackingListDetail detail = this.bindingSourceDetail.Current as Model.PackingListDetail;
+
             if (e.Column.Name == "gridColumn2")
             {
-                string str = e.Value.ToString();
-                Model.PackingListDetail detail = this.bindingSourceDetail.Current as Model.PackingListDetail;
-
                 if (!string.IsNullOrEmpty(str) && (str.Contains('-') || str.Contains('_') || str.Contains('~')))
                 {
                     string[] cartonNos = null;
@@ -382,8 +386,27 @@ namespace Book.UI.Invoices.IP
                 //    }
                 //}
 
-                this.gridControl3.RefreshDataSource();
             }
+            else if (e.Column.Name == "gridColumn6")
+            {
+                decimal qty = 0;
+                decimal.TryParse(str, out qty);
+                detail.Quantity = qty * detail.CartonQty;
+            }
+            else if (e.Column.Name == "gridColumn7")
+            {
+                decimal netWeight = 0;
+                decimal.TryParse(str, out netWeight);
+                detail.NetWeight = netWeight * detail.CartonQty;
+            }
+            else if (e.Column.Name == "gridColumn8")
+            {
+                decimal grossWeight = 0;
+                decimal.TryParse(str, out grossWeight);
+                detail.GrossWeight = grossWeight * detail.CartonQty;
+            }
+
+            this.gridControl3.RefreshDataSource();
         }
     }
 }

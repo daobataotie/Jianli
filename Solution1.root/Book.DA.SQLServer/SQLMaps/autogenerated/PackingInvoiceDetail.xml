@@ -15,7 +15,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="UnitPrice" column="UnitPrice" />
       <result property="Amount" column="Amount" />
       <result property="PackingInvoiceHeader" column="PackingInvoiceHeaderId" lazyLoad="false" select="PackingInvoiceHeader.select_by_primary_key" />
-      <result property="Product" column="ProductId" lazyLoad="false" select="Product.select_FastProduct" />
+      <result property="Product" column="ProductId" lazyLoad="false" select="Product.select_QuickProduct" />
     </resultMap>
   </resultMaps>
 

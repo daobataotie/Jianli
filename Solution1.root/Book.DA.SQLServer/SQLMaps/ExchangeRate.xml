@@ -4,14 +4,26 @@
   <statements>
     <select id="IsExistsSame" parameterClass="Map" resultClass="bool">
       <![CDATA[
-      select case when exists(select * from ExchangeRate where UseDate=#UseDate# and Currency=#Currency# and Id<>#Id#) then 1 else 0 end 
+      select case when exists(select * from ExchangeRate where YearValue=#YearValue# and MonthValue=#MonthValue# and Currency=#Currency# and Id<>#Id#) then 1 else 0 end 
       ]]>
     </select>
 
 
-    <select id="GetRateByDateAndCurrency" parameterClass="Map" resultClass="decimal"> 
+    <select id="GetUpRateByDateAndCurrency" parameterClass="Map" resultClass="decimal"> 
       <![CDATA[
-      select top 1 Rate from ExchangeRate where UseDate=#UseDate# and Currency=#Currency#
+      select top 1 UpRate from ExchangeRate where YearValue=#YearValue# and MonthValue=#MonthValue# and Currency=#Currency#
+      ]]>
+    </select>
+
+    <select id="GetMiddleRateByDateAndCurrency" parameterClass="Map" resultClass="decimal">
+      <![CDATA[
+      select top 1 MiddleRate from ExchangeRate where YearValue=#YearValue# and MonthValue=#MonthValue# and Currency=#Currency#
+      ]]>
+    </select>
+
+    <select id="GetDownRateByDateAndCurrency" parameterClass="Map" resultClass="decimal">
+      <![CDATA[
+      select top 1 DownRate from ExchangeRate where YearValue=#YearValue# and MonthValue=#MonthValue# and Currency=#Currency#
       ]]>
     </select>
   </statements>
