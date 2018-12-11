@@ -246,11 +246,7 @@ namespace Book.UI.Invoices.IP
             return new RO(this.packingListHeader);
         }
 
-        /// <summary>
-        /// 添加客户订单
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        // 添加客户订单
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             if (this.ncc_Customer.EditValue == null)
@@ -275,6 +271,8 @@ namespace Book.UI.Invoices.IP
                         packingDetail.ProductId = detail.ProductId;
                         packingDetail.PONo = detail.Invoice.CustomerInvoiceXOId;
                         packingDetail.PackingListHeader = this.packingListHeader;
+                        packingDetail.InvoiceXODetail = detail;
+                        packingDetail.InvoiceXODetailId = detail.InvoiceXODetailId;
 
                         packingListHeader.Details.Add(packingDetail);
                     }
@@ -376,6 +374,15 @@ namespace Book.UI.Invoices.IP
                         return;
                     }
                 }
+                else if (detail.CartonQty > 1)
+                {
+                    detail.Quantity = (detail.Quantity.HasValue ? detail.Quantity.Value : 0) / detail.CartonQty;
+                    detail.NetWeight = (detail.NetWeight.HasValue ? detail.NetWeight.Value : 0) / detail.CartonQty;
+                    detail.GrossWeight = (detail.GrossWeight.HasValue ? detail.GrossWeight.Value : 0) / detail.CartonQty;
+
+                    detail.CartonQty = 1;
+                }
+
                 //else
                 //{
                 //    if (detail.CartonQty > 1)

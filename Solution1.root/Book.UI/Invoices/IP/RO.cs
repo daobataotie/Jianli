@@ -39,9 +39,16 @@ namespace Book.UI.Invoices.IP
 
             //this.lblTotal.Text = packingList.Details.Max(P => Convert.ToInt32(string.IsNullOrEmpty(P.PLTNo) ? "0" : P.PLTNo)) + " PLT / " +
             //    (string.IsNullOrEmpty(packingList.Details.Last().CartonNo) ? "" : packingList.Details.Last().CartonNo.Substring(packingList.Details.Last().CartonNo.Length - 1)) + " CARTON";
+            var cartonNoGroup = packingList.Details.GroupBy(P => P.CartonNo.Trim());
+            int totalCartonNo = 0;
+            foreach (var item in cartonNoGroup)
+            {
+                totalCartonNo += item.ToList()[0].CartonQty;
+            }
+
             if (packingList.Details != null && packingList.Details.Count > 0)
                 this.lblTotal.Text = packingList.Details.Max(P => Convert.ToInt32(string.IsNullOrEmpty(P.PLTNo) ? "0" : P.PLTNo)) + " PLT / " +
-                                     packingList.Details.Sum(P => P.CartonQty) + " CARTON";
+                                     totalCartonNo + " CARTON";
 
             this.lbl_TotalQTY.Text = packingList.Details.Sum(P => P.Quantity).Value.ToString("0.##") + " PCS";
             this.lbl_TotalNetWeight.Text = packingList.Details.Sum(P => P.NetWeight).Value.ToString("0.##") + " KGS";

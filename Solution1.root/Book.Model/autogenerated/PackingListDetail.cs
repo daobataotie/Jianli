@@ -369,5 +369,24 @@ namespace Book.Model
         public readonly static string PRO_CartonQty = "CartonQty";
 
         #endregion
+
+
+        private string _invoiceXODetailId;
+
+        public string InvoiceXODetailId
+        {
+            get { return _invoiceXODetailId; }
+            set { _invoiceXODetailId = value; }
+        }
+
+        private InvoiceXODetail _invoiceXODetail;
+
+        public InvoiceXODetail InvoiceXODetail
+        {
+            get { return _invoiceXODetail; }
+            set { _invoiceXODetail = value; }
+        }
+
+        public readonly static string PRO_InvoiceXODetailId = "InvoiceXODetailId";
     }
 }

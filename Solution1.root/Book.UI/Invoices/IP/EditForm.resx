@@ -173,6 +173,9 @@
   <data name="gridColumn4.VisibleIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
+  <data name="gridColumn4.Width" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
   <data name="gridColumn5.Caption" xml:space="preserve">
     <value>Description</value>
   </data>
@@ -303,7 +306,7 @@
     <value>12, 37</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>422, 21</value>
+    <value>535, 21</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
@@ -326,29 +329,8 @@
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="txt_MarkNos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>556, 37</value>
-  </data>
-  <data name="txt_MarkNos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>316, 21</value>
-  </data>
-  <data name="txt_MarkNos.TabIndex" type="System.Int32, mscorlib">
-    <value>34</value>
-  </data>
-  <data name="&gt;&gt;txt_MarkNos.Name" xml:space="preserve">
-    <value>txt_MarkNos</value>
-  </data>
-  <data name="&gt;&gt;txt_MarkNos.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;txt_MarkNos.Parent" xml:space="preserve">
-    <value>layoutControl1</value>
-  </data>
-  <data name="&gt;&gt;txt_MarkNos.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
   <data name="lue_TO.Location" type="System.Drawing.Point, System.Drawing">
-    <value>561, 186</value>
+    <value>398, 186</value>
   </data>
   <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="lue_TO.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
@@ -373,7 +355,7 @@
     <value />
   </data>
   <data name="lue_TO.Size" type="System.Drawing.Size, System.Drawing">
-    <value>311, 21</value>
+    <value>149, 21</value>
   </data>
   <data name="lue_TO.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -388,7 +370,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;lue_TO.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>7</value>
   </data>
   <data name="lue_From.Location" type="System.Drawing.Point, System.Drawing">
     <value>130, 186</value>
@@ -412,7 +394,7 @@
     <value />
   </data>
   <data name="lue_From.Size" type="System.Drawing.Size, System.Drawing">
-    <value>309, 21</value>
+    <value>146, 21</value>
   </data>
   <data name="lue_From.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
@@ -427,13 +409,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;lue_From.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>8</value>
   </data>
   <data name="txt_PerSS.Location" type="System.Drawing.Point, System.Drawing">
     <value>130, 136</value>
   </data>
   <data name="txt_PerSS.Size" type="System.Drawing.Size, System.Drawing">
-    <value>742, 21</value>
+    <value>417, 21</value>
   </data>
   <data name="txt_PerSS.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -448,7 +430,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_PerSS.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>9</value>
   </data>
   <data name="date_Sailing.Location" type="System.Drawing.Point, System.Drawing">
     <value>130, 161</value>
@@ -457,7 +439,7 @@
     <value>Combo</value>
   </data>
   <data name="date_Sailing.Size" type="System.Drawing.Size, System.Drawing">
-    <value>742, 21</value>
+    <value>417, 21</value>
   </data>
   <data name="date_Sailing.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
@@ -472,13 +454,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;date_Sailing.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>10</value>
   </data>
   <data name="ncc_Customer.Location" type="System.Drawing.Point, System.Drawing">
     <value>130, 62</value>
   </data>
   <data name="ncc_Customer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>742, 21</value>
+    <value>417, 21</value>
   </data>
   <data name="ncc_Customer.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
@@ -493,13 +475,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;ncc_Customer.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>11</value>
   </data>
   <data name="txt_CustomerName.Location" type="System.Drawing.Point, System.Drawing">
     <value>193, 86</value>
   </data>
   <data name="txt_CustomerName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>679, 21</value>
+    <value>354, 21</value>
   </data>
   <data name="txt_CustomerName.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -514,13 +496,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_CustomerName.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>12</value>
   </data>
   <data name="txt_ADDRESS.Location" type="System.Drawing.Point, System.Drawing">
     <value>130, 111</value>
   </data>
   <data name="txt_ADDRESS.Size" type="System.Drawing.Size, System.Drawing">
-    <value>742, 21</value>
+    <value>417, 21</value>
   </data>
   <data name="txt_ADDRESS.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -535,16 +517,16 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_ADDRESS.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>13</value>
   </data>
   <data name="Date_PackingDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>556, 12</value>
+    <value>669, 12</value>
   </data>
   <data name="Date_PackingDate.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="Date_PackingDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>316, 21</value>
+    <value>203, 21</value>
   </data>
   <data name="Date_PackingDate.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -559,13 +541,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;Date_PackingDate.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>14</value>
   </data>
   <data name="txt_PackingNo.Location" type="System.Drawing.Point, System.Drawing">
     <value>130, 12</value>
   </data>
   <data name="txt_PackingNo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>304, 21</value>
+    <value>417, 21</value>
   </data>
   <data name="txt_PackingNo.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -580,7 +562,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_PackingNo.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>15</value>
   </data>
   <data name="simpleButton1.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 430</value>
@@ -604,6 +586,27 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;simpleButton1.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="txt_MarkNos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>669, 37</value>
+  </data>
+  <data name="txt_MarkNos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 170</value>
+  </data>
+  <data name="txt_MarkNos.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="&gt;&gt;txt_MarkNos.Name" xml:space="preserve">
+    <value>txt_MarkNos</value>
+  </data>
+  <data name="&gt;&gt;txt_MarkNos.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.MemoEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;txt_MarkNos.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;txt_MarkNos.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
@@ -621,12 +624,6 @@
   </data>
   <data name="layoutControlItem2.Text" xml:space="preserve">
     <value>PACKINGNo.:</value>
-  </data>
-  <data name="layoutControlItem3.CustomizationFormText" xml:space="preserve">
-    <value>DATE:</value>
-  </data>
-  <data name="layoutControlItem3.Text" xml:space="preserve">
-    <value>Date:</value>
   </data>
   <data name="layoutControlItem9.CustomizationFormText" xml:space="preserve">
     <value>PER S.S.:     </value>
@@ -670,12 +667,6 @@
   <data name="layoutControlItem18.Text" xml:space="preserve">
     <value>TO：</value>
   </data>
-  <data name="layoutControlItem19.CustomizationFormText" xml:space="preserve">
-    <value>MARK &amp; NOS:</value>
-  </data>
-  <data name="layoutControlItem19.Text" xml:space="preserve">
-    <value>MARK &amp; NOS:</value>
-  </data>
   <data name="layoutControlItem17.CustomizationFormText" xml:space="preserve">
     <value>layoutControlItem17</value>
   </data>
@@ -699,6 +690,18 @@
   </data>
   <data name="layoutControlItem13.Text" xml:space="preserve">
     <value>layoutControlItem13</value>
+  </data>
+  <data name="layoutControlItem19.CustomizationFormText" xml:space="preserve">
+    <value>MARK &amp; NOS:</value>
+  </data>
+  <data name="layoutControlItem19.Text" xml:space="preserve">
+    <value>MARK &amp; NOS:</value>
+  </data>
+  <data name="layoutControlItem3.CustomizationFormText" xml:space="preserve">
+    <value>DATE:</value>
+  </data>
+  <data name="layoutControlItem3.Text" xml:space="preserve">
+    <value>Date:</value>
   </data>
   <data name="layoutControlGroup1.Text" xml:space="preserve">
     <value>layoutControlGroup1</value>
@@ -847,12 +850,6 @@
   <data name="&gt;&gt;gridColumn5.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;repositoryItemRichTextEdit1.Name" xml:space="preserve">
-    <value>repositoryItemRichTextEdit1</value>
-  </data>
-  <data name="&gt;&gt;repositoryItemRichTextEdit1.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.Repository.RepositoryItemRichTextEdit, DevExpress.XtraRichEdit.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;gridColumn6.Name" xml:space="preserve">
     <value>gridColumn6</value>
   </data>
@@ -888,6 +885,12 @@
   </data>
   <data name="&gt;&gt;gridColumn11.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemRichTextEdit1.Name" xml:space="preserve">
+    <value>repositoryItemRichTextEdit1</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemRichTextEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemRichTextEdit, DevExpress.XtraRichEdit.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;bindingSourcePort.Name" xml:space="preserve">
     <value>bindingSourcePort</value>

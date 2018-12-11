@@ -288,6 +288,18 @@ namespace Book.UI.Invoices.IP
                     this.gridControl3.RefreshDataSource();
                 }
             }
+            else if (e.Column.Name == "gridColumn9")
+            {
+                Model.PackingInvoiceDetail detail = this.bindingSourceDetail.Current as Model.PackingInvoiceDetail;
+                if (detail != null)
+                {
+                    decimal qty = 0;
+                    decimal.TryParse((e.Value == null ? "0" : e.Value.ToString()), out qty);
+                    detail.Amount = detail.UnitPrice * qty;
+
+                    this.gridControl3.RefreshDataSource();
+                }
+            }
         }
 
         //选择PackingList
@@ -320,6 +332,10 @@ namespace Book.UI.Invoices.IP
                         detail.Product = item.Product;
                         detail.PONo = item.PONo;
                         detail.Quantity = item.Quantity;
+                        detail.UnitPrice = item.InvoiceXODetail.InvoiceXODetailPrice;
+                        detail.Amount = detail.Quantity * detail.UnitPrice;
+                        detail.InvoiceXODetail = item.InvoiceXODetail;
+                        detail.InvoiceXODetailId = item.InvoiceXODetailId;
 
                         this.packingInvoiceHeader.Details.Add(detail);
                     }
@@ -327,6 +343,53 @@ namespace Book.UI.Invoices.IP
                     this.bindingSourceDetail.DataSource = this.packingInvoiceHeader.Details;
                     this.gridControl3.RefreshDataSource();
                 }
+            }
+        }
+
+        //选择客户订单
+        private void btn_ChooseInvoiceXO_Click(object sender, EventArgs e)
+        {
+            if (this.ncc_Customer.EditValue == null)
+            {
+                MessageBox.Show("請先選擇客戶", "提示", MessageBoxButtons.OK);
+                return;
+            }
+
+            XS.SearcharInvoiceXSForm f = new Book.UI.Invoices.XS.SearcharInvoiceXSForm(this.ncc_Customer.EditValue as Model.Customer);
+            if (f.ShowDialog(this) == DialogResult.OK)
+            {
+                if (f.key != null && f.key.Count > 0)
+                {
+                    Model.PackingInvoiceDetail packingInvoiceDetail = null;
+
+                    foreach (Model.InvoiceXODetail detail in f.key)
+                    {
+                        packingInvoiceDetail = new Book.Model.PackingInvoiceDetail();
+                        packingInvoiceDetail.PackingInvoiceDetailId = Guid.NewGuid().ToString();
+                        packingInvoiceDetail.PackingInvoiceHeader = this.packingInvoiceHeader;
+                        packingInvoiceDetail.ProductId = detail.ProductId;
+                        packingInvoiceDetail.Product = detail.Product;
+                        packingInvoiceDetail.PONo = detail.Invoice.CustomerInvoiceXOId;
+                        packingInvoiceDetail.Quantity = Convert.ToDecimal(detail.InvoiceXODetailQuantity);
+                        packingInvoiceDetail.UnitPrice = detail.InvoiceXODetailPrice;
+                        packingInvoiceDetail.Amount = packingInvoiceDetail.Quantity * packingInvoiceDetail.UnitPrice;
+                        packingInvoiceDetail.InvoiceXODetail = detail;
+                        packingInvoiceDetail.InvoiceXODetailId = detail.InvoiceXODetailId;
+
+                        this.packingInvoiceHeader.Details.Add(packingInvoiceDetail);
+                        this.gridControl3.RefreshDataSource();
+                    }
+                }
+            }
+        }
+
+        private void btn_Remove_Click(object sender, EventArgs e)
+        {
+            if (this.bindingSourceDetail.Current != null)
+            {
+                this.packingInvoiceHeader.Details.Remove(this.bindingSourceDetail.Current as Model.PackingInvoiceDetail);
+
+                this.gridControl3.RefreshDataSource();
             }
         }
     }

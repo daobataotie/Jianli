@@ -14,7 +14,7 @@ namespace Book.Model
     [Serializable]
     public partial class ExchangeRate
     {
-        public static string ConvertCurrencyName(string currency)
+        public static string GetCurrencyENName(string currency)
         {
             string enName = "";
             switch (currency)

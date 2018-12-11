@@ -163,14 +163,14 @@
             this.TC_CUSTNO.Dpi = 254F;
             this.TC_CUSTNO.Name = "TC_CUSTNO";
             this.TC_CUSTNO.Text = "CUST                                                   NO";
-            this.TC_CUSTNO.Weight = 0.39304483821877173;
+            this.TC_CUSTNO.Weight = 0.48539580291356538;
             // 
             // TC_ProductName
             // 
             this.TC_ProductName.Dpi = 254F;
             this.TC_ProductName.Name = "TC_ProductName";
             this.TC_ProductName.Text = "Description";
-            this.TC_ProductName.Weight = 0.79712517097175872;
+            this.TC_ProductName.Weight = 0.70477420627696508;
             // 
             // TCQTY
             // 
@@ -312,14 +312,14 @@
             this.xrTableCell8.Dpi = 254F;
             this.xrTableCell8.Name = "xrTableCell8";
             this.xrTableCell8.Text = "CUST                                                   NO";
-            this.xrTableCell8.Weight = 0.39304469928318508;
+            this.xrTableCell8.Weight = 0.48539381150314648;
             // 
             // xrTableCell2
             // 
             this.xrTableCell2.Dpi = 254F;
             this.xrTableCell2.Name = "xrTableCell2";
             this.xrTableCell2.Text = "Description";
-            this.xrTableCell2.Weight = 0.79712355005629787;
+            this.xrTableCell2.Weight = 0.70477443783633653;
             // 
             // xrTableCell5
             // 
@@ -356,20 +356,20 @@
             // lbl_TO
             // 
             this.lbl_TO.Dpi = 254F;
-            this.lbl_TO.LocationFloat = new DevExpress.Utils.PointFloat(1465.793F, 445.6643F);
+            this.lbl_TO.LocationFloat = new DevExpress.Utils.PointFloat(767.293F, 445.6642F);
             this.lbl_TO.Name = "lbl_TO";
             this.lbl_TO.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.lbl_TO.SizeF = new System.Drawing.SizeF(515.9375F, 58.42001F);
+            this.lbl_TO.SizeF = new System.Drawing.SizeF(457.7291F, 58.42001F);
             this.lbl_TO.StylePriority.UseTextAlignment = false;
             this.lbl_TO.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrLabel13
             // 
             this.xrLabel13.Dpi = 254F;
-            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(1211.793F, 445.6643F);
+            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(603.2513F, 445.6642F);
             this.xrLabel13.Name = "xrLabel13";
             this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel13.SizeF = new System.Drawing.SizeF(254F, 58.42F);
+            this.xrLabel13.SizeF = new System.Drawing.SizeF(164.0416F, 58.42001F);
             this.xrLabel13.StylePriority.UseTextAlignment = false;
             this.xrLabel13.Text = "TO:";
             this.xrLabel13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
@@ -377,10 +377,10 @@
             // lbl_From
             // 
             this.lbl_From.Dpi = 254F;
-            this.lbl_From.LocationFloat = new DevExpress.Utils.PointFloat(254.001F, 445.6643F);
+            this.lbl_From.LocationFloat = new DevExpress.Utils.PointFloat(171.9802F, 445.6642F);
             this.lbl_From.Name = "lbl_From";
             this.lbl_From.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.lbl_From.SizeF = new System.Drawing.SizeF(865.1874F, 58.42004F);
+            this.lbl_From.SizeF = new System.Drawing.SizeF(410.104F, 58.42004F);
             this.lbl_From.StylePriority.UseTextAlignment = false;
             this.lbl_From.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
@@ -390,7 +390,7 @@
             this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(0.001009305F, 445.6643F);
             this.xrLabel12.Name = "xrLabel12";
             this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel12.SizeF = new System.Drawing.SizeF(254F, 58.42F);
+            this.xrLabel12.SizeF = new System.Drawing.SizeF(171.9792F, 58.42001F);
             this.xrLabel12.StylePriority.UseTextAlignment = false;
             this.xrLabel12.Text = "From:";
             this.xrLabel12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
@@ -401,7 +401,7 @@
             this.lbl_SailingDate.LocationFloat = new DevExpress.Utils.PointFloat(296.3344F, 387.2443F);
             this.lbl_SailingDate.Name = "lbl_SailingDate";
             this.lbl_SailingDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.lbl_SailingDate.SizeF = new System.Drawing.SizeF(822.854F, 58.42004F);
+            this.lbl_SailingDate.SizeF = new System.Drawing.SizeF(867.8333F, 58.42004F);
             this.lbl_SailingDate.StylePriority.UseTextAlignment = false;
             this.lbl_SailingDate.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
@@ -422,7 +422,7 @@
             this.lbl_PerSS.LocationFloat = new DevExpress.Utils.PointFloat(254.001F, 328.8242F);
             this.lbl_PerSS.Name = "lbl_PerSS";
             this.lbl_PerSS.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.lbl_PerSS.SizeF = new System.Drawing.SizeF(865.1874F, 58.42004F);
+            this.lbl_PerSS.SizeF = new System.Drawing.SizeF(910.1665F, 58.42004F);
             this.lbl_PerSS.StylePriority.UseTextAlignment = false;
             this.lbl_PerSS.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
@@ -432,7 +432,7 @@
             this.lbl_address.LocationFloat = new DevExpress.Utils.PointFloat(254.001F, 270.4042F);
             this.lbl_address.Name = "lbl_address";
             this.lbl_address.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.lbl_address.SizeF = new System.Drawing.SizeF(865.1874F, 58.42004F);
+            this.lbl_address.SizeF = new System.Drawing.SizeF(910.1665F, 58.42004F);
             this.lbl_address.StylePriority.UseTextAlignment = false;
             this.lbl_address.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
@@ -451,9 +451,10 @@
             // 
             this.lbl_marks.Dpi = 254F;
             this.lbl_marks.LocationFloat = new DevExpress.Utils.PointFloat(1465.793F, 164.1475F);
+            this.lbl_marks.Multiline = true;
             this.lbl_marks.Name = "lbl_marks";
             this.lbl_marks.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.lbl_marks.SizeF = new System.Drawing.SizeF(515.9375F, 281.5168F);
+            this.lbl_marks.SizeF = new System.Drawing.SizeF(515.9375F, 339.9368F);
             this.lbl_marks.StylePriority.UseTextAlignment = false;
             this.lbl_marks.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
@@ -474,14 +475,14 @@
             this.lbl_CustomerFullName.LocationFloat = new DevExpress.Utils.PointFloat(468.3135F, 211.9842F);
             this.lbl_CustomerFullName.Name = "lbl_CustomerFullName";
             this.lbl_CustomerFullName.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.lbl_CustomerFullName.SizeF = new System.Drawing.SizeF(650.8749F, 58.42004F);
+            this.lbl_CustomerFullName.SizeF = new System.Drawing.SizeF(695.8536F, 58.42004F);
             this.lbl_CustomerFullName.StylePriority.UseTextAlignment = false;
             this.lbl_CustomerFullName.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrLabel6
             // 
             this.xrLabel6.Dpi = 254F;
-            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(0.001009305F, 211.9842F);
+            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(0F, 211.9842F);
             this.xrLabel6.Name = "xrLabel6";
             this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel6.SizeF = new System.Drawing.SizeF(468.3125F, 58.42F);
@@ -495,7 +496,7 @@
             this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(0.001009305F, 153.5642F);
             this.xrLabel5.Name = "xrLabel5";
             this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel5.SizeF = new System.Drawing.SizeF(1119.187F, 58.41997F);
+            this.xrLabel5.SizeF = new System.Drawing.SizeF(1164.166F, 58.41997F);
             this.xrLabel5.StylePriority.UseTextAlignment = false;
             this.xrLabel5.Text = "Packing of : AS FOLLOWS";
             this.xrLabel5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
@@ -527,7 +528,7 @@
             this.lbl_PackingNo.LocationFloat = new DevExpress.Utils.PointFloat(254.001F, 95.14414F);
             this.lbl_PackingNo.Name = "lbl_PackingNo";
             this.lbl_PackingNo.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.lbl_PackingNo.SizeF = new System.Drawing.SizeF(865.1874F, 58.42001F);
+            this.lbl_PackingNo.SizeF = new System.Drawing.SizeF(910.1665F, 58.42001F);
             this.lbl_PackingNo.StylePriority.UseTextAlignment = false;
             this.lbl_PackingNo.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
@@ -681,11 +682,13 @@
             // 
             // xrLine1
             // 
+            this.xrLine1.Borders = DevExpress.XtraPrinting.BorderSide.Top;
             this.xrLine1.Dpi = 254F;
             this.xrLine1.LineWidth = 3;
             this.xrLine1.LocationFloat = new DevExpress.Utils.PointFloat(4.854617F, 0F);
             this.xrLine1.Name = "xrLine1";
             this.xrLine1.SizeF = new System.Drawing.SizeF(1976.875F, 5F);
+            this.xrLine1.StylePriority.UseBorders = false;
             // 
             // RO
             // 

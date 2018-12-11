@@ -14,8 +14,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="Quantity" column="Quantity" />
       <result property="UnitPrice" column="UnitPrice" />
       <result property="Amount" column="Amount" />
+      <result property="InvoiceXODetailId" column="InvoiceXODetailId"/>
       <result property="PackingInvoiceHeader" column="PackingInvoiceHeaderId" lazyLoad="false" select="PackingInvoiceHeader.select_by_primary_key" />
       <result property="Product" column="ProductId" lazyLoad="false" select="Product.select_QuickProduct" />
+      <result property="InvoiceXODetail" column="InvoiceXODetailId" lazyLoad="false" select="InvoiceXODetail.select_FastXODetail"/>
     </resultMap>
   </resultMaps>
 
@@ -52,7 +54,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[ProductId],
 				[Quantity],
 				[UnitPrice],
-				[Amount]
+				[Amount],
+        [InvoiceXODetailId]
 			FROM
 				[dbo].[PackingInvoiceDetail]
 			WHERE
@@ -113,7 +116,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[ProductId],
 				[Quantity],
 				[UnitPrice],
-				[Amount]
+				[Amount],
+        [InvoiceXODetailId]
 			) 
 			VALUES 
 			(
@@ -124,7 +128,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				#ProductId#,
 				#Quantity#,
 				#UnitPrice#,
-				#Amount#
+				#Amount#,
+        #InvoiceXODetailId#
 			)
              ]]>
     </insert>
@@ -138,7 +143,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[ProductId] = #ProductId#,
 				[Quantity] = #Quantity#,
 				[UnitPrice] = #UnitPrice#,
-				[Amount] = #Amount#
+				[Amount] = #Amount#,
+        [InvoiceXODetailId]=#InvoiceXODetailId#
 			WHERE
 				[PackingInvoiceDetailId] = #PackingInvoiceDetailId#
                     ]]>

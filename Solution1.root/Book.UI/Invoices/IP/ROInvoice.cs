@@ -28,7 +28,12 @@ namespace Book.UI.Invoices.IP
             this.lbl_marks.Text = invoiceList.MarkNos;
 
             this.lbl_TotalQTY.Text = invoiceList.Details.Sum(P => P.Quantity).Value.ToString("0.##") + " PCS";
-            this.lbl_TotalGrossWeight.Text = "USD  " + invoiceList.Details.Sum(P => P.Amount).Value.ToString("0.00");
+
+            if (invoiceList.Details != null && invoiceList.Details.Count > 0)
+            {
+                string currency = new BL.InvoiceXOManager().GetCurrencyByInvoiceId(invoiceList.Details[0].InvoiceXODetail.InvoiceId);
+                this.lbl_TotalAmount.Text = Model.ExchangeRate.GetCurrencyENName(currency) + " " + invoiceList.Details.Sum(P => P.Amount).Value.ToString("0.00");
+            }
 
             TC_No.DataBindings.Add("Text", this.DataSource, Model.PackingInvoiceDetail.PRO_Number);
             TC_PONO.DataBindings.Add("Text", this.DataSource, Model.PackingInvoiceDetail.PRO_PONo);

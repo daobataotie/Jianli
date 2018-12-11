@@ -107,7 +107,7 @@ namespace Book.Model
         {
             get
             {
-                return Model.ExchangeRate.ConvertCurrencyName(this.Currency);
+                return Model.ExchangeRate.GetCurrencyENName(this.Currency);
             }
         }
 
