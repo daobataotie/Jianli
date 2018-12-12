@@ -113,6 +113,7 @@ namespace Book.UI.Invoices.IP
             //}
             this.txt_CustomerName.EditValue = this.packingInvoiceHeader.CustomerFullName;
             this.txt_ADDRESS.EditValue = this.packingInvoiceHeader.CustomerAddress;
+            this.txt_TradingCondition.EditValue = this.packingInvoiceHeader.TradingCondition;
 
             this.txt_PerSS.Text = this.packingInvoiceHeader.PerSS;
             this.date_Sailing.EditValue = this.packingInvoiceHeader.SailingOnOrAbout;
@@ -164,6 +165,7 @@ namespace Book.UI.Invoices.IP
             }
             this.packingInvoiceHeader.CustomerFullName = this.txt_CustomerName.Text;
             this.packingInvoiceHeader.CustomerAddress = this.txt_ADDRESS.Text;
+            this.packingInvoiceHeader.TradingCondition = this.txt_TradingCondition.Text;
             this.packingInvoiceHeader.PerSS = this.txt_PerSS.Text;
             if (this.date_Sailing.EditValue != null)
                 this.packingInvoiceHeader.SailingOnOrAbout = this.date_Sailing.DateTime;
@@ -315,6 +317,7 @@ namespace Book.UI.Invoices.IP
                     this.txt_ADDRESS.EditValue = f.SelectItem.CustomerAddress;
                     //this.txt_CustomerName.Text = f.SelectItem.Customer.CustomerFullName;
                     //this.txt_ADDRESS.Text = f.SelectItem.Customer.CustomerAddress;
+                    this.txt_TradingCondition.EditValue = f.SelectItem.Customer.TradingCondition;
                     this.txt_PerSS.Text = f.SelectItem.PerSS;
                     this.date_Sailing.EditValue = f.SelectItem.SailingOnOrAbout;
                     this.lue_From.EditValue = f.SelectItem.FromPortId;

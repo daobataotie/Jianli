@@ -83,6 +83,7 @@
             this.lbl_TotalQTY = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLine1 = new DevExpress.XtraReports.UI.XRLine();
+            this.lbl_PayCondition = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -217,6 +218,7 @@
             // PageHeader
             // 
             this.PageHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.lbl_PayCondition,
             this.xrTable1,
             this.xrLabel7,
             this.lbl_TO,
@@ -344,10 +346,10 @@
             // xrLabel13
             // 
             this.xrLabel13.Dpi = 254F;
-            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(611.1883F, 445.6643F);
+            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(656.1675F, 445.6643F);
             this.xrLabel13.Name = "xrLabel13";
             this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel13.SizeF = new System.Drawing.SizeF(177.2709F, 58.42001F);
+            this.xrLabel13.SizeF = new System.Drawing.SizeF(132.2917F, 58.42004F);
             this.xrLabel13.StylePriority.UseTextAlignment = false;
             this.xrLabel13.Text = "TO:";
             this.xrLabel13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
@@ -355,10 +357,10 @@
             // lbl_From
             // 
             this.lbl_From.Dpi = 254F;
-            this.lbl_From.LocationFloat = new DevExpress.Utils.PointFloat(185.2093F, 445.6643F);
+            this.lbl_From.LocationFloat = new DevExpress.Utils.PointFloat(145.5218F, 445.6643F);
             this.lbl_From.Name = "lbl_From";
             this.lbl_From.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.lbl_From.SizeF = new System.Drawing.SizeF(412.7498F, 58.42004F);
+            this.lbl_From.SizeF = new System.Drawing.SizeF(457.729F, 58.42004F);
             this.lbl_From.StylePriority.UseTextAlignment = false;
             this.lbl_From.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
@@ -368,7 +370,7 @@
             this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(0.001009305F, 445.6643F);
             this.xrLabel12.Name = "xrLabel12";
             this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel12.SizeF = new System.Drawing.SizeF(185.2083F, 58.42001F);
+            this.xrLabel12.SizeF = new System.Drawing.SizeF(145.5208F, 58.42004F);
             this.xrLabel12.StylePriority.UseTextAlignment = false;
             this.xrLabel12.Text = "From:";
             this.xrLabel12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
@@ -432,7 +434,7 @@
             this.lbl_marks.Multiline = true;
             this.lbl_marks.Name = "lbl_marks";
             this.lbl_marks.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.lbl_marks.SizeF = new System.Drawing.SizeF(515.9375F, 339.9368F);
+            this.lbl_marks.SizeF = new System.Drawing.SizeF(515.9375F, 281.5168F);
             this.lbl_marks.StylePriority.UseTextAlignment = false;
             this.lbl_marks.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
@@ -643,6 +645,16 @@
             this.xrLine1.SizeF = new System.Drawing.SizeF(1976.875F, 5F);
             this.xrLine1.StylePriority.UseBorders = false;
             // 
+            // lbl_PayCondition
+            // 
+            this.lbl_PayCondition.Dpi = 254F;
+            this.lbl_PayCondition.LocationFloat = new DevExpress.Utils.PointFloat(1384.876F, 445.6643F);
+            this.lbl_PayCondition.Name = "lbl_PayCondition";
+            this.lbl_PayCondition.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lbl_PayCondition.SizeF = new System.Drawing.SizeF(598.9163F, 58.42004F);
+            this.lbl_PayCondition.StylePriority.UseTextAlignment = false;
+            this.lbl_PayCondition.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
             // ROInvoice
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -721,5 +733,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel10;
         private DevExpress.XtraReports.UI.XRLine xrLine2;
         private DevExpress.XtraReports.UI.XRLabel lblTotal;
+        private DevExpress.XtraReports.UI.XRLabel lbl_PayCondition;
     }
 }

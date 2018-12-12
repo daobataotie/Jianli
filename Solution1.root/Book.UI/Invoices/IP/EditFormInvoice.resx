@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="bar_ChoosePackingList.Caption" xml:space="preserve">
-    <value>選擇PackingList</value>
-  </data>
   <metadata name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>194, 17</value>
   </metadata>
@@ -127,13 +124,34 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="txt_TradingCondition.Location" type="System.Drawing.Point, System.Drawing">
+    <value>358, 61</value>
+  </data>
+  <data name="txt_TradingCondition.Size" type="System.Drawing.Size, System.Drawing">
+    <value>234, 21</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="txt_TradingCondition.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="&gt;&gt;txt_TradingCondition.Name" xml:space="preserve">
+    <value>txt_TradingCondition</value>
+  </data>
+  <data name="&gt;&gt;txt_TradingCondition.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;txt_TradingCondition.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;txt_TradingCondition.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="btn_Remove.Location" type="System.Drawing.Point, System.Drawing">
     <value>474, 430</value>
   </data>
   <data name="btn_Remove.Size" type="System.Drawing.Size, System.Drawing">
     <value>459, 22</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btn_Remove.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
   </data>
@@ -150,7 +168,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;btn_Remove.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="btn_ChooseInvoiceXO.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 430</value>
@@ -174,11 +192,15 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;btn_ChooseInvoiceXO.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <metadata name="bindingSourceDetail.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>325, 17</value>
   </metadata>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="gridControl3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <data name="gridControl3.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 211</value>
   </data>
@@ -282,13 +304,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;gridControl3.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 37</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>564, 21</value>
+    <value>580, 20</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
@@ -309,7 +331,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="lue_TO.Location" type="System.Drawing.Point, System.Drawing">
     <value>426, 186</value>
@@ -337,7 +359,7 @@
     <value />
   </data>
   <data name="lue_TO.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 21</value>
+    <value>166, 21</value>
   </data>
   <data name="lue_TO.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -352,7 +374,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;lue_TO.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="lue_From.Location" type="System.Drawing.Point, System.Drawing">
     <value>130, 186</value>
@@ -391,13 +413,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;lue_From.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="txt_PerSS.Location" type="System.Drawing.Point, System.Drawing">
     <value>130, 136</value>
   </data>
   <data name="txt_PerSS.Size" type="System.Drawing.Size, System.Drawing">
-    <value>446, 21</value>
+    <value>462, 21</value>
   </data>
   <data name="txt_PerSS.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -412,7 +434,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_PerSS.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="date_Sailing.Location" type="System.Drawing.Point, System.Drawing">
     <value>130, 161</value>
@@ -421,7 +443,7 @@
     <value>Combo</value>
   </data>
   <data name="date_Sailing.Size" type="System.Drawing.Size, System.Drawing">
-    <value>446, 21</value>
+    <value>462, 21</value>
   </data>
   <data name="date_Sailing.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
@@ -436,13 +458,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;date_Sailing.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="ncc_Customer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>130, 62</value>
+    <value>130, 61</value>
   </data>
   <data name="ncc_Customer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>446, 21</value>
+    <value>224, 21</value>
   </data>
   <data name="ncc_Customer.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
@@ -457,13 +479,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;ncc_Customer.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="txt_CustomerName.Location" type="System.Drawing.Point, System.Drawing">
     <value>193, 86</value>
   </data>
   <data name="txt_CustomerName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 21</value>
+    <value>399, 21</value>
   </data>
   <data name="txt_CustomerName.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -478,13 +500,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_CustomerName.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="txt_ADDRESS.Location" type="System.Drawing.Point, System.Drawing">
     <value>130, 111</value>
   </data>
   <data name="txt_ADDRESS.Size" type="System.Drawing.Size, System.Drawing">
-    <value>446, 21</value>
+    <value>462, 21</value>
   </data>
   <data name="txt_ADDRESS.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -499,16 +521,16 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_ADDRESS.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="Date_InvoiceDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>698, 12</value>
+    <value>681, 12</value>
   </data>
   <data name="Date_InvoiceDate.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="Date_InvoiceDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>235, 21</value>
+    <value>252, 21</value>
   </data>
   <data name="Date_InvoiceDate.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -523,13 +545,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;Date_InvoiceDate.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="txt_InvoiceNo.Location" type="System.Drawing.Point, System.Drawing">
     <value>130, 12</value>
   </data>
   <data name="txt_InvoiceNo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>446, 21</value>
+    <value>462, 21</value>
   </data>
   <data name="txt_InvoiceNo.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -544,13 +566,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_InvoiceNo.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="txt_MarkNos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>698, 37</value>
+    <value>681, 37</value>
   </data>
   <data name="txt_MarkNos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>235, 170</value>
+    <value>252, 170</value>
   </data>
   <data name="txt_MarkNos.TabIndex" type="System.Int32, mscorlib">
     <value>34</value>
@@ -565,9 +587,8 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_MarkNos.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="layoutControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -661,6 +682,12 @@
   <data name="layoutControlItem3.Text" xml:space="preserve">
     <value>Date:</value>
   </data>
+  <data name="layoutControlItem10.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem10</value>
+  </data>
+  <data name="layoutControlItem10.Text" xml:space="preserve">
+    <value>layoutControlItem10</value>
+  </data>
   <data name="layoutControlGroup1.Text" xml:space="preserve">
     <value>layoutControlGroup1</value>
   </data>
@@ -708,6 +735,9 @@
   </data>
   <data name="layoutControlItem37.Text" xml:space="preserve">
     <value>layoutControlItem37</value>
+  </data>
+  <data name="bar_ChoosePackingList.Caption" xml:space="preserve">
+    <value>選擇PackingList</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -832,12 +862,6 @@
   <data name="&gt;&gt;layoutControlItem2.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;layoutControlItem3.Name" xml:space="preserve">
-    <value>layoutControlItem3</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem3.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;layoutControlItem9.Name" xml:space="preserve">
     <value>layoutControlItem9</value>
   </data>
@@ -880,12 +904,6 @@
   <data name="&gt;&gt;layoutControlItem18.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;layoutControlItem19.Name" xml:space="preserve">
-    <value>layoutControlItem19</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem19.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;layoutControlItem17.Name" xml:space="preserve">
     <value>layoutControlItem17</value>
   </data>
@@ -908,6 +926,24 @@
     <value>layoutControlItem7</value>
   </data>
   <data name="&gt;&gt;layoutControlItem7.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem19.Name" xml:space="preserve">
+    <value>layoutControlItem19</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem19.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem3.Name" xml:space="preserve">
+    <value>layoutControlItem3</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem3.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem10.Name" xml:space="preserve">
+    <value>layoutControlItem10</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem10.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;layoutControlItem29.Name" xml:space="preserve">

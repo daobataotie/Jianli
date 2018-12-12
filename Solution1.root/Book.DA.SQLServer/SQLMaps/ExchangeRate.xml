@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
-<sqlMap namespace="ExchangeRate" xmlns="http://ibatis.apache.org/mapping" 
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="ExchangeRate" xmlns="http://ibatis.apache.org/mapping"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <statements>
     <select id="IsExistsSame" parameterClass="Map" resultClass="bool">
@@ -9,21 +9,21 @@
     </select>
 
 
-    <select id="GetUpRateByDateAndCurrency" parameterClass="Map" resultClass="decimal"> 
+    <select id="GetUpRateByDateAndCurrency" parameterClass="Map" resultClass="decimal">
       <![CDATA[
-      select top 1 UpRate from ExchangeRate where YearValue=#YearValue# and MonthValue=#MonthValue# and Currency=#Currency#
+      select top 1 ISNULL(UpRate,0) from ExchangeRate where YearValue=#YearValue# and MonthValue=#MonthValue# and Currency=#Currency#
       ]]>
     </select>
 
     <select id="GetMiddleRateByDateAndCurrency" parameterClass="Map" resultClass="decimal">
       <![CDATA[
-      select top 1 MiddleRate from ExchangeRate where YearValue=#YearValue# and MonthValue=#MonthValue# and Currency=#Currency#
+      select top 1 ISNULL(MiddleRate,0) from ExchangeRate where YearValue=#YearValue# and MonthValue=#MonthValue# and Currency=#Currency#
       ]]>
     </select>
 
     <select id="GetDownRateByDateAndCurrency" parameterClass="Map" resultClass="decimal">
       <![CDATA[
-      select top 1 DownRate from ExchangeRate where YearValue=#YearValue# and MonthValue=#MonthValue# and Currency=#Currency#
+      select top 1 ISNULL(DownRate,0) from ExchangeRate where YearValue=#YearValue# and MonthValue=#MonthValue# and Currency=#Currency#
       ]]>
     </select>
   </statements>

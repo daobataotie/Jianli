@@ -21,6 +21,7 @@ namespace Book.UI.Invoices.IP
             //this.lbl_address.Text = invoiceList.Customer.CustomerAddress;
             this.lbl_CustomerFullName.Text = invoiceList.CustomerFullName;
             this.lbl_address.Text = invoiceList.CustomerAddress;
+            this.lbl_PayCondition.Text = invoiceList.TradingCondition;
             this.lbl_PerSS.Text = invoiceList.PerSS;
             this.lbl_SailingDate.Text = invoiceList.SailingOnOrAbout.Value.ToString("yyyy-MM-dd");
             this.lbl_From.Text = invoiceList.FromPort.PortName;

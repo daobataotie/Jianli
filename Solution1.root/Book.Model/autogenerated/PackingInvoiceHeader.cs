@@ -345,8 +345,18 @@ namespace Book.Model
             set { _customerAddress = value; }
         }
 
+        private string _tradingCondition;
+
+        public string TradingCondition
+        {
+            get { return _tradingCondition; }
+            set { _tradingCondition = value; }
+        }
+
         public readonly static string PRO_CustomerFullName = "CustomerFullName";
 
         public readonly static string PRO_CustomerAddress = "CustomerAddress";
+
+        public readonly static string PRO_TradingCondition = "TradingCondition";
 	}
 }
