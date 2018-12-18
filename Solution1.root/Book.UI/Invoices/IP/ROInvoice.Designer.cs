@@ -44,6 +44,7 @@
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
             this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
+            this.lbl_PayCondition = new DevExpress.XtraReports.UI.XRLabel();
             this.xrTable1 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell1 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -83,7 +84,6 @@
             this.lbl_TotalQTY = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLine1 = new DevExpress.XtraReports.UI.XRLine();
-            this.lbl_PayCondition = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -243,6 +243,16 @@
             this.PageHeader.Dpi = 254F;
             this.PageHeader.HeightF = 626.7292F;
             this.PageHeader.Name = "PageHeader";
+            // 
+            // lbl_PayCondition
+            // 
+            this.lbl_PayCondition.Dpi = 254F;
+            this.lbl_PayCondition.LocationFloat = new DevExpress.Utils.PointFloat(1384.876F, 445.6643F);
+            this.lbl_PayCondition.Name = "lbl_PayCondition";
+            this.lbl_PayCondition.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lbl_PayCondition.SizeF = new System.Drawing.SizeF(598.9163F, 58.42004F);
+            this.lbl_PayCondition.StylePriority.UseTextAlignment = false;
+            this.lbl_PayCondition.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrTable1
             // 
@@ -526,7 +536,7 @@
             // xrLabel1
             // 
             this.xrLabel1.Dpi = 254F;
-            this.xrLabel1.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel1.Font = new System.Drawing.Font("新細明體-ExtB", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(25.00001F, 0F);
             this.xrLabel1.Name = "xrLabel1";
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
@@ -645,16 +655,6 @@
             this.xrLine1.SizeF = new System.Drawing.SizeF(1976.875F, 5F);
             this.xrLine1.StylePriority.UseBorders = false;
             // 
-            // lbl_PayCondition
-            // 
-            this.lbl_PayCondition.Dpi = 254F;
-            this.lbl_PayCondition.LocationFloat = new DevExpress.Utils.PointFloat(1384.876F, 445.6643F);
-            this.lbl_PayCondition.Name = "lbl_PayCondition";
-            this.lbl_PayCondition.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.lbl_PayCondition.SizeF = new System.Drawing.SizeF(598.9163F, 58.42004F);
-            this.lbl_PayCondition.StylePriority.UseTextAlignment = false;
-            this.lbl_PayCondition.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
             // ROInvoice
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -665,6 +665,7 @@
             this.PageHeader,
             this.ReportFooter});
             this.Dpi = 254F;
+            this.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margins = new System.Drawing.Printing.Margins(79, 79, 61, 79);
             this.PageHeight = 2794;
             this.PageWidth = 2159;

@@ -678,7 +678,7 @@ namespace Book.UI.Invoices.XS
 
         private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
-            if (e.Column == this.BeenQuantity || e.Column == this.colDonatetowards || e.Column == this.colInvoiceAllowance || e.Column == this.colInvoiceXSDetailPrice)
+            if (e.Column == this.BeenQuantity || e.Column == this.colDonatetowards || e.Column == this.colInvoiceAllowance || e.Column == this.colInvoiceXSDetailPrice )
             {
                 decimal price = decimal.Zero;
                 decimal quantity = decimal.Zero;
@@ -753,6 +753,10 @@ namespace Book.UI.Invoices.XS
                     }
                 }
                 this.gridControl1.RefreshDataSource();
+                this.UpdateMoneyFields();
+            }
+            else if (e.Column == this.gridColumn6)  //ÐÂÅ_ŽÅ…RÂÊ
+            {
                 this.UpdateMoneyFields();
             }
         }

@@ -120,31 +120,6 @@
   <metadata name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="barButtonItem4.Caption" xml:space="preserve">
-    <value>依条件打印</value>
-  </data>
-  <data name="barButtonItem5.Caption" xml:space="preserve">
-    <value>設置遠程連接地址</value>
-  </data>
-  <data name="barEditItem3.Caption" xml:space="preserve">
-    <value>遠程查詢</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="repositoryItemCheckEdit2.AutoHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="repositoryItemTextEdit1.AutoHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="repositoryItemTextEdit1.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="repositoryItemTextEdit1.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="repositoryItemTextEdit1.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="barDockControlTop.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -192,6 +167,7 @@
   <data name="gridColumn1.Caption" xml:space="preserve">
     <value>库房</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="gridColumn1.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -232,7 +208,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn6.VisibleIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="gridColumn6.Width" type="System.Int32, mscorlib">
     <value>57</value>
@@ -256,7 +232,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn3.VisibleIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="gridColumn3.Width" type="System.Int32, mscorlib">
     <value>81</value>
@@ -274,7 +250,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn8.VisibleIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="gridColumn8.Width" type="System.Int32, mscorlib">
     <value>106</value>
@@ -286,7 +262,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn9.VisibleIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="gridColumn9.Width" type="System.Int32, mscorlib">
     <value>46</value>
@@ -298,7 +274,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn10.VisibleIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="gridColumn10.Width" type="System.Int32, mscorlib">
     <value>61</value>
@@ -310,11 +286,14 @@
     <value>True</value>
   </data>
   <data name="gridColumn11.VisibleIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="gridColumn12.Caption" xml:space="preserve">
     <value>客戶</value>
   </data>
+  <metadata name="bindingSourceCustomer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>880, 17</value>
+  </metadata>
   <data name="repositoryItemLookUpEdit1.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -327,9 +306,6 @@
   <data name="repositoryItemLookUpEdit1.Columns1" xml:space="preserve">
     <value>Name</value>
   </data>
-  <metadata name="bindingSourceCustomer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>880, 17</value>
-  </metadata>
   <data name="repositoryItemLookUpEdit1.NullText" xml:space="preserve">
     <value />
   </data>
@@ -337,10 +313,22 @@
     <value>True</value>
   </data>
   <data name="gridColumn12.VisibleIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="gridColumn12.Width" type="System.Int32, mscorlib">
     <value>121</value>
+  </data>
+  <data name="gridColumn13.Caption" xml:space="preserve">
+    <value>内部描述</value>
+  </data>
+  <data name="gridColumn13.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn13.VisibleIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="gridColumn13.Width" type="System.Int32, mscorlib">
+    <value>134</value>
   </data>
   <data name="gridControl1.Size" type="System.Drawing.Size, System.Drawing">
     <value>930, 439</value>
@@ -360,6 +348,9 @@
   <data name="&gt;&gt;gridControl1.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <metadata name="bindingSourceCustomer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>880, 17</value>
+  </metadata>
   <data name="txt_ProductCustomerName.Location" type="System.Drawing.Point, System.Drawing">
     <value>667, 37</value>
   </data>
@@ -684,6 +675,30 @@
   <data name="barButtonItem3.Caption" xml:space="preserve">
     <value>依条件打印</value>
   </data>
+  <data name="barButtonItem4.Caption" xml:space="preserve">
+    <value>依条件打印</value>
+  </data>
+  <data name="barButtonItem5.Caption" xml:space="preserve">
+    <value>設置遠程連接地址</value>
+  </data>
+  <data name="repositoryItemTextEdit1.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="repositoryItemTextEdit1.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="repositoryItemTextEdit1.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="repositoryItemTextEdit1.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="barEditItem3.Caption" xml:space="preserve">
+    <value>遠程查詢</value>
+  </data>
+  <data name="repositoryItemCheckEdit2.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -953,6 +968,12 @@
   </data>
   <data name="&gt;&gt;repositoryItemCheckEdit2.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn13.Name" xml:space="preserve">
+    <value>gridColumn13</value>
+  </data>
+  <data name="&gt;&gt;gridColumn13.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Q14Form</value>

@@ -150,6 +150,7 @@
             this.layoutControlItem29 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem31 = new DevExpress.XtraLayout.LayoutControlItem();
             this.barButtonItemInvoice = new DevExpress.XtraBars.BarButtonItem();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -586,7 +587,8 @@
             this.gridColumn3,
             this.gridColumnVersion,
             this.gridColumn4,
-            this.gridColumn5});
+            this.gridColumn5,
+            this.gridColumn6});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsCustomization.AllowFilter = false;
@@ -1365,6 +1367,12 @@
             this.barButtonItemInvoice.Name = "barButtonItemInvoice";
             this.barButtonItemInvoice.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemInvoice_ItemClick);
             // 
+            // gridColumn6
+            // 
+            resources.ApplyResources(this.gridColumn6, "gridColumn6");
+            this.gridColumn6.FieldName = "ExchangeRate";
+            this.gridColumn6.Name = "gridColumn6";
+            // 
             // EditForm
             // 
             this.AllowDrop = true;
@@ -1577,5 +1585,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem35;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem36;
         private DevExpress.XtraEditors.SpinEdit spe_TaibiTotal;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
     }
 }

@@ -374,13 +374,18 @@ namespace Book.UI.Invoices.IP
                         return;
                     }
                 }
-                else if (detail.CartonQty > 1)
+                else
                 {
-                    detail.Quantity = (detail.Quantity.HasValue ? detail.Quantity.Value : 0) / detail.CartonQty;
-                    detail.NetWeight = (detail.NetWeight.HasValue ? detail.NetWeight.Value : 0) / detail.CartonQty;
-                    detail.GrossWeight = (detail.GrossWeight.HasValue ? detail.GrossWeight.Value : 0) / detail.CartonQty;
+                    detail.CartonNo = e.Value + "-" + e.Value;
 
-                    detail.CartonQty = 1;
+                    if (detail.CartonQty > 1)
+                    {
+                        detail.Quantity = (detail.Quantity.HasValue ? detail.Quantity.Value : 0) / detail.CartonQty;
+                        detail.NetWeight = (detail.NetWeight.HasValue ? detail.NetWeight.Value : 0) / detail.CartonQty;
+                        detail.GrossWeight = (detail.GrossWeight.HasValue ? detail.GrossWeight.Value : 0) / detail.CartonQty;
+
+                        detail.CartonQty = 1;
+                    }
                 }
 
                 //else

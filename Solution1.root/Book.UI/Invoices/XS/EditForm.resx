@@ -1152,7 +1152,7 @@
     <value>True</value>
   </data>
   <data name="colInvoiceXSDetailMoney.VisibleIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="colInvoiceXSDetailTaxPrice.Caption" xml:space="preserve">
     <value>含税单价</value>
@@ -1161,7 +1161,7 @@
     <value>True</value>
   </data>
   <data name="colInvoiceXSDetailTaxPrice.VisibleIndex" type="System.Int32, mscorlib">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="colInvoiceXSDetailTaxMoney.Caption" xml:space="preserve">
     <value>税价合计</value>
@@ -1176,7 +1176,7 @@
     <value>True</value>
   </data>
   <data name="colInvoiceXSDetailTaxMoney.VisibleIndex" type="System.Int32, mscorlib">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="colInvoiceXSDetailFPQuantity.Caption" xml:space="preserve">
     <value>已开发票数量</value>
@@ -1185,7 +1185,7 @@
     <value>True</value>
   </data>
   <data name="colInvoiceXSDetailFPQuantity.VisibleIndex" type="System.Int32, mscorlib">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="colInvoiceXSDetailTax.Caption" xml:space="preserve">
     <value>税额</value>
@@ -1200,7 +1200,7 @@
     <value>True</value>
   </data>
   <data name="colInvoiceXSDetailTax.VisibleIndex" type="System.Int32, mscorlib">
-    <value>19</value>
+    <value>20</value>
   </data>
   <data name="gridColumn3.Caption" xml:space="preserve">
     <value>备注</value>
@@ -1209,7 +1209,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn3.VisibleIndex" type="System.Int32, mscorlib">
-    <value>20</value>
+    <value>21</value>
   </data>
   <data name="gridColumnVersion.Caption" xml:space="preserve">
     <value>版本</value>
@@ -1225,6 +1225,15 @@
   </data>
   <data name="gridColumn5.Caption" xml:space="preserve">
     <value>手册项号</value>
+  </data>
+  <data name="gridColumn6.Caption" xml:space="preserve">
+    <value>新臺幣匯率</value>
+  </data>
+  <data name="gridColumn6.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn6.VisibleIndex" type="System.Int32, mscorlib">
+    <value>15</value>
   </data>
   <data name="repositoryItemSpinEdit2.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2143,6 +2152,12 @@
   </data>
   <data name="&gt;&gt;barButtonItemInvoice.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn6.Name" xml:space="preserve">
+    <value>gridColumn6</value>
+  </data>
+  <data name="&gt;&gt;gridColumn6.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>EditForm</value>
