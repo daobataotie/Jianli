@@ -1260,48 +1260,48 @@ namespace Book.UI.Invoices.XO
 
         private void GetXo()
         {
-            //int co1 = 0;
-            //int co2 = 0;
-            //IList<Model.Role> roleList = BL.V.RoleList;
-            //if (roleList != null && roleList.Count > 0)
-            //{
+            int co1 = 0;
+            int co2 = 0;
+            IList<Model.Role> roleList = BL.V.RoleList;
+            if (roleList != null && roleList.Count > 0)
+            {
 
 
-            //    for (int i = 0; i < roleList.Count; i++)
-            //    {
-            //        if (roleList[i].IsXOPrice == true)
-            //        {
-            //            co1 = 1;
-            //        }
-            //        if (roleList[i].IsXOQuantity == true)
-            //        {
-            //            co2 = 1;
-            //        }
-            //    }
+                for (int i = 0; i < roleList.Count; i++)
+                {
+                    if (roleList[i].IsXOPrice == true)
+                    {
+                        co1 = 1;
+                    }
+                    if (roleList[i].IsXOQuantity == true)
+                    {
+                        co2 = 1;
+                    }
+                }
 
-            //    if (co1 == 1)
-            //    {
-            //        this.colInvoiceXODetailPrice.Visible = true;
-            //        this.colInvoiceXODetailMoney.Visible = true;
-            //        co1 = 0;
-            //    }
-            //    else
-            //    {
-            //        this.colInvoiceXODetailPrice.Visible = false;
-            //        this.colInvoiceXODetailMoney.Visible = false;
-            //    }
-            //    if (co2 == 1)
-            //    {
-            //        this.colInvoiceXODetailQuantity.Visible = true;
-            //        this.colInvoiceXODetailMoney.Visible = true;
-            //        co2 = 0;
-            //    }
-            //    else
-            //    {
-            //        this.colInvoiceXODetailQuantity.Visible = false;
-            //        this.colInvoiceXODetailMoney.Visible = false;
-            //    }
-            //}
+                if (co1 == 1)
+                {
+                    this.colInvoiceXODetailPrice.Visible = true;
+                    this.colInvoiceXODetailMoneyxset.Visible = true;
+                    co1 = 0;
+                }
+                else
+                {
+                    this.colInvoiceXODetailPrice.Visible = false;
+                    this.colInvoiceXODetailMoneyxset.Visible = false;
+                }
+                if (co2 == 1)
+                {
+                    this.colInvoiceXODetailQuantity.Visible = true;
+                    this.colInvoiceXODetailMoneyxset.Visible = true;
+                    co2 = 0;
+                }
+                else
+                {
+                    this.colInvoiceXODetailQuantity.Visible = false;
+                    this.colInvoiceXODetailMoneyxset.Visible = false;
+                }
+            }
 
         }
 

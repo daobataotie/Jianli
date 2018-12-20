@@ -29,6 +29,16 @@
       ]]>
     </select>
 
+     <select id="select_sumbyInvoiceXOIdWorkHouse" resultClass="Double" parameterClass="string">
+      <![CDATA[
+      select isnull(sum(ProceduresSum),0) from ProduceInDepotDetail where (InvoiceXOId =#InvoiceXOId#  OR #InvoiceXOId# IS NULL)  and ProduceInDepotId IN (SELECT ProduceInDepotId FROM ProduceInDepot WHERE WorkHouseId=#WorkHouseId#) AND ProductId = #ProductId#
+      ]]>
+    </select>
+    <select id="select_checkOutSumByInvoiceXOIdWorkHouse" resultClass="Double" parameterClass="string">
+      <![CDATA[
+      select isnull(sum(CheckOutSum),0) from ProduceInDepotDetail where (InvoiceXOId =#InvoiceXOId# OR #InvoiceXOId# IS NULL)   and ProduceInDepotId IN (SELECT ProduceInDepotId FROM ProduceInDepot WHERE WorkHouseId=#WorkHouseId#)  AND ProductId = #ProductId#
+      ]]>
+    </select>
 
     <select id="select_pronoheaWorkhouseDateRang" resultClass="Double" parameterClass="Map">
       <![CDATA[
@@ -47,6 +57,12 @@
     <select id="select_TransferSumyPronHeaderWorkHouse" resultClass="Double" parameterClass="Map">
       <![CDATA[
       select isnull(sum(ProduceTransferQuantity),0) from ProduceInDepotDetail where WorkHouseId =#WorkHouseId# and PronoteHeaderId=#PronoteHeaderId#
+      ]]>
+    </select>
+
+    <select id="select_TransferSumByInvoiceXOIdWorkHouse" resultClass="Double" parameterClass="Map">
+      <![CDATA[
+      select isnull(sum(ProduceTransferQuantity),0) from ProduceInDepotDetail where WorkHouseId =#WorkHouseId# and InvoiceXOId=#InvoiceXOId# and ProductId=#ProductId#
       ]]>
     </select>
     <delete id="delete_byheader" parameterClass="string">
@@ -106,6 +122,20 @@
       ]]>
     </select>
 
+    <select id="Get_HJForColumnName_ByInvoiceXOId" parameterClass="Map" resultClass="Double">
+      <![CDATA[
+      SELECT ISNULL(SUM($GetColumn$),0) FROM ProduceInDepotDetail
+      WHERE InvoiceXOId = #InvoiceXOId#
+      AND ProductId = #ProductId#
+      AND ProduceInDepotId IN 
+      (
+        SELECT ProduceInDepotId FROM ProduceInDepot 
+        WHERE (WorkHouseId = #WorkHouseId#) 
+        AND InsertTime < #InsertTime#
+      )
+      ]]>
+    </select>
+
     <select id="select_NextbyPronHeaderIdWorkHouse" resultMap="ProduceInDepotDetailResult" parameterClass="Map">
       <![CDATA[
       select * from ProduceInDepotDetail 
@@ -120,6 +150,19 @@
       ]]>
     </select>
 
+    <select id="select_NextbyInvoiceXOIdWorkHouse" resultMap="ProduceInDepotDetailResult" parameterClass="Map">
+      <![CDATA[
+      select * from ProduceInDepotDetail 
+      where InvoiceXOId =#InvoiceXOId#
+      AND ProductId = #productid#
+      and ProduceInDepotId IN 
+      (
+        SELECT ProduceInDepotId FROM ProduceInDepot 
+        WHERE WorkHouseId=#WorkHouseId#
+        AND InsertTime>#insertTime#
+      )
+      ]]>
+    </select>
 
     <select id="Get_HJForColumnName_Detail" parameterClass="Map" resultClass="Double">
       <![CDATA[

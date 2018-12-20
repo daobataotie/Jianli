@@ -98,7 +98,7 @@ namespace Book.UI.Invoices.CO
             //string sql = "SELECT productid,id,productname FROM product WHERE IsCustomerProduct IS NULL OR IsCustomerProduct =0";
             //this.bindingSource2.DataSource = this.productManager.DataReaderBind<Model.Product>(sql, null, CommandType.Text);
             // this.bindingSource2.DataSource = this.productManager.SelectNotCustomer();
-            // GetCo();
+            GetCo();
         }
 
         protected override string tableCode()

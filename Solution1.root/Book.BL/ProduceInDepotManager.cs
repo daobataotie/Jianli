@@ -137,24 +137,31 @@ namespace Book.BL
                 produceInDepotDetail.ProduceInDepotId = produceInDepot.ProduceInDepotId;
 
                 //如果没有加工单号
-                //if (string.IsNullOrEmpty(produceInDepotDetail.PronoteHeaderId))
-                //{
-                //    produceInDepotDetail.HeJiProceduresSum = 0;
-                //    produceInDepotDetail.HeJiCheckOutSum = 0;
-                //    produceInDepotDetail.HeJiProduceQuantity = 0;
-                //    produceInDepotDetail.HeJiProduceTransferQuantity = 0;
-                //    DetailAccessor.Insert(produceInDepotDetail);
-                //}
+                if (string.IsNullOrEmpty(produceInDepotDetail.PronoteHeaderId) && !string.IsNullOrEmpty(produceInDepotDetail.InvoiceXOId))
+                {
+                    double? _InProceduresSum = produceInDepot.Details.Where(d => d.Inumber <= produceInDepotDetail.Inumber && d.ProductId == produceInDepotDetail.ProductId && d.InvoiceXOId == produceInDepotDetail.InvoiceXOId).Sum(d => d.ProceduresSum);
+                    double? _InCheckOutSum = produceInDepot.Details.Where(d => d.Inumber <= produceInDepotDetail.Inumber && d.ProductId == produceInDepotDetail.ProductId && d.InvoiceXOId == produceInDepotDetail.InvoiceXOId).Sum(d => d.CheckOutSum);
+                    double? _InProduceQuantity = produceInDepot.Details.Where(d => d.Inumber <= produceInDepotDetail.Inumber && d.ProductId == produceInDepotDetail.ProductId && d.InvoiceXOId == produceInDepotDetail.InvoiceXOId).Sum(d => d.ProduceQuantity);
+                    double? _InProduceTransferQuantity = produceInDepot.Details.Where(d => d.Inumber <= produceInDepotDetail.Inumber && d.ProductId == produceInDepotDetail.ProductId && d.InvoiceXOId == produceInDepotDetail.InvoiceXOId).Sum(d => d.ProduceTransferQuantity);
 
-                double? _InProceduresSum = produceInDepot.Details.Where(d => d.Inumber <= produceInDepotDetail.Inumber && d.ProductId == produceInDepotDetail.ProductId && d.PronoteHeaderId == produceInDepotDetail.PronoteHeaderId).Sum(d => d.ProceduresSum);
-                double? _InCheckOutSum = produceInDepot.Details.Where(d => d.Inumber <= produceInDepotDetail.Inumber && d.ProductId == produceInDepotDetail.ProductId && d.PronoteHeaderId == produceInDepotDetail.PronoteHeaderId).Sum(d => d.CheckOutSum);
-                double? _InProduceQuantity = produceInDepot.Details.Where(d => d.Inumber <= produceInDepotDetail.Inumber && d.ProductId == produceInDepotDetail.ProductId && d.PronoteHeaderId == produceInDepotDetail.PronoteHeaderId).Sum(d => d.ProduceQuantity);
-                double? _InProduceTransferQuantity = produceInDepot.Details.Where(d => d.Inumber <= produceInDepotDetail.Inumber && d.ProductId == produceInDepotDetail.ProductId && d.PronoteHeaderId == produceInDepotDetail.PronoteHeaderId).Sum(d => d.ProduceTransferQuantity);
+                    produceInDepotDetail.HeJiProceduresSum = DetailAccessor.Get_HJForColumnNameByInvoiceXOId(produceInDepotDetail.InvoiceXOId, produceInDepot.WorkHouseId, produceInDepotDetail.ProductId, produceInDepot.InsertTime.Value, "ProceduresSum") + _InProceduresSum;
+                    produceInDepotDetail.HeJiCheckOutSum = DetailAccessor.Get_HJForColumnNameByInvoiceXOId(produceInDepotDetail.InvoiceXOId, produceInDepot.WorkHouseId, produceInDepotDetail.ProductId, produceInDepot.InsertTime.Value, "CheckOutSum") + _InCheckOutSum;
+                    produceInDepotDetail.HeJiProduceQuantity = DetailAccessor.Get_HJForColumnNameByInvoiceXOId(produceInDepotDetail.InvoiceXOId, produceInDepot.WorkHouseId, produceInDepotDetail.ProductId, produceInDepot.InsertTime.Value, "ProduceQuantity") + _InProduceQuantity;
+                    produceInDepotDetail.HeJiProduceTransferQuantity = DetailAccessor.Get_HJForColumnNameByInvoiceXOId(produceInDepotDetail.InvoiceXOId, produceInDepot.WorkHouseId, produceInDepotDetail.ProductId, produceInDepot.InsertTime.Value, "ProduceTransferQuantity") + _InProduceTransferQuantity;
+                }
 
-                produceInDepotDetail.HeJiProceduresSum = DetailAccessor.Get_HJForColumnName(produceInDepotDetail.PronoteHeaderId, produceInDepot.WorkHouseId, produceInDepotDetail.ProductId, produceInDepotDetail.ProduceInDepotId, produceInDepotDetail.Inumber.Value, produceInDepot.InsertTime.Value, "ProceduresSum") + _InProceduresSum;
-                produceInDepotDetail.HeJiCheckOutSum = DetailAccessor.Get_HJForColumnName(produceInDepotDetail.PronoteHeaderId, produceInDepot.WorkHouseId, produceInDepotDetail.ProductId, produceInDepotDetail.ProduceInDepotId, produceInDepotDetail.Inumber.Value, produceInDepot.InsertTime.Value, "CheckOutSum") + _InCheckOutSum;
-                produceInDepotDetail.HeJiProduceQuantity = DetailAccessor.Get_HJForColumnName(produceInDepotDetail.PronoteHeaderId, produceInDepot.WorkHouseId, produceInDepotDetail.ProductId, produceInDepotDetail.ProduceInDepotId, produceInDepotDetail.Inumber.Value, produceInDepot.InsertTime.Value, "ProduceQuantity") + _InProduceQuantity;
-                produceInDepotDetail.HeJiProduceTransferQuantity = DetailAccessor.Get_HJForColumnName(produceInDepotDetail.PronoteHeaderId, produceInDepot.WorkHouseId, produceInDepotDetail.ProductId, produceInDepotDetail.ProduceInDepotId, produceInDepotDetail.Inumber.Value, produceInDepot.InsertTime.Value, "ProduceTransferQuantity") + _InProduceTransferQuantity;
+                else
+                {
+                    double? _InProceduresSum = produceInDepot.Details.Where(d => d.Inumber <= produceInDepotDetail.Inumber && d.ProductId == produceInDepotDetail.ProductId && d.PronoteHeaderId == produceInDepotDetail.PronoteHeaderId).Sum(d => d.ProceduresSum);
+                    double? _InCheckOutSum = produceInDepot.Details.Where(d => d.Inumber <= produceInDepotDetail.Inumber && d.ProductId == produceInDepotDetail.ProductId && d.PronoteHeaderId == produceInDepotDetail.PronoteHeaderId).Sum(d => d.CheckOutSum);
+                    double? _InProduceQuantity = produceInDepot.Details.Where(d => d.Inumber <= produceInDepotDetail.Inumber && d.ProductId == produceInDepotDetail.ProductId && d.PronoteHeaderId == produceInDepotDetail.PronoteHeaderId).Sum(d => d.ProduceQuantity);
+                    double? _InProduceTransferQuantity = produceInDepot.Details.Where(d => d.Inumber <= produceInDepotDetail.Inumber && d.ProductId == produceInDepotDetail.ProductId && d.PronoteHeaderId == produceInDepotDetail.PronoteHeaderId).Sum(d => d.ProduceTransferQuantity);
+
+                    produceInDepotDetail.HeJiProceduresSum = DetailAccessor.Get_HJForColumnName(produceInDepotDetail.PronoteHeaderId, produceInDepot.WorkHouseId, produceInDepotDetail.ProductId, produceInDepotDetail.ProduceInDepotId, produceInDepotDetail.Inumber.Value, produceInDepot.InsertTime.Value, "ProceduresSum") + _InProceduresSum;
+                    produceInDepotDetail.HeJiCheckOutSum = DetailAccessor.Get_HJForColumnName(produceInDepotDetail.PronoteHeaderId, produceInDepot.WorkHouseId, produceInDepotDetail.ProductId, produceInDepotDetail.ProduceInDepotId, produceInDepotDetail.Inumber.Value, produceInDepot.InsertTime.Value, "CheckOutSum") + _InCheckOutSum;
+                    produceInDepotDetail.HeJiProduceQuantity = DetailAccessor.Get_HJForColumnName(produceInDepotDetail.PronoteHeaderId, produceInDepot.WorkHouseId, produceInDepotDetail.ProductId, produceInDepotDetail.ProduceInDepotId, produceInDepotDetail.Inumber.Value, produceInDepot.InsertTime.Value, "ProduceQuantity") + _InProduceQuantity;
+                    produceInDepotDetail.HeJiProduceTransferQuantity = DetailAccessor.Get_HJForColumnName(produceInDepotDetail.PronoteHeaderId, produceInDepot.WorkHouseId, produceInDepotDetail.ProductId, produceInDepotDetail.ProduceInDepotId, produceInDepotDetail.Inumber.Value, produceInDepot.InsertTime.Value, "ProduceTransferQuantity") + _InProduceTransferQuantity;
+                }
 
                 if (produceInDepotDetail.Product.Id.Substring(0, 1) == "A" && produceInDepotDetail.HeJiProduceQuantity > produceInDepotDetail.PronoteHeaderSum)
                 {
@@ -174,44 +181,81 @@ namespace Book.BL
                 }
                 if (isUpdate == 1)
                 {
-                    IList<Model.ProduceInDepotDetail> _detailsList = DetailAccessor.select_NextbyPronHeaderId(produceInDepotDetail.PronoteHeaderId, produceInDepot.WorkHouseId, produceInDepotDetail.ProductId, produceInDepot.InsertTime.Value);
-
-                    var gbyHeaderId = from Model.ProduceInDepotDetail d in _detailsList
-                                      group d by d.ProduceInDepotId;
-
-                    foreach (IList<Model.ProduceInDepotDetail> outdetail in gbyHeaderId)
+                    if (!string.IsNullOrEmpty(produceInDepotDetail.PronoteHeaderId))
                     {
-                        foreach (Model.ProduceInDepotDetail detail in outdetail)
+                        IList<Model.ProduceInDepotDetail> _detailsList = DetailAccessor.select_NextbyPronHeaderId(produceInDepotDetail.PronoteHeaderId, produceInDepot.WorkHouseId, produceInDepotDetail.ProductId, produceInDepot.InsertTime.Value);
+
+                        var gbyHeaderId = from Model.ProduceInDepotDetail d in _detailsList
+                                          group d by d.ProduceInDepotId;
+
+                        foreach (IList<Model.ProduceInDepotDetail> outdetail in gbyHeaderId)
                         {
-                            double? _nProceduresSum = outdetail.Where(d => d.Inumber <= detail.Inumber.Value).Sum(d => d.ProceduresSum);
-                            double? _nCheckOutSum = outdetail.Where(d => d.Inumber <= detail.Inumber).Sum(d => d.CheckOutSum);
-                            double? _nProduceQuantity = outdetail.Where(d => d.Inumber <= detail.Inumber).Sum(d => d.ProduceQuantity);
-                            double? _nProduceTransferQuantity = outdetail.Where(d => d.Inumber <= detail.Inumber).Sum(d => d.ProduceTransferQuantity);
-
-                            detail.HeJiProceduresSum = DetailAccessor.Get_HJForColumnName(detail.PronoteHeaderId, produceInDepot.WorkHouseId, detail.ProductId, detail.ProduceInDepotId, detail.Inumber.Value, detail.ProduceInDepot.InsertTime.Value, "ProceduresSum") + _nProceduresSum;
-                            detail.HeJiCheckOutSum = DetailAccessor.Get_HJForColumnName(detail.PronoteHeaderId, produceInDepot.WorkHouseId, detail.ProductId, detail.ProduceInDepotId, detail.Inumber.Value, detail.ProduceInDepot.InsertTime.Value, "CheckOutSum") + _nCheckOutSum;
-                            detail.HeJiProduceQuantity = DetailAccessor.Get_HJForColumnName(detail.PronoteHeaderId, produceInDepot.WorkHouseId, detail.ProductId, detail.ProduceInDepotId, detail.Inumber.Value, detail.ProduceInDepot.InsertTime.Value, "ProduceQuantity") + _nProduceQuantity;
-                            detail.HeJiProduceTransferQuantity = DetailAccessor.Get_HJForColumnName(detail.PronoteHeaderId, produceInDepot.WorkHouseId, detail.ProductId, detail.ProduceInDepotId, detail.Inumber.Value, detail.ProduceInDepot.InsertTime.Value, "ProduceTransferQuantity") + _nProduceTransferQuantity;
-
-                            if (produceInDepotDetail.Product.Id.Substring(0, 1) == "A" && produceInDepotDetail.HeJiProduceQuantity > produceInDepotDetail.PronoteHeaderSum)
+                            foreach (Model.ProduceInDepotDetail detail in outdetail)
                             {
-                                if (pronoteHeaderAccessor.SelectXOIdByCondition(produceInDepotDetail.ProductId, produceInDepotDetail.PronoteHeaderId) != null)
-                                    throw new Helper.MessageValueException("商品：" + produceInDepotDetail.Product.ToString() + " 合計入庫數量大於訂單數量\r前訂單:" + pronoteHeaderAccessor.SelectXOIdByCondition(produceInDepotDetail.ProductId, produceInDepotDetail.PronoteHeaderId) + " 中也有此商品！");
-                                else
-                                    throw new Helper.MessageValueException("商品：" + produceInDepotDetail.Product.ToString() + " 合計入庫數量大於訂單數量");
+                                double? _nProceduresSum = outdetail.Where(d => d.Inumber <= detail.Inumber.Value).Sum(d => d.ProceduresSum);
+                                double? _nCheckOutSum = outdetail.Where(d => d.Inumber <= detail.Inumber).Sum(d => d.CheckOutSum);
+                                double? _nProduceQuantity = outdetail.Where(d => d.Inumber <= detail.Inumber).Sum(d => d.ProduceQuantity);
+                                double? _nProduceTransferQuantity = outdetail.Where(d => d.Inumber <= detail.Inumber).Sum(d => d.ProduceTransferQuantity);
+
+                                detail.HeJiProceduresSum = DetailAccessor.Get_HJForColumnName(detail.PronoteHeaderId, produceInDepot.WorkHouseId, detail.ProductId, detail.ProduceInDepotId, detail.Inumber.Value, detail.ProduceInDepot.InsertTime.Value, "ProceduresSum") + _nProceduresSum;
+                                detail.HeJiCheckOutSum = DetailAccessor.Get_HJForColumnName(detail.PronoteHeaderId, produceInDepot.WorkHouseId, detail.ProductId, detail.ProduceInDepotId, detail.Inumber.Value, detail.ProduceInDepot.InsertTime.Value, "CheckOutSum") + _nCheckOutSum;
+                                detail.HeJiProduceQuantity = DetailAccessor.Get_HJForColumnName(detail.PronoteHeaderId, produceInDepot.WorkHouseId, detail.ProductId, detail.ProduceInDepotId, detail.Inumber.Value, detail.ProduceInDepot.InsertTime.Value, "ProduceQuantity") + _nProduceQuantity;
+                                detail.HeJiProduceTransferQuantity = DetailAccessor.Get_HJForColumnName(detail.PronoteHeaderId, produceInDepot.WorkHouseId, detail.ProductId, detail.ProduceInDepotId, detail.Inumber.Value, detail.ProduceInDepot.InsertTime.Value, "ProduceTransferQuantity") + _nProduceTransferQuantity;
+
+                                if (produceInDepotDetail.Product.Id.Substring(0, 1) == "A" && produceInDepotDetail.HeJiProduceQuantity > produceInDepotDetail.PronoteHeaderSum)
+                                {
+                                    if (pronoteHeaderAccessor.SelectXOIdByCondition(produceInDepotDetail.ProductId, produceInDepotDetail.PronoteHeaderId) != null)
+                                        throw new Helper.MessageValueException("商品：" + produceInDepotDetail.Product.ToString() + " 合計入庫數量大於訂單數量\r前訂單:" + pronoteHeaderAccessor.SelectXOIdByCondition(produceInDepotDetail.ProductId, produceInDepotDetail.PronoteHeaderId) + " 中也有此商品！");
+                                    else
+                                        throw new Helper.MessageValueException("商品：" + produceInDepotDetail.Product.ToString() + " 合計入庫數量大於訂單數量");
+                                }
+
+                                DetailAccessor.Update(detail);
+
+                                //detail.HeJiProceduresSum = DetailAccessor.select_SumbyPronHeaderId(produceInDepotDetail.PronoteHeaderId, produceInDepot.WorkHouseId, produceInDepotDetail.ProductId) + DetailAccessor.select_FrontSumByProduceIndepotIdAndProId(produceInDepot.ProduceInDepotId, produceInDepotDetail.ProductId, produceInDepotDetail.Inumber.Value) + detail.ProceduresSum;
+
+                                //detail.HeJiCheckOutSum = DetailAccessor.select_CheckOutSumByPronHeaderId(produceInDepotDetail.PronoteHeaderId, produceInDepot.WorkHouseId, produceInDepotDetail.ProductId) + DetailAccessor.select_FrontCheckoutSumByProduceIndepotIdAndProId(produceInDepot.ProduceInDepotId, produceInDepotDetail.ProductId, produceInDepotDetail.Inumber.Value) + detail.CheckOutSum;
+
+
+                                //this.UpdateSql(@"update ProduceInDepotDetail set HeJiProceduresSum=" + (DetailAccessor.select_SumbyPronHeaderId(produceInDepotDetail.PronoteHeaderId, produceInDepot.WorkHouseId) + detail.ProceduresSum) + " , HeJiCheckOutSum=" + (DetailAccessor.select_CheckOutSumByPronHeaderId(produceInDepotDetail.PronoteHeaderId, produceInDepot.WorkHouseId) + detail.CheckOutSum) + " where produceInDepotDetailId='"+detail.ProduceInDepotDetailId+"'");
                             }
+                        }
+                    }
+                    else if (!string.IsNullOrEmpty(produceInDepotDetail.InvoiceXOId))
+                    {
+                        IList<Model.ProduceInDepotDetail> _detailsList = DetailAccessor.select_NextbyInvoiceXOId(produceInDepotDetail.InvoiceXOId, produceInDepot.WorkHouseId, produceInDepotDetail.ProductId, produceInDepot.InsertTime.Value);
 
-                            DetailAccessor.Update(detail);
+                        var gbyHeaderId = from Model.ProduceInDepotDetail d in _detailsList
+                                          group d by d.ProduceInDepotId;
 
-                            //detail.HeJiProceduresSum = DetailAccessor.select_SumbyPronHeaderId(produceInDepotDetail.PronoteHeaderId, produceInDepot.WorkHouseId, produceInDepotDetail.ProductId) + DetailAccessor.select_FrontSumByProduceIndepotIdAndProId(produceInDepot.ProduceInDepotId, produceInDepotDetail.ProductId, produceInDepotDetail.Inumber.Value) + detail.ProceduresSum;
+                        foreach (IList<Model.ProduceInDepotDetail> outdetail in gbyHeaderId)
+                        {
+                            foreach (Model.ProduceInDepotDetail detail in outdetail)
+                            {
+                                double? _nProceduresSum = outdetail.Where(d => d.Inumber <= detail.Inumber.Value).Sum(d => d.ProceduresSum);
+                                double? _nCheckOutSum = outdetail.Where(d => d.Inumber <= detail.Inumber).Sum(d => d.CheckOutSum);
+                                double? _nProduceQuantity = outdetail.Where(d => d.Inumber <= detail.Inumber).Sum(d => d.ProduceQuantity);
+                                double? _nProduceTransferQuantity = outdetail.Where(d => d.Inumber <= detail.Inumber).Sum(d => d.ProduceTransferQuantity);
 
-                            //detail.HeJiCheckOutSum = DetailAccessor.select_CheckOutSumByPronHeaderId(produceInDepotDetail.PronoteHeaderId, produceInDepot.WorkHouseId, produceInDepotDetail.ProductId) + DetailAccessor.select_FrontCheckoutSumByProduceIndepotIdAndProId(produceInDepot.ProduceInDepotId, produceInDepotDetail.ProductId, produceInDepotDetail.Inumber.Value) + detail.CheckOutSum;
+                                detail.HeJiProceduresSum = DetailAccessor.Get_HJForColumnNameByInvoiceXOId(detail.InvoiceXOId, produceInDepot.WorkHouseId, detail.ProductId, detail.ProduceInDepot.InsertTime.Value, "ProceduresSum") + _nProceduresSum;
+                                detail.HeJiCheckOutSum = DetailAccessor.Get_HJForColumnNameByInvoiceXOId(detail.InvoiceXOId, produceInDepot.WorkHouseId, detail.ProductId, detail.ProduceInDepot.InsertTime.Value, "CheckOutSum") + _nCheckOutSum;
+                                detail.HeJiProduceQuantity = DetailAccessor.Get_HJForColumnNameByInvoiceXOId(detail.InvoiceXOId, produceInDepot.WorkHouseId, detail.ProductId, detail.ProduceInDepot.InsertTime.Value, "ProduceQuantity") + _nProduceQuantity;
+                                detail.HeJiProduceTransferQuantity = DetailAccessor.Get_HJForColumnNameByInvoiceXOId(detail.InvoiceXOId, produceInDepot.WorkHouseId, detail.ProductId, detail.ProduceInDepot.InsertTime.Value, "ProduceTransferQuantity") + _nProduceTransferQuantity;
 
+                                if (produceInDepotDetail.Product.Id.Substring(0, 1) == "A" && produceInDepotDetail.HeJiProduceQuantity > produceInDepotDetail.PronoteHeaderSum)
+                                {
+                                    if (pronoteHeaderAccessor.SelectXOIdByCondition(produceInDepotDetail.ProductId, produceInDepotDetail.PronoteHeaderId) != null)
+                                        throw new Helper.MessageValueException("商品：" + produceInDepotDetail.Product.ToString() + " 合計入庫數量大於訂單數量\r前訂單:" + pronoteHeaderAccessor.SelectXOIdByCondition(produceInDepotDetail.ProductId, produceInDepotDetail.PronoteHeaderId) + " 中也有此商品！");
+                                    else
+                                        throw new Helper.MessageValueException("商品：" + produceInDepotDetail.Product.ToString() + " 合計入庫數量大於訂單數量");
+                                }
 
-                            //this.UpdateSql(@"update ProduceInDepotDetail set HeJiProceduresSum=" + (DetailAccessor.select_SumbyPronHeaderId(produceInDepotDetail.PronoteHeaderId, produceInDepot.WorkHouseId) + detail.ProceduresSum) + " , HeJiCheckOutSum=" + (DetailAccessor.select_CheckOutSumByPronHeaderId(produceInDepotDetail.PronoteHeaderId, produceInDepot.WorkHouseId) + detail.CheckOutSum) + " where produceInDepotDetailId='"+detail.ProduceInDepotDetailId+"'");
+                                DetailAccessor.Update(detail);
+                            }
                         }
                     }
                 }
+
                 //更新加工单 已合格数量 和是否
                 //if (!string.IsNullOrEmpty(produceInDepotDetail.PronoteHeaderId))
                 //    pronoteHeaderAccessor.UpdatePronoteIsClose(produceInDepotDetail.PronoteHeaderId, produceInDepotDetail.CheckOutSum);

@@ -173,6 +173,17 @@ namespace Book.DA.SQLServer
             return sqlmapper.QueryForObject<double>("ProduceInDepotDetail.select_TransferSumyPronHeaderWorkHouse", ht);
         }
 
+        //根据客户订单号 查询 前生产站转入数量
+        public double? select_TransferSumByInvoiceXOIdWorkHouse(string InvoiceXOId, string WorkHouseId, string ProductId)
+        {
+            Hashtable ht = new Hashtable();
+            ht.Add("InvoiceXOId", InvoiceXOId);
+            ht.Add("WorkHouseId", WorkHouseId);
+            ht.Add("ProductId", ProductId);
+
+            return sqlmapper.QueryForObject<double>("ProduceInDepotDetail.select_TransferSumByInvoiceXOIdWorkHouse", ht);
+        }
+
         public void DeleteByHeader(Model.ProduceInDepot produceInDepot)
         {
             if (produceInDepot != null && !string.IsNullOrEmpty(produceInDepot.ProduceInDepotId))
@@ -1554,6 +1565,26 @@ namespace Book.DA.SQLServer
             return sqlmapper.QueryForObject<double>("ProduceInDepotDetail.select_checkOutSumyPronHeaderIdWorkHouse", ht);
         }
 
+        //根据客户订单查询合计生产数量
+        public double? select_SumbyInvoiceXOId(string InvoiceXOId, string WorkHouseId, string ProductId)
+        {
+            Hashtable ht = new Hashtable();
+            ht.Add("InvoiceXOId", InvoiceXOId);
+            ht.Add("WorkHouseId", WorkHouseId);
+            ht.Add("ProductId", ProductId);
+            return sqlmapper.QueryForObject<double>("ProduceInDepotDetail.select_sumbyInvoiceXOIdWorkHouse", ht);
+        }
+
+        //根据客户订单查询合计合格生产数量
+        public double? select_CheckOutSumByInvoiceXOId(string InvoiceXOId, string WorkHouseId, string ProductId)
+        {
+            Hashtable ht = new Hashtable();
+            ht.Add("InvoiceXOId", InvoiceXOId);
+            ht.Add("WorkHouseId", WorkHouseId);
+            ht.Add("ProductId", ProductId);
+            return sqlmapper.QueryForObject<double>("ProduceInDepotDetail.select_checkOutSumByInvoiceXOIdWorkHouse", ht);
+        }
+
         public double? select_FrontSumByProduceIndepotIdAndProId(string ProduceIndepotId, string ProductId, int Inumber)
         {
             Hashtable ht = new Hashtable();
@@ -1588,6 +1619,19 @@ namespace Book.DA.SQLServer
             return sqlmapper.QueryForObject<double>("ProduceInDepotDetail.Get_HJForColumnName_Header", ht);
         }
 
+        //根据客户订单获取合计数量
+        public double? Get_HJForColumnNameByInvoiceXOId(string InvoiceXOId, string WorkHouseId, string ProductId, DateTime InsertTime, string GetColumn)
+        {
+            Hashtable ht = new Hashtable();
+            ht.Add("InvoiceXOId", InvoiceXOId);
+            ht.Add("WorkHouseId", WorkHouseId);
+            ht.Add("ProductId", ProductId);
+            ht.Add("InsertTime", InsertTime.ToString("yyyy-MM-dd HH:mm:ss"));
+            ht.Add("GetColumn", GetColumn);
+
+            return sqlmapper.QueryForObject<double>("ProduceInDepotDetail.Get_HJForColumnName_ByInvoiceXOId", ht);
+        }
+
         //加工单 ,工作中心,商品主键,添加时间 查询后面单据 用于更新累计合格的数量 累计生产数量
         public IList<Book.Model.ProduceInDepotDetail> select_NextbyPronHeaderId(string PronoteHeaderId, string WorkHouseId, string productid, DateTime insertTime)
         {
@@ -1597,6 +1641,17 @@ namespace Book.DA.SQLServer
             ht.Add("productid", productid);
             ht.Add("insertTime", insertTime);
             return sqlmapper.QueryForList<Model.ProduceInDepotDetail>("ProduceInDepotDetail.select_NextbyPronHeaderIdWorkHouse", ht);
+        }
+
+        //客户订单 ,生产站,商品主键,添加时间 查询后面单据 用于更新累计合格的数量 累计生产数量
+        public IList<Book.Model.ProduceInDepotDetail> select_NextbyInvoiceXOId(string InvoiceXOId, string WorkHouseId, string productid, DateTime insertTime)
+        {
+            Hashtable ht = new Hashtable();
+            ht.Add("InvoiceXOId", InvoiceXOId);
+            ht.Add("WorkHouseId", WorkHouseId);
+            ht.Add("productid", productid);
+            ht.Add("insertTime", insertTime);
+            return sqlmapper.QueryForList<Model.ProduceInDepotDetail>("ProduceInDepotDetail.select_NextbyInvoiceXOIdWorkHouse", ht);
         }
 
         //查询价格区间

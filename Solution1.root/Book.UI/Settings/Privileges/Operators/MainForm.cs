@@ -61,6 +61,8 @@ namespace Book.UI.Settings.Privileges.Operators
             {
                 this.employeeBindingSource.DataSource = this.operatorsManager.SelectOperators();
             }
+
+            this.RefreshData();
         }
 
         //╪сть

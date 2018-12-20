@@ -34,7 +34,10 @@ namespace Book.Model
         {
             get
             {
-                return InvoiceXODetail.Invoice.CustomerInvoiceXOId;
+                string str = "";
+                if (InvoiceXODetail != null)
+                    str = InvoiceXODetail.Invoice.CustomerInvoiceXOId;
+                return str;
             }
         }
 

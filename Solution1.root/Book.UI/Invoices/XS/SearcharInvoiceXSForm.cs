@@ -47,6 +47,8 @@ namespace Book.UI.Invoices.XS
                 this.cbo_bussiness.Properties.Items.Add(role);
             }
             this.StartPosition = FormStartPosition.CenterParent;
+
+            this.GetXo();
         }
 
         public SearcharInvoiceXSForm(Model.Customer customer)
@@ -251,6 +253,53 @@ namespace Book.UI.Invoices.XS
                 }
             }
             this.gridControl1.RefreshDataSource();
+        }
+
+        private void GetXo()
+        {
+            int co1 = 0;
+            int co2 = 0;
+            IList<Model.Role> roleList = BL.V.RoleList;
+            if (roleList != null && roleList.Count > 0)
+            {
+
+
+                for (int i = 0; i < roleList.Count; i++)
+                {
+                    if (roleList[i].IsXOPrice == true)
+                    {
+                        co1 = 1;
+                    }
+                    if (roleList[i].IsXOQuantity == true)
+                    {
+                        co2 = 1;
+                    }
+                }
+
+                if (co1 == 1)
+                {
+                    this.gridColumn11.Visible = true;
+                    this.gridColumn12.Visible = true;
+                    co1 = 0;
+                }
+                else
+                {
+                    this.gridColumn11.Visible = false;
+                    this.gridColumn12.Visible = false;
+                }
+                if (co2 == 1)
+                {
+                    this.gridColumn10.Visible = true;
+                    this.gridColumn12.Visible = true;
+                    co2 = 0;
+                }
+                else
+                {
+                    this.gridColumn10.Visible = false;
+                    this.gridColumn12.Visible = false;
+                }
+            }
+
         }
     }
 }

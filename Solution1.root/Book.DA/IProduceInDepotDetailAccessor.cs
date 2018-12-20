@@ -27,8 +27,12 @@ namespace Book.DA
         double? select_CheckOutSumPronoteHeaderWorkhouseDateRang(DateTime startdate, DateTime enddate, string PronoteHeaderId, string WorkHouseId);
         double? select_SumPronoteHeaderWorkhouseDateRang(DateTime startdate, DateTime enddate, string PronoteHeaderId, string WorkHouseId);
         double? select_TransferSumyPronHeaderWorkHouse(string PronoteHeaderId, string WorkHouseId);
+
+        double? select_TransferSumByInvoiceXOIdWorkHouse(string InvoiceXOId, string WorkHouseId, string ProductId);
+
         void DeleteByHeader(Model.ProduceInDepot produceInDepot);
         IList<Book.Model.ProduceInDepotDetail> select_NextbyPronHeaderId(string PronoteHeaderId, string WorkHouseId, string productid, DateTime insertTime);
+        IList<Book.Model.ProduceInDepotDetail> select_NextbyInvoiceXOId(string InvoiceXOId, string WorkHouseId, string productid, DateTime insertTime);
 
         IList<Model.ProduceInDepotDetail> Select_ChooseDefectRateCls(DateTime StartDate, DateTime EndDate, string StartProduceInDepotId, string EndProduceInDepotId, Model.Product StartProduct, Model.Product EndProduct, string StartPronoteHeaderId, string EndPronoteHeaderId, Model.WorkHouse StartWorkHouse, Model.WorkHouse EndWorkHouse, Model.Customer StartCustomer, Model.Customer EndCustomer, bool attrJiLuFangShi, bool attrQiangHua, bool attrWuDu, bool attrWuQiangHuaWuDu, int attrProductStates, double RejectionRate, string RejectionRateCompare, bool EnableBLV);
 
@@ -40,11 +44,17 @@ namespace Book.DA
 
         double? select_CheckOutSumByPronHeaderId(string PronoteHeaderId, string WorkHouseId, string ProductId);
 
+        double? select_SumbyInvoiceXOId(string InvoiceXOId, string WorkHouseId, string ProductId);
+
+        double? select_CheckOutSumByInvoiceXOId(string InvoiceXOId, string WorkHouseId, string ProductId);
+
         double? select_FrontSumByProduceIndepotIdAndProId(string ProduceIndepotId, string ProductId, int Inumber);
 
         double? select_FrontCheckoutSumByProduceIndepotIdAndProId(string ProduceIndepotId, string ProductId, int Inumber);
 
         double? Get_HJForColumnName(string PronoteHeaderId, string WorkHouseId, string ProductId, string ProduceIndepotId, int Inumber, DateTime InsertTime, string GetColumn);
+
+        double? Get_HJForColumnNameByInvoiceXOId(string InvoiceXOId, string WorkHouseId, string ProductId, DateTime InsertTime, string GetColumn);
 
         DataTable DTSelect_ChooseDefectRateCls(int DateType, DateTime StartDate, DateTime EndDate, string StartProduceInDepotId, string EndProduceInDepotId, Model.Product StartProduct, Model.Product EndProduct, string StartPronoteHeaderId, string EndPronoteHeaderId, Model.WorkHouse StartWorkHouse, Model.WorkHouse EndWorkHouse, Model.Customer StartCustomer, Model.Customer EndCustomer, bool attrJiLuFangShi, bool attrQiangHua, bool attrWuDu, bool attrWuQiangHuaWuDu, int attrProductStates, double RejectionRate, string RejectionRateCompare, bool EnableBLV, int attrOrderColumn, int attrOrderType, string StarInvoiceXOId, string EndInvoiceXOId, int InvoiceStates);
 

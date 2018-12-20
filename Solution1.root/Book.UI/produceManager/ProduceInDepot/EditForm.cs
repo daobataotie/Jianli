@@ -1277,15 +1277,76 @@ namespace Book.UI.produceManager.ProduceInDepot
 
         private void newChooseWorkHorseId_EditValueChanged(object sender, EventArgs e)
         {
-            if (newChooseWorkHorseId.EditValue != null)
+            if (newChooseWorkHorseId.EditValue != null && this.action != "view")
             {
                 foreach (var item in this.produceInDepot.Details)
                 {
-                    item.beforeTransferQuantity = this.produceInDepotDetailManager.select_TransferSumyPronHeaderWorkHouse(item.PronoteHeaderId, (this.newChooseWorkHorseId.EditValue as Model.WorkHouse).WorkHouseId);
+                    if (!string.IsNullOrEmpty(item.PronoteHeaderId))
+                        item.beforeTransferQuantity = this.produceInDepotDetailManager.select_TransferSumyPronHeaderWorkHouse(item.PronoteHeaderId, (this.newChooseWorkHorseId.EditValue as Model.WorkHouse).WorkHouseId);
+                    else if (!string.IsNullOrEmpty(item.InvoiceXOId))
+                        item.beforeTransferQuantity = this.produceInDepotDetailManager.select_TransferSumByInvoiceXOIdWorkHouse(item.InvoiceXOId, (this.newChooseWorkHorseId.EditValue as Model.WorkHouse).WorkHouseId, item.ProductId);
                 }
 
                 this.gridControl1.RefreshDataSource();
             }
+        }
+
+        private void btn_ChooseInvoiceXO_Click(object sender, EventArgs e)
+        {
+            if (this.newChooseWorkHorseId.EditValue == null)
+            {
+                MessageBox.Show(Properties.Resources.WorkHouse, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            Invoices.XS.SearcharInvoiceXSForm form = new Invoices.XS.SearcharInvoiceXSForm();
+            if (form.ShowDialog(this) == DialogResult.OK)
+            {
+                if (form.key != null && form.key.Count > 0)
+                {
+                    foreach (var item in form.key)
+                    {
+                        Model.ProduceInDepotDetail produceInDepotDetail = new Book.Model.ProduceInDepotDetail();
+                        produceInDepotDetail.ProduceInDepotDetailId = Guid.NewGuid().ToString();
+                        produceInDepotDetail.Product = item.Product;
+                        if (produceInDepotDetail.Product != null)
+                        {
+                            produceInDepotDetail.ProductId = produceInDepotDetail.Product.ProductId;
+                        }
+                        produceInDepotDetail.ProductUnit = item.InvoiceProductUnit;
+                        produceInDepotDetail.ProduceInDepotId = this.produceInDepot.ProduceInDepotId;
+                        //produceInDepotDetail.ProduceQuantity = Pronote.DetailsSum - (Pronote.InDepotQuantity == null ? 0 : Pronote.InDepotQuantity);
+                        produceInDepotDetail.ProduceQuantity = 0;
+                        //produceInDepotDetail.PronoteHeaderId = Pronote.PronoteHeaderID;
+                        produceInDepotDetail.InvoiceXOId = item.InvoiceId;
+                        produceInDepotDetail.HeJiProceduresSum = this.produceInDepotDetailManager.select_SumbyInvoiceXOId(item.InvoiceId, (this.newChooseWorkHorseId.EditValue as Model.WorkHouse).WorkHouseId, produceInDepotDetail.ProductId);
+                        produceInDepotDetail.HeJiCheckOutSum = this.produceInDepotDetailManager.select_CheckOutSumByInvoiceXOId(item.InvoiceId, (this.newChooseWorkHorseId.EditValue as Model.WorkHouse).WorkHouseId, produceInDepotDetail.ProductId);
+                        produceInDepotDetail.PronoteHeaderSum = item.InvoiceXODetailQuantity;
+                        produceInDepotDetail.ProceduresSum = 0;
+                        produceInDepotDetail.CheckOutSum = 0;
+                        produceInDepotDetail.RejectionRate = 0;
+                        produceInDepotDetail.Inumber = this.produceInDepot.Details.Count + 1;
+                        if (newChooseWorkHorseId.EditValue != null)
+                            produceInDepotDetail.beforeTransferQuantity = this.produceInDepotDetailManager.select_TransferSumByInvoiceXOIdWorkHouse(item.InvoiceId, (this.newChooseWorkHorseId.EditValue as Model.WorkHouse).WorkHouseId, produceInDepotDetail.ProductId);
+
+                        //produceInDepotDetail.PriceRange = _SupplierProductManager.GetPriceRangeForSupAndProduct(produceInDepotDetail.Product.SupplierId, produceInDepotDetail.ProductId);
+                        //produceInDepotDetail.ProduceInDepotPrice = BL.SupplierProductManager.CountPrice(produceInDepotDetail.PriceRange, (double)produceInDepotDetail.ProduceQuantity);
+                        produceInDepotDetail.ProduceInDepotPrice = item.InvoiceXODetailPrice;
+                        //if (price != 0)
+                        //    produceInDepotDetail.ProduceInDepotPrice = price;
+                        //if (produceInDepotDetail.ProduceInDepotPrice == null)
+                        //    produceInDepotDetail.ProduceInDepotPrice = 0;
+                        produceInDepotDetail.ProduceMoney = produceInDepotDetail.ProduceInDepotPrice * (decimal)produceInDepotDetail.ProduceQuantity;
+
+                        this.produceInDepot.Details.Add(produceInDepotDetail);
+
+                        this.bindingSourceDetails.Position = this.bindingSourceDetails.IndexOf(produceInDepotDetail);
+                    }
+                }
+                this.gridControl1.RefreshDataSource();
+            }
+            form.Dispose();
+            GC.Collect();
         }
     }
 }

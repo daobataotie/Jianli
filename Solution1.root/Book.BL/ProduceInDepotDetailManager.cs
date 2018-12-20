@@ -96,6 +96,28 @@ namespace Book.BL
         }
 
         /// <summary>
+        /// 根据客户订单和入库单生产站 求 合计合格生产数量
+        /// </summary>
+        /// <param name="PronoteHeaderId"></param>
+        /// <param name="WorkHouseId"></param>
+        /// <returns></returns>
+        public double? select_SumbyInvoiceXOId(string InvoiceXOId, string WorkHouseId, string ProductId)
+        {
+            return accessor.select_SumbyInvoiceXOId(InvoiceXOId, WorkHouseId, ProductId);
+        }
+
+        /// <summary>
+        /// 根据客户订单和入库单生产站 求 合计合格生产数量
+        /// </summary>
+        /// <param name="PronoteHeaderId"></param>
+        /// <param name="WorkHouseId"></param>
+        /// <returns></returns>
+        public double? select_CheckOutSumByInvoiceXOId(string InvoiceXOId, string WorkHouseId, string ProductId)
+        {
+            return accessor.select_CheckOutSumByInvoiceXOId(InvoiceXOId, WorkHouseId, ProductId);
+        }
+
+        /// <summary>
         /// 根据日前区间加工单生产站 求 生产数量和
         /// </summary>
         /// <param name="startdate"></param>
@@ -124,6 +146,11 @@ namespace Book.BL
         public double? select_TransferSumyPronHeaderWorkHouse(string PronoteHeaderId, string WorkHouseId)
         {
             return accessor.select_TransferSumyPronHeaderWorkHouse(PronoteHeaderId, WorkHouseId);
+        }
+
+        public double? select_TransferSumByInvoiceXOIdWorkHouse(string InvoiceXOId, string WorkHouseId, string ProductId)
+        {
+            return accessor.select_TransferSumByInvoiceXOIdWorkHouse(InvoiceXOId, WorkHouseId, ProductId);
         }
 
         public IList<Model.ProduceInDepotDetail> Select_ChooseDefectRateCls(DateTime StartDate, DateTime EndDate, string StartProduceInDepotId, string EndProduceInDepotId, Model.Product StartProduct, Model.Product EndProduct, string StartPronoteHeaderId, string EndPronoteHeaderId, Model.WorkHouse StartWorkHouse, Model.WorkHouse EndWorkHouse, Model.Customer StartCustomer, Model.Customer EndCustomer, bool attrJiLuFangShi, bool attrQiangHua, bool attrWuDu, bool attrWuQiangHuaWuDu, int attrProductStates, double RejectionRate, string RejectionRateCompare, bool EnableBLV)
