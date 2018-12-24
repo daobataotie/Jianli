@@ -32,6 +32,7 @@ namespace Book.UI.Invoices.XO
             this.lbl_PrintDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
             this.xrLabelCustomName.Text = this.invoice.Customer.CustomerShortName;
+            this.lbl_Customer_Id.Text = this.invoice.Customer.Id;
             this.xrLabelInvoiceDate.Text = this.invoice.InvoiceDate.Value.ToString("yyyy-MM-dd");
             this.xrLabelInvoiceId.Text = this.invoice.InvoiceId;
             this.xrLabelEmp.Text += this.invoice.Employee0 == null ? "" : this.invoice.Employee0.EmployeeName;

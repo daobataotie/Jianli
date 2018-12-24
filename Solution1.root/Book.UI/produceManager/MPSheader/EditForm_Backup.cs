@@ -29,7 +29,7 @@ namespace Book.UI.produceManager.MPSheader
    // 修 改 人:                          修改时间:
    //----------------------------------------------------------------*/
 
-    public partial class EditForm : Settings.BasicData.BaseEditForm
+    public partial class EditForm_Backup : Settings.BasicData.BaseEditForm
     {
         //设置静态字段 在选择销售订单页面赋值
         //  public static IList<Model.InvoiceXODetail> _InvoiceXO = new List<Model.InvoiceXODetail>();
@@ -54,7 +54,7 @@ namespace Book.UI.produceManager.MPSheader
         BL.InvoiceXOManager invoiceXOManager = new Book.BL.InvoiceXOManager();
         BL.ProductUnitManager productUnitManager = new BL.ProductUnitManager();
 
-        public EditForm()
+        public EditForm_Backup()
         {
             InitializeComponent();
             this.requireValueExceptions.Add(Model.MPSheader.PRO_Id, new AA(Properties.Resources.RequireDataForId, this.textMPSheaderId));
@@ -65,11 +65,12 @@ namespace Book.UI.produceManager.MPSheader
             this.action = "view";
             this.newChooseEmployee1.Choose = new ChooseEmployee();
             this.newChooseEmployee0.Choose = new ChooseEmployee();
+            this.newChooseContorlCustomer.Choose = new Settings.BasicData.Customs.ChooseCustoms();
             this.EmpAudit.Choose = new ChooseEmployee();
 
         }
 
-        public EditForm(Model.MPSheader mpsheader)
+        public EditForm_Backup(Model.MPSheader mpsheader)
             : this()
         {
             this.mpsheader = mpsheader;
@@ -77,7 +78,7 @@ namespace Book.UI.produceManager.MPSheader
             this.action = "update";
         }
 
-        public EditForm(Model.MPSheader mpsheader, string action)
+        public EditForm_Backup(Model.MPSheader mpsheader, string action)
             : this()
         {
             this.mpsheader = mpsheader;
@@ -85,7 +86,7 @@ namespace Book.UI.produceManager.MPSheader
             this.action = action;
         }
 
-        public EditForm(List<Model.InvoiceXODetail> list)
+        public EditForm_Backup(List<Model.InvoiceXODetail> list)
             : this()
         {
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -157,6 +158,8 @@ namespace Book.UI.produceManager.MPSheader
         {
             //this.mpsheader.MPSheaderState = this.textMPSheaderState.Text;
             this.mpsheader.Id = this.textMPSheaderId.Text;
+            // this.mpsheader.MPSheaderName = this.textMPSheaderName.Text;
+            this.mpsheader.InvoiceXOId = this.textEditXOId.Text;
             if (global::Helper.DateTimeParse.DateTimeEquls(this.dateMPSStartDate.DateTime, new DateTime()))
             {
                 this.mpsheader.MPSStartDate = null;
@@ -375,7 +378,32 @@ namespace Book.UI.produceManager.MPSheader
             }
             this.textMPSheaderId.Text = this.mpsheader.MPSheaderId;
             //this.textMPSheaderName.Text = this.mpsheader.MPSheaderName;
-
+            this.textMPSheaderDesc.Text = this.mpsheader.MPSheaderDesc;
+            if (!string.IsNullOrEmpty(this.mpsheader.InvoiceXOId))
+            {
+                Model.InvoiceXO invoiceXO = this.invoiceXOManager.Get(this.mpsheader.InvoiceXOId);
+                if (invoiceXO != null)
+                {
+                    this.textEditXOId.Text = invoiceXO.InvoiceId;
+                    this.textEditCustomerXOId.Text = invoiceXO.CustomerInvoiceXOId;
+                    this.newChooseContorlCustomer.EditValue = invoiceXO.xocustomer;
+                    this.textEditPiHao.Text = invoiceXO.CustomerLotNumber;
+                }
+                else
+                {
+                    this.textEditXOId.Text = string.Empty;
+                    this.textEditCustomerXOId.Text = string.Empty;
+                    this.newChooseContorlCustomer.EditValue = null;
+                    this.textEditPiHao.Text = string.Empty;
+                }
+            }
+            else
+            {
+                this.textEditXOId.Text = string.Empty;
+                this.textEditCustomerXOId.Text = string.Empty;
+                this.newChooseContorlCustomer.EditValue = null;
+                this.textEditPiHao.Text = string.Empty;
+            }
             if (global::Helper.DateTimeParse.DateTimeEquls(this.mpsheader.MPSStartDate, global::Helper.DateTimeParse.NullDate))
             {
                 this.dateMPSStartDate.EditValue = null;
@@ -600,11 +628,11 @@ namespace Book.UI.produceManager.MPSheader
             {
                 Model.MPSdetails a = this.bindingSourceDetails.Current as Book.Model.MPSdetails;
                 this.mpsheader.Details.Remove(this.bindingSourceDetails.Current as Book.Model.MPSdetails);
-                //if (a != null)
-                //{
-                //    Model.InvoiceXO iXO = new BL.InvoiceXOManager().GetById(a.InvoiceXOId);
-                //    //_iXOs.Remove(iXO);
-                //}
+                if (a != null)
+                {
+                    Model.InvoiceXO iXO = new BL.InvoiceXOManager().GetById(a.InvoiceXOId);
+                    //_iXOs.Remove(iXO);
+                }
                 if (this.mpsheader.Details.Count == 0)
                 {
                     Model.MPSdetails detail = new Model.MPSdetails();
@@ -634,7 +662,11 @@ namespace Book.UI.produceManager.MPSheader
             if (f.ShowDialog(this) != DialogResult.OK) return;
             if (f.SelectList == null || f.SelectList.Count == 0) return;
             this.mpsheader.Details.Clear();
+            this.textEditXOId.Text = f.SelectList[0].InvoiceId;
+            this.textEditPiHao.Text = f.SelectList[0].Invoice.CustomerLotNumber;
+            this.textEditCustomerXOId.Text = f.SelectList[0].Invoice.CustomerInvoiceXOId;
             this.dateMPSEndDate.DateTime = f.SelectList[0].Invoice.InvoiceYjrq.Value;
+            this.newChooseContorlCustomer.EditValue = f.SelectList[0].Invoice.xocustomer;
             foreach (Model.InvoiceXODetail xodetail in f.SelectList)
             {
                 Model.MPSdetails mpsDetail = new Book.Model.MPSdetails();

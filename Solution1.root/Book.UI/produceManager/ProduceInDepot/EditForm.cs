@@ -9,6 +9,7 @@ using DevExpress.XtraEditors;
 using Book.UI.Settings.BasicData.Employees;
 using Book.UI.Invoices;
 using System.Linq;
+using DevExpress.XtraGrid.Columns;
 
 namespace Book.UI.produceManager.ProduceInDepot
 {
@@ -51,9 +52,17 @@ namespace Book.UI.produceManager.ProduceInDepot
             this.newChooseEmployee1.Choose = new ChooseEmployee();
             this.newChooseWorkHorseId.Choose = new Settings.ProduceManager.Workhouselog.ChooseWorkHouse();
             this.newChooseContorlDepot.Choose = new Invoices.ChooseDepot();
-            //    string sql = "SELECT productid,id,productname,CustomerProductName FROM product";
-            //    this.bindingSourceProductId.DataSource = this.productManager.DataReaderBind<Model.Product>(sql, null, CommandType.Text); 
+            string sql = "SELECT productid,id,productname,CustomerProductName,ProductVersion FROM product order by id";
+            this.bindingSourceProductId.DataSource = this.productManager.DataReaderBind<Model.Product>(sql, null, CommandType.Text);
             this.EmpAudit.Choose = new ChooseEmployee();
+
+            this.repositoryItemSearchLookUpEdit1.DisplayMember = "Id";
+            this.repositoryItemSearchLookUpEdit1.ValueMember = "ProductId";
+            this.repositoryItemSearchLookUpEdit1.View.Columns.Add(new GridColumn() { FieldName = "Id", Caption = "商品編號", Width = 150, Visible = true, VisibleIndex = 0 });
+            this.repositoryItemSearchLookUpEdit1.View.Columns.Add(new GridColumn() { FieldName = "ProductName", Caption = "商品名稱", Width = 150, Visible = true, VisibleIndex = 1 });
+            this.repositoryItemSearchLookUpEdit1.View.Columns.Add(new GridColumn() { FieldName = "CustomerProductName", Caption = "客戶貨品名稱", Width = 150, Visible = true, VisibleIndex = 2 });
+            this.repositoryItemSearchLookUpEdit1.View.Columns.Add(new GridColumn() { FieldName = "ProductVersion", Caption = "版本", Width = 50, Visible = true, VisibleIndex = 3 });
+            this.repositoryItemSearchLookUpEdit1.DataSource = this.bindingSourceProductId.DataSource;
         }
 
         public EditForm(string produceInDepotId)
@@ -1347,6 +1356,44 @@ namespace Book.UI.produceManager.ProduceInDepot
             }
             form.Dispose();
             GC.Collect();
+        }
+
+        private bool CanAdd(IList<Model.ProduceInDepotDetail> list)
+        {
+            foreach (Model.ProduceInDepotDetail detail in list)
+            {
+                if (detail.Product == null || string.IsNullOrEmpty(detail.Product.ProductId))
+                    return false;
+            }
+            return true;
+        }
+
+        private void gridView1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (this.action == "insert" || this.action == "update")
+            {
+                if (this.CanAdd(this.produceInDepot.Details))
+                {
+                    if (e.KeyData == Keys.Enter)
+                    {
+                        Model.ProduceInDepotDetail detail = new Model.ProduceInDepotDetail();
+                        detail.ProduceInDepotDetailId = Guid.NewGuid().ToString();
+                        detail.Inumber = this.produceInDepot.Details.Count + 1;
+                        detail.ProduceMoney = 0;
+                        detail.ProceduresSum = 0;
+                        detail.CheckOutSum = 0;
+                        detail.RejectionRate = 0;
+
+                        this.produceInDepot.Details.Add(detail);
+                    }
+                }
+                if (e.KeyData == Keys.Delete)
+                {
+                    if (this.bindingSourceDetails.Current != null)
+                        this.bindingSourceDetails.Remove(this.bindingSourceDetails.Current);
+                }
+                this.gridControl1.RefreshDataSource();
+            }
         }
     }
 }

@@ -3,7 +3,14 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <statements>
     <select id="SelectByHeader" parameterClass="string" resultMap="PackingListDetailResult">
-      select * from PackingListDetail where PackingListHeaderId=#value# order by CartonNo
+      select * from PackingListDetail where PackingListHeaderId=#value#
+      order by CONVERT(int,SUBSTRING(CartonNo,1,(case when (CHARINDEX('-',CartonNo)-1)=-1 then 0 else (CHARINDEX('-',CartonNo)-1) end)))
+      ,SUBSTRING(CartonNo,CHARINDEX('-',CartonNo)+1,10)
+    </select>
+
+    <select id="SelectByHeaderSimple" parameterClass="string" resultMap="PackingListDetailResult">
+      select * from PackingListDetail where PackingListHeaderId=#value#
+      order by CartonNo
     </select>
 
     <delete id="DeleteByHeader" parameterClass="string">

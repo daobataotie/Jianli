@@ -121,26 +121,23 @@ namespace Book.UI.produceManager.ProduceMaterial
             this.AddNew();
             this.tag = 1;
 
-            string xoid = string.Empty;
-
-            if (List[0].MPSheaderId != null)
-            {
-                xoid = new BL.MPSheaderManager().Get(List[0].MPSheaderId).InvoiceXOId;
-            }
-            else if (List[0].MRSHeader.MPSheaderId != null)
-                xoid = new BL.MPSheaderManager().Get(List[0].MRSHeader.MPSheaderId).InvoiceXOId;
+            Model.InvoiceXO invoiceXO = null;
             this.comboBoxEdit1.SelectedIndex = 1;
             this.textEditPronoteHeaderID.EditValue = List[0].MRSHeaderId;
-            if (!string.IsNullOrEmpty(xoid))
+
+            if (List[0].MPSdetailsId != null)
             {
-                Model.InvoiceXO invoiceXO = this.invoiceXOManager.Get(xoid);
-                if (invoiceXO != null)
-                {
-                    this.textEditCustomerXOId.Text = invoiceXO.CustomerInvoiceXOId;
-                    this.textEditPiHao.Text = invoiceXO.CustomerLotNumber;
-                    //this.calcEditInvoiceSum.Text = invoiceXO.Details.Where(w => w.ProductId == List[0].MadeProductId).ToList().First().InvoiceXODetailQuantity.Value.ToString("f0");
-                }
-                this._produceMaterial.InvoiceXOId = xoid;
+                invoiceXO = invoiceXOManager.SelectByMPSDetailId(List[0].MPSdetailsId);
+            }
+
+            if (invoiceXO != null)
+            {
+                //this.textEditCustomerXOId.Text = invoiceXO.CustomerInvoiceXOId;
+                //this.textEditPiHao.Text = invoiceXO.CustomerLotNumber;
+                //this.calcEditInvoiceSum.Text = invoiceXO.Details.Where(w => w.ProductId == List[0].MadeProductId).ToList().First().InvoiceXODetailQuantity.Value.ToString("f0");
+                this._produceMaterial.InvoiceCusXOId = invoiceXO.CustomerInvoiceXOId;
+                this._produceMaterial.Pihao = invoiceXO.CustomerLotNumber;
+                this._produceMaterial.InvoiceXOId = invoiceXO.InvoiceId;
             }
             else
                 this.textEditCustomerXOId.Text = string.Empty;

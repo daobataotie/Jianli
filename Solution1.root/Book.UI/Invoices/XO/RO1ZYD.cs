@@ -33,6 +33,7 @@ namespace Book.UI.Invoices.XO
 
             //客户信息
             this.xrLabelCustomName.Text = this.invoice.Customer.CustomerShortName;
+            this.lbl_Customer_Id.Text = this.invoice.Customer.Id;
             //this.xrLabelCustomFax.Text = this.invoice.Customer.CustomerFax;
             //this.xrLabelCustomTel.Text = string.IsNullOrEmpty(this.invoice.Customer.CustomerPhone) ? this.invoice.Customer.CustomerPhone1 : this.invoice.Customer.CustomerPhone;
             //this.xrLabelTongYiNo.Text = this.invoice.Customer.CustomerNumber;

@@ -39,6 +39,7 @@ namespace Book.UI.produceManager.createProduce
             this.dateEditEnd.DateTime = DateTime.Now.Date.AddDays(1).AddSeconds(-1);
             this.newChooseCustomer.Choose = new Settings.BasicData.Customs.ChooseCustoms();
             //this.XOdetail = this.invoiceXODetailManager.select_XOnotInMps();
+            this.SelectList = new List<Model.InvoiceXODetail>();
         }
 
         //采购单 选择销售订单
@@ -144,15 +145,26 @@ namespace Book.UI.produceManager.createProduce
             this.DialogResult = DialogResult.OK;
         }
 
-        public IList<Model.InvoiceXODetail> SelectList
+        public IList<Model.InvoiceXODetail> SelectList      //改为可以多选订单
         {
-            get { return (from x in XOdetail where x.Checkeds == true select x).ToList<Model.InvoiceXODetail>(); }
+            //get { return (from x in XOdetail where x.Checkeds == true select x).ToList<Model.InvoiceXODetail>(); }
+            get;
+            set;
         }
 
         private void gridView2_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             if (this.bindingSourceHeader.Current == null) return;
             this.XOdetail = this.invoiceXODetailManager.Select(this.bindingSourceHeader.Current as Model.InvoiceXO, true);
+
+            foreach (var item in this.XOdetail)
+            {
+                if (this.SelectList != null && this.SelectList.Any(D => D.InvoiceXODetailId == item.InvoiceXODetailId))
+                    item.Checkeds = true;
+                else
+                    item.Checkeds = false;
+            }
+
             this.bindingSource1.DataSource = this.XOdetail;
             this.gridControl1.RefreshDataSource();
             this.checkEditAll.Checked = false;
@@ -196,6 +208,21 @@ namespace Book.UI.produceManager.createProduce
                     item.Checkeds = false;
                 }
             this.gridControl1.RefreshDataSource();
+        }
+
+        private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            if (e.Column.Name == "gridColumn8")
+            {
+                Model.InvoiceXODetail detail = this.gridView1.GetRow(e.RowHandle) as Model.InvoiceXODetail;
+
+                if ((bool)e.Value && !this.SelectList.Any(D => D.InvoiceXODetailId == detail.InvoiceXODetailId))
+                {
+                    this.SelectList.Add(detail);
+                }
+                else if (!(bool)e.Value && this.SelectList.Any(D => D.InvoiceXODetailId == detail.InvoiceXODetailId))
+                    this.SelectList.Remove(SelectList.First(D => D.InvoiceXODetailId == detail.InvoiceXODetailId));
+            }
         }
     }
 }

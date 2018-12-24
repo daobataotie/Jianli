@@ -95,6 +95,8 @@ namespace Book.Model
 
         public string ProId { get; set; }
 
+        public double TaibiMoney { get; set; }
+
         public readonly static string PRO_InvoiceDate = "InvoiceDate";
 
         public readonly static string PRO_InvoiceYjrq = "InvoiceYjrq";
@@ -110,5 +112,7 @@ namespace Book.Model
         public readonly static string PRO_CustomerProductName = "CustomerProductName";
 
         public readonly static string PRO_WeichuQty = "WeichuQty";
+
+        public readonly static string PRO_TaibiMoney = "TaibiMoney";
     }
 }

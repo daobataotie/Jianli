@@ -13,6 +13,7 @@ using DevExpress.XtraTreeList.Nodes;
 using Book.UI.produceManager.ProduceOtherCompact;
 using Book.UI.Invoices.CO;
 using System.Data.SqlClient;
+using System.Threading;
 
 namespace Book.UI.produceManager.MRSHeader
 {
@@ -855,7 +856,15 @@ namespace Book.UI.produceManager.MRSHeader
                         pronoteHeader.MRSdetailsId = _mrsdetail.MRSdetailsId;
                         pronoteHeader.MRSHeaderId = this.mrsheader.MRSHeaderId;
                         pronoteHeader.InDepotQuantity = 0;
-                        Model.InvoiceXO invoicexo = this.invoiceXOManager.SelectMpsIsClose(this.mrsheader.MPSheaderId);
+                        //Model.InvoiceXO invoicexo = this.invoiceXOManager.SelectMpsIsClose(this.mrsheader.MPSheaderId);
+                        Model.InvoiceXO invoicexo = this.invoiceXOManager.SelectByMPSDetailId(_mrsdetail.MPSdetailsId);
+                        if (invoicexo != null)
+                        {
+                            pronoteHeader.InvoiceXOId = invoicexo.InvoiceId;
+                            pronoteHeader.InvoiceCusId = invoicexo.CustomerInvoiceXOId;
+                            pronoteHeader.InvoiceXODetailQuantity = _mrsdetail.MRSdetailsQuantity;
+                        }
+
                         pronoteHeader.InvoiceStatus = 1;
                         if (this.mrsheader.SourceType == "0")
                             pronoteHeader.InvoiceType = "0";
@@ -890,18 +899,6 @@ namespace Book.UI.produceManager.MRSHeader
 
                         }
 
-
-                        if (invoicexo != null)
-                        {
-                            pronoteHeader.InvoiceXOId = invoicexo.InvoiceId;
-                            pronoteHeader.InvoiceCusId = invoicexo.CustomerInvoiceXOId;
-                            pronoteHeader.InvoiceXODetailQuantity = _mrsdetail.MRSdetailsQuantity;
-                            //foreach (Model.InvoiceXODetail detail in xodetailManager.Select(invoicexo, false))
-                            //{
-                            //    if (detail.ProductId == _mrsdetail.MadeProductId)
-                            //        pronoteHeader.InvoiceXODetailQuantity = detail.InvoiceXODetailQuantity.Value;
-                            //}
-                        }
                         pronoteHeader.WorkHouseId = _mrsdetail.WorkHouseNextId;
 
                         pronoteHeader.DetailsSum = _mrsdetail.MRSdetailssum;//- (_mrsdetail.MRSHasSingleSum == null ? 0 : _mrsdetail.MRSHasSingleSum);
@@ -1225,7 +1222,7 @@ namespace Book.UI.produceManager.MRSHeader
                 PriceRange.Add(item.ProductId, SupProManager.GetPriceRangeForSupAndProduct(item.SupplierId, item.ProductId));
                 if (item.SupplierId == null)
                 {
-                    MessageBox.Show("廠商不能為空！", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("供應商不能為空！", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
             }
@@ -1301,12 +1298,22 @@ namespace Book.UI.produceManager.MRSHeader
                     }
                     this._invoiceCO.InvoiceStatus = 1;
                     this._invoiceCO.InvoiceYjrq = (from n in groups select n.JiaoHuoDate).Max(p => p);
-                    Model.MPSheader mps = this.mPSheaderManager.Get(this.mrsheader.MPSheaderId);
-                    if (mps != null && !string.IsNullOrEmpty(mps.InvoiceXOId))
+                    //Model.MPSheader mps = this.mPSheaderManager.Get(this.mrsheader.MPSheaderId);
+                    //if (mps != null && !string.IsNullOrEmpty(mps.InvoiceXOId))
+                    //{
+                    //    this._invoiceCO.InvoiceXOId = mps.InvoiceXOId;
+                    //    Model.InvoiceXO invoiceXO = this.invoiceXOManager.Get(mps.InvoiceXOId);
+                    //    this._invoiceCO.InvoiceCustomXOId = invoiceXO == null ? "" : invoiceXO.CustomerInvoiceXOId;
+                    //}
+
+                    if (groups.First() != null)
                     {
-                        this._invoiceCO.InvoiceXOId = mps.InvoiceXOId;
-                        Model.InvoiceXO invoiceXO = this.invoiceXOManager.Get(mps.InvoiceXOId);
-                        this._invoiceCO.InvoiceCustomXOId = invoiceXO == null ? "" : invoiceXO.CustomerInvoiceXOId;
+                        Model.InvoiceXO invoiceXO = this.invoiceXOManager.SelectByMPSDetailId(groups.First().MPSdetailsId);
+                        if (invoiceXO != null)
+                        {
+                            this._invoiceCO.InvoiceXOId = invoiceXO.InvoiceId;
+                            this._invoiceCO.InvoiceCustomXOId = invoiceXO.CustomerInvoiceXOId;
+                        }
                     }
                     this._invoiceCO.InvoiceStatus = Convert.ToInt32(global::Helper.InvoiceStatus.Normal);
 
@@ -1359,6 +1366,7 @@ namespace Book.UI.produceManager.MRSHeader
                     }
                     if (_invoiceCO.Details.Count > 0)
                     {
+                        Thread.Sleep(500);  //运行太快导致“InsertTime”一样，没有上下笔
 
                         this._invoiceCOManager.Insert(this._invoiceCO);
 
@@ -1447,269 +1455,230 @@ namespace Book.UI.produceManager.MRSHeader
         //形成委外合同
         private void simpleButtonOther_Click(object sender, EventArgs e)
         {
-            //if (this.mrsheader.IsbuiltInvoiceCO != null && this.mrsheader.IsbuiltInvoiceCO.Value)
-            //{
-            //    CompactSelectForm form = new CompactSelectForm(this.mrsheader);
-            //    if (form.ShowDialog(this) == DialogResult.OK)
-            //    {
-            //        Model.ProduceOtherCompact pc = form.SelectItem;
-            //        ProduceOtherCompact.EditForm fm = new ProduceOtherCompact.EditForm(pc);
-            //        fm.ShowDialog();
-            //    }
-            //    form.Dispose();
-            //    GC.Collect();
+            if (!this.gridView1.PostEditor() || !this.gridView1.UpdateCurrentRow())
+                return;
 
-            //}
-            //else
+            //获得单价
+            BL.SupplierProductManager SupProManager = new Book.BL.SupplierProductManager();
+            Dictionary<string, string> PriceRange = new Dictionary<string, string>();
+            //获得所有要生成采购订单的单价
+            foreach (var item in this.mrsheader.Details)
             {
-                if (!this.gridView1.PostEditor() || !this.gridView1.UpdateCurrentRow())
-                    return;
+                if (PriceRange.ContainsKey(item.ProductId))
+                    continue;
+                PriceRange.Add(item.ProductId, SupProManager.GetPriceRangeForSupAndProduct(item.SupplierId, item.ProductId));
+            }
 
-                //获得单价
-                BL.SupplierProductManager SupProManager = new Book.BL.SupplierProductManager();
-                Dictionary<string, string> PriceRange = new Dictionary<string, string>();
-                //获得所有要生成采购订单的单价
-                foreach (var item in this.mrsheader.Details)
+            //var compacts = from cs in this.mrsheader.Details
+            //               where cs.CheckSign != null && cs.CheckSign.Value == true && string.IsNullOrEmpty(cs.ArrangeDesc)
+            //               group cs by cs.Product.SupplierId;
+            var compacts = from cs in this.mrsheader.Details
+                           where cs.CheckSign != null && cs.CheckSign.Value == true && string.IsNullOrEmpty(cs.ArrangeDesc)
+                           group cs by cs.SupplierId;
+
+            if (compacts == null || compacts.Count() == 0)
+            {
+                MessageBox.Show("沒有要生成的數據！", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            foreach (IGrouping<string, Model.MRSdetails> groups in compacts)
+            {
+                this._produceOtherCompact = new Model.ProduceOtherCompact();
+                //this._produceOtherCompact.ProduceOtherCompactId = this._produceOtherCompactManager.GetId();
+                this._produceOtherCompact.ProduceOtherCompactId = this._produceOtherCompactManager.GetIdSimple(DateTime.Now);
+                this._produceOtherCompact.SupplierId = groups.Key;
+                this._produceOtherCompact.Supplier = new BL.SupplierManager().Get(groups.Key);
+                this._produceOtherCompact.Employee0Id = BL.V.ActiveOperator.EmployeeId;
+                this._produceOtherCompact.ProduceOtherCompactDate = DateTime.Now;
+                this._produceOtherCompact.InsertTime = DateTime.Now;
+                this._produceOtherCompact.UpdateTime = DateTime.Now;
+                this._produceOtherCompact.MRSHeaderId = this.mrsheader.MRSHeaderId;
+                this._produceOtherCompact.Details = new List<Model.ProduceOtherCompactDetail>();
+                this._produceOtherCompact.InvoiceStatus = 1;
+                this._produceOtherCompact.DetailMaterial = new List<Model.ProduceOtherCompactMaterial>();
+                this._produceOtherCompact.TempMaterials = new List<Model.ProduceOtherCompactMaterial>();
+
+
+
+
+                string KeyIdName = null;
+                string tableName = null;
+
+                string tableDesc = null;
+
+                // if (!string.IsNullOrEmpty(tableCode()))
+                //审核
+
+                KeyIdName = "ProduceOtherCompactId"; ;
+                tableName = "ProduceOtherCompact";
+                tableDesc = new BL.OperationManager().GetOperationNamebyTabel(tableName);
+                Model.RoleAuditing roleAuditing = null;
+                if (new BL.RoleAuditingManager().IsNeedAuditByTableName(tableName))
                 {
-                    if (PriceRange.ContainsKey(item.ProductId))
-                        continue;
-                    PriceRange.Add(item.ProductId, SupProManager.GetPriceRangeForSupAndProduct(item.SupplierId, item.ProductId));
+                    roleAuditing = new Book.Model.RoleAuditing();
+                    roleAuditing.RoleAuditingId = Guid.NewGuid().ToString();
+                    roleAuditing.AuditRank = 0;
+                    roleAuditing.NextAuditRole = new BL.RoleManager().select_byAuditRandTableName(1, tableName);
+                    if (roleAuditing.NextAuditRole != null)
+                        roleAuditing.NextAuditRoleId = roleAuditing.NextAuditRole.RoleId;
+                    roleAuditing.AuditState = (int)global::Helper.InvoiceAudit.WaitAudit;
+                    roleAuditing.Employee0Id = BL.V.ActiveOperator.EmployeeId;
+                    roleAuditing.InsertTime = DateTime.Now;
+                    roleAuditing.InvoiceName = new BL.OperationManager().GetOperationNamebyTabel(tableName); ;
+                    roleAuditing.TableName = tableName;
+
+
+                    this._produceOtherCompact.AuditState = (int)global::Helper.InvoiceAudit.WaitAudit;
+
                 }
-
-                //var compacts = from cs in this.mrsheader.Details
-                //               where cs.CheckSign != null && cs.CheckSign.Value == true && string.IsNullOrEmpty(cs.ArrangeDesc)
-                //               group cs by cs.Product.SupplierId;
-                var compacts = from cs in this.mrsheader.Details
-                               where cs.CheckSign != null && cs.CheckSign.Value == true && string.IsNullOrEmpty(cs.ArrangeDesc)
-                               group cs by cs.SupplierId;
-
-                if (compacts == null || compacts.Count() == 0)
+                if (this.newChooseCustomer.EditValue != null)
+                    this._produceOtherCompact.CustomerId = (this.newChooseCustomer.EditValue as Model.Customer).CustomerId;
+                //Model.MPSheader mpsheader = this.mPSheaderManager.Get(this.mrsheader.MPSheaderId);
+                //if (mpsheader != null)
+                //{
+                //    this._produceOtherCompact.InvoiceXOId = mpsheader.InvoiceXOId;
+                //    if (mpsheader.InvoiceXO != null)
+                //    {
+                //        this._produceOtherCompact.CustomerInvoiceXOId = mpsheader.InvoiceXO.CustomerInvoiceXOId;
+                //        this._produceOtherCompact.LotNumber = mpsheader.InvoiceXO.CustomerLotNumber;
+                //    }
+                //}
+                if (groups.First() != null)
                 {
-                    MessageBox.Show("沒有要生成的數據！", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
-
-                foreach (IGrouping<string, Model.MRSdetails> groups in compacts)
-                {
-                    this._produceOtherCompact = new Model.ProduceOtherCompact();
-                    //this._produceOtherCompact.ProduceOtherCompactId = this._produceOtherCompactManager.GetId();
-                    this._produceOtherCompact.ProduceOtherCompactId = this._produceOtherCompactManager.GetIdSimple(DateTime.Now);
-                    this._produceOtherCompact.SupplierId = groups.Key;
-                    this._produceOtherCompact.Supplier = new BL.SupplierManager().Get(groups.Key);
-                    this._produceOtherCompact.Employee0Id = BL.V.ActiveOperator.EmployeeId;
-                    this._produceOtherCompact.ProduceOtherCompactDate = DateTime.Now;
-                    this._produceOtherCompact.InsertTime = DateTime.Now;
-                    this._produceOtherCompact.UpdateTime = DateTime.Now;
-                    this._produceOtherCompact.MRSHeaderId = this.mrsheader.MRSHeaderId;
-                    this._produceOtherCompact.Details = new List<Model.ProduceOtherCompactDetail>();
-                    this._produceOtherCompact.InvoiceStatus = 1;
-                    this._produceOtherCompact.DetailMaterial = new List<Model.ProduceOtherCompactMaterial>();
-                    this._produceOtherCompact.TempMaterials = new List<Model.ProduceOtherCompactMaterial>();
-
-
-
-
-                    string KeyIdName = null;
-                    string tableName = null;
-
-                    string tableDesc = null;
-
-                    // if (!string.IsNullOrEmpty(tableCode()))
-                    //审核
-
-                    KeyIdName = "ProduceOtherCompactId"; ;
-                    tableName = "ProduceOtherCompact";
-                    tableDesc = new BL.OperationManager().GetOperationNamebyTabel(tableName);
-                    Model.RoleAuditing roleAuditing = null;
-                    if (new BL.RoleAuditingManager().IsNeedAuditByTableName(tableName))
+                    Model.InvoiceXO invoiceXO = this.invoiceXOManager.SelectByMPSDetailId(groups.First().MPSdetailsId);
+                    if (invoiceXO != null)
                     {
-                        roleAuditing = new Book.Model.RoleAuditing();
-                        roleAuditing.RoleAuditingId = Guid.NewGuid().ToString();
-                        roleAuditing.AuditRank = 0;
-                        roleAuditing.NextAuditRole = new BL.RoleManager().select_byAuditRandTableName(1, tableName);
-                        if (roleAuditing.NextAuditRole != null)
-                            roleAuditing.NextAuditRoleId = roleAuditing.NextAuditRole.RoleId;
-                        roleAuditing.AuditState = (int)global::Helper.InvoiceAudit.WaitAudit;
-                        roleAuditing.Employee0Id = BL.V.ActiveOperator.EmployeeId;
-                        roleAuditing.InsertTime = DateTime.Now;
-                        roleAuditing.InvoiceName = new BL.OperationManager().GetOperationNamebyTabel(tableName); ;
-                        roleAuditing.TableName = tableName;
-
-
-                        this._produceOtherCompact.AuditState = (int)global::Helper.InvoiceAudit.WaitAudit;
+                        this._produceOtherCompact.InvoiceXOId = invoiceXO.InvoiceId;
+                        this._produceOtherCompact.CustomerInvoiceXOId = invoiceXO.CustomerInvoiceXOId;
+                        this._produceOtherCompact.LotNumber = invoiceXO.CustomerLotNumber;
 
                     }
-                    Model.MPSheader mpsheader = this.mPSheaderManager.Get(this.mrsheader.MPSheaderId);
-                    if (mpsheader != null)
+                }
+
+                foreach (var cc in groups)
+                {
+                    this._produceOtherCompact.JiaoHuoDate = cc.JiaoHuoDate;
+                    this._produceOtherCompactDetail = new Model.ProduceOtherCompactDetail();
+                    this._produceOtherCompactDetail.OtherCompactDetailId = Guid.NewGuid().ToString();
+                    this._produceOtherCompactDetail.ProduceOtherCompactId = this._produceOtherCompact.ProduceOtherCompactId;
+                    this._produceOtherCompactDetail.ProductId = cc.ProductId;
+                    this._produceOtherCompactDetail.Product = this.productManager.Get(cc.ProductId);
+                    this._produceOtherCompactDetail.ProductUnit = cc.ProductUnit;
+                    this._produceOtherCompactDetail.JiaoQi = cc.JiaoHuoDate;
+
+                    if (cc.CheckNums != null && cc.CheckNums != 0)
+                        this._produceOtherCompactDetail.OtherCompactCount = cc.CheckNums.HasValue ? cc.CheckNums.Value : 0;
+                    else
+                        this._produceOtherCompactDetail.OtherCompactCount = cc.MRSdetailssum.HasValue ? cc.MRSdetailssum.Value : 0;
+                    //根据商品类别的最小领料单位计算最小领料数量
+                    if (cc.Product.ProductCategory != null && Convert.ToDouble(cc.Product.ProductCategory.ProductMinQuantity) > 0)
+                        this._produceOtherCompactDetail.OtherCompactCount = Math.Ceiling(Convert.ToDouble(this._produceOtherCompactDetail.OtherCompactCount / cc.Product.ProductCategory.ProductMinQuantity)) * cc.Product.ProductCategory.ProductMinQuantity;
+
+                    this._produceOtherCompactDetail.OtherCompactPrice = BL.SupplierProductManager.CountPrice(new BL.SupplierProductManager().GetPriceRangeForSupAndProduct(groups.Key, this._produceOtherCompactDetail.ProductId), this._produceOtherCompactDetail.OtherCompactCount.Value);
+
+                    this._produceOtherCompactDetail.OtherCompactMoney = Convert.ToDecimal(this._produceOtherCompactDetail.OtherCompactCount) * this._produceOtherCompactDetail.OtherCompactPrice;
+
+                    this._produceOtherCompactDetail.WorkHouseNextId = cc.WorkHouseNextId;
+                    Model.MPSheader mpsHeader = this.mPSheaderManager.Get(this.mrsheader.MPSheaderId);
+                    if (mpsHeader != null)
                     {
-                        this._produceOtherCompact.InvoiceXOId = mpsheader.InvoiceXOId;
-                        if (this.newChooseCustomer.EditValue != null)
-                            this._produceOtherCompact.CustomerId = (this.newChooseCustomer.EditValue as Model.Customer).CustomerId;
-                        if (mpsheader.InvoiceXO != null)
+                        Model.InvoiceXO invoiceXO = this.invoiceXOManager.Get(mpsHeader.InvoiceXOId);
+                        if (invoiceXO != null)
                         {
-                            this._produceOtherCompact.CustomerInvoiceXOId = mpsheader.InvoiceXO.CustomerInvoiceXOId;
-                            this._produceOtherCompact.LotNumber = mpsheader.InvoiceXO.CustomerLotNumber;
+                            this._produceOtherCompactDetail.CustomInvoiceXOId = invoiceXO.CustomerInvoiceXOId;
+                            this._produceOtherCompact.LotNumber = invoiceXO.CustomerLotNumber;
                         }
                     }
-                    //var Details = from c in groups
-                    //              group c by new { c.ProductId, c.ProductUnit } into cc
-                    //              select new
-                    //              {
-                    //                  Count = (from t in cc select t.MRSdetailssum).Sum(),
-                    //                  ProductId = cc.Key.ProductId,
-                    //                  ProductUnit = cc.Key.ProductUnit,
-                    //              };
-                    foreach (var cc in groups)
+
+                    //关联物料需求详细生成委外合同,用到物料需求详细主键编号
+                    this._produceOtherCompactDetail.MRSdetailsId = cc.MRSdetailsId;
+
+                    this._produceOtherCompact.Details.Add(this._produceOtherCompactDetail);
+
+                    Model.Product pt = productManager.Get(cc.ProductId);
+
+                    foreach (Model.BomComponentInfo com in this.bomComponentInfoManager.Select(this.bomParentPartInfoManager.Get(pt)))
                     {
-                        this._produceOtherCompact.JiaoHuoDate = cc.JiaoHuoDate;
-                        this._produceOtherCompactDetail = new Model.ProduceOtherCompactDetail();
-                        this._produceOtherCompactDetail.OtherCompactDetailId = Guid.NewGuid().ToString();
-                        this._produceOtherCompactDetail.ProduceOtherCompactId = this._produceOtherCompact.ProduceOtherCompactId;
-                        this._produceOtherCompactDetail.ProductId = cc.ProductId;
-                        this._produceOtherCompactDetail.Product = this.productManager.Get(cc.ProductId);
-                        this._produceOtherCompactDetail.ProductUnit = cc.ProductUnit;
-                        this._produceOtherCompactDetail.JiaoQi = cc.JiaoHuoDate;
+                        //this._produceOtherCompactMaterial = new Book.Model.ProduceOtherCompactMaterial();
+                        //this._produceOtherCompactMaterial.ProduceQuantity = cc.MRSdetailssum * com.UseQuantity;
+                        //this._produceOtherCompactMaterial.Product = com.Product;
+                        //this._produceOtherCompactMaterial.ProductId = com.Product.ProductId;
+                        //this._produceOtherCompactMaterial.ProductUnit = com.Unit;
+                        //this._produceOtherCompact.TempMaterials.Add(this._produceOtherCompactMaterial);
+
+                        this._produceOtherCompactMaterial = new Book.Model.ProduceOtherCompactMaterial();
+                        this._produceOtherCompactMaterial.ProduceOtherCompactMaterialId = Guid.NewGuid().ToString();
 
                         if (cc.CheckNums != null && cc.CheckNums != 0)
-                            this._produceOtherCompactDetail.OtherCompactCount = cc.CheckNums.HasValue ? cc.CheckNums.Value : 0;
+                            this._produceOtherCompactMaterial.ProduceQuantity = cc.CheckNums * com.UseQuantity * (1 + 0.01 * (com.SubLoseRate == null ? 0 : com.SubLoseRate));
                         else
-                            this._produceOtherCompactDetail.OtherCompactCount = cc.MRSdetailssum.HasValue ? cc.MRSdetailssum.Value : 0;
+                            this._produceOtherCompactMaterial.ProduceQuantity = cc.MRSdetailssum * com.UseQuantity * (1 + 0.01 * (com.SubLoseRate == null ? 0 : com.SubLoseRate));
                         //根据商品类别的最小领料单位计算最小领料数量
-                        if (cc.Product.ProductCategory != null && Convert.ToDouble(cc.Product.ProductCategory.ProductMinQuantity) > 0)
-                            this._produceOtherCompactDetail.OtherCompactCount = Math.Ceiling(Convert.ToDouble(this._produceOtherCompactDetail.OtherCompactCount / cc.Product.ProductCategory.ProductMinQuantity)) * cc.Product.ProductCategory.ProductMinQuantity;
+                        if (com.Product.ProductCategory != null && Convert.ToDouble(com.Product.ProductCategory.ProductMinQuantity) > 0)
+                            this._produceOtherCompactMaterial.ProduceQuantity = Math.Ceiling(Convert.ToDouble(this._produceOtherCompactMaterial.ProduceQuantity / com.Product.ProductCategory.ProductMinQuantity)) * com.Product.ProductCategory.ProductMinQuantity;
 
-                        this._produceOtherCompactDetail.OtherCompactPrice = BL.SupplierProductManager.CountPrice(new BL.SupplierProductManager().GetPriceRangeForSupAndProduct(groups.Key, this._produceOtherCompactDetail.ProductId), this._produceOtherCompactDetail.OtherCompactCount.Value);
-
-                        this._produceOtherCompactDetail.OtherCompactMoney = Convert.ToDecimal(this._produceOtherCompactDetail.OtherCompactCount) * this._produceOtherCompactDetail.OtherCompactPrice;
-
-                        this._produceOtherCompactDetail.WorkHouseNextId = cc.WorkHouseNextId;
-                        Model.MPSheader mpsHeader = this.mPSheaderManager.Get(this.mrsheader.MPSheaderId);
-                        if (mpsHeader != null)
-                        {
-                            Model.InvoiceXO invoiceXO = this.invoiceXOManager.Get(mpsHeader.InvoiceXOId);
-                            if (invoiceXO != null)
-                            {
-                                this._produceOtherCompactDetail.CustomInvoiceXOId = invoiceXO.CustomerInvoiceXOId;
-                                this._produceOtherCompact.LotNumber = invoiceXO.CustomerLotNumber;
-                            }
-                        }
-
-                        //关联物料需求详细生成委外合同,用到物料需求详细主键编号
-                        this._produceOtherCompactDetail.MRSdetailsId = cc.MRSdetailsId;
-
-                        this._produceOtherCompact.Details.Add(this._produceOtherCompactDetail);
-
-                        Model.Product pt = productManager.Get(cc.ProductId);
-
-                        foreach (Model.BomComponentInfo com in this.bomComponentInfoManager.Select(this.bomParentPartInfoManager.Get(pt)))
-                        {
-                            //this._produceOtherCompactMaterial = new Book.Model.ProduceOtherCompactMaterial();
-                            //this._produceOtherCompactMaterial.ProduceQuantity = cc.MRSdetailssum * com.UseQuantity;
-                            //this._produceOtherCompactMaterial.Product = com.Product;
-                            //this._produceOtherCompactMaterial.ProductId = com.Product.ProductId;
-                            //this._produceOtherCompactMaterial.ProductUnit = com.Unit;
-                            //this._produceOtherCompact.TempMaterials.Add(this._produceOtherCompactMaterial);
-
-                            this._produceOtherCompactMaterial = new Book.Model.ProduceOtherCompactMaterial();
-                            this._produceOtherCompactMaterial.ProduceOtherCompactMaterialId = Guid.NewGuid().ToString();
-
-                            if (cc.CheckNums != null && cc.CheckNums != 0)
-                                this._produceOtherCompactMaterial.ProduceQuantity = cc.CheckNums * com.UseQuantity * (1 + 0.01 * (com.SubLoseRate == null ? 0 : com.SubLoseRate));
-                            else
-                                this._produceOtherCompactMaterial.ProduceQuantity = cc.MRSdetailssum * com.UseQuantity * (1 + 0.01 * (com.SubLoseRate == null ? 0 : com.SubLoseRate));
-                            //根据商品类别的最小领料单位计算最小领料数量
-                            if (com.Product.ProductCategory != null && Convert.ToDouble(com.Product.ProductCategory.ProductMinQuantity) > 0)
-                                this._produceOtherCompactMaterial.ProduceQuantity = Math.Ceiling(Convert.ToDouble(this._produceOtherCompactMaterial.ProduceQuantity / com.Product.ProductCategory.ProductMinQuantity)) * com.Product.ProductCategory.ProductMinQuantity;
-
-                            this._produceOtherCompactMaterial.ProductId = com.Product.ProductId;
-                            this._produceOtherCompactMaterial.Product = com.Product;
-                            this._produceOtherCompactMaterial.ProductUnit = com.Unit;
-                            this._produceOtherCompactMaterial.ParentProductId = cc.ProductId;
-                            this._produceOtherCompact.DetailMaterial.Add(this._produceOtherCompactMaterial);
-                        }
-
-                        //var materials = from m in this._produceOtherCompact.TempMaterials
-                        //                group m by new { m.ProductId, m.ProductUnit } into g
-                        //                select new
-                        //                {
-                        //                    ProduceQuantity = (from x in g select x.ProduceQuantity).Sum(),
-                        //                    ProductId = g.Key.ProductId,
-                        //                    ProductUnit = g.Key.ProductUnit,
-                        //                    stock = from p in g select p.Product.StocksQuantity, //g.Max(p => p.Product.StocksQuantity)
-                        //                    ParentProductId = cc.ProductId,
-                        //                };
-
-                        //IList<string> a=new List<string>();
-                        //foreach (var im in this._produceOtherCompact.TempMaterials)
-                        //{
-                        //    if (im.ProduceQuantity <= 0)
-                        //        continue;
-                        //    if(a.Contains( im.ProduceOtherCompactMaterialId);
-                        //    this._produceOtherCompactMaterial = new Book.Model.ProduceOtherCompactMaterial();
-                        //    this._produceOtherCompactMaterial.ProduceOtherCompactMaterialId = Guid.NewGuid().ToString();
-                        //    this._produceOtherCompactMaterial.ProduceQuantity = im.ProduceQuantity;
-                        //    this._produceOtherCompactMaterial.ProductId = im.ProductId;
-                        //    this._produceOtherCompactMaterial.Product = this.productManager.Get(im.ProductId);
-                        //    this._produceOtherCompactMaterial.ProductUnit = im.ProductUnit;
-                        //    this._produceOtherCompactMaterial.ParentProductId = cc.ProductId;
-                        //    this._produceOtherCompact.DetailMaterial.Add(this._produceOtherCompactMaterial);
-                        //    a.Add(this._produceOtherCompactMaterial.ProduceOtherCompactMaterialId );
-                        //}
+                        this._produceOtherCompactMaterial.ProductId = com.Product.ProductId;
+                        this._produceOtherCompactMaterial.Product = com.Product;
+                        this._produceOtherCompactMaterial.ProductUnit = com.Unit;
+                        this._produceOtherCompactMaterial.ParentProductId = cc.ProductId;
+                        this._produceOtherCompact.DetailMaterial.Add(this._produceOtherCompactMaterial);
                     }
 
-
-                    if (this._produceOtherCompact.Details != null && this._produceOtherCompact.Details.Count > 0)
-                    {
-                        this._produceOtherCompactManager.Insert(this._produceOtherCompact);
-
-                        string sqlInformation = "insert into Information values(NEWID(),GETDATE(),'" + _produceOtherCompact.ProduceOtherCompactId + "','" + "委外合同" + "','0')";
-                        this._produceOtherCompactManager.UpdateSql(sqlInformation);
-
-                        if (roleAuditing != null)
-                        {
-                            roleAuditing.InvoiceId = this._produceOtherCompact.ProduceOtherCompactId;
-                            new BL.RoleAuditingManager().Insert(roleAuditing);
-                        }
-
-
-                    }
                 }
 
-                //订单详细是否已经生成完毕
-                bool IsoverAll = true;
-                foreach (var item in this.mrsheader.Details)
+
+                if (this._produceOtherCompact.Details != null && this._produceOtherCompact.Details.Count > 0)
                 {
-                    if (!item.CheckSign.HasValue || !item.CheckSign.Value)
-                        IsoverAll = false;
-                    else
+                    this._produceOtherCompactManager.Insert(this._produceOtherCompact);
+
+                    string sqlInformation = "insert into Information values(NEWID(),GETDATE(),'" + _produceOtherCompact.ProduceOtherCompactId + "','" + "委外合同" + "','0')";
+                    this._produceOtherCompactManager.UpdateSql(sqlInformation);
+
+                    if (roleAuditing != null)
                     {
-                        if (!string.IsNullOrEmpty(item.ArrangeDesc)) continue;
-                        item.ArrangeDesc = "已經形成委外合同";
-                        this.mrsdetailManager.Update(item);
+                        roleAuditing.InvoiceId = this._produceOtherCompact.ProduceOtherCompactId;
+                        new BL.RoleAuditingManager().Insert(roleAuditing);
                     }
+
+
                 }
-
-                if (IsoverAll)
-                {
-                    this.mrsheader.IsbuiltInvoiceCO = true;
-                    this.mrsheaderManager.UpdateHeader(this.mrsheader);
-                    //simpleButtonOther.Text = Properties.Resources.IsBuiltTrustOut;
-                }
-
-                //CompactSelectForm form = new CompactSelectForm(this.mrsheader);
-                //if (form.ShowDialog(this) == DialogResult.OK)
-                //{
-                //    Model.ProduceOtherCompact pc = form.SelectItem;
-                //    ProduceOtherCompact.EditForm fm = new ProduceOtherCompact.EditForm(pc);
-                //    fm.ShowDialog();
-                //}
-
-                //form.Dispose();
-                //GC.Collect();
-
-                MessageBox.Show("單據生成成功！", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.simpleButton_ViewTrust.Enabled = true;
             }
+
+            //订单详细是否已经生成完毕
+            bool IsoverAll = true;
+            foreach (var item in this.mrsheader.Details)
+            {
+                if (!item.CheckSign.HasValue || !item.CheckSign.Value)
+                    IsoverAll = false;
+                else
+                {
+                    if (!string.IsNullOrEmpty(item.ArrangeDesc)) continue;
+                    item.ArrangeDesc = "已經形成委外合同";
+                    this.mrsdetailManager.Update(item);
+                }
+            }
+
+            if (IsoverAll)
+            {
+                this.mrsheader.IsbuiltInvoiceCO = true;
+                this.mrsheaderManager.UpdateHeader(this.mrsheader);
+                //simpleButtonOther.Text = Properties.Resources.IsBuiltTrustOut;
+            }
+
+            //CompactSelectForm form = new CompactSelectForm(this.mrsheader);
+            //if (form.ShowDialog(this) == DialogResult.OK)
+            //{
+            //    Model.ProduceOtherCompact pc = form.SelectItem;
+            //    ProduceOtherCompact.EditForm fm = new ProduceOtherCompact.EditForm(pc);
+            //    fm.ShowDialog();
+            //}
+
+            //form.Dispose();
+            //GC.Collect();
+
+            MessageBox.Show("單據生成成功！", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.simpleButton_ViewTrust.Enabled = true;
         }
 
         //查看委外单

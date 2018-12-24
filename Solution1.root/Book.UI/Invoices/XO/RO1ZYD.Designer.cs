@@ -63,6 +63,10 @@ namespace Book.UI.Invoices.XO
             this.xrLabelNote = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel40 = new DevExpress.XtraReports.UI.XRLabel();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
+            this.lbl_XOCustomer_Id = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel14 = new DevExpress.XtraReports.UI.XRLabel();
+            this.lbl_Customer_Id = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel11 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabelYJRQ = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabelCustomerXOId = new DevExpress.XtraReports.UI.XRLabel();
@@ -141,7 +145,7 @@ namespace Book.UI.Invoices.XO
             this.xrLine1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             resources.ApplyResources(this.xrLine1, "xrLine1");
             this.xrLine1.LineStyle = System.Drawing.Drawing2D.DashStyle.Dot;
-            this.xrLine1.LineWidth = 5;
+            this.xrLine1.LineWidth = 13;
             this.xrLine1.Name = "xrLine1";
             this.xrLine1.StylePriority.UseBorderDashStyle = false;
             // 
@@ -396,6 +400,10 @@ namespace Book.UI.Invoices.XO
             // PageHeader
             // 
             this.PageHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.lbl_XOCustomer_Id,
+            this.xrLabel14,
+            this.lbl_Customer_Id,
+            this.xrLabel4,
             this.xrLabel11,
             this.xrLabelYJRQ,
             this.xrLabelCustomerXOId,
@@ -413,6 +421,40 @@ namespace Book.UI.Invoices.XO
             this.xrLabelData});
             resources.ApplyResources(this.PageHeader, "PageHeader");
             this.PageHeader.Name = "PageHeader";
+            // 
+            // lbl_XOCustomer_Id
+            // 
+            this.lbl_XOCustomer_Id.CanGrow = false;
+            resources.ApplyResources(this.lbl_XOCustomer_Id, "lbl_XOCustomer_Id");
+            this.lbl_XOCustomer_Id.Name = "lbl_XOCustomer_Id";
+            this.lbl_XOCustomer_Id.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lbl_XOCustomer_Id.StylePriority.UseFont = false;
+            this.lbl_XOCustomer_Id.StylePriority.UseTextAlignment = false;
+            // 
+            // xrLabel14
+            // 
+            resources.ApplyResources(this.xrLabel14, "xrLabel14");
+            this.xrLabel14.Name = "xrLabel14";
+            this.xrLabel14.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel14.StylePriority.UseFont = false;
+            this.xrLabel14.StylePriority.UseTextAlignment = false;
+            // 
+            // lbl_Customer_Id
+            // 
+            this.lbl_Customer_Id.CanGrow = false;
+            resources.ApplyResources(this.lbl_Customer_Id, "lbl_Customer_Id");
+            this.lbl_Customer_Id.Name = "lbl_Customer_Id";
+            this.lbl_Customer_Id.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lbl_Customer_Id.StylePriority.UseFont = false;
+            this.lbl_Customer_Id.StylePriority.UseTextAlignment = false;
+            // 
+            // xrLabel4
+            // 
+            resources.ApplyResources(this.xrLabel4, "xrLabel4");
+            this.xrLabel4.Name = "xrLabel4";
+            this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel4.StylePriority.UseFont = false;
+            this.xrLabel4.StylePriority.UseTextAlignment = false;
             // 
             // xrLabel11
             // 
@@ -742,5 +784,9 @@ namespace Book.UI.Invoices.XO
         private DevExpress.XtraReports.UI.XRLabel lbl_Note;
         private DevExpress.XtraReports.UI.XRLabel xrLabel23;
         private DevExpress.XtraReports.UI.XRLabel lbl_ProductInternalDesc;
+        private DevExpress.XtraReports.UI.XRLabel lbl_XOCustomer_Id;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel14;
+        private DevExpress.XtraReports.UI.XRLabel lbl_Customer_Id;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel4;
     }
 }

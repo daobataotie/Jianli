@@ -4895,6 +4895,14 @@
       <DependentUpon>RO1ZYD.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\MPSheader\EditForm_Backup.resx">
+      <DependentUpon>EditForm_Backup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\MPSheader\EditForm_Backup.zh-CHT.resx">
+      <DependentUpon>EditForm_Backup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="produceManager\MRSHeader\SelectMrsHeaderAndDetails.zh-CHS.resx">
       <DependentUpon>SelectMrsHeaderAndDetails.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -5273,6 +5281,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Query\ROInvoiceXOlist.resx">
+      <DependentUpon>ROInvoiceXOlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Query\ROInvoiceXOlist.zh-CHT.resx">
       <DependentUpon>ROInvoiceXOlist.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Query\ROInvoiceXSlistBiao.resx">
@@ -12098,6 +12109,12 @@
     </Compile>
     <Compile Include="produceManager\MPSheader\RO1ZYD.Designer.cs">
       <DependentUpon>RO1ZYD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="produceManager\MPSheader\EditForm_Backup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produceManager\MPSheader\EditForm_Backup.Designer.cs">
+      <DependentUpon>EditForm_Backup.cs</DependentUpon>
     </Compile>
     <Compile Include="produceManager\PCPGOnlineCheck\RoList.cs">
       <SubType>Component</SubType>

@@ -21,7 +21,16 @@ namespace Book.DA.SQLServer
     {
         public IList<Model.PackingListDetail> SelectByHeader(string headerId)
         {
-            return sqlmapper.QueryForList<Model.PackingListDetail>("PackingListDetail.SelectByHeader", headerId);
+            try
+            {
+                return sqlmapper.QueryForList<Model.PackingListDetail>("PackingListDetail.SelectByHeader", headerId);
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message.Contains("int"))
+                    return sqlmapper.QueryForList<Model.PackingListDetail>("PackingListDetail.SelectByHeaderSimple", headerId);
+                return null;
+            }
         }
 
         public void DeleteByHeader(string headerId)

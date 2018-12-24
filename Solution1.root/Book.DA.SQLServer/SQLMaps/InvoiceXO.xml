@@ -276,5 +276,52 @@
       select Currency from InvoiceXO where InvoiceId=#value#
       ]]>
     </select>
+
+    <select id="SelectByMPSDetailId" resultMap="InvoiceXOResultFast" parameterClass="string">
+      <![CDATA[
+      select [InvoiceId],
+				[Employee0Id],
+				[CustomerId],
+				[InvoiceLRTime],
+				[InvoiceGZTime],
+				[InvoiceDate],
+				[InvoiceNote],
+				[InvoiceStatus],
+				[InsertTime],
+				[UpdateTime],
+				[InvoiceTotal],
+				[InvoiceTaxrate],
+				[InvoiceTax],
+				[InvoiceYjrq],
+				[InvoiceHeji],
+				[InvoiceDiscount],
+				[InvoicePayDate],
+				[InvoiceCPBH],
+				[InvoiceKSLB],
+				[InvoiceKLFS],
+				[InvoiceFPBH],
+				[InvoiceKPLS],
+				[InvoiceFPJE],
+				[TaxCaluType],
+				[InvoiceFlag],
+				[InvoiceFPDate],
+				[InvoiceReceiveable],
+				[CustomerInvoiceXOId],
+				[xocustomerId],
+				[InvoiceMPSState],
+				[Employee4Id],
+				[CustomerLotNumber],
+				[IsClose],
+				[AuditState],
+				[AuditEmpId],
+        [IsForeigntrade],
+	      [Currency],
+        [JieAnDate],
+        [CustomerMarks],
+        [IsNotAutoClose],
+        [IsChadan],
+        [DelayTime] from InvoiceXO where InvoiceId = (select InvoiceId from InvoiceXODetail where InvoiceXODetailId = (select InvoiceXODetailId from MPSdetails where MPSdetailsId=#value#))
+      ]]>
+    </select>
   </statements>
 </sqlMap>

@@ -142,6 +142,7 @@
             this.barButtonItem451 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem480 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem481 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem484 = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem56 = new DevExpress.XtraBars.BarSubItem();
             this.barButtonItem259 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem262 = new DevExpress.XtraBars.BarButtonItem();
@@ -644,7 +645,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
-            this.barButtonItem484 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
@@ -2178,6 +2178,13 @@
             this.barButtonItem481.Id = 640;
             this.barButtonItem481.Name = "barButtonItem481";
             this.barButtonItem481.Tag = "Invoices.IP.EditForm";
+            // 
+            // barButtonItem484
+            // 
+            resources.ApplyResources(this.barButtonItem484, "barButtonItem484");
+            this.barButtonItem484.Id = 643;
+            this.barButtonItem484.Name = "barButtonItem484";
+            this.barButtonItem484.Tag = "Invoices.IP.EditFormInvoice";
             // 
             // barSubItem56
             // 
@@ -6104,13 +6111,6 @@
             // helpProvider1
             // 
             resources.ApplyResources(this.helpProvider1, "helpProvider1");
-            // 
-            // barButtonItem484
-            // 
-            resources.ApplyResources(this.barButtonItem484, "barButtonItem484");
-            this.barButtonItem484.Id = 643;
-            this.barButtonItem484.Name = "barButtonItem484";
-            this.barButtonItem484.Tag = "Invoices.IP.EditFormInvoice";
             // 
             // MainForm
             // 

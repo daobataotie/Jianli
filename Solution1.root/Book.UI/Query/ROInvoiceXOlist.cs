@@ -23,7 +23,7 @@ namespace Book.UI.Query
             DateTime end = condition.EndDate;
 
             this.lblCompanyName.Text = BL.Settings.CompanyChineseName;
-            this.lbl_ReportName.Text = Properties.Resources.InvoiceXODetail;
+            this.lbl_ReportName.Text = "客戶訂單明細表";
 
             this.lbl_ReportDate.Text += string.Format("{0} ~ {1}", start.ToString("yyyy-MM-dd"), end.ToString("yyyy/MM/dd"));
 
@@ -40,11 +40,9 @@ namespace Book.UI.Query
             this.TCcpxh.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_ProductName);
             this.TCkhxh.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_CustomerProductName);
             this.TCriqi.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceDate, "{0:yy/MM/dd}");
-            this.TCyjrq.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceYjrq, "{0:yy/MM/dd}");
             this.TCshuliang.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceXODetailQuantity);
-            this.TCInvoiceXODetailBeenQuantity.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceXODetailBeenQuantity);
-            this.TCWeichu.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_WeichuQty);
-            this.TCjinge.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceXODetailMoney, "{0:0.#}");
+            this.TCjinge.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceXODetailMoney, "{0:0.##}");
+            this.TC_TaibiMoney.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_TaibiMoney, "{0:0.##}");
 
             this.TotalQty.Summary.FormatString = "{0:0.#}";
             this.TotalQty.Summary.Func = SummaryFunc.Sum;
@@ -52,6 +50,17 @@ namespace Book.UI.Query
             this.TotalQty.Summary.Running = SummaryRunning.Report;
             this.TotalQty.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceXODetailQuantity);
 
+            this.lbl_TotalMoney.Summary.FormatString = "{0:0.#}";
+            this.lbl_TotalMoney.Summary.Func = SummaryFunc.Sum;
+            this.lbl_TotalMoney.Summary.IgnoreNullValues = true;
+            this.lbl_TotalMoney.Summary.Running = SummaryRunning.Report;
+            this.lbl_TotalMoney.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceXODetailMoney);
+
+            this.lbl_TotalTaibiMoney.Summary.FormatString = "{0:0.#}";
+            this.lbl_TotalTaibiMoney.Summary.Func = SummaryFunc.Sum;
+            this.lbl_TotalTaibiMoney.Summary.IgnoreNullValues = true;
+            this.lbl_TotalTaibiMoney.Summary.Running = SummaryRunning.Report;
+            this.lbl_TotalTaibiMoney.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_TaibiMoney);
         }
     }
 }

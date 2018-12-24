@@ -256,6 +256,9 @@
   <data name="xrLabel10.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
   </data>
+  <data name="xrLabel11.Text" xml:space="preserve">
+    <value>客戶編號:</value>
+  </data>
   <data name="xrLabel5.Text" xml:space="preserve">
     <value>幣         別:</value>
   </data>

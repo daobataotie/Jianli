@@ -311,7 +311,18 @@ namespace Book.BL
 
                             invoiceOriginal.InvoiceStatus = (int)Helper.InvoiceStatus.Null;
                             _TurnNull(invoiceOriginal);
-                            invoiceXODetailAccessor.Delete(invoice);
+
+                            //其他单据引用，不应该删除
+                            try
+                            {
+                                invoiceXODetailAccessor.Delete(invoice);
+                            }
+                            catch
+                            {
+                                throw new Exception(string.Format("商品被其他單據引用，請勿刪除"));
+                            }
+
+
                             this.addUpdateDtail(invoice);
                             EvaInvoiceFlag(invoice); //修改头状态
                             EvaInvoiceMPSFlag(invoice);//修改头计划状态
@@ -459,6 +470,11 @@ namespace Book.BL
         public string GetCurrencyByInvoiceId(string invoiceId)
         {
             return accessor.GetCurrencyByInvoiceId(invoiceId);
+        }
+
+        public Model.InvoiceXO SelectByMPSDetailId(string mpsDetailId)
+        {
+            return accessor.SelectByMPSDetailId(mpsDetailId);
         }
     }
 }
