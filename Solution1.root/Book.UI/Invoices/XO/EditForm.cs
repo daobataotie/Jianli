@@ -351,7 +351,7 @@ namespace Book.UI.Invoices.XO
             this.invoice.InvoiceTotal = decimal.Parse(string.IsNullOrEmpty(this.calcEditInvoiceTotal0xset.Text) ? "0" : this.calcEditInvoiceTotal0xset.Text);
             this.invoice.InvoiceHeji = decimal.Parse(string.IsNullOrEmpty(this.calcEditInvoiceTotalxset.Text) ? "0" : this.calcEditInvoiceTotalxset.Text);
 
-            this.invoice.InvoiceCPBH = this.textEditInvoiceCphm.Text;
+            //this.invoice.InvoiceCPBH = this.textEditInvoiceCphm.Text;
             this.invoice.InvoiceKSLB = this.comboBoxEditInvoiceKslb.Text;
             this.invoice.InvoiceKLFS = this.comboBoxEditInvoiceKlfs.Text;
             this.invoice.InvoiceKPLS = this.comboBoxEditInvoiceFpls.Text;
@@ -891,7 +891,7 @@ namespace Book.UI.Invoices.XO
             this.calcEditInvoiceTotalxset.Text = this.invoice.InvoiceHeji.ToString();
             this.calcEditInvoiceTax1xset.EditValue = string.IsNullOrEmpty(this.invoice.InvoiceTax.ToString()) ? "0" : this.invoice.InvoiceTax.ToString();
             this.spinEditInvoiceTaxRate1.Value = decimal.Parse(this.invoice.InvoiceTaxrate == null ? "5" : this.invoice.InvoiceTaxrate.ToString());
-            this.textEditInvoiceCphm.Text = this.invoice.InvoiceCPBH;
+            //this.textEditInvoiceCphm.Text = this.invoice.InvoiceCPBH;
             this.comboBoxEditInvoiceKslb.Text = this.invoice.InvoiceKSLB;
             this.comboBoxEditInvoiceKlfs.Text = this.invoice.InvoiceKLFS;
             this.comboBoxEditInvoiceFpls.Text = this.invoice.InvoiceKPLS;

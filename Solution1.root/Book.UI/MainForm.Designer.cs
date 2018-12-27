@@ -1291,7 +1291,7 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem59),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.None, false, this.barSubItem61, false),
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem62),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.None, false, this.barSubItem34, false),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem34),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.None, false, this.barSubItem91, false),
             new DevExpress.XtraBars.LinkPersistInfo(this.barEditItem1)});
             this.bar2.OptionsBar.MultiLine = true;
