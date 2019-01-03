@@ -39,7 +39,7 @@ namespace Book.DA.SQLServer
             return sqlmapper.QueryForList<Book.Model.InvoiceXO>("InvoiceXO.select_byYJRQ", DateTime.Now);
         }
 
-        public IList<Book.Model.InvoiceXO> SelectByYJRQCustomEmpCusXOId(Model.Customer customer1, Model.Customer customer2, DateTime startDate, DateTime endDate, DateTime yjrq1, DateTime yjrq2, Model.Employee employee1, Model.Employee employee2, string xoid1, string xoid2, string cusxoidkey, Model.Product product, Model.Product product2, bool isclose, bool mpsIsClose, bool isForeigntrade)
+        public IList<Book.Model.InvoiceXO> SelectByYJRQCustomEmpCusXOId(Model.Customer customer1, Model.Customer customer2, DateTime startDate, DateTime endDate, DateTime yjrq1, DateTime yjrq2, Model.Employee employee1, Model.Employee employee2, string xoid1, string xoid2, string cusxoidkey, Model.Product product, Model.Product product2, bool isclose, bool mpsIsClose, bool isForeigntrade, string product_Id)
         {
             StringBuilder str = new StringBuilder();
             //if (customer1 != null && customer2 != null)
@@ -57,6 +57,8 @@ namespace Book.DA.SQLServer
                 str.Append(" and  CustomerInvoiceXOId like '%" + cusxoidkey + "%' ");
             if (product != null && product2 != null)
                 str.Append(" and InvoiceId in (select invoiceid from invoicexodetail where productid in(select productid from product where productname between '" + product.ProductName + "' and '" + product2.ProductName + "'))  ");
+            if (!string.IsNullOrEmpty(product_Id))
+                str.Append(" and InvoiceId in (select invoiceid from invoicexodetail where productid in(select productid from product where id= '" + product_Id + "'))");
             if (isclose)    //true 时只查询未结案
                 str.Append(" and IsClose=0");
             if (mpsIsClose)  //true 只查询未排完单
@@ -111,7 +113,7 @@ namespace Book.DA.SQLServer
 
         public Model.InvoiceXO SelectByMPSDetailId(string mpsDetailId)
         {
-            return sqlmapper.QueryForObject<Model.InvoiceXO>("InvoiceXO.SelectByMPSDetailId",mpsDetailId);
+            return sqlmapper.QueryForObject<Model.InvoiceXO>("InvoiceXO.SelectByMPSDetailId", mpsDetailId);
         }
 
         #endregion

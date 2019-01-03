@@ -39,7 +39,7 @@ namespace Book.UI.Invoices.XS
 
             //this.bindingSource1.DataSource = ((BL.InvoiceXSManager)this.invoiceManager).SelectDateRangAndWhere(null, null, global::Helper.DateTimeParse.NullDate, global::Helper.DateTimeParse.EndDate, global::Helper.DateTimeParse.NullDate, global::Helper.DateTimeParse.EndDate, InvoiceCusId, null, null, null, null, null, null,null,null);
 
-            this.bindingSource1.DataSource = ((BL.InvoiceXSManager)this.invoiceManager).SelectDateRangAndWhereToTable(null, null, global::Helper.DateTimeParse.NullDate, global::Helper.DateTimeParse.EndDate, global::Helper.DateTimeParse.NullDate, global::Helper.DateTimeParse.EndDate, InvoiceCusId, null, null, null, null, null, null, null, null);
+            this.bindingSource1.DataSource = ((BL.InvoiceXSManager)this.invoiceManager).SelectDateRangAndWhereToTable(null, null, global::Helper.DateTimeParse.NullDate, global::Helper.DateTimeParse.EndDate, global::Helper.DateTimeParse.NullDate, global::Helper.DateTimeParse.EndDate, InvoiceCusId, null, null, null, null, null, null, null, null, null);
 
             this.gridControl1.RefreshDataSource();
         }
@@ -79,7 +79,7 @@ namespace Book.UI.Invoices.XS
                 DataTable dtDetail = new DataTable();
 
                 //this.bindingSource1.DataSource = ((BL.InvoiceXSManager)this.invoiceManager).SelectDateRangAndWhere(con.Customer1, con.Customer2, con.StartDate, con.EndDate, con.Yjri1, con.Yjri2, con.CusXOId, con.Product, con.Product2, con.XOId1, con.XOId2, con.FreightedCompanyId, con.ConveyanceMethodId, con.Employee1, con.Employee2);
-                dtDetail = ((BL.InvoiceXSManager)this.invoiceManager).SelectDateRangAndWhereToTable(con.Customer1, con.Customer2, con.StartDate, con.EndDate, con.Yjri1, con.Yjri2, con.CusXOId, con.Product, con.Product2, con.XOId1, con.XOId2, con.FreightedCompanyId, con.ConveyanceMethodId, con.Employee1, con.Employee2);
+                dtDetail = ((BL.InvoiceXSManager)this.invoiceManager).SelectDateRangAndWhereToTable(con.Customer1, con.Customer2, con.StartDate, con.EndDate, con.Yjri1, con.Yjri2, con.CusXOId, con.Product, con.Product2, con.XOId1, con.XOId2, con.FreightedCompanyId, con.ConveyanceMethodId, con.Employee1, con.Employee2, con.Product_Id);
 
                 if (dtDetail != null || dtDetail.Rows.Count > 0)
                 {

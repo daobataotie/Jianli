@@ -96,6 +96,7 @@
             this.gridColumnVersion = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemSpinEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             this.spe_TaibiTotal = new DevExpress.XtraEditors.SpinEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -150,7 +151,6 @@
             this.layoutControlItem29 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem31 = new DevExpress.XtraLayout.LayoutControlItem();
             this.barButtonItemInvoice = new DevExpress.XtraBars.BarButtonItem();
-            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -443,6 +443,7 @@
             this.spinEditInvoiceTaxRate.Properties.NullValuePrompt = null;
             this.spinEditInvoiceTaxRate.StyleController = this.layoutControl1;
             this.spinEditInvoiceTaxRate.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.spinEditInvoiceTaxRate_ButtonClick);
+            this.spinEditInvoiceTaxRate.EditValueChanged += new System.EventHandler(this.spinEditInvoiceTaxRate_EditValueChanged);
             // 
             // simpleButton_Remove
             // 
@@ -852,6 +853,12 @@
             // 
             resources.ApplyResources(this.gridColumn5, "gridColumn5");
             this.gridColumn5.Name = "gridColumn5";
+            // 
+            // gridColumn6
+            // 
+            resources.ApplyResources(this.gridColumn6, "gridColumn6");
+            this.gridColumn6.FieldName = "ExchangeRate";
+            this.gridColumn6.Name = "gridColumn6";
             // 
             // repositoryItemSpinEdit2
             // 
@@ -1366,12 +1373,6 @@
             this.barButtonItemInvoice.Id = 16;
             this.barButtonItemInvoice.Name = "barButtonItemInvoice";
             this.barButtonItemInvoice.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemInvoice_ItemClick);
-            // 
-            // gridColumn6
-            // 
-            resources.ApplyResources(this.gridColumn6, "gridColumn6");
-            this.gridColumn6.FieldName = "ExchangeRate";
-            this.gridColumn6.Name = "gridColumn6";
             // 
             // EditForm
             // 

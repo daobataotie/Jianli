@@ -81,7 +81,7 @@ namespace Book.UI.Invoices.XO
                 Query.ConditionX condition = f.Condition as Query.ConditionX;
                 //this.bindingSource1.DataSource = ((BL.InvoiceXOManager)this.invoiceManager).SelectByYJRQCustomEmpCusXOId(condition.Customer1, condition.Customer2, condition.StartDate, condition.EndDate, condition.Yjri1, condition.Yjri2, condition.Employee1, condition.Employee2, condition.XOId1, condition.XOId2, condition.CusXOId, condition.Product, condition.Product2, condition.IsClose, false, false);
 
-                this.bindingSource1.DataSource = invoicexoDetailManager.Select(condition.Customer1, condition.Customer2, condition.StartDate, condition.EndDate, condition.Yjri1, condition.Yjri2, condition.Employee1, condition.Employee2, condition.XOId1, condition.XOId2, condition.CusXOId, condition.Product, condition.Product2, condition.IsClose, false, condition.OrderColumn, condition.OrderType, condition.DetailFlag);
+                this.bindingSource1.DataSource = invoicexoDetailManager.Select(condition.Customer1, condition.Customer2, condition.StartDate, condition.EndDate, condition.Yjri1, condition.Yjri2, condition.Employee1, condition.Employee2, condition.XOId1, condition.XOId2, condition.CusXOId, condition.Product, condition.Product2, condition.IsClose, false, condition.OrderColumn, condition.OrderType, condition.DetailFlag, condition.Product_Id);
 
                 this.StartDate = condition.StartDate;
                 this.EndDate = condition.EndDate;

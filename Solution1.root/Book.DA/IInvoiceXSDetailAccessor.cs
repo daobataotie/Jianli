@@ -31,9 +31,9 @@ namespace Book.DA
         IList<Model.InvoiceXSDetail> Selectbyinvoiceidfz(Model.InvoiceXS inovicexs);
         IList<Model.InvoiceXSDetail> SelectByDateRange(DateTime startdate, DateTime enddate);
 
-        IList<Model.InvoiceXSDetail> SelectbyConditionX(DateTime StartDate, DateTime EndDate, DateTime Yjri1, DateTime Yjri2, Model.Customer Customer1, Model.Customer Customer2, string XOId1, string XOId2, Model.Product Product, Model.Product Product2, string CusXOId, int OrderColumn, int OrderType, Model.Employee startEmp, Model.Employee endEmp, string FreightedCompanyId, string ConveyanceMethodId);
+        IList<Model.InvoiceXSDetail> SelectbyConditionX(DateTime StartDate, DateTime EndDate, DateTime Yjri1, DateTime Yjri2, Model.Customer Customer1, Model.Customer Customer2, string XOId1, string XOId2, Model.Product Product, Model.Product Product2, string CusXOId, int OrderColumn, int OrderType, Model.Employee startEmp, Model.Employee endEmp, string FreightedCompanyId, string ConveyanceMethodId, string product_Id);
 
-        System.Data.DataTable SelectbyConditionXBiao(DateTime StartDate, DateTime EndDate, DateTime Yjri1, DateTime Yjri2, Book.Model.Customer Customer1, Book.Model.Customer Customer2, string XOId1, string XOId2, Book.Model.Product Product, Book.Model.Product Product2, string CusXOId, int OrderColumn, int OrderType, bool? isSpecial);
+        System.Data.DataTable SelectbyConditionXBiao(DateTime StartDate, DateTime EndDate, DateTime Yjri1, DateTime Yjri2, Book.Model.Customer Customer1, Book.Model.Customer Customer2, string XOId1, string XOId2, Book.Model.Product Product, Book.Model.Product Product2, string CusXOId, int OrderColumn, int OrderType, bool? isSpecial, string product_Id);
     }
 
 }

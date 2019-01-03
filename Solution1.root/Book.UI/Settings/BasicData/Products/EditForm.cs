@@ -2906,7 +2906,7 @@ namespace Book.UI.Settings.BasicData.Products
             foreach (Model.InvoiceXODetail item in halfwayList)
             {
                 //ixslist = ixsm.SelectDateRangAndWhere(null, this.dateEditxostartdate.DateTime, this.dateEditxoenddate.DateTime, null, item.Product, item.InvoiceId, null, null);
-                ixslist = ixsm.SelectDateRangAndWhere(null, null, this.dateEditxostartdate.DateTime, this.dateEditxoenddate.DateTime, global::Helper.DateTimeParse.NullDate, global::Helper.DateTimeParse.EndDate, null, item.Product, item.Product, item.InvoiceId, item.InvoiceId, null, null, null, null);
+                ixslist = ixsm.SelectDateRangAndWhere(null, null, this.dateEditxostartdate.DateTime, this.dateEditxoenddate.DateTime, global::Helper.DateTimeParse.NullDate, global::Helper.DateTimeParse.EndDate, null, item.Product, item.Product, item.InvoiceId, item.InvoiceId, null, null, null, null, null);
                 item.InvoiceProductUnit = "";
                 foreach (Model.InvoiceXS s in ixslist)
                 {

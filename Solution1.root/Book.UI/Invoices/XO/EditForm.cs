@@ -30,6 +30,7 @@ namespace Book.UI.Invoices.XO
         private Model.InvoiceXO invoice;
         private Model.InvoiceXJ invoicexj;
         private IList<Model.Product> productlook = new List<Model.Product>();
+        private BL.ExchangeRateManager exchangeRateManager = new Book.BL.ExchangeRateManager();
         //设置tag 确定在gridView1_CellValueChanged事件执行后执行gridView1_RowCountChanged中UpdateMoneyFields()
         int tags = 0;
         private const int SISHEWURU_WEISHU = 3;
@@ -398,6 +399,9 @@ namespace Book.UI.Invoices.XO
             this.invoice.IsChadan = this.checkEditChadan.Checked;
             this.invoice.InvoiceYjrqForChadan = this.invoice.InvoiceYjrq;
             this.invoice.DelayTime = 0;
+
+            this.invoice.Exchange = this.spe_TaibiExchangeRate.Value;
+            this.invoice.TaibiMoney = this.spe_TaibiMoney.Value;
 
             //修改未出货数量
             if (this.action == "update")
@@ -931,6 +935,9 @@ namespace Book.UI.Invoices.XO
             this.checkEditIsForeigntrade.Checked = this.invoice.IsForeigntrade.HasValue ? this.invoice.IsForeigntrade.Value : false;
             this.richTextBoxCustomerMarks.Rtf = this.invoice.CustomerMarks;
 
+            this.spe_TaibiExchangeRate.EditValue = this.invoice.Exchange;
+            this.spe_TaibiMoney.EditValue = this.invoice.TaibiMoney;
+
             this.bindingSource1.DataSource = this.invoice.Details;
             this.checkEditChadan.EditValue = this.invoice.IsChadan;
 
@@ -1097,7 +1104,11 @@ namespace Book.UI.Invoices.XO
 
         private void UpdateMoneyFields()
         {
-            decimal yse = 0;//应收额                      
+            decimal yse = 0;//应收额    
+            decimal exchange = 1;
+            decimal taibiMoney = 0;
+            if (!string.IsNullOrEmpty(this.comboBoxEditCurrency.Text))
+                exchange = exchangeRateManager.GetRateByDateAndCurrency(this.dateEditInvoiceDate.DateTime, this.comboBoxEditCurrency.Text);
 
             foreach (Model.InvoiceXODetail detail in this.invoice.Details)
             {
@@ -1115,6 +1126,8 @@ namespace Book.UI.Invoices.XO
                     this.calcEditInvoiceTax1xset.EditValue = 0;
                     this.calcEditInvoiceTotal0xset.EditValue = yse;
                     this.comboBoxEditInvoiceKslb.SelectedIndex = 2;
+
+                    taibiMoney = yse * exchange;
                 }
                 else if (flag == 1)
                 {
@@ -1122,6 +1135,8 @@ namespace Book.UI.Invoices.XO
                     this.calcEditInvoiceTax1xset.EditValue = this.GetDecimal(yse * this.spinEditInvoiceTaxRate1.Value / 100, BL.V.SetDataFormat.XSZJXiao.Value);
                     this.calcEditInvoiceTotal0xset.EditValue = yse + decimal.Parse(this.calcEditInvoiceTax1xset.EditValue.ToString());
                     this.comboBoxEditInvoiceKslb.SelectedIndex = 1;
+
+                    taibiMoney = yse * exchange * (1 + this.spinEditInvoiceTaxRate1.Value / 100);
                 }
                 else
                 {
@@ -1130,6 +1145,9 @@ namespace Book.UI.Invoices.XO
                     this.calcEditInvoiceTax1xset.EditValue = decimal.Parse(this.calcEditInvoiceTotal0xset.EditValue.ToString()) - decimal.Parse(this.calcEditInvoiceTotalxset.EditValue.ToString());
                     this.comboBoxEditInvoiceKslb.SelectedIndex = 0;
                 }
+
+                this.spe_TaibiExchangeRate.EditValue = exchange;
+                this.spe_TaibiMoney.EditValue = taibiMoney;
             }
             spinEditInvoiceFpje.EditValue = this.calcEditInvoiceTotal0xset.EditValue;
             //this.gridControl1.RefreshDataSource();
@@ -1635,6 +1653,8 @@ namespace Book.UI.Invoices.XO
                 this.invoice.InvoiceId = this.invoiceManager.GetIdByMonth(dateEditInvoiceDate.DateTime);
                 this.textEditInvoiceId.Text = this.invoice.InvoiceId;
             }
+
+            this.UpdateMoneyFields();
         }
 
         private void dateEditYJRQ_EditValueChanged(object sender, EventArgs e)
@@ -1647,6 +1667,11 @@ namespace Book.UI.Invoices.XO
                         item.YuJiaoRiqi = dateEditYJRQ.DateTime;
                 }
             }
+        }
+
+        private void comboBoxEditCurrency_EditValueChanged(object sender, EventArgs e)
+        {
+            this.UpdateMoneyFields();
         }
     }
 }

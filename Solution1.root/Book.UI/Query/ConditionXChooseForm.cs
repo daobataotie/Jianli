@@ -101,6 +101,8 @@ namespace Book.UI.Query
             this.condition.ConveyanceMethodId = this.lookUpEdit2.EditValue == null ? null : this.lookUpEdit2.EditValue.ToString();
 
             this.condition.Special = this.checkEditSpecial.Checked;
+
+            this.condition.Product_Id = this.txt_Product_Id.Text;
         }
 
         private void buttonEditPro_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)

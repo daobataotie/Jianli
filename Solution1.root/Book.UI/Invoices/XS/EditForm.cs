@@ -678,7 +678,7 @@ namespace Book.UI.Invoices.XS
 
         private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
-            if (e.Column == this.BeenQuantity || e.Column == this.colDonatetowards || e.Column == this.colInvoiceAllowance || e.Column == this.colInvoiceXSDetailPrice )
+            if (e.Column == this.BeenQuantity || e.Column == this.colDonatetowards || e.Column == this.colInvoiceAllowance || e.Column == this.colInvoiceXSDetailPrice)
             {
                 decimal price = decimal.Zero;
                 decimal quantity = decimal.Zero;
@@ -1156,22 +1156,31 @@ namespace Book.UI.Invoices.XS
                 if (flag == 0)
                 {
                     this.comboBoxEditInvoiceKslb.SelectedIndex = 0;
+
+                    this.calcEditInvoiceHejiset.EditValue = yse;
+                    this.calcEditInvoiceTaxset.EditValue = 0;
+                    this.calcEditInvoiceTotalset.EditValue = this.GetDecimal(yse + decimal.Parse(this.calcEditInvoiceTaxset.EditValue.ToString()) - this.calcInvoiceAllowance.Value + decimal.Parse(this.textEditOtherChargeMoneyset.Text), BL.V.SetDataFormat.XSZJXiao.Value);
                 }
                 else if (flag == 1)
                 {
                     this.comboBoxEditInvoiceKslb.SelectedIndex = 1;
+
+                    this.calcEditInvoiceHejiset.EditValue = yse;
+                    this.calcEditInvoiceTaxset.EditValue = this.GetDecimal(yse * this.spinEditInvoiceTaxRate.Value / 100, BL.V.SetDataFormat.XSZJXiao.Value);
+                    this.calcEditInvoiceTotalset.EditValue = this.GetDecimal(yse + decimal.Parse(this.calcEditInvoiceTaxset.EditValue.ToString()) - this.calcInvoiceAllowance.Value + decimal.Parse(this.textEditOtherChargeMoneyset.Text), BL.V.SetDataFormat.XSZJXiao.Value);
+                    
+
+                    this.spe_TaibiTotal.Text = (totalTaibi * (1 + this.spinEditInvoiceTaxRate.Value / 100)).ToString();
                 }
                 else
                 {
                     this.comboBoxEditInvoiceKslb.SelectedIndex = 2;
                 }
-                this.calcEditInvoiceHejiset.EditValue = yse;
-                this.calcEditInvoiceTaxset.EditValue = this.GetDecimal(yse * this.spinEditInvoiceTaxRate.Value / 100, BL.V.SetDataFormat.XSZJXiao.Value);
-                this.calcEditInvoiceTotalset.EditValue = this.GetDecimal(yse + decimal.Parse(this.calcEditInvoiceTaxset.EditValue.ToString()) - this.calcInvoiceAllowance.Value + decimal.Parse(this.textEditOtherChargeMoneyset.Text), BL.V.SetDataFormat.XSZJXiao.Value);
+                //this.calcEditInvoiceHejiset.EditValue = yse;
+                //this.calcEditInvoiceTaxset.EditValue = this.GetDecimal(yse * this.spinEditInvoiceTaxRate.Value / 100, BL.V.SetDataFormat.XSZJXiao.Value);
+                //this.calcEditInvoiceTotalset.EditValue = this.GetDecimal(yse + decimal.Parse(this.calcEditInvoiceTaxset.EditValue.ToString()) - this.calcInvoiceAllowance.Value + decimal.Parse(this.textEditOtherChargeMoneyset.Text), BL.V.SetDataFormat.XSZJXiao.Value);
 
             }
-
-            this.spe_TaibiTotal.Text = (totalTaibi * (1 + this.spinEditInvoiceTaxRate.Value / 100)).ToString();
         }
 
         private void textEditOtherChargeMoney_EditValueChanged(object sender, EventArgs e)
@@ -1387,6 +1396,51 @@ namespace Book.UI.Invoices.XS
 
             this.gridControl1.RefreshDataSource();
             this.UpdateMoneyFields();
+        }
+
+        private void spinEditInvoiceTaxRate_EditValueChanged(object sender, EventArgs e)
+        {
+            if (this.action != "view")
+            {
+                foreach (Model.InvoiceXSDetail detail in invoice.Details)
+                {
+                    this.textEditInvoiceId.Text.Equals(null);
+                    if (detail.Product == null || string.IsNullOrEmpty(detail.Product.ProductId)) continue;
+                    if (detail.Donatetowards != null && detail.Donatetowards == true) continue;
+                    //if (detail.InvoiceXODetailQuantity == 0 || detail.InvoiceXODetailQuantity == 0) continue;
+                    if (flag == 0)
+                    {
+                        detail.InvoiceXSDetailTaxPrice = 0;
+                        detail.InvoiceXSDetailTax = 0;
+                        detail.InvoiceXSDetailTaxMoney = detail.InvoiceXSDetailMoney;
+                        this.spinEditInvoiceTaxRate.EditValue = 0;
+                    }
+                    if (flag == 1)
+                    {
+                        if (detail.InvoiceXSDetailPrice == null)
+                        {
+                            detail.InvoiceXSDetailPrice = 0;
+                        }
+                        detail.InvoiceXSDetailTaxPrice = 0;
+                        detail.InvoiceXSDetailTax = detail.InvoiceXSDetailPrice.Value * decimal.Parse(detail.InvoiceXSDetailQuantity.ToString()) * decimal.Parse(this.spinEditInvoiceTaxRate.Text) / 100;
+
+                        detail.InvoiceXSDetailTax = this.GetDecimal(detail.InvoiceXSDetailTax.Value, BL.V.SetDataFormat.XSZJXiao.Value);
+
+                        detail.InvoiceXSDetailTaxMoney = detail.InvoiceXSDetailTax + detail.InvoiceXSDetailMoney;
+                    }
+                    else
+                    {
+                        //ÔÝÎ´¿¼ÂÇÄÚº¬Ë°
+                        //detail.InvoiceCODetailPrice = detail.TotalMoney / decimal.Parse(detail.OrderQuantity.ToString()) / decimal.Parse(ta.ToString());
+                    }
+
+                }
+                this.gridControl1.RefreshDataSource();
+                this.spinEditInvoiceTaxRate.Properties.Buttons[1].Enabled = flag == 0 ? false : true;
+                this.spinEditInvoiceTaxRate.Properties.Buttons[2].Enabled = flag == 1 ? false : true;
+                this.spinEditInvoiceTaxRate.Properties.Buttons[3].Enabled = flag == 2 ? false : true;
+                this.UpdateMoneyFields();
+            }
         }
     }
 }

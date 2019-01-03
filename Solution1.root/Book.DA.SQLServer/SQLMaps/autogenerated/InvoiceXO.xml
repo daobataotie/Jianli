@@ -57,6 +57,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="IsChadan" column="IsChadan"/>
       <result property="InvoiceYjrqForChadan" column="InvoiceYjrqForChadan"/>
       <result property ="DelayTime" column="DelayTime"/>
+      <result property="Exchange" column="Exchange"/>
+      <result property="TaibiMoney"  column="TaibiMoney"/>
       <result property="xocustomer" column="xocustomerId" lazyLoad="false" select="Customer.select_SimpleCustomer" />
       <result property="Employee4" column="Employee4Id" lazyLoad="false" select="Employee.select_SimpleEmployee" />
       <result property="AuditEmp" column="AuditEmpId" lazyLoad="false" select="Employee.select_SimpleEmployee" />
@@ -202,7 +204,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [IsNotAutoClose],
         [IsChadan],
         [InvoiceYjrqForChadan],
-        [DelayTime]
+        [DelayTime],
+        [Exchange],
+        [TaibiMoney]
+        
 			FROM
 				[dbo].[InvoiceXO]
 			WHERE
@@ -306,7 +311,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [IsNotAutoClose],
         [IsChadan],
         [InvoiceYjrqForChadan],
-        [DelayTime]
+        [DelayTime],
+        [Exchange],
+        [TaibiMoney]
 			) 
 			VALUES 
 			(
@@ -360,7 +367,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         #IsNotAutoClose#,
         #IsChadan#,
         #InvoiceYjrqForChadan#,
-        #DelayTime#
+        #DelayTime#,
+        #Exchange#,
+        #TaibiMoney#
 			)
              ]]>
     </insert>
@@ -417,7 +426,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [IsNotAutoClose]=#IsNotAutoClose#,
         [IsChadan]=#IsChadan#,
         [InvoiceYjrqForChadan]=#InvoiceYjrqForChadan#,
-        [DelayTime]=#DelayTime#
+        [DelayTime]=#DelayTime#,
+        [Exchange]=#Exchange#,
+        [TaibiMoney]=#TaibiMoney#
 			WHERE
 				[InvoiceId] = #InvoiceId#
                     ]]>

@@ -142,5 +142,7 @@ namespace Book.UI.Query
             get { return _special; }
             set { _special = value; }
         }
+
+        public string Product_Id { get; set; }
     }
 }
