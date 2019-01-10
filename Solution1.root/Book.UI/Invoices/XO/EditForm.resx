@@ -422,6 +422,411 @@
   <data name="xtraTabControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 405</value>
   </data>
+  <data name="spe_TaibiExchangeRate.EditValue" type="System.Decimal, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="spe_TaibiExchangeRate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>643, 62</value>
+  </data>
+  <data name="spe_TaibiExchangeRate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 21</value>
+  </data>
+  <data name="spe_TaibiExchangeRate.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;spe_TaibiExchangeRate.Name" xml:space="preserve">
+    <value>spe_TaibiExchangeRate</value>
+  </data>
+  <data name="&gt;&gt;spe_TaibiExchangeRate.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;spe_TaibiExchangeRate.Parent" xml:space="preserve">
+    <value>layoutControl3</value>
+  </data>
+  <data name="&gt;&gt;spe_TaibiExchangeRate.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="EmpAudit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>643, 87</value>
+  </data>
+  <data name="EmpAudit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 21</value>
+  </data>
+  <data name="EmpAudit.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;EmpAudit.Name" xml:space="preserve">
+    <value>EmpAudit</value>
+  </data>
+  <data name="&gt;&gt;EmpAudit.Type" xml:space="preserve">
+    <value>Book.UI.Invoices.NewChooseContorl, Book.UI, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;EmpAudit.Parent" xml:space="preserve">
+    <value>layoutControl3</value>
+  </data>
+  <data name="&gt;&gt;EmpAudit.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="textEditAuditState.Location" type="System.Drawing.Point, System.Drawing">
+    <value>876, 87</value>
+  </data>
+  <data name="textEditAuditState.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="textEditAuditState.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="textEditAuditState.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="textEditAuditState.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="textEditAuditState.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 23</value>
+  </data>
+  <data name="textEditAuditState.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;textEditAuditState.Name" xml:space="preserve">
+    <value>textEditAuditState</value>
+  </data>
+  <data name="&gt;&gt;textEditAuditState.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;textEditAuditState.Parent" xml:space="preserve">
+    <value>layoutControl3</value>
+  </data>
+  <data name="&gt;&gt;textEditAuditState.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="calcEditInvoiceTax1xset.EditValue" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="calcEditInvoiceTax1xset.Location" type="System.Drawing.Point, System.Drawing">
+    <value>876, 37</value>
+  </data>
+  <data name="calcEditInvoiceTax1xset.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="calcEditInvoiceTax1xset.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="calcEditInvoiceTax1xset.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="calcEditInvoiceTax1xset.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="calcEditInvoiceTax1xset.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 21</value>
+  </data>
+  <data name="calcEditInvoiceTax1xset.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;calcEditInvoiceTax1xset.Name" xml:space="preserve">
+    <value>calcEditInvoiceTax1xset</value>
+  </data>
+  <data name="&gt;&gt;calcEditInvoiceTax1xset.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;calcEditInvoiceTax1xset.Parent" xml:space="preserve">
+    <value>layoutControl3</value>
+  </data>
+  <data name="&gt;&gt;calcEditInvoiceTax1xset.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="textEditNote.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 29</value>
+  </data>
+  <data name="textEditNote.Size" type="System.Drawing.Size, System.Drawing">
+    <value>563, 81</value>
+  </data>
+  <data name="textEditNote.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;textEditNote.Name" xml:space="preserve">
+    <value>textEditNote</value>
+  </data>
+  <data name="&gt;&gt;textEditNote.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.MemoEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;textEditNote.Parent" xml:space="preserve">
+    <value>layoutControl3</value>
+  </data>
+  <data name="&gt;&gt;textEditNote.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="calcEditInvoiceTotalxset.EditValue" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="calcEditInvoiceTotalxset.Location" type="System.Drawing.Point, System.Drawing">
+    <value>643, 12</value>
+  </data>
+  <data name="calcEditInvoiceTotalxset.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="calcEditInvoiceTotalxset.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="calcEditInvoiceTotalxset.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="calcEditInvoiceTotalxset.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="calcEditInvoiceTotalxset.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 21</value>
+  </data>
+  <data name="calcEditInvoiceTotalxset.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;calcEditInvoiceTotalxset.Name" xml:space="preserve">
+    <value>calcEditInvoiceTotalxset</value>
+  </data>
+  <data name="&gt;&gt;calcEditInvoiceTotalxset.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;calcEditInvoiceTotalxset.Parent" xml:space="preserve">
+    <value>layoutControl3</value>
+  </data>
+  <data name="&gt;&gt;calcEditInvoiceTotalxset.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="calcEditInvoiceTotal0xset.EditValue" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="calcEditInvoiceTotal0xset.Location" type="System.Drawing.Point, System.Drawing">
+    <value>643, 37</value>
+  </data>
+  <data name="calcEditInvoiceTotal0xset.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="calcEditInvoiceTotal0xset.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="calcEditInvoiceTotal0xset.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="calcEditInvoiceTotal0xset.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="calcEditInvoiceTotal0xset.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 21</value>
+  </data>
+  <data name="calcEditInvoiceTotal0xset.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;calcEditInvoiceTotal0xset.Name" xml:space="preserve">
+    <value>calcEditInvoiceTotal0xset</value>
+  </data>
+  <data name="&gt;&gt;calcEditInvoiceTotal0xset.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;calcEditInvoiceTotal0xset.Parent" xml:space="preserve">
+    <value>layoutControl3</value>
+  </data>
+  <data name="&gt;&gt;calcEditInvoiceTotal0xset.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="spinEditInvoiceTaxRate1.EditValue" type="System.Decimal, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="spinEditInvoiceTaxRate1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>876, 12</value>
+  </data>
+  <data name="spinEditInvoiceTaxRate1.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="spinEditInvoiceTaxRate1.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
+    <value>Glyph</value>
+  </data>
+  <data name="spinEditInvoiceTaxRate1.Properties.Buttons1" xml:space="preserve">
+    <value>T+</value>
+  </data>
+  <data name="spinEditInvoiceTaxRate1.Properties.Buttons2" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="spinEditInvoiceTaxRate1.Properties.Buttons3" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="spinEditInvoiceTaxRate1.Properties.Buttons4" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="spinEditInvoiceTaxRate1.Properties.Buttons5" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="spinEditInvoiceTaxRate1.Properties.Buttons6" type="DevExpress.XtraEditors.ImageLocation, DevExpress.XtraEditors.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="spinEditInvoiceTaxRate1.Properties.Buttons7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="spinEditInvoiceTaxRate1.Properties.Buttons8" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="spinEditInvoiceTaxRate1.Properties.Buttons9" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
+    <value>Glyph</value>
+  </data>
+  <data name="spinEditInvoiceTaxRate1.Properties.Buttons10" xml:space="preserve">
+    <value>T-</value>
+  </data>
+  <data name="spinEditInvoiceTaxRate1.Properties.Buttons11" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="spinEditInvoiceTaxRate1.Properties.Buttons12" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="spinEditInvoiceTaxRate1.Properties.Buttons13" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="spinEditInvoiceTaxRate1.Properties.Buttons14" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="spinEditInvoiceTaxRate1.Properties.Buttons15" type="DevExpress.XtraEditors.ImageLocation, DevExpress.XtraEditors.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="spinEditInvoiceTaxRate1.Properties.Buttons16" xml:space="preserve">
+    <value />
+  </data>
+  <data name="spinEditInvoiceTaxRate1.Properties.Buttons17" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="spinEditInvoiceTaxRate1.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="spinEditInvoiceTaxRate1.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
+    <value>None</value>
+  </data>
+  <data name="spinEditInvoiceTaxRate1.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="spinEditInvoiceTaxRate1.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="spinEditInvoiceTaxRate1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 21</value>
+  </data>
+  <data name="spinEditInvoiceTaxRate1.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;spinEditInvoiceTaxRate1.Name" xml:space="preserve">
+    <value>spinEditInvoiceTaxRate1</value>
+  </data>
+  <data name="&gt;&gt;spinEditInvoiceTaxRate1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;spinEditInvoiceTaxRate1.Parent" xml:space="preserve">
+    <value>layoutControl3</value>
+  </data>
+  <data name="&gt;&gt;spinEditInvoiceTaxRate1.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="spe_TaibiMoney.EditValue" type="System.Decimal, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="spe_TaibiMoney.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="spe_TaibiMoney.Location" type="System.Drawing.Point, System.Drawing">
+    <value>876, 62</value>
+  </data>
+  <data name="spe_TaibiMoney.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
+    <value>None</value>
+  </data>
+  <data name="spe_TaibiMoney.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 21</value>
+  </data>
+  <data name="spe_TaibiMoney.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;spe_TaibiMoney.Name" xml:space="preserve">
+    <value>spe_TaibiMoney</value>
+  </data>
+  <data name="&gt;&gt;spe_TaibiMoney.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;spe_TaibiMoney.Parent" xml:space="preserve">
+    <value>layoutControl3</value>
+  </data>
+  <data name="&gt;&gt;spe_TaibiMoney.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="layoutControl3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="layoutControl3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="layoutControlGroup3.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlGroup3</value>
+  </data>
+  <data name="layoutControlItem14.CustomizationFormText" xml:space="preserve">
+    <value>合计:</value>
+  </data>
+  <data name="layoutControlItem14.Text" xml:space="preserve">
+    <value>合计:</value>
+  </data>
+  <data name="layoutControlItem16.CustomizationFormText" xml:space="preserve">
+    <value>税额:</value>
+  </data>
+  <data name="layoutControlItem16.Text" xml:space="preserve">
+    <value>税额:</value>
+  </data>
+  <data name="layoutControlItem4.CustomizationFormText" xml:space="preserve">
+    <value>备注:</value>
+  </data>
+  <data name="layoutControlItem4.Text" xml:space="preserve">
+    <value>备注:</value>
+  </data>
+  <data name="layoutControlItem37.CustomizationFormText" xml:space="preserve">
+    <value>审核状态：</value>
+  </data>
+  <data name="layoutControlItem37.Text" xml:space="preserve">
+    <value>审核状态：</value>
+  </data>
+  <data name="layoutControlItem36.CustomizationFormText" xml:space="preserve">
+    <value>审核人：</value>
+  </data>
+  <data name="layoutControlItem36.Text" xml:space="preserve">
+    <value>审核人：</value>
+  </data>
+  <data name="layoutControlItem13.CustomizationFormText" xml:space="preserve">
+    <value>税率:</value>
+  </data>
+  <data name="layoutControlItem13.Text" xml:space="preserve">
+    <value>税率:</value>
+  </data>
+  <data name="layoutControlItem12.CustomizationFormText" xml:space="preserve">
+    <value>总计：</value>
+  </data>
+  <data name="layoutControlItem12.Text" xml:space="preserve">
+    <value>总计：</value>
+  </data>
+  <data name="layoutControlItem27.CustomizationFormText" xml:space="preserve">
+    <value>台幣總額：</value>
+  </data>
+  <data name="layoutControlItem27.Text" xml:space="preserve">
+    <value>台幣總額：</value>
+  </data>
+  <data name="layoutControlItem11.CustomizationFormText" xml:space="preserve">
+    <value>台幣匯率：</value>
+  </data>
+  <data name="layoutControlItem11.Text" xml:space="preserve">
+    <value>匯率：</value>
+  </data>
+  <data name="layoutControlGroup3.Text" xml:space="preserve">
+    <value>layoutControlGroup3</value>
+  </data>
+  <data name="layoutControl3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1054, 122</value>
+  </data>
+  <data name="layoutControl3.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="layoutControl3.Text" xml:space="preserve">
+    <value>layoutControl3</value>
+  </data>
   <data name="&gt;&gt;layoutControl3.Name" xml:space="preserve">
     <value>layoutControl3</value>
   </data>
@@ -1568,417 +1973,6 @@
   </data>
   <data name="&gt;&gt;layoutControl1.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="spe_TaibiExchangeRate.EditValue" type="System.Decimal, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="spe_TaibiExchangeRate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>643, 62</value>
-  </data>
-  <data name="spe_TaibiExchangeRate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 21</value>
-  </data>
-  <data name="spe_TaibiExchangeRate.TabIndex" type="System.Int32, mscorlib">
-    <value>31</value>
-  </data>
-  <data name="&gt;&gt;spe_TaibiExchangeRate.Name" xml:space="preserve">
-    <value>spe_TaibiExchangeRate</value>
-  </data>
-  <data name="&gt;&gt;spe_TaibiExchangeRate.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;spe_TaibiExchangeRate.Parent" xml:space="preserve">
-    <value>layoutControl3</value>
-  </data>
-  <data name="&gt;&gt;spe_TaibiExchangeRate.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="EmpAudit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>643, 87</value>
-  </data>
-  <data name="EmpAudit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 21</value>
-  </data>
-  <data name="EmpAudit.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
-  </data>
-  <data name="&gt;&gt;EmpAudit.Name" xml:space="preserve">
-    <value>EmpAudit</value>
-  </data>
-  <data name="&gt;&gt;EmpAudit.Type" xml:space="preserve">
-    <value>Book.UI.Invoices.NewChooseContorl, Book.UI, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;EmpAudit.Parent" xml:space="preserve">
-    <value>layoutControl3</value>
-  </data>
-  <data name="&gt;&gt;EmpAudit.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="textEditAuditState.Location" type="System.Drawing.Point, System.Drawing">
-    <value>876, 87</value>
-  </data>
-  <data name="textEditAuditState.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="textEditAuditState.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="textEditAuditState.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="textEditAuditState.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="textEditAuditState.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 23</value>
-  </data>
-  <data name="textEditAuditState.TabIndex" type="System.Int32, mscorlib">
-    <value>28</value>
-  </data>
-  <data name="&gt;&gt;textEditAuditState.Name" xml:space="preserve">
-    <value>textEditAuditState</value>
-  </data>
-  <data name="&gt;&gt;textEditAuditState.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;textEditAuditState.Parent" xml:space="preserve">
-    <value>layoutControl3</value>
-  </data>
-  <data name="&gt;&gt;textEditAuditState.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="calcEditInvoiceTax1xset.EditValue" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="calcEditInvoiceTax1xset.Location" type="System.Drawing.Point, System.Drawing">
-    <value>876, 37</value>
-  </data>
-  <data name="calcEditInvoiceTax1xset.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="calcEditInvoiceTax1xset.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="calcEditInvoiceTax1xset.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="calcEditInvoiceTax1xset.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="calcEditInvoiceTax1xset.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 21</value>
-  </data>
-  <data name="calcEditInvoiceTax1xset.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;calcEditInvoiceTax1xset.Name" xml:space="preserve">
-    <value>calcEditInvoiceTax1xset</value>
-  </data>
-  <data name="&gt;&gt;calcEditInvoiceTax1xset.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;calcEditInvoiceTax1xset.Parent" xml:space="preserve">
-    <value>layoutControl3</value>
-  </data>
-  <data name="&gt;&gt;calcEditInvoiceTax1xset.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="textEditNote.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 29</value>
-  </data>
-  <data name="textEditNote.Size" type="System.Drawing.Size, System.Drawing">
-    <value>563, 81</value>
-  </data>
-  <data name="textEditNote.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;textEditNote.Name" xml:space="preserve">
-    <value>textEditNote</value>
-  </data>
-  <data name="&gt;&gt;textEditNote.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.MemoEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;textEditNote.Parent" xml:space="preserve">
-    <value>layoutControl3</value>
-  </data>
-  <data name="&gt;&gt;textEditNote.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="calcEditInvoiceTotalxset.EditValue" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="calcEditInvoiceTotalxset.Location" type="System.Drawing.Point, System.Drawing">
-    <value>643, 12</value>
-  </data>
-  <data name="calcEditInvoiceTotalxset.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="calcEditInvoiceTotalxset.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="calcEditInvoiceTotalxset.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="calcEditInvoiceTotalxset.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="calcEditInvoiceTotalxset.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 21</value>
-  </data>
-  <data name="calcEditInvoiceTotalxset.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;calcEditInvoiceTotalxset.Name" xml:space="preserve">
-    <value>calcEditInvoiceTotalxset</value>
-  </data>
-  <data name="&gt;&gt;calcEditInvoiceTotalxset.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;calcEditInvoiceTotalxset.Parent" xml:space="preserve">
-    <value>layoutControl3</value>
-  </data>
-  <data name="&gt;&gt;calcEditInvoiceTotalxset.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="calcEditInvoiceTotal0xset.EditValue" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="calcEditInvoiceTotal0xset.Location" type="System.Drawing.Point, System.Drawing">
-    <value>643, 37</value>
-  </data>
-  <data name="calcEditInvoiceTotal0xset.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="calcEditInvoiceTotal0xset.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="calcEditInvoiceTotal0xset.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="calcEditInvoiceTotal0xset.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="calcEditInvoiceTotal0xset.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 21</value>
-  </data>
-  <data name="calcEditInvoiceTotal0xset.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;calcEditInvoiceTotal0xset.Name" xml:space="preserve">
-    <value>calcEditInvoiceTotal0xset</value>
-  </data>
-  <data name="&gt;&gt;calcEditInvoiceTotal0xset.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;calcEditInvoiceTotal0xset.Parent" xml:space="preserve">
-    <value>layoutControl3</value>
-  </data>
-  <data name="&gt;&gt;calcEditInvoiceTotal0xset.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="spinEditInvoiceTaxRate1.EditValue" type="System.Decimal, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="spinEditInvoiceTaxRate1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>876, 12</value>
-  </data>
-  <data name="spinEditInvoiceTaxRate1.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="spinEditInvoiceTaxRate1.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
-    <value>Glyph</value>
-  </data>
-  <data name="spinEditInvoiceTaxRate1.Properties.Buttons1" xml:space="preserve">
-    <value>T+</value>
-  </data>
-  <data name="spinEditInvoiceTaxRate1.Properties.Buttons2" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="spinEditInvoiceTaxRate1.Properties.Buttons3" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="spinEditInvoiceTaxRate1.Properties.Buttons4" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="spinEditInvoiceTaxRate1.Properties.Buttons5" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="spinEditInvoiceTaxRate1.Properties.Buttons6" type="DevExpress.XtraEditors.ImageLocation, DevExpress.XtraEditors.v10.2">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="spinEditInvoiceTaxRate1.Properties.Buttons7" xml:space="preserve">
-    <value />
-  </data>
-  <data name="spinEditInvoiceTaxRate1.Properties.Buttons8" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="spinEditInvoiceTaxRate1.Properties.Buttons9" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
-    <value>Glyph</value>
-  </data>
-  <data name="spinEditInvoiceTaxRate1.Properties.Buttons10" xml:space="preserve">
-    <value>T-</value>
-  </data>
-  <data name="spinEditInvoiceTaxRate1.Properties.Buttons11" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="spinEditInvoiceTaxRate1.Properties.Buttons12" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="spinEditInvoiceTaxRate1.Properties.Buttons13" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="spinEditInvoiceTaxRate1.Properties.Buttons14" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="spinEditInvoiceTaxRate1.Properties.Buttons15" type="DevExpress.XtraEditors.ImageLocation, DevExpress.XtraEditors.v10.2">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="spinEditInvoiceTaxRate1.Properties.Buttons16" xml:space="preserve">
-    <value />
-  </data>
-  <data name="spinEditInvoiceTaxRate1.Properties.Buttons17" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="spinEditInvoiceTaxRate1.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="spinEditInvoiceTaxRate1.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>None</value>
-  </data>
-  <data name="spinEditInvoiceTaxRate1.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="spinEditInvoiceTaxRate1.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="spinEditInvoiceTaxRate1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 21</value>
-  </data>
-  <data name="spinEditInvoiceTaxRate1.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;spinEditInvoiceTaxRate1.Name" xml:space="preserve">
-    <value>spinEditInvoiceTaxRate1</value>
-  </data>
-  <data name="&gt;&gt;spinEditInvoiceTaxRate1.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;spinEditInvoiceTaxRate1.Parent" xml:space="preserve">
-    <value>layoutControl3</value>
-  </data>
-  <data name="&gt;&gt;spinEditInvoiceTaxRate1.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="spe_TaibiMoney.Location" type="System.Drawing.Point, System.Drawing">
-    <value>876, 62</value>
-  </data>
-  <data name="txt_TaibiMoney.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>None</value>
-  </data>
-  <data name="spe_TaibiMoney.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 21</value>
-  </data>
-  <data name="spe_TaibiMoney.TabIndex" type="System.Int32, mscorlib">
-    <value>30</value>
-  </data>
-  <data name="&gt;&gt;spe_TaibiMoney.Name" xml:space="preserve">
-    <value>spe_TaibiMoney</value>
-  </data>
-  <data name="&gt;&gt;spe_TaibiMoney.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;spe_TaibiMoney.Parent" xml:space="preserve">
-    <value>layoutControl3</value>
-  </data>
-  <data name="&gt;&gt;spe_TaibiMoney.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="layoutControl3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="layoutControl3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="layoutControlGroup3.CustomizationFormText" xml:space="preserve">
-    <value>layoutControlGroup3</value>
-  </data>
-  <data name="layoutControlGroup3.Text" xml:space="preserve">
-    <value>layoutControlGroup3</value>
-  </data>
-  <data name="layoutControl3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1054, 122</value>
-  </data>
-  <data name="layoutControl3.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="layoutControl3.Text" xml:space="preserve">
-    <value>layoutControl3</value>
-  </data>
-  <data name="&gt;&gt;layoutControl3.Name" xml:space="preserve">
-    <value>layoutControl3</value>
-  </data>
-  <data name="&gt;&gt;layoutControl3.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControl3.Parent" xml:space="preserve">
-    <value>xtraTabPage1</value>
-  </data>
-  <data name="&gt;&gt;layoutControl3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="layoutControlItem14.CustomizationFormText" xml:space="preserve">
-    <value>合计:</value>
-  </data>
-  <data name="layoutControlItem14.Text" xml:space="preserve">
-    <value>合计:</value>
-  </data>
-  <data name="layoutControlItem16.CustomizationFormText" xml:space="preserve">
-    <value>税额:</value>
-  </data>
-  <data name="layoutControlItem16.Text" xml:space="preserve">
-    <value>税额:</value>
-  </data>
-  <data name="layoutControlItem4.CustomizationFormText" xml:space="preserve">
-    <value>备注:</value>
-  </data>
-  <data name="layoutControlItem4.Text" xml:space="preserve">
-    <value>备注:</value>
-  </data>
-  <data name="layoutControlItem37.CustomizationFormText" xml:space="preserve">
-    <value>审核状态：</value>
-  </data>
-  <data name="layoutControlItem37.Text" xml:space="preserve">
-    <value>审核状态：</value>
-  </data>
-  <data name="layoutControlItem36.CustomizationFormText" xml:space="preserve">
-    <value>审核人：</value>
-  </data>
-  <data name="layoutControlItem36.Text" xml:space="preserve">
-    <value>审核人：</value>
-  </data>
-  <data name="layoutControlItem13.CustomizationFormText" xml:space="preserve">
-    <value>税率:</value>
-  </data>
-  <data name="layoutControlItem13.Text" xml:space="preserve">
-    <value>税率:</value>
-  </data>
-  <data name="layoutControlItem12.CustomizationFormText" xml:space="preserve">
-    <value>总计：</value>
-  </data>
-  <data name="layoutControlItem12.Text" xml:space="preserve">
-    <value>总计：</value>
-  </data>
-  <data name="layoutControlItem27.CustomizationFormText" xml:space="preserve">
-    <value>台幣總額：</value>
-  </data>
-  <data name="layoutControlItem27.Text" xml:space="preserve">
-    <value>台幣總額：</value>
-  </data>
-  <data name="layoutControlItem11.CustomizationFormText" xml:space="preserve">
-    <value>台幣匯率：</value>
-  </data>
-  <data name="layoutControlItem11.Text" xml:space="preserve">
-    <value>台幣匯率：</value>
   </data>
   <data name="dateEditFPDate.EditValue" type="System.DateTime, mscorlib">
     <value>2011-02-16</value>

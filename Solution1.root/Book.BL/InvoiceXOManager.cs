@@ -146,15 +146,19 @@ namespace Book.BL
             //{
             //    throw new Helper.RequireValueException("Details");
             //}
-            if (string.IsNullOrEmpty(invoice.Currency))
-                throw new Helper.RequireValueException(Model.InvoiceXO.PRO_Currency);
 
-            foreach (Model.InvoiceXODetail detail in invoice.Details)
+            if (invoice.InvoiceStatus != (int)Helper.InvoiceStatus.Null) //删除单据时不验证
             {
-                if (detail.IsConfirmed != true)
-                    throw new Helper.RequireValueException("Customer");
-                if (detail.InvoiceXODetailQuantity == 0)
-                    throw new Helper.RequireValueException("quantity");
+                if (string.IsNullOrEmpty(invoice.Currency))
+                    throw new Helper.RequireValueException(Model.InvoiceXO.PRO_Currency);
+
+                foreach (Model.InvoiceXODetail detail in invoice.Details)
+                {
+                    if (detail.IsConfirmed != true)
+                        throw new Helper.RequireValueException("Customer");
+                    if (detail.InvoiceXODetailQuantity == 0)
+                        throw new Helper.RequireValueException("quantity");
+                }
             }
         }
 

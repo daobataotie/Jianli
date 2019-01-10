@@ -1673,5 +1673,11 @@ namespace Book.UI.Invoices.XO
         {
             this.UpdateMoneyFields();
         }
+
+        private void spe_TaibiExchangeRate_EditValueChanged(object sender, EventArgs e)
+        {
+            if (this.action != "view")
+                this.spe_TaibiMoney.EditValue = this.spe_TaibiExchangeRate.Value * Convert.ToDecimal(calcEditInvoiceTotal0xset.EditValue.ToString());
+        }
     }
 }

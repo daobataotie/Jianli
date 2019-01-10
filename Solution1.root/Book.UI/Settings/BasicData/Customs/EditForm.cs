@@ -454,7 +454,8 @@ namespace Book.UI.Settings.BasicData.Customs
 
         protected override DevExpress.XtraReports.UI.XtraReport GetReport()
         {
-            return new ROCustomer(this._customer);
+            //return new ROCustomer(this._customer);
+            return new ROCustomerNew(this._customer);
         }
         #endregion
 

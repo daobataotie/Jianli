@@ -348,7 +348,7 @@ namespace Book.BL
         }
 
         public void Update(Model.Invoice invoice)
-        {
+         {
             _ValidateForUpdate(invoice);
 
             try

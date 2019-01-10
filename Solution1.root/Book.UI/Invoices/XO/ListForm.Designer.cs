@@ -36,14 +36,15 @@ namespace Book.UI.Invoices.XO
             this.colCompanyId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu2)).BeginInit();
@@ -84,6 +85,7 @@ namespace Book.UI.Invoices.XO
             this.gridColumn2,
             this.gridColumn8,
             this.gridColumn3,
+            this.gridColumn9,
             this.gridColumn4,
             this.gridColumn5,
             this.gridColumn6,
@@ -139,11 +141,23 @@ namespace Book.UI.Invoices.XO
             this.gridColumn2.FieldName = "InvoiceYjrq";
             this.gridColumn2.Name = "gridColumn2";
             // 
+            // gridColumn8
+            // 
+            resources.ApplyResources(this.gridColumn8, "gridColumn8");
+            this.gridColumn8.FieldName = "ProId";
+            this.gridColumn8.Name = "gridColumn8";
+            // 
             // gridColumn3
             // 
             resources.ApplyResources(this.gridColumn3, "gridColumn3");
             this.gridColumn3.FieldName = "ProductName";
             this.gridColumn3.Name = "gridColumn3";
+            // 
+            // gridColumn9
+            // 
+            resources.ApplyResources(this.gridColumn9, "gridColumn9");
+            this.gridColumn9.FieldName = "InternalDescription";
+            this.gridColumn9.Name = "gridColumn9";
             // 
             // gridColumn4
             // 
@@ -183,12 +197,6 @@ namespace Book.UI.Invoices.XO
             this.barButtonItem1.Tag = "ToXS";
             this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
-            // gridColumn8
-            // 
-            resources.ApplyResources(this.gridColumn8, "gridColumn8");
-            this.gridColumn8.FieldName = "ProId";
-            this.gridColumn8.Name = "gridColumn8";
-            // 
             // ListForm
             // 
             resources.ApplyResources(this, "$this");
@@ -224,5 +232,6 @@ namespace Book.UI.Invoices.XO
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
     }
 }

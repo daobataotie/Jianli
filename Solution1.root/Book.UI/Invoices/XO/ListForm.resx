@@ -123,6 +123,9 @@
   <metadata name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>149, 17</value>
   </metadata>
+  <data name="barButtonItem1.Caption" xml:space="preserve">
+    <value>生成销售出货单</value>
+  </data>
   <metadata name="popupMenu2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -145,7 +148,7 @@
     <value>0</value>
   </data>
   <data name="colInvoiceId.Caption" xml:space="preserve">
-    <value>单据编号</value>
+    <value>建利订单</value>
   </data>
   <data name="colInvoiceId.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -154,7 +157,7 @@
     <value>1</value>
   </data>
   <data name="colInvoiceId.Width" type="System.Int32, mscorlib">
-    <value>81</value>
+    <value>83</value>
   </data>
   <data name="colCompanyId.Caption" xml:space="preserve">
     <value>客戶</value>
@@ -202,7 +205,7 @@
     <value>5</value>
   </data>
   <data name="gridColumn8.Width" type="System.Int32, mscorlib">
-    <value>102</value>
+    <value>94</value>
   </data>
   <data name="gridColumn3.Caption" xml:space="preserve">
     <value>商品名稱</value>
@@ -214,7 +217,19 @@
     <value>6</value>
   </data>
   <data name="gridColumn3.Width" type="System.Int32, mscorlib">
-    <value>122</value>
+    <value>176</value>
+  </data>
+  <data name="gridColumn9.Caption" xml:space="preserve">
+    <value>內部描述</value>
+  </data>
+  <data name="gridColumn9.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn9.VisibleIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="gridColumn9.Width" type="System.Int32, mscorlib">
+    <value>120</value>
   </data>
   <data name="gridColumn4.Caption" xml:space="preserve">
     <value>客戶貨品名稱</value>
@@ -223,7 +238,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn4.VisibleIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="gridColumn4.Width" type="System.Int32, mscorlib">
     <value>109</value>
@@ -235,7 +250,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn5.VisibleIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="gridColumn5.Width" type="System.Int32, mscorlib">
     <value>50</value>
@@ -247,7 +262,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn6.VisibleIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="gridColumn6.Width" type="System.Int32, mscorlib">
     <value>52</value>
@@ -259,7 +274,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn7.VisibleIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="gridColumn7.Width" type="System.Int32, mscorlib">
     <value>47</value>
@@ -268,7 +283,7 @@
     <value>False</value>
   </data>
   <data name="gridControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>792, 362</value>
+    <value>841, 362</value>
   </data>
   <data name="gridControl1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -285,9 +300,6 @@
   <data name="&gt;&gt;gridControl1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="barButtonItem1.Caption" xml:space="preserve">
-    <value>生成销售出货单</value>
-  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -295,7 +307,7 @@
     <value>7, 14</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>792, 437</value>
+    <value>841, 437</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>单据一览 - 销售订单</value>
@@ -366,10 +378,22 @@
   <data name="&gt;&gt;gridColumn2.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;gridColumn8.Name" xml:space="preserve">
+    <value>gridColumn8</value>
+  </data>
+  <data name="&gt;&gt;gridColumn8.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;gridColumn3.Name" xml:space="preserve">
     <value>gridColumn3</value>
   </data>
   <data name="&gt;&gt;gridColumn3.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn9.Name" xml:space="preserve">
+    <value>gridColumn9</value>
+  </data>
+  <data name="&gt;&gt;gridColumn9.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;gridColumn4.Name" xml:space="preserve">
@@ -407,12 +431,6 @@
   </data>
   <data name="&gt;&gt;barButtonItem1.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;gridColumn8.Name" xml:space="preserve">
-    <value>gridColumn8</value>
-  </data>
-  <data name="&gt;&gt;gridColumn8.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>ListForm</value>

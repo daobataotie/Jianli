@@ -343,8 +343,7 @@ namespace Book.UI.Invoices.IP
                         this.packingInvoiceHeader.Details.Add(detail);
                     }
 
-                    this.bindingSourceDetail.DataSource = this.packingInvoiceHeader.Details;
-                    this.gridControl3.RefreshDataSource();
+                    CombineSameItem();
                 }
             }
         }
@@ -380,10 +379,30 @@ namespace Book.UI.Invoices.IP
                         packingInvoiceDetail.InvoiceXODetailId = detail.InvoiceXODetailId;
 
                         this.packingInvoiceHeader.Details.Add(packingInvoiceDetail);
-                        this.gridControl3.RefreshDataSource();
                     }
+
+                    this.CombineSameItem();
                 }
             }
+        }
+
+        private void CombineSameItem()
+        {
+            //相同订单号，相同商品合并为一条
+            List<Model.PackingInvoiceDetail> list = new List<Book.Model.PackingInvoiceDetail>();
+            var group = this.packingInvoiceHeader.Details.GroupBy(d => new { d.ProductId, d.PONo });
+            foreach (var item in group)
+            {
+                Model.PackingInvoiceDetail model = item.First();
+                model.Quantity = item.Sum(d => d.Quantity);
+                model.Amount = model.Quantity * model.UnitPrice;
+
+                list.Add(model);
+            }
+            this.packingInvoiceHeader.Details = list;
+
+            this.bindingSourceDetail.DataSource = this.packingInvoiceHeader.Details;
+            this.gridControl3.RefreshDataSource();
         }
 
         private void btn_Remove_Click(object sender, EventArgs e)

@@ -119,11 +119,11 @@ namespace Book.BL
             if (model.InvoiceDate == null)
                 throw new Helper.RequireValueException(Model.PackingInvoiceHeader.PRO_InvoiceDate);
 
-            foreach (var item in model.Details)
-            {
-                if (string.IsNullOrEmpty(item.Number))
-                    throw new Helper.RequireValueException(Model.PackingInvoiceDetail.PRO_Number);
-            }
+            //foreach (var item in model.Details)
+            //{
+            //    if (string.IsNullOrEmpty(item.Number))
+            //        throw new Helper.RequireValueException(Model.PackingInvoiceDetail.PRO_Number);
+            //}
         }
 
         public Book.Model.PackingInvoiceHeader GetDetail(string invoiceNo)

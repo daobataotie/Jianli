@@ -97,6 +97,8 @@ namespace Book.Model
 
         public double TaibiMoney { get; set; }
 
+        public string InternalDescription { get; set; }
+
         public readonly static string PRO_InvoiceDate = "InvoiceDate";
 
         public readonly static string PRO_InvoiceYjrq = "InvoiceYjrq";

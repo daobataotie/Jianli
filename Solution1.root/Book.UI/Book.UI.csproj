@@ -8126,6 +8126,9 @@
       <DependentUpon>ROCustomer.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Settings\BasicData\Customs\ROCustomerNew.resx">
+      <DependentUpon>ROCustomerNew.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Customs\ROCustomerProductPrice.resx">
       <DependentUpon>ROCustomerProductPrice.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -13093,6 +13096,12 @@
     </Compile>
     <Compile Include="Settings\BasicData\Customs\ROCustomer.Designer.cs">
       <DependentUpon>ROCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\BasicData\Customs\ROCustomerNew.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Settings\BasicData\Customs\ROCustomerNew.Designer.cs">
+      <DependentUpon>ROCustomerNew.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings\BasicData\Customs\ROCustomerProductPrice.cs">
       <SubType>Component</SubType>
