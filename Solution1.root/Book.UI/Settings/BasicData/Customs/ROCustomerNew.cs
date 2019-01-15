@@ -13,6 +13,7 @@ namespace Book.UI.Settings.BasicData.Customs
             InitializeComponent();
 
             this.TCCustomerId.Text = customer.Id;
+            this.TCArea.Text = customer.AreaCategory == null ? "" : customer.AreaCategory.AreaCategoryName;
             this.TCShotName.Text = customer.CustomerShortName;
             this.TCFullName.Text = customer.CustomerFullName;
             this.TCTongyibianhao.Text = customer.CustomerNumber;

@@ -49,7 +49,7 @@ namespace Book.UI.Settings.BasicData.Customs
             this.invalidValueExceptions.Add(Model.Customer.PRO_CustomerShortName, new AA(Properties.Resources.CustomerShortName, this.CustomerShortNameTextEdit));
             //this.invalidValueExceptions.Add(Model.CustomerMarks.PRO_CustomerMarksId, new AA(Properties.Resources.EntityExists, this.gridControl3));
             //客户分类,地区分类，行业分类
-            //this.newChooseContorlArea.Choose = new BasicData.AreaCategory.ChooseAreaCategory();
+            this.ncc_Area.Choose = new BasicData.AreaCategory.ChooseAreaCategory();
             //this.newChooseContorlCategoryCustom.Choose = new BasicData.CustomerCategory.ChooseCustomerCategory();
             //this.newChooseContorlTrade.Choose = new BasicData.TradeCategory.ChooseTradeCategory();            
             this.action = "view";
@@ -182,6 +182,8 @@ namespace Book.UI.Settings.BasicData.Customs
             this._customer.TradingCondition = this.txt_TradingCondition.Text;
             this._customer.PayCondition = this.txt_PayCondition.Text;
 
+            this._customer.AreaCategory = this.ncc_Area.EditValue as Model.AreaCategory;
+            this._customer.AreaCategoryId = this.ncc_Area.EditValue == null ? null : (this.ncc_Area.EditValue as Model.AreaCategory).AreaCategoryId;
 
             switch (this.action)
             {
@@ -319,6 +321,8 @@ namespace Book.UI.Settings.BasicData.Customs
             //2018年10月11日22:51:05
             this.txt_TradingCondition.Text = this._customer.TradingCondition;
             this.txt_PayCondition.Text = this._customer.PayCondition;
+
+            this.ncc_Area.EditValue = this._customer.AreaCategory;
 
             //this._customer.Marks = this.customerMarksManager.SelectByCustomerId(this._customer.CustomerId);
             //this.bindingSourceCustomerMarks.DataSource = this._customer.Marks;

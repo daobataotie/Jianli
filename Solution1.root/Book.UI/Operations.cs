@@ -752,6 +752,9 @@ namespace Book.UI
 
             //Packing Invoice
             operations.Add("Invoices.IP.EditFormInvoice", (D1)delegate(System.Windows.Forms.Form form) { M1("Invoices.IP.EditFormInvoice", form); });
+
+            //Ö^”Ú‘O÷√
+            operations.Add("Settings.BasicData.AreaCategory.EditForm", (D1)delegate(System.Windows.Forms.Form form) { M1("Settings.BasicData.AreaCategory.EditForm", form); });
         }
 
         static Form CreateForm(string formTypeName)

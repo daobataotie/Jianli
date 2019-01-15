@@ -428,6 +428,27 @@
   <data name="xtraTabControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="ncc_Area.Location" type="System.Drawing.Point, System.Drawing">
+    <value>289, 12</value>
+  </data>
+  <data name="ncc_Area.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 21</value>
+  </data>
+  <data name="ncc_Area.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;ncc_Area.Name" xml:space="preserve">
+    <value>ncc_Area</value>
+  </data>
+  <data name="&gt;&gt;ncc_Area.Type" xml:space="preserve">
+    <value>Book.UI.Invoices.NewChooseContorl, Book.UI, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ncc_Area.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;ncc_Area.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="txt_PayCondition.Location" type="System.Drawing.Point, System.Drawing">
     <value>289, 137</value>
   </data>
@@ -447,7 +468,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_PayCondition.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="txt_TradingCondition.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 137</value>
@@ -468,7 +489,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_TradingCondition.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="textEditContact.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -504,7 +525,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;textEditContact.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="CompanyDescriptionMemoEdit.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 287</value>
@@ -528,7 +549,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;CompanyDescriptionMemoEdit.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="comboBoxEditCompanyLevel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -558,7 +579,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;comboBoxEditCompanyLevel.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="spinEditCompanyPayDate.EditValue" type="System.Decimal, mscorlib">
     <value>1</value>
@@ -604,7 +625,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;spinEditCompanyPayDate.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="textEditCompanyEMail.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 187</value>
@@ -637,7 +658,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;textEditCompanyEMail.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="textEditCompanyPhone.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 87</value>
@@ -670,7 +691,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;textEditCompanyPhone.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="CompanyAddressTextEdit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -706,7 +727,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;CompanyAddressTextEdit.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="CustomerFullNameTextEdit.Location" type="System.Drawing.Point, System.Drawing">
     <value>289, 37</value>
@@ -739,7 +760,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;CustomerFullNameTextEdit.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="textEditCompanyJinChuAddress.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -775,7 +796,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;textEditCompanyJinChuAddress.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="checkEditSongHuoTongDengji.Location" type="System.Drawing.Point, System.Drawing">
     <value>352, 237</value>
@@ -802,7 +823,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;checkEditSongHuoTongDengji.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="dateEditCompanyExchangeDay.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -862,7 +883,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;dateEditCompanyExchangeDay.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="CompanyFaxTextEdit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>Off</value>
@@ -898,7 +919,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;CompanyFaxTextEdit.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="textEditCompanyWebSiteAddress.EditValue" xml:space="preserve">
     <value>http://</value>
@@ -937,7 +958,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;textEditCompanyWebSiteAddress.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="textEditCompanyManager.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -973,7 +994,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;textEditCompanyManager.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>20</value>
   </data>
   <data name="textEditCompanyNumber.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>Off</value>
@@ -1009,7 +1030,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;textEditCompanyNumber.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>21</value>
   </data>
   <data name="CustomerShortNameTextEdit.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 62</value>
@@ -1042,7 +1063,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;CustomerShortNameTextEdit.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>22</value>
   </data>
   <data name="CompanyIdTextEdit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1078,7 +1099,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;CompanyIdTextEdit.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>23</value>
   </data>
   <data name="textEditCompanyMobile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>Off</value>
@@ -1114,7 +1135,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;textEditCompanyMobile.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>24</value>
   </data>
   <data name="layoutControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1218,12 +1239,6 @@
   <data name="layoutControlItem1.Text" xml:space="preserve">
     <value>客户编号:</value>
   </data>
-  <data name="emptySpaceItem2.CustomizationFormText" xml:space="preserve">
-    <value>emptySpaceItem2</value>
-  </data>
-  <data name="emptySpaceItem2.Text" xml:space="preserve">
-    <value>emptySpaceItem2</value>
-  </data>
   <data name="layoutControlItem6.CustomizationFormText" xml:space="preserve">
     <value>客户描述：</value>
   </data>
@@ -1259,6 +1274,12 @@
   </data>
   <data name="layoutControlItem16.Text" xml:space="preserve">
     <value>付款条件：</value>
+  </data>
+  <data name="layoutControlItem37.CustomizationFormText" xml:space="preserve">
+    <value>區域：</value>
+  </data>
+  <data name="layoutControlItem37.Text" xml:space="preserve">
+    <value>區域：</value>
   </data>
   <data name="layoutControlGroup2.Text" xml:space="preserve">
     <value>Root</value>
@@ -2235,12 +2256,6 @@
   <data name="&gt;&gt;layoutControlItem1.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;emptySpaceItem2.Name" xml:space="preserve">
-    <value>emptySpaceItem2</value>
-  </data>
-  <data name="&gt;&gt;emptySpaceItem2.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;layoutControlItem6.Name" xml:space="preserve">
     <value>layoutControlItem6</value>
   </data>
@@ -2455,6 +2470,12 @@
     <value>layoutControlItem3</value>
   </data>
   <data name="&gt;&gt;layoutControlItem3.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem37.Name" xml:space="preserve">
+    <value>layoutControlItem37</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem37.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

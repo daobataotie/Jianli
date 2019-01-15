@@ -77,7 +77,6 @@ namespace Book.UI.Settings.BasicData.Customs
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem24 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -133,6 +132,8 @@ namespace Book.UI.Settings.BasicData.Customs
             this.bindingSourceCustomerMarks = new System.Windows.Forms.BindingSource(this.components);
             this.btn_Search = new DevExpress.XtraBars.BarButtonItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ncc_Area = new Book.UI.Invoices.NewChooseContorl();
+            this.layoutControlItem37 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -181,7 +182,6 @@ namespace Book.UI.Settings.BasicData.Customs
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
@@ -225,6 +225,7 @@ namespace Book.UI.Settings.BasicData.Customs
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCustomerMarks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).BeginInit();
             this.SuspendLayout();
             // 
             // imageCollection1
@@ -322,6 +323,7 @@ namespace Book.UI.Settings.BasicData.Customs
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.ncc_Area);
             this.layoutControl1.Controls.Add(this.txt_PayCondition);
             this.layoutControl1.Controls.Add(this.txt_TradingCondition);
             this.layoutControl1.Controls.Add(this.textEditContact);
@@ -622,13 +624,13 @@ namespace Book.UI.Settings.BasicData.Customs
             this.layoutControlItem12,
             this.layoutControlItem24,
             this.layoutControlItem1,
-            this.emptySpaceItem2,
             this.layoutControlItem6,
             this.layoutControlItem7,
             this.layoutControlItem13,
             this.layoutControlItem9,
             this.layoutControlItem5,
-            this.layoutControlItem16});
+            this.layoutControlItem16,
+            this.layoutControlItem37});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "Root";
             this.layoutControlGroup2.Size = new System.Drawing.Size(455, 369);
@@ -767,14 +769,6 @@ namespace Book.UI.Settings.BasicData.Customs
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(209, 25);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(64, 14);
-            // 
-            // emptySpaceItem2
-            // 
-            resources.ApplyResources(this.emptySpaceItem2, "emptySpaceItem2");
-            this.emptySpaceItem2.Location = new System.Drawing.Point(209, 0);
-            this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(226, 25);
-            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem6
             // 
@@ -1275,6 +1269,21 @@ namespace Book.UI.Settings.BasicData.Customs
             this.layoutControlItem3.TextSize = new System.Drawing.Size(64, 14);
             this.layoutControlItem3.TextToControlDistance = 5;
             // 
+            // ncc_Area
+            // 
+            this.ncc_Area.EditValue = null;
+            resources.ApplyResources(this.ncc_Area, "ncc_Area");
+            this.ncc_Area.Name = "ncc_Area";
+            // 
+            // layoutControlItem37
+            // 
+            this.layoutControlItem37.Control = this.ncc_Area;
+            resources.ApplyResources(this.layoutControlItem37, "layoutControlItem37");
+            this.layoutControlItem37.Location = new System.Drawing.Point(209, 0);
+            this.layoutControlItem37.Name = "layoutControlItem37";
+            this.layoutControlItem37.Size = new System.Drawing.Size(226, 25);
+            this.layoutControlItem37.TextSize = new System.Drawing.Size(64, 14);
+            // 
             // EditForm
             // 
             resources.ApplyResources(this, "$this");
@@ -1333,7 +1342,6 @@ namespace Book.UI.Settings.BasicData.Customs
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
@@ -1377,6 +1385,7 @@ namespace Book.UI.Settings.BasicData.Customs
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCustomerMarks)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1464,7 +1473,6 @@ namespace Book.UI.Settings.BasicData.Customs
         private System.Windows.Forms.BindingSource bindingSourceCustom;
         private DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit repositoryItemHyperLinkEdit1;
         private DevExpress.XtraBars.BarButtonItem btn_Search;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
         private System.Windows.Forms.RichTextBox CompanyDescriptionMemoEdit;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraEditors.TextEdit textEditContact;
@@ -1484,7 +1492,9 @@ namespace Book.UI.Settings.BasicData.Customs
         private DevExpress.XtraEditors.TextEdit txt_PayCondition;
         private DevExpress.XtraEditors.TextEdit txt_TradingCondition;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16; 
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16;
+        private Book.UI.Invoices.NewChooseContorl ncc_Area;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem37; 
 
     }
 }

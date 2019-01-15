@@ -38,14 +38,14 @@ namespace Book.UI.Settings.BasicData.AreaCategory
 
             this.invalidValueExceptions.Add(Model.AreaCategory.PROPERTY_ID, new AA(Properties.Resources.EntityExists, this.textEditAreaCategoryId));
             this.invalidValueExceptions.Add("DeleteError", new AA(Properties.Resources.DeleteError, this));
-           
+
         }
 
         #region Override
 
         protected override void AddNew()
         {
-            this._areaCategory = new Model.AreaCategory();            
+            this._areaCategory = new Model.AreaCategory();
         }
 
         protected override void Delete()
@@ -79,7 +79,7 @@ namespace Book.UI.Settings.BasicData.AreaCategory
 
         protected override void IMECtrl()
         {
-            Book.UI.Tools.IMEControl.IMECtrl(new Control[] { this, this.textEditAreaCategoryId, this.textEditAreaCategoryName,this.memoEditDescription });
+            Book.UI.Tools.IMEControl.IMECtrl(new Control[] { this, this.textEditAreaCategoryId, this.textEditAreaCategoryName, this.memoEditDescription });
         }
 
         protected override void MoveFirst()
@@ -121,8 +121,8 @@ namespace Book.UI.Settings.BasicData.AreaCategory
 
             this.bindingSourceAreaCategory.DataSource = this.areaCategoryManager.Select();
 
-            this.textEditAreaCategoryId.EditValue = string.IsNullOrEmpty(this._areaCategory.Id) ? this._areaCategory.AreaCategoryId : this._areaCategory.Id;
-            this.textEditAreaCategoryName.EditValue = this._areaCategory.AreaCategoryName;      
+            this.textEditAreaCategoryId.EditValue = this._areaCategory.Id;
+            this.textEditAreaCategoryName.EditValue = this._areaCategory.AreaCategoryName;
 
             this.memoEditDescription.Text = this._areaCategory.Description;
 
@@ -134,7 +134,7 @@ namespace Book.UI.Settings.BasicData.AreaCategory
                     this.memoEditDescription.Properties.ReadOnly = false;
                     break;
 
-                case "update":                   
+                case "update":
                     this.textEditAreaCategoryId.Properties.ReadOnly = false;
                     this.textEditAreaCategoryName.Properties.ReadOnly = false;
                     this.memoEditDescription.Properties.ReadOnly = false;
