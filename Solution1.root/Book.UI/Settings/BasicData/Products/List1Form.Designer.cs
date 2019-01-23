@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(List1Form));
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -58,6 +58,7 @@
             this.gridColumn22 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn24 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn25 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
@@ -119,7 +120,8 @@
             this.gridColumn20,
             this.gridColumn21,
             this.gridColumn22,
-            this.gridColumn24});
+            this.gridColumn24,
+            this.gridColumn25});
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsFind.AlwaysVisible = true;
             this.gridView1.OptionsView.ColumnAutoWidth = false;
@@ -294,6 +296,12 @@
             this.gridColumn24.FieldName = "CustomerId";
             this.gridColumn24.Name = "gridColumn24";
             // 
+            // gridColumn25
+            // 
+            resources.ApplyResources(this.gridColumn25, "gridColumn25");
+            this.gridColumn25.FieldName = "InternalDescription";
+            this.gridColumn25.Name = "gridColumn25";
+            // 
             // List1Form
             // 
             resources.ApplyResources(this, "$this");
@@ -343,5 +351,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn22;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn23;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn24;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn25;
     }
 }

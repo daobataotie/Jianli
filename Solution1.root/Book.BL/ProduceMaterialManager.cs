@@ -59,6 +59,16 @@ namespace Book.BL
 
                     produceMaterialdetails.Product.ProduceMaterialDistributioned = (produceMaterialdetails.Product.ProduceMaterialDistributioned == null ? 0 : produceMaterialdetails.Product.ProduceMaterialDistributioned) - (produceMaterialdetails.Materialprocessum == null ? 0 : produceMaterialdetails.Materialprocessum) + (produceMaterialdetails.Materialprocesedsum == null ? 0 : produceMaterialdetails.Materialprocesedsum);
                     productManager.update(produceMaterialdetails.Product);
+
+
+                    //更新该单据之后单据的已分配量
+                    IList<Model.ProduceMaterialdetails> pdlist = ProduceMaterialdetailsAccessor.SelectForDistributioned(produceMaterialdetails.ProductId, produceMaterialdetails.ProduceMaterial.InsertTime.Value);
+                    foreach (var item in pdlist)
+                    {
+                        item.Distributioned = Convert.ToDouble(item.Distributioned) - Convert.ToDouble(produceMaterialdetails.Materialprocessum) + Convert.ToDouble(produceMaterialdetails.Materialprocesedsum);
+                        item.Distributioned = item.Distributioned < 0 ? 0 : item.Distributioned;
+                        ProduceMaterialdetailsAccessor.Update(item);
+                    }
                 }
                 this.Delete(produceMaterial.ProduceMaterialID);
                 BL.V.CommitTransaction();
@@ -167,6 +177,16 @@ namespace Book.BL
 
                     produceMaterialdetails.Product.ProduceMaterialDistributioned = (produceMaterialdetails.Product.ProduceMaterialDistributioned == null ? 0 : produceMaterialdetails.Product.ProduceMaterialDistributioned) - (produceMaterialdetails.Materialprocessum == null ? 0 : produceMaterialdetails.Materialprocessum) + (produceMaterialdetails.Materialprocesedsum == null ? 0 : produceMaterialdetails.Materialprocesedsum);
                     productManager.update(produceMaterialdetails.Product);
+
+
+                    //更新该单据之后单据的已分配量
+                    IList<Model.ProduceMaterialdetails> pdlist = ProduceMaterialdetailsAccessor.SelectForDistributioned(produceMaterialdetails.ProductId, produceMaterialdetails.ProduceMaterial.InsertTime.Value);
+                    foreach (var item in pdlist)
+                    {
+                        item.Distributioned = Convert.ToDouble(item.Distributioned) - Convert.ToDouble(produceMaterialdetails.Materialprocessum) + Convert.ToDouble(produceMaterialdetails.Materialprocesedsum);
+                        item.Distributioned = item.Distributioned < 0 ? 0 : item.Distributioned;
+                        ProduceMaterialdetailsAccessor.Update(item);
+                    }
                 }
                 this.Delete(produceMaterial.ProduceMaterialID);
 
@@ -251,7 +271,7 @@ namespace Book.BL
             }
         }
 
-     
+
 
         protected override string GetSettingId()
         {
