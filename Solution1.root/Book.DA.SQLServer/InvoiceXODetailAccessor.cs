@@ -102,7 +102,7 @@ namespace Book.DA.SQLServer
             sqlmapper.Update("InvoiceXODetail.UpdateProofUnitPrice", htDetail);
         }
 
-        public IList<Book.Model.InvoiceXODetail> Select(Model.Customer customer1, Model.Customer customer2, DateTime startDate, DateTime endDate, DateTime yjrq1, DateTime yjrq2, Model.Employee employee1, Model.Employee employee2, string xoid1, string xoid2, string cusxoidkey, Model.Product product, Model.Product product2, bool isclose, bool mpsIsClose, int orderColumn, int orderType, bool detailFlag, string product_Id)
+        public IList<Book.Model.InvoiceXODetail> Select(Model.Customer customer1, Model.Customer customer2, DateTime startDate, DateTime endDate, DateTime yjrq1, DateTime yjrq2, Model.Employee employee1, Model.Employee employee2, string xoid1, string xoid2, string cusxoidkey, Model.Product product, Model.Product product2, bool isclose, bool mpsIsClose, int orderColumn, int orderType, bool detailFlag, string product_Id, string productCategoryId)
         {
             StringBuilder str = new StringBuilder("SELECT i.InvoiceId,i.InvoiceDate,i.InvoiceYjrq,c1.CustomerShortName as CustomerName,c2.CustomerShortName as XOCustomerName,i.CustomerInvoiceXOId,p.Id as ProId,p.ProductName,p.CustomerProductName,d.InvoiceXODetailPrice,d.InvoiceXODetailMoney,d.InvoiceXODetailQuantity,d.InvoiceXODetailBeenQuantity,isnull(d.InvoiceXTDetailQuantity,0) as InvoiceXTDetailQuantity,ISNULL((case when DAY(i.InvoiceDate) between 1 and 10 then er.UpRate when DAY(i.InvoiceDate) between 11 and 20 then er.MiddleRate else er.DownRate end),1) * d.InvoiceXODetailQuantity * d.InvoiceXODetailPrice as TaibiMoney,p.InternalDescription   FROM InvoiceXODetail d Right JOIN InvoiceXO i ON i.InvoiceId = d.InvoiceId left join Customer c1 on c1.customerid=i.CustomerId left join Customer c2 on c2.CustomerId=i.xocustomerid left join Product p on p.ProductId=d.ProductId left join ExchangeRate er on er.YearValue=YEAR(i.InvoiceDate) and er.MonthValue=MONTH(i.InvoiceDate) and er.Currency=i.Currency where 1=1");
 
@@ -120,6 +120,8 @@ namespace Book.DA.SQLServer
                 str.Append(" and p.ProductId IN ( SELECT Product.ProductId FROM Product WHERE ProductName BETWEEN '" + product.ProductName + "' AND '" + product2.ProductName + "')");
             if (!string.IsNullOrEmpty(product_Id))
                 str.Append(" and p.Id ='" + product_Id + "'");
+            if (!string.IsNullOrEmpty(productCategoryId))
+                str.Append(" and p.ProductCategoryId='" + productCategoryId + "'");
             if (isclose)    //true 时只查询未结案
                 str.Append(" and i.IsClose=0");
             if (mpsIsClose)  //true 只查询未排完单

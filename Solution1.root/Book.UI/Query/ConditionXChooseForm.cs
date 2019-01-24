@@ -103,6 +103,8 @@ namespace Book.UI.Query
             this.condition.Special = this.checkEditSpecial.Checked;
 
             this.condition.Product_Id = this.txt_Product_Id.Text;
+
+            this.condition.ProductCategoryId = this.lue_ProductCategory.EditValue == null ? null : this.lue_ProductCategory.EditValue.ToString();
         }
 
         private void buttonEditPro_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
@@ -122,6 +124,7 @@ namespace Book.UI.Query
         {
             this.bindingSourceCompany.DataSource = freightedCompanyManager.Select();
             this.bindingSource1.DataSource = cmethod.Select();
+            this.bindingSourceProductCategory.DataSource = new BL.ProductCategoryManager().Select();
         }
 
         private void newChooseCustomer_EditValueChanged(object sender, EventArgs e)

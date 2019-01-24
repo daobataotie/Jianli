@@ -27,7 +27,7 @@ namespace Book.UI.Query
 
             this.lbl_ReportDate.Text += string.Format("{0} ~ {1}", start.ToString("yyyy-MM-dd"), end.ToString("yyyy/MM/dd"));
 
-            IList<Model.InvoiceXODetail> Details = invoicexoDetailManager.Select(condition.Customer1, condition.Customer2, condition.StartDate, condition.EndDate, condition.Yjri1, condition.Yjri2, condition.Employee1, condition.Employee2, condition.XOId1, condition.XOId2, condition.CusXOId, condition.Product, condition.Product2, condition.IsClose, false, condition.OrderColumn, condition.OrderType, condition.DetailFlag, condition.Product_Id);
+            IList<Model.InvoiceXODetail> Details = invoicexoDetailManager.Select(condition.Customer1, condition.Customer2, condition.StartDate, condition.EndDate, condition.Yjri1, condition.Yjri2, condition.Employee1, condition.Employee2, condition.XOId1, condition.XOId2, condition.CusXOId, condition.Product, condition.Product2, condition.IsClose, false, condition.OrderColumn, condition.OrderType, condition.DetailFlag, condition.Product_Id, condition.ProductCategoryId);
 
             if (Details == null || Details.Count == 0)
                 throw new Helper.InvalidValueException("無記錄");

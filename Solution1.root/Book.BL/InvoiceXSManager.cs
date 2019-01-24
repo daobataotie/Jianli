@@ -367,14 +367,14 @@ namespace Book.BL
         {
             return accessor.SelectCustomerInfo(xoid);
         }
-        public IList<Book.Model.InvoiceXS> SelectDateRangAndWhere(Model.Customer customerStart, Model.Customer customerEnd, DateTime? dateStart, DateTime? dateEnd, DateTime yjrq1, DateTime yjrq2, string cusxoid, Model.Product product1, Model.Product product2, string invoicexoid1, string invoicexoid2, string FreightedCompanyId, string ConveyanceMethodId, Model.Employee startEmp, Model.Employee endEmp, string product_Id)
+        public IList<Book.Model.InvoiceXS> SelectDateRangAndWhere(Model.Customer customerStart, Model.Customer customerEnd, DateTime? dateStart, DateTime? dateEnd, DateTime yjrq1, DateTime yjrq2, string cusxoid, Model.Product product1, Model.Product product2, string invoicexoid1, string invoicexoid2, string FreightedCompanyId, string ConveyanceMethodId, Model.Employee startEmp, Model.Employee endEmp, string product_Id, string productCategoryId)
         {
-            return accessor.SelectDateRangAndWhere(customerStart, customerEnd, dateStart, dateEnd, yjrq1, yjrq2, cusxoid, product1, product2, invoicexoid1, invoicexoid2, FreightedCompanyId, ConveyanceMethodId, startEmp, endEmp, product_Id);
+            return accessor.SelectDateRangAndWhere(customerStart, customerEnd, dateStart, dateEnd, yjrq1, yjrq2, cusxoid, product1, product2, invoicexoid1, invoicexoid2, FreightedCompanyId, ConveyanceMethodId, startEmp, endEmp, product_Id, productCategoryId);
         }
 
-        public DataTable SelectDateRangAndWhereToTable(Model.Customer customerStart, Model.Customer customerEnd, DateTime? dateStart, DateTime? dateEnd, DateTime yjrq1, DateTime yjrq2, string cusxoid, Model.Product product1, Model.Product product2, string invoicexoid1, string invoicexoid2, string FreightedCompanyId, string ConveyanceMethodId, Model.Employee startEmp, Model.Employee endEmp, string product_Id)
+        public DataTable SelectDateRangAndWhereToTable(Model.Customer customerStart, Model.Customer customerEnd, DateTime? dateStart, DateTime? dateEnd, DateTime yjrq1, DateTime yjrq2, string cusxoid, Model.Product product1, Model.Product product2, string invoicexoid1, string invoicexoid2, string FreightedCompanyId, string ConveyanceMethodId, Model.Employee startEmp, Model.Employee endEmp, string product_Id, string productCategoryId)
         {
-            return accessor.SelectDateRangAndWhereToTable(customerStart, customerEnd, dateStart, dateEnd, yjrq1, yjrq2, cusxoid, product1, product2, invoicexoid1, invoicexoid2, FreightedCompanyId, ConveyanceMethodId, startEmp, endEmp, product_Id);
+            return accessor.SelectDateRangAndWhereToTable(customerStart, customerEnd, dateStart, dateEnd, yjrq1, yjrq2, cusxoid, product1, product2, invoicexoid1, invoicexoid2, FreightedCompanyId, ConveyanceMethodId, startEmp, endEmp, product_Id, productCategoryId);
         }
 
         public string SelectByInvoiceCusID(string ID)

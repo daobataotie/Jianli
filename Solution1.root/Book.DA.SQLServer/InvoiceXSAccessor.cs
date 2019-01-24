@@ -143,7 +143,7 @@ namespace Book.DA.SQLServer
             return sqlmapper.QueryForList<Model.InvoiceXS>("InvoiceXS.selectCustomerInfo", xoid);
         }
 
-        public IList<Book.Model.InvoiceXS> SelectDateRangAndWhere(Model.Customer customerStart, Model.Customer customerEnd, DateTime? dateStart, DateTime? dateEnd, DateTime yjrq1, DateTime yjrq2, string cusxoid, Model.Product product1, Model.Product product2, string invoicexoid1, string invoicexoid2, string FreightedCompanyId, string ConveyanceMethodId, Model.Employee startEmp, Model.Employee endEmp, string product_Id)
+        public IList<Book.Model.InvoiceXS> SelectDateRangAndWhere(Model.Customer customerStart, Model.Customer customerEnd, DateTime? dateStart, DateTime? dateEnd, DateTime yjrq1, DateTime yjrq2, string cusxoid, Model.Product product1, Model.Product product2, string invoicexoid1, string invoicexoid2, string FreightedCompanyId, string ConveyanceMethodId, Model.Employee startEmp, Model.Employee endEmp, string product_Id, string productCategoryId)
         {
             Hashtable ht = new Hashtable();
             ht.Add("dateStart", dateStart.Value.ToString("yyyy-MM-dd"));
@@ -171,12 +171,14 @@ namespace Book.DA.SQLServer
                 sql.Append(" and  InvoiceId in(select invoiceid from InvoiceXS where  ConveyanceMethodId='" + ConveyanceMethodId + "')");
             if (!string.IsNullOrEmpty(product_Id))
                 sql.Append(" and InvoiceId in(select invoiceid from invoicexsdetail where productid in (select ProductId from Product where Id ='" + product_Id + "'))");
+            if (!string.IsNullOrEmpty(productCategoryId))
+                sql.Append(" and InvoiceId in(select invoiceid from invoicexsdetail where productid in (select ProductId from Product where ProductCategoryId='" + productCategoryId + "'))");
 
             ht.Add("sql", sql.ToString());
             return sqlmapper.QueryForList<Book.Model.InvoiceXS>("InvoiceXS.select_where", ht);
         }
 
-        public DataTable SelectDateRangAndWhereToTable(Model.Customer customerStart, Model.Customer customerEnd, DateTime? dateStart, DateTime? dateEnd, DateTime yjrq1, DateTime yjrq2, string cusxoid, Model.Product product1, Model.Product product2, string invoicexoid1, string invoicexoid2, string FreightedCompanyId, string ConveyanceMethodId, Model.Employee startEmp, Model.Employee endEmp, string product_Id)
+        public DataTable SelectDateRangAndWhereToTable(Model.Customer customerStart, Model.Customer customerEnd, DateTime? dateStart, DateTime? dateEnd, DateTime yjrq1, DateTime yjrq2, string cusxoid, Model.Product product1, Model.Product product2, string invoicexoid1, string invoicexoid2, string FreightedCompanyId, string ConveyanceMethodId, Model.Employee startEmp, Model.Employee endEmp, string product_Id, string productCategoryId)
         {
             StringBuilder sql = new StringBuilder(
 @"select xs.InvoiceId,xs.InvoiceDate,xs.InvoiceNote,c.CustomerShortName as Customer,e.EmployeeName as Employee0,dp.DepotName as Depot,xo.CustomerInvoiceXOId,isnull(xod.InvoiceXODetailPrice*xsd.InvoiceXSDetailQuantity,0) as XOMoney,ISNULL(xsd.InvoiceXSDetailPrice*xsd.InvoiceXSDetailQuantity*(case when ExchangeRate = 0 then 1 when ExchangeRate is null then 1 else ExchangeRate end),0) as XSMoney from InvoiceXSDetail xsd left join InvoiceXS xs on xs.InvoiceId=xsd.InvoiceId
@@ -209,6 +211,8 @@ left join InvoiceXODetail xod on xod.InvoiceXODetailId=xsd.InvoiceXODetailId");
                 sql.Append(" and  xs.ConveyanceMethodId='" + ConveyanceMethodId + "'");
             if (!string.IsNullOrEmpty(product_Id))
                 sql.Append(" and xsd.ProductId in (select ProductId from Product where Id='" + product_Id + "')");
+            if (!string.IsNullOrEmpty(productCategoryId))
+                sql.Append(" and xsd.productId in (select ProductId from Product where ProductCategoryId='" + productCategoryId + "') ");
 
             sql.Append(" order by xs.InvoiceId");
 

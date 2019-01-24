@@ -144,5 +144,7 @@ namespace Book.UI.Query
         }
 
         public string Product_Id { get; set; }
+
+        public string ProductCategoryId { get; set; }
     }
 }
