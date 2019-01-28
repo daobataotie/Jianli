@@ -37,7 +37,7 @@ namespace Book.DA.SQLServer
         }
 
         //ProductState -1全部 0 正常 1非   //用于listForm
-        public IList<Book.Model.ProduceInDepotDetail> SelectList(string startPronoteHeader, string endPronoteHeader, DateTime startDate, DateTime endDate, Book.Model.Product product, Book.Model.WorkHouse work, Book.Model.Depot mDepot, Book.Model.DepotPosition mDepotPositioin, string id1, string id2, string cusxoid, Book.Model.Customer customer1, Book.Model.Customer customer2, int ProductState)
+        public IList<Book.Model.ProduceInDepotDetail> SelectList(string startPronoteHeader, string endPronoteHeader, DateTime startDate, DateTime endDate, string product_Id, Book.Model.WorkHouse work, Book.Model.Depot mDepot, Book.Model.DepotPosition mDepotPositioin, string id1, string id2, string cusxoid, Book.Model.Customer customer1, Book.Model.Customer customer2, int ProductState)
         {
             //Hashtable ht = new Hashtable();
             //ht.Add("startpronoteid", string.IsNullOrEmpty(startPronoteHeader) ? null : startPronoteHeader);
@@ -46,14 +46,14 @@ namespace Book.DA.SQLServer
             //ht.Add("enddate", endDate);
             //ht.Add("productid", product == null ? null : product.ProductId);
             StringBuilder str = new StringBuilder();
-            str.Append("   select d.*,i.ProduceInDepotDate as mProduceInDepotDate,pr.IsClose as PIsClose , p.ProductName as ProductName,(SELECT Workhousename FROM WorkHouse WHERE WorkHouse.WorkHouseId = (SELECT ProduceInDepot.WorkHouseId FROM ProduceInDepot WHERE ProduceInDepot.ProduceInDepotId = d.ProduceInDepotId)) as WorkHousename,(select CustomerInvoiceXOId from InvoiceXO where InvoiceId=(select InvoiceXOId from PronoteHeader where PronoteHeaderID=pr.PronoteHeaderId)) AS CusXOId,(SELECT LEFT(a,isnull(len(a)-1,0)) AS c FROM (SELECT (SELECT (cast(PronoteMachineId AS varchar)+',')  FROM PronoteProceduresDetail WHERE PronoteHeaderID=d.PronoteHeaderId AND PronoteMachineId IS NOT NULL AND PronoteMachineId<>'' FOR xml path('')) AS a) AS b) AS Machine,pr.JieAnDate from ProduceInDepotDetail d left join PronoteHeader pr on pr.PronoteHeaderId=d.PronoteHeaderId  left join ProduceInDepot i on d.ProduceInDepotId=i.ProduceInDepotId left join  product p on d.productid=p.productid where d.ProduceInDepotId in(select ProduceInDepotId from ProduceInDepot where ProduceInDepotDate between '" + startDate.ToShortDateString() + "' and '" + endDate.Date.AddDays(1).ToShortDateString() + "') ");
+            str.Append("   select d.*,i.ProduceInDepotDate as mProduceInDepotDate,pr.IsClose as PIsClose , p.ProductName as ProductName,(SELECT Workhousename FROM WorkHouse WHERE WorkHouse.WorkHouseId = (SELECT ProduceInDepot.WorkHouseId FROM ProduceInDepot WHERE ProduceInDepot.ProduceInDepotId = d.ProduceInDepotId)) as WorkHousename,(select CustomerInvoiceXOId from InvoiceXO where InvoiceId=d.InvoiceXOId) AS CusXOId,(SELECT LEFT(a,isnull(len(a)-1,0)) AS c FROM (SELECT (SELECT (cast(PronoteMachineId AS varchar)+',')  FROM PronoteProceduresDetail WHERE PronoteHeaderID=d.PronoteHeaderId AND PronoteMachineId IS NOT NULL AND PronoteMachineId<>'' FOR xml path('')) AS a) AS b) AS Machine,pr.JieAnDate from ProduceInDepotDetail d left join PronoteHeader pr on pr.PronoteHeaderId=d.PronoteHeaderId  left join ProduceInDepot i on d.ProduceInDepotId=i.ProduceInDepotId left join  product p on d.productid=p.productid where d.ProduceInDepotId in(select ProduceInDepotId from ProduceInDepot where ProduceInDepotDate between '" + startDate.ToShortDateString() + "' and '" + endDate.Date.AddDays(1).ToShortDateString() + "') ");
             if (!string.IsNullOrEmpty(startPronoteHeader) && !string.IsNullOrEmpty(endPronoteHeader))
             {
                 str.Append(" and (d.PronoteHeaderId between '" + startPronoteHeader + "' and  '" + endPronoteHeader + "')");
             }
-            if (product != null)
+            if (!string.IsNullOrEmpty(product_Id))
             {
-                str.Append(" and d.productid='" + product.ProductId + "'");
+                str.Append(" and d.productid = (select top 1 ProductId from Product where Id='" + product_Id + "')");
             }
             if (work != null)
             {
@@ -73,7 +73,7 @@ namespace Book.DA.SQLServer
             }
             if (!string.IsNullOrEmpty(cusxoid))
             {
-                str.Append(" and (select CustomerInvoiceXOId from InvoiceXO where InvoiceId=(select InvoiceXOId from PronoteHeader where PronoteHeaderID=pr.PronoteHeaderId))='" + cusxoid + "'");
+                str.Append(" and (select CustomerInvoiceXOId from InvoiceXO where InvoiceId=d.InvoiceXOId)='" + cusxoid + "'");
             }
             if (customer1 != null && customer2 != null)
             {
@@ -95,14 +95,14 @@ namespace Book.DA.SQLServer
         }
 
         //ProductState -1全部 0 正常 1非
-        public IList<Book.Model.ProduceInDepotDetail> Select(string startPronoteHeader, string endPronoteHeader, DateTime startDate, DateTime endDate, Book.Model.Product product, Book.Model.WorkHouse work, Book.Model.Depot mDepot, Book.Model.DepotPosition mDepotPositioin, string id1, string id2, string cusxoid, Book.Model.Customer customer1, Book.Model.Customer customer2, int ProductState)
+        public IList<Book.Model.ProduceInDepotDetail> Select(string startPronoteHeader, string endPronoteHeader, DateTime startDate, DateTime endDate, string product_Id, Book.Model.WorkHouse work, Book.Model.Depot mDepot, Book.Model.DepotPosition mDepotPositioin, string id1, string id2, string cusxoid, Book.Model.Customer customer1, Book.Model.Customer customer2, int ProductState)
         {
             Hashtable ht = new Hashtable();
             ht.Add("startpronoteid", string.IsNullOrEmpty(startPronoteHeader) ? null : startPronoteHeader);
             ht.Add("endpronoteid", string.IsNullOrEmpty(endPronoteHeader) ? null : endPronoteHeader);
             ht.Add("startdate", startDate);
             ht.Add("enddate", endDate);
-            ht.Add("productid", product == null ? null : product.ProductId);
+
             StringBuilder str = new StringBuilder();
             if (work != null)
             {
@@ -122,12 +122,15 @@ namespace Book.DA.SQLServer
             }
             if (!string.IsNullOrEmpty(cusxoid))
             {
-                str.Append(" and PronoteHeaderId in(select PronoteHeaderId from PronoteHeader where InvoiceCusId LIKE '%" + cusxoid + "%')");
+                //str.Append(" and PronoteHeaderId in(select PronoteHeaderId from PronoteHeader where InvoiceCusId LIKE '%" + cusxoid + "%')");
+                str.Append(" and InvoiceXOId = (select InvoiceId from InvoiceXO where CustomerInvoiceXOId='" + cusxoid + "')");
             }
             if (customer1 != null && customer2 != null)
             {
                 str.Append(" and PronoteHeaderId in(select PronoteHeaderId from PronoteHeader where InvoiceXOId IN(SELECT invoiceid FROM InvoiceXO WHERE CustomerId IN(SELECT CustomerId FROM Customer WHERE Id BETWEEN  '" + customer1.Id + "' AND '" + customer2.Id + "')))");
             }
+            if (!string.IsNullOrEmpty(product_Id))
+                str.Append(" and ProductId IN (SELECT ProductId FROM Product WHERE Id = '" + product_Id + "')");
             switch (ProductState)
             {
                 case 0:

@@ -44,6 +44,7 @@ namespace Book.DA
 		
 		Model.InvoiceXO GetNext(Model.InvoiceXO e);
 
-	}
+
+    }
 }
 

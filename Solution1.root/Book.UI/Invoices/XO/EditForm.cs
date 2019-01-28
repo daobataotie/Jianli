@@ -1186,21 +1186,21 @@ namespace Book.UI.Invoices.XO
 
         private void gridView1_CustomColumnDisplayText(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventArgs e)
         {
-            if (e.ListSourceRowIndex < 0) return;
-            IList<Model.InvoiceXODetail> details = this.bindingSource1.DataSource as IList<Model.InvoiceXODetail>;
-            if (details == null || details.Count < 1) return;
-            // Model.CustomerProducts product = details[e.ListSourceRowIndex].PrimaryKey;
-            Model.Product product = details[e.ListSourceRowIndex].Product;
-            if (product == null) return;
-            switch (e.Column.Name)
-            {
-                case "gridColumnCustomProduct":
-                    e.DisplayText = product.CustomerProductName;
-                    break;
-                case "gridColumnVersion":
-                    e.DisplayText = product.ProductVersion;
-                    break;
-            }
+            //if (e.ListSourceRowIndex < 0) return;
+            //IList<Model.InvoiceXODetail> details = this.bindingSource1.DataSource as IList<Model.InvoiceXODetail>;
+            //if (details == null || details.Count < 1) return;
+            //// Model.CustomerProducts product = details[e.ListSourceRowIndex].PrimaryKey;
+            //Model.Product product = details[e.ListSourceRowIndex].Product;
+            //if (product == null) return;
+            //switch (e.Column.Name)
+            //{
+            //    case "gridColumnCustomProduct":
+            //        e.DisplayText = product.CustomerProductName;
+            //        break;
+            //    case "gridColumnVersion":
+            //        e.DisplayText = product.ProductVersion;
+            //        break;
+            //}
 
         }
 

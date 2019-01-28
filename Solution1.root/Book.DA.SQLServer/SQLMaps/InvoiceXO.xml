@@ -323,5 +323,11 @@
         [DelayTime] from InvoiceXO where InvoiceId = (select InvoiceId from InvoiceXODetail where InvoiceXODetailId = (select InvoiceXODetailId from MPSdetails where MPSdetailsId=#value#))
       ]]>
     </select>
+
+    <select id="SelectCusXOIdByInvoiceId"  resultClass="string" parameterClass="string">
+      <![CDATA[
+      select CustomerInvoiceXOId from InvoiceXO where InvoiceId=#value#
+      ]]>
+    </select>
   </statements>
 </sqlMap>

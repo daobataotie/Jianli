@@ -73,7 +73,8 @@ namespace Book.UI.Query
             {
                 this.condition.EndDate = this.dateEdit2.DateTime;
             }
-            this.condition.Product = this.buttonEditPro.EditValue as Model.Product;
+            //this.condition.Product = this.buttonEditPro.EditValue as Model.Product;
+            this.condition.Product_Id = this.buttonEditPro.EditValue == null ? null : this.buttonEditPro.EditValue.ToString();
             this.condition.StartPronoteHeader = this.buttonEditPronote1.Text;
             this.condition.EndPronoteHeader = this.buttonEditPronote2.Text;
             this.condition.WorkHouse = this.newChooseWorkHouse.EditValue as Model.WorkHouse;
@@ -97,8 +98,14 @@ namespace Book.UI.Query
             Book.UI.Invoices.ChooseProductForm f = new Book.UI.Invoices.ChooseProductForm();
             if (f.ShowDialog(this) == DialogResult.OK)
             {
-                (sender as ButtonEdit).EditValue = f.SelectedItem;
-                this.labelCusPro.Text = (f.SelectedItem as Model.Product).CustomerProductName;
+                //(sender as ButtonEdit).EditValue = f.SelectedItem;
+                //this.labelCusPro.Text = (f.SelectedItem as Model.Product).CustomerProductName;
+
+                if (f.SelectedItem != null)
+                {
+                    this.buttonEditPro.EditValue = (f.SelectedItem as Model.Product).Id;
+                    this.labelCusPro.Text = (f.SelectedItem as Model.Product).CustomerProductName;
+                }
             }
             f.Dispose();
             GC.Collect();

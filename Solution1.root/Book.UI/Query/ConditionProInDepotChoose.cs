@@ -59,12 +59,12 @@ namespace Book.UI.Query
             get { return this.endPronoteHeader; }
             set { this.endPronoteHeader = value; }
         }
-        private Model.Product _product;
-        public Model.Product Product
-        {
-            get { return this._product; }
-            set { this._product = value; }
-        }
+        //private Model.Product _product;
+        //public Model.Product Product
+        //{
+        //    get { return this._product; }
+        //    set { this._product = value; }
+        //}
         private Model.WorkHouse _workHouse;
         public Model.WorkHouse WorkHouse
         {
@@ -108,6 +108,7 @@ namespace Book.UI.Query
         //商品状态
         public int ProductState { get; set; }
 
+        public string Product_Id { get; set; }
 
     }
 }

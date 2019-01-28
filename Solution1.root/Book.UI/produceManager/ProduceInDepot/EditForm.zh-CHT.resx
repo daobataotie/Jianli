@@ -348,7 +348,7 @@
     <value>選擇加工單</value>
   </data>
   <data name="ColProductId.Caption" xml:space="preserve">
-    <value>編號</value>
+    <value>貨品編號</value>
   </data>
   <data name="gridColumn2.Caption" xml:space="preserve">
     <value>貨品名稱</value>

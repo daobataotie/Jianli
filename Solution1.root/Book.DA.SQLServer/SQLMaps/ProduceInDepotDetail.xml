@@ -9,7 +9,7 @@
       <![CDATA[
       select * from ProduceInDepotDetail where ProduceInDepotId in(select ProduceInDepotId from ProduceInDepot where ProduceInDepotDate
       between #startdate# and #enddate#)  and (PronoteHeaderId >=#startpronoteid# or #startpronoteid# is null) and
-      (PronoteHeaderId <=#endpronoteid# or #endpronoteid# is null) and (productid=#productid# or #productid#  is null)
+      (PronoteHeaderId <=#endpronoteid# or #endpronoteid# is null) 
 	   $sql$  
 	  order by ProduceInDepotId desc
       ]]>

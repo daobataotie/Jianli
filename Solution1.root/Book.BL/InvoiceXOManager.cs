@@ -480,6 +480,11 @@ namespace Book.BL
         {
             return accessor.SelectByMPSDetailId(mpsDetailId);
         }
+
+        public string SelectCusXOIdByInvoiceId(string invoiceId)
+        {
+            return accessor.SelectCusXOIdByInvoiceId(invoiceId);
+        }
     }
 }
 

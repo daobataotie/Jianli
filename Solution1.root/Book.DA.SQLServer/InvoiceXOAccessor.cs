@@ -116,6 +116,11 @@ namespace Book.DA.SQLServer
             return sqlmapper.QueryForObject<Model.InvoiceXO>("InvoiceXO.SelectByMPSDetailId", mpsDetailId);
         }
 
+        public string SelectCusXOIdByInvoiceId(string invoiceId)
+        {
+            return sqlmapper.QueryForObject<string>("InvoiceXO.SelectCusXOIdByInvoiceId", invoiceId);
+        }
+
         #endregion
     }
 }

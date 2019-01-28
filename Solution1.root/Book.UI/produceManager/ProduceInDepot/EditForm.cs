@@ -63,6 +63,15 @@ namespace Book.UI.produceManager.ProduceInDepot
             this.repositoryItemSearchLookUpEdit1.View.Columns.Add(new GridColumn() { FieldName = "CustomerProductName", Caption = "客戶貨品名稱", Width = 150, Visible = true, VisibleIndex = 2 });
             this.repositoryItemSearchLookUpEdit1.View.Columns.Add(new GridColumn() { FieldName = "ProductVersion", Caption = "版本", Width = 50, Visible = true, VisibleIndex = 3 });
             this.repositoryItemSearchLookUpEdit1.DataSource = this.bindingSourceProductId.DataSource;
+
+
+            //單位
+            string sqlProductUnit = "select CnName from ProductUnit  group by CnName";
+            IList<Model.ProductUnit> listProductUnit = this.productManager.DataReaderBind<Model.ProductUnit>(sqlProductUnit, null, CommandType.Text);
+            foreach (var item in listProductUnit)
+            {
+                this.repositoryItemComboBox2.Items.Add(item.CnName);
+            }
         }
 
         public EditForm(string produceInDepotId)
@@ -206,6 +215,15 @@ namespace Book.UI.produceManager.ProduceInDepot
                 if (this.action == "view")
                 {
                     this.produceInDepot = this.produceInDepotManager.GetDetails(produceInDepot.ProduceInDepotId);
+
+                    if (produceInDepot.Details != null)
+                    {
+                        foreach (var item in produceInDepot.Details)
+                        {
+                            if (item.InvoiceXOId != null)
+                                item.CusXOId = invoiceXOManager.SelectCusXOIdByInvoiceId(item.InvoiceXOId);
+                        }
+                    }
                 }
             }
 
@@ -348,7 +366,6 @@ namespace Book.UI.produceManager.ProduceInDepot
 
         protected override void AddNew()
         {
-            this.repositoryItemComboBox1.Items.Clear();
             this.produceInDepot = new Model.ProduceInDepot();
             this.produceInDepot.ProduceInDepotDate = DateTime.Now;
             this.produceInDepot.PayDate = DateTime.Now;
@@ -481,20 +498,20 @@ namespace Book.UI.produceManager.ProduceInDepot
         //自定义列显示
         private void gridView1_CustomColumnDisplayText(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventArgs e)
         {
-            if (e.ListSourceRowIndex < 0) return;
-            IList<Model.ProduceInDepotDetail> details = this.bindingSourceDetails.DataSource as IList<Model.ProduceInDepotDetail>;
-            if (details == null || details.Count < 1) return;
-            Model.Product product = details[e.ListSourceRowIndex].Product;
-            if (product == null) return;
-            switch (e.Column.Name)
-            {
-                case "ColProductId":
-                    e.DisplayText = product.Id;
-                    break;
-                case "ColCusPro":
-                    e.DisplayText = product.CustomerProductName;
-                    break;
-            }
+            //if (e.ListSourceRowIndex < 0) return;
+            //IList<Model.ProduceInDepotDetail> details = this.bindingSourceDetails.DataSource as IList<Model.ProduceInDepotDetail>;
+            //if (details == null || details.Count < 1) return;
+            //Model.Product product = details[e.ListSourceRowIndex].Product;
+            //if (product == null) return;
+            //switch (e.Column.Name)
+            //{
+            //    case "ColProductId":
+            //        e.DisplayText = product.Id;
+            //        break;
+            //    case "ColCusPro":
+            //        e.DisplayText = product.CustomerProductName;
+            //        break;
+            //}
         }
 
         //列值改变时触发事件 
@@ -590,108 +607,109 @@ namespace Book.UI.produceManager.ProduceInDepot
 
         private void gridView1_ShowingEditor(object sender, CancelEventArgs e)
         {
-            if (this.action == "insert" || this.action == "update")
-            {
-                #region 注释
-                //if (this.gridView1.FocusedColumn.Name == "gridColumn3")
-                //{
-                //    Model.ProduceInDepotDetail detail = this.gridView1.GetRow(this.gridView1.FocusedRowHandle) as Model.ProduceInDepotDetail;
-                //    this.repositoryItemComboBox1.Items.Clear();
-                //    if (detail != null)
-                //    {
-                //        if (detail.DepotId != null)
-                //        {
-                //            IList<Model.DepotPosition> unitList = depotPositionManager.Select(detail.DepotId);
-                //            foreach (Model.DepotPosition item in unitList)
-                //            {
-                //                this.repositoryItemComboBox1.Items.Add(item.Id);
-                //            }
+            //影響性能
+            //if (this.action == "insert" || this.action == "update")
+            //{
+            //    #region 注释
+            //    //if (this.gridView1.FocusedColumn.Name == "gridColumn3")
+            //    //{
+            //    //    Model.ProduceInDepotDetail detail = this.gridView1.GetRow(this.gridView1.FocusedRowHandle) as Model.ProduceInDepotDetail;
+            //    //    this.repositoryItemComboBox1.Items.Clear();
+            //    //    if (detail != null)
+            //    //    {
+            //    //        if (detail.DepotId != null)
+            //    //        {
+            //    //            IList<Model.DepotPosition> unitList = depotPositionManager.Select(detail.DepotId);
+            //    //            foreach (Model.DepotPosition item in unitList)
+            //    //            {
+            //    //                this.repositoryItemComboBox1.Items.Add(item.Id);
+            //    //            }
 
-                //        }
-                //        this.bindingSourceDetails.Position = this.bindingSourceDetails.IndexOf(detail);
-                //    }
+            //    //        }
+            //    //        this.bindingSourceDetails.Position = this.bindingSourceDetails.IndexOf(detail);
+            //    //    }
 
-                //}
+            //    //}
 
-                //if (this.gridView1.FocusedColumn.Name == "gridColumnProcedures")
-                //{
+            //    //if (this.gridView1.FocusedColumn.Name == "gridColumnProcedures")
+            //    //{
 
-                //  if (this.gridView1.FocusedColumn.ColumnEdit is DevExpress.XtraEditors.Repository.RepositoryItemComboBox)
-                //    {
-                //        Model.Product p = (this.gridView1.GetRow(this.gridView1.FocusedRowHandle) as Model.ProduceInDepotDetail).Product;
+            //    //  if (this.gridView1.FocusedColumn.ColumnEdit is DevExpress.XtraEditors.Repository.RepositoryItemComboBox)
+            //    //    {
+            //    //        Model.Product p = (this.gridView1.GetRow(this.gridView1.FocusedRowHandle) as Model.ProduceInDepotDetail).Product;
 
-                //        this.repositoryComboBoxProcedures.Items.Clear();
-                //        if (p != null)
-                //        {
-                //            Model.BomParentPartInfo bom = this.bomParentPartInfoManager.Get(p);
-                //            Model.TechonlogyHeader th = new BL.TechonlogyHeaderManager().GetDetail(bom.TechonlogyHeaderId);                       
+            //    //        this.repositoryComboBoxProcedures.Items.Clear();
+            //    //        if (p != null)
+            //    //        {
+            //    //            Model.BomParentPartInfo bom = this.bomParentPartInfoManager.Get(p);
+            //    //            Model.TechonlogyHeader th = new BL.TechonlogyHeaderManager().GetDetail(bom.TechonlogyHeaderId);                       
 
-                //            if (th!=null)
-                //            {                               
-                //                foreach (Model.Technologydetails item in th.detail) 
-                //                {
-                //                    this.repositoryComboBoxProcedures.Items.Add(item.Procedures);                                   
+            //    //            if (th!=null)
+            //    //            {                               
+            //    //                foreach (Model.Technologydetails item in th.detail) 
+            //    //                {
+            //    //                    this.repositoryComboBoxProcedures.Items.Add(item.Procedures);                                   
 
-                //                }
-                //            }
+            //    //                }
+            //    //            }
 
-                //        }
-                //    }
-                //}
+            //    //        }
+            //    //    }
+            //    //}
 
-                //if (this.gridView1.FocusedColumn.Name == "gridColumnPro")
-                //{
+            //    //if (this.gridView1.FocusedColumn.Name == "gridColumnPro")
+            //    //{
 
-                //    if (this.gridView1.FocusedColumn.ColumnEdit is DevExpress.XtraEditors.Repository.RepositoryItemComboBox)
-                //    {
-                //        Model.Product p = (this.gridView1.GetRow(this.gridView1.FocusedRowHandle) as Model.ProduceInDepotDetail).Product;
+            //    //    if (this.gridView1.FocusedColumn.ColumnEdit is DevExpress.XtraEditors.Repository.RepositoryItemComboBox)
+            //    //    {
+            //    //        Model.Product p = (this.gridView1.GetRow(this.gridView1.FocusedRowHandle) as Model.ProduceInDepotDetail).Product;
 
-                //        this.repositoryItemComboBoxPro.Items.Clear();
-                //        if (p != null)
-                //        {
-                //           // this.repositoryItemComboBoxPro.Items.Add(p);
-                //            IList<Model.Product> list = this.productManager.SelectProceProduct(p);
-                //            if (list != null)
-                //            {
-                //                foreach (Model.Product item in list)
-                //                {
-                //                    this.repositoryItemComboBoxPro.Items.Add(item);
+            //    //        this.repositoryItemComboBoxPro.Items.Clear();
+            //    //        if (p != null)
+            //    //        {
+            //    //           // this.repositoryItemComboBoxPro.Items.Add(p);
+            //    //            IList<Model.Product> list = this.productManager.SelectProceProduct(p);
+            //    //            if (list != null)
+            //    //            {
+            //    //                foreach (Model.Product item in list)
+            //    //                {
+            //    //                    this.repositoryItemComboBoxPro.Items.Add(item);
 
-                //                }
-                //            }
+            //    //                }
+            //    //            }
 
-                //        }
-                //    }
-                //}
-                #endregion
+            //    //        }
+            //    //    }
+            //    //}
+            //    #endregion
 
-                if (this.gridView1.FocusedColumn.Name == "gridColumnProductUnit")
-                {
+            //    if (this.gridView1.FocusedColumn.Name == "gridColumnProductUnit")
+            //    {
 
-                    if (this.gridView1.FocusedColumn.ColumnEdit is DevExpress.XtraEditors.Repository.RepositoryItemComboBox)
-                    {
-                        Model.Product p = (this.gridView1.GetRow(this.gridView1.FocusedRowHandle) as Model.ProduceInDepotDetail).Product;
+            //        if (this.gridView1.FocusedColumn.ColumnEdit is DevExpress.XtraEditors.Repository.RepositoryItemComboBox)
+            //        {
+            //            Model.Product p = (this.gridView1.GetRow(this.gridView1.FocusedRowHandle) as Model.ProduceInDepotDetail).Product;
 
-                        this.repositoryItemComboBox2.Items.Clear();
-                        if (p != null)
-                        {
-                            if (!string.IsNullOrEmpty(p.BasedUnitGroupId))
-                            {
-                                BL.ProductUnitManager manager = new Book.BL.ProductUnitManager();
-                                Model.UnitGroup ug = new BL.UnitGroupManager().Get(p.BasedUnitGroupId);
-                                IList<Model.ProductUnit> unitList = manager.Select(ug);
-                                foreach (Model.ProductUnit item in unitList)
-                                {
-                                    this.repositoryItemComboBox2.Items.Add(item.CnName);
-                                }
+            //            this.repositoryItemComboBox2.Items.Clear();
+            //            if (p != null)
+            //            {
+            //                if (!string.IsNullOrEmpty(p.BasedUnitGroupId))
+            //                {
+            //                    BL.ProductUnitManager manager = new Book.BL.ProductUnitManager();
+            //                    Model.UnitGroup ug = new BL.UnitGroupManager().Get(p.BasedUnitGroupId);
+            //                    IList<Model.ProductUnit> unitList = manager.Select(ug);
+            //                    foreach (Model.ProductUnit item in unitList)
+            //                    {
+            //                        this.repositoryItemComboBox2.Items.Add(item.CnName);
+            //                    }
 
-                            }
+            //                }
 
-                        }
-                    }
-                }
-                this.gridControl1.RefreshDataSource();
-            }
+            //            }
+            //        }
+            //    }
+            //    this.gridControl1.RefreshDataSource();
+            //}
         }
 
         private void EditForm_Load(object sender, EventArgs e)
@@ -729,6 +747,8 @@ namespace Book.UI.produceManager.ProduceInDepot
                     //produceInDepotDetail.ProduceQuantity = Pronote.DetailsSum - (Pronote.InDepotQuantity == null ? 0 : Pronote.InDepotQuantity);
                     produceInDepotDetail.ProduceQuantity = 0;
                     produceInDepotDetail.PronoteHeaderId = Pronote.PronoteHeaderID;
+                    produceInDepotDetail.InvoiceXOId = Pronote.InvoiceXOId;
+                    produceInDepotDetail.CusXOId = string.IsNullOrEmpty(Pronote.InvoiceXOId) ? "" : invoiceXOManager.SelectCusXOIdByInvoiceId(Pronote.InvoiceXOId);
                     produceInDepotDetail.HeJiProceduresSum = this.produceInDepotDetailManager.select_SumbyPronHeaderId(produceInDepotDetail.PronoteHeaderId, (this.newChooseWorkHorseId.EditValue as Model.WorkHouse).WorkHouseId, produceInDepotDetail.ProductId);
                     produceInDepotDetail.HeJiCheckOutSum = this.produceInDepotDetailManager.select_CheckOutSumByPronHeaderId(produceInDepotDetail.PronoteHeaderId, (this.newChooseWorkHorseId.EditValue as Model.WorkHouse).WorkHouseId, produceInDepotDetail.ProductId);
                     produceInDepotDetail.ProceduresSum = 0;
@@ -757,6 +777,67 @@ namespace Book.UI.produceManager.ProduceInDepot
                 produceManager.PronoteHeader.ChoosePronoteHeaderDetailsForm._pronoteHeaderList.Clear();
             }
             f.Dispose();
+            GC.Collect();
+        }
+
+        //选择客户订单
+        private void btn_ChooseInvoiceXO_Click(object sender, EventArgs e)
+        {
+            if (this.newChooseWorkHorseId.EditValue == null)
+            {
+                MessageBox.Show(Properties.Resources.WorkHouse, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            Invoices.XS.SearcharInvoiceXSForm form = new Invoices.XS.SearcharInvoiceXSForm();
+            if (form.ShowDialog(this) == DialogResult.OK)
+            {
+                if (form.key != null && form.key.Count > 0)
+                {
+                    foreach (var item in form.key)
+                    {
+                        Model.ProduceInDepotDetail produceInDepotDetail = new Book.Model.ProduceInDepotDetail();
+                        produceInDepotDetail.ProduceInDepotDetailId = Guid.NewGuid().ToString();
+                        produceInDepotDetail.Product = item.Product;
+                        if (produceInDepotDetail.Product != null)
+                        {
+                            produceInDepotDetail.ProductId = produceInDepotDetail.Product.ProductId;
+                        }
+                        produceInDepotDetail.ProductUnit = item.InvoiceProductUnit;
+                        produceInDepotDetail.ProduceInDepotId = this.produceInDepot.ProduceInDepotId;
+                        //produceInDepotDetail.ProduceQuantity = Pronote.DetailsSum - (Pronote.InDepotQuantity == null ? 0 : Pronote.InDepotQuantity);
+                        produceInDepotDetail.ProduceQuantity = 0;
+                        //produceInDepotDetail.PronoteHeaderId = Pronote.PronoteHeaderID;
+                        produceInDepotDetail.InvoiceXOId = item.InvoiceId;
+                        produceInDepotDetail.CusXOId = item.Invoice.CustomerInvoiceXOId;
+                        produceInDepotDetail.InvoiceXODetailId = item.InvoiceXODetailId;
+                        produceInDepotDetail.HeJiProceduresSum = this.produceInDepotDetailManager.select_SumbyInvoiceXOId(item.InvoiceId, (this.newChooseWorkHorseId.EditValue as Model.WorkHouse).WorkHouseId, produceInDepotDetail.ProductId);
+                        produceInDepotDetail.HeJiCheckOutSum = this.produceInDepotDetailManager.select_CheckOutSumByInvoiceXOId(item.InvoiceId, (this.newChooseWorkHorseId.EditValue as Model.WorkHouse).WorkHouseId, produceInDepotDetail.ProductId);
+                        produceInDepotDetail.PronoteHeaderSum = item.InvoiceXODetailQuantity;
+                        produceInDepotDetail.ProceduresSum = 0;
+                        produceInDepotDetail.CheckOutSum = 0;
+                        produceInDepotDetail.RejectionRate = 0;
+                        produceInDepotDetail.Inumber = this.produceInDepot.Details.Count + 1;
+                        if (newChooseWorkHorseId.EditValue != null)
+                            produceInDepotDetail.beforeTransferQuantity = this.produceInDepotDetailManager.select_TransferSumByInvoiceXOIdWorkHouse(item.InvoiceId, (this.newChooseWorkHorseId.EditValue as Model.WorkHouse).WorkHouseId, produceInDepotDetail.ProductId);
+
+                        //produceInDepotDetail.PriceRange = _SupplierProductManager.GetPriceRangeForSupAndProduct(produceInDepotDetail.Product.SupplierId, produceInDepotDetail.ProductId);
+                        //produceInDepotDetail.ProduceInDepotPrice = BL.SupplierProductManager.CountPrice(produceInDepotDetail.PriceRange, (double)produceInDepotDetail.ProduceQuantity);
+                        produceInDepotDetail.ProduceInDepotPrice = item.InvoiceXODetailPrice;
+                        //if (price != 0)
+                        //    produceInDepotDetail.ProduceInDepotPrice = price;
+                        //if (produceInDepotDetail.ProduceInDepotPrice == null)
+                        //    produceInDepotDetail.ProduceInDepotPrice = 0;
+                        produceInDepotDetail.ProduceMoney = produceInDepotDetail.ProduceInDepotPrice * (decimal)produceInDepotDetail.ProduceQuantity;
+
+                        this.produceInDepot.Details.Add(produceInDepotDetail);
+
+                        this.bindingSourceDetails.Position = this.bindingSourceDetails.IndexOf(produceInDepotDetail);
+                    }
+                }
+                this.gridControl1.RefreshDataSource();
+            }
+            form.Dispose();
             GC.Collect();
         }
 
@@ -789,7 +870,7 @@ namespace Book.UI.produceManager.ProduceInDepot
             if (f.ShowDialog(this) == DialogResult.OK)
             {
                 Query.ConditionProInDepotChoose condition = f.Condition as Query.ConditionProInDepotChoose;
-                IList<Model.ProduceInDepotDetail> list = this.produceInDepotDetailManager.Select(condition.StartPronoteHeader, condition.EndPronoteHeader, condition.StartDate, condition.EndDate, condition.Product, condition.WorkHouse, condition.MDepot, condition.MDepotPosition, condition.Id1, condition.Id2, condition.Cusxoid, condition.Customer1, condition.Customer2, condition.ProductState);
+                IList<Model.ProduceInDepotDetail> list = this.produceInDepotDetailManager.Select(condition.StartPronoteHeader, condition.EndPronoteHeader, condition.StartDate, condition.EndDate, condition.Product_Id, condition.WorkHouse, condition.MDepot, condition.MDepotPosition, condition.Id1, condition.Id2, condition.Cusxoid, condition.Customer1, condition.Customer2, condition.ProductState);
                 if (list == null || list.Count <= 0)
                 {
                     MessageBox.Show("無符合條件數據記錄");
@@ -883,7 +964,7 @@ namespace Book.UI.produceManager.ProduceInDepot
             if (f.ShowDialog(this) == DialogResult.OK)
             {
                 Query.ConditionProInDepotChoose condition = f.Condition as Query.ConditionProInDepotChoose;
-                IList<Model.ProduceInDepotDetail> list = this.produceInDepotDetailManager.SelectList(condition.StartPronoteHeader, condition.EndPronoteHeader, condition.StartDate, condition.EndDate, condition.Product, condition.WorkHouse, condition.MDepot, condition.MDepotPosition, condition.Id1, condition.Id2, condition.Cusxoid, condition.Customer1, condition.Customer2, condition.ProductState);
+                IList<Model.ProduceInDepotDetail> list = this.produceInDepotDetailManager.SelectList(condition.StartPronoteHeader, condition.EndPronoteHeader, condition.StartDate, condition.EndDate, condition.Product_Id, condition.WorkHouse, condition.MDepot, condition.MDepotPosition, condition.Id1, condition.Id2, condition.Cusxoid, condition.Customer1, condition.Customer2, condition.ProductState);
                 if (list == null || list.Count <= 0)
                 {
                     MessageBox.Show("無符合條件數據記錄");
@@ -955,6 +1036,8 @@ namespace Book.UI.produceManager.ProduceInDepot
 
                             //cc.Product = mDateGroups.First().Product;
                             //cc.ProduceInDepot = mDateGroups.First().ProduceInDepot;
+                            cc.Product = productManager.Get(mDateGroups.First().ProductId);
+                            cc.ProduceInDepot = produceInDepotManager.Get(mDateGroups.First().ProduceInDepotId);
                             cc.ProceduresSum = (from dd in mDateGroups select dd.ProceduresSum).Sum();
                             cc.CheckOutSum = (from dd in mDateGroups select dd.CheckOutSum).Sum();
                             cc.RejectionRate = (from dd in mDateGroups select dd.RejectionRate).Sum();
@@ -1298,64 +1381,6 @@ namespace Book.UI.produceManager.ProduceInDepot
 
                 this.gridControl1.RefreshDataSource();
             }
-        }
-
-        private void btn_ChooseInvoiceXO_Click(object sender, EventArgs e)
-        {
-            if (this.newChooseWorkHorseId.EditValue == null)
-            {
-                MessageBox.Show(Properties.Resources.WorkHouse, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            Invoices.XS.SearcharInvoiceXSForm form = new Invoices.XS.SearcharInvoiceXSForm();
-            if (form.ShowDialog(this) == DialogResult.OK)
-            {
-                if (form.key != null && form.key.Count > 0)
-                {
-                    foreach (var item in form.key)
-                    {
-                        Model.ProduceInDepotDetail produceInDepotDetail = new Book.Model.ProduceInDepotDetail();
-                        produceInDepotDetail.ProduceInDepotDetailId = Guid.NewGuid().ToString();
-                        produceInDepotDetail.Product = item.Product;
-                        if (produceInDepotDetail.Product != null)
-                        {
-                            produceInDepotDetail.ProductId = produceInDepotDetail.Product.ProductId;
-                        }
-                        produceInDepotDetail.ProductUnit = item.InvoiceProductUnit;
-                        produceInDepotDetail.ProduceInDepotId = this.produceInDepot.ProduceInDepotId;
-                        //produceInDepotDetail.ProduceQuantity = Pronote.DetailsSum - (Pronote.InDepotQuantity == null ? 0 : Pronote.InDepotQuantity);
-                        produceInDepotDetail.ProduceQuantity = 0;
-                        //produceInDepotDetail.PronoteHeaderId = Pronote.PronoteHeaderID;
-                        produceInDepotDetail.InvoiceXOId = item.InvoiceId;
-                        produceInDepotDetail.HeJiProceduresSum = this.produceInDepotDetailManager.select_SumbyInvoiceXOId(item.InvoiceId, (this.newChooseWorkHorseId.EditValue as Model.WorkHouse).WorkHouseId, produceInDepotDetail.ProductId);
-                        produceInDepotDetail.HeJiCheckOutSum = this.produceInDepotDetailManager.select_CheckOutSumByInvoiceXOId(item.InvoiceId, (this.newChooseWorkHorseId.EditValue as Model.WorkHouse).WorkHouseId, produceInDepotDetail.ProductId);
-                        produceInDepotDetail.PronoteHeaderSum = item.InvoiceXODetailQuantity;
-                        produceInDepotDetail.ProceduresSum = 0;
-                        produceInDepotDetail.CheckOutSum = 0;
-                        produceInDepotDetail.RejectionRate = 0;
-                        produceInDepotDetail.Inumber = this.produceInDepot.Details.Count + 1;
-                        if (newChooseWorkHorseId.EditValue != null)
-                            produceInDepotDetail.beforeTransferQuantity = this.produceInDepotDetailManager.select_TransferSumByInvoiceXOIdWorkHouse(item.InvoiceId, (this.newChooseWorkHorseId.EditValue as Model.WorkHouse).WorkHouseId, produceInDepotDetail.ProductId);
-
-                        //produceInDepotDetail.PriceRange = _SupplierProductManager.GetPriceRangeForSupAndProduct(produceInDepotDetail.Product.SupplierId, produceInDepotDetail.ProductId);
-                        //produceInDepotDetail.ProduceInDepotPrice = BL.SupplierProductManager.CountPrice(produceInDepotDetail.PriceRange, (double)produceInDepotDetail.ProduceQuantity);
-                        produceInDepotDetail.ProduceInDepotPrice = item.InvoiceXODetailPrice;
-                        //if (price != 0)
-                        //    produceInDepotDetail.ProduceInDepotPrice = price;
-                        //if (produceInDepotDetail.ProduceInDepotPrice == null)
-                        //    produceInDepotDetail.ProduceInDepotPrice = 0;
-                        produceInDepotDetail.ProduceMoney = produceInDepotDetail.ProduceInDepotPrice * (decimal)produceInDepotDetail.ProduceQuantity;
-
-                        this.produceInDepot.Details.Add(produceInDepotDetail);
-
-                        this.bindingSourceDetails.Position = this.bindingSourceDetails.IndexOf(produceInDepotDetail);
-                    }
-                }
-                this.gridControl1.RefreshDataSource();
-            }
-            form.Dispose();
-            GC.Collect();
         }
 
         private bool CanAdd(IList<Model.ProduceInDepotDetail> list)

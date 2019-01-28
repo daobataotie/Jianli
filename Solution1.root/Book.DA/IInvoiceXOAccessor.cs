@@ -27,6 +27,8 @@ namespace Book.DA
         Model.InvoiceXO SelectMpsIsClose(string mpsheader);
         string GetCurrencyByInvoiceId(string invoiceId);
         Model.InvoiceXO SelectByMPSDetailId(string mpsDetailId);
+
+        string SelectCusXOIdByInvoiceId(string invoiceId);
     }
 }
 
