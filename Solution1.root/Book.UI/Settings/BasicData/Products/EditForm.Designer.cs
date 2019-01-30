@@ -38,6 +38,7 @@ namespace Book.UI.Settings.BasicData.Products
             this.gridColumn26 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn27 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn52 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn53 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
@@ -499,7 +500,8 @@ namespace Book.UI.Settings.BasicData.Products
             this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem13 = new DevExpress.XtraBars.BarButtonItem();
-            this.gridColumn53 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btn_StockExportExcel = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlItem78 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -896,6 +898,7 @@ namespace Book.UI.Settings.BasicData.Products
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem43)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem161)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem78)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -996,6 +999,12 @@ namespace Book.UI.Settings.BasicData.Products
             resources.ApplyResources(this.gridColumn52, "gridColumn52");
             this.gridColumn52.FieldName = "InternalDescription";
             this.gridColumn52.Name = "gridColumn52";
+            // 
+            // gridColumn53
+            // 
+            resources.ApplyResources(this.gridColumn53, "gridColumn53");
+            this.gridColumn53.FieldName = "Id";
+            this.gridColumn53.Name = "gridColumn53";
             // 
             // xtraTabControl1
             // 
@@ -4880,12 +4889,13 @@ namespace Book.UI.Settings.BasicData.Products
             // 
             // layoutControl12
             // 
+            this.layoutControl12.Controls.Add(this.btn_StockExportExcel);
             this.layoutControl12.Controls.Add(this.calcEditStock1);
             this.layoutControl12.Controls.Add(this.calcEditStock0);
-            this.layoutControl12.Controls.Add(this.simpleButtonStock);
             this.layoutControl12.Controls.Add(this.dateEditStockStart);
-            this.layoutControl12.Controls.Add(this.dateEditStockEnd);
             this.layoutControl12.Controls.Add(this.gridControlStock);
+            this.layoutControl12.Controls.Add(this.simpleButtonStock);
+            this.layoutControl12.Controls.Add(this.dateEditStockEnd);
             resources.ApplyResources(this.layoutControl12, "layoutControl12");
             this.layoutControl12.Name = "layoutControl12";
             this.layoutControl12.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(103, 236, 250, 350);
@@ -5098,9 +5108,10 @@ namespace Book.UI.Settings.BasicData.Products
             this.layoutControlItem89,
             this.layoutControlItem91,
             this.layoutControlItem92,
-            this.layoutControlItem93,
             this.layoutControlItem95,
-            this.layoutControlItem96});
+            this.layoutControlItem96,
+            this.layoutControlItem78,
+            this.layoutControlItem93});
             this.layoutControlGroup13.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup13.Name = "Root";
             this.layoutControlGroup13.Size = new System.Drawing.Size(613, 395);
@@ -5122,9 +5133,9 @@ namespace Book.UI.Settings.BasicData.Products
             // 
             this.layoutControlItem91.Control = this.dateEditStockEnd;
             resources.ApplyResources(this.layoutControlItem91, "layoutControlItem91");
-            this.layoutControlItem91.Location = new System.Drawing.Point(136, 0);
+            this.layoutControlItem91.Location = new System.Drawing.Point(134, 0);
             this.layoutControlItem91.Name = "layoutControlItem91";
-            this.layoutControlItem91.Size = new System.Drawing.Size(139, 26);
+            this.layoutControlItem91.Size = new System.Drawing.Size(133, 26);
             this.layoutControlItem91.TextSize = new System.Drawing.Size(52, 14);
             // 
             // layoutControlItem92
@@ -5133,16 +5144,16 @@ namespace Book.UI.Settings.BasicData.Products
             resources.ApplyResources(this.layoutControlItem92, "layoutControlItem92");
             this.layoutControlItem92.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem92.Name = "layoutControlItem92";
-            this.layoutControlItem92.Size = new System.Drawing.Size(136, 26);
+            this.layoutControlItem92.Size = new System.Drawing.Size(134, 26);
             this.layoutControlItem92.TextSize = new System.Drawing.Size(52, 14);
             // 
             // layoutControlItem93
             // 
             this.layoutControlItem93.Control = this.simpleButtonStock;
             resources.ApplyResources(this.layoutControlItem93, "layoutControlItem93");
-            this.layoutControlItem93.Location = new System.Drawing.Point(275, 0);
+            this.layoutControlItem93.Location = new System.Drawing.Point(487, 0);
             this.layoutControlItem93.Name = "layoutControlItem93";
-            this.layoutControlItem93.Size = new System.Drawing.Size(51, 26);
+            this.layoutControlItem93.Size = new System.Drawing.Size(39, 26);
             this.layoutControlItem93.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem93.TextToControlDistance = 0;
             this.layoutControlItem93.TextVisible = false;
@@ -5151,18 +5162,18 @@ namespace Book.UI.Settings.BasicData.Products
             // 
             this.layoutControlItem95.Control = this.calcEditStock0;
             resources.ApplyResources(this.layoutControlItem95, "layoutControlItem95");
-            this.layoutControlItem95.Location = new System.Drawing.Point(326, 0);
+            this.layoutControlItem95.Location = new System.Drawing.Point(267, 0);
             this.layoutControlItem95.Name = "layoutControlItem95";
-            this.layoutControlItem95.Size = new System.Drawing.Size(134, 26);
+            this.layoutControlItem95.Size = new System.Drawing.Size(110, 26);
             this.layoutControlItem95.TextSize = new System.Drawing.Size(52, 14);
             // 
             // layoutControlItem96
             // 
             this.layoutControlItem96.Control = this.calcEditStock1;
             resources.ApplyResources(this.layoutControlItem96, "layoutControlItem96");
-            this.layoutControlItem96.Location = new System.Drawing.Point(460, 0);
+            this.layoutControlItem96.Location = new System.Drawing.Point(377, 0);
             this.layoutControlItem96.Name = "layoutControlItem96";
-            this.layoutControlItem96.Size = new System.Drawing.Size(133, 26);
+            this.layoutControlItem96.Size = new System.Drawing.Size(110, 26);
             this.layoutControlItem96.TextSize = new System.Drawing.Size(52, 14);
             // 
             // xtraTabPageOtherCompact
@@ -5737,11 +5748,23 @@ namespace Book.UI.Settings.BasicData.Products
             this.barButtonItem13.Name = "barButtonItem13";
             this.barButtonItem13.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem13_ItemClick);
             // 
-            // gridColumn53
+            // btn_StockExportExcel
             // 
-            resources.ApplyResources(this.gridColumn53, "gridColumn53");
-            this.gridColumn53.FieldName = "Id";
-            this.gridColumn53.Name = "gridColumn53";
+            resources.ApplyResources(this.btn_StockExportExcel, "btn_StockExportExcel");
+            this.btn_StockExportExcel.Name = "btn_StockExportExcel";
+            this.btn_StockExportExcel.StyleController = this.layoutControl12;
+            this.btn_StockExportExcel.Click += new System.EventHandler(this.btn_StockExportExcel_Click);
+            // 
+            // layoutControlItem78
+            // 
+            this.layoutControlItem78.Control = this.btn_StockExportExcel;
+            resources.ApplyResources(this.layoutControlItem78, "layoutControlItem78");
+            this.layoutControlItem78.Location = new System.Drawing.Point(526, 0);
+            this.layoutControlItem78.Name = "layoutControlItem78";
+            this.layoutControlItem78.Size = new System.Drawing.Size(67, 26);
+            this.layoutControlItem78.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem78.TextToControlDistance = 0;
+            this.layoutControlItem78.TextVisible = false;
             // 
             // EditForm
             // 
@@ -6149,6 +6172,7 @@ namespace Book.UI.Settings.BasicData.Products
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem43)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem161)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem78)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -6625,5 +6649,7 @@ namespace Book.UI.Settings.BasicData.Products
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem114;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn52;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn53;
+        private DevExpress.XtraEditors.SimpleButton btn_StockExportExcel;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem78;
     }
 }

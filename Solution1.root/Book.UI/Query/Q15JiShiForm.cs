@@ -36,7 +36,7 @@ namespace Book.UI.Query
             }
             DateTime date = this.dateEdit1.DateTime.Date.AddDays(1);
             IList<Model.StockSeach> stockList = new List<Model.StockSeach>();
-            dt = this.miscDataManager.SelectByCondition("Q15", this.lookUpEditDepotStar.EditValue == null ? null : this.lookUpEditDepotStar.EditValue.ToString(), lookUpEditDepotPosition.EditValue == null ? null : lookUpEditDepotPosition.EditValue.ToString(), null, this.textProductNameOrId.Text, this.btn_ProductNameStart.Text, this.btn_ProductNameEnd.Text, this.LookUpProductCategoryStart.EditValue == null ? null : this.LookUpProductCategoryStart.EditValue.ToString(), this.lookUpProductCategoryEnd.EditValue == null ? null : this.lookUpProductCategoryEnd.EditValue.ToString(), true);//this.checkEditShowZeroProduct.Checked 改为true，因为即时库存查的是当天库存，当天库存不为0，现在为0的情况就会查不出，故此，不显示为0库存要在查出以后做判断。
+            dt = this.miscDataManager.SelectByCondition("Q15", this.lookUpEditDepotStar.EditValue == null ? null : this.lookUpEditDepotStar.EditValue.ToString(), lookUpEditDepotPosition.EditValue == null ? null : lookUpEditDepotPosition.EditValue.ToString(), null, this.textProductNameOrId.Text, this.btn_ProductNameStart.Text, this.btn_ProductNameEnd.Text, this.LookUpProductCategoryStart.EditValue == null ? null : this.LookUpProductCategoryStart.EditValue.ToString(), this.lookUpProductCategoryEnd.EditValue == null ? null : this.lookUpProductCategoryEnd.EditValue.ToString(), true, this.txt_Product_Id.Text);//this.checkEditShowZeroProduct.Checked 改为true，因为即时库存查的是当天库存，当天库存不为0，现在为0的情况就会查不出，故此，不显示为0库存要在查出以后做判断。
 
             for (int i = 0; i < dt.Rows.Count; i++)
             {
@@ -129,7 +129,7 @@ namespace Book.UI.Query
             dt.DefaultView.Sort = "spid,Quantity asc";
             dt = dt.DefaultView.ToTable();
             DataRow[] dr = dt.Select("Quantity<>'0'");
-            if (!this.checkEditShowZeroProduct.Checked && dr.Count()>0)
+            if (!this.checkEditShowZeroProduct.Checked && dr.Count() > 0)
                 dt = dr.CopyToDataTable();
             this.gridControl1.DataSource = dt;
             this.labelControl1.Text = dt.Rows.Count.ToString() + " 项";

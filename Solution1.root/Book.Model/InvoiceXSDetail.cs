@@ -111,6 +111,7 @@ namespace Book.Model
             }
         }
 
+        public string Product_Id { get; set; }
         public string ProductName { get; set; }
         public string ProductSpecification { get; set; }
         public DateTime? InvoiceDate { get; set; }

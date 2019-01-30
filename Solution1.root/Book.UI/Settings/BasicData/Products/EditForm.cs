@@ -2088,6 +2088,8 @@ namespace Book.UI.Settings.BasicData.Products
             this.radioGroupBarCode.Properties.ReadOnly = true;
             this.textEditProductBarCode.Properties.ReadOnly = true;
 
+            this.btn_StockExportExcel.Enabled = true;
+
             this.dateEditInsertTime.Enabled = false;
         }
 
@@ -3752,6 +3754,21 @@ namespace Book.UI.Settings.BasicData.Products
 
             //Invoices.CG.ROLable r = new Book.UI.Invoices.CG.ROLable(list);
             //r.ShowPreviewDialog();
+        }
+
+        private void btn_StockExportExcel_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Title = "選擇保存路徑";
+            sfd.AddExtension = true;
+            sfd.DefaultExt = ".xlsx";
+            sfd.Filter = "Excel文件(*.xlsx)|*.xlsx";
+            if (sfd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                this.gridViewStock.OptionsPrint.AutoWidth = false;
+
+                this.gridViewStock.ExportToXlsx(sfd.FileName, new DevExpress.XtraPrinting.XlsxExportOptions { SheetName = "庫存記錄"});
+            }
         }
 
         //private void newChooseContorlCustomer_EditValueChanged(object sender, EventArgs e)

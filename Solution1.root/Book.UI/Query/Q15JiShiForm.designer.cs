@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.txt_Product_Id = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.checkEditShowZeroProduct = new DevExpress.XtraEditors.CheckEdit();
             this.lookUpEditDepotPosition = new DevExpress.XtraEditors.LookUpEdit();
@@ -57,13 +58,13 @@
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -71,6 +72,8 @@
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -79,6 +82,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Product_Id.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEditShowZeroProduct.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditDepotPosition.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDepotPosition)).BeginInit();
@@ -100,7 +104,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
@@ -108,6 +111,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
@@ -121,6 +126,7 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.txt_Product_Id);
             this.layoutControl1.Controls.Add(this.labelControl1);
             this.layoutControl1.Controls.Add(this.checkEditShowZeroProduct);
             this.layoutControl1.Controls.Add(this.lookUpEditDepotPosition);
@@ -142,6 +148,15 @@
             this.layoutControl1.TabIndex = 4;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // txt_Product_Id
+            // 
+            this.txt_Product_Id.Location = new System.Drawing.Point(366, 12);
+            this.txt_Product_Id.MenuManager = this.barManager1;
+            this.txt_Product_Id.Name = "txt_Product_Id";
+            this.txt_Product_Id.Size = new System.Drawing.Size(146, 21);
+            this.txt_Product_Id.StyleController = this.layoutControl1;
+            this.txt_Product_Id.TabIndex = 17;
+            // 
             // labelControl1
             // 
             this.labelControl1.Location = new System.Drawing.Point(12, 504);
@@ -152,17 +167,17 @@
             // 
             // checkEditShowZeroProduct
             // 
-            this.checkEditShowZeroProduct.Location = new System.Drawing.Point(496, 62);
+            this.checkEditShowZeroProduct.Location = new System.Drawing.Point(410, 62);
             this.checkEditShowZeroProduct.MenuManager = this.barManager1;
             this.checkEditShowZeroProduct.Name = "checkEditShowZeroProduct";
             this.checkEditShowZeroProduct.Properties.Caption = "显示0库存商品";
-            this.checkEditShowZeroProduct.Size = new System.Drawing.Size(105, 19);
+            this.checkEditShowZeroProduct.Size = new System.Drawing.Size(102, 19);
             this.checkEditShowZeroProduct.StyleController = this.layoutControl1;
             this.checkEditShowZeroProduct.TabIndex = 15;
             // 
             // lookUpEditDepotPosition
             // 
-            this.lookUpEditDepotPosition.Location = new System.Drawing.Point(871, 37);
+            this.lookUpEditDepotPosition.Location = new System.Drawing.Point(820, 37);
             this.lookUpEditDepotPosition.MenuManager = this.barManager1;
             this.lookUpEditDepotPosition.Name = "lookUpEditDepotPosition";
             this.lookUpEditDepotPosition.Properties.AutoHeight = false;
@@ -178,7 +193,7 @@
             this.lookUpEditDepotPosition.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.lookUpEditDepotPosition.Properties.ValueMember = "DepotPositionId";
             this.lookUpEditDepotPosition.Properties.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.lookUpEditDepotPosition_Properties_ButtonClick);
-            this.lookUpEditDepotPosition.Size = new System.Drawing.Size(143, 21);
+            this.lookUpEditDepotPosition.Size = new System.Drawing.Size(194, 21);
             this.lookUpEditDepotPosition.StyleController = this.layoutControl1;
             this.lookUpEditDepotPosition.TabIndex = 6;
             // 
@@ -193,18 +208,18 @@
             this.textProductNameOrId.Properties.Mask.SaveLiteral = false;
             this.textProductNameOrId.Properties.Mask.ShowPlaceHolders = false;
             this.textProductNameOrId.Properties.NullValuePrompt = null;
-            this.textProductNameOrId.Size = new System.Drawing.Size(364, 22);
+            this.textProductNameOrId.Size = new System.Drawing.Size(278, 22);
             this.textProductNameOrId.StyleController = this.layoutControl1;
             this.textProductNameOrId.TabIndex = 9;
             // 
             // btn_ProductNameStart
             // 
-            this.btn_ProductNameStart.Location = new System.Drawing.Point(393, 12);
+            this.btn_ProductNameStart.Location = new System.Drawing.Point(609, 12);
             this.btn_ProductNameStart.MenuManager = this.barManager1;
             this.btn_ProductNameStart.Name = "btn_ProductNameStart";
             this.btn_ProductNameStart.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.btn_ProductNameStart.Size = new System.Drawing.Size(208, 21);
+            this.btn_ProductNameStart.Size = new System.Drawing.Size(152, 21);
             this.btn_ProductNameStart.StyleController = this.layoutControl1;
             this.btn_ProductNameStart.TabIndex = 12;
             this.btn_ProductNameStart.EditValueChanged += new System.EventHandler(this.btn_ProductNameStart_EditValueChanged);
@@ -212,7 +227,7 @@
             // 
             // lookUpEditDepotStar
             // 
-            this.lookUpEditDepotStar.Location = new System.Drawing.Point(662, 37);
+            this.lookUpEditDepotStar.Location = new System.Drawing.Point(573, 37);
             this.lookUpEditDepotStar.MenuManager = this.barManager1;
             this.lookUpEditDepotStar.Name = "lookUpEditDepotStar";
             this.lookUpEditDepotStar.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -224,14 +239,14 @@
             this.lookUpEditDepotStar.Properties.DisplayMember = "DepotName";
             this.lookUpEditDepotStar.Properties.NullText = "";
             this.lookUpEditDepotStar.Properties.ValueMember = "DepotId";
-            this.lookUpEditDepotStar.Size = new System.Drawing.Size(150, 21);
+            this.lookUpEditDepotStar.Size = new System.Drawing.Size(188, 21);
             this.lookUpEditDepotStar.StyleController = this.layoutControl1;
             this.lookUpEditDepotStar.TabIndex = 10;
             this.lookUpEditDepotStar.EditValueChanged += new System.EventHandler(this.lookUpEditDepotStar_EditValueChanged);
             // 
             // lookUpProductCategoryEnd
             // 
-            this.lookUpProductCategoryEnd.Location = new System.Drawing.Point(394, 37);
+            this.lookUpProductCategoryEnd.Location = new System.Drawing.Point(366, 37);
             this.lookUpProductCategoryEnd.MenuManager = this.barManager1;
             this.lookUpProductCategoryEnd.Name = "lookUpProductCategoryEnd";
             this.lookUpProductCategoryEnd.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -243,18 +258,18 @@
             this.lookUpProductCategoryEnd.Properties.DisplayMember = "ProductCategoryName";
             this.lookUpProductCategoryEnd.Properties.NullText = "";
             this.lookUpProductCategoryEnd.Properties.ValueMember = "Id";
-            this.lookUpProductCategoryEnd.Size = new System.Drawing.Size(207, 21);
+            this.lookUpProductCategoryEnd.Size = new System.Drawing.Size(146, 21);
             this.lookUpProductCategoryEnd.StyleController = this.layoutControl1;
             this.lookUpProductCategoryEnd.TabIndex = 9;
             // 
             // btn_ProductNameEnd
             // 
-            this.btn_ProductNameEnd.Location = new System.Drawing.Point(662, 12);
+            this.btn_ProductNameEnd.Location = new System.Drawing.Point(822, 12);
             this.btn_ProductNameEnd.MenuManager = this.barManager1;
             this.btn_ProductNameEnd.Name = "btn_ProductNameEnd";
             this.btn_ProductNameEnd.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.btn_ProductNameEnd.Size = new System.Drawing.Size(352, 21);
+            this.btn_ProductNameEnd.Size = new System.Drawing.Size(192, 21);
             this.btn_ProductNameEnd.StyleController = this.layoutControl1;
             this.btn_ProductNameEnd.TabIndex = 13;
             this.btn_ProductNameEnd.Click += new System.EventHandler(this.btn_ProductNameEnd_Click);
@@ -288,7 +303,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEdit1.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.dateEdit1.Size = new System.Drawing.Size(168, 21);
+            this.dateEdit1.Size = new System.Drawing.Size(169, 21);
             this.dateEdit1.StyleController = this.layoutControl1;
             this.dateEdit1.TabIndex = 4;
             // 
@@ -323,7 +338,8 @@
             this.gridColumn5,
             this.gridColumn8,
             this.gridColumn9,
-            this.gridColumn11});
+            this.gridColumn11,
+            this.gridColumn12});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
@@ -373,7 +389,7 @@
             this.gridColumn6.FieldName = "CnName";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 6;
+            this.gridColumn6.VisibleIndex = 7;
             this.gridColumn6.Width = 59;
             // 
             // gridColumn2
@@ -407,7 +423,7 @@
             this.gridColumn3.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.True;
             this.gridColumn3.OptionsFilter.AllowFilter = false;
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 7;
+            this.gridColumn3.VisibleIndex = 8;
             this.gridColumn3.Width = 81;
             // 
             // gridColumn10
@@ -425,7 +441,7 @@
             this.gridColumn10.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.True;
             this.gridColumn10.OptionsFilter.AllowFilter = false;
             this.gridColumn10.Visible = true;
-            this.gridColumn10.VisibleIndex = 9;
+            this.gridColumn10.VisibleIndex = 10;
             this.gridColumn10.Width = 77;
             // 
             // gridColumn5
@@ -435,7 +451,7 @@
             this.gridColumn5.FieldName = "ProductDescription";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 10;
+            this.gridColumn5.VisibleIndex = 11;
             this.gridColumn5.Width = 119;
             // 
             // repositoryItemRichTextEdit1
@@ -457,7 +473,7 @@
             this.gridColumn9.FieldName = "ProductVersion";
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 5;
+            this.gridColumn9.VisibleIndex = 6;
             this.gridColumn9.Width = 38;
             // 
             // gridColumn11
@@ -466,13 +482,22 @@
             this.gridColumn11.FieldName = "OrderOnWayQuantity";
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.Visible = true;
-            this.gridColumn11.VisibleIndex = 8;
+            this.gridColumn11.VisibleIndex = 9;
+            // 
+            // gridColumn12
+            // 
+            this.gridColumn12.Caption = "內部描述";
+            this.gridColumn12.FieldName = "InternalDescription";
+            this.gridColumn12.Name = "gridColumn12";
+            this.gridColumn12.Visible = true;
+            this.gridColumn12.VisibleIndex = 5;
+            this.gridColumn12.Width = 150;
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(605, 62);
+            this.simpleButton1.Location = new System.Drawing.Point(516, 62);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(409, 22);
+            this.simpleButton1.Size = new System.Drawing.Size(498, 22);
             this.simpleButton1.StyleController = this.layoutControl1;
             this.simpleButton1.TabIndex = 5;
             this.simpleButton1.Text = "查询";
@@ -488,14 +513,15 @@
             this.layoutControlItem3,
             this.layoutControlItem6,
             this.layoutControlItem7,
-            this.layoutControlItem4,
             this.layoutControlItem5,
             this.layoutControlItem15,
             this.layoutControlItem10,
             this.layoutControlItem8,
             this.layoutControlItem2,
             this.layoutControlItem17,
-            this.layoutControlItem18});
+            this.layoutControlItem18,
+            this.layoutControlItem4,
+            this.layoutControlItem16});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(1026, 530);
@@ -509,7 +535,7 @@
             this.layoutControlItem1.CustomizationFormText = "日期：";
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(288, 25);
+            this.layoutControlItem1.Size = new System.Drawing.Size(289, 25);
             this.layoutControlItem1.Text = "日期：";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(112, 14);
             // 
@@ -541,31 +567,19 @@
             this.layoutControlItem7.CustomizationFormText = "至：";
             this.layoutControlItem7.Location = new System.Drawing.Point(289, 25);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(304, 25);
+            this.layoutControlItem7.Size = new System.Drawing.Size(215, 25);
             this.layoutControlItem7.Text = "至：";
             this.layoutControlItem7.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(88, 20);
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(60, 20);
             this.layoutControlItem7.TextToControlDistance = 5;
-            // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.Control = this.btn_ProductNameStart;
-            this.layoutControlItem4.CustomizationFormText = "商品名称    自：";
-            this.layoutControlItem4.Location = new System.Drawing.Point(288, 0);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(305, 25);
-            this.layoutControlItem4.Text = "商品名称    自：";
-            this.layoutControlItem4.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(88, 14);
-            this.layoutControlItem4.TextToControlDistance = 5;
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.btn_ProductNameEnd;
             this.layoutControlItem5.CustomizationFormText = "至：";
-            this.layoutControlItem5.Location = new System.Drawing.Point(593, 0);
+            this.layoutControlItem5.Location = new System.Drawing.Point(753, 0);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(413, 25);
+            this.layoutControlItem5.Size = new System.Drawing.Size(253, 25);
             this.layoutControlItem5.Text = "至：";
             this.layoutControlItem5.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem5.TextSize = new System.Drawing.Size(52, 20);
@@ -575,9 +589,9 @@
             // 
             this.layoutControlItem15.Control = this.lookUpEditDepotPosition;
             this.layoutControlItem15.CustomizationFormText = "货位：";
-            this.layoutControlItem15.Location = new System.Drawing.Point(804, 25);
+            this.layoutControlItem15.Location = new System.Drawing.Point(753, 25);
             this.layoutControlItem15.Name = "layoutControlItem15";
-            this.layoutControlItem15.Size = new System.Drawing.Size(202, 25);
+            this.layoutControlItem15.Size = new System.Drawing.Size(253, 25);
             this.layoutControlItem15.Text = "货位：";
             this.layoutControlItem15.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem15.TextSize = new System.Drawing.Size(50, 20);
@@ -589,7 +603,7 @@
             this.layoutControlItem10.CustomizationFormText = "商品名称关键字:";
             this.layoutControlItem10.Location = new System.Drawing.Point(0, 50);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(484, 26);
+            this.layoutControlItem10.Size = new System.Drawing.Size(398, 26);
             this.layoutControlItem10.Text = "商品名称关键字:";
             this.layoutControlItem10.TextSize = new System.Drawing.Size(112, 14);
             // 
@@ -597,9 +611,9 @@
             // 
             this.layoutControlItem8.Control = this.lookUpEditDepotStar;
             this.layoutControlItem8.CustomizationFormText = "库房    自：";
-            this.layoutControlItem8.Location = new System.Drawing.Point(593, 25);
+            this.layoutControlItem8.Location = new System.Drawing.Point(504, 25);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(211, 25);
+            this.layoutControlItem8.Size = new System.Drawing.Size(249, 25);
             this.layoutControlItem8.Text = "库房    ：";
             this.layoutControlItem8.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem8.TextSize = new System.Drawing.Size(52, 14);
@@ -609,9 +623,9 @@
             // 
             this.layoutControlItem2.Control = this.simpleButton1;
             this.layoutControlItem2.CustomizationFormText = "layoutControlItem2";
-            this.layoutControlItem2.Location = new System.Drawing.Point(593, 50);
+            this.layoutControlItem2.Location = new System.Drawing.Point(504, 50);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(413, 26);
+            this.layoutControlItem2.Size = new System.Drawing.Size(502, 26);
             this.layoutControlItem2.Text = "layoutControlItem2";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextToControlDistance = 0;
@@ -621,9 +635,9 @@
             // 
             this.layoutControlItem17.Control = this.checkEditShowZeroProduct;
             this.layoutControlItem17.CustomizationFormText = "layoutControlItem17";
-            this.layoutControlItem17.Location = new System.Drawing.Point(484, 50);
+            this.layoutControlItem17.Location = new System.Drawing.Point(398, 50);
             this.layoutControlItem17.Name = "layoutControlItem17";
-            this.layoutControlItem17.Size = new System.Drawing.Size(109, 26);
+            this.layoutControlItem17.Size = new System.Drawing.Size(106, 26);
             this.layoutControlItem17.Text = "layoutControlItem17";
             this.layoutControlItem17.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem17.TextToControlDistance = 0;
@@ -640,6 +654,30 @@
             this.layoutControlItem18.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem18.TextToControlDistance = 0;
             this.layoutControlItem18.TextVisible = false;
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.btn_ProductNameStart;
+            this.layoutControlItem4.CustomizationFormText = "商品名称    自：";
+            this.layoutControlItem4.Location = new System.Drawing.Point(504, 0);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(249, 25);
+            this.layoutControlItem4.Text = "商品名称    自：";
+            this.layoutControlItem4.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(88, 14);
+            this.layoutControlItem4.TextToControlDistance = 5;
+            // 
+            // layoutControlItem16
+            // 
+            this.layoutControlItem16.Control = this.txt_Product_Id;
+            this.layoutControlItem16.CustomizationFormText = "商品编号：";
+            this.layoutControlItem16.Location = new System.Drawing.Point(289, 0);
+            this.layoutControlItem16.Name = "layoutControlItem16";
+            this.layoutControlItem16.Size = new System.Drawing.Size(215, 25);
+            this.layoutControlItem16.Text = "商品编号：";
+            this.layoutControlItem16.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem16.TextSize = new System.Drawing.Size(60, 14);
+            this.layoutControlItem16.TextToControlDistance = 5;
             // 
             // layoutControlItem9
             // 
@@ -704,6 +742,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Product_Id.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEditShowZeroProduct.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditDepotPosition.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDepotPosition)).EndInit();
@@ -725,7 +764,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
@@ -733,6 +771,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
@@ -791,5 +831,8 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem18;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
+        private DevExpress.XtraEditors.TextEdit txt_Product_Id;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
     }
 }

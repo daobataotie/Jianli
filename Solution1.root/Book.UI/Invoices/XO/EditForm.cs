@@ -31,6 +31,7 @@ namespace Book.UI.Invoices.XO
         private Model.InvoiceXJ invoicexj;
         private IList<Model.Product> productlook = new List<Model.Product>();
         private BL.ExchangeRateManager exchangeRateManager = new Book.BL.ExchangeRateManager();
+        private BL.InvoiceXSDetailManager invoiceXSDetailManager = new Book.BL.InvoiceXSDetailManager();
         //设置tag 确定在gridView1_CellValueChanged事件执行后执行gridView1_RowCountChanged中UpdateMoneyFields()
         int tags = 0;
         private const int SISHEWURU_WEISHU = 3;
@@ -852,7 +853,11 @@ namespace Book.UI.Invoices.XO
             else
             {
                 if (this.action == "view")
+                {
                     this.invoice = this.invoiceManager.Get(invoice.InvoiceId);
+
+                    this.gridControl2.DataSource = invoiceXSDetailManager.SelectByInvoiceXOId(this.invoice.InvoiceId);
+                }
             }
             //// this.bindingSourceproduct.DataSource = this.productManager.Select(this.invoice.xocustomer);
             // if (this.invoice.Customer != null)//
@@ -945,6 +950,8 @@ namespace Book.UI.Invoices.XO
 
             this.btn_UpdatePrice.Enabled = true;
             this.textEditInvoiceId.Properties.ReadOnly = true;
+
+            this.gridView2.OptionsBehavior.Editable = true;
             //this.buttonEditEmployee.Enabled = false;
             //this.buttonEditEmployee1.Enabled = false;
         }
@@ -1097,8 +1104,8 @@ namespace Book.UI.Invoices.XO
             //    }
             //    detail.InvoiceXODetailMoney =global::Helper.DateTimeParse.GetSiSheWuRu(  decimal.Parse(detail.InvoiceXODetailQuantity.ToString()) * detail.InvoiceXODetailPrice.Value,0);
             //}
-            //this.spinEditInvoiceTaxRate1.Properties.Buttons[1].Enabled = flag == 1 ? false : true;
-            this.spinEditInvoiceTaxRate1.Properties.Buttons[2].Enabled = flag == -1 ? false : true;
+            this.spinEditInvoiceTaxRate1.Properties.Buttons[1].Enabled = flag == 1 ? false : true;
+            this.spinEditInvoiceTaxRate1.Properties.Buttons[2].Enabled = flag == 2 ? false : true;
             this.UpdateMoneyFields();
         }
 
@@ -1678,6 +1685,17 @@ namespace Book.UI.Invoices.XO
         {
             if (this.action != "view")
                 this.spe_TaibiMoney.EditValue = this.spe_TaibiExchangeRate.Value * Convert.ToDecimal(calcEditInvoiceTotal0xset.EditValue.ToString());
+        }
+
+        private void repositoryItemHyperLinkEdit1_Click(object sender, EventArgs e)
+        {
+            string invoiceId = ((HyperLinkEdit)sender).Text;
+            if (!string.IsNullOrEmpty(invoiceId))
+            {
+                XS.EditForm f = new Book.UI.Invoices.XS.EditForm(invoiceId);
+                f.StartPosition = FormStartPosition.CenterScreen;
+                f.ShowDialog(this);
+            }
         }
     }
 }

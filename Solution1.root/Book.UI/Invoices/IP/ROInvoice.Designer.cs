@@ -204,16 +204,16 @@
             this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrPictureBox1});
             this.ReportHeader.Dpi = 254F;
-            this.ReportHeader.HeightF = 481.5417F;
+            this.ReportHeader.HeightF = 333.375F;
             this.ReportHeader.Name = "ReportHeader";
             // 
             // xrPictureBox1
             // 
             this.xrPictureBox1.Dpi = 254F;
             this.xrPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("xrPictureBox1.Image")));
-            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(145.5208F, 0F);
+            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(4.855627F, 0F);
             this.xrPictureBox1.Name = "xrPictureBox1";
-            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(1719.792F, 481.5417F);
+            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(1987.457F, 333.375F);
             // 
             // PageHeader
             // 

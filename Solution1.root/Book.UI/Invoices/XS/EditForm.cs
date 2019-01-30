@@ -1160,6 +1160,7 @@ namespace Book.UI.Invoices.XS
                     this.calcEditInvoiceHejiset.EditValue = yse;
                     this.calcEditInvoiceTaxset.EditValue = 0;
                     this.calcEditInvoiceTotalset.EditValue = this.GetDecimal(yse + decimal.Parse(this.calcEditInvoiceTaxset.EditValue.ToString()) - this.calcInvoiceAllowance.Value + decimal.Parse(this.textEditOtherChargeMoneyset.Text), BL.V.SetDataFormat.XSZJXiao.Value);
+
                 }
                 else if (flag == 1)
                 {
@@ -1168,14 +1169,17 @@ namespace Book.UI.Invoices.XS
                     this.calcEditInvoiceHejiset.EditValue = yse;
                     this.calcEditInvoiceTaxset.EditValue = this.GetDecimal(yse * this.spinEditInvoiceTaxRate.Value / 100, BL.V.SetDataFormat.XSZJXiao.Value);
                     this.calcEditInvoiceTotalset.EditValue = this.GetDecimal(yse + decimal.Parse(this.calcEditInvoiceTaxset.EditValue.ToString()) - this.calcInvoiceAllowance.Value + decimal.Parse(this.textEditOtherChargeMoneyset.Text), BL.V.SetDataFormat.XSZJXiao.Value);
-                    
 
-                    this.spe_TaibiTotal.Text = (totalTaibi * (1 + this.spinEditInvoiceTaxRate.Value / 100)).ToString();
+
+                    //this.spe_TaibiTotal.Text = (totalTaibi * (1 + this.spinEditInvoiceTaxRate.Value / 100)).ToString();
+                    totalTaibi = totalTaibi * (1 + this.spinEditInvoiceTaxRate.Value / 100);
                 }
                 else
                 {
                     this.comboBoxEditInvoiceKslb.SelectedIndex = 2;
                 }
+
+                this.spe_TaibiTotal.Text = totalTaibi.ToString();
                 //this.calcEditInvoiceHejiset.EditValue = yse;
                 //this.calcEditInvoiceTaxset.EditValue = this.GetDecimal(yse * this.spinEditInvoiceTaxRate.Value / 100, BL.V.SetDataFormat.XSZJXiao.Value);
                 //this.calcEditInvoiceTotalset.EditValue = this.GetDecimal(yse + decimal.Parse(this.calcEditInvoiceTaxset.EditValue.ToString()) - this.calcInvoiceAllowance.Value + decimal.Parse(this.textEditOtherChargeMoneyset.Text), BL.V.SetDataFormat.XSZJXiao.Value);

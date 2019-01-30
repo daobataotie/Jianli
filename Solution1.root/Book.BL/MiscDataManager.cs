@@ -27,9 +27,9 @@ namespace Book.BL
             return accessor.SelectStock(depotId, depotPositionId, productCategoryId, ProductNameOrId, pId, customerProductName);
         }
 
-        public System.Data.DataTable SelectByCondition(string queryId, string depotId, string depotPositionId, string productCategoryId, string ProductNameOrId, string proname1, string proname2, string protype1, string protype2, bool check)
+        public System.Data.DataTable SelectByCondition(string queryId, string depotId, string depotPositionId, string productCategoryId, string ProductNameOrId, string proname1, string proname2, string protype1, string protype2, bool check, string product_Id)
         {
-            return accessor.SelectByCondition(queryId, depotId, depotPositionId, productCategoryId, ProductNameOrId, proname1, proname2, protype1, protype2, check);
+            return accessor.SelectByCondition(queryId, depotId, depotPositionId, productCategoryId, ProductNameOrId, proname1, proname2, protype1, protype2, check, product_Id);
         }
 
         public DataTable SelectDataTable(DateTime endTime)

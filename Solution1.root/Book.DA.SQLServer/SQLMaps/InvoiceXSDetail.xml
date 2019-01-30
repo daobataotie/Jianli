@@ -134,5 +134,6 @@ AND ( InvoiceXOId IN(SELECT InvoiceId FROM InvoiceXS WHERE DepotId=#depotid#) OR
       SELECT * FROM InvoiceXSDetail WHERE 1 = 1 $value$
       ]]>
     </select>
+
   </statements>
 </sqlMap>

@@ -108,6 +108,10 @@ namespace Book.BL
             return accessor.SelectbyConditionXBiao(StartDate, EndDate, Yjri1, Yjri2, Customer1, Customer2, XOId1, XOId2, Product, Product2, CusXOId, OrderColumn, OrderType, isSpecial, product_Id);
         }
 
+        public IList<Model.InvoiceXSDetail> SelectByInvoiceXOId(string invoiceXOId)
+        {
+            return accessor.SelectByInvoiceXOId(invoiceXOId);
+        }
     }
 }
 

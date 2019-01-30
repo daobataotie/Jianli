@@ -479,7 +479,7 @@ namespace Book.DA.SQLServer
             return table;
         }
 
-        public System.Data.DataTable SelectStock( string depotId, string depotPositionId, string productCategoryId, string ProductNameOrId, string pId, string customerProductName)
+        public System.Data.DataTable SelectStock(string depotId, string depotPositionId, string productCategoryId, string ProductNameOrId, string pId, string customerProductName)
         {
             string sql = "select (isnull(p.ProduceMaterialDistributioned,0)+isnull(p.OtherMaterialDistributioned,0)) yifenpeiquantity,d.DepotName,p.Id as spid,p.ProductName,p.CustomerProductName,p.ProductVersion,pu.CnName,dp.Id as DepotPositionId,s.StockQuantity1 as Quantity,p.ProductDescription as ProductDesc,p.CustomerId,p.InternalDescription from stock s left join product p on s.ProductId=p.ProductId left join ProductUnit pu on pu.ProductUnitId=p.DepotUnitId left join Depot d on s.DepotId=d.DepotId left join DepotPosition dp on s.DepotPositionId=dp.DepotPositionId WHERE (d.depotid='" + depotId + "'  OR '" + depotId + "'='null' OR '" + depotId + "'='') AND (dp.DepotPositionId ='" + depotPositionId + "' OR '" + depotPositionId + "'='null' OR '" + depotPositionId + "'='') AND (p.productid IN(SELECT ProductId FROM Product WHERE ProductCategoryId='" + productCategoryId + "')  OR '" + productCategoryId + "'='null' OR '" + productCategoryId + "'=''   ) and  (p.productid IN(SELECT ProductId FROM Product WHERE ProductName  like '%" + ProductNameOrId + "%')  OR '" + ProductNameOrId + "'='null' OR '" + ProductNameOrId + "'='') and (p.ProductId in (select ProductId from Product where Id like '%" + pId + "%' or '" + pId + "'='' )) and (p.ProductId in (select ProductId from Product where CustomerProductName like '%" + customerProductName + "%' or '" + customerProductName + "'='')) and StockQuantity1<>0";
 
@@ -493,7 +493,7 @@ namespace Book.DA.SQLServer
             return table;
         }
 
-        public System.Data.DataTable SelectByCondition(string queryId, string depotId, string depotPositionId, string productCategoryId, string ProductNameOrId, string proname1, string proname2, string protype1, string protype2, bool check)
+        public System.Data.DataTable SelectByCondition(string queryId, string depotId, string depotPositionId, string productCategoryId, string ProductNameOrId, string proname1, string proname2, string protype1, string protype2, bool check, string product_Id)
         {
             System.Data.SqlClient.SqlDataAdapter sda = new System.Data.SqlClient.SqlDataAdapter();
             sda.SelectCommand = new System.Data.SqlClient.SqlCommand();
@@ -501,13 +501,15 @@ namespace Book.DA.SQLServer
 
             System.Data.DataTable table = new System.Data.DataTable();
 
-            string sql = "select stock.StockQuantity0,stock.productid,stock.depotpositionId as posoid , (select DepotName from Depot where DepotId = (select DepotId from depotposition where depotpositionId = stock.depotpositionId)) as DepotName,(select productName from product where productid = stock.productid) productName, (select OrderOnWayQuantity from Product where productid = stock.productid) as OrderOnWayQuantity,(select SafeStock from product where productid = stock.productid) SafeStock,(select CustomerProductName from product where productid = stock.productid) CustomerProductName,(select id from product where productid = stock.productid) spid,(select CnName from ProductUnit INNER JOIN product ON product.DepotUnitId = ProductUnit.ProductUnitId and product.productid = stock.productid) CnName,(select Id from depotposition where depotpositionId = stock.depotpositionId)  as DepotPositionId,StockQuantity1 as Quantity,0.0 as yifenpeiquantity from stock WHERE (depotid='" + depotId + "'  OR '" + depotId + "'='null' OR '" + depotId + "'='') AND (DepotPositionId ='" + depotPositionId + "' OR '" + depotPositionId + "'='null' OR '" + depotPositionId + "'='') AND (productid IN(SELECT ProductId FROM Product WHERE ProductCategoryId='" + productCategoryId + "')  OR '" + productCategoryId + "'='null' OR '" + productCategoryId + "'=''   ) and  (productid IN(SELECT ProductId FROM Product WHERE ProductName  like '%" + ProductNameOrId + "%')  OR '" + ProductNameOrId + "'='null' OR '" + ProductNameOrId + "'=''   ) ";
+            string sql = "select stock.StockQuantity0,stock.productid,stock.depotpositionId as posoid , (select DepotName from Depot where DepotId = (select DepotId from depotposition where depotpositionId = stock.depotpositionId)) as DepotName,(select productName from product where productid = stock.productid) productName,(select InternalDescription from product where productid = stock.productid) InternalDescription, (select OrderOnWayQuantity from Product where productid = stock.productid) as OrderOnWayQuantity,(select SafeStock from product where productid = stock.productid) SafeStock,(select CustomerProductName from product where productid = stock.productid) CustomerProductName,(select id from product where productid = stock.productid) spid,(select CnName from ProductUnit INNER JOIN product ON product.DepotUnitId = ProductUnit.ProductUnitId and product.productid = stock.productid) CnName,(select Id from depotposition where depotpositionId = stock.depotpositionId)  as DepotPositionId,StockQuantity1 as Quantity,0.0 as yifenpeiquantity from stock WHERE (depotid='" + depotId + "'  OR '" + depotId + "'='null' OR '" + depotId + "'='') AND (DepotPositionId ='" + depotPositionId + "' OR '" + depotPositionId + "'='null' OR '" + depotPositionId + "'='') AND (productid IN(SELECT ProductId FROM Product WHERE ProductCategoryId='" + productCategoryId + "')  OR '" + productCategoryId + "'='null' OR '" + productCategoryId + "'=''   ) and  (productid IN(SELECT ProductId FROM Product WHERE ProductName  like '%" + ProductNameOrId + "%')  OR '" + ProductNameOrId + "'='null' OR '" + ProductNameOrId + "'=''   ) ";
             if (check == false)
                 sql += "and StockQuantity1<>0";
             if (!string.IsNullOrEmpty(proname1) && !string.IsNullOrEmpty(proname2))
                 sql += " and stock.productid in(select productid from product where productname between '" + proname1 + "' and '" + proname2 + "' )";
             if (!string.IsNullOrEmpty(protype1) && !string.IsNullOrEmpty(protype2))
                 sql += " and stock.productid in(select productid from product where ProductCategoryId in (select ProductCategoryId from ProductCategory where   id between '" + protype1 + "' and '" + protype2 + "' ))  ";
+            if (!string.IsNullOrEmpty(product_Id.Trim()))
+                sql += " and stock.productid in(select productid from product where Id='" + product_Id + "')";
             sql += " order by productid";
 
             if (!string.IsNullOrEmpty(sql))
