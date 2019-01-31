@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Q15JiShiForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.txt_Product_Id = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -123,9 +124,20 @@
             // bar1
             // 
             this.bar1.OptionsBar.AllowQuickCustomization = false;
+            resources.ApplyResources(this.bar1, "bar1");
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.AccessibleDescription = null;
+            this.barButtonItem1.AccessibleName = null;
+            resources.ApplyResources(this.barButtonItem1, "barButtonItem1");
             // 
             // layoutControl1
             // 
+            this.layoutControl1.AccessibleDescription = null;
+            this.layoutControl1.AccessibleName = null;
+            resources.ApplyResources(this.layoutControl1, "layoutControl1");
+            this.layoutControl1.BackgroundImage = null;
             this.layoutControl1.Controls.Add(this.txt_Product_Id);
             this.layoutControl1.Controls.Add(this.labelControl1);
             this.layoutControl1.Controls.Add(this.checkEditShowZeroProduct);
@@ -139,194 +151,298 @@
             this.layoutControl1.Controls.Add(this.dateEdit1);
             this.layoutControl1.Controls.Add(this.gridControl1);
             this.layoutControl1.Controls.Add(this.simpleButton1);
-            this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl1.Location = new System.Drawing.Point(0, 47);
+            this.layoutControl1.Font = null;
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(291, 378, 250, 350);
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(1026, 530);
-            this.layoutControl1.TabIndex = 4;
-            this.layoutControl1.Text = "layoutControl1";
             // 
             // txt_Product_Id
             // 
-            this.txt_Product_Id.Location = new System.Drawing.Point(366, 12);
+            resources.ApplyResources(this.txt_Product_Id, "txt_Product_Id");
+            this.txt_Product_Id.BackgroundImage = null;
+            this.txt_Product_Id.EditValue = null;
             this.txt_Product_Id.MenuManager = this.barManager1;
             this.txt_Product_Id.Name = "txt_Product_Id";
-            this.txt_Product_Id.Size = new System.Drawing.Size(146, 21);
+            this.txt_Product_Id.Properties.AccessibleDescription = null;
+            this.txt_Product_Id.Properties.AccessibleName = null;
+            this.txt_Product_Id.Properties.AutoHeight = ((bool)(resources.GetObject("txt_Product_Id.Properties.AutoHeight")));
+            this.txt_Product_Id.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("txt_Product_Id.Properties.Mask.AutoComplete")));
+            this.txt_Product_Id.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("txt_Product_Id.Properties.Mask.BeepOnError")));
+            this.txt_Product_Id.Properties.Mask.EditMask = resources.GetString("txt_Product_Id.Properties.Mask.EditMask");
+            this.txt_Product_Id.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("txt_Product_Id.Properties.Mask.IgnoreMaskBlank")));
+            this.txt_Product_Id.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("txt_Product_Id.Properties.Mask.MaskType")));
+            this.txt_Product_Id.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("txt_Product_Id.Properties.Mask.PlaceHolder")));
+            this.txt_Product_Id.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("txt_Product_Id.Properties.Mask.SaveLiteral")));
+            this.txt_Product_Id.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("txt_Product_Id.Properties.Mask.ShowPlaceHolders")));
+            this.txt_Product_Id.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("txt_Product_Id.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.txt_Product_Id.Properties.NullValuePrompt = resources.GetString("txt_Product_Id.Properties.NullValuePrompt");
+            this.txt_Product_Id.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("txt_Product_Id.Properties.NullValuePromptShowForEmptyValue")));
             this.txt_Product_Id.StyleController = this.layoutControl1;
-            this.txt_Product_Id.TabIndex = 17;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(12, 504);
+            this.labelControl1.AccessibleDescription = null;
+            this.labelControl1.AccessibleName = null;
+            resources.ApplyResources(this.labelControl1, "labelControl1");
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(1002, 14);
             this.labelControl1.StyleController = this.layoutControl1;
-            this.labelControl1.TabIndex = 16;
             // 
             // checkEditShowZeroProduct
             // 
-            this.checkEditShowZeroProduct.Location = new System.Drawing.Point(410, 62);
+            resources.ApplyResources(this.checkEditShowZeroProduct, "checkEditShowZeroProduct");
+            this.checkEditShowZeroProduct.BackgroundImage = null;
             this.checkEditShowZeroProduct.MenuManager = this.barManager1;
             this.checkEditShowZeroProduct.Name = "checkEditShowZeroProduct";
-            this.checkEditShowZeroProduct.Properties.Caption = "显示0库存商品";
-            this.checkEditShowZeroProduct.Size = new System.Drawing.Size(102, 19);
+            this.checkEditShowZeroProduct.Properties.AccessibleDescription = null;
+            this.checkEditShowZeroProduct.Properties.AccessibleName = null;
+            this.checkEditShowZeroProduct.Properties.AutoHeight = ((bool)(resources.GetObject("checkEditShowZeroProduct.Properties.AutoHeight")));
+            this.checkEditShowZeroProduct.Properties.Caption = resources.GetString("checkEditShowZeroProduct.Properties.Caption");
+            this.checkEditShowZeroProduct.Properties.DisplayValueChecked = resources.GetString("checkEditShowZeroProduct.Properties.DisplayValueChecked");
+            this.checkEditShowZeroProduct.Properties.DisplayValueGrayed = resources.GetString("checkEditShowZeroProduct.Properties.DisplayValueGrayed");
+            this.checkEditShowZeroProduct.Properties.DisplayValueUnchecked = resources.GetString("checkEditShowZeroProduct.Properties.DisplayValueUnchecked");
             this.checkEditShowZeroProduct.StyleController = this.layoutControl1;
-            this.checkEditShowZeroProduct.TabIndex = 15;
             // 
             // lookUpEditDepotPosition
             // 
-            this.lookUpEditDepotPosition.Location = new System.Drawing.Point(820, 37);
+            resources.ApplyResources(this.lookUpEditDepotPosition, "lookUpEditDepotPosition");
+            this.lookUpEditDepotPosition.BackgroundImage = null;
+            this.lookUpEditDepotPosition.EditValue = null;
             this.lookUpEditDepotPosition.MenuManager = this.barManager1;
             this.lookUpEditDepotPosition.Name = "lookUpEditDepotPosition";
-            this.lookUpEditDepotPosition.Properties.AutoHeight = false;
+            this.lookUpEditDepotPosition.Properties.AccessibleDescription = null;
+            this.lookUpEditDepotPosition.Properties.AccessibleName = null;
+            this.lookUpEditDepotPosition.Properties.AutoHeight = ((bool)(resources.GetObject("lookUpEditDepotPosition.Properties.AutoHeight")));
             this.lookUpEditDepotPosition.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("lookUpEditDepotPosition.Properties.Buttons"))))});
             this.lookUpEditDepotPosition.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "编号"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DepotPositionName", "名称")});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("lookUpEditDepotPosition.Properties.Columns"), resources.GetString("lookUpEditDepotPosition.Properties.Columns1")),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("lookUpEditDepotPosition.Properties.Columns2"), resources.GetString("lookUpEditDepotPosition.Properties.Columns3"))});
             this.lookUpEditDepotPosition.Properties.DataSource = this.bindingSourceDepotPosition;
             this.lookUpEditDepotPosition.Properties.DisplayMember = "Id";
-            this.lookUpEditDepotPosition.Properties.NullText = "";
+            this.lookUpEditDepotPosition.Properties.NullText = resources.GetString("lookUpEditDepotPosition.Properties.NullText");
             this.lookUpEditDepotPosition.Properties.NullValuePrompt = null;
+            this.lookUpEditDepotPosition.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("lookUpEditDepotPosition.Properties.NullValuePromptShowForEmptyValue")));
             this.lookUpEditDepotPosition.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.lookUpEditDepotPosition.Properties.ValueMember = "DepotPositionId";
             this.lookUpEditDepotPosition.Properties.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.lookUpEditDepotPosition_Properties_ButtonClick);
-            this.lookUpEditDepotPosition.Size = new System.Drawing.Size(194, 21);
             this.lookUpEditDepotPosition.StyleController = this.layoutControl1;
-            this.lookUpEditDepotPosition.TabIndex = 6;
             // 
             // textProductNameOrId
             // 
-            this.textProductNameOrId.Location = new System.Drawing.Point(128, 62);
+            resources.ApplyResources(this.textProductNameOrId, "textProductNameOrId");
+            this.textProductNameOrId.BackgroundImage = null;
+            this.textProductNameOrId.EditValue = null;
             this.textProductNameOrId.MenuManager = this.barManager1;
             this.textProductNameOrId.Name = "textProductNameOrId";
-            this.textProductNameOrId.Properties.AutoHeight = false;
+            this.textProductNameOrId.Properties.AccessibleDescription = null;
+            this.textProductNameOrId.Properties.AccessibleName = null;
+            this.textProductNameOrId.Properties.AutoHeight = ((bool)(resources.GetObject("textProductNameOrId.Properties.AutoHeight")));
+            this.textProductNameOrId.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("textProductNameOrId.Properties.Mask.AutoComplete")));
+            this.textProductNameOrId.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("textProductNameOrId.Properties.Mask.BeepOnError")));
             this.textProductNameOrId.Properties.Mask.EditMask = null;
-            this.textProductNameOrId.Properties.Mask.IgnoreMaskBlank = false;
-            this.textProductNameOrId.Properties.Mask.SaveLiteral = false;
-            this.textProductNameOrId.Properties.Mask.ShowPlaceHolders = false;
+            this.textProductNameOrId.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("textProductNameOrId.Properties.Mask.IgnoreMaskBlank")));
+            this.textProductNameOrId.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("textProductNameOrId.Properties.Mask.MaskType")));
+            this.textProductNameOrId.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("textProductNameOrId.Properties.Mask.PlaceHolder")));
+            this.textProductNameOrId.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("textProductNameOrId.Properties.Mask.SaveLiteral")));
+            this.textProductNameOrId.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("textProductNameOrId.Properties.Mask.ShowPlaceHolders")));
+            this.textProductNameOrId.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("textProductNameOrId.Properties.Mask.UseMaskAsDisplayFormat")));
             this.textProductNameOrId.Properties.NullValuePrompt = null;
-            this.textProductNameOrId.Size = new System.Drawing.Size(278, 22);
+            this.textProductNameOrId.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("textProductNameOrId.Properties.NullValuePromptShowForEmptyValue")));
             this.textProductNameOrId.StyleController = this.layoutControl1;
-            this.textProductNameOrId.TabIndex = 9;
             // 
             // btn_ProductNameStart
             // 
-            this.btn_ProductNameStart.Location = new System.Drawing.Point(609, 12);
+            resources.ApplyResources(this.btn_ProductNameStart, "btn_ProductNameStart");
+            this.btn_ProductNameStart.BackgroundImage = null;
+            this.btn_ProductNameStart.EditValue = null;
             this.btn_ProductNameStart.MenuManager = this.barManager1;
             this.btn_ProductNameStart.Name = "btn_ProductNameStart";
+            this.btn_ProductNameStart.Properties.AccessibleDescription = null;
+            this.btn_ProductNameStart.Properties.AccessibleName = null;
+            this.btn_ProductNameStart.Properties.AutoHeight = ((bool)(resources.GetObject("btn_ProductNameStart.Properties.AutoHeight")));
             this.btn_ProductNameStart.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.btn_ProductNameStart.Size = new System.Drawing.Size(152, 21);
+            this.btn_ProductNameStart.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("btn_ProductNameStart.Properties.Mask.AutoComplete")));
+            this.btn_ProductNameStart.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("btn_ProductNameStart.Properties.Mask.BeepOnError")));
+            this.btn_ProductNameStart.Properties.Mask.EditMask = resources.GetString("btn_ProductNameStart.Properties.Mask.EditMask");
+            this.btn_ProductNameStart.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("btn_ProductNameStart.Properties.Mask.IgnoreMaskBlank")));
+            this.btn_ProductNameStart.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("btn_ProductNameStart.Properties.Mask.MaskType")));
+            this.btn_ProductNameStart.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("btn_ProductNameStart.Properties.Mask.PlaceHolder")));
+            this.btn_ProductNameStart.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("btn_ProductNameStart.Properties.Mask.SaveLiteral")));
+            this.btn_ProductNameStart.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("btn_ProductNameStart.Properties.Mask.ShowPlaceHolders")));
+            this.btn_ProductNameStart.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("btn_ProductNameStart.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.btn_ProductNameStart.Properties.NullValuePrompt = resources.GetString("btn_ProductNameStart.Properties.NullValuePrompt");
+            this.btn_ProductNameStart.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("btn_ProductNameStart.Properties.NullValuePromptShowForEmptyValue")));
             this.btn_ProductNameStart.StyleController = this.layoutControl1;
-            this.btn_ProductNameStart.TabIndex = 12;
             this.btn_ProductNameStart.EditValueChanged += new System.EventHandler(this.btn_ProductNameStart_EditValueChanged);
             this.btn_ProductNameStart.Click += new System.EventHandler(this.btn_ProductNameStart_Click);
             // 
             // lookUpEditDepotStar
             // 
-            this.lookUpEditDepotStar.Location = new System.Drawing.Point(573, 37);
+            resources.ApplyResources(this.lookUpEditDepotStar, "lookUpEditDepotStar");
+            this.lookUpEditDepotStar.BackgroundImage = null;
+            this.lookUpEditDepotStar.EditValue = null;
             this.lookUpEditDepotStar.MenuManager = this.barManager1;
             this.lookUpEditDepotStar.Name = "lookUpEditDepotStar";
+            this.lookUpEditDepotStar.Properties.AccessibleDescription = null;
+            this.lookUpEditDepotStar.Properties.AccessibleName = null;
+            this.lookUpEditDepotStar.Properties.AutoHeight = ((bool)(resources.GetObject("lookUpEditDepotStar.Properties.AutoHeight")));
             this.lookUpEditDepotStar.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("lookUpEditDepotStar.Properties.Buttons"))))});
             this.lookUpEditDepotStar.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "编号"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DepotName", "仓库")});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("lookUpEditDepotStar.Properties.Columns"), resources.GetString("lookUpEditDepotStar.Properties.Columns1")),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("lookUpEditDepotStar.Properties.Columns2"), resources.GetString("lookUpEditDepotStar.Properties.Columns3"))});
             this.lookUpEditDepotStar.Properties.DataSource = this.bindingSourceDepot;
             this.lookUpEditDepotStar.Properties.DisplayMember = "DepotName";
-            this.lookUpEditDepotStar.Properties.NullText = "";
+            this.lookUpEditDepotStar.Properties.NullText = resources.GetString("lookUpEditDepotStar.Properties.NullText");
+            this.lookUpEditDepotStar.Properties.NullValuePrompt = resources.GetString("lookUpEditDepotStar.Properties.NullValuePrompt");
+            this.lookUpEditDepotStar.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("lookUpEditDepotStar.Properties.NullValuePromptShowForEmptyValue")));
             this.lookUpEditDepotStar.Properties.ValueMember = "DepotId";
-            this.lookUpEditDepotStar.Size = new System.Drawing.Size(188, 21);
             this.lookUpEditDepotStar.StyleController = this.layoutControl1;
-            this.lookUpEditDepotStar.TabIndex = 10;
             this.lookUpEditDepotStar.EditValueChanged += new System.EventHandler(this.lookUpEditDepotStar_EditValueChanged);
             // 
             // lookUpProductCategoryEnd
             // 
-            this.lookUpProductCategoryEnd.Location = new System.Drawing.Point(366, 37);
+            resources.ApplyResources(this.lookUpProductCategoryEnd, "lookUpProductCategoryEnd");
+            this.lookUpProductCategoryEnd.BackgroundImage = null;
+            this.lookUpProductCategoryEnd.EditValue = null;
             this.lookUpProductCategoryEnd.MenuManager = this.barManager1;
             this.lookUpProductCategoryEnd.Name = "lookUpProductCategoryEnd";
+            this.lookUpProductCategoryEnd.Properties.AccessibleDescription = null;
+            this.lookUpProductCategoryEnd.Properties.AccessibleName = null;
+            this.lookUpProductCategoryEnd.Properties.AutoHeight = ((bool)(resources.GetObject("lookUpProductCategoryEnd.Properties.AutoHeight")));
             this.lookUpProductCategoryEnd.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("lookUpProductCategoryEnd.Properties.Buttons"))))});
             this.lookUpProductCategoryEnd.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "编号"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ProductCategoryName", "商品类型")});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("lookUpProductCategoryEnd.Properties.Columns"), resources.GetString("lookUpProductCategoryEnd.Properties.Columns1")),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("lookUpProductCategoryEnd.Properties.Columns2"), resources.GetString("lookUpProductCategoryEnd.Properties.Columns3"))});
             this.lookUpProductCategoryEnd.Properties.DataSource = this.bindingSourceProductCategory;
             this.lookUpProductCategoryEnd.Properties.DisplayMember = "ProductCategoryName";
-            this.lookUpProductCategoryEnd.Properties.NullText = "";
+            this.lookUpProductCategoryEnd.Properties.NullText = resources.GetString("lookUpProductCategoryEnd.Properties.NullText");
+            this.lookUpProductCategoryEnd.Properties.NullValuePrompt = resources.GetString("lookUpProductCategoryEnd.Properties.NullValuePrompt");
+            this.lookUpProductCategoryEnd.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("lookUpProductCategoryEnd.Properties.NullValuePromptShowForEmptyValue")));
             this.lookUpProductCategoryEnd.Properties.ValueMember = "Id";
-            this.lookUpProductCategoryEnd.Size = new System.Drawing.Size(146, 21);
             this.lookUpProductCategoryEnd.StyleController = this.layoutControl1;
-            this.lookUpProductCategoryEnd.TabIndex = 9;
             // 
             // btn_ProductNameEnd
             // 
-            this.btn_ProductNameEnd.Location = new System.Drawing.Point(822, 12);
+            resources.ApplyResources(this.btn_ProductNameEnd, "btn_ProductNameEnd");
+            this.btn_ProductNameEnd.BackgroundImage = null;
+            this.btn_ProductNameEnd.EditValue = null;
             this.btn_ProductNameEnd.MenuManager = this.barManager1;
             this.btn_ProductNameEnd.Name = "btn_ProductNameEnd";
+            this.btn_ProductNameEnd.Properties.AccessibleDescription = null;
+            this.btn_ProductNameEnd.Properties.AccessibleName = null;
+            this.btn_ProductNameEnd.Properties.AutoHeight = ((bool)(resources.GetObject("btn_ProductNameEnd.Properties.AutoHeight")));
             this.btn_ProductNameEnd.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.btn_ProductNameEnd.Size = new System.Drawing.Size(192, 21);
+            this.btn_ProductNameEnd.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("btn_ProductNameEnd.Properties.Mask.AutoComplete")));
+            this.btn_ProductNameEnd.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("btn_ProductNameEnd.Properties.Mask.BeepOnError")));
+            this.btn_ProductNameEnd.Properties.Mask.EditMask = resources.GetString("btn_ProductNameEnd.Properties.Mask.EditMask");
+            this.btn_ProductNameEnd.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("btn_ProductNameEnd.Properties.Mask.IgnoreMaskBlank")));
+            this.btn_ProductNameEnd.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("btn_ProductNameEnd.Properties.Mask.MaskType")));
+            this.btn_ProductNameEnd.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("btn_ProductNameEnd.Properties.Mask.PlaceHolder")));
+            this.btn_ProductNameEnd.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("btn_ProductNameEnd.Properties.Mask.SaveLiteral")));
+            this.btn_ProductNameEnd.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("btn_ProductNameEnd.Properties.Mask.ShowPlaceHolders")));
+            this.btn_ProductNameEnd.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("btn_ProductNameEnd.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.btn_ProductNameEnd.Properties.NullValuePrompt = resources.GetString("btn_ProductNameEnd.Properties.NullValuePrompt");
+            this.btn_ProductNameEnd.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("btn_ProductNameEnd.Properties.NullValuePromptShowForEmptyValue")));
             this.btn_ProductNameEnd.StyleController = this.layoutControl1;
-            this.btn_ProductNameEnd.TabIndex = 13;
             this.btn_ProductNameEnd.Click += new System.EventHandler(this.btn_ProductNameEnd_Click);
             // 
             // LookUpProductCategoryStart
             // 
-            this.LookUpProductCategoryStart.Location = new System.Drawing.Point(128, 37);
+            resources.ApplyResources(this.LookUpProductCategoryStart, "LookUpProductCategoryStart");
+            this.LookUpProductCategoryStart.BackgroundImage = null;
+            this.LookUpProductCategoryStart.EditValue = null;
             this.LookUpProductCategoryStart.MenuManager = this.barManager1;
             this.LookUpProductCategoryStart.Name = "LookUpProductCategoryStart";
+            this.LookUpProductCategoryStart.Properties.AccessibleDescription = null;
+            this.LookUpProductCategoryStart.Properties.AccessibleName = null;
+            this.LookUpProductCategoryStart.Properties.AutoHeight = ((bool)(resources.GetObject("LookUpProductCategoryStart.Properties.AutoHeight")));
             this.LookUpProductCategoryStart.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("LookUpProductCategoryStart.Properties.Buttons"))))});
             this.LookUpProductCategoryStart.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "编号"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ProductCategoryName", "商品类型")});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("LookUpProductCategoryStart.Properties.Columns"), resources.GetString("LookUpProductCategoryStart.Properties.Columns1")),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("LookUpProductCategoryStart.Properties.Columns2"), resources.GetString("LookUpProductCategoryStart.Properties.Columns3"))});
             this.LookUpProductCategoryStart.Properties.DataSource = this.bindingSourceProductCategory;
             this.LookUpProductCategoryStart.Properties.DisplayMember = "ProductCategoryName";
-            this.LookUpProductCategoryStart.Properties.NullText = "";
+            this.LookUpProductCategoryStart.Properties.NullText = resources.GetString("LookUpProductCategoryStart.Properties.NullText");
+            this.LookUpProductCategoryStart.Properties.NullValuePrompt = resources.GetString("LookUpProductCategoryStart.Properties.NullValuePrompt");
+            this.LookUpProductCategoryStart.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("LookUpProductCategoryStart.Properties.NullValuePromptShowForEmptyValue")));
             this.LookUpProductCategoryStart.Properties.ValueMember = "Id";
-            this.LookUpProductCategoryStart.Size = new System.Drawing.Size(169, 21);
             this.LookUpProductCategoryStart.StyleController = this.layoutControl1;
-            this.LookUpProductCategoryStart.TabIndex = 8;
             this.LookUpProductCategoryStart.EditValueChanged += new System.EventHandler(this.LookUpProductCategoryStart_EditValueChanged);
             // 
             // dateEdit1
             // 
+            resources.ApplyResources(this.dateEdit1, "dateEdit1");
+            this.dateEdit1.BackgroundImage = null;
             this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(128, 12);
             this.dateEdit1.MenuManager = this.barManager1;
             this.dateEdit1.Name = "dateEdit1";
+            this.dateEdit1.Properties.AccessibleDescription = null;
+            this.dateEdit1.Properties.AccessibleName = null;
+            this.dateEdit1.Properties.AutoHeight = ((bool)(resources.GetObject("dateEdit1.Properties.AutoHeight")));
             this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("dateEdit1.Properties.Buttons"))))});
+            this.dateEdit1.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("dateEdit1.Properties.Mask.AutoComplete")));
+            this.dateEdit1.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("dateEdit1.Properties.Mask.BeepOnError")));
+            this.dateEdit1.Properties.Mask.EditMask = resources.GetString("dateEdit1.Properties.Mask.EditMask");
+            this.dateEdit1.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("dateEdit1.Properties.Mask.IgnoreMaskBlank")));
+            this.dateEdit1.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("dateEdit1.Properties.Mask.MaskType")));
+            this.dateEdit1.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("dateEdit1.Properties.Mask.PlaceHolder")));
+            this.dateEdit1.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("dateEdit1.Properties.Mask.SaveLiteral")));
+            this.dateEdit1.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("dateEdit1.Properties.Mask.ShowPlaceHolders")));
+            this.dateEdit1.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("dateEdit1.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.dateEdit1.Properties.NullValuePrompt = resources.GetString("dateEdit1.Properties.NullValuePrompt");
+            this.dateEdit1.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("dateEdit1.Properties.NullValuePromptShowForEmptyValue")));
+            this.dateEdit1.Properties.VistaTimeProperties.AccessibleDescription = null;
+            this.dateEdit1.Properties.VistaTimeProperties.AccessibleName = null;
+            this.dateEdit1.Properties.VistaTimeProperties.AutoHeight = ((bool)(resources.GetObject("dateEdit1.Properties.VistaTimeProperties.AutoHeight")));
             this.dateEdit1.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.dateEdit1.Size = new System.Drawing.Size(169, 21);
+            this.dateEdit1.Properties.VistaTimeProperties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("dateEdit1.Properties.VistaTimeProperties.Mask.AutoComplete")));
+            this.dateEdit1.Properties.VistaTimeProperties.Mask.BeepOnError = ((bool)(resources.GetObject("dateEdit1.Properties.VistaTimeProperties.Mask.BeepOnError")));
+            this.dateEdit1.Properties.VistaTimeProperties.Mask.EditMask = resources.GetString("dateEdit1.Properties.VistaTimeProperties.Mask.EditMask");
+            this.dateEdit1.Properties.VistaTimeProperties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("dateEdit1.Properties.VistaTimeProperties.Mask.IgnoreMaskBlank")));
+            this.dateEdit1.Properties.VistaTimeProperties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("dateEdit1.Properties.VistaTimeProperties.Mask.MaskType")));
+            this.dateEdit1.Properties.VistaTimeProperties.Mask.PlaceHolder = ((char)(resources.GetObject("dateEdit1.Properties.VistaTimeProperties.Mask.PlaceHolder")));
+            this.dateEdit1.Properties.VistaTimeProperties.Mask.SaveLiteral = ((bool)(resources.GetObject("dateEdit1.Properties.VistaTimeProperties.Mask.SaveLiteral")));
+            this.dateEdit1.Properties.VistaTimeProperties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("dateEdit1.Properties.VistaTimeProperties.Mask.ShowPlaceHolders")));
+            this.dateEdit1.Properties.VistaTimeProperties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("dateEdit1.Properties.VistaTimeProperties.Mask.UseMaskAsDisplayFormat")));
+            this.dateEdit1.Properties.VistaTimeProperties.NullValuePrompt = resources.GetString("dateEdit1.Properties.VistaTimeProperties.NullValuePrompt");
+            this.dateEdit1.Properties.VistaTimeProperties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("dateEdit1.Properties.VistaTimeProperties.NullValuePromptShowForEmptyValue")));
             this.dateEdit1.StyleController = this.layoutControl1;
-            this.dateEdit1.TabIndex = 4;
             // 
             // gridControl1
             // 
-            this.gridControl1.EmbeddedNavigator.AllowHtmlTextInToolTip = DevExpress.Utils.DefaultBoolean.True;
-            this.gridControl1.EmbeddedNavigator.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.gridControl1.EmbeddedNavigator.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.gridControl1.EmbeddedNavigator.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.gridControl1.EmbeddedNavigator.TextLocation = DevExpress.XtraEditors.NavigatorButtonsTextLocation.None;
-            this.gridControl1.EmbeddedNavigator.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Application;
-            this.gridControl1.Location = new System.Drawing.Point(12, 88);
+            this.gridControl1.AccessibleDescription = null;
+            this.gridControl1.AccessibleName = null;
+            resources.ApplyResources(this.gridControl1, "gridControl1");
+            this.gridControl1.BackgroundImage = null;
+            this.gridControl1.EmbeddedNavigator.AccessibleDescription = null;
+            this.gridControl1.EmbeddedNavigator.AccessibleName = null;
+            this.gridControl1.EmbeddedNavigator.AllowHtmlTextInToolTip = ((DevExpress.Utils.DefaultBoolean)(resources.GetObject("gridControl1.EmbeddedNavigator.AllowHtmlTextInToolTip")));
+            this.gridControl1.EmbeddedNavigator.Anchor = ((System.Windows.Forms.AnchorStyles)(resources.GetObject("gridControl1.EmbeddedNavigator.Anchor")));
+            this.gridControl1.EmbeddedNavigator.BackgroundImage = null;
+            this.gridControl1.EmbeddedNavigator.BackgroundImageLayout = ((System.Windows.Forms.ImageLayout)(resources.GetObject("gridControl1.EmbeddedNavigator.BackgroundImageLayout")));
+            this.gridControl1.EmbeddedNavigator.ImeMode = ((System.Windows.Forms.ImeMode)(resources.GetObject("gridControl1.EmbeddedNavigator.ImeMode")));
+            this.gridControl1.EmbeddedNavigator.TextLocation = ((DevExpress.XtraEditors.NavigatorButtonsTextLocation)(resources.GetObject("gridControl1.EmbeddedNavigator.TextLocation")));
+            this.gridControl1.EmbeddedNavigator.ToolTip = resources.GetString("gridControl1.EmbeddedNavigator.ToolTip");
+            this.gridControl1.EmbeddedNavigator.ToolTipIconType = ((DevExpress.Utils.ToolTipIconType)(resources.GetObject("gridControl1.EmbeddedNavigator.ToolTipIconType")));
+            this.gridControl1.EmbeddedNavigator.ToolTipTitle = resources.GetString("gridControl1.EmbeddedNavigator.ToolTipTitle");
+            this.gridControl1.Font = null;
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemRichTextEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(1002, 412);
-            this.gridControl1.TabIndex = 5;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
             // 
+            resources.ApplyResources(this.gridView1, "gridView1");
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
             this.gridColumn4,
@@ -351,70 +467,67 @@
             // 
             // gridColumn1
             // 
+            this.gridColumn1.AppearanceCell.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("gridColumn1.AppearanceCell.GradientMode")));
+            this.gridColumn1.AppearanceCell.Image = null;
             this.gridColumn1.AppearanceCell.Options.UseTextOptions = true;
             this.gridColumn1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn1.AppearanceHeader.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("gridColumn1.AppearanceHeader.GradientMode")));
+            this.gridColumn1.AppearanceHeader.Image = null;
             this.gridColumn1.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn1.Caption = "库房";
+            resources.ApplyResources(this.gridColumn1, "gridColumn1");
             this.gridColumn1.FieldName = "DepotName";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
             this.gridColumn1.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.True;
             this.gridColumn1.OptionsFilter.AllowFilter = false;
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 89;
             // 
             // gridColumn4
             // 
-            this.gridColumn4.Caption = "货位";
+            resources.ApplyResources(this.gridColumn4, "gridColumn4");
             this.gridColumn4.FieldName = "DepotPositionId";
             this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 1;
-            this.gridColumn4.Width = 80;
             // 
             // gridColumn7
             // 
-            this.gridColumn7.Caption = "商品编号";
+            resources.ApplyResources(this.gridColumn7, "gridColumn7");
             this.gridColumn7.FieldName = "spid";
             this.gridColumn7.Name = "gridColumn7";
-            this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 2;
-            this.gridColumn7.Width = 132;
             // 
             // gridColumn6
             // 
-            this.gridColumn6.Caption = "商品单位";
+            resources.ApplyResources(this.gridColumn6, "gridColumn6");
             this.gridColumn6.FieldName = "CnName";
             this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 7;
-            this.gridColumn6.Width = 59;
             // 
             // gridColumn2
             // 
+            this.gridColumn2.AppearanceCell.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("gridColumn2.AppearanceCell.GradientMode")));
+            this.gridColumn2.AppearanceCell.Image = null;
             this.gridColumn2.AppearanceCell.Options.UseTextOptions = true;
             this.gridColumn2.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn2.AppearanceHeader.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("gridColumn2.AppearanceHeader.GradientMode")));
+            this.gridColumn2.AppearanceHeader.Image = null;
             this.gridColumn2.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn2.Caption = "商品名称";
+            resources.ApplyResources(this.gridColumn2, "gridColumn2");
             this.gridColumn2.FieldName = "productName";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
             this.gridColumn2.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.True;
             this.gridColumn2.OptionsFilter.AllowFilter = false;
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 3;
-            this.gridColumn2.Width = 166;
             // 
             // gridColumn3
             // 
+            this.gridColumn3.AppearanceCell.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("gridColumn3.AppearanceCell.GradientMode")));
+            this.gridColumn3.AppearanceCell.Image = null;
             this.gridColumn3.AppearanceCell.Options.UseTextOptions = true;
             this.gridColumn3.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.gridColumn3.AppearanceHeader.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("gridColumn3.AppearanceHeader.GradientMode")));
+            this.gridColumn3.AppearanceHeader.Image = null;
             this.gridColumn3.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.gridColumn3.Caption = "库存量";
+            resources.ApplyResources(this.gridColumn3, "gridColumn3");
             this.gridColumn3.DisplayFormat.FormatString = "0.####";
             this.gridColumn3.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn3.FieldName = "Quantity";
@@ -422,17 +535,18 @@
             this.gridColumn3.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn3.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.True;
             this.gridColumn3.OptionsFilter.AllowFilter = false;
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 8;
-            this.gridColumn3.Width = 81;
             // 
             // gridColumn10
             // 
+            this.gridColumn10.AppearanceCell.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("gridColumn10.AppearanceCell.GradientMode")));
+            this.gridColumn10.AppearanceCell.Image = null;
             this.gridColumn10.AppearanceCell.Options.UseTextOptions = true;
             this.gridColumn10.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.gridColumn10.AppearanceHeader.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("gridColumn10.AppearanceHeader.GradientMode")));
+            this.gridColumn10.AppearanceHeader.Image = null;
             this.gridColumn10.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn10.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.gridColumn10.Caption = "已分配";
+            resources.ApplyResources(this.gridColumn10, "gridColumn10");
             this.gridColumn10.DisplayFormat.FormatString = "0.####";
             this.gridColumn10.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn10.FieldName = "yifenpeiquantity";
@@ -440,72 +554,57 @@
             this.gridColumn10.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
             this.gridColumn10.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.True;
             this.gridColumn10.OptionsFilter.AllowFilter = false;
-            this.gridColumn10.Visible = true;
-            this.gridColumn10.VisibleIndex = 10;
-            this.gridColumn10.Width = 77;
             // 
             // gridColumn5
             // 
-            this.gridColumn5.Caption = "描述";
+            resources.ApplyResources(this.gridColumn5, "gridColumn5");
             this.gridColumn5.ColumnEdit = this.repositoryItemRichTextEdit1;
             this.gridColumn5.FieldName = "ProductDescription";
             this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 11;
-            this.gridColumn5.Width = 119;
             // 
             // repositoryItemRichTextEdit1
             // 
+            this.repositoryItemRichTextEdit1.AccessibleDescription = null;
+            this.repositoryItemRichTextEdit1.AccessibleName = null;
             this.repositoryItemRichTextEdit1.Name = "repositoryItemRichTextEdit1";
             // 
             // gridColumn8
             // 
-            this.gridColumn8.Caption = "客户型号";
+            resources.ApplyResources(this.gridColumn8, "gridColumn8");
             this.gridColumn8.FieldName = "CustomerProductName";
             this.gridColumn8.Name = "gridColumn8";
-            this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 4;
-            this.gridColumn8.Width = 118;
             // 
             // gridColumn9
             // 
-            this.gridColumn9.Caption = "版本";
+            resources.ApplyResources(this.gridColumn9, "gridColumn9");
             this.gridColumn9.FieldName = "ProductVersion";
             this.gridColumn9.Name = "gridColumn9";
-            this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 6;
-            this.gridColumn9.Width = 38;
             // 
             // gridColumn11
             // 
-            this.gridColumn11.Caption = "已定未入";
+            resources.ApplyResources(this.gridColumn11, "gridColumn11");
             this.gridColumn11.FieldName = "OrderOnWayQuantity";
             this.gridColumn11.Name = "gridColumn11";
-            this.gridColumn11.Visible = true;
-            this.gridColumn11.VisibleIndex = 9;
             // 
             // gridColumn12
             // 
-            this.gridColumn12.Caption = "內部描述";
+            resources.ApplyResources(this.gridColumn12, "gridColumn12");
             this.gridColumn12.FieldName = "InternalDescription";
             this.gridColumn12.Name = "gridColumn12";
-            this.gridColumn12.Visible = true;
-            this.gridColumn12.VisibleIndex = 5;
-            this.gridColumn12.Width = 150;
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(516, 62);
+            this.simpleButton1.AccessibleDescription = null;
+            this.simpleButton1.AccessibleName = null;
+            resources.ApplyResources(this.simpleButton1, "simpleButton1");
+            this.simpleButton1.BackgroundImage = null;
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(498, 22);
             this.simpleButton1.StyleController = this.layoutControl1;
-            this.simpleButton1.TabIndex = 5;
-            this.simpleButton1.Text = "查询";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // layoutControlGroup1
             // 
-            this.layoutControlGroup1.CustomizationFormText = "Root";
+            resources.ApplyResources(this.layoutControlGroup1, "layoutControlGroup1");
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
@@ -526,27 +625,24 @@
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(1026, 530);
             this.layoutControlGroup1.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutControlGroup1.Text = "Root";
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.dateEdit1;
-            this.layoutControlItem1.CustomizationFormText = "日期：";
+            resources.ApplyResources(this.layoutControlItem1, "layoutControlItem1");
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(289, 25);
-            this.layoutControlItem1.Text = "日期：";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(112, 14);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(124, 14);
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.gridControl1;
-            this.layoutControlItem3.CustomizationFormText = "layoutControlItem3";
+            resources.ApplyResources(this.layoutControlItem3, "layoutControlItem3");
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 76);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(1006, 416);
-            this.layoutControlItem3.Text = "layoutControlItem3";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextToControlDistance = 0;
             this.layoutControlItem3.TextVisible = false;
@@ -554,21 +650,19 @@
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.LookUpProductCategoryStart;
-            this.layoutControlItem6.CustomizationFormText = "商品类型    自：";
+            resources.ApplyResources(this.layoutControlItem6, "layoutControlItem6");
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 25);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(289, 25);
-            this.layoutControlItem6.Text = "商品类型编号    自：";
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(112, 14);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(124, 14);
             // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.lookUpProductCategoryEnd;
-            this.layoutControlItem7.CustomizationFormText = "至：";
+            resources.ApplyResources(this.layoutControlItem7, "layoutControlItem7");
             this.layoutControlItem7.Location = new System.Drawing.Point(289, 25);
             this.layoutControlItem7.Name = "layoutControlItem7";
             this.layoutControlItem7.Size = new System.Drawing.Size(215, 25);
-            this.layoutControlItem7.Text = "至：";
             this.layoutControlItem7.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem7.TextSize = new System.Drawing.Size(60, 20);
             this.layoutControlItem7.TextToControlDistance = 5;
@@ -576,11 +670,10 @@
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.btn_ProductNameEnd;
-            this.layoutControlItem5.CustomizationFormText = "至：";
+            resources.ApplyResources(this.layoutControlItem5, "layoutControlItem5");
             this.layoutControlItem5.Location = new System.Drawing.Point(753, 0);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(253, 25);
-            this.layoutControlItem5.Text = "至：";
             this.layoutControlItem5.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem5.TextSize = new System.Drawing.Size(52, 20);
             this.layoutControlItem5.TextToControlDistance = 5;
@@ -588,11 +681,10 @@
             // layoutControlItem15
             // 
             this.layoutControlItem15.Control = this.lookUpEditDepotPosition;
-            this.layoutControlItem15.CustomizationFormText = "货位：";
+            resources.ApplyResources(this.layoutControlItem15, "layoutControlItem15");
             this.layoutControlItem15.Location = new System.Drawing.Point(753, 25);
             this.layoutControlItem15.Name = "layoutControlItem15";
             this.layoutControlItem15.Size = new System.Drawing.Size(253, 25);
-            this.layoutControlItem15.Text = "货位：";
             this.layoutControlItem15.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem15.TextSize = new System.Drawing.Size(50, 20);
             this.layoutControlItem15.TextToControlDistance = 5;
@@ -600,33 +692,30 @@
             // layoutControlItem10
             // 
             this.layoutControlItem10.Control = this.textProductNameOrId;
-            this.layoutControlItem10.CustomizationFormText = "商品名称关键字:";
+            resources.ApplyResources(this.layoutControlItem10, "layoutControlItem10");
             this.layoutControlItem10.Location = new System.Drawing.Point(0, 50);
             this.layoutControlItem10.Name = "layoutControlItem10";
             this.layoutControlItem10.Size = new System.Drawing.Size(398, 26);
-            this.layoutControlItem10.Text = "商品名称关键字:";
-            this.layoutControlItem10.TextSize = new System.Drawing.Size(112, 14);
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(124, 14);
             // 
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.lookUpEditDepotStar;
-            this.layoutControlItem8.CustomizationFormText = "库房    自：";
+            resources.ApplyResources(this.layoutControlItem8, "layoutControlItem8");
             this.layoutControlItem8.Location = new System.Drawing.Point(504, 25);
             this.layoutControlItem8.Name = "layoutControlItem8";
             this.layoutControlItem8.Size = new System.Drawing.Size(249, 25);
-            this.layoutControlItem8.Text = "库房    ：";
             this.layoutControlItem8.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(52, 14);
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(36, 14);
             this.layoutControlItem8.TextToControlDistance = 5;
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.simpleButton1;
-            this.layoutControlItem2.CustomizationFormText = "layoutControlItem2";
+            resources.ApplyResources(this.layoutControlItem2, "layoutControlItem2");
             this.layoutControlItem2.Location = new System.Drawing.Point(504, 50);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(502, 26);
-            this.layoutControlItem2.Text = "layoutControlItem2";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextToControlDistance = 0;
             this.layoutControlItem2.TextVisible = false;
@@ -634,11 +723,10 @@
             // layoutControlItem17
             // 
             this.layoutControlItem17.Control = this.checkEditShowZeroProduct;
-            this.layoutControlItem17.CustomizationFormText = "layoutControlItem17";
+            resources.ApplyResources(this.layoutControlItem17, "layoutControlItem17");
             this.layoutControlItem17.Location = new System.Drawing.Point(398, 50);
             this.layoutControlItem17.Name = "layoutControlItem17";
             this.layoutControlItem17.Size = new System.Drawing.Size(106, 26);
-            this.layoutControlItem17.Text = "layoutControlItem17";
             this.layoutControlItem17.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem17.TextToControlDistance = 0;
             this.layoutControlItem17.TextVisible = false;
@@ -646,11 +734,10 @@
             // layoutControlItem18
             // 
             this.layoutControlItem18.Control = this.labelControl1;
-            this.layoutControlItem18.CustomizationFormText = "layoutControlItem18";
+            resources.ApplyResources(this.layoutControlItem18, "layoutControlItem18");
             this.layoutControlItem18.Location = new System.Drawing.Point(0, 492);
             this.layoutControlItem18.Name = "layoutControlItem18";
             this.layoutControlItem18.Size = new System.Drawing.Size(1006, 18);
-            this.layoutControlItem18.Text = "layoutControlItem18";
             this.layoutControlItem18.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem18.TextToControlDistance = 0;
             this.layoutControlItem18.TextVisible = false;
@@ -658,11 +745,10 @@
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.btn_ProductNameStart;
-            this.layoutControlItem4.CustomizationFormText = "商品名称    自：";
+            resources.ApplyResources(this.layoutControlItem4, "layoutControlItem4");
             this.layoutControlItem4.Location = new System.Drawing.Point(504, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(249, 25);
-            this.layoutControlItem4.Text = "商品名称    自：";
             this.layoutControlItem4.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem4.TextSize = new System.Drawing.Size(88, 14);
             this.layoutControlItem4.TextToControlDistance = 5;
@@ -670,11 +756,10 @@
             // layoutControlItem16
             // 
             this.layoutControlItem16.Control = this.txt_Product_Id;
-            this.layoutControlItem16.CustomizationFormText = "商品编号：";
+            resources.ApplyResources(this.layoutControlItem16, "layoutControlItem16");
             this.layoutControlItem16.Location = new System.Drawing.Point(289, 0);
             this.layoutControlItem16.Name = "layoutControlItem16";
             this.layoutControlItem16.Size = new System.Drawing.Size(215, 25);
-            this.layoutControlItem16.Text = "商品编号：";
             this.layoutControlItem16.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem16.TextSize = new System.Drawing.Size(60, 14);
             this.layoutControlItem16.TextToControlDistance = 5;
@@ -682,62 +767,58 @@
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.textProductNameOrId;
-            this.layoutControlItem9.CustomizationFormText = "商品关键字：";
+            resources.ApplyResources(this.layoutControlItem9, "layoutControlItem9");
             this.layoutControlItem9.Location = new System.Drawing.Point(693, 0);
             this.layoutControlItem9.Name = "layoutControlItem6";
             this.layoutControlItem9.Size = new System.Drawing.Size(221, 26);
-            this.layoutControlItem9.Text = "商品关键字：";
             this.layoutControlItem9.TextSize = new System.Drawing.Size(72, 14);
             this.layoutControlItem9.TextToControlDistance = 5;
             // 
             // layoutControlItem11
             // 
-            this.layoutControlItem11.CustomizationFormText = "货位:";
+            resources.ApplyResources(this.layoutControlItem11, "layoutControlItem11");
             this.layoutControlItem11.Location = new System.Drawing.Point(239, 0);
             this.layoutControlItem11.Name = "layoutControlItem3";
             this.layoutControlItem11.Size = new System.Drawing.Size(207, 26);
-            this.layoutControlItem11.Text = "货位:";
             this.layoutControlItem11.TextSize = new System.Drawing.Size(72, 14);
             this.layoutControlItem11.TextToControlDistance = 5;
             // 
             // layoutControlItem12
             // 
-            this.layoutControlItem12.CustomizationFormText = "货位:";
+            resources.ApplyResources(this.layoutControlItem12, "layoutControlItem12");
             this.layoutControlItem12.Location = new System.Drawing.Point(239, 0);
             this.layoutControlItem12.Name = "layoutControlItem3";
             this.layoutControlItem12.Size = new System.Drawing.Size(207, 26);
-            this.layoutControlItem12.Text = "货位:";
             this.layoutControlItem12.TextSize = new System.Drawing.Size(72, 14);
             this.layoutControlItem12.TextToControlDistance = 5;
             // 
             // layoutControlItem13
             // 
-            this.layoutControlItem13.CustomizationFormText = "货位:";
+            resources.ApplyResources(this.layoutControlItem13, "layoutControlItem13");
             this.layoutControlItem13.Location = new System.Drawing.Point(239, 0);
             this.layoutControlItem13.Name = "layoutControlItem3";
             this.layoutControlItem13.Size = new System.Drawing.Size(207, 26);
-            this.layoutControlItem13.Text = "货位:";
             this.layoutControlItem13.TextSize = new System.Drawing.Size(72, 14);
             this.layoutControlItem13.TextToControlDistance = 5;
             // 
             // layoutControlItem14
             // 
-            this.layoutControlItem14.CustomizationFormText = "货位:";
+            resources.ApplyResources(this.layoutControlItem14, "layoutControlItem14");
             this.layoutControlItem14.Location = new System.Drawing.Point(239, 0);
             this.layoutControlItem14.Name = "layoutControlItem3";
             this.layoutControlItem14.Size = new System.Drawing.Size(207, 26);
-            this.layoutControlItem14.Text = "货位:";
             this.layoutControlItem14.TextSize = new System.Drawing.Size(72, 14);
             this.layoutControlItem14.TextToControlDistance = 5;
             // 
             // Q15JiShiForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AccessibleDescription = null;
+            this.AccessibleName = null;
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1026, 577);
             this.Controls.Add(this.layoutControl1);
+            this.Icon = null;
             this.Name = "Q15JiShiForm";
-            this.Text = "商品及时库存查询";
             this.Controls.SetChildIndex(this.layoutControl1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();

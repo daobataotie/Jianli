@@ -5264,6 +5264,9 @@
       <DependentUpon>Q15JiShiForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Query\Q15JiShiForm.zh-CHT.resx">
+      <DependentUpon>Q15JiShiForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Query\ROFP.resx">
       <DependentUpon>ROFP.cs</DependentUpon>
       <SubType>Designer</SubType>
