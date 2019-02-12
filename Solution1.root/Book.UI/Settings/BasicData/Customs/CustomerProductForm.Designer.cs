@@ -40,7 +40,6 @@
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.txt_Product_idNO = new DevExpress.XtraEditors.TextEdit();
             this.newChooseUpdateEmployee = new Book.UI.Invoices.NewChooseContorl();
             this.lookUpEditQualityTestUnitId = new DevExpress.XtraEditors.LookUpEdit();
             this.lookUpSellUnit = new DevExpress.XtraEditors.LookUpEdit();
@@ -71,7 +70,6 @@
             this.layoutControlItem44 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem48 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem58 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem41 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem22 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem46 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -92,6 +90,9 @@
             this.bindingSourceUnit = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSourceUnitGroup = new System.Windows.Forms.BindingSource(this.components);
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.searchLookUpEdit1 = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -102,7 +103,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHyperLinkEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_Product_idNO.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditQualityTestUnitId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpSellUnit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpDepotUnit.Properties)).BeginInit();
@@ -133,7 +133,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem44)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem48)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem58)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem41)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem46)).BeginInit();
@@ -153,6 +152,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem47)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceUnit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceUnitGroup)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -239,7 +241,7 @@
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.txt_Product_idNO);
+            this.layoutControl1.Controls.Add(this.searchLookUpEdit1);
             this.layoutControl1.Controls.Add(this.newChooseUpdateEmployee);
             this.layoutControl1.Controls.Add(this.lookUpEditQualityTestUnitId);
             this.layoutControl1.Controls.Add(this.lookUpSellUnit);
@@ -260,14 +262,6 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(619, 338, 250, 350);
             this.layoutControl1.Root = this.layoutControlGroup1;
-            // 
-            // txt_Product_idNO
-            // 
-            resources.ApplyResources(this.txt_Product_idNO, "txt_Product_idNO");
-            this.txt_Product_idNO.MenuManager = this.barManager1;
-            this.txt_Product_idNO.Name = "txt_Product_idNO";
-            this.txt_Product_idNO.Properties.ReadOnly = true;
-            this.txt_Product_idNO.StyleController = this.layoutControl1;
             // 
             // newChooseUpdateEmployee
             // 
@@ -482,11 +476,11 @@
             this.layoutControlItem44,
             this.layoutControlItem48,
             this.layoutControlItem58,
-            this.layoutControlItem5,
             this.layoutControlItem41,
             this.layoutControlItem22,
             this.layoutControlItem46,
-            this.emptySpaceItem1});
+            this.emptySpaceItem1,
+            this.layoutControlItem5});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(681, 472);
@@ -614,15 +608,6 @@
             this.layoutControlItem58.Name = "layoutControlItem58";
             this.layoutControlItem58.Size = new System.Drawing.Size(661, 24);
             this.layoutControlItem58.TextSize = new System.Drawing.Size(60, 14);
-            // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.Control = this.txt_Product_idNO;
-            resources.ApplyResources(this.layoutControlItem5, "layoutControlItem5");
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(224, 25);
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(60, 14);
             // 
             // layoutControlItem41
             // 
@@ -790,6 +775,33 @@
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
+            // searchLookUpEdit1
+            // 
+            resources.ApplyResources(this.searchLookUpEdit1, "searchLookUpEdit1");
+            this.searchLookUpEdit1.MenuManager = this.barManager1;
+            this.searchLookUpEdit1.Name = "searchLookUpEdit1";
+            this.searchLookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("searchLookUpEdit1.Properties.Buttons"))))});
+            this.searchLookUpEdit1.Properties.NullText = resources.GetString("searchLookUpEdit1.Properties.NullText");
+            this.searchLookUpEdit1.Properties.View = this.searchLookUpEdit1View;
+            this.searchLookUpEdit1.StyleController = this.layoutControl1;
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.searchLookUpEdit1;
+            resources.ApplyResources(this.layoutControlItem5, "layoutControlItem5");
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(224, 25);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(60, 14);
+            // 
+            // searchLookUpEdit1View
+            // 
+            this.searchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.searchLookUpEdit1View.Name = "searchLookUpEdit1View";
+            this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
             // CustomerProductForm
             // 
             resources.ApplyResources(this, "$this");
@@ -808,7 +820,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHyperLinkEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txt_Product_idNO.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditQualityTestUnitId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpSellUnit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpDepotUnit.Properties)).EndInit();
@@ -839,7 +850,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem44)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem48)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem58)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem41)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem46)).EndInit();
@@ -859,6 +869,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem47)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceUnit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceUnitGroup)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -923,9 +936,10 @@
         private System.Windows.Forms.BindingSource bindingSourceUnitGroup;
         private Book.UI.Invoices.NewChooseContorl newChooseUpdateEmployee;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem58;
-        private DevExpress.XtraEditors.TextEdit txt_Product_idNO;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraEditors.SearchLookUpEdit searchLookUpEdit1;
+        private DevExpress.XtraGrid.Views.Grid.GridView searchLookUpEdit1View;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
     }
 }

@@ -437,28 +437,34 @@
   <data name="splitContainerControl1.Panel1.Text" xml:space="preserve">
     <value>Panel1</value>
   </data>
-  <data name="txt_Product_idNO.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="searchLookUpEdit1.EditValue" xml:space="preserve">
+    <value />
   </data>
-  <data name="txt_Product_idNO.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="searchLookUpEdit1.Location" type="System.Drawing.Point, System.Drawing">
     <value>76, 12</value>
   </data>
-  <data name="txt_Product_idNO.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="searchLookUpEdit1.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
+    <value>Combo</value>
+  </data>
+  <data name="searchLookUpEdit1.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="searchLookUpEdit1.Size" type="System.Drawing.Size, System.Drawing">
     <value>156, 21</value>
   </data>
-  <data name="txt_Product_idNO.TabIndex" type="System.Int32, mscorlib">
+  <data name="searchLookUpEdit1.TabIndex" type="System.Int32, mscorlib">
     <value>50</value>
   </data>
-  <data name="&gt;&gt;txt_Product_idNO.Name" xml:space="preserve">
-    <value>txt_Product_idNO</value>
+  <data name="&gt;&gt;searchLookUpEdit1.Name" xml:space="preserve">
+    <value>searchLookUpEdit1</value>
   </data>
-  <data name="&gt;&gt;txt_Product_idNO.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="&gt;&gt;searchLookUpEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SearchLookUpEdit, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;txt_Product_idNO.Parent" xml:space="preserve">
+  <data name="&gt;&gt;searchLookUpEdit1.Parent" xml:space="preserve">
     <value>layoutControl1</value>
   </data>
-  <data name="&gt;&gt;txt_Product_idNO.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;searchLookUpEdit1.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="newChooseUpdateEmployee.Location" type="System.Drawing.Point, System.Drawing">
@@ -1113,6 +1119,9 @@
   <data name="&gt;&gt;textEditProductName.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
+  <data name="newChooseContorlProduct.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="newChooseContorlProduct.Location" type="System.Drawing.Point, System.Drawing">
     <value>97, 37</value>
   </data>
@@ -1269,12 +1278,6 @@
   <data name="layoutControlItem58.Text" xml:space="preserve">
     <value>修改人：</value>
   </data>
-  <data name="layoutControlItem5.CustomizationFormText" xml:space="preserve">
-    <value>商品编号：</value>
-  </data>
-  <data name="layoutControlItem5.Text" xml:space="preserve">
-    <value>商品编号：</value>
-  </data>
   <data name="layoutControlItem41.CustomizationFormText" xml:space="preserve">
     <value>版本日期:</value>
   </data>
@@ -1298,6 +1301,12 @@
   </data>
   <data name="emptySpaceItem1.Text" xml:space="preserve">
     <value>emptySpaceItem1</value>
+  </data>
+  <data name="layoutControlItem5.CustomizationFormText" xml:space="preserve">
+    <value>商品编号：</value>
+  </data>
+  <data name="layoutControlItem5.Text" xml:space="preserve">
+    <value>商品编号：</value>
   </data>
   <data name="layoutControlGroup1.Text" xml:space="preserve">
     <value>Root</value>
@@ -1614,12 +1623,6 @@
   <data name="&gt;&gt;layoutControlItem58.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;layoutControlItem5.Name" xml:space="preserve">
-    <value>layoutControlItem5</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem5.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;layoutControlItem41.Name" xml:space="preserve">
     <value>layoutControlItem41</value>
   </data>
@@ -1739,6 +1742,18 @@
   </data>
   <data name="&gt;&gt;barButtonItem1.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem5.Name" xml:space="preserve">
+    <value>layoutControlItem5</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem5.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;searchLookUpEdit1View.Name" xml:space="preserve">
+    <value>searchLookUpEdit1View</value>
+  </data>
+  <data name="&gt;&gt;searchLookUpEdit1View.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>CustomerProductForm</value>

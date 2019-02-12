@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Views.Grid.ViewInfo;
+using DevExpress.XtraGrid.Columns;
 
 namespace Book.UI.Settings.BasicData.Customs
 {
@@ -59,6 +60,17 @@ namespace Book.UI.Settings.BasicData.Customs
             // this.newChooseContorlUnitGroup.Choose = new BasicData.UnitGroup.ChooseUnitGroup();
 
             this.action = "view";
+
+            this.searchLookUpEdit1.Properties.DisplayMember = "Id";
+            this.searchLookUpEdit1.Properties.ValueMember = "ProductId";
+            this.searchLookUpEdit1.Properties.View.Columns.Add(new GridColumn() { FieldName = "Id", Caption = "商品編號", Width = 150, Visible = true, VisibleIndex = 0 });
+            this.searchLookUpEdit1.Properties.View.Columns.Add(new GridColumn() { FieldName = "ProductName", Caption = "商品名稱", Width = 150, Visible = true, VisibleIndex = 1 });
+            this.searchLookUpEdit1.Properties.View.Columns.Add(new GridColumn() { FieldName = "CustomerProductName", Caption = "客戶貨品名稱", Width = 150, Visible = true, VisibleIndex = 2 });
+            this.searchLookUpEdit1.Properties.View.Columns.Add(new GridColumn() { FieldName = "ProductVersion", Caption = "版本", Width = 50, Visible = true, VisibleIndex = 3 });
+
+            this.searchLookUpEdit1.Properties.DataSource = productManager.SelectProductForXO();
+
+            this.searchLookUpEdit1.EditValueChanged += new EventHandler(searchLookUpEdit1_EditValueChanged);
         }
 
         public CustomerProductForm(Model.Customer customers)
@@ -224,6 +236,7 @@ namespace Book.UI.Settings.BasicData.Customs
                 this.richTextBox1.Rtf = this._customerProduct.CustomerProductDesc;
                 if (this._customerProduct.Product != null)
                 {
+                    this.searchLookUpEdit1.EditValue = this._customerProduct.Product.ProductId;
                     this.newChooseContorlProduct.Text = this._customerProduct.Product.ProductName;
                     //  this.labelControl1.Text = this._customerProduct.Product.ProductName;
                     this.newChooseContorlProduct.Tag = this._customerProduct.Product.ProductId;
@@ -233,6 +246,7 @@ namespace Book.UI.Settings.BasicData.Customs
                 }
                 else
                 {
+                    this.searchLookUpEdit1.EditValue = null;
                     this.newChooseContorlProduct.Text = null;
                     //  this.labelControl1.Text = null;
                     this.newChooseContorlProduct.Tag = null;
@@ -353,7 +367,7 @@ namespace Book.UI.Settings.BasicData.Customs
                 //    this.spinBoxLong.EditValue = this.spinBoxWidth.EditValue = this.spinBoxHeight.EditValue = this.spinBoxJWeight.EditValue = this.spinBoxMWeight.EditValue = this.spinBoxCaiJi.EditValue = 0;
                 //}
 
-                this.txt_Product_idNO.Text = this._customerProduct.Product != null ? this._customerProduct.Product.Id : "";
+                //this.txt_Product_idNO.Text = this._customerProduct.Product != null ? this._customerProduct.Product.Id : "";
                 //箱子属性
                 //this.spinBoxLong.EditValue = this._customerProduct.BLong == null ? 0 : this._customerProduct.BLong;
                 //this.spinBoxWidth.EditValue = this._customerProduct.BWide == null ? 0 : this._customerProduct.BWide;
@@ -425,6 +439,7 @@ namespace Book.UI.Settings.BasicData.Customs
                     //this.XOPriceRange7_L.Properties.ReadOnly = false;
                     //this.spinBoxPackingNum.Enabled = true;
 
+                    this.searchLookUpEdit1.Enabled = true;
                     break;
                 case "update":
                     //this.textEditCreator.Text = BL.V.ActiveOperator.OperatorName;
@@ -484,6 +499,7 @@ namespace Book.UI.Settings.BasicData.Customs
                     //this.XOPriceRange7_L.Properties.ReadOnly = false;
                     //this.spinBoxPackingNum.Enabled = true;
 
+                    this.searchLookUpEdit1.Enabled = false;
                     break;
                 case "view":
                     //this.textEditCustomerProductId.Properties.ReadOnly = true;
@@ -545,6 +561,7 @@ namespace Book.UI.Settings.BasicData.Customs
                     //this.spinBoxCaiJi.Enabled = false;
                     //this.spinBoxPackingNum.Enabled = false;
 
+                    this.searchLookUpEdit1.Enabled = false;
                     break;
                 default:
                     break;
@@ -651,7 +668,8 @@ namespace Book.UI.Settings.BasicData.Customs
                 //this._customerProduct.QualityTestUnit = product.QualityTstUnit;
                 //this._customerProduct.SellUnit = product.SellUnit;
 
-                this.txt_Product_idNO.Text = product.Id;
+                //this.txt_Product_idNO.Text = product.Id;
+                this.searchLookUpEdit1.EditValue = product.ProductId;
                 this.lookUpBasedUnitGroupId.EditValue = product.BasedUnitGroupId;
                 this.lookUpCJUnit.EditValue = product.BuyUnitId;
                 this.lookUpDepotUnit.EditValue = product.DepotUnitId;
@@ -784,6 +802,25 @@ namespace Book.UI.Settings.BasicData.Customs
             //    this.bindingSourcePackageProduct.DataSource = package.Select(_customerProduct.CustomerProductId);
             //    this.gridControl3.RefreshDataSource();
             //}
+        }
+
+        void searchLookUpEdit1_EditValueChanged(object sender, EventArgs e)
+        {
+            if (this.action != "view")
+            {
+                Model.Product product = null;
+
+                if (this.searchLookUpEdit1.EditValue != null)
+                {
+                    product = productManager.Get(this.searchLookUpEdit1.EditValue.ToString());
+
+                    if (product == null)
+                        product = productManager.GetById(this.searchLookUpEdit1.EditValue.ToString());
+                }
+
+
+                InitData(product);
+            }
         }
 
         private void newChooseContorlProduct_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
