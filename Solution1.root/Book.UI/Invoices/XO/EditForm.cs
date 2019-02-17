@@ -94,6 +94,14 @@ namespace Book.UI.Invoices.XO
             this.repositoryItemSearchLookUpEdit1.DataSource = this.bindingSourceproduct;
             this.repositoryItemSearchLookUpEdit2.DataSource = this.bindingSourceproduct;
             this.repositoryItemSearchLookUpEdit3.DataSource = this.bindingSourceproduct;
+
+
+            this.FormClosing += new FormClosingEventHandler(EditForm_FormClosing);
+        }
+
+        void EditForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.ShowOrHideJieAnPic(false);
         }
 
         public EditForm(string invoiceId)
@@ -1473,9 +1481,16 @@ namespace Book.UI.Invoices.XO
             if (this.invoice.IsClose == null)
                 this.invoice.IsClose = false;
             if (this.invoice.IsClose.Value)
+            {
                 this.barButtonItemJieAn.Caption = "取消結案";
+                this.ShowOrHideJieAnPic(true);
+
+            }
             else
+            {
                 this.barButtonItemJieAn.Caption = "強制結案";
+                this.ShowOrHideJieAnPic(false);
+            }
             this.barButtonItemJieAn.Enabled = this.action == "view" ? true : false;
         }
 
@@ -1696,6 +1711,12 @@ namespace Book.UI.Invoices.XO
                 f.StartPosition = FormStartPosition.CenterScreen;
                 f.ShowDialog(this);
             }
+        }
+
+        private void ShowOrHideJieAnPic(bool b)
+        {
+            Form f = this.MdiParent;
+            (f as MainForm).ShowOrHideJieAnPic(b);
         }
     }
 }

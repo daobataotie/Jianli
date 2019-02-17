@@ -2140,7 +2140,7 @@
     <value>True</value>
   </data>
   <data name="colInvoiceXODetailPrice.VisibleIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+    <value>10</value>
   </data>
   <data name="colInvoiceXODetailPrice.Width" type="System.Int32, mscorlib">
     <value>55</value>
@@ -2217,12 +2217,6 @@
   <data name="repositoryItemSpinEdit3xset.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="gridColumnZR.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gridColumnZR.VisibleIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
   <data name="gridColumnZR.Width" type="System.Int32, mscorlib">
     <value>53</value>
   </data>
@@ -2233,7 +2227,7 @@
     <value>True</value>
   </data>
   <data name="colInvoiceXODetailMoneyxset.VisibleIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+    <value>11</value>
   </data>
   <data name="colInvoiceXODetailMoneyxset.Width" type="System.Int32, mscorlib">
     <value>65</value>
@@ -2243,12 +2237,6 @@
   </data>
   <data name="repositoryItemCheckEdit1.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
-  </data>
-  <data name="gridColumnZS.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gridColumnZS.VisibleIndex" type="System.Int32, mscorlib">
-    <value>14</value>
   </data>
   <data name="gridColumnZS.Width" type="System.Int32, mscorlib">
     <value>43</value>
@@ -2260,7 +2248,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn3.VisibleIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+    <value>12</value>
   </data>
   <data name="gridColumn3.Width" type="System.Int32, mscorlib">
     <value>67</value>
@@ -2272,7 +2260,7 @@
     <value>True</value>
   </data>
   <data name="colInvoiceXODetailNote.VisibleIndex" type="System.Int32, mscorlib">
-    <value>16</value>
+    <value>13</value>
   </data>
   <data name="colInvoiceXODetailNote.Width" type="System.Int32, mscorlib">
     <value>200</value>
@@ -2300,12 +2288,6 @@
   </data>
   <data name="gridColumn10.Caption" xml:space="preserve">
     <value>退货数量</value>
-  </data>
-  <data name="gridColumn10.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gridColumn10.VisibleIndex" type="System.Int32, mscorlib">
-    <value>10</value>
   </data>
   <data name="gridColumn11.Caption" xml:space="preserve">
     <value>商品條碼</value>
@@ -2404,7 +2386,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn12.VisibleIndex" type="System.Int32, mscorlib">
-    <value>17</value>
+    <value>14</value>
   </data>
   <data name="gridColumn13.Caption" xml:space="preserve">
     <value>備注</value>
@@ -2413,7 +2395,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn13.VisibleIndex" type="System.Int32, mscorlib">
-    <value>18</value>
+    <value>15</value>
   </data>
   <data name="repositoryItemLookUpEdit1.AppearanceFocused.BackColor" type="System.Drawing.Color, System.Drawing">
     <value>Cyan</value>

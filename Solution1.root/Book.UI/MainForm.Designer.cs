@@ -60,6 +60,7 @@
             this.barButtonItem207 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem456 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem472 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem485 = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem89 = new DevExpress.XtraBars.BarSubItem();
             this.barButtonItem247 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem33 = new DevExpress.XtraBars.BarButtonItem();
@@ -645,12 +646,13 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
-            this.barButtonItem485 = new DevExpress.XtraBars.BarButtonItem();
+            this.pe_JieAn = new DevExpress.XtraEditors.PictureEdit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pe_JieAn.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -1526,6 +1528,13 @@
             this.barButtonItem472.Id = 630;
             this.barButtonItem472.Name = "barButtonItem472";
             this.barButtonItem472.Tag = "settings.basicdata.companylevels";
+            // 
+            // barButtonItem485
+            // 
+            resources.ApplyResources(this.barButtonItem485, "barButtonItem485");
+            this.barButtonItem485.Id = 644;
+            this.barButtonItem485.Name = "barButtonItem485";
+            this.barButtonItem485.Tag = "Settings.BasicData.AreaCategory.EditForm";
             // 
             // barSubItem89
             // 
@@ -6115,16 +6124,17 @@
             // 
             resources.ApplyResources(this.helpProvider1, "helpProvider1");
             // 
-            // barButtonItem485
+            // pe_JieAn
             // 
-            resources.ApplyResources(this.barButtonItem485, "barButtonItem485");
-            this.barButtonItem485.Id = 644;
-            this.barButtonItem485.Name = "barButtonItem485";
-            this.barButtonItem485.Tag = "Settings.BasicData.AreaCategory.EditForm";
+            resources.ApplyResources(this.pe_JieAn, "pe_JieAn");
+            this.pe_JieAn.MenuManager = this.barManager1;
+            this.pe_JieAn.Name = "pe_JieAn";
+            this.pe_JieAn.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
+            this.Controls.Add(this.pe_JieAn);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
@@ -6140,6 +6150,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pe_JieAn.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -6761,6 +6772,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem482;
         private DevExpress.XtraBars.BarButtonItem barButtonItem483;
         private DevExpress.XtraBars.BarButtonItem barButtonItem484;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem485;        
+        private DevExpress.XtraBars.BarButtonItem barButtonItem485;
+        private DevExpress.XtraEditors.PictureEdit pe_JieAn;        
     }
 }

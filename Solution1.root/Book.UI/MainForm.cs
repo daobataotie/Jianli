@@ -72,8 +72,6 @@ namespace Book.UI
         /// </summary>
         public static bool cc_Jurisdiction = false;
 
-
-
         /// <summary>
         /// �������
         /// </summary>
@@ -664,6 +662,9 @@ namespace Book.UI
         #endregion
 
 
-
+        public void ShowOrHideJieAnPic(bool b)
+        {
+            this.pe_JieAn.Visible = b;
+        }
     }
 }

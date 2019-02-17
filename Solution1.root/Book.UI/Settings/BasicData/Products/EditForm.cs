@@ -64,6 +64,7 @@ namespace Book.UI.Settings.BasicData.Products
         private BL.ProduceOtherCompactDetailManager OtherCompactDetailManager = new Book.BL.ProduceOtherCompactDetailManager();
         private int idIsChange = 0;
         private BL.SupplierManager supplierManager = new Book.BL.SupplierManager();
+        BL.BomParentPartInfoManager BomparentManager = new Book.BL.BomParentPartInfoManager();
 
         /// <summary>
         /// 构造函数——添加
@@ -3767,7 +3768,25 @@ namespace Book.UI.Settings.BasicData.Products
             {
                 this.gridViewStock.OptionsPrint.AutoWidth = false;
 
-                this.gridViewStock.ExportToXlsx(sfd.FileName, new DevExpress.XtraPrinting.XlsxExportOptions { SheetName = "庫存記錄"});
+                this.gridViewStock.ExportToXlsx(sfd.FileName, new DevExpress.XtraPrinting.XlsxExportOptions { SheetName = "庫存記錄" });
+            }
+        }
+
+        //連接BOM單
+        private void barBOM_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (this.action == "view")
+            {
+                Model.BomParentPartInfo bom = this.BomparentManager.Get(this.product);
+                if (bom != null)
+                {
+                    Settings.ProduceManager.BomEdit f = new Book.UI.Settings.ProduceManager.BomEdit(bom, "view");
+                    f.WindowState = FormWindowState.Normal;
+                    f.StartPosition = FormStartPosition.CenterParent;
+                    f.ShowDialog(this);
+                }
+                else
+                    MessageBox.Show("該商品未建立BOM單！", "提示", MessageBoxButtons.OK);
             }
         }
 

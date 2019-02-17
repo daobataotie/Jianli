@@ -79,7 +79,7 @@ namespace Book.UI.Settings.ProduceManager
         public BomEdit(Model.BomParentPartInfo mat)
             : this()
         {
-            this._bomParmentPartInfo = mat;
+            this._bomParmentPartInfo = this.searchBom = mat;
 
             this.action = "update";
             flag = 1;
@@ -87,7 +87,7 @@ namespace Book.UI.Settings.ProduceManager
         public BomEdit(Model.BomParentPartInfo mat, string action)
             : this()
         {
-            this._bomParmentPartInfo = mat;
+            this._bomParmentPartInfo = this.searchBom = mat;
             this.action = action;
             flag = 1;
         }
@@ -202,7 +202,11 @@ namespace Book.UI.Settings.ProduceManager
         protected override void MoveLast()
         {
             this.ReferesTag = 1;
-            //if (this._bomParmentPartInfo == null)
+            if (this.flag == 1)
+            {
+                this.flag = 0;
+                return;
+            }
             this._bomParmentPartInfo = this.searchBom = this.bomParmentInfoManager.GetLast1();
 
         }

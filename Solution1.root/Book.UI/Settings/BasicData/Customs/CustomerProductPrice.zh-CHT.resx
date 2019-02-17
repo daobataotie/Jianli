@@ -465,7 +465,7 @@
     <value>單價</value>
   </data>
   <data name="layoutControlItem7.Text" xml:space="preserve">
-    <value>選擇商品：</value>
+    <value>商品名稱：</value>
   </data>
   <data name="gridColumn9.Caption" xml:space="preserve">
     <value>客戶</value>

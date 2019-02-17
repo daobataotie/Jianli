@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Linq;
+using DevExpress.XtraGrid.Columns;
 
 namespace Book.UI.Settings.BasicData.Customs
 {
@@ -17,6 +18,7 @@ namespace Book.UI.Settings.BasicData.Customs
         BL.CustomerProductPriceManager _manage = new Book.BL.CustomerProductPriceManager();
         private IList<PriceRange> _priceRangeList = new List<PriceRange>();
         Model.Customer customer;
+        private BL.ProductManager productManager = new Book.BL.ProductManager();
 
         public CustomerProductPrice()
         {
@@ -40,6 +42,16 @@ namespace Book.UI.Settings.BasicData.Customs
             this.nccBuildEmployee.Choose = new Employees.ChooseEmployee();
             this.nccChangeEmployee.Choose = new Employees.ChooseEmployee();
             this.action = "view";
+
+            this.slue_ProductId.Properties.DisplayMember = "Id";
+            this.slue_ProductId.Properties.ValueMember = "ProductId";
+            this.slue_ProductId.Properties.View.Columns.Add(new GridColumn() { FieldName = "Id", Caption = "商品編號", Width = 150, Visible = true, VisibleIndex = 0 });
+            this.slue_ProductId.Properties.View.Columns.Add(new GridColumn() { FieldName = "ProductName", Caption = "商品名稱", Width = 150, Visible = true, VisibleIndex = 1 });
+            this.slue_ProductId.Properties.View.Columns.Add(new GridColumn() { FieldName = "CustomerProductName", Caption = "客戶貨品名稱", Width = 150, Visible = true, VisibleIndex = 2 });
+            this.slue_ProductId.Properties.View.Columns.Add(new GridColumn() { FieldName = "ProductVersion", Caption = "版本", Width = 50, Visible = true, VisibleIndex = 3 });
+
+            this.slue_ProductId.Properties.DataSource = productManager.SelectProductForXO();
+
         }
 
         protected override void AddNew()
@@ -87,6 +99,7 @@ namespace Book.UI.Settings.BasicData.Customs
                 }
 
             }
+            this.slue_ProductId.EditValue = this._CustomerProductPrice.Product == null ? null : this._CustomerProductPrice.Product.ProductId;
             this.btn_CheckProduct.EditValue = this._CustomerProductPrice.Product;
             this.memoEditNote.Text = this._CustomerProductPrice.Note;
             this.nccBuildEmployee.EditValue = this._CustomerProductPrice.BuildEmployee;
@@ -212,25 +225,27 @@ namespace Book.UI.Settings.BasicData.Customs
                     if (this._CustomerProductPrice.Customer != null)
                         this._CustomerProductPrice.CustomerId = this._CustomerProductPrice.Customer.CustomerId;
 
-                    //foreach (Model.CustomerProductPrice cpp in this._CustomerProductPriceList)
-                    //{
-                    //    if (cpp.CustomerId == this._CustomerProductPrice.CustomerId && cpp.ProductId == this._CustomerProductPrice.ProductId)
-                    //    {
-                    //    }
-                    //}
                     if (this._CustomerProductPriceList.Where(c => c.CustomerId == this._CustomerProductPrice.CustomerId && c.ProductId == this._CustomerProductPrice.ProductId).ToList<Model.CustomerProductPrice>().Count > 0)
                     {
-                        MessageBox.Show("有重複商品輸入", "提示");
-                        return;
+                        //MessageBox.Show("有重複商品輸入", "提示");
+                        //return;
+                        Model.CustomerProductPrice model = this._CustomerProductPriceList.Where(c => c.CustomerId == this._CustomerProductPrice.CustomerId && c.ProductId == this._CustomerProductPrice.ProductId).First();
+
+                        model = this._CustomerProductPrice;
+
+                        this.bindingSourceCustomerProduct.Position = this._CustomerProductPriceList.IndexOf(this._CustomerProductPriceList.First(c => c.CustomerId == this._CustomerProductPrice.CustomerId && c.ProductId == this._CustomerProductPrice.ProductId));
+
                     }
                     else if (this.action == "insert")
                     {
                         this._CustomerProductPriceList.Add(this._CustomerProductPrice);
                         this.bindingSourceCustomerProduct.Position = this.bindingSourceCustomerProduct.IndexOf(this._CustomerProductPrice);
-                        this.gridControl2.RefreshDataSource();
-                        AnalyzePriceRange(this._CustomerProductPrice.CustomerProductPriceRage);
-                        this.gridControl3.RefreshDataSource();
                     }
+
+                    this.gridControl2.RefreshDataSource();
+                    AnalyzePriceRange(this._CustomerProductPrice.CustomerProductPriceRage);
+                    this.gridControl3.RefreshDataSource();
+
                     this.btn_CheckProduct.EditValue = f.SelectedItem as Model.Product;
                 }
             }
@@ -425,6 +440,49 @@ namespace Book.UI.Settings.BasicData.Customs
                 this._CustomerProductPrice = this.bindingSourceCustomerProduct.Current as Model.CustomerProductPrice;
                 if (this._CustomerProductPrice != null)
                     Refresh();
+            }
+        }
+
+        //新增改為直接填寫商品編號
+        private void slue_ProductId_EditValueChanged(object sender, EventArgs e)
+        {
+            if (this.action == "insert" && this.slue_ProductId.EditValue != null)
+            {
+                this._CustomerProductPrice.Product = productManager.Get(this.slue_ProductId.EditValue.ToString());
+                if (this._CustomerProductPrice.Product != null)
+                {
+                    this.btn_CheckProduct.EditValue = this._CustomerProductPrice.Product;
+                    this._CustomerProductPrice.ProductId = this._CustomerProductPrice.Product.ProductId;
+                    this._CustomerProductPrice.ProductIDNo = this._CustomerProductPrice.Product.Id;
+                    this._CustomerProductPrice.ProductName = this._CustomerProductPrice.Product.ProductName;
+                    this._CustomerProductPrice.ProductDesc = this._CustomerProductPrice.Product.ProductDescription;
+                    this._CustomerProductPrice.ProductVersion = this._CustomerProductPrice.Product.ProductVersion;
+                    this._CustomerProductPrice.CustomerProductId = this._CustomerProductPrice.Product.CustomerProductName;
+                    this._CustomerProductPrice.CustomerProductsId = (new BL.CustomerProductsManager()).SelectPrimaryIdByProceName(this._CustomerProductPrice.ProductId);
+                }
+                this._CustomerProductPrice.Customer = this.bindingSourceCustomer.Current as Model.Customer;
+                if (this._CustomerProductPrice.Customer != null)
+                    this._CustomerProductPrice.CustomerId = this._CustomerProductPrice.Customer.CustomerId;
+
+                if (this._CustomerProductPriceList.Where(c => c.CustomerId == this._CustomerProductPrice.CustomerId && c.ProductId == this._CustomerProductPrice.ProductId).ToList<Model.CustomerProductPrice>().Count > 0)
+                {
+                    //MessageBox.Show("有重複商品輸入", "提示");
+                    //return;
+                    Model.CustomerProductPrice model = this._CustomerProductPriceList.Where(c => c.CustomerId == this._CustomerProductPrice.CustomerId && c.ProductId == this._CustomerProductPrice.ProductId).First();
+
+                    model = this._CustomerProductPrice;
+
+                    this.bindingSourceCustomerProduct.Position = this._CustomerProductPriceList.IndexOf(this._CustomerProductPriceList.First(c => c.CustomerId == this._CustomerProductPrice.CustomerId && c.ProductId == this._CustomerProductPrice.ProductId));
+
+                }
+                else
+                {
+                    this._CustomerProductPriceList.Add(this._CustomerProductPrice);
+                    this.bindingSourceCustomerProduct.Position = this.bindingSourceCustomerProduct.IndexOf(this._CustomerProductPrice);
+                }
+                this.gridControl2.RefreshDataSource();
+                AnalyzePriceRange(this._CustomerProductPrice.CustomerProductPriceRage);
+                this.gridControl3.RefreshDataSource();
             }
         }
     }

@@ -163,13 +163,13 @@ namespace Book.BL
                     produceInDepotDetail.HeJiProduceTransferQuantity = DetailAccessor.Get_HJForColumnName(produceInDepotDetail.PronoteHeaderId, produceInDepot.WorkHouseId, produceInDepotDetail.ProductId, produceInDepotDetail.ProduceInDepotId, produceInDepotDetail.Inumber.Value, produceInDepot.InsertTime.Value, "ProduceTransferQuantity") + _InProduceTransferQuantity;
                 }
 
-                if (produceInDepotDetail.Product.Id.Substring(0, 1) == "A" && produceInDepotDetail.HeJiProduceQuantity > produceInDepotDetail.PronoteHeaderSum)
-                {
-                    if (pronoteHeaderAccessor.SelectXOIdByCondition(produceInDepotDetail.ProductId, produceInDepotDetail.PronoteHeaderId) != null)
-                        throw new Helper.MessageValueException("商品：" + produceInDepotDetail.Product.ToString() + " 合計入庫數量大於訂單數量\r前訂單：" + pronoteHeaderAccessor.SelectXOIdByCondition(produceInDepotDetail.ProductId, produceInDepotDetail.PronoteHeaderId) + " 中也有此商品！");
-                    else
-                        throw new Helper.MessageValueException("商品：" + produceInDepotDetail.Product.ToString() + " 合計入庫數量大於訂單數量");
-                }
+                //if (produceInDepotDetail.Product.Id.Substring(0, 1) == "A" && produceInDepotDetail.HeJiProduceQuantity > produceInDepotDetail.PronoteHeaderSum)
+                //{
+                //    if (pronoteHeaderAccessor.SelectXOIdByCondition(produceInDepotDetail.ProductId, produceInDepotDetail.PronoteHeaderId) != null)
+                //        throw new Helper.MessageValueException("商品：" + produceInDepotDetail.Product.ToString() + " 合計入庫數量大於訂單數量\r前訂單：" + pronoteHeaderAccessor.SelectXOIdByCondition(produceInDepotDetail.ProductId, produceInDepotDetail.PronoteHeaderId) + " 中也有此商品！");
+                //    else
+                //        throw new Helper.MessageValueException("商品：" + produceInDepotDetail.Product.ToString() + " 合計入庫數量大於訂單數量");
+                //}
 
                 DetailAccessor.Insert(produceInDepotDetail);
 
@@ -202,13 +202,13 @@ namespace Book.BL
                                 detail.HeJiProduceQuantity = DetailAccessor.Get_HJForColumnName(detail.PronoteHeaderId, produceInDepot.WorkHouseId, detail.ProductId, detail.ProduceInDepotId, detail.Inumber.Value, detail.ProduceInDepot.InsertTime.Value, "ProduceQuantity") + _nProduceQuantity;
                                 detail.HeJiProduceTransferQuantity = DetailAccessor.Get_HJForColumnName(detail.PronoteHeaderId, produceInDepot.WorkHouseId, detail.ProductId, detail.ProduceInDepotId, detail.Inumber.Value, detail.ProduceInDepot.InsertTime.Value, "ProduceTransferQuantity") + _nProduceTransferQuantity;
 
-                                if (produceInDepotDetail.Product.Id.Substring(0, 1) == "A" && produceInDepotDetail.HeJiProduceQuantity > produceInDepotDetail.PronoteHeaderSum)
-                                {
-                                    if (pronoteHeaderAccessor.SelectXOIdByCondition(produceInDepotDetail.ProductId, produceInDepotDetail.PronoteHeaderId) != null)
-                                        throw new Helper.MessageValueException("商品：" + produceInDepotDetail.Product.ToString() + " 合計入庫數量大於訂單數量\r前訂單:" + pronoteHeaderAccessor.SelectXOIdByCondition(produceInDepotDetail.ProductId, produceInDepotDetail.PronoteHeaderId) + " 中也有此商品！");
-                                    else
-                                        throw new Helper.MessageValueException("商品：" + produceInDepotDetail.Product.ToString() + " 合計入庫數量大於訂單數量");
-                                }
+                                //if (produceInDepotDetail.Product.Id.Substring(0, 1) == "A" && produceInDepotDetail.HeJiProduceQuantity > produceInDepotDetail.PronoteHeaderSum)
+                                //{
+                                //    if (pronoteHeaderAccessor.SelectXOIdByCondition(produceInDepotDetail.ProductId, produceInDepotDetail.PronoteHeaderId) != null)
+                                //        throw new Helper.MessageValueException("商品：" + produceInDepotDetail.Product.ToString() + " 合計入庫數量大於訂單數量\r前訂單:" + pronoteHeaderAccessor.SelectXOIdByCondition(produceInDepotDetail.ProductId, produceInDepotDetail.PronoteHeaderId) + " 中也有此商品！");
+                                //    else
+                                //        throw new Helper.MessageValueException("商品：" + produceInDepotDetail.Product.ToString() + " 合計入庫數量大於訂單數量");
+                                //}
 
                                 DetailAccessor.Update(detail);
 
