@@ -540,10 +540,7 @@ where ProductId = #productid#
 
     <select id="SelectProductForXO" resultMap="ProductResult6" >
       <![CDATA[
-      select ProductId,ProductName,Id,CustomerProductName,ProductVersion,ProductBarCode from product 
-      where (ProductDeadDate IS NULL 
-      OR (year(ProductDeadDate) = '1900' AND month(ProductDeadDate) = '01' AND day(ProductDeadDate) = '01') 
-      OR ProductDeadDate > GetDate())
+      select ProductId,ProductName,Id,CustomerProductName,ProductVersion,ProductBarCode from product  
       order by id
       ]]>
       <!--CustomerProductName desc-->

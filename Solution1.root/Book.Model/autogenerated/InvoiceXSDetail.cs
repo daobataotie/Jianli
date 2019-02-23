@@ -128,6 +128,8 @@ namespace Book.Model
 
         private decimal? _exchangeRate;
 
+        private string _invoiceNO;
+
         /// <summary>
         /// 客户
         /// </summary>
@@ -512,6 +514,12 @@ namespace Book.Model
             set { _exchangeRate = value; }
         }
 
+        public string InvoiceNO
+        {
+            get { return _invoiceNO; }
+            set { _invoiceNO = value; }
+        }
+
         /// <summary>
         /// 客户
         /// </summary>
@@ -715,6 +723,8 @@ namespace Book.Model
         public readonly static string PRO_Currency = "Currency";
 
         public readonly static string PRO_ExchangeRate = "ExchangeRate";
+
+        public readonly static string PRO_InvoiceNO = "InvoiceNO";
 
         #endregion
     }

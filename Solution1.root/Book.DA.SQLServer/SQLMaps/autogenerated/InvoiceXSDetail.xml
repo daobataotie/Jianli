@@ -30,6 +30,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="InvoiceXSDetailTax" column="InvoiceXSDetailTax" />
       <result property="Currency" column="Currency"/>
       <result property="ExchangeRate" column="ExchangeRate"/>
+      <result property="InvoiceNO" column="InvoiceNO"/>
       <result property="Customer" column="CustomerId" lazyLoad="false" select="Customer.select_SimpleCustomer" />
       <result property="InvoiceXO" column="InvoiceXOId" lazyLoad="false" select="InvoiceXO.select_SimpleInvoicexo" />
       <result property="Product" column="ProductId" lazyLoad="false" select="Product.select_SimpleProduct" />
@@ -89,7 +90,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[InvoiceXSDetailFPQuantity],
 				[InvoiceXSDetailTax],
         [Currency],
-        [ExchangeRate]
+        [ExchangeRate],
+        [InvoiceNO]
         
 			FROM
 				[dbo].[InvoiceXSDetail]
@@ -167,7 +169,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[InvoiceXSDetailFPQuantity],
 				[InvoiceXSDetailTax],
         [Currency],
-        [ExchangeRate]  
+        [ExchangeRate],
+        [InvoiceNO]
 			) 
 			VALUES 
 			(
@@ -194,7 +197,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				#InvoiceXSDetailFPQuantity#,
 				#InvoiceXSDetailTax#,
         #Currency#,
-        #ExchangeRate#  
+        #ExchangeRate#,
+        #InvoiceNO#
 			)
              ]]>
     </insert>
@@ -224,7 +228,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[InvoiceXSDetailFPQuantity] = #InvoiceXSDetailFPQuantity#,
 				[InvoiceXSDetailTax] = #InvoiceXSDetailTax#,
         [Currency]=#Currency#,
-        [ExchangeRate]=#ExchangeRate#          
+        [ExchangeRate]=#ExchangeRate#,
+        [InvoiceNO]=#InvoiceNO#
 			WHERE
 				[InvoiceXSDetailId] = #InvoiceXSDetailId#
                     ]]>

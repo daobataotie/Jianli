@@ -1715,8 +1715,10 @@ namespace Book.UI.Invoices.XO
 
         private void ShowOrHideJieAnPic(bool b)
         {
-            Form f = this.MdiParent;
-            (f as MainForm).ShowOrHideJieAnPic(b);
+            //Form f = this.MdiParent;
+            //(f as MainForm).ShowOrHideJieAnPic(b);
+
+            MainForm.mainForm.ShowOrHideJieAnPic(b);
         }
     }
 }

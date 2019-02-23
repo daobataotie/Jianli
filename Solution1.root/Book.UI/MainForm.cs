@@ -82,10 +82,12 @@ namespace Book.UI
 
         //BL.wfrecordManager wfrecordmanage = new Book.BL.wfrecordManager();
         private BL.RoleManager roleManager = new RoleManager();
+        public static MainForm mainForm = null;
 
         public MainForm()
         {
             InitializeComponent();
+            mainForm = this;
             timer1.Interval = 18000000;
         }
 

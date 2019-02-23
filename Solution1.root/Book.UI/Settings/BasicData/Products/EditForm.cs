@@ -199,6 +199,12 @@ namespace Book.UI.Settings.BasicData.Products
             this.openFileDialog1.Filter = "圖片文件(*.jpg,*.gif,*.bmp)|*.jpg;*.gif;*.bmp";
             this.openFileDialog2.Filter = "Excle文件(*.xls,*.xlsx)|*.xls;*.xlsx;";
             this.bindingSourceMaterial.DataSource = this.materialManager.Select();
+
+            GetEmpListWithSpecialJurisdiction();
+            if (EmpIdList.Contains(BL.V.ActiveOperator.EmployeeId))
+                this.xtraTabPage11.PageVisible = true;
+            else
+                this.xtraTabPage11.PageVisible = false;
         }
 
         //private void band()
@@ -3810,5 +3816,24 @@ namespace Book.UI.Settings.BasicData.Products
 
         //    }
         //}
+
+        static List<string> EmpIdList = new List<string>();
+        /// <summary>
+        /// 加载部分特殊人员，只有这些人员有权限可以查看商品的“销售记录”
+        /// </summary>
+        /// <returns></returns>
+        private static void GetEmpListWithSpecialJurisdiction()
+        {
+            EmpIdList.Add("10f80d88-5cbb-4787-8164-b188866c1cb9");  //王李成漳
+            EmpIdList.Add("e5038a33-8d8f-4036-b166-83ea465957f9");  //林姿儀
+            EmpIdList.Add("ca5f524a-c889-43c7-85ea-907d2118d250");  //郭美足
+            EmpIdList.Add("6edaa491-f4f2-4521-8c30-6f6f1e300db2");  //潘玉琴
+            EmpIdList.Add("3cc338eb-31e1-412c-ad54-6189d4322132");  //陳瓊琦
+            EmpIdList.Add("ef1b593f-7295-40bf-9311-934a06e48bc7");  //劉亭吟
+            EmpIdList.Add("90e529bb-a30e-4285-aa4e-a35bef8f7ac8");  //黃翌惠
+            EmpIdList.Add("39f972ba-c5cc-4cd8-b85e-4f51b7de9c99");  //陳建華
+            EmpIdList.Add("37c7b303-7cd2-4fed-b8e7-26343fddce59");  //方怡玲
+            EmpIdList.Add("2cd62d37-b1c8-421a-a700-ac762db5aeca");  //劉嘉娟
+        }
     }
 }

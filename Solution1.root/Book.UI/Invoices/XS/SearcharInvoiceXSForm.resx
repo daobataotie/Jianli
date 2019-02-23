@@ -121,21 +121,24 @@
     <value>单价</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dateEdit2.Properties.VistaTimeProperties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="dateEdit1.Properties.VistaTimeProperties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="gridColumn10.Caption" xml:space="preserve">
-    <value>数量</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="gridControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 88</value>
+  </data>
   <data name="newChooseCustom.Location" type="System.Drawing.Point, System.Drawing">
     <value>583, 12</value>
   </data>
   <data name="simpleButton_Sure.Size" type="System.Drawing.Size, System.Drawing">
     <value>182, 22</value>
   </data>
-  <data name="dateEdit2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 21</value>
+  <data name="emptySpaceItem2.CustomizationFormText" xml:space="preserve">
+    <value>emptySpaceItem2</value>
   </data>
   <assembly alias="DevExpress.XtraEditors.v10.2" name="DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="dateEdit1.Properties.VistaTimeProperties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
@@ -147,11 +150,8 @@
   <data name="gridColumn5.VisibleIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;gridControl2.Parent" xml:space="preserve">
-    <value>layoutControl1</value>
-  </data>
-  <data name="checkEditALL.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="gridColumn6.Width" type="System.Int32, mscorlib">
+    <value>99</value>
   </data>
   <data name="gridColumn4.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -165,17 +165,11 @@
   <data name="&gt;&gt;gridColumn9.Name" xml:space="preserve">
     <value>gridColumn9</value>
   </data>
-  <data name="dateEdit2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>356, 37</value>
-  </data>
   <data name="&gt;&gt;layoutControlItem8.Name" xml:space="preserve">
     <value>layoutControlItem8</value>
   </data>
   <data name="checkEditALL.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
-  </data>
-  <data name="&gt;&gt;bindingSourceDetail.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="cbo_bussiness.Location" type="System.Drawing.Point, System.Drawing">
     <value>356, 12</value>
@@ -186,9 +180,15 @@
   <data name="&gt;&gt;repositoryItemCheckEdit2.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;gridControl2.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
   <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="dateEdit1.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Glyph</value>
+  </data>
+  <data name="layoutControlItem9.Text" xml:space="preserve">
+    <value>货品列表</value>
   </data>
   <data name="layoutControlItem11.Text" xml:space="preserve">
     <value>销售订单编号:</value>
@@ -241,17 +241,17 @@
   <data name="textEditCustomerXOInvoiceId.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="gridColumn12.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEdit1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 21</value>
+  <data name="&gt;&gt;gridColumn1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.XtraForm, DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="ceIsForeigntrade.Properties.DisplayValueChecked" xml:space="preserve">
     <value />
+  </data>
+  <data name="&gt;&gt;gridColumn7.Name" xml:space="preserve">
+    <value>gridColumn7</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>796, 486</value>
@@ -277,9 +277,6 @@
   </data>
   <data name="gridColumnCheck.Width" type="System.Int32, mscorlib">
     <value>43</value>
-  </data>
-  <data name="gridControl1.EmbeddedNavigator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>Inherit</value>
   </data>
   <data name="ceIsForeigntrade.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -335,6 +332,9 @@
   <data name="&gt;&gt;cbo_bussiness.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
+  <data name="gridColumn4.Width" type="System.Int32, mscorlib">
+    <value>77</value>
+  </data>
   <data name="gridXSCustomer.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -347,8 +347,8 @@
   <data name="layoutControlItem4.Text" xml:space="preserve">
     <value>开始日期:</value>
   </data>
-  <data name="textEditCustomerXOInvoiceId.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="gridColumn5.Caption" xml:space="preserve">
+    <value>预交日期</value>
   </data>
   <data name="textEditCustomerXOInvoiceId.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -361,6 +361,9 @@
   </data>
   <data name="gridColumn11.Width" type="System.Int32, mscorlib">
     <value>59</value>
+  </data>
+  <data name="gridControl1.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v10.2">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;gridColumnCheck.Name" xml:space="preserve">
     <value>gridColumnCheck</value>
@@ -375,6 +378,12 @@
     <value>layoutControlItem5</value>
   </data>
   <data name="dateEdit2.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dateEdit1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 21</value>
+  </data>
+  <data name="dateEdit2.Properties.VistaTimeProperties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="dateEdit1.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
@@ -401,14 +410,11 @@
   <data name="&gt;&gt;gridColumn4.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="layoutControlItem10.CustomizationFormText" xml:space="preserve">
-    <value>客户订单编号:</value>
-  </data>
   <data name="layoutControlItem6.CustomizationFormText" xml:space="preserve">
     <value>layoutControlItem6</value>
   </data>
-  <data name="dateEdit2.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="ceIsForeigntrade.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
   </data>
   <data name="&gt;&gt;repositoryItemCheckEdit3.Name" xml:space="preserve">
     <value>repositoryItemCheckEdit3</value>
@@ -449,7 +455,7 @@
   <data name="cbo_bussiness.Properties.NullValuePrompt" xml:space="preserve">
     <value />
   </data>
-  <data name="gridColumn11.Visible" type="System.Boolean, mscorlib">
+  <data name="textEditCustomerXOInvoiceId.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="&gt;&gt;gridXSCustomer.Name" xml:space="preserve">
@@ -457,6 +463,9 @@
   </data>
   <data name="emptySpaceItem1.CustomizationFormText" xml:space="preserve">
     <value>emptySpaceItem1</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem12.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="ceIsClose.Properties.Caption" xml:space="preserve">
     <value>只显示未结案表单</value>
@@ -470,8 +479,8 @@
   <data name="&gt;&gt;layoutControlItem11.Name" xml:space="preserve">
     <value>layoutControlItem11</value>
   </data>
-  <data name="&gt;&gt;gridColumnCusPro.Name" xml:space="preserve">
-    <value>gridColumnCusPro</value>
+  <data name="layoutControlItem46.CustomizationFormText" xml:space="preserve">
+    <value>客户订单编号:</value>
   </data>
   <data name="&gt;&gt;emptySpaceItem1.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
@@ -492,10 +501,13 @@
     <value>1</value>
   </data>
   <data name="gridColumn16.Width" type="System.Int32, mscorlib">
-    <value>51</value>
+    <value>99</value>
   </data>
   <data name="&gt;&gt;gridControl1.ZOrder" xml:space="preserve">
     <value>8</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem14.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="cedetailisclose.Properties.DisplayValueGrayed" xml:space="preserve">
     <value />
@@ -509,11 +521,8 @@
   <data name="&gt;&gt;gridControl1.Parent" xml:space="preserve">
     <value>layoutControl1</value>
   </data>
-  <data name="gridColumnCheck.VisibleIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem9.Name" xml:space="preserve">
-    <value>layoutControlItem9</value>
+  <data name="newChooseCustom.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
   <data name="&gt;&gt;textEditCustomerXOInvoiceId.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -524,9 +533,6 @@
   <data name="&gt;&gt;layoutControl1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="newChooseCustom.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
   <data name="dateEdit2.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
     <value>_</value>
   </data>
@@ -534,7 +540,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="gridColumn9.VisibleIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>8</value>
   </data>
   <data name="&gt;&gt;gridColumn16.Name" xml:space="preserve">
     <value>gridColumn16</value>
@@ -542,11 +548,14 @@
   <data name="cedetailisclose.Properties.DisplayValueChecked" xml:space="preserve">
     <value />
   </data>
-  <data name="layoutControlItem9.Text" xml:space="preserve">
-    <value>货品列表</value>
+  <data name="gridControl1.EmbeddedNavigator.ToolTipTitle" xml:space="preserve">
+    <value />
   </data>
   <data name="&gt;&gt;dateEdit2.ZOrder" xml:space="preserve">
     <value>15</value>
+  </data>
+  <data name="&gt;&gt;newChooseXOcustomer.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="&gt;&gt;layoutControlItem13.Name" xml:space="preserve">
     <value>layoutControlItem13</value>
@@ -566,8 +575,8 @@
   <data name="checkEditALL.Properties.DisplayValueUnchecked" xml:space="preserve">
     <value />
   </data>
-  <data name="dateEdit2.Properties.VistaTimeProperties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;layoutControlItem16.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;gridViewHeader.Name" xml:space="preserve">
     <value>gridViewHeader</value>
@@ -597,7 +606,7 @@
     <value>Default</value>
   </data>
   <data name="gridColumn8.Width" type="System.Int32, mscorlib">
-    <value>185</value>
+    <value>188</value>
   </data>
   <data name="simpleButton_Sure.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -642,7 +651,7 @@
     <value>6</value>
   </data>
   <data name="gridColumn16.VisibleIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+    <value>9</value>
   </data>
   <data name="&gt;&gt;simpleButton_Sure.ZOrder" xml:space="preserve">
     <value>10</value>
@@ -680,17 +689,11 @@
   <data name="gridControl1.EmbeddedNavigator.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Tile</value>
   </data>
-  <data name="dateEdit2.Properties.VistaTimeProperties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="gridColumn12.Width" type="System.Int32, mscorlib">
-    <value>58</value>
-  </data>
   <data name="&gt;&gt;repositoryItemCheckEdit1.Name" xml:space="preserve">
     <value>repositoryItemCheckEdit1</value>
   </data>
-  <data name="dateEdit2.Properties.VistaTimeProperties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="dateEdit2.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="gridColumn3.Caption" xml:space="preserve">
     <value>单据时间</value>
@@ -703,6 +706,9 @@
   </data>
   <data name="ceIsForeigntrade.Size" type="System.Drawing.Size, System.Drawing">
     <value>115, 19</value>
+  </data>
+  <data name="gridColumn3.VisibleIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;gridViewHeader.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
@@ -763,7 +769,7 @@
     <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="gridColumnCusPro.Width" type="System.Int32, mscorlib">
-    <value>74</value>
+    <value>96</value>
   </data>
   <data name="&gt;&gt;layoutControlItem15.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
@@ -786,8 +792,8 @@
   <data name="&gt;&gt;simpleButton_Sure.Name" xml:space="preserve">
     <value>simpleButton_Sure</value>
   </data>
-  <data name="&gt;&gt;layoutControlItem14.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="gridControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 228</value>
   </data>
   <data name="gridColumn7.Caption" xml:space="preserve">
     <value>选择</value>
@@ -816,8 +822,8 @@
   <data name="&gt;&gt;layoutControlItem6.Name" xml:space="preserve">
     <value>layoutControlItem6</value>
   </data>
-  <data name="gridColumn1.Caption" xml:space="preserve">
-    <value>订单编号</value>
+  <data name="dateEdit2.Properties.Mask.EditMask" xml:space="preserve">
+    <value>d</value>
   </data>
   <data name="checkEditALL.Properties.DisplayValueChecked" xml:space="preserve">
     <value />
@@ -834,35 +840,23 @@
   <data name="&gt;&gt;layoutControlItem17.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="gridControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 228</value>
-  </data>
   <data name="&gt;&gt;layoutControl1.Name" xml:space="preserve">
     <value>layoutControl1</value>
   </data>
   <data name="dateEdit2.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="layoutControlItem17.CustomizationFormText" xml:space="preserve">
-    <value>出货客户：</value>
-  </data>
   <data name="dateEdit1.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="gridControl1.EmbeddedNavigator.ToolTipTitle" xml:space="preserve">
-    <value />
+  <data name="gridColumn1.Caption" xml:space="preserve">
+    <value>订单编号</value>
   </data>
   <data name="gridControl2.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="&gt;&gt;checkEditALL.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
   <data name="&gt;&gt;cedetailisclose.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="repositoryItemCheckEdit3.AutoHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="layoutControlItem5.Text" xml:space="preserve">
     <value>结束日期:</value>
@@ -879,14 +873,11 @@
   <data name="&gt;&gt;checkEditALL.Parent" xml:space="preserve">
     <value>layoutControl1</value>
   </data>
-  <data name="&gt;&gt;layoutControlItem16.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="dateEdit2.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
   </data>
   <data name="cedetailisclose.Size" type="System.Drawing.Size, System.Drawing">
     <value>128, 19</value>
-  </data>
-  <data name="layoutControlItem46.CustomizationFormText" xml:space="preserve">
-    <value>客户订单编号:</value>
   </data>
   <data name="&gt;&gt;simpleButton_Exit.ZOrder" xml:space="preserve">
     <value>12</value>
@@ -894,14 +885,17 @@
   <data name="&gt;&gt;gridColumnCusPro.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="emptySpaceItem2.CustomizationFormText" xml:space="preserve">
-    <value>emptySpaceItem2</value>
+  <data name="cedetailisclose.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="layoutControlItem17.Text" xml:space="preserve">
+    <value>出货客户：</value>
   </data>
   <data name="gridColumn9.Width" type="System.Int32, mscorlib">
     <value>49</value>
   </data>
-  <data name="layoutControlItem17.Text" xml:space="preserve">
-    <value>出货客户：</value>
+  <data name="&gt;&gt;gridColumn9.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;gridColumn11.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
@@ -915,20 +909,11 @@
   <data name="gridColumn14.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;spb_search.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="gridColumn3.VisibleIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="gridColumn3.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="layoutControlGroup1.Text" xml:space="preserve">
     <value>Root</value>
   </data>
-  <data name="gridColumn4.Width" type="System.Int32, mscorlib">
-    <value>77</value>
+  <data name="&gt;&gt;gridColumn14.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="textEditCustomerXOInvoiceId.Properties.Mask.EditMask" xml:space="preserve">
     <value />
@@ -945,8 +930,8 @@
   <data name="gridColumn13.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="gridControl2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 88</value>
+  <data name="textEditCustomerXOInvoiceId.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
+    <value>None</value>
   </data>
   <data name="newChooseXOcustomer.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -975,6 +960,9 @@
   <data name="gridColumnCheck.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="dateEdit2.Properties.VistaTimeProperties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="dateEdit1.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
     <value>_</value>
   </data>
@@ -999,17 +987,14 @@
   <data name="newChooseCustom.Size" type="System.Drawing.Size, System.Drawing">
     <value>201, 21</value>
   </data>
-  <data name="&gt;&gt;layoutControlItem12.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="gridControl1.EmbeddedNavigator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Inherit</value>
   </data>
-  <data name="&gt;&gt;layoutControlItem3.Name" xml:space="preserve">
-    <value>layoutControlItem3</value>
+  <data name="&gt;&gt;gridColumnCusPro.Name" xml:space="preserve">
+    <value>gridColumnCusPro</value>
   </data>
   <data name="gridColumn2.Caption" xml:space="preserve">
     <value>经手人</value>
-  </data>
-  <data name="textEditCustomerXOInvoiceId.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>None</value>
   </data>
   <data name="&gt;&gt;gridColumn10.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
@@ -1017,23 +1002,17 @@
   <data name="ceIsClose.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 62</value>
   </data>
-  <data name="gridControl1.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v10.2">
-    <value>Center</value>
+  <data name="&gt;&gt;gridControl1.Name" xml:space="preserve">
+    <value>gridControl1</value>
   </data>
   <data name="&gt;&gt;gridControl2.Name" xml:space="preserve">
     <value>gridControl2</value>
-  </data>
-  <data name="dateEdit2.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
   </data>
   <data name="gridColumn15.Caption" xml:space="preserve">
     <value>赠送</value>
   </data>
   <data name="simpleButton_Sure.Text" xml:space="preserve">
     <value>确定</value>
-  </data>
-  <data name="ceIsForeigntrade.Properties.DisplayValueGrayed" xml:space="preserve">
-    <value />
   </data>
   <data name="gridControl1.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v10.2">
     <value>None</value>
@@ -1059,8 +1038,8 @@
   <data name="layoutControl1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="cedetailisclose.Properties.DisplayValueUnchecked" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;spb_search.ZOrder" xml:space="preserve">
+    <value>17</value>
   </data>
   <data name="checkEditALL.Properties.Caption" xml:space="preserve">
     <value>全选</value>
@@ -1068,8 +1047,11 @@
   <data name="ceIsForeigntrade.Location" type="System.Drawing.Point, System.Drawing">
     <value>271, 62</value>
   </data>
-  <data name="dateEdit1.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
+  <data name="layoutControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="dateEdit2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>356, 37</value>
   </data>
   <data name="dateEdit2.Properties.NullValuePrompt" xml:space="preserve">
     <value />
@@ -1077,14 +1059,11 @@
   <data name="gridColumnCusPro.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;gridColumn1.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;ceIsForeigntrade.Parent" xml:space="preserve">
     <value>layoutControl1</value>
   </data>
   <data name="gridColumnStock.VisibleIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>7</value>
   </data>
   <data name="textEditCustomerXOInvoiceId.Properties.NullValuePrompt" xml:space="preserve">
     <value />
@@ -1095,14 +1074,17 @@
   <data name="layoutControlItem9.CustomizationFormText" xml:space="preserve">
     <value>货品列表</value>
   </data>
-  <data name="dateEdit2.Properties.VistaTimeProperties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
+  <data name="checkEditALL.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;layoutControlItem46.Name" xml:space="preserve">
     <value>layoutControlItem46</value>
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>7, 14</value>
+  </data>
+  <data name="dateEdit2.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="gridColumnCusPro.Caption" xml:space="preserve">
     <value>客户型号</value>
@@ -1122,14 +1104,11 @@
   <data name="dateEdit1.Location" type="System.Drawing.Point, System.Drawing">
     <value>117, 37</value>
   </data>
-  <data name="gridControl2.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v10.2">
-    <value>None</value>
-  </data>
-  <data name="&gt;&gt;gridControl1.Name" xml:space="preserve">
-    <value>gridControl1</value>
-  </data>
   <data name="&gt;&gt;bindingSourceDetail.Name" xml:space="preserve">
     <value>bindingSourceDetail</value>
+  </data>
+  <data name="checkEditALL.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
   </data>
   <data name="&gt;&gt;gridColumn3.Name" xml:space="preserve">
     <value>gridColumn3</value>
@@ -1143,8 +1122,8 @@
   <data name="gridXSCustomer.Caption" xml:space="preserve">
     <value>出货客户</value>
   </data>
-  <data name="layoutControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="gridColumn10.Caption" xml:space="preserve">
+    <value>数量</value>
   </data>
   <data name="dateEdit1.Properties.VistaTimeProperties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1155,14 +1134,14 @@
   <data name="gridColumn10.Width" type="System.Int32, mscorlib">
     <value>48</value>
   </data>
-  <data name="textEditCustomerXOInvoiceId.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="layoutControlItem12.Text" xml:space="preserve">
     <value>客户订单号关键字:</value>
   </data>
   <data name="&gt;&gt;gridColumn7.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="dateEdit1.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
+    <value>Default</value>
   </data>
   <data name="layoutControlItem10.Text" xml:space="preserve">
     <value>客户订单编号:</value>
@@ -1188,9 +1167,6 @@
   <data name="emptySpaceItem3.CustomizationFormText" xml:space="preserve">
     <value>emptySpaceItem3</value>
   </data>
-  <data name="gridColumn12.VisibleIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
   <data name="spb_search.Text" xml:space="preserve">
     <value>查询(&amp;S)</value>
   </data>
@@ -1200,8 +1176,8 @@
   <data name="gridColumn8.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="layoutControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="layoutControlItem1.Text" xml:space="preserve">
+    <value>layoutControlItem1</value>
   </data>
   <data name="&gt;&gt;textEditCustomerXOInvoiceId.Parent" xml:space="preserve">
     <value>layoutControl1</value>
@@ -1209,23 +1185,38 @@
   <data name="cedetailisclose.Location" type="System.Drawing.Point, System.Drawing">
     <value>139, 62</value>
   </data>
+  <data name="gridColumnCheck.VisibleIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="repositoryItemCheckEdit2.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="gridColumn5.Caption" xml:space="preserve">
-    <value>预交日期</value>
+  <data name="layoutControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="textEditCustomerXOInvoiceId.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="layoutControlItem14.Text" xml:space="preserve">
     <value>layoutControlItem14</value>
   </data>
+  <data name="dateEdit1.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
+    <value>DateTime</value>
+  </data>
   <data name="&gt;&gt;gridColumn1.Name" xml:space="preserve">
     <value>gridColumn1</value>
+  </data>
+  <data name="dateEdit2.Properties.VistaTimeProperties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
   </data>
   <data name="&gt;&gt;layoutControlItem4.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="layoutControlItem15.CustomizationFormText" xml:space="preserve">
     <value>layoutControlItem15</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem3.Name" xml:space="preserve">
+    <value>layoutControlItem3</value>
   </data>
   <data name="cedetailisclose.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1245,6 +1236,9 @@
   <data name="gridColumn13.Width" type="System.Int32, mscorlib">
     <value>49</value>
   </data>
+  <data name="&gt;&gt;gridColumn10.Name" xml:space="preserve">
+    <value>gridColumn10</value>
+  </data>
   <data name="layoutControlItem46.Text" xml:space="preserve">
     <value>客户订单编号:</value>
   </data>
@@ -1257,6 +1251,9 @@
   <data name="$this.Text" xml:space="preserve">
     <value>选择客戶订单</value>
   </data>
+  <data name="&gt;&gt;simpleButton_Exit.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
   <data name="&gt;&gt;textEditCustomerXOInvoiceId.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
@@ -1266,17 +1263,17 @@
   <data name="&gt;&gt;emptySpaceItem3.Name" xml:space="preserve">
     <value>emptySpaceItem3</value>
   </data>
-  <data name="&gt;&gt;gridColumn7.Name" xml:space="preserve">
-    <value>gridColumn7</value>
+  <data name="gridColumn3.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="gridColumn6.Width" type="System.Int32, mscorlib">
-    <value>99</value>
+  <data name="&gt;&gt;layoutControlItem9.Name" xml:space="preserve">
+    <value>layoutControlItem9</value>
   </data>
   <data name="gridColumn2.Width" type="System.Int32, mscorlib">
     <value>77</value>
   </data>
-  <data name="&gt;&gt;simpleButton_Exit.Parent" xml:space="preserve">
-    <value>layoutControl1</value>
+  <data name="layoutControlItem10.CustomizationFormText" xml:space="preserve">
+    <value>客户订单编号:</value>
   </data>
   <data name="dateEdit1.Properties.VistaTimeProperties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1296,8 +1293,8 @@
   <data name="ceIsForeigntrade.Properties.DisplayValueUnchecked" xml:space="preserve">
     <value />
   </data>
-  <data name="&gt;&gt;gridColumn10.Name" xml:space="preserve">
-    <value>gridColumn10</value>
+  <data name="&gt;&gt;checkEditALL.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="dateEdit1.Properties.VistaTimeProperties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
     <value>_</value>
@@ -1311,8 +1308,8 @@
   <data name="dateEdit1.Properties.VistaTimeProperties.Mask.BeepOnError" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;newChooseXOcustomer.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="layoutControlItem17.CustomizationFormText" xml:space="preserve">
+    <value>出货客户：</value>
   </data>
   <data name="gridColumn4.VisibleIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -1320,11 +1317,8 @@
   <data name="gridColumnCusPro.VisibleIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="layoutControlItem1.Text" xml:space="preserve">
-    <value>layoutControlItem1</value>
-  </data>
-  <data name="&gt;&gt;cbo_bussiness.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.ComboBoxEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="dateEdit2.Properties.VistaTimeProperties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="gridControl2.Size" type="System.Drawing.Size, System.Drawing">
     <value>772, 119</value>
@@ -1332,8 +1326,8 @@
   <data name="&gt;&gt;layoutControlItem9.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="dateEdit1.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>DateTime</value>
+  <data name="gridColumn12.Width" type="System.Int32, mscorlib">
+    <value>58</value>
   </data>
   <data name="newChooseXOcustomer.Location" type="System.Drawing.Point, System.Drawing">
     <value>583, 37</value>
@@ -1356,11 +1350,8 @@
   <data name="checkEditALL.Size" type="System.Drawing.Size, System.Drawing">
     <value>99, 19</value>
   </data>
-  <data name="&gt;&gt;spb_search.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="dateEdit2.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="&gt;&gt;bindingSourceDetail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;gridColumnCheck.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
@@ -1377,20 +1368,17 @@
   <data name="dateEdit1.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;gridColumn14.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="gridControl2.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v10.2">
+    <value>None</value>
   </data>
-  <data name="&gt;&gt;gridColumn9.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="&gt;&gt;spb_search.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;gridColumn15.Name" xml:space="preserve">
     <value>gridColumn15</value>
   </data>
-  <data name="gridColumn11.VisibleIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="checkEditALL.Properties.DisplayValueGrayed" xml:space="preserve">
-    <value />
+  <data name="dateEdit2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 21</value>
   </data>
   <data name="dateEdit2.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1417,7 +1405,7 @@
     <value>d</value>
   </data>
   <data name="gridColumn15.VisibleIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>6</value>
   </data>
   <data name="gridControl1.Size" type="System.Drawing.Size, System.Drawing">
     <value>772, 220</value>
@@ -1428,8 +1416,8 @@
   <data name="&gt;&gt;cbo_bussiness.Parent" xml:space="preserve">
     <value>layoutControl1</value>
   </data>
-  <data name="dateEdit2.Properties.VistaTimeProperties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;cbo_bussiness.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.ComboBoxEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="emptySpaceItem2.Text" xml:space="preserve">
     <value>emptySpaceItem2</value>
@@ -1449,8 +1437,8 @@
   <data name="layoutControlItem5.CustomizationFormText" xml:space="preserve">
     <value>layoutControlItem5</value>
   </data>
-  <data name="dateEdit2.Properties.Mask.EditMask" xml:space="preserve">
-    <value>d</value>
+  <data name="repositoryItemCheckEdit3.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="gridColumn13.Caption" xml:space="preserve">
     <value>单位</value>

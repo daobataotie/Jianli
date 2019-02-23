@@ -592,13 +592,13 @@ namespace Book.UI.Query
                 atSummondetail = new Book.Model.AtSummonDetail();
                 atSummondetail.SummonDetailId = Guid.NewGuid().ToString();
                 atSummondetail.Lending = "借";
-                atSummondetail.SubjectId = this.subjectList.First(d => d.Id == "2144001").SubjectId;
+                //atSummondetail.SubjectId = this.subjectList.First(d => d.Id == "2144001").SubjectId;
                 atSummondetail.AMoney = Convert.ToDecimal(this.spe_JinE.EditValue) - Convert.ToDecimal(this.spe_ZheRang.EditValue);
                 this.atSummon.Details.Add(atSummondetail);
                 atSummondetail = new Book.Model.AtSummonDetail();
                 atSummondetail.SummonDetailId = Guid.NewGuid().ToString();
                 atSummondetail.Lending = "借";
-                atSummondetail.SubjectId = this.subjectList.First(d => d.Id == "6213000").SubjectId;
+                //atSummondetail.SubjectId = this.subjectList.First(d => d.Id == "6213000").SubjectId;
                 atSummondetail.AMoney = Convert.ToDecimal(this.spe_ShuiE.EditValue);
                 this.atSummon.Details.Add(atSummondetail);
                 this.CountJieDaiTotal(this.atSummon.Details);
@@ -634,8 +634,8 @@ namespace Book.UI.Query
         {
             if (this.action == "view")
                 return;
-            if (this.atSummon.Details.Any(d => d.Lending == "貸" && d.SubjectId != this.subjectList.First(f => f.Id == "7101000").SubjectId))
-                this.atSummon.Details.First(d => d.Lending == "貸" && d.SubjectId != this.subjectList.First(f => f.Id == "7101000").SubjectId).AMoney = Convert.ToDecimal(this.spe_Total.EditValue);
+            //if (this.atSummon.Details.Any(d => d.Lending == "貸" && d.SubjectId != this.subjectList.First(f => f.Id == "7101000").SubjectId))
+            //    this.atSummon.Details.First(d => d.Lending == "貸" && d.SubjectId != this.subjectList.First(f => f.Id == "7101000").SubjectId).AMoney = Convert.ToDecimal(this.spe_Total.EditValue);
             this.CountJieDaiTotal(this.atSummon.Details);
             this.gridControl1.RefreshDataSource();
         }
@@ -646,10 +646,10 @@ namespace Book.UI.Query
                 return;
             this.spe_Total.EditValue = Convert.ToDouble(this.spe_JinE.EditValue) + Convert.ToDouble(this.spe_ShuiE.EditValue) - Convert.ToDouble(this.spe_ZheRang.EditValue) - Convert.ToDouble(this.spe_FKZheRang.EditValue);
 
-            if (this.atSummon.Details.Any(d => d.SubjectId == this.subjectList.First(f => f.Id == "2144001").SubjectId))
-                this.atSummon.Details.First(d => d.SubjectId == this.subjectList.First(f => f.Id == "2144001").SubjectId).AMoney = Convert.ToDecimal(this.spe_JinE.EditValue) - Convert.ToDecimal(this.spe_ZheRang.EditValue);
-            if (this.atSummon.Details.Any(d => d.Lending == "貸" && d.SubjectId != this.subjectList.First(f => f.Id == "7101000").SubjectId))
-                this.atSummon.Details.First(d => d.Lending == "貸" && d.SubjectId != this.subjectList.First(f => f.Id == "7101000").SubjectId).AMoney = Convert.ToDecimal(this.spe_Total.EditValue);
+            //if (this.atSummon.Details.Any(d => d.SubjectId == this.subjectList.First(f => f.Id == "2144001").SubjectId))
+            //    this.atSummon.Details.First(d => d.SubjectId == this.subjectList.First(f => f.Id == "2144001").SubjectId).AMoney = Convert.ToDecimal(this.spe_JinE.EditValue) - Convert.ToDecimal(this.spe_ZheRang.EditValue);
+            //if (this.atSummon.Details.Any(d => d.Lending == "貸" && d.SubjectId != this.subjectList.First(f => f.Id == "7101000").SubjectId))
+            //    this.atSummon.Details.First(d => d.Lending == "貸" && d.SubjectId != this.subjectList.First(f => f.Id == "7101000").SubjectId).AMoney = Convert.ToDecimal(this.spe_Total.EditValue);
             this.CountJieDaiTotal(this.atSummon.Details);
             this.gridControl1.RefreshDataSource();
         }
@@ -660,10 +660,10 @@ namespace Book.UI.Query
                 return;
             this.spe_Total.EditValue = Convert.ToDouble(this.spe_JinE.EditValue) + Convert.ToDouble(this.spe_ShuiE.EditValue) - Convert.ToDouble(this.spe_ZheRang.EditValue) - Convert.ToDouble(this.spe_FKZheRang.EditValue);
 
-            if (this.atSummon.Details.Any(d => d.Lending == "貸" && d.SubjectId != this.subjectList.First(f => f.Id == "7101000").SubjectId))
-                this.atSummon.Details.First(d => d.Lending == "貸" && d.SubjectId != this.subjectList.First(f => f.Id == "7101000").SubjectId).AMoney = Convert.ToDecimal(this.spe_Total.EditValue);
-            if (this.atSummon.Details.Any(d => d.SubjectId == this.subjectList.First(f => f.Id == "7101000").SubjectId))
-                this.atSummon.Details.First(d => d.SubjectId == this.subjectList.First(f => f.Id == "7101000").SubjectId).AMoney = Convert.ToDecimal(this.spe_FKZheRang.EditValue);
+            //if (this.atSummon.Details.Any(d => d.Lending == "貸" && d.SubjectId != this.subjectList.First(f => f.Id == "7101000").SubjectId))
+            //    this.atSummon.Details.First(d => d.Lending == "貸" && d.SubjectId != this.subjectList.First(f => f.Id == "7101000").SubjectId).AMoney = Convert.ToDecimal(this.spe_Total.EditValue);
+            //if (this.atSummon.Details.Any(d => d.SubjectId == this.subjectList.First(f => f.Id == "7101000").SubjectId))
+            //    this.atSummon.Details.First(d => d.SubjectId == this.subjectList.First(f => f.Id == "7101000").SubjectId).AMoney = Convert.ToDecimal(this.spe_FKZheRang.EditValue);
             this.CountJieDaiTotal(this.atSummon.Details);
             this.gridControl1.RefreshDataSource();
         }
@@ -674,11 +674,11 @@ namespace Book.UI.Query
                 return;
             this.spe_Total.EditValue = Convert.ToDouble(this.spe_JinE.EditValue) + Convert.ToDouble(this.spe_ShuiE.EditValue) - Convert.ToDouble(this.spe_ZheRang.EditValue) - Convert.ToDouble(this.spe_FKZheRang.EditValue);
 
-            if (this.atSummon.Details.Any(d => d.SubjectId == this.subjectList.First(f => f.Id == "6213000").SubjectId))
-                this.atSummon.Details.First(d => d.SubjectId == this.subjectList.First(f => f.Id == "6213000").SubjectId).AMoney = Convert.ToDecimal(this.spe_ShuiE.EditValue);
+            //if (this.atSummon.Details.Any(d => d.SubjectId == this.subjectList.First(f => f.Id == "6213000").SubjectId))
+            //    this.atSummon.Details.First(d => d.SubjectId == this.subjectList.First(f => f.Id == "6213000").SubjectId).AMoney = Convert.ToDecimal(this.spe_ShuiE.EditValue);
 
-            if (this.atSummon.Details.Any(d => d.Lending == "貸" && d.SubjectId != this.subjectList.First(f => f.Id == "7101000").SubjectId))
-                this.atSummon.Details.First(d => d.Lending == "貸" && d.SubjectId != this.subjectList.First(f => f.Id == "7101000").SubjectId).AMoney = Convert.ToDecimal(this.spe_Total.EditValue);
+            //if (this.atSummon.Details.Any(d => d.Lending == "貸" && d.SubjectId != this.subjectList.First(f => f.Id == "7101000").SubjectId))
+            //    this.atSummon.Details.First(d => d.Lending == "貸" && d.SubjectId != this.subjectList.First(f => f.Id == "7101000").SubjectId).AMoney = Convert.ToDecimal(this.spe_Total.EditValue);
             this.CountJieDaiTotal(this.atSummon.Details);
             this.gridControl1.RefreshDataSource();
         }

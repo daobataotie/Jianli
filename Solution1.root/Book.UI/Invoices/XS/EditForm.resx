@@ -1085,12 +1085,6 @@
   <data name="gridColumn1.Caption" xml:space="preserve">
     <value>订单编号</value>
   </data>
-  <data name="gridColumn1.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gridColumn1.VisibleIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
   <data name="gridColumnCusXOId.Caption" xml:space="preserve">
     <value>客户订单号</value>
   </data>
@@ -1113,7 +1107,7 @@
     <value>True</value>
   </data>
   <data name="colDonatetowards.VisibleIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+    <value>11</value>
   </data>
   <data name="colInvoiceAllowance.Caption" xml:space="preserve">
     <value>折让</value>
@@ -1128,7 +1122,7 @@
     <value>True</value>
   </data>
   <data name="colInvoiceAllowance.VisibleIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+    <value>12</value>
   </data>
   <data name="colInvoiceXSDetailPrice.Caption" xml:space="preserve">
     <value>单价</value>
@@ -1143,7 +1137,7 @@
     <value>True</value>
   </data>
   <data name="colInvoiceXSDetailPrice.VisibleIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+    <value>13</value>
   </data>
   <data name="colInvoiceXSDetailMoney.Caption" xml:space="preserve">
     <value>金额</value>
@@ -1234,6 +1228,15 @@
   </data>
   <data name="gridColumn6.VisibleIndex" type="System.Int32, mscorlib">
     <value>15</value>
+  </data>
+  <data name="gridColumn7.Caption" xml:space="preserve">
+    <value>INVOICE NO</value>
+  </data>
+  <data name="gridColumn7.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn7.VisibleIndex" type="System.Int32, mscorlib">
+    <value>14</value>
   </data>
   <data name="repositoryItemSpinEdit2.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2158,6 +2161,12 @@
   </data>
   <data name="&gt;&gt;barButtonItemInvoice.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn7.Name" xml:space="preserve">
+    <value>gridColumn7</value>
+  </data>
+  <data name="&gt;&gt;gridColumn7.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>EditForm</value>
