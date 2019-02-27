@@ -227,7 +227,7 @@ namespace Book.DA.SQLServer
         //根據客戶訂單號查詢所有出貨單明細
         public IList<Model.InvoiceXSDetail> SelectByInvoiceXOId(string invoiceXOId)
         {
-            string sql = "select xsd.InvoiceId,xsd.InvoiceXSDetailQuantity,p.Id as Product_Id,p.ProductName from InvoiceXSDetail xsd left join Product p on p.ProductId=xsd.ProductId left join InvoiceXODetail xod on xod.InvoiceXODetailId=xsd.InvoiceXODetailId where xsd.InvoiceXOId='" + invoiceXOId + "' order by xsd.InvoiceId, xsd.Inumber,p.Id";
+            string sql = "select xsd.InvoiceId,xs.InvoiceDate,xsd.InvoiceXSDetailQuantity,p.Id as Product_Id,p.ProductName from InvoiceXSDetail xsd left join InvoiceXS xs on xsd.InvoiceId=xs.InvoiceId left join Product p on p.ProductId=xsd.ProductId left join InvoiceXODetail xod on xod.InvoiceXODetailId=xsd.InvoiceXODetailId where xsd.InvoiceXOId='" + invoiceXOId + "' order by xsd.InvoiceId, xsd.Inumber,p.Id";
 
             return this.DataReaderBind<Model.InvoiceXSDetail>(sql, null, CommandType.Text);
         }
