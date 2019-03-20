@@ -69,7 +69,7 @@ namespace Book.UI.Invoices.IP
             }
             set
             {
-                if (value is Model.InvoiceXO)
+                if (value is Model.PackingInvoiceHeader)
                 {
                     packingInvoiceHeader = packingInvoiceHeaderManager.Get((value as Model.PackingInvoiceHeader).InvoiceNo);
                 }
@@ -310,7 +310,7 @@ namespace Book.UI.Invoices.IP
             if (this.action != "view")
             {
                 ChoosePackingListForm f = new ChoosePackingListForm();
-                if (f.ShowDialog(this) == DialogResult.OK)
+                if (f.ShowDialog(this) == DialogResult.OK && f.SelectItem != null)
                 {
                     this.ncc_Customer.EditValue = this.packingInvoiceHeader.Customer = f.SelectItem.Customer = new BL.CustomerManager().Get(f.SelectItem.CustomerId);
                     this.txt_CustomerName.EditValue = f.SelectItem.CustomerFullName;
@@ -335,10 +335,13 @@ namespace Book.UI.Invoices.IP
                         detail.Product = item.Product;
                         detail.PONo = item.PONo;
                         detail.Quantity = item.Quantity;
-                        detail.UnitPrice = item.InvoiceXODetail.InvoiceXODetailPrice;
-                        detail.Amount = detail.Quantity * detail.UnitPrice;
-                        detail.InvoiceXODetail = item.InvoiceXODetail;
-                        detail.InvoiceXODetailId = item.InvoiceXODetailId;
+                        if (item.InvoiceXODetail != null)
+                        {
+                            detail.UnitPrice = item.InvoiceXODetail.InvoiceXODetailPrice;
+                            detail.Amount = detail.Quantity * detail.UnitPrice;
+                            detail.InvoiceXODetail = item.InvoiceXODetail;
+                            detail.InvoiceXODetailId = item.InvoiceXODetailId;
+                        }
 
                         this.packingInvoiceHeader.Details.Add(detail);
                     }

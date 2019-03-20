@@ -755,6 +755,9 @@ namespace Book.UI
 
             //Ö^”Ú‘O÷√
             operations.Add("Settings.BasicData.AreaCategory.EditForm", (D1)delegate(System.Windows.Forms.Form form) { M1("Settings.BasicData.AreaCategory.EditForm", form); });
+
+            //ProformaInvoice
+            operations.Add("Invoices.IP.EditFormProformaInvoice", (D1)delegate(System.Windows.Forms.Form form) { M1("Invoices.IP.EditFormProformaInvoice", form); });
         }
 
         static Form CreateForm(string formTypeName)

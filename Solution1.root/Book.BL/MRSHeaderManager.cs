@@ -99,15 +99,15 @@ namespace Book.BL
             //
             // todo:add other logic here
             //
-            Validate(mRSHeader);
-            TiGuiExists(mRSHeader);
             if (this.Exists(mRSHeader.Id))
             {
                 throw new Helper.InvalidValueException(Model.MRSHeader.PRO_Id);
             }
+                mRSHeader.InsertTime = DateTime.Now;
+                Validate(mRSHeader);
+                TiGuiExists(mRSHeader);
             try
             {
-                mRSHeader.InsertTime = DateTime.Now;
 
                 BL.V.BeginTransaction();
                 string invoiceKind = this.GetInvoiceKind().ToLower();

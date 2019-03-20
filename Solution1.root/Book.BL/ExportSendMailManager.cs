@@ -47,10 +47,10 @@ namespace Book.BL
             {
                 BL.V.BeginTransaction();
 
-                TiGuiExists(exportSendMail);
-
                 exportSendMail.InsertTime = DateTime.Now;
                 exportSendMail.UpdateTime = DateTime.Now;
+                TiGuiExists(exportSendMail);
+
 
                 string invoiceKind = this.GetInvoiceKind().ToLower();
                 string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, exportSendMail.InsertTime.Value.Year);

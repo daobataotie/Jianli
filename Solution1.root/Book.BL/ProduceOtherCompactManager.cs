@@ -60,6 +60,9 @@ namespace Book.BL
             //
             // todo:add other logic here
             //
+
+            produceOtherCompact.InsertTime = DateTime.Now;
+            produceOtherCompact.UpdateTime = DateTime.Now;
             Validate(produceOtherCompact);
             TiGuiExists(produceOtherCompact);
             try
@@ -69,8 +72,6 @@ namespace Book.BL
                     produceOtherCompact.ProduceOtherCompactId = this.GetId();
                 }
 
-                produceOtherCompact.InsertTime = DateTime.Now;
-                produceOtherCompact.UpdateTime = DateTime.Now;
                 BL.V.BeginTransaction();
                 string invoiceKind = this.GetInvoiceKind().ToLower();
                 //string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, produceOtherCompact.InsertTime.Value.Year);

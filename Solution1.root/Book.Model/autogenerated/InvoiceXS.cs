@@ -79,6 +79,8 @@ namespace Book.Model
         /// </summary>
         private double? _invoiceAllowance;
 
+        private DateTime? _declareDate;
+
         /// <summary>
         /// 货运方式
         /// </summary>
@@ -403,6 +405,12 @@ namespace Book.Model
             set { _invoiceTaibiTotal = value; }
         }
 
+        public DateTime? DeclareDate
+        {
+            get { return _declareDate; }
+            set { _declareDate = value; }
+        }
+
         /// <summary>
         /// 其他费用
         /// </summary>
@@ -475,6 +483,8 @@ namespace Book.Model
         public readonly static string PRO_Special = "Special";
 
         public readonly static string PRO_InvoiceTaibiTotal = "InvoiceTaibiTotal";
+
+        public readonly static string PRO_DeclareDate = "DeclareDate";
         #endregion
     }
 }

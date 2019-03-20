@@ -117,17 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="simpleButtonOK.Text" xml:space="preserve">
+    <value>確定</value>
+  </data>
   <data name="gridColumn1.Caption" xml:space="preserve">
     <value>銀行賬號</value>
   </data>
   <data name="gridColumn2.Caption" xml:space="preserve">
-    <value>名稱</value>
+    <value>銀行名稱</value>
   </data>
   <data name="gridColumn3.Caption" xml:space="preserve">
-    <value>說明</value>
-  </data>
-  <data name="simpleButtonOK.Text" xml:space="preserve">
-    <value>確定</value>
+    <value>賬號名稱</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>選擇銀行</value>

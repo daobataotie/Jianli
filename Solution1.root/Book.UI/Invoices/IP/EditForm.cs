@@ -75,7 +75,7 @@ namespace Book.UI.Invoices.IP
             }
             set
             {
-                if (value is Model.InvoiceXO)
+                if (value is Model.PackingListHeader)
                 {
                     packingListHeader = packingListHeaderManager.Get((value as Model.PackingListHeader).PackingNo);
                 }
@@ -132,12 +132,14 @@ namespace Book.UI.Invoices.IP
 
             base.Refresh();
 
-            if (this.action == "update")
-                this.txt_PackingNo.Properties.ReadOnly = true;
+            //if (this.action == "update")
+            //    this.txt_PackingNo.Properties.ReadOnly = true;
         }
 
         protected override void Save(Helper.InvoiceStatus status)
         {
+            string tempID = this.packingListHeader.PackingNo;
+
             if (!this.gridView3.PostEditor() || !this.gridView3.UpdateCurrentRow())
                 return;
 
@@ -161,7 +163,7 @@ namespace Book.UI.Invoices.IP
             if (this.action == "insert")
                 this.packingListHeaderManager.Insert(this.packingListHeader);
             if (this.action == "update")
-                this.packingListHeaderManager.Update(this.packingListHeader);
+                this.packingListHeaderManager.Update(this.packingListHeader, tempID);
         }
 
         protected override void MoveLast()

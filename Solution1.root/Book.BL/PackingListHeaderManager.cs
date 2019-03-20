@@ -82,7 +82,7 @@ namespace Book.BL
         /// <summary>
         /// Update a PackingListHeader.
         /// </summary>
-        public void Update(Model.PackingListHeader packingListHeader)
+        public void Update(Model.PackingListHeader packingListHeader,string oldId)
         {
             //
             // todo: add other logic here.
@@ -94,10 +94,13 @@ namespace Book.BL
             {
                 BL.V.BeginTransaction();
 
-                packingListHeader.UpdateTime = DateTime.Now;
-                accessor.Update(packingListHeader);
+                //删除详细
+                accessorDetail.DeleteByHeader(oldId);
+                accessor.Delete(oldId);
 
-                accessorDetail.DeleteByHeader(packingListHeader.PackingNo);
+                packingListHeader.UpdateTime = DateTime.Now;
+                accessor.Insert(packingListHeader);
+
                 foreach (var item in packingListHeader.Details)
                 {
                     item.PackingListHeaderId = packingListHeader.PackingNo;

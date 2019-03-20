@@ -485,7 +485,7 @@ namespace Book.Model
         }
 
         /// <summary>
-        /// 客户电话
+        /// 聯絡電話
         /// </summary>
         public string CustomerPhone
         {

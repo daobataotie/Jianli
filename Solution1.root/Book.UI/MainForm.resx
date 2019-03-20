@@ -453,6 +453,9 @@
   <data name="barButtonItem484.Caption" xml:space="preserve">
     <value>Invoice</value>
   </data>
+  <data name="barButtonItem486.Caption" xml:space="preserve">
+    <value>ProformaInvoice</value>
+  </data>
   <data name="barSubItem56.Caption" xml:space="preserve">
     <value>仓库管理</value>
   </data>
@@ -2506,6 +2509,12 @@
     <value>barButtonItem484</value>
   </data>
   <data name="&gt;&gt;barButtonItem484.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem486.Name" xml:space="preserve">
+    <value>barButtonItem486</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem486.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;barSubItem56.Name" xml:space="preserve">

@@ -40,9 +40,9 @@ namespace Book.BL
             {
                 BL.V.BeginTransaction();
 
-                TiGuiExists(atParameterSet);
                 atParameterSet.InsertTime = DateTime.Now;
                 atParameterSet.UpdateTime = DateTime.Now;
+                TiGuiExists(atParameterSet);
 
                 string invoiceKind = this.GetInvoiceKind().ToLower();
                 string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, atParameterSet.InsertTime.Value.Year);

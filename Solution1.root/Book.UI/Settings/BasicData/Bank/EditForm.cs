@@ -65,11 +65,11 @@ namespace Book.UI.Settings.BasicData.Bank
         }
         protected override void Save()
         {
-
             this.bank.BankId = this.bank.BankId;
             this.bank.Id = this.txt_Id.Text;
             this.bank.BankName = textEditName.Text;
-
+            this.bank.SWIFTCode = txt_SWIFTCode.Text;
+            this.bank.BankAddress = txt_Address.Text;
             this.bank.Description = textEditDescription.Text;
             switch (this.action)
             {
@@ -96,6 +96,8 @@ namespace Book.UI.Settings.BasicData.Bank
             this.textEditName.Text = this.bank.BankName;
             this.textEditDescription.Text = this.bank.Description;
             this.txt_Id.Text = this.bank.Id;
+            this.txt_SWIFTCode.Text = this.bank.SWIFTCode;
+            this.txt_Address.Text = this.bank.BankAddress;
 
             switch (this.action)
             {

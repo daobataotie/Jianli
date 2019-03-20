@@ -117,112 +117,115 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="bindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="gridControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>566, 279</value>
-  </data>
-  <data name="&gt;&gt;gridControl1.Name" xml:space="preserve">
-    <value>gridControl1</value>
-  </data>
-  <data name="&gt;&gt;gridControl1.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;gridControl1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;gridControl1.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="simpleButtonNew.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 308</value>
   </data>
   <data name="gridColumn1.Caption" xml:space="preserve">
     <value>银行账号</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="gridColumn1.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="gridColumn1.VisibleIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="gridColumn2.Caption" xml:space="preserve">
-    <value>名称</value>
-  </data>
-  <data name="gridColumn2.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gridColumn2.VisibleIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="gridColumn3.Caption" xml:space="preserve">
-    <value>说明</value>
+  <data name="&gt;&gt;gridColumn1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="gridColumn3.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;simpleButtonOK.Name" xml:space="preserve">
+    <value>simpleButtonOK</value>
   </data>
-  <data name="gridColumn3.VisibleIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="gridControl1.EmbeddedNavigator.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Tile</value>
   </data>
-  <data name="simpleButtonCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>468, 308</value>
-  </data>
-  <data name="&gt;&gt;simpleButtonCancel.Name" xml:space="preserve">
-    <value>simpleButtonCancel</value>
-  </data>
-  <data name="&gt;&gt;simpleButtonCancel.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="gridColumn1.Width" type="System.Int32, mscorlib">
+    <value>149</value>
   </data>
   <data name="&gt;&gt;simpleButtonCancel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;simpleButtonCancel.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="simpleButtonOK.Location" type="System.Drawing.Point, System.Drawing">
-    <value>375, 308</value>
-  </data>
-  <data name="&gt;&gt;simpleButtonOK.Name" xml:space="preserve">
-    <value>simpleButtonOK</value>
-  </data>
-  <data name="&gt;&gt;simpleButtonOK.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;simpleButtonOK.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;simpleButtonOK.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="simpleButtonNew.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 308</value>
+  <data name="&gt;&gt;gridControl1.Name" xml:space="preserve">
+    <value>gridControl1</value>
   </data>
-  <data name="&gt;&gt;simpleButtonNew.Name" xml:space="preserve">
-    <value>simpleButtonNew</value>
+  <data name="&gt;&gt;gridColumn2.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;simpleButtonNew.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;simpleButtonNew.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;simpleButtonNew.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="gridColumn4.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 14</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>592, 344</value>
+  <data name="&gt;&gt;gridColumn4.Name" xml:space="preserve">
+    <value>gridColumn4</value>
+  </data>
+  <assembly alias="DevExpress.Data.v10.2" name="DevExpress.Data.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="gridControl1.EmbeddedNavigator.AllowHtmlTextInToolTip" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v10.2">
+    <value>Default</value>
+  </data>
+  <data name="gridControl1.EmbeddedNavigator.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;gridControl1.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>选择银行</value>
   </data>
-  <data name="&gt;&gt;gridView1.Name" xml:space="preserve">
-    <value>gridView1</value>
+  <data name="simpleButtonCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>516, 308</value>
+  </data>
+  <data name="&gt;&gt;gridColumn1.Name" xml:space="preserve">
+    <value>gridColumn1</value>
+  </data>
+  <data name="&gt;&gt;simpleButtonNew.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;gridColumn4.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="gridColumn2.Caption" xml:space="preserve">
+    <value>银行名称</value>
+  </data>
+  <data name="gridColumn3.VisibleIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;bindingSource1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="gridColumn1.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridControl1.EmbeddedNavigator.ToolTipTitle" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>Book.UI.Settings.BasicData.BaseChooseForm, Book.UI, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <assembly alias="DevExpress.XtraEditors.v10.2" name="DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="gridControl1.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v10.2">
+    <value>Center</value>
+  </data>
+  <data name="gridColumn2.Width" type="System.Int32, mscorlib">
+    <value>149</value>
+  </data>
+  <data name="gridColumn4.Width" type="System.Int32, mscorlib">
+    <value>134</value>
+  </data>
+  <data name="gridColumn3.Width" type="System.Int32, mscorlib">
+    <value>164</value>
+  </data>
+  <data name="&gt;&gt;gridControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;simpleButtonNew.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>640, 344</value>
+  </data>
+  <data name="&gt;&gt;simpleButtonCancel.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;gridView1.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
@@ -230,31 +233,83 @@
   <data name="&gt;&gt;bindingSource1.Name" xml:space="preserve">
     <value>bindingSource1</value>
   </data>
-  <data name="&gt;&gt;bindingSource1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="gridColumn2.VisibleIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;gridColumn1.Name" xml:space="preserve">
-    <value>gridColumn1</value>
+  <data name="gridColumn3.Caption" xml:space="preserve">
+    <value>账号名称</value>
   </data>
-  <data name="&gt;&gt;gridColumn1.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="gridControl1.EmbeddedNavigator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Inherit</value>
   </data>
-  <data name="&gt;&gt;gridColumn2.Name" xml:space="preserve">
-    <value>gridColumn2</value>
+  <data name="gridColumn4.VisibleIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
-  <data name="&gt;&gt;gridColumn2.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="gridColumn4.Caption" xml:space="preserve">
+    <value>SWIFT Code</value>
+  </data>
+  <data name="&gt;&gt;simpleButtonCancel.Name" xml:space="preserve">
+    <value>simpleButtonCancel</value>
+  </data>
+  <data name="&gt;&gt;simpleButtonNew.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="simpleButtonOK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>423, 308</value>
+  </data>
+  <data name="&gt;&gt;simpleButtonOK.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="gridControl1.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v10.2">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;gridView1.Name" xml:space="preserve">
+    <value>gridView1</value>
+  </data>
+  <data name="gridColumn3.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn2.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;gridColumn3.Name" xml:space="preserve">
     <value>gridColumn3</value>
   </data>
+  <data name="gridControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>614, 279</value>
+  </data>
+  <data name="gridControl1.EmbeddedNavigator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left</value>
+  </data>
   <data name="&gt;&gt;gridColumn3.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 14</value>
+  </data>
+  <data name="&gt;&gt;gridColumn2.Name" xml:space="preserve">
+    <value>gridColumn2</value>
+  </data>
+  <data name="&gt;&gt;simpleButtonOK.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>ChooseBankForm</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>Book.UI.Settings.BasicData.BaseChooseForm, Book.UI, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;simpleButtonOK.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;gridControl1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;simpleButtonNew.Name" xml:space="preserve">
+    <value>simpleButtonNew</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="bindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

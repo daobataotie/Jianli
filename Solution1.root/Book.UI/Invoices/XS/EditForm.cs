@@ -265,6 +265,8 @@ namespace Book.UI.Invoices.XS
             this.Invoice.AuditState = this.saveAuditState;
             invoice.Special = this.checkEditSpecial.Checked;
             invoice.InvoiceTaibiTotal = this.spe_TaibiTotal.Value;
+            if (this.date_DeclareDate.EditValue != null)
+                invoice.DeclareDate = this.date_DeclareDate.DateTime;
 
             switch (this.action)
             {
@@ -504,6 +506,8 @@ namespace Book.UI.Invoices.XS
             this.checkEditSpecial.Checked = Convert.ToBoolean(invoice.Special);
             this.bindingSourceDetail.DataSource = invoice.Details;
             this.spe_TaibiTotal.EditValue = invoice.InvoiceTaibiTotal;
+            this.date_DeclareDate.EditValue = invoice.DeclareDate;
+            this.txt_PayCondition.Text = invoice.Customer == null ? null : invoice.Customer.PayCondition;
 
             //  this.textEditCustomerInvoiceXOId.Text = xo == null ? "" : xo.CustomerInvoiceXOId;
             //this.bindingSourceProduct.DataSource = this.customerProductsManager.Select(this.buttonEditCompany.EditValue as Model.Customer);
@@ -526,6 +530,7 @@ namespace Book.UI.Invoices.XS
             this.buttonEditEmployee.ButtonReadOnly = true;
             this.textEditInvoiceId.Properties.ReadOnly = true;
             this.textEditSongHuoAddress.Enabled = false;
+            this.txt_PayCondition.Properties.ReadOnly = true;
         }
 
         protected override DevExpress.XtraReports.UI.XtraReport GetReport()
@@ -955,8 +960,13 @@ namespace Book.UI.Invoices.XS
             //else
             //    date = DateTime.Parse(string.Format("{0}-{1}-{2}", this.dateEditInvoiceDate.DateTime.Year, this.dateEditInvoiceDate.DateTime.Month, "21"));
 
+            string currency = "";
+            if (xodetail.Invoice != null)
+                currency = xodetail.Invoice.Currency;
+            else
+                currency = invoiceXOManager.GetCurrencyByInvoiceId(xodetail.InvoiceId);
 
-            decimal rate = exchangeRateManager.GetRateByDateAndCurrency(this.dateEditInvoiceDate.DateTime, xodetail.Invoice.Currency);
+            decimal rate = exchangeRateManager.GetRateByDateAndCurrency(this.dateEditInvoiceDate.DateTime, currency);
             xsdetail.Currency = xodetail.Invoice.Currency;
             xsdetail.ExchangeRate = rate;
 
@@ -1274,51 +1284,110 @@ namespace Book.UI.Invoices.XS
             }
         }
 
+        //Invoice
         private void barButtonItemInvoice_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            ZX.ChooseInvoiceForm f = new Book.UI.Invoices.ZX.ChooseInvoiceForm();
-            if (f.ShowDialog() == DialogResult.OK)
+            #region 作廢
+            //ZX.ChooseInvoiceForm f = new Book.UI.Invoices.ZX.ChooseInvoiceForm();
+            //if (f.ShowDialog() == DialogResult.OK)
+            //{
+            //    if (f.Key != null && f.Key.Count > 0)
+            //    {
+            //        if (invoice.Details.Count > 0 && string.IsNullOrEmpty(invoice.Details[0].ProductId))
+            //            invoice.Details.RemoveAt(0);
+            //        Model.InvoicePackingDetail detail = f.Key[0];
+            //        invoice.InvoiceXOId = detail.InvoiceXOId;
+            //        if (detail.InvoiceXO != null)
+            //        {
+            //            this.buttonEditCompany.EditValue = detail.InvoiceXO.Customer;
+            //            this.newChooseXScustomer.EditValue = detail.InvoiceXO.xocustomer;
+            //        }
+
+            //        foreach (Model.InvoicePackingDetail model in f.Key)
+            //        {
+            //            Model.InvoiceXSDetail xtdetail = new InvoiceXSDetail();
+            //            xtdetail.Inumber = invoice.Details.Count + 1;
+            //            xtdetail.Invoice = invoice;
+            //            xtdetail.InvoiceId = invoice.InvoiceId;
+            //            xtdetail.InvoiceXOId = model.InvoiceXOId;
+            //            xtdetail.InvoiceXSDetailId = Guid.NewGuid().ToString();
+            //            xtdetail.InvoiceXSDetailQuantity = 0;
+            //            xtdetail.InvoiceXODetailId = model.InvoiceXODetailId;
+            //            xtdetail.InvoiceXODetail = model.InvoiceXODetail;
+            //            xtdetail.Product = model.Product;
+            //            xtdetail.ProductId = model.ProductId;
+            //            xtdetail.InvoiceProductUnit = model.ProductUnit;
+            //            xtdetail.Donatetowards = false;
+            //            xtdetail.InvoiceXSDetailPrice = model.UnitPrice;
+            //            xtdetail.InvoiceAllowance = 0;
+            //            xtdetail.InvoiceXSDetailMoney = 0;
+            //            xtdetail.InvoiceXSDetailTaxPrice = 0;
+            //            xtdetail.InvoiceXSDetailTaxMoney = 0;
+            //            xtdetail.InvoiceXSDetailFPQuantity = 0;
+            //            xtdetail.InvoiceXSDetailTax = 0;
+            //            invoice.Details.Add(xtdetail);
+            //        }
+            //        this.gridControl1.RefreshDataSource();
+            //    }
+            //    f.Dispose();
+            //    GC.Collect();
+            //} 
+            #endregion
+
+            if (this.action == "view") return;
+
+            IP.ChooseInvoiceForm f = new Book.UI.Invoices.IP.ChooseInvoiceForm();
+            if (f.ShowDialog(this) == DialogResult.OK)
             {
-                if (f.Key != null && f.Key.Count > 0)
+                if (f.SelectItem != null)
                 {
-                    if (invoice.Details.Count > 0 && string.IsNullOrEmpty(invoice.Details[0].ProductId))
-                        invoice.Details.RemoveAt(0);
-                    Model.InvoicePackingDetail detail = f.Key[0];
-                    invoice.InvoiceXOId = detail.InvoiceXOId;
-                    if (detail.InvoiceXO != null)
+                    if (f.SelectItem.Details.Any(D => D.InvoiceXODetail == null))
                     {
-                        this.buttonEditCompany.EditValue = detail.InvoiceXO.Customer;
-                        this.newChooseXScustomer.EditValue = detail.InvoiceXO.xocustomer;
+                        MessageBox.Show("Invoice中的一項或多項不包含客戶訂單信息", "", MessageBoxButtons.OK);
+                        return;
                     }
 
-                    foreach (Model.InvoicePackingDetail model in f.Key)
+                    if (invoice.Details.Count > 0 && string.IsNullOrEmpty(invoice.Details[0].ProductId))
+                        invoice.Details.RemoveAt(0);
+
+                    Model.PackingInvoiceHeader ph = f.SelectItem;
+                    Model.Customer customer = customerManager.Get(ph.CustomerId);
+                    this.buttonEditCompany.EditValue = customer;
+                    this.newChooseXScustomer.EditValue = customer;
+
+                    foreach (Model.PackingInvoiceDetail d in ph.Details)
                     {
+
                         Model.InvoiceXSDetail xtdetail = new InvoiceXSDetail();
                         xtdetail.Inumber = invoice.Details.Count + 1;
                         xtdetail.Invoice = invoice;
                         xtdetail.InvoiceId = invoice.InvoiceId;
-                        xtdetail.InvoiceXOId = model.InvoiceXOId;
+                        xtdetail.InvoiceXOId = d.InvoiceXODetail.InvoiceId;
                         xtdetail.InvoiceXSDetailId = Guid.NewGuid().ToString();
-                        xtdetail.InvoiceXSDetailQuantity = 0;
-                        xtdetail.InvoiceXODetailId = model.InvoiceXODetailId;
-                        xtdetail.InvoiceXODetail = model.InvoiceXODetail;
-                        xtdetail.Product = model.Product;
-                        xtdetail.ProductId = model.ProductId;
-                        xtdetail.InvoiceProductUnit = model.ProductUnit;
+                        xtdetail.InvoiceXSDetailQuantity = (double)d.Quantity;
+                        xtdetail.InvoiceXODetailId = d.InvoiceXODetail.InvoiceXODetailId;
+                        xtdetail.InvoiceXODetail = d.InvoiceXODetail;
+                        xtdetail.Product = d.Product;
+                        xtdetail.ProductId = d.Product.ProductId;
+                        xtdetail.InvoiceProductUnit = d.InvoiceXODetail.InvoiceProductUnit;
                         xtdetail.Donatetowards = false;
-                        xtdetail.InvoiceXSDetailPrice = model.UnitPrice;
+                        xtdetail.InvoiceXSDetailPrice = d.UnitPrice;
+                        //xtdetail.InvoiceXSDetailPrice = ConvertPrice(xos);
+                        ConvertPrice(d.InvoiceXODetail, xtdetail);    //2018年11月26日20:50:52：计算总价时才换算台币
                         xtdetail.InvoiceAllowance = 0;
-                        xtdetail.InvoiceXSDetailMoney = 0;
+                        xtdetail.InvoiceXSDetailMoney = d.Amount;
                         xtdetail.InvoiceXSDetailTaxPrice = 0;
-                        xtdetail.InvoiceXSDetailTaxMoney = 0;
+                        xtdetail.InvoiceXSDetailTaxMoney = d.Amount;
                         xtdetail.InvoiceXSDetailFPQuantity = 0;
                         xtdetail.InvoiceXSDetailTax = 0;
+                        xtdetail.InvoiceXSDetailNote = d.InvoiceXODetail.Remark;
+                        xtdetail.InvoiceNO = d.PackingInvoiceHeaderId;
                         invoice.Details.Add(xtdetail);
                     }
                     this.gridControl1.RefreshDataSource();
+
+                    UpdateMoneyFields();
                 }
-                f.Dispose();
-                GC.Collect();
             }
         }
 

@@ -50,6 +50,8 @@ namespace Book.Model
 		private string _description;
 
         private string _id;
+
+        private string _sWIFTCode;
 		 
 		#endregion
 		
@@ -146,7 +148,7 @@ namespace Book.Model
 		}
 
 		/// <summary>
-		/// 说明
+		/// 说明,2019年3月12日11:08:46，改为：账号名称
 		/// </summary>
 		public string Description
 		{
@@ -164,6 +166,12 @@ namespace Book.Model
         {
             get { return _id; }
             set { _id = value; }
+        }
+
+        public string SWIFTCode
+        {
+            get { return _sWIFTCode; }
+            set { _sWIFTCode = value; }
         }
 	
 		/// <summary>
@@ -202,6 +210,8 @@ namespace Book.Model
 		public readonly static string PROPERTY_DESCRIPTION = "Description";
 
         public readonly static string PROPERTY_Id = "Id";
+
+        public readonly static string PRO_SWIFTCode = "SWIFTCode";
 		#endregion
 	}
 }

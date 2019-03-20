@@ -32,7 +32,13 @@ namespace Book.UI.Invoices.IP
         {
             Model.PackingListHeader model = this.bindingSourceHeader.Current as Model.PackingListHeader;
 
-            this.bindingSourceDetail.DataSource = model.Details = detailManager.SelectByHeader(model.PackingNo);
+            if (model != null)
+            {
+                this.bindingSourceDetail.DataSource = model.Details = detailManager.SelectByHeader(model.PackingNo);
+            }
+            else
+                this.bindingSourceDetail.DataSource = null;
+
             this.gridControl3.RefreshDataSource();
 
             this.SelectItem = model;
@@ -42,7 +48,13 @@ namespace Book.UI.Invoices.IP
         {
             Model.PackingListHeader model = this.bindingSourceHeader.Current as Model.PackingListHeader;
 
-            this.bindingSourceDetail.DataSource = model.Details = detailManager.SelectByHeader(model.PackingNo);
+            if (model != null)
+            {
+                this.bindingSourceDetail.DataSource = model.Details = detailManager.SelectByHeader(model.PackingNo);
+            }
+            else
+                this.bindingSourceDetail.DataSource = null;
+
             this.gridControl3.RefreshDataSource();
 
             this.SelectItem = model;

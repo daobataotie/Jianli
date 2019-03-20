@@ -35,10 +35,12 @@ namespace Book.BL
             //
             // todo:add other logic here
             //
-            //TiGuiExists(invoiceZG);
+            //
             Validate(invoiceZG);
             invoiceZG.InsertTime = DateTime.Now;
             invoiceZG.UpdateTime = DateTime.Now;
+            TiGuiExists(invoiceZG);
+
             accessor.Insert(invoiceZG);
             foreach (Model.InvoiceZGDetail detai in invoiceZG.Details)
             {
