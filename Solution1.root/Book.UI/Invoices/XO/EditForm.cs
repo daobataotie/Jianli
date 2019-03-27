@@ -135,6 +135,47 @@ namespace Book.UI.Invoices.XO
                 LastFlag = 1;
         }
 
+        public EditForm(IList<Model.ProformaInvoiceDetail> list)
+            : this()
+        {
+            this.action = "insert";
+
+            this.invoice = new Model.InvoiceXO();
+            this.invoice.InvoiceId = this.invoiceManager.GetIdByMonth(DateTime.Now);
+            this.invoice.InvoiceDate = DateTime.Now;
+            this.invoice.IsClose = false;
+            this.invoice.Employee0 = BL.V.ActiveOperator.Employee;
+            this.invoice.Details = new List<Model.InvoiceXODetail>();
+
+            Model.InvoiceXODetail detail = null;
+            if (list != null)
+            {
+                this.invoice.Customer = invoice.xocustomer = list.Count > 0 ? list[0].ProformaInvoice.Customer : null;
+
+                foreach (var item in list)
+                {
+                    detail = new Book.Model.InvoiceXODetail();
+                    detail.InvoiceXODetailId = Guid.NewGuid().ToString();
+                    detail.Invoice = this.invoice;
+                    detail.Inumber = this.invoice.Details.Count + 1;
+                    detail.InvoiceId = this.invoice.InvoiceId;
+                    detail.Product = item.Product;
+                    detail.ProductId = item.ProductId;
+                    detail.InvoiceXODetailQuantity = item.Quantity;
+                    detail.InvoiceXODetailPrice = item.UnitPrice;
+                    detail.InvoiceXODetailMoney = item.Amount;
+                    detail.InvoiceProductUnit = item.Unit;
+
+                    this.invoice.Details.Add(detail);
+                }
+
+                this.bindingSource1.DataSource = this.invoice.Details;
+                this.gridControl1.RefreshDataSource();
+            }
+
+            LastFlag = 1;
+        }
+
         private void EditForm_Load(object sender, EventArgs e)
         {
             GetXo();
@@ -738,6 +779,8 @@ namespace Book.UI.Invoices.XO
 
         protected override void AddNew()
         {
+            if (LastFlag == 1) { LastFlag = 0; return; }
+
             this.invoice = new Model.InvoiceXO();
 
             //this.invoice.InvoiceId = this.invoiceManager.GetNewId();
@@ -847,7 +890,8 @@ namespace Book.UI.Invoices.XO
         protected override void MoveLast()
         {
             if (LastFlag == 1) { LastFlag = 0; return; }
-            this.invoice = this.invoiceManager.Get(this.invoiceManager.GetLast() == null ? "" : this.invoiceManager.GetLast().InvoiceId);
+            //this.invoice = this.invoiceManager.Get(this.invoiceManager.GetLast() == null ? "" : this.invoiceManager.GetLast().InvoiceId);
+            this.invoice =  this.invoiceManager.GetLast();
         }
 
         public override void Refresh()
@@ -952,6 +996,7 @@ namespace Book.UI.Invoices.XO
             this.spe_TaibiMoney.EditValue = this.invoice.TaibiMoney;
 
             this.bindingSource1.DataSource = this.invoice.Details;
+            this.gridControl1.RefreshDataSource();
             this.checkEditChadan.EditValue = this.invoice.IsChadan;
 
             base.Refresh();
@@ -1053,9 +1098,9 @@ namespace Book.UI.Invoices.XO
         {
             if (this.action == "insert" || this.action == "update")
             {
-                if (this.CanAdd(this.invoice.Details))
+                if (e.KeyData == Keys.Enter)
                 {
-                    if (e.KeyData == Keys.Enter)
+                    if (this.CanAdd(this.invoice.Details))
                     {
                         Model.InvoiceXODetail detail = new Model.InvoiceXODetail();
                         detail.InvoiceXODetailId = Guid.NewGuid().ToString();
@@ -1074,7 +1119,7 @@ namespace Book.UI.Invoices.XO
                         //this.bindingSource1.Position = this.bindingSource1.IndexOf(detail);
                     }
                 }
-                if (e.KeyData == Keys.Delete)
+                else if (e.KeyData == Keys.Delete)
                 {
                     this.simpleButtonRemove.PerformClick();
                 }
@@ -1216,7 +1261,6 @@ namespace Book.UI.Invoices.XO
             //        e.DisplayText = product.ProductVersion;
             //        break;
             //}
-
         }
 
         //private void buttonEditCompany_EditValueChanged(object sender, EventArgs e)
@@ -1624,21 +1668,21 @@ namespace Book.UI.Invoices.XO
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            Model.InvoiceXODetail d = this.bindingSource1.Current as Model.InvoiceXODetail;
-            if (d.Islargess == true)
-            {
-                this.colProduct.OptionsColumn.AllowEdit = false;
-                this.colProductId.OptionsColumn.AllowEdit = false;
-                this.gridColumnCustomProduct.OptionsColumn.AllowEdit = false;
-                this.gridColumn11.OptionsColumn.AllowEdit = false;
-            }
-            else
-            {
-                this.colProduct.OptionsColumn.AllowEdit = true;
-                this.colProductId.OptionsColumn.AllowEdit = true;
-                this.gridColumnCustomProduct.OptionsColumn.AllowEdit = true;
-                this.gridColumn11.OptionsColumn.AllowEdit = true;
-            }
+            //Model.InvoiceXODetail d = this.bindingSource1.Current as Model.InvoiceXODetail;
+            //if (d.Islargess == true)
+            //{
+            //    this.colProduct.OptionsColumn.AllowEdit = false;
+            //    this.colProductId.OptionsColumn.AllowEdit = false;
+            //    this.gridColumnCustomProduct.OptionsColumn.AllowEdit = false;
+            //    this.gridColumn11.OptionsColumn.AllowEdit = false;
+            //}
+            //else
+            //{
+            //    this.colProduct.OptionsColumn.AllowEdit = true;
+            //    this.colProductId.OptionsColumn.AllowEdit = true;
+            //    this.gridColumnCustomProduct.OptionsColumn.AllowEdit = true;
+            //    this.gridColumn11.OptionsColumn.AllowEdit = true;
+            //}
         }
 
         //¥Ú”° ÷–“ªµ∂
@@ -1719,6 +1763,19 @@ namespace Book.UI.Invoices.XO
             //(f as MainForm).ShowOrHideJieAnPic(b);
 
             MainForm.mainForm.ShowOrHideJieAnPic(b);
+        }
+
+        private void gridView1_CustomDrawCell(object sender, DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventArgs e)
+        {
+            if (e.Column.Name == "gridColumn9")
+            {
+                if (e.DisplayText != "0")
+                {
+                    e.Appearance.ForeColor = Color.Red;
+                }
+                else
+                    e.Appearance.ForeColor = Color.Black;
+            }
         }
     }
 }

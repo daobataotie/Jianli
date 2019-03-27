@@ -1243,7 +1243,7 @@
     <value>Horizontal</value>
   </data>
   <data name="gridColumn9.Caption" xml:space="preserve">
-    <value>已出貨數量</value>
+    <value>未出貨數量</value>
   </data>
   <data name="gridColumn10.Caption" xml:space="preserve">
     <value>退貨數量</value>

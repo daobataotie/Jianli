@@ -144,8 +144,8 @@ namespace Book.UI.Invoices.XO
             // 
             this.xrLine1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             resources.ApplyResources(this.xrLine1, "xrLine1");
-            this.xrLine1.LineStyle = System.Drawing.Drawing2D.DashStyle.Dot;
-            this.xrLine1.LineWidth = 13;
+            this.xrLine1.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.xrLine1.LineWidth = 2;
             this.xrLine1.Name = "xrLine1";
             this.xrLine1.StylePriority.UseBorderDashStyle = false;
             // 
@@ -709,7 +709,7 @@ namespace Book.UI.Invoices.XO
             this.bottomMarginBand1});
             resources.ApplyResources(this, "$this");
             this.ExportOptions.Xls.SheetName = resources.GetString("RO1ZYD.ExportOptions.Xls.SheetName");
-            this.Margins = new System.Drawing.Printing.Margins(143, 82, 89, 79);
+            this.Margins = new System.Drawing.Printing.Margins(130, 80, 89, 79);
             this.PageHeight = 1400;
             this.PageWidth = 2146;
             this.PaperKind = System.Drawing.Printing.PaperKind.Custom;

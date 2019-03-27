@@ -34,6 +34,9 @@ namespace Book.UI.Invoices.XO
             //客户信息
             this.xrLabelCustomName.Text = this.invoice.Customer.CustomerShortName;
             this.lbl_Customer_Id.Text = this.invoice.Customer.Id;
+            this.xrLabelCustomerXOId.Text = this.invoice.CustomerInvoiceXOId;
+            this.lbl_XOCustomer_Id.Text = this.invoice.xocustomer.Id;
+            this.xrLabelXScustomer.Text = this.invoice.xocustomer.CustomerShortName;
             //this.xrLabelCustomFax.Text = this.invoice.Customer.CustomerFax;
             //this.xrLabelCustomTel.Text = string.IsNullOrEmpty(this.invoice.Customer.CustomerPhone) ? this.invoice.Customer.CustomerPhone1 : this.invoice.Customer.CustomerPhone;
             //this.xrLabelTongYiNo.Text = this.invoice.Customer.CustomerNumber;
@@ -45,8 +48,6 @@ namespace Book.UI.Invoices.XO
             //this.xrLabelEmp.Text += this.invoice.Employee0 == null ? "" : this.invoice.Employee0.EmployeeName;
             //this.xrLabel25.Text += this.invoice.AuditEmp == null ? "" : this.invoice.AuditEmp.EmployeeName;
             this.xrLabelNote.Text = this.invoice.InvoiceNote;
-            this.xrLabelCustomerXOId.Text = this.invoice.CustomerInvoiceXOId;
-            this.xrLabelXScustomer.Text = this.invoice.xocustomer.CustomerShortName;
             this.xrLabelYJRQ.Text = this.invoice.InvoiceYjrq.Value.ToString("yyyy-MM-dd");
             this.xrLabelUnit.Text = this.invoice.Details[0].InvoiceProductUnit;
             //this.xrLabeJianCe.Text = this.invoice.xocustomer.CheckedStandard;

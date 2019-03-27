@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using Book.UI.Settings.BasicData.Employees;
 using System.Linq;
+using DevExpress.XtraGrid.Columns;
 
 namespace Book.UI.Invoices.IP
 {
@@ -15,6 +16,7 @@ namespace Book.UI.Invoices.IP
     {
         Model.ProformaInvoice proformaInvoice = new Model.ProformaInvoice();
         BL.ProformaInvoiceManager proformaInvoiceManager = new Book.BL.ProformaInvoiceManager();
+        BL.ProductManager productManager = new Book.BL.ProductManager();
 
         public EditFormProformaInvoice()
         {
@@ -28,6 +30,24 @@ namespace Book.UI.Invoices.IP
 
             this.ncc_Customer.Choose = new Settings.BasicData.Customs.ChooseCustoms();
             this.bindingSourceBank.DataSource = new BL.BankManager().Select();
+
+
+            this.repositoryItemSearchLookUpEdit1.DisplayMember = "Id";
+            this.repositoryItemSearchLookUpEdit1.ValueMember = "ProductId";
+            this.repositoryItemSearchLookUpEdit1.View.Columns.Add(new GridColumn() { FieldName = "Id", Caption = "商品編號", Width = 150, Visible = true, VisibleIndex = 0 });
+            this.repositoryItemSearchLookUpEdit1.View.Columns.Add(new GridColumn() { FieldName = "ProductName", Caption = "商品名稱", Width = 150, Visible = true, VisibleIndex = 1 });
+            this.repositoryItemSearchLookUpEdit1.View.Columns.Add(new GridColumn() { FieldName = "CustomerProductName", Caption = "客戶貨品名稱", Width = 150, Visible = true, VisibleIndex = 2 });
+            this.repositoryItemSearchLookUpEdit1.View.Columns.Add(new GridColumn() { FieldName = "ProductVersion", Caption = "版本", Width = 50, Visible = true, VisibleIndex = 3 });
+
+            this.repositoryItemSearchLookUpEdit2.DisplayMember = "ProductName";
+            this.repositoryItemSearchLookUpEdit2.ValueMember = "ProductId";
+            this.repositoryItemSearchLookUpEdit2.View.Columns.Add(new GridColumn() { FieldName = "Id", Caption = "商品編號", Width = 150, Visible = true, VisibleIndex = 0 });
+            this.repositoryItemSearchLookUpEdit2.View.Columns.Add(new GridColumn() { FieldName = "ProductName", Caption = "商品名稱", Width = 150, Visible = true, VisibleIndex = 1 });
+            this.repositoryItemSearchLookUpEdit2.View.Columns.Add(new GridColumn() { FieldName = "CustomerProductName", Caption = "客戶貨品名稱", Width = 150, Visible = true, VisibleIndex = 2 });
+            this.repositoryItemSearchLookUpEdit2.View.Columns.Add(new GridColumn() { FieldName = "ProductVersion", Caption = "版本", Width = 50, Visible = true, VisibleIndex = 3 });
+
+            this.repositoryItemSearchLookUpEdit1.DataSource = productManager.SelectProductForXO();
+            this.repositoryItemSearchLookUpEdit2.DataSource = productManager.SelectProductForXO();
         }
 
         int LastFlag = 0; //页面载 入时是否执行 last方法
@@ -295,53 +315,106 @@ namespace Book.UI.Invoices.IP
         //选择客户订单
         private void btn_ChooseInvoiceXO_Click(object sender, EventArgs e)
         {
-            if (this.ncc_Customer.EditValue == null)
-            {
-                MessageBox.Show("請先選擇客戶", "提示", MessageBoxButtons.OK);
-                return;
-            }
+            #region 以前拉取客戶訂單資料，現在反過來生成客戶訂單，因此拉取商品資料
+            //if (this.ncc_Customer.EditValue == null)
+            //{
+            //    MessageBox.Show("請先選擇客戶", "提示", MessageBoxButtons.OK);
+            //    return;
+            //}
 
-            XS.SearcharInvoiceXSForm f = new Book.UI.Invoices.XS.SearcharInvoiceXSForm(this.ncc_Customer.EditValue as Model.Customer);
+            //XS.SearcharInvoiceXSForm f = new Book.UI.Invoices.XS.SearcharInvoiceXSForm(this.ncc_Customer.EditValue as Model.Customer);
+            //if (f.ShowDialog(this) == DialogResult.OK)
+            //{
+            //    if (f.key != null && f.key.Count > 0)
+            //    {
+            //        if (!string.IsNullOrEmpty(f.key[0].Invoice.Currency))
+            //        {
+            //            this.cob_Currency.Text = Model.ExchangeRate.GetCurrencyENName(f.key[0].Invoice.Currency);
+            //        }
+
+            //        Model.ProformaInvoiceDetail proformaInvoiceDetail = null;
+
+            //        foreach (Model.InvoiceXODetail detail in f.key)
+            //        {
+            //            proformaInvoiceDetail = new Book.Model.ProformaInvoiceDetail();
+            //            proformaInvoiceDetail.ProformaInvoiceDetailId = Guid.NewGuid().ToString();
+            //            proformaInvoiceDetail.ProformaInvoiceId = this.proformaInvoice.PO;
+            //            proformaInvoiceDetail.ProductId = detail.ProductId;
+            //            proformaInvoiceDetail.Product = detail.Product;
+            //            proformaInvoiceDetail.Quantity = Convert.ToInt32(detail.InvoiceXODetailQuantity);
+            //            proformaInvoiceDetail.UnitPrice = detail.InvoiceXODetailPrice;
+            //            proformaInvoiceDetail.Amount = proformaInvoiceDetail.Quantity * proformaInvoiceDetail.UnitPrice;
+            //            proformaInvoiceDetail.Unit = "PCS";
+
+            //            this.proformaInvoice.Details.Add(proformaInvoiceDetail);
+            //        }
+
+            //        this.CombineSameItem();
+
+            //        if (this.proformaInvoice.Details != null && this.proformaInvoice.Details.Count > 0)
+            //            this.proformaInvoice.Details.ToList().ForEach(D => D.Number = (this.proformaInvoice.Details.IndexOf(D) + 1).ToString());
+
+            //        this.bindingSourceDetail.DataSource = this.proformaInvoice.Details;
+            //        this.gridControl3.RefreshDataSource();
+            //    }
+            //} 
+            #endregion
+
+            Book.UI.Invoices.ChooseProductForm f = new Book.UI.Invoices.ChooseProductForm();
+
             if (f.ShowDialog(this) == DialogResult.OK)
             {
-                if (f.key != null && f.key.Count > 0)
+                Model.ProformaInvoiceDetail proformaInvoiceDetail = null;
+
+                if (ChooseProductForm.ProductList != null || ChooseProductForm.ProductList.Count > 0)
                 {
-                    if (!string.IsNullOrEmpty(f.key[0].Invoice.Currency))
-                    {
-                        this.cob_Currency.Text = Model.ExchangeRate.GetCurrencyENName(f.key[0].Invoice.Currency);
-                    }
-
-                    Model.ProformaInvoiceDetail proformaInvoiceDetail = null;
-
-                    foreach (Model.InvoiceXODetail detail in f.key)
+                    foreach (Model.Product product in ChooseProductForm.ProductList)
                     {
                         proformaInvoiceDetail = new Book.Model.ProformaInvoiceDetail();
                         proformaInvoiceDetail.ProformaInvoiceDetailId = Guid.NewGuid().ToString();
                         proformaInvoiceDetail.ProformaInvoiceId = this.proformaInvoice.PO;
-                        proformaInvoiceDetail.ProductId = detail.ProductId;
-                        proformaInvoiceDetail.Product = detail.Product;
-                        proformaInvoiceDetail.Quantity = Convert.ToInt32(detail.InvoiceXODetailQuantity);
-                        proformaInvoiceDetail.UnitPrice = detail.InvoiceXODetailPrice;
-                        proformaInvoiceDetail.Amount = proformaInvoiceDetail.Quantity * proformaInvoiceDetail.UnitPrice;
+                        proformaInvoiceDetail.ProductId = product.ProductId;
+                        proformaInvoiceDetail.Product = product;
+                        proformaInvoiceDetail.Quantity = 0;
+                        proformaInvoiceDetail.UnitPrice = 0;
+                        proformaInvoiceDetail.Amount = 0;
                         proformaInvoiceDetail.Unit = "PCS";
 
                         this.proformaInvoice.Details.Add(proformaInvoiceDetail);
+
+                        this.CombineSameItem();
                     }
+                }
+                if (ChooseProductForm.ProductList == null || ChooseProductForm.ProductList.Count == 0)
+                {
+                    Model.Product product = f.SelectedItem as Model.Product;
+                    proformaInvoiceDetail = new Book.Model.ProformaInvoiceDetail();
+                    proformaInvoiceDetail.ProformaInvoiceDetailId = Guid.NewGuid().ToString();
+                    proformaInvoiceDetail.ProformaInvoiceId = this.proformaInvoice.PO;
+                    proformaInvoiceDetail.ProductId = product.ProductId;
+                    proformaInvoiceDetail.Product = product;
+                    proformaInvoiceDetail.Quantity = 0;
+                    proformaInvoiceDetail.UnitPrice = 0;
+                    proformaInvoiceDetail.Amount = 0;
+                    proformaInvoiceDetail.Unit = "PCS";
+
+                    this.proformaInvoice.Details.Add(proformaInvoiceDetail);
 
                     this.CombineSameItem();
-
-                    if (this.proformaInvoice.Details != null && this.proformaInvoice.Details.Count > 0)
-                        this.proformaInvoice.Details.ToList().ForEach(D => D.Number = (this.proformaInvoice.Details.IndexOf(D) + 1).ToString());
-
-                    this.bindingSourceDetail.DataSource = this.proformaInvoice.Details;
-                    this.gridControl3.RefreshDataSource();
                 }
             }
+
+            if (this.proformaInvoice.Details != null && this.proformaInvoice.Details.Count > 0)
+                this.proformaInvoice.Details.ToList().ForEach(D => D.Number = (this.proformaInvoice.Details.IndexOf(D) + 1).ToString());
+
+            this.bindingSourceDetail.DataSource = this.proformaInvoice.Details;
+            this.gridControl3.RefreshDataSource();
+
         }
 
         private void CombineSameItem()
         {
-            //相同订单号，相同商品合并为一条
+            //相同商品合并为一条
             List<Model.ProformaInvoiceDetail> list = new List<Book.Model.ProformaInvoiceDetail>();
             var group = this.proformaInvoice.Details.GroupBy(d => new { d.ProductId });
             foreach (var item in group)
@@ -409,6 +482,53 @@ namespace Book.UI.Invoices.IP
                 this.txt_BankAddress.Text = "";
                 this.txt_SWIFTCode.Text = "";
             }
+        }
+
+        private void gridView3_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (this.action == "insert" || this.action == "update")
+            {
+                if (e.KeyData == Keys.Enter)
+                {
+                    if (this.CanAdd(this.proformaInvoice.Details))
+                    {
+                        Model.ProformaInvoiceDetail proformaInvoiceDetail = null;
+                        proformaInvoiceDetail = new Book.Model.ProformaInvoiceDetail();
+                        proformaInvoiceDetail.ProformaInvoiceDetailId = Guid.NewGuid().ToString();
+                        proformaInvoiceDetail.ProformaInvoiceId = this.proformaInvoice.PO;
+                        proformaInvoiceDetail.Quantity = 0;
+                        proformaInvoiceDetail.UnitPrice = 0;
+                        proformaInvoiceDetail.Amount = 0;
+                        proformaInvoiceDetail.Unit = "PCS";
+
+                        this.proformaInvoice.Details.Add(proformaInvoiceDetail);
+
+                        this.CombineSameItem();
+
+                        if (this.proformaInvoice.Details != null && this.proformaInvoice.Details.Count > 0)
+                            this.proformaInvoice.Details.ToList().ForEach(D => D.Number = (this.proformaInvoice.Details.IndexOf(D) + 1).ToString());
+
+                        this.gridControl3.RefreshDataSource();
+                    }
+                }
+
+            }
+        }
+
+        private bool CanAdd(IList<Model.ProformaInvoiceDetail> list)
+        {
+            foreach (Model.ProformaInvoiceDetail detail in list)
+            {
+                if (detail.Product == null || string.IsNullOrEmpty(detail.Product.ProductId))
+                    return false;
+            }
+            return true;
+        }
+
+        private void bar_GenerateXO_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            XO.EditForm f = new Book.UI.Invoices.XO.EditForm(this.proformaInvoice.Details);
+            f.ShowDialog(this);
         }
     }
 }

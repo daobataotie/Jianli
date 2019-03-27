@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="bar_GenerateXO.Caption" xml:space="preserve">
+    <value>生成客戶訂單</value>
+  </data>
   <metadata name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>194, 17</value>
   </metadata>
@@ -453,6 +456,15 @@
   <data name="gridColumn4.Caption" xml:space="preserve">
     <value>ITEM CODE</value>
   </data>
+  <data name="repositoryItemSearchLookUpEdit1.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="repositoryItemSearchLookUpEdit1.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
+    <value>Combo</value>
+  </data>
+  <data name="repositoryItemSearchLookUpEdit1.NullText" xml:space="preserve">
+    <value />
+  </data>
   <data name="gridColumn4.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -464,6 +476,15 @@
   </data>
   <data name="gridColumn5.Caption" xml:space="preserve">
     <value>DESC#</value>
+  </data>
+  <data name="repositoryItemSearchLookUpEdit2.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="repositoryItemSearchLookUpEdit2.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
+    <value>Combo</value>
+  </data>
+  <data name="repositoryItemSearchLookUpEdit2.NullText" xml:space="preserve">
+    <value />
   </data>
   <data name="gridColumn5.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -631,7 +652,7 @@
     <value>37</value>
   </data>
   <data name="btn_ChooseInvoiceXO.Text" xml:space="preserve">
-    <value>选择客户订单</value>
+    <value>添加商品</value>
   </data>
   <data name="&gt;&gt;btn_ChooseInvoiceXO.Name" xml:space="preserve">
     <value>btn_ChooseInvoiceXO</value>
@@ -1204,8 +1225,38 @@
   <data name="&gt;&gt;layoutControlItem37.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;repositoryItemSearchLookUpEdit1.Name" xml:space="preserve">
+    <value>repositoryItemSearchLookUpEdit1</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemSearchLookUpEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemSearchLookUpEdit1View.Name" xml:space="preserve">
+    <value>repositoryItemSearchLookUpEdit1View</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemSearchLookUpEdit1View.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemSearchLookUpEdit2.Name" xml:space="preserve">
+    <value>repositoryItemSearchLookUpEdit2</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemSearchLookUpEdit2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemSearchLookUpEdit2View.Name" xml:space="preserve">
+    <value>repositoryItemSearchLookUpEdit2View</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemSearchLookUpEdit2View.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;bar_GenerateXO.Name" xml:space="preserve">
+    <value>bar_GenerateXO</value>
+  </data>
+  <data name="&gt;&gt;bar_GenerateXO.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>ProformaInvoice</value>
+    <value>EditFormProformaInvoice</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>Book.UI.Invoices.BaseEditForm, Book.UI, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>

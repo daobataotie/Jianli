@@ -864,6 +864,10 @@ namespace Book.UI.Invoices.XS
                         xtdetail.InvoiceXSDetailNote = xos.Remark;
                         invoice.Details.Add(xtdetail);
                     }
+
+                    if (invoice.Details.GroupBy(D => D.Currency).Count() > 1)
+                        MessageBox.Show("出貨單包含不同幣別的商品", "提示", MessageBoxButtons.OK);
+
                     this.gridControl1.RefreshDataSource();
                 }
                 form.Dispose();
@@ -977,21 +981,30 @@ namespace Book.UI.Invoices.XS
         //历史出货记录按钮
         private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            this.action = "view";
-            if (!invoiceManager.HasRows())
+            //this.action = "view";
+            //if (!invoiceManager.HasRows())
+            //{
+            //    MessageBox.Show("尚沒有歷史出貨記錄。", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    return;
+            //}
+            //HisXSInfomationForm hisXS = new HisXSInfomationForm();
+            //if (hisXS.ShowDialog(this) == DialogResult.OK)
+            //{
+            //    if (xs != null)
+            //    {
+            //        invoice = xs;
+            //        this.Refresh();
+            //    }
+            //}
+
+
+            try
             {
-                MessageBox.Show("尚沒有歷史出貨記錄。", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
+                ROHistoryXS ro = new ROHistoryXS();
+                ro.ShowPreviewDialog();
             }
-            HisXSInfomationForm hisXS = new HisXSInfomationForm();
-            if (hisXS.ShowDialog(this) == DialogResult.OK)
-            {
-                if (xs != null)
-                {
-                    invoice = xs;
-                    this.Refresh();
-                }
-            }
+            catch
+            { }
         }
 
         //private void dateEditInvoiceDate_EditValueChanged(object sender, EventArgs e)

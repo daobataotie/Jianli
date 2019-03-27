@@ -119,6 +119,8 @@ namespace Book.Model
         public double? InvoiceXODetailQuantity0 { get; set; }
         public string CustomerInvoiceXOId { get; set; }
 
+        public decimal? TaibiAmount { get { return this.InvoiceXSDetailMoney * this.ExchangeRate; } }
+
         public static readonly string PRO_xiaoji = "xiaoji";
         public static readonly string PRO_CurrencyEN = "CurrencyEN";
     }
