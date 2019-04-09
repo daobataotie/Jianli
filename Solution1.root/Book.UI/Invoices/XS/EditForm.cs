@@ -1437,6 +1437,14 @@ namespace Book.UI.Invoices.XS
 
         private void dateEditInvoiceDate_EditValueChanged(object sender, EventArgs e)
         {
+            //2019年4月3日18:43:04 改日期，ID也改
+            if (this.action == "insert" && dateEditInvoiceDate.EditValue != null)
+            {
+                this.Invoice.InvoiceId = this.invoiceManager.GetIdSimple(dateEditInvoiceDate.DateTime);
+                this.textEditInvoiceId.Text = this.Invoice.InvoiceId;
+            }
+
+
             //2018年11月26日20:51:47：计算总价时才换算台币
 
             if (this.action == "view")
