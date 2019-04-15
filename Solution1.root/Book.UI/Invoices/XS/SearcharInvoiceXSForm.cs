@@ -171,6 +171,7 @@ namespace Book.UI.Invoices.XS
                 {
                     int count = 0;
                     foreach (Model.InvoiceXODetail detail in detailList)
+
                     {
                         if (key.Contains(detail))
                         {

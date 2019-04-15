@@ -574,7 +574,7 @@ namespace Book.BL
 
             int sequenceval = SequenceManager.GetCurrentVal(sequencekey) + 1;
             //return string.Format("{0}{1:d6}", sequencekey, sequenceval);
-            string str = string.Format("{0}{1:d6}", sequencekey, sequenceval);
+            string str = string.Format("{0}-{1:d6}", sequencekey, sequenceval);
             this.RecursiveId(ref str, sequencekey);
             return str;
         }
