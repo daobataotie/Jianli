@@ -121,6 +121,10 @@ namespace Book.Model
 
         public decimal? TaibiAmount { get { return this.InvoiceXSDetailMoney * this.ExchangeRate; } }
 
+        public decimal? TaibiAmountForGroup { get; set; }
+
+        public string CusXOIdForGroup { get; set; }
+
         public static readonly string PRO_xiaoji = "xiaoji";
         public static readonly string PRO_CurrencyEN = "CurrencyEN";
     }

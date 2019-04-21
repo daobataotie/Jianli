@@ -39,11 +39,31 @@ namespace Book.UI.Invoices.XS
                     }
                 }
 
+                var group = listDetail.GroupBy(D => D.InvoiceNO);
+                IList<Model.InvoiceXSDetail> details = new List<Model.InvoiceXSDetail>();
+
+                if (group != null && group.Count() > 0)
+                {
+                    foreach (var item in group)
+                    {
+                        Model.InvoiceXSDetail detail = new Book.Model.InvoiceXSDetail();
+                        detail = item.First();
+                        detail.InvoiceXSDetailMoney = item.Sum(D => D.InvoiceXSDetailMoney);
+                        detail.TaibiAmountForGroup = item.Sum(D => D.TaibiAmount);
+                        item.Select(D => D.InvoiceXO.CustomerInvoiceXOId).Distinct().ToList().ForEach(F =>
+                        {
+                            detail.CusXOIdForGroup += F + "\r\n";
+                        });
+                        detail.CusXOIdForGroup.TrimEnd(new char[] { '\r', '\n' });
+                    }
+                }
+
+                this.DataSource = listDetail;
+
                 this.lbl_CompanyName.Text = BL.Settings.CompanyChineseName;
                 this.lbl_ReportName.Text = "銷售表 sales report";
                 this.lbl_ReportDate.Text = con.StartDate.ToString("yyyy-MM-dd") + " ~ " + con.EndDate.ToString("yyyy-MM-dd");
 
-                this.DataSource = listDetail;
                 string currenty = Model.ExchangeRate.GetCurrencyENNameAndSign(listDetail[0].Currency);
 
                 this.xrTableCell9.Text = string.Format("實際請款     ({0})", currenty);
@@ -56,9 +76,11 @@ namespace Book.UI.Invoices.XS
                 this.TCAmount.DataBindings.Add("Text", this.DataSource, Model.InvoiceXSDetail.PRO_InvoiceXSDetailMoney, currenty + "{0:N2}");
                 this.TCRealAmount.DataBindings.Add("Text", this.DataSource, Model.InvoiceXSDetail.PRO_InvoiceXSDetailMoney, currenty + "{0:N2}");
                 this.TCExchangeRate.DataBindings.Add("Text", this.DataSource, Model.InvoiceXSDetail.PRO_ExchangeRate);
-                this.TCTaibiAmount.DataBindings.Add("Text", this.DataSource, "TaibiAmount", "NT${0:N2}");
+                //this.TCTaibiAmount.DataBindings.Add("Text", this.DataSource, "TaibiAmount", "NT${0:N2}");
+                this.TCTaibiAmount.DataBindings.Add("Text", this.DataSource, "TaibiAmountForGroup", "NT${0:N2}");
                 this.TCPayTerm.DataBindings.Add("Text", this.DataSource, "Invoice.XSCustomer." + Model.Customer.PRO_PayCondition);
-                this.TCCusXOId.DataBindings.Add("Text", this.DataSource, "InvoiceXO." + Model.InvoiceXO.PRO_CustomerInvoiceXOId);
+                //this.TCCusXOId.DataBindings.Add("Text", this.DataSource, "InvoiceXO." + Model.InvoiceXO.PRO_CustomerInvoiceXOId);
+                this.TCCusXOId.DataBindings.Add("Text", this.DataSource, "CusXOIdForGroup");
 
                 this.TCTotalAmount.Text = currenty + listDetail.Sum(D => D.InvoiceXSDetailMoney).Value.ToString("N2");
                 this.TCTotalTaibiAmount.Text = "NT$" + listDetail.Sum(D => D.TaibiAmount).Value.ToString("N2");
