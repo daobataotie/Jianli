@@ -48,17 +48,20 @@ namespace Book.UI.Invoices.XS
                     {
                         Model.InvoiceXSDetail detail = new Book.Model.InvoiceXSDetail();
                         detail = item.First();
-                        detail.InvoiceXSDetailMoney = item.Sum(D => D.InvoiceXSDetailMoney);
+                        //先计算台幣金額，然后加总金额，因为台幣金額=金额*汇率
                         detail.TaibiAmountForGroup = item.Sum(D => D.TaibiAmount);
+                        detail.InvoiceXSDetailMoney = item.Sum(D => D.InvoiceXSDetailMoney);
                         item.Select(D => D.InvoiceXO.CustomerInvoiceXOId).Distinct().ToList().ForEach(F =>
                         {
                             detail.CusXOIdForGroup += F + "\r\n";
                         });
-                        detail.CusXOIdForGroup.TrimEnd(new char[] { '\r', '\n' });
+                        detail.CusXOIdForGroup = detail.CusXOIdForGroup.TrimEnd(new char[] { '\r', '\n' });
+
+                        details.Add(detail);
                     }
                 }
 
-                this.DataSource = listDetail;
+                this.DataSource = details;
 
                 this.lbl_CompanyName.Text = BL.Settings.CompanyChineseName;
                 this.lbl_ReportName.Text = "銷售表 sales report";
@@ -80,10 +83,11 @@ namespace Book.UI.Invoices.XS
                 this.TCTaibiAmount.DataBindings.Add("Text", this.DataSource, "TaibiAmountForGroup", "NT${0:N2}");
                 this.TCPayTerm.DataBindings.Add("Text", this.DataSource, "Invoice.XSCustomer." + Model.Customer.PRO_PayCondition);
                 //this.TCCusXOId.DataBindings.Add("Text", this.DataSource, "InvoiceXO." + Model.InvoiceXO.PRO_CustomerInvoiceXOId);
-                this.TCCusXOId.DataBindings.Add("Text", this.DataSource, "CusXOIdForGroup");
+                //this.TCCusXOId.DataBindings.Add("Text", this.DataSource, "CusXOIdForGroup");
+                this.xrRichText1.DataBindings.Add("Text", this.DataSource, "CusXOIdForGroup");
 
-                this.TCTotalAmount.Text = currenty + listDetail.Sum(D => D.InvoiceXSDetailMoney).Value.ToString("N2");
-                this.TCTotalTaibiAmount.Text = "NT$" + listDetail.Sum(D => D.TaibiAmount).Value.ToString("N2");
+                this.TCTotalAmount.Text = currenty + details.Sum(D => D.InvoiceXSDetailMoney).Value.ToString("N2");
+                this.TCTotalTaibiAmount.Text = "NT$" + details.Sum(D => D.TaibiAmountForGroup).Value.ToString("N2");
             }
             else
                 throw new Exception();
