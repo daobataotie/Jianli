@@ -50,6 +50,7 @@ namespace Book.UI.Invoices.XO
             this.xrLabelNote.Text = this.invoice.InvoiceNote;
             this.xrLabelYJRQ.Text = this.invoice.InvoiceYjrq.Value.ToString("yyyy-MM-dd");
             this.xrLabelUnit.Text = this.invoice.Details[0].InvoiceProductUnit;
+            this.lbl_Employee.Text = this.invoice.Employee0.ToString();
             //this.xrLabeJianCe.Text = this.invoice.xocustomer.CheckedStandard;
             //foreach (Model.InvoiceXODetail invoicedetail in invoice.Details)
             //{
