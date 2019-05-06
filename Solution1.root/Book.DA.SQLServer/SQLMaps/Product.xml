@@ -546,6 +546,13 @@ where ProductId = #productid#
       <!--CustomerProductName desc-->
     </select>
 
+    <select id="SelectProductForXOByCustomer" parameterClass="string" resultMap="ProductResult6">
+      <![CDATA[
+      select ProductId,ProductName,Id,CustomerProductName,ProductVersion,ProductBarCode from product  
+       where CustomerId=#value# order by id
+      ]]>
+    </select>
+
     <!--查询指定类型和客户的货品和公司货品-->
 
     <select id="SelectByCategoryAndCustomer" resultMap="ProductResult" parameterClass="string">

@@ -89,7 +89,7 @@ namespace Book.UI.Invoices.XO
             this.repositoryItemSearchLookUpEdit3.View.Columns.Add(new GridColumn() { FieldName = "CustomerProductName", Caption = "客戶貨品名稱", Width = 150, Visible = true, VisibleIndex = 2 });
             this.repositoryItemSearchLookUpEdit3.View.Columns.Add(new GridColumn() { FieldName = "ProductVersion", Caption = "版本", Width = 50, Visible = true, VisibleIndex = 3 });
 
-            productlook = productManager.SelectProductForXO();
+            //productlook = productManager.SelectProductForXO();   //2019年5月6日20:55:15：根据所选客户显示客户商品
             this.bindingSourceproduct.DataSource = productlook;
             this.repositoryItemSearchLookUpEdit1.DataSource = this.bindingSourceproduct;
             this.repositoryItemSearchLookUpEdit2.DataSource = this.bindingSourceproduct;
@@ -256,6 +256,9 @@ namespace Book.UI.Invoices.XO
                         if (this.dateEditYJRQ.EditValue != null)
                             detail.YuJiaoRiqi = this.dateEditYJRQ.DateTime;
 
+                        if (productlook != null && !productlook.Any(P => P.ProductId == product.ProductId))
+                            productlook.Add(product);
+
                         this.invoice.Details.Add(detail);
 
                         int flag = 0;
@@ -301,6 +304,10 @@ namespace Book.UI.Invoices.XO
                     }
                     if (this.dateEditYJRQ.EditValue != null)
                         detail.YuJiaoRiqi = this.dateEditYJRQ.DateTime;
+
+                    if (productlook != null && !productlook.Any(P => P.ProductId == product.ProductId))
+                        productlook.Add(product);
+
                     this.invoice.Details.Add(detail);
 
                     int flag = 0;
@@ -891,7 +898,7 @@ namespace Book.UI.Invoices.XO
         {
             if (LastFlag == 1) { LastFlag = 0; return; }
             //this.invoice = this.invoiceManager.Get(this.invoiceManager.GetLast() == null ? "" : this.invoiceManager.GetLast().InvoiceId);
-            this.invoice =  this.invoiceManager.GetLast();
+            this.invoice = this.invoiceManager.GetLast();
         }
 
         public override void Refresh()
@@ -927,12 +934,12 @@ namespace Book.UI.Invoices.XO
             //    if (id.Contains(products.ProductId)) continue;
             //    id.Add(products.ProductId);
             //}
-            //foreach (Model.InvoiceXODetail xodetail in this.invoice.Details)
-            //{
-            //    if (id.Contains(xodetail.ProductId))
-            //        continue;
-            //    productlook.Add(xodetail.Product);
-            //}
+            foreach (Model.InvoiceXODetail xodetail in this.invoice.Details)
+            {
+                if (productlook.Any(P => P.ProductId == xodetail.ProductId) || xodetail.ProductId == null)
+                    continue;
+                productlook.Add(xodetail.Product);
+            }
             //this.bindingSourceproduct.DataSource = productlook;
             //if (this.lookUpEdit3.EditValue != null)
             //{
@@ -1566,10 +1573,14 @@ namespace Book.UI.Invoices.XO
 
         private void newChooseCustomer1_EditValueChanged(object sender, EventArgs e)
         {
-            if (this.newChooseCustomer1.EditValue != null && this.newChooseCustomer2.EditValue == null)
+            if (this.newChooseCustomer1.EditValue != null)
             {
-                this.newChooseCustomer2.EditValue = newChooseCustomer1.EditValue;
+                if (this.newChooseCustomer2.EditValue == null)
+                    this.newChooseCustomer2.EditValue = newChooseCustomer1.EditValue;
 
+                productlook = null;
+                productlook = productManager.SelectProductForXOByCustomer((newChooseCustomer1.EditValue as Model.Customer).CustomerId);
+                this.bindingSourceproduct.DataSource = productlook;
             }
         }
 
