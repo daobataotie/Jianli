@@ -61,6 +61,12 @@ namespace Book.Model
 
         public DateTime ProduceMaterialDate { get; set; }
 
+        public string WorkhouseName { get; set; }
+
+        public string EmployeeName { get; set; }
+
+        public string ProduceMaterialdesc { get; set; }
+
         public static readonly string PRO_ProductName = "ProductName";
         public static readonly string PRO_CustomerProductName = "CustomerProductName";
     }

@@ -1207,6 +1207,7 @@ namespace Book.UI.produceManager.ProduceMaterial
 
         }
 
+        //详细列表
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             ListForm form = new ListForm();

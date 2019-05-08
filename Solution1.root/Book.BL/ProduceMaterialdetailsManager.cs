@@ -57,9 +57,9 @@ namespace Book.BL
             return accessor.Select(houseid, startDate, endDate);
         }
 
-        public IList<Model.ProduceMaterialdetails> SelectBycondition(DateTime starDate, DateTime endDate, string produceMaterialId0, string produceMaterialId1, string pId0, string pId1, string departmentId0, string departmentId1, string PronoteHeaderId0, string PronoteHeaderId1)
+        public IList<Model.ProduceMaterialdetails> SelectBycondition(DateTime starDate, DateTime endDate, string produceMaterialId0, string produceMaterialId1, string pId0, string pId1, string departmentId0, string departmentId1, string PronoteHeaderId0, string PronoteHeaderId1, string CusInvoiceXOId)
         {
-            return accessor.SelectBycondition(starDate, endDate, produceMaterialId0, produceMaterialId1, pId0, pId1, departmentId0, departmentId1, PronoteHeaderId0, PronoteHeaderId1);
+            return accessor.SelectBycondition(starDate, endDate, produceMaterialId0, produceMaterialId1, pId0, pId1, departmentId0, departmentId1, PronoteHeaderId0, PronoteHeaderId1,  CusInvoiceXOId);
         }
         public IList<Book.Model.ProduceMaterialdetails> SelectByState(Model.ProduceMaterial produceMaterial)
         {

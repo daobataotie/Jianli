@@ -38,20 +38,34 @@ namespace Book.DA.SQLServer
             return sqlmapper.QueryForList<Model.ProduceMaterialdetails>("ProduceMaterialdetails.SelectByHouseDates", ht);
         }
 
-        public IList<Model.ProduceMaterialdetails> SelectBycondition(DateTime starDate, DateTime endDate, string produceMaterialId0, string produceMaterialId1, string pId0, string pId1, string departmentId0, string departmentId1, string PronoteHeaderId0, string PronoteHeaderId1)
+        public IList<Model.ProduceMaterialdetails> SelectBycondition(DateTime starDate, DateTime endDate, string produceMaterialId0, string produceMaterialId1, string pId0, string pId1, string departmentId0, string departmentId1, string PronoteHeaderId0, string PronoteHeaderId1, string CusInvoiceXOId)
         {
-            Hashtable ht = new Hashtable();
-            ht.Add("starDate", starDate);
-            ht.Add("endDate", endDate);
-            ht.Add("produceMaterialId0", produceMaterialId0);
-            ht.Add("produceMaterialId1", produceMaterialId1);
-            ht.Add("pId0", pId0);
-            ht.Add("pId1", pId1);
-            ht.Add("dId0", departmentId0);
-            ht.Add("dId1", departmentId1);
-            ht.Add("pronoteId0", PronoteHeaderId0);
-            ht.Add("pronoteId1", PronoteHeaderId1);
-            return sqlmapper.QueryForList<Model.ProduceMaterialdetails>("ProduceMaterialdetails.selectBycondition", ht);
+            //Hashtable ht = new Hashtable();
+            //ht.Add("starDate", starDate);
+            //ht.Add("endDate", endDate);
+            //ht.Add("produceMaterialId0", produceMaterialId0);
+            //ht.Add("produceMaterialId1", produceMaterialId1);
+            //ht.Add("pId0", pId0);
+            //ht.Add("pId1", pId1);
+            //ht.Add("dId0", departmentId0);
+            //ht.Add("dId1", departmentId1);
+            //ht.Add("pronoteId0", PronoteHeaderId0);
+            //ht.Add("pronoteId1", PronoteHeaderId1);
+            //return sqlmapper.QueryForList<Model.ProduceMaterialdetails>("ProduceMaterialdetails.selectBycondition", ht);
+
+            StringBuilder sb = new StringBuilder("select pm.ProduceMaterialID,pm.ProduceMaterialDate,wh.Workhousename,e.EmployeeName,p.ProductName,pmd.CustomerInvoiceXOId,pm.ProduceMaterialdesc from ProduceMaterialdetails pmd left join ProduceMaterial pm on pmd.ProduceMaterialID=pm.ProduceMaterialID left join WorkHouse wh on pm.WorkHouseId=wh.WorkHouseId left join Employee e on pm.Employee0Id=e.EmployeeId left join Product p on pmd.ProductId=p.ProductId where pm.ProduceMaterialDate between '" + starDate.ToString("yyyy-MM-dd") + "' and '" + endDate.Date.AddDays(1).AddSeconds(-1).ToString("yyyy-MM-dd HH:mm:ss") + "'");
+            if (!string.IsNullOrEmpty(produceMaterialId0) && !string.IsNullOrEmpty(produceMaterialId1))
+                sb.Append(" and pm.ProduceMaterialID between '" + produceMaterialId0 + "' and '" + produceMaterialId1 + "' ");
+            if (!string.IsNullOrEmpty(pId0) && !string.IsNullOrEmpty(pId1))
+                sb.Append(" and p.Id between '" + pId0 + "' and '" + pId1 + "'");
+            if (!string.IsNullOrEmpty(departmentId0))
+                sb.Append(" and wh.WorkHouseId='" + departmentId0 + "'");
+            if (!string.IsNullOrEmpty(PronoteHeaderId0) && !string.IsNullOrEmpty(PronoteHeaderId1))
+                sb.Append(" and pmd.PronoteHeaderID between '" + PronoteHeaderId0 + "' and '" + PronoteHeaderId1 + "'");
+            if (!string.IsNullOrEmpty(CusInvoiceXOId))
+                sb.Append(" and pmd.CustomerInvoiceXOId='" + CusInvoiceXOId + "'");
+
+            return this.DataReaderBind<Model.ProduceMaterialdetails>(sb.ToString(), null, CommandType.Text);
         }
 
         public Model.ProduceMaterialdetails SelectByProductIdAndHeadId(string productId, string produceMaterialId)
@@ -111,7 +125,7 @@ namespace Book.DA.SQLServer
             return this.DataReaderBind<Model.ProduceMaterialdetails>(str, null, CommandType.Text);
         }
 
-        public IList<Model.ProduceMaterialdetails> SelectForDistributioned(string productid, DateTime  InsertTime)
+        public IList<Model.ProduceMaterialdetails> SelectForDistributioned(string productid, DateTime InsertTime)
         {
             Hashtable ht = new Hashtable();
             ht.Add("productid", productid);

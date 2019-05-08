@@ -18,7 +18,7 @@ namespace Book.DA
     {
         IList<Book.Model.ProduceMaterialdetails> Select(Model.ProduceMaterial produceMaterial);
         IList<Book.Model.ProduceMaterialdetails> Select(string houseid, DateTime startDate, DateTime endDate);
-        IList<Model.ProduceMaterialdetails> SelectBycondition(DateTime starDate, DateTime endDate, string produceMaterialId0, string produceMaterialId1, string pId0, string pId1, string departmentId0, string departmentId1, string PronoteHeaderId0, string PronoteHeaderId1);
+        IList<Model.ProduceMaterialdetails> SelectBycondition(DateTime starDate, DateTime endDate, string produceMaterialId0, string produceMaterialId1, string pId0, string pId1, string departmentId0, string departmentId1, string PronoteHeaderId0, string PronoteHeaderId1, string CusInvoiceXOId);
         IList<Book.Model.ProduceMaterialdetails> SelectByState(Model.ProduceMaterial produceMaterial);
         Model.ProduceMaterialdetails SelectByProductIdAndHeadId(string productId, string produceMaterialId);
         IList<Model.ProduceMaterialdetails> SelectByProductIdAndHeadId(Model.Product pId0, Model.Product pId1, string produceMaterialId);

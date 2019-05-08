@@ -50,6 +50,8 @@ namespace Book.UI.produceManager.ProduceMaterial
         protected override Book.UI.Settings.BasicData.BaseEditForm GetEditForm(object[] args)
         {
             Type type = typeof(EditForm);
+            string produceMaterialId = (args[0] as Model.ProduceMaterialdetails).ProduceMaterialID;
+            args[0] = produceMaterialId;
             return (EditForm)type.Assembly.CreateInstance(type.FullName, false, System.Reflection.BindingFlags.CreateInstance, null, args, null, null);
         }
 
@@ -71,13 +73,14 @@ namespace Book.UI.produceManager.ProduceMaterial
 
 
                 // });
-                this.bindingSource1.DataSource = (this.manager as BL.ProduceMaterialManager).SelectBycondition(condition.StartDate, condition.EndDate, condition.ProduceMaterialId0, condition.ProduceMaterialId1, condition.Product0, condition.Product1, condition.DepartmentId0, condition.DepartmentId1, condition.PronoteHeaderId0, condition.PronoteHeaderId1, condition.CusInvoiceXOId);
+                //this.bindingSource1.DataSource = (this.manager as BL.ProduceMaterialManager).SelectBycondition(condition.StartDate, condition.EndDate, condition.ProduceMaterialId0, condition.ProduceMaterialId1, condition.Product0, condition.Product1, condition.DepartmentId0, condition.DepartmentId1, condition.PronoteHeaderId0, condition.PronoteHeaderId1, condition.CusInvoiceXOId);
+
+                this.bindingSource1.DataSource = new BL.ProduceMaterialdetailsManager().SelectBycondition(condition.StartDate, condition.EndDate, condition.ProduceMaterialId0, condition.ProduceMaterialId1, (condition.Product0 == null ? null : condition.Product0.Id), (condition.Product1 == null ? null : condition.Product1.Id), condition.DepartmentId0, condition.DepartmentId1, condition.PronoteHeaderId0, condition.PronoteHeaderId1, condition.CusInvoiceXOId);
+
                 this.barStaticItem1.Caption = string.Format("{0}项", this.bindingSource1.Count);
 
                 this.gridControl1.RefreshDataSource();
-
             }
-
         }
 
         private void gridView1_CustomColumnDisplayText(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventArgs e)
