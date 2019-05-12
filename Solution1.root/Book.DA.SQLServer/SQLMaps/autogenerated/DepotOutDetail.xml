@@ -24,6 +24,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="ProduceOtherMaterialDetailId" column="ProduceOtherMaterialDetailId" />
       <result property="CGDate" column="CGDate" />
       <result property="Pihao" column="Pihao"/>
+      <result property="CusXOId" column="CusXOId"/>
       <result property="DepotPosition" column="DepotPositionId" lazyLoad="false" select="DepotPosition.select_by_primary_key" />
       <result property="Product" column="ProductId" lazyLoad="false" select="Product.select_SimpleProduct" />
       <result property="DepotOut" column="DepotOutId" lazyLoad="false" select="DepotOut.select_by_primary_key" />
@@ -73,7 +74,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[Inumber],
 				[ProduceOtherMaterialDetailId],
 				[CGDate],
-        [Pihao]
+        [Pihao],
+        [CusXOId]
 			FROM
 				[dbo].[DepotOutDetail]
 			WHERE
@@ -144,7 +146,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[Inumber],
 				[ProduceOtherMaterialDetailId],
 				[CGDate],
-        [Pihao]
+        [Pihao],
+        [CusXOId]
 			) 
 			VALUES 
 			(
@@ -165,7 +168,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				#Inumber#,
 				#ProduceOtherMaterialDetailId#,
 				#CGDate#,
-        #Pihao#
+        #Pihao#,
+        #CusXOId#
 			)
              ]]>
     </insert>
@@ -189,7 +193,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[Inumber] = #Inumber#,
 				[ProduceOtherMaterialDetailId] = #ProduceOtherMaterialDetailId#,
 				[CGDate] = #CGDate#,
-        [Pihao]=#Pihao#
+        [Pihao]=#Pihao#,
+        [CusXOId]=#CusXOId#
 			WHERE
 				[DepotOutDetailId] = #DepotOutDetailId#
                     ]]>

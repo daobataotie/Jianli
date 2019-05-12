@@ -125,45 +125,25 @@
         ZXZFeHByZXNzLlV0aWxzLkltYWdlQ29sbGVjdGlvblN0cmVhbWVyAAAAAAIAAAAL
 </value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="layoutControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 46</value>
-  </data>
-  <data name="layoutControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>733, 483</value>
-  </data>
-  <data name="gridControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>709, 459</value>
-  </data>
   <data name="gridColumn1.Caption" xml:space="preserve">
     <value>編號</value>
   </data>
   <data name="gridColumn2.Caption" xml:space="preserve">
     <value>領料日期</value>
   </data>
-  <data name="gridColumn5.Caption" xml:space="preserve">
-    <value>經辦人</value>
-  </data>
-  <data name="gridColumn6.Caption" xml:space="preserve">
-    <value>審核人</value>
+  <data name="gridColumn4.Caption" xml:space="preserve">
+    <value>生產站</value>
   </data>
   <data name="gridColumnXO.Caption" xml:space="preserve">
     <value>客戶訂單編號</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="gridColumnXO.VisibleIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
   <data name="barButtonItem1.Caption" xml:space="preserve">
     <value>查詢</value>
   </data>
-  <data name="gridColumn9.VisibleIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+  <data name="gridColumn9.Caption" xml:space="preserve">
+    <value>說明</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>加工領料列表</value>
-  </data>
-  <data name="gridColumn9.Caption" xml:space="preserve">
-    <value>說明</value>
   </data>
 </root>

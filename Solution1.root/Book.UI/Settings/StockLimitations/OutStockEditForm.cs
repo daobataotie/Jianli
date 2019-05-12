@@ -797,6 +797,7 @@ namespace Book.UI.Settings.StockLimitations
                     this._depotOutDetail.ProductId = item.ProductId;
                     this._depotOutDetail.Product = item.Product;
                     this._depotOutDetail.Pihao = item.Pihao;
+                    this._depotOutDetail.CusXOId = item.CustomerInvoiceXOId;
                     this._depotOutDetail.CGDate = this.cgdetailManager.SelectLastInvoiceCGDate(item.ProductId, stock.DepotPositionId);
                     if (global::Helper.DateTimeParse.DateTimeEquls(this._depotOutDetail.CGDate, new DateTime()))
                     {

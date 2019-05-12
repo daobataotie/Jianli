@@ -540,5 +540,18 @@ namespace Book.Model
         public readonly static string PRO_Pihao = "Pihao";
 
         #endregion
+
+        private string _cusXOId;
+
+        /// <summary>
+        /// 客戶訂單編號
+        /// </summary>
+        public string CusXOId
+        {
+            get { return _cusXOId; }
+            set { _cusXOId = value; }
+        }
+
+        public readonly static string PRO_CusXOId = "CusXOId";
     }
 }

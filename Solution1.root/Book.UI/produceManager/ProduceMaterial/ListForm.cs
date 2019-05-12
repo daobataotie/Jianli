@@ -37,7 +37,8 @@ namespace Book.UI.produceManager.ProduceMaterial
                 this.tag = 0;
                 return;
             }
-            this.bindingSource1.DataSource = (this.manager as BL.ProduceMaterialManager).SelectBycondition(DateTime.Now.AddDays(-15), DateTime.Now, null, null, null, null, null, null, null, null, null);
+            //this.bindingSource1.DataSource = (this.manager as BL.ProduceMaterialManager).SelectBycondition(DateTime.Now.AddDays(-15), DateTime.Now, null, null, null, null, null, null, null, null, null);
+            this.bindingSource1.DataSource = new BL.ProduceMaterialdetailsManager().SelectBycondition(DateTime.Now.AddDays(-15), DateTime.Now, null, null, null, null, null, null, null, null, null);
             this.gridView1.GroupPanelText = "默認顯示半个月内的記錄";
 
         }
