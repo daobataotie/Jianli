@@ -84,6 +84,8 @@
             this.lbl_TotalQTY = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLine1 = new DevExpress.XtraReports.UI.XRLine();
+            this.TCUnitPriceCurrency = new DevExpress.XtraReports.UI.XRTableCell();
+            this.TCAmountCurrency = new DevExpress.XtraReports.UI.XRTableCell();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -108,7 +110,7 @@
             this.xrTable2.Name = "xrTable2";
             this.xrTable2.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow2});
-            this.xrTable2.SizeF = new System.Drawing.SizeF(1976.874F, 103.1875F);
+            this.xrTable2.SizeF = new System.Drawing.SizeF(1987.458F, 103.1875F);
             this.xrTable2.StylePriority.UseBorders = false;
             this.xrTable2.StylePriority.UseTextAlignment = false;
             this.xrTable2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
@@ -122,7 +124,9 @@
             this.TC_CUSTNO,
             this.TC_ProductName,
             this.TCQTY,
+            this.TCUnitPriceCurrency,
             this.TC_UnitPrice,
+            this.TCAmountCurrency,
             this.TC_Amount});
             this.xrTableRow2.Dpi = 254F;
             this.xrTableRow2.Name = "xrTableRow2";
@@ -169,19 +173,23 @@
             // 
             // TC_UnitPrice
             // 
+            this.TC_UnitPrice.Borders = DevExpress.XtraPrinting.BorderSide.Right;
             this.TC_UnitPrice.Dpi = 254F;
             this.TC_UnitPrice.Name = "TC_UnitPrice";
+            this.TC_UnitPrice.StylePriority.UseBorders = false;
             this.TC_UnitPrice.StylePriority.UseTextAlignment = false;
             this.TC_UnitPrice.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.TC_UnitPrice.Weight = 0.3072718542940307;
+            this.TC_UnitPrice.Weight = 0.16613994771211352;
             // 
             // TC_Amount
             // 
+            this.TC_Amount.Borders = DevExpress.XtraPrinting.BorderSide.Right;
             this.TC_Amount.Dpi = 254F;
             this.TC_Amount.Name = "TC_Amount";
+            this.TC_Amount.StylePriority.UseBorders = false;
             this.TC_Amount.StylePriority.UseTextAlignment = false;
             this.TC_Amount.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.TC_Amount.Weight = 0.419694964182693;
+            this.TC_Amount.Weight = 0.29462401295802304;
             // 
             // TopMargin
             // 
@@ -260,11 +268,11 @@
                         | DevExpress.XtraPrinting.BorderSide.Right)
                         | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrTable1.Dpi = 254F;
-            this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(4.855627F, 563.2292F);
+            this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(4.855627F, 534.125F);
             this.xrTable1.Name = "xrTable1";
             this.xrTable1.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow1});
-            this.xrTable1.SizeF = new System.Drawing.SizeF(1976.874F, 63.5F);
+            this.xrTable1.SizeF = new System.Drawing.SizeF(1987.457F, 92.60419F);
             this.xrTable1.StylePriority.UseBorders = false;
             this.xrTable1.StylePriority.UseTextAlignment = false;
             this.xrTable1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
@@ -281,7 +289,7 @@
             this.xrTableCell6});
             this.xrTableRow1.Dpi = 254F;
             this.xrTableRow1.Name = "xrTableRow1";
-            this.xrTableRow1.Weight = 1.625;
+            this.xrTableRow1.Weight = 2.3697921873077634;
             // 
             // xrTableCell1
             // 
@@ -329,8 +337,8 @@
             // 
             this.xrTableCell6.Dpi = 254F;
             this.xrTableCell6.Name = "xrTableCell6";
-            this.xrTableCell6.Text = "Amount";
-            this.xrTableCell6.Weight = 0.41969628407095949;
+            this.xrTableCell6.Text = "Amount                   S";
+            this.xrTableCell6.Weight = 0.43575649987686754;
             // 
             // xrLabel7
             // 
@@ -621,7 +629,6 @@
             this.lbl_TotalAmount.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.lbl_TotalAmount.SizeF = new System.Drawing.SizeF(305.6652F, 58.42004F);
             this.lbl_TotalAmount.StylePriority.UseTextAlignment = false;
-            this.lbl_TotalAmount.Text = "From:";
             this.lbl_TotalAmount.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // lbl_TotalQTY
@@ -632,7 +639,6 @@
             this.lbl_TotalQTY.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.lbl_TotalQTY.SizeF = new System.Drawing.SizeF(258.0413F, 58.42004F);
             this.lbl_TotalQTY.StylePriority.UseTextAlignment = false;
-            this.lbl_TotalQTY.Text = "From:";
             this.lbl_TotalQTY.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // xrLabel10
@@ -650,10 +656,26 @@
             // 
             this.xrLine1.Borders = DevExpress.XtraPrinting.BorderSide.Top;
             this.xrLine1.Dpi = 254F;
-            this.xrLine1.LocationFloat = new DevExpress.Utils.PointFloat(4.854617F, 0F);
+            this.xrLine1.LocationFloat = new DevExpress.Utils.PointFloat(4.855627F, 0F);
             this.xrLine1.Name = "xrLine1";
-            this.xrLine1.SizeF = new System.Drawing.SizeF(1976.875F, 5F);
+            this.xrLine1.SizeF = new System.Drawing.SizeF(1985F, 5F);
             this.xrLine1.StylePriority.UseBorders = false;
+            // 
+            // TCUnitPriceCurrency
+            // 
+            this.TCUnitPriceCurrency.Borders = DevExpress.XtraPrinting.BorderSide.Left;
+            this.TCUnitPriceCurrency.Dpi = 254F;
+            this.TCUnitPriceCurrency.Name = "TCUnitPriceCurrency";
+            this.TCUnitPriceCurrency.StylePriority.UseBorders = false;
+            this.TCUnitPriceCurrency.Weight = 0.14113190658191718;
+            // 
+            // TCAmountCurrency
+            // 
+            this.TCAmountCurrency.Borders = DevExpress.XtraPrinting.BorderSide.Left;
+            this.TCAmountCurrency.Dpi = 254F;
+            this.TCAmountCurrency.Name = "TCAmountCurrency";
+            this.TCAmountCurrency.StylePriority.UseBorders = false;
+            this.TCAmountCurrency.Weight = 0.14113190802051079;
             // 
             // ROInvoice
             // 
@@ -735,5 +757,7 @@
         private DevExpress.XtraReports.UI.XRLine xrLine2;
         private DevExpress.XtraReports.UI.XRLabel lblTotal;
         private DevExpress.XtraReports.UI.XRLabel lbl_PayCondition;
+        private DevExpress.XtraReports.UI.XRTableCell TCUnitPriceCurrency;
+        private DevExpress.XtraReports.UI.XRTableCell TCAmountCurrency;
     }
 }

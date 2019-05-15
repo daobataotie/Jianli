@@ -32,9 +32,12 @@ namespace Book.UI.Invoices.IP
             this.lbl_CustomerFullName.Text = packingList.CustomerFullName;
             this.lbl_address.Text = packingList.CustomerAddress;
             this.lbl_PerSS.Text = packingList.PerSS;
-            this.lbl_SailingDate.Text = packingList.SailingOnOrAbout.Value.ToString("yyyy-MM-dd");
-            this.lbl_From.Text = packingList.FromPort.PortName;
-            this.lbl_TO.Text = packingList.ToPort.PortName;
+            if (packingList.SailingOnOrAbout != null)
+                this.lbl_SailingDate.Text = packingList.SailingOnOrAbout.Value.ToString("yyyy-MM-dd");
+            if (packingList.FromPort != null)
+                this.lbl_From.Text = packingList.FromPort.PortName;
+            if (packingList.ToPort != null)
+                this.lbl_TO.Text = packingList.ToPort.PortName;
             this.lbl_marks.Text = packingList.MarkNos;
 
             //this.lblTotal.Text = packingList.Details.Max(P => Convert.ToInt32(string.IsNullOrEmpty(P.PLTNo) ? "0" : P.PLTNo)) + " PLT / " +

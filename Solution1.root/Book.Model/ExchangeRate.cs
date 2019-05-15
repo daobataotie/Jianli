@@ -63,5 +63,30 @@ namespace Book.Model
 
             return enName;
         }
+
+        public static string GetCurrencySign(string currency)
+        {
+            string enName = "";
+            switch (currency)
+            {
+                case "人民幣":
+                    enName = "¥";
+                    break;
+                case "新台幣":
+                    enName = "$";
+                    break;
+                case "美金":
+                    enName = "$";
+                    break;
+                case "歐元":
+                    enName = "€";
+                    break;
+                case "日圓":
+                    enName = "¥";
+                    break;
+            }
+
+            return enName;
+        }
     }
 }

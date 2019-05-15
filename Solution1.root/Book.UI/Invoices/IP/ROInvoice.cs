@@ -23,9 +23,12 @@ namespace Book.UI.Invoices.IP
             this.lbl_address.Text = invoiceList.CustomerAddress;
             this.lbl_PayCondition.Text = invoiceList.TradingCondition;
             this.lbl_PerSS.Text = invoiceList.PerSS;
-            this.lbl_SailingDate.Text = invoiceList.SailingOnOrAbout.Value.ToString("yyyy-MM-dd");
-            this.lbl_From.Text = invoiceList.FromPort.PortName;
-            this.lbl_TO.Text = invoiceList.ToPort.PortName;
+            if (invoiceList.SailingOnOrAbout != null)
+                this.lbl_SailingDate.Text = invoiceList.SailingOnOrAbout.Value.ToString("yyyy-MM-dd");
+            if (invoiceList.FromPort != null)
+                this.lbl_From.Text = invoiceList.FromPort.PortName;
+            if (invoiceList.ToPort != null)
+                this.lbl_TO.Text = invoiceList.ToPort.PortName;
             this.lbl_marks.Text = invoiceList.MarkNos;
 
             this.lbl_TotalQTY.Text = invoiceList.Details.Sum(P => P.Quantity).Value.ToString("0.##") + " PCS";
@@ -33,7 +36,12 @@ namespace Book.UI.Invoices.IP
             if (invoiceList.Details != null && invoiceList.Details.Count > 0)
             {
                 string currency = new BL.InvoiceXOManager().GetCurrencyByInvoiceId(invoiceList.Details[0].InvoiceXODetail.InvoiceId);
-                this.lbl_TotalAmount.Text = Model.ExchangeRate.GetCurrencyENName(currency) + " " + invoiceList.Details.Sum(P => P.Amount).Value.ToString("0.00");
+                string currencyENName = Model.ExchangeRate.GetCurrencyENName(currency);
+                string currencySign = Model.ExchangeRate.GetCurrencySign(currency);
+                this.xrTableCell6.Text = "Amount                   (" + currencyENName + ")";
+                this.TCUnitPriceCurrency.Text = currencySign;
+                this.TCAmountCurrency.Text = currencySign;
+                this.lbl_TotalAmount.Text = currencyENName + " " + invoiceList.Details.Sum(P => P.Amount).Value.ToString("0.00");
             }
 
             TC_No.DataBindings.Add("Text", this.DataSource, Model.PackingInvoiceDetail.PRO_Number);
@@ -45,6 +53,7 @@ namespace Book.UI.Invoices.IP
             TCQTY.DataBindings.Add("Text", this.DataSource, Model.PackingInvoiceDetail.PRO_ShowQty);
             TC_UnitPrice.DataBindings.Add("Text", this.DataSource, Model.PackingInvoiceDetail.PRO_UnitPrice, "{0:0.00}");
             TC_Amount.DataBindings.Add("Text", this.DataSource, Model.PackingInvoiceDetail.PRO_Amount, "{0:0.00}");
+
         }
     }
 }
