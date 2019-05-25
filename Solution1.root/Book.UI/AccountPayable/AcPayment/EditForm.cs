@@ -124,7 +124,8 @@ namespace Book.UI.AccountPayable.AcPayment
                 return;
             try
             {
-                this._acPayManager.Delete(this._acPayment.AcPaymentId);
+                //this._acPayManager.Delete(this._acPayment.AcPaymentId);
+                this._acPayManager.Delete(this._acPayment);
                 this._acPayment = this._acPayManager.GetNext(this._acPayment);
                 if (this._acPayment == null)
                 {
