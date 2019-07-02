@@ -30,6 +30,8 @@
       <result property="Remark" column="Remark" />
       <result property="IsNeedMPS" column="IsNeedMPS"/>
       <result property="YuJiaoRiqi" column="YuJiaoRiqi"/>
+      <result property="ManualJiean" column="ManualJiean"/>
+      <result property="ManualJieanNote" column="ManualJieanNote"/>
     </resultMap>
   </resultMaps>
 
@@ -61,7 +63,9 @@
       [InvoiceXTDetailQuantity],
       [Remark],
       [IsNeedMPS],
-      [YuJiaoRiqi]
+      [YuJiaoRiqi],
+      [ManualJiean],
+      [ManualJieanNote]
       FROM
       [dbo].[InvoiceXODetail]
       WHERE

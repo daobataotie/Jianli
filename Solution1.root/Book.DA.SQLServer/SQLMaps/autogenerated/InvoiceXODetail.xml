@@ -32,6 +32,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="Remark" column="Remark" />
       <result property="IsNeedMPS" column="IsNeedMPS"/>
       <result property="YuJiaoRiqi" column="YuJiaoRiqi"/>
+      <result property="ManualJiean" column="ManualJiean"/>
+      <result property="ManualJieanNote" column="ManualJieanNote"/>
       <result property="Customer" column="CustomerId" lazyLoad="false" select="Customer.select_SimpleCustomer" />
       <result property="Product" column="ProductId" lazyLoad="false" select="Product.select_SimpleProduct" />
       <result property="PrimaryKey" column="PrimaryKeyId" lazyLoad="false" select="CustomerProducts.select_by_primary_key" />
@@ -88,7 +90,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       [InvoiceXTDetailQuantity],
       [Remark],
       [IsNeedMPS],
-      [YuJiaoRiqi]
+      [YuJiaoRiqi],
+      [ManualJiean],
+      [ManualJieanNote]
+
       FROM
       [dbo].[InvoiceXODetail]
       WHERE
@@ -158,7 +163,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       [InvoiceXTDetailQuantity],
       [Remark],
       [IsNeedMPS],
-      [YuJiaoRiqi]
+      [YuJiaoRiqi],
+      [ManualJiean],
+      [ManualJieanNote]
       )
       VALUES
       (
@@ -187,7 +194,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       #InvoiceXTDetailQuantity#,
       #Remark#,
       #IsNeedMPS#,
-      #YuJiaoRiqi#
+      #YuJiaoRiqi#,
+      #ManualJiean#,
+      #ManualJieanNote#
       )
     </insert>
 
@@ -218,7 +227,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       [InvoiceXTDetailQuantity] = #InvoiceXTDetailQuantity#,
       [Remark]=#Remark#,
       [IsNeedMPS]=#IsNeedMPS#,
-      [YuJiaoRiqi]=#YuJiaoRiqi#
+      [YuJiaoRiqi]=#YuJiaoRiqi#,
+      [ManualJiean]=#ManualJiean#,
+      [ManualJieanNote]=#ManualJieanNote#
       WHERE
       [InvoiceXODetailId] = #InvoiceXODetailId#
     </update>

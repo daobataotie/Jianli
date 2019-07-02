@@ -138,7 +138,7 @@ namespace Book.UI.Invoices.XO
             // gridColumn2
             // 
             resources.ApplyResources(this.gridColumn2, "gridColumn2");
-            this.gridColumn2.FieldName = "InvoiceYjrq";
+            this.gridColumn2.FieldName = "YuJiaoRiqi";
             this.gridColumn2.Name = "gridColumn2";
             // 
             // gridColumn8

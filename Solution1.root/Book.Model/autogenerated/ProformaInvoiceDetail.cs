@@ -27,7 +27,7 @@ namespace Book.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		private string _number;
+		private int? _number;
 		
 		/// <summary>
 		/// 
@@ -100,7 +100,7 @@ namespace Book.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public string Number
+		public int? Number
 		{
 			get 
 			{

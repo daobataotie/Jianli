@@ -117,280 +117,57 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="DevExpress.XtraEditors.v10.2" name="DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-  <data name="dateEdit1.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="simpleButtonOK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>327, 221</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="dateEdit1.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="simpleButtonCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>474, 221</value>
   </data>
-  <data name="dateEdit1.Properties.Mask.EditMask" xml:space="preserve">
-    <value>d</value>
+  <data name="comBoxProductState.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 185</value>
   </data>
-  <data name="dateEdit1.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="comBoxProductState.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 21</value>
   </data>
-  <data name="dateEdit1.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>DateTime</value>
+  <data name="newChooseCustomer2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>379, 161</value>
   </data>
-  <data name="dateEdit1.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
+  <data name="newChooseCustomer1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 161</value>
   </data>
-  <data name="dateEdit1.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="textEditCusXOId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 21</value>
   </data>
-  <data name="dateEdit1.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="labelCusPro.Location" type="System.Drawing.Point, System.Drawing">
+    <value>379, 112</value>
   </data>
-  <data name="dateEdit1.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="labelCusPro.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 21</value>
   </data>
-  <data name="dateEdit1.Properties.NullValuePrompt" xml:space="preserve">
-    <value />
+  <data name="newChooseContorlDepot.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 137</value>
   </data>
-  <data name="dateEdit1.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="buttonEditPro.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 21</value>
   </data>
-  <data name="dateEdit1.Properties.VistaTimeProperties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="newChooseWorkHouse.Location" type="System.Drawing.Point, System.Drawing">
+    <value>379, 87</value>
   </data>
-  <data name="dateEdit1.Properties.VistaTimeProperties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
+  <data name="newChooseWorkHouse.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 21</value>
   </data>
-  <data name="dateEdit1.Properties.VistaTimeProperties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="newChooseContorlDepotPosition.Location" type="System.Drawing.Point, System.Drawing">
+    <value>379, 137</value>
   </data>
-  <data name="dateEdit1.Properties.VistaTimeProperties.Mask.EditMask" xml:space="preserve">
-    <value>T</value>
-  </data>
-  <data name="dateEdit1.Properties.VistaTimeProperties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEdit1.Properties.VistaTimeProperties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>DateTime</value>
-  </data>
-  <data name="dateEdit1.Properties.VistaTimeProperties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="dateEdit1.Properties.VistaTimeProperties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEdit1.Properties.VistaTimeProperties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEdit1.Properties.VistaTimeProperties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateEdit1.Properties.VistaTimeProperties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="dateEdit1.Properties.VistaTimeProperties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="comBoxProductState.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="buttonEditid2.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="buttonEditid2.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="buttonEditid2.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>None</value>
-  </data>
-  <data name="buttonEditid2.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="buttonEditid2.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="buttonEditid2.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="textEditCusXOId.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="textEditCusXOId.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="textEditCusXOId.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>None</value>
-  </data>
-  <data name="textEditCusXOId.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="textEditCusXOId.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="textEditCusXOId.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="buttonEditId1.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="buttonEditId1.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="buttonEditId1.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>None</value>
-  </data>
-  <data name="buttonEditId1.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="buttonEditId1.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="buttonEditId1.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="labelCusPro.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="labelCusPro.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="labelCusPro.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>None</value>
-  </data>
-  <data name="labelCusPro.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="labelCusPro.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="labelCusPro.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="buttonEditPro.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="buttonEditPro.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="buttonEditPro.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>None</value>
-  </data>
-  <data name="buttonEditPro.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="buttonEditPro.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="buttonEditPro.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="buttonEditPronote2.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="buttonEditPronote2.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="buttonEditPronote2.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>None</value>
-  </data>
-  <data name="buttonEditPronote2.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="buttonEditPronote2.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="buttonEditPronote2.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="buttonEditPronote1.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="buttonEditPronote1.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="buttonEditPronote1.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>None</value>
-  </data>
-  <data name="buttonEditPronote1.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="buttonEditPronote1.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="buttonEditPronote1.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateEdit2.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="dateEdit2.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateEdit2.Properties.Mask.EditMask" xml:space="preserve">
-    <value>d</value>
-  </data>
-  <data name="dateEdit2.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEdit2.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>DateTime</value>
-  </data>
-  <data name="dateEdit2.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="dateEdit2.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEdit2.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEdit2.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateEdit2.Properties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="dateEdit2.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateEdit2.Properties.VistaTimeProperties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEdit2.Properties.VistaTimeProperties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="dateEdit2.Properties.VistaTimeProperties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateEdit2.Properties.VistaTimeProperties.Mask.EditMask" xml:space="preserve">
-    <value>T</value>
-  </data>
-  <data name="dateEdit2.Properties.VistaTimeProperties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEdit2.Properties.VistaTimeProperties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>DateTime</value>
-  </data>
-  <data name="dateEdit2.Properties.VistaTimeProperties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="dateEdit2.Properties.VistaTimeProperties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEdit2.Properties.VistaTimeProperties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dateEdit2.Properties.VistaTimeProperties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateEdit2.Properties.VistaTimeProperties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="dateEdit2.Properties.VistaTimeProperties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="layoutControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>573, 218</value>
   </data>
   <data name="layoutControlItem1.CustomizationFormText" xml:space="preserve">
     <value>商品名稱：</value>
   </data>
   <data name="layoutControlItem1.Text" xml:space="preserve">
-    <value>商品名稱：</value>
+    <value>商品編號：</value>
   </data>
   <data name="layoutControlItem2.CustomizationFormText" xml:space="preserve">
     <value>生產站：</value>
@@ -422,12 +199,6 @@
   <data name="layoutControlItem8.Text" xml:space="preserve">
     <value>倉庫：</value>
   </data>
-  <data name="layoutControlItem11.CustomizationFormText" xml:space="preserve">
-    <value>客戶型號：</value>
-  </data>
-  <data name="layoutControlItem11.Text" xml:space="preserve">
-    <value>客戶型號：</value>
-  </data>
   <data name="layoutControlItem10.CustomizationFormText" xml:space="preserve">
     <value>編      號 自:</value>
   </data>
@@ -451,6 +222,15 @@
   </data>
   <data name="layoutControlItem14.Text" xml:space="preserve">
     <value>客戶訂單號：</value>
+  </data>
+  <data name="layoutControlItem11.CustomizationFormText" xml:space="preserve">
+    <value>客戶型號：</value>
+  </data>
+  <data name="layoutControlItem11.Text" xml:space="preserve">
+    <value>客戶型號：</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>573, 257</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>生產入庫明細查詢條件</value>

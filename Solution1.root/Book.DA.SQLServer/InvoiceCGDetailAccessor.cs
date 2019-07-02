@@ -233,7 +233,7 @@ namespace Book.DA.SQLServer
             }
             if (!string.IsNullOrEmpty(coidStart) && !string.IsNullOrEmpty(coidEnd))
             {
-                sb.Append(" AND InvoiceCOId WHERE BETWEEN '" + coidStart + "' AND '" + coidEnd + "'");
+                sb.Append(" AND InvoiceCOId BETWEEN '" + coidStart + "' AND '" + coidEnd + "'");
             }
             if (JHstartdate != global::Helper.DateTimeParse.NullDate.Date && JHenddate != global::Helper.DateTimeParse.EndDate.Date.AddDays(1).AddSeconds(-1))
             {

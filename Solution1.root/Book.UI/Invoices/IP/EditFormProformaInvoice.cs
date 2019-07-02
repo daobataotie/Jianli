@@ -405,7 +405,7 @@ namespace Book.UI.Invoices.IP
             }
 
             if (this.proformaInvoice.Details != null && this.proformaInvoice.Details.Count > 0)
-                this.proformaInvoice.Details.ToList().ForEach(D => D.Number = (this.proformaInvoice.Details.IndexOf(D) + 1).ToString());
+                this.proformaInvoice.Details.ToList().ForEach(D => D.Number = (this.proformaInvoice.Details.IndexOf(D) + 1));
 
             this.bindingSourceDetail.DataSource = this.proformaInvoice.Details;
             this.gridControl3.RefreshDataSource();
@@ -435,7 +435,7 @@ namespace Book.UI.Invoices.IP
                 this.proformaInvoice.Details.Remove(this.bindingSourceDetail.Current as Model.ProformaInvoiceDetail);
 
                 if (this.proformaInvoice.Details != null && this.proformaInvoice.Details.Count > 0)
-                    this.proformaInvoice.Details.ToList().ForEach(D => D.Number = (this.proformaInvoice.Details.IndexOf(D) + 1).ToString());
+                    this.proformaInvoice.Details.ToList().ForEach(D => D.Number = (this.proformaInvoice.Details.IndexOf(D) + 1));
 
                 this.gridControl3.RefreshDataSource();
             }
@@ -506,7 +506,7 @@ namespace Book.UI.Invoices.IP
                         this.CombineSameItem();
 
                         if (this.proformaInvoice.Details != null && this.proformaInvoice.Details.Count > 0)
-                            this.proformaInvoice.Details.ToList().ForEach(D => D.Number = (this.proformaInvoice.Details.IndexOf(D) + 1).ToString());
+                            this.proformaInvoice.Details.ToList().ForEach(D => D.Number = (this.proformaInvoice.Details.IndexOf(D) + 1));
 
                         this.gridControl3.RefreshDataSource();
                     }

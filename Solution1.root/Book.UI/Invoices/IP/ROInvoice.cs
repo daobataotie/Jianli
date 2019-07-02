@@ -4,6 +4,7 @@ using System.Collections;
 using System.ComponentModel;
 using DevExpress.XtraReports.UI;
 using System.Linq;
+using System.Globalization;
 
 namespace Book.UI.Invoices.IP
 {
@@ -16,7 +17,8 @@ namespace Book.UI.Invoices.IP
             this.DataSource = invoiceList.Details;
 
             this.lbl_PackingNo.Text = invoiceList.InvoiceNo;
-            this.lbl_PackingDate.Text = invoiceList.InvoiceDate.Value.ToString("yyyy-MM-dd");
+            //this.lbl_PackingDate.Text = invoiceList.InvoiceDate.Value.ToString("yyyy-MM-dd");
+            this.lbl_PackingDate.Text = invoiceList.InvoiceDate.Value.ToString("MMM dd.yyyy",CultureInfo.CreateSpecificCulture("en-GB"));
             //this.lbl_CustomerFullName.Text = invoiceList.Customer.CustomerFullName;
             //this.lbl_address.Text = invoiceList.Customer.CustomerAddress;
             this.lbl_CustomerFullName.Text = invoiceList.CustomerFullName;

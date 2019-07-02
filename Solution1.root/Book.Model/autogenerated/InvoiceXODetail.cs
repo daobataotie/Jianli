@@ -141,6 +141,10 @@ namespace Book.Model
 
         private DateTime? _yuJiaoRiqi;
 
+        private bool? _manualJiean;
+
+        private string _manualJieanNote;
+
 
         /// <summary>
         /// 客户
@@ -532,6 +536,18 @@ namespace Book.Model
             set { _yuJiaoRiqi = value; }
         }
 
+        public bool? ManualJiean
+        {
+            get { return _manualJiean; }
+            set { _manualJiean = value; }
+        }
+
+        public string ManualJieanNote
+        {
+            get { return _manualJieanNote; }
+            set { _manualJieanNote = value; }
+        }
+
         /// <summary>
         /// 客户
         /// </summary>
@@ -718,6 +734,10 @@ namespace Book.Model
         public readonly static string PRO_IsNeedMPS = "IsNeedMPS";
 
         public readonly static string PRO_YuJiaoRiqi = "YuJiaoRiqi";
+
+        public readonly static string PRO_ManualJiean = "ManualJiean";
+
+        public readonly static string PRO_ManualJieanNote = "ManualJieanNote";
 
         #endregion
     }
