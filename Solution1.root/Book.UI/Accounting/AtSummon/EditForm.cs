@@ -69,11 +69,11 @@ namespace Book.UI.Accounting.AtSummon
             switch (this.comboBoxEditSummonCategory.SelectedIndex)
             {
                 case 0:
-                    detail.Lending = "Loan";
+                    detail.Lending = "貸";
 
                     break;
                 case 1:
-                    detail.Lending = "Borrow";
+                    detail.Lending = "借";
                     break;
                 case 2:
                     detail.Lending = "";
@@ -213,7 +213,7 @@ namespace Book.UI.Accounting.AtSummon
 
             foreach (var item in atSummon.Details)
             {
-                if (item.Lending == "Borrow")
+                if (item.Lending == "借")
                     item.Id = "A" + atSummon.Details.IndexOf(item);
                 else
                     item.Id = "B" + atSummon.Details.IndexOf(item);
@@ -335,14 +335,14 @@ namespace Book.UI.Accounting.AtSummon
                         this.colJieorDai.OptionsColumn.AllowEdit = false;
                         foreach (Model.AtSummonDetail d in this.bindingSource1.DataSource as IList<Model.AtSummonDetail>)
                         {
-                            d.Lending = "Loan";
+                            d.Lending = "貸";
                         }
                         break;
                     case 1:
                         this.colJieorDai.OptionsColumn.AllowEdit = false;
                         foreach (Model.AtSummonDetail d in this.bindingSource1.DataSource as IList<Model.AtSummonDetail>)
                         {
-                            d.Lending = "Borrow";
+                            d.Lending = "借";
                         }
                         break;
                     case 2:
@@ -435,8 +435,8 @@ namespace Book.UI.Accounting.AtSummon
                 this.bindingSource1.Position = this.atSummon.Details.Count - 1;
 
                 IList<Model.AtSummonDetail> _detailList = this.bindingSource1.DataSource as IList<Model.AtSummonDetail>;
-                this.spinEditTotalDebits.EditValue = _detailList.Where(d => d.Lending == "Borrow").ToList().Sum(d => d.AMoney);
-                this.spinEditCreditTotal.EditValue = _detailList.Where(d => d.Lending == "Loan").ToList().Sum(d => d.AMoney);
+                this.spinEditTotalDebits.EditValue = _detailList.Where(d => d.Lending == "借").ToList().Sum(d => d.AMoney);
+                this.spinEditCreditTotal.EditValue = _detailList.Where(d => d.Lending == "貸").ToList().Sum(d => d.AMoney);
             }
         }
 
@@ -447,8 +447,8 @@ namespace Book.UI.Accounting.AtSummon
 
             if (e.Column == this.colJinE || e.Column == this.colJieorDai)
             {
-                this.spinEditTotalDebits.EditValue = _detailList.Where(d => d.Lending == "Borrow").ToList().Sum(d => d.AMoney);
-                this.spinEditCreditTotal.EditValue = _detailList.Where(d => d.Lending == "Loan").ToList().Sum(d => d.AMoney);
+                this.spinEditTotalDebits.EditValue = _detailList.Where(d => d.Lending == "借").ToList().Sum(d => d.AMoney);
+                this.spinEditCreditTotal.EditValue = _detailList.Where(d => d.Lending == "貸").ToList().Sum(d => d.AMoney);
             }
 
             //this.bindingSource1.Position = this.bindingSource1.IndexOf(_detail);
@@ -470,14 +470,14 @@ namespace Book.UI.Accounting.AtSummon
                             this.colJieorDai.OptionsColumn.AllowEdit = false;
                             foreach (Model.AtSummonDetail d in _details)
                             {
-                                d.Lending = "Loan";
+                                d.Lending = "貸";
                             }
                             break;
                         case 1:
                             this.colJieorDai.OptionsColumn.AllowEdit = false;
                             foreach (Model.AtSummonDetail d in _details)
                             {
-                                d.Lending = "Borrow";
+                                d.Lending = "借";
                             }
                             break;
                         case 2:
@@ -485,8 +485,8 @@ namespace Book.UI.Accounting.AtSummon
                             break;
                     }
 
-                    this.spinEditCreditTotal.EditValue = _details.Where(d => d.Lending == "Loan") == null ? 0 : _details.Where(d => d.Lending == "Loan").Sum(d => d.AMoney);
-                    this.spinEditTotalDebits.EditValue = _details.Where(d => d.Lending == "Borrow") == null ? 0 : _details.Where(d => d.Lending == "Borrow").Sum(d => d.AMoney);
+                    this.spinEditCreditTotal.EditValue = _details.Where(d => d.Lending == "貸") == null ? 0 : _details.Where(d => d.Lending == "貸").Sum(d => d.AMoney);
+                    this.spinEditTotalDebits.EditValue = _details.Where(d => d.Lending == "借") == null ? 0 : _details.Where(d => d.Lending == "借").Sum(d => d.AMoney);
 
                     this.gridControl1.RefreshDataSource();
                 }
@@ -539,10 +539,10 @@ namespace Book.UI.Accounting.AtSummon
             switch (this.comboBoxEditSummonCategory.SelectedIndex)
             {
                 case 0:
-                    mdetail.Lending = "Loan";
+                    mdetail.Lending = "貸";
                     break;
                 case 1:
-                    mdetail.Lending = "Borrow";
+                    mdetail.Lending = "借";
                     break;
                 case 3:
                     mdetail.Lending = "";

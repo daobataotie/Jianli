@@ -41,5 +41,13 @@ namespace Book.DA.SQLServer
             ht.Add("endid", endid);
             return sqlmapper.QueryForList<Model.AtAccountSubject>("AtAccountSubject.selectById", ht);
         }
+
+        public IList<Book.Model.AtAccountSubject> SelectByCategoryId(string startid, string endid)
+        {
+            Hashtable ht = new Hashtable();
+            ht.Add("startid", startid);
+            ht.Add("endid", endid);
+            return sqlmapper.QueryForList<Model.AtAccountSubject>("AtAccountSubject.SelectByCategoryId", ht);
+        } 
     }
 }

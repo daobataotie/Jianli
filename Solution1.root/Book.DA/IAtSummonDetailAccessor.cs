@@ -32,6 +32,10 @@ namespace Book.DA
         bool IsExistsDetailForUpdate(string SummonDetailId, string SummonCatetory, string Lending, string SubjectId, decimal AMoney);
         DataTable GetByDate(DateTime startDate, DateTime endDate);
         decimal SelectYEByDate(DateTime date);
+
+        IList<Model.DetailLedger> SelectDetailLedger(DateTime dateStart, DateTime dateEnd, string subIdStart, string subIdEnd);
+
+        IList<Model.DetailLedger> SelectJournal(DateTime dateStart, DateTime dateEnd, string startId, string endId, string category);
     }
 }
 

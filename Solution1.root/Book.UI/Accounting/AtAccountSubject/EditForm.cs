@@ -212,6 +212,21 @@ namespace Book.UI.Accounting.AtAccountSubject
             Book.UI.Tools.IMEControl.IMECtrl(new Control[] { this.textEditSubjectId, this.textEditSubjectName, this.textEditCommonSummary, this.newChooseAccountingCategoryId, this });
         }
 
+        protected override DevExpress.XtraReports.UI.XtraReport GetReport()
+        {
+            ConditionForm f = new ConditionForm();
+            f.ShowDialog();
+            IList<Model.AtAccountSubject> list;
+            if (!string.IsNullOrEmpty(f.StartCategoryId) && !string.IsNullOrEmpty(f.EndCategoryId))
+            {
+                list = AtAccountSubjectManager.SelectByCategoryId(f.StartCategoryId, f.EndCategoryId);
+            }
+            else
+                list = this.bindingSource1.DataSource as IList<Model.AtAccountSubject>;
+
+            return new RO(list);
+        }
+
         private void gridView1_Click(object sender, EventArgs e)
         {
             GridView view = sender as GridView;

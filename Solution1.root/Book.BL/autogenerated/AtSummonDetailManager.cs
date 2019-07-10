@@ -114,9 +114,19 @@ namespace Book.BL
             return accessor.IsExistsDetailForInsert(SummonCatetory, Lending, SubjectId, AMoney);
         }
 
-        public bool IsExistsDetailForUpdate(string SummonDetailId,string SummonCatetory, string Lending, string SubjectId, decimal AMoney)
+        public bool IsExistsDetailForUpdate(string SummonDetailId, string SummonCatetory, string Lending, string SubjectId, decimal AMoney)
         {
-            return accessor.IsExistsDetailForUpdate(SummonDetailId,SummonCatetory, Lending, SubjectId, AMoney);
+            return accessor.IsExistsDetailForUpdate(SummonDetailId, SummonCatetory, Lending, SubjectId, AMoney);
+        }
+
+        public IList<Model.DetailLedger> SelectDetailLedger(DateTime dateStart, DateTime dateEnd, string subIdStart, string subIdEnd)
+        {
+            return accessor.SelectDetailLedger(dateStart, dateEnd, subIdStart, subIdEnd);
+        }
+
+        public IList<Model.DetailLedger> SelectJournal(DateTime dateStart, DateTime dateEnd, string startId, string endId, string category)
+        {
+            return accessor.SelectJournal(dateStart, dateEnd, startId, endId, category);
         }
     }
 }

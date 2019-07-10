@@ -161,5 +161,61 @@ namespace Book.DA.SQLServer
             else
                 return 0;
         }
+
+        public IList<Model.DetailLedger> SelectDetailLedger(DateTime dateStart, DateTime dateEnd, string subIdStart, string subIdEnd)
+        {
+            string sql = "select at.SummonDate,at.Id,atd.Summary,atd.Lending,atd.AMoney,(case when atd.Lending='借' then AMoney else 0 end) as JMoney,(case when atd.Lending='貸' then AMoney else 0 end) as DMoney,ats.TheBalance,ats.SubjectName,ats.Id as Subject_Id from AtSummonDetail atd left join AtSummon at on at.SummonId=atd.SummonId left join AtAccountSubject ats on atd.SubjectId=ats.SubjectId  where at.SummonDate between '" + dateStart.ToString("yyyy-MM-dd") + "' and '" + dateEnd.Date.AddDays(1).AddSeconds(-1).ToString("yyyy-MM-dd HH:mm:ss") + "'  and ats.Id between '" + subIdStart + "' and '" + subIdEnd + "' order by ats.Id,at.SummonDate";
+
+            #region MyRegion
+            //List<Model.DetailLedger> list = new List<Book.Model.DetailLedger>();
+            //Model.DetailLedger detailLedger;
+            //using (SqlDataReader dataReader = SQLDB.SqlHelper.ExecuteReader(SQLDB.SqlHelper.ConnectionStringLocalTransaction, CommandType.Text, sql, null))
+            //{
+            //    while (dataReader.Read())
+            //    {
+            //        detailLedger = new Model.DetailLedger();
+            //        for (int i = 0; i < dataReader.FieldCount; i++)
+            //        {
+            //            foreach (var item in detailLedger.GetType().GetProperties())
+            //            {
+            //                string fieldName = item.Name;//属性名
+            //                //判断当前迭代出的属性名称是否和迭代出的dataReader的列名称一致
+            //                if (item.Name.ToLower().Equals(dataReader.GetName(i).ToLower()))
+            //                {
+            //                    //从DataReader中读取值
+            //                    object _value = dataReader[fieldName];
+            //                    //将当前dataReader的单列值赋予相匹配的属性,否则赋予一个null值.
+            //                    if (_value != null && _value != DBNull.Value)
+            //                        item.SetValue(detailLedger, _value, null);
+            //                    else
+            //                        item.SetValue(detailLedger, null, null);
+            //                }
+            //            }
+            //        }
+            //        list.Add(detailLedger);
+
+            //    }
+            //}
+
+            //return list; 
+            #endregion
+
+            return this.DataReaderBind<Model.DetailLedger>(sql, null, CommandType.Text);
+        }
+
+        public IList<Model.DetailLedger> SelectJournal(DateTime dateStart, DateTime dateEnd, string startId, string endId, string category)
+        {
+            StringBuilder sql = new StringBuilder("select at.SummonDate,at.Id,at.SummonCategory,ats.SubjectName,ats.Id as Subject_Id,atd.Summary,(case when atd.Lending='借' then atd.AMoney else 0 end ) as JMoney,(case when atd.Lending='貸' then atd.AMoney else 0 end ) as DMoney from AtSummonDetail atd left join AtSummon at on atd.SummonId=at.SummonId left join AtAccountSubject ats on atd.SubjectId=ats.SubjectId where at.SummonDate between '" + dateStart.ToString("yyyy-MM-dd") + "' and '" + dateEnd.Date.AddDays(1).AddSeconds(-1).ToString("yyyy-MM-dd HH:mm:ss") + "' ");
+
+            if (!string.IsNullOrEmpty(startId) && !string.IsNullOrEmpty(endId))
+            {
+                sql.Append(" and at.Id between '" + startId + "' and '" + endId + "' ");
+            }
+            if (!string.IsNullOrEmpty(category))
+                sql.Append(" and at.SummonCategory in (" + category + ")");
+            sql.Append(" order by at.SummonDate,at.Id");
+
+            return DataReaderBind<Model.DetailLedger>(sql.ToString(), null, CommandType.Text);
+        }
     }
 }

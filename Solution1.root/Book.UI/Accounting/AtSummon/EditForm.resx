@@ -134,9 +134,6 @@
   <data name="&gt;&gt;repositoryItemLookUpEdit2.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="dateEditSummonDate.Properties.VistaTimeProperties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="&gt;&gt;gridControl1.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
@@ -225,8 +222,14 @@
   <data name="dateEditSummonDate.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="repositoryItemLookUpEdit1.Columns10" xml:space="preserve">
+    <value>科目名称</value>
+  </data>
   <data name="&gt;&gt;layoutControlItem6.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="spinEditTotalDebits.Location" type="System.Drawing.Point, System.Drawing">
+    <value>527, 326</value>
   </data>
   <data name="repositoryItemLookUpEdit2.Columns2" xml:space="preserve">
     <value>SubjectId</value>
@@ -249,6 +252,10 @@
   <data name="repositoryItemLookUpEdit1.Columns2" xml:space="preserve">
     <value>SubjectId</value>
   </data>
+  <assembly alias="DevExpress.Data.v10.2" name="DevExpress.Data.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="repositoryItemLookUpEdit1.Columns8" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v10.2">
+    <value>Default</value>
+  </data>
   <data name="comboBoxEditSummonCategory.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -261,8 +268,9 @@
   <data name="layoutControlItem5.Text" xml:space="preserve">
     <value>借方合计</value>
   </data>
-  <data name="&gt;&gt;layoutControlItem3.Name" xml:space="preserve">
-    <value>layoutControlItem3</value>
+  <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="repositoryItemLookUpEdit2.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
+    <value>Combo</value>
   </data>
   <data name="repositoryItemLookUpEdit2.Columns1" xml:space="preserve">
     <value>编号</value>
@@ -297,7 +305,6 @@
   <data name="colJieorDai.VisibleIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="repositoryItemLookUpEdit1.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
@@ -331,9 +338,6 @@
   <data name="&gt;&gt;spinEditTotalDebits.Name" xml:space="preserve">
     <value>spinEditTotalDebits</value>
   </data>
-  <data name="repositoryItemLookUpEdit2.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
-    <value>Combo</value>
-  </data>
   <data name="simpleButton2.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
@@ -343,8 +347,8 @@
   <data name="&gt;&gt;barButtonItemPrint.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="repositoryItemLookUpEdit2.NullText" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;colKemuBianHao.Name" xml:space="preserve">
+    <value>colKemuBianHao</value>
   </data>
   <data name="&gt;&gt;bar1.Name" xml:space="preserve">
     <value>bar1</value>
@@ -385,11 +389,11 @@
   <data name="repositoryItemLookUpEdit1.NullText" xml:space="preserve">
     <value />
   </data>
-  <data name="layoutControlItem2.CustomizationFormText" xml:space="preserve">
-    <value>传票日期</value>
-  </data>
   <data name="spinEditCreditTotal.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
+  </data>
+  <data name="colZhaiYao.VisibleIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="textEditSummonId.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -725,9 +729,6 @@
   <data name="gridControl1.Size" type="System.Drawing.Size, System.Drawing">
     <value>899, 285</value>
   </data>
-  <data name="&gt;&gt;colJieorDai.Name" xml:space="preserve">
-    <value>colJieorDai</value>
-  </data>
   <data name="repositoryItemComboBox1.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
@@ -752,14 +753,14 @@
   <data name="spinEditCreditTotal.Properties.Mask.EditMask" xml:space="preserve">
     <value />
   </data>
-  <data name="&gt;&gt;colKemuBianHao.Name" xml:space="preserve">
-    <value>colKemuBianHao</value>
-  </data>
   <data name="spinEditCreditTotal.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
     <value>Default</value>
   </data>
   <data name="colKemuBianHao.Caption" xml:space="preserve">
     <value>科目编号</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem3.Name" xml:space="preserve">
+    <value>layoutControlItem3</value>
   </data>
   <data name="dateEditSummonDate.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -852,14 +853,17 @@
   <data name="&gt;&gt;layoutControlItem1.Name" xml:space="preserve">
     <value>layoutControlItem1</value>
   </data>
-  <data name="colZhaiYao.VisibleIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="comboBoxEditSummonCategory.Properties.Items" xml:space="preserve">
+    <value>現金收入傳票</value>
+  </data>
+  <data name="dateEditSummonDate.Properties.VistaTimeProperties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="spinEditTotalDebits.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
     <value>Numeric</value>
   </data>
-  <data name="comboBoxEditSummonCategory.Properties.Items2" xml:space="preserve">
-    <value>轉帳傳票</value>
+  <data name="repositoryItemLookUpEdit2.NullText" xml:space="preserve">
+    <value />
   </data>
   <data name="colKeMuMingCheng.Caption" xml:space="preserve">
     <value>科目名称</value>
@@ -882,8 +886,8 @@
   <data name="layoutControlItem6.Text" xml:space="preserve">
     <value>贷方合计</value>
   </data>
-  <data name="&gt;&gt;gridControl1.Name" xml:space="preserve">
-    <value>gridControl1</value>
+  <data name="layoutControlItem2.CustomizationFormText" xml:space="preserve">
+    <value>传票日期</value>
   </data>
   <data name="&gt;&gt;dateEditSummonDate.ZOrder" xml:space="preserve">
     <value>10</value>
@@ -918,13 +922,9 @@
   <data name="layoutControlItem4.Text" xml:space="preserve">
     <value>传票类别：</value>
   </data>
-  <data name="&gt;&gt;barButtonItem1.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="textEditSummonId.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <assembly alias="DevExpress.Data.v10.2" name="DevExpress.Data.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="gridControl1.EmbeddedNavigator.AllowHtmlTextInToolTip" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v10.2">
     <value>Default</value>
   </data>
@@ -960,6 +960,9 @@
   </data>
   <data name="spinEditTotalDebits.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="comboBoxEditSummonCategory.Properties.Items2" xml:space="preserve">
+    <value>轉帳傳票</value>
   </data>
   <data name="dateEditSummonDate.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
     <value>_</value>
@@ -1048,8 +1051,8 @@
   <data name="gridControl1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="repositoryItemLookUpEdit1.Columns10" xml:space="preserve">
-    <value>科目名称</value>
+  <data name="&gt;&gt;layoutControlItem2.Name" xml:space="preserve">
+    <value>layoutControlItem2</value>
   </data>
   <data name="&gt;&gt;bar1.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.Bar, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
@@ -1093,8 +1096,8 @@
   <data name="&gt;&gt;repositoryItemSpinEdit1.Name" xml:space="preserve">
     <value>repositoryItemSpinEdit1</value>
   </data>
-  <data name="spinEditTotalDebits.Location" type="System.Drawing.Point, System.Drawing">
-    <value>527, 326</value>
+  <data name="&gt;&gt;barButtonItem1.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;repositoryItemSpinEdit1.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
@@ -1102,14 +1105,11 @@
   <data name="colJieorDai.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="textEditSummonId.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
   <data name="spinEditTotalDebits.Properties.NullValuePrompt" xml:space="preserve">
     <value />
   </data>
-  <data name="comboBoxEditSummonCategory.Properties.Items" xml:space="preserve">
-    <value>現金收入傳票</value>
+  <data name="&gt;&gt;colJieorDai.Name" xml:space="preserve">
+    <value>colJieorDai</value>
   </data>
   <data name="&gt;&gt;repositoryItemComboBox1.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.Repository.RepositoryItemComboBox, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
@@ -1123,8 +1123,8 @@
   <data name="spinEditCreditTotal.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="repositoryItemLookUpEdit1.Columns8" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v10.2">
-    <value>Default</value>
+  <data name="&gt;&gt;gridControl1.Name" xml:space="preserve">
+    <value>gridControl1</value>
   </data>
   <data name="textEditSummonId.Properties.Mask.EditMask" xml:space="preserve">
     <value />
@@ -1201,8 +1201,8 @@
   <data name="&gt;&gt;layoutControlItem4.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;layoutControlItem2.Name" xml:space="preserve">
-    <value>layoutControlItem2</value>
+  <data name="textEditSummonId.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
+    <value>Default</value>
   </data>
   <data name="gridControl1.EmbeddedNavigator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left</value>
@@ -1223,6 +1223,6 @@
     <value>303, 17</value>
   </metadata>
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>English</value>
+    <value>Chinese (Traditional)</value>
   </metadata>
 </root>

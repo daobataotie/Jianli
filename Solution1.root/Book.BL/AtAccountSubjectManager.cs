@@ -92,6 +92,11 @@ namespace Book.BL
         //{
         //    accessor.UpdateDataTable(accountSubject);
         //}
+
+        public IList<Book.Model.AtAccountSubject> SelectByCategoryId(string startid, string endid)
+        {
+            return accessor.SelectByCategoryId(startid, endid);
+        }
     }
 }
 

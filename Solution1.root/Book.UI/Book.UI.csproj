@@ -3423,6 +3423,9 @@
       <DependentUpon>ChooseAccountSubjectForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\AtAccountSubject\ConditionForm.resx">
+      <DependentUpon>ConditionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtAccountSubject\EditForm.en.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -3434,6 +3437,9 @@
     <EmbeddedResource Include="Accounting\AtAccountSubject\EditForm.zh-CHT.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\AtAccountSubject\RO.resx">
+      <DependentUpon>RO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtAccountSubject\TheirBalanceForm.en.resx">
       <DependentUpon>TheirBalanceForm.cs</DependentUpon>
@@ -4087,6 +4093,27 @@
       <DependentUpon>ConditionYS2ChooseForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\Report\FormDetailLedger.resx">
+      <DependentUpon>FormDetailLedger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\Report\FormJournal.resx">
+      <DependentUpon>FormJournal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\Report\RODetailLedger.resx">
+      <DependentUpon>RODetailLedger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\Report\RODetailLedger.zh-CHT.resx">
+      <DependentUpon>RODetailLedger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\Report\RODetailLedger_Sub.resx">
+      <DependentUpon>RODetailLedger_Sub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\Report\RODetailLedger_Sub.zh-CHT.resx">
+      <DependentUpon>RODetailLedger_Sub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\Report\ROJournal.zh-CHT.resx">
+      <DependentUpon>ROJournal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\XRAdiary.resx">
       <DependentUpon>XRAdiary.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -4254,6 +4281,9 @@
     <EmbeddedResource Include="Accounting\Report\XRGeneralAccountDetail.zh-CHT.resx">
       <DependentUpon>XRGeneralAccountDetail.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\Report\ROJournal.resx">
+      <DependentUpon>ROJournal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\YPFP\EditForm.en.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
@@ -11517,6 +11547,18 @@
   <ItemGroup>
     <None Include="bin\Debug\QualityCheck.config" />
     <None Include="Query\ClassDiagram1.cd" />
+    <Compile Include="Accounting\AtAccountSubject\ConditionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\AtAccountSubject\ConditionForm.Designer.cs">
+      <DependentUpon>ConditionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\AtAccountSubject\RO.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Accounting\AtAccountSubject\RO.Designer.cs">
+      <DependentUpon>RO.cs</DependentUpon>
+    </Compile>
     <Compile Include="Accounting\AtBillsIncome\Condition.cs" />
     <Compile Include="Accounting\AtBillsIncome\ConditionForm.cs">
       <SubType>Form</SubType>
@@ -11615,12 +11657,43 @@
     <Compile Include="Accounting\Report\CashCreditSlipRO.Designer.cs">
       <DependentUpon>CashCreditSlipRO.cs</DependentUpon>
     </Compile>
+    <Compile Include="Accounting\Report\FormDetailLedger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\Report\FormDetailLedger.Designer.cs">
+      <DependentUpon>FormDetailLedger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\Report\RODetailLedger.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Accounting\Report\RODetailLedger.Designer.cs">
+      <DependentUpon>RODetailLedger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\Report\RODetailLedger_Sub.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Accounting\Report\RODetailLedger_Sub.Designer.cs">
+      <DependentUpon>RODetailLedger_Sub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\Report\FormJournal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\Report\FormJournal.Designer.cs">
+      <DependentUpon>FormJournal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Accounting\Report\SummonCatetoryEnum.cs" />
     <Compile Include="Accounting\Report\XRGeneralAccountDetail.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Accounting\Report\XRGeneralAccountDetail.Designer.cs">
       <DependentUpon>XRGeneralAccountDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\Report\ConditionDetailLedger.cs" />
+    <Compile Include="Accounting\Report\ROJournal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Accounting\Report\ROJournal.Designer.cs">
+      <DependentUpon>ROJournal.cs</DependentUpon>
     </Compile>
     <Compile Include="Accounting\YPFP\EditForm.cs">
       <SubType>Form</SubType>

@@ -448,6 +448,7 @@
     <Compile Include="DepotOut.cs" />
     <Compile Include="DepotOutDetail.cs" />
     <Compile Include="DepotPosition.cs" />
+    <Compile Include="DetailLedger.cs" />
     <Compile Include="District.cs" />
     <Compile Include="Duty.cs" />
     <Compile Include="Employee.cs" />

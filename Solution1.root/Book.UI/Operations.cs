@@ -758,6 +758,12 @@ namespace Book.UI
 
             //ProformaInvoice
             operations.Add("Invoices.IP.EditFormProformaInvoice", (D1)delegate(System.Windows.Forms.Form form) { M1("Invoices.IP.EditFormProformaInvoice", form); });
+
+            //会计-明細分類賬
+            operations.Add("Accounting.Report.RODetailLedger", (D1)delegate(System.Windows.Forms.Form form) { MM("Accounting.Report.RODetailLedger", new Accounting.Report.FormDetailLedger()); });
+
+            //會計-日記賬
+            operations.Add("Accounting.Report.FormJournal", (D1)delegate(System.Windows.Forms.Form form) { M1("Accounting.Report.FormJournal", form); });
         }
 
         static Form CreateForm(string formTypeName)
