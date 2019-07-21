@@ -89,5 +89,23 @@ namespace Book.Model
         /// 零时计算余额 科目期初金额 ± 借/贷金额
         /// </summary>
         public readonly static string PRO_YuE_flat = "YuE_flat";
+
+        public decimal? JMoney
+        {
+            get
+            {
+                return this.Lending == "借" ? this.AMoney : 0;
+            }
+        }
+
+
+        public decimal? DMoney
+        {
+            get
+            {
+                return this.Lending == "貸" ? this.AMoney : 0;
+            }
+        }
+
     }
 }

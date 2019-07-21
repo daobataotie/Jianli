@@ -640,5 +640,20 @@ namespace Book.UI.Accounting.AtSummon
                 r.ShowPreviewDialog();
             }
         }
+
+        private void bar_PrintTrans_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (this.atSummon.SummonCategory == "轉帳傳票")
+            {
+                ROTransferAccounts ro = new ROTransferAccounts(this.atSummon);
+                ro.ShowPreviewDialog();
+            }
+            else
+            {
+                MessageBox.Show("本單據不是轉賬傳票", this.Text, MessageBoxButtons.OK);
+                return;
+            }
+        }
+
     }
 }

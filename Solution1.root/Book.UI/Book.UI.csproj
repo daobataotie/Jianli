@@ -3725,6 +3725,9 @@
       <DependentUpon>RO3.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\AtSummon\ROTransferAccounts.resx">
+      <DependentUpon>ROTransferAccounts.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Accounting\BankBill\BackleToCashForm.resx">
       <DependentUpon>BackleToCashForm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -11650,6 +11653,12 @@
     </Compile>
     <Compile Include="Accounting\AtSummon\RO3.Designer.cs">
       <DependentUpon>RO3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\AtSummon\ROTransferAccounts.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Accounting\AtSummon\ROTransferAccounts.Designer.cs">
+      <DependentUpon>ROTransferAccounts.cs</DependentUpon>
     </Compile>
     <Compile Include="Accounting\Report\CashCreditSlipRO.cs">
       <SubType>Component</SubType>
