@@ -35,7 +35,13 @@ namespace Book.UI.Invoices.IP
 
             this.action = "view";
 
+            //设置单位
             this.bindingSourcePort.DataSource = portManager.Select();
+            var unitList = new BL.ProductUnitManager().Select().GroupBy(U => U.CnName).Select(D => D.Key).ToList();
+            unitList.ForEach(U =>
+            {
+                this.cob_Unit.Properties.Items.Add(U);
+            });
         }
 
         int LastFlag = 0; //页面载 入时是否执行 last方法
@@ -87,6 +93,7 @@ namespace Book.UI.Invoices.IP
         {
             this.packingListHeader = new Book.Model.PackingListHeader();
             packingListHeader.PackingDate = DateTime.Now;
+            this.cob_Unit.Text = "PCS";
 
 
             this.action = "insert";
@@ -114,6 +121,7 @@ namespace Book.UI.Invoices.IP
             this.lue_From.EditValue = this.packingListHeader.FromPortId;
             this.lue_TO.EditValue = this.packingListHeader.ToPortId;
             this.txt_MarkNos.Text = this.packingListHeader.MarkNos;
+            this.cob_Unit.Text = this.packingListHeader.Unit;
 
             switch (this.action)
             {
@@ -159,6 +167,7 @@ namespace Book.UI.Invoices.IP
             this.packingListHeader.FromPortId = this.lue_From.EditValue == null ? null : this.lue_From.EditValue.ToString();
             this.packingListHeader.ToPortId = this.lue_TO.EditValue == null ? null : this.lue_TO.EditValue.ToString();
             this.packingListHeader.MarkNos = this.txt_MarkNos.Text;
+            this.packingListHeader.Unit = this.cob_Unit.Text;
 
             if (this.action == "insert")
                 this.packingListHeaderManager.Insert(this.packingListHeader);
@@ -421,6 +430,20 @@ namespace Book.UI.Invoices.IP
             }
 
             this.gridControl3.RefreshDataSource();
+        }
+
+        private void cob_Unit_EditValueChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(this.cob_Unit.Text))
+            {
+                this.gridColumn6.DisplayFormat.FormatString = string.Format("@0.## {0}", this.cob_Unit.Text);
+                this.gridColumn9.DisplayFormat.FormatString = string.Format("0.## {0}", this.cob_Unit.Text);
+            }
+            else
+            {
+                this.gridColumn6.DisplayFormat.FormatString = string.Format("@0.## {0}", "PCS");
+                this.gridColumn9.DisplayFormat.FormatString = string.Format("0.## {0}", "PCS");
+            }
         }
     }
 }

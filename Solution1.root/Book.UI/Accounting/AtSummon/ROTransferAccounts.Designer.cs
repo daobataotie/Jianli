@@ -81,6 +81,7 @@
             this.xrTableCell8 = new DevExpress.XtraReports.UI.XRTableCell();
             this.TCJTotal = new DevExpress.XtraReports.UI.XRTableCell();
             this.TCDTotal = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).BeginInit();
@@ -90,9 +91,12 @@
             // Detail
             // 
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrSubreport1,
             this.xrTable2});
             this.Detail.Dpi = 254F;
-            this.Detail.HeightF = 63.5F;
+            this.Detail.HeightF = 768F;
+            this.Detail.KeepTogether = true;
+            this.Detail.KeepTogetherWithDetailReports = true;
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             this.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -103,12 +107,13 @@
                         | DevExpress.XtraPrinting.BorderSide.Right)
                         | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrTable2.Dpi = 254F;
+            this.xrTable2.KeepTogether = true;
             this.xrTable2.LocationFloat = new DevExpress.Utils.PointFloat(13.229F, 0F);
             this.xrTable2.Name = "xrTable2";
             this.xrTable2.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 5, 5, 254F);
             this.xrTable2.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow2});
-            this.xrTable2.SizeF = new System.Drawing.SizeF(1971.146F, 63.5F);
+            this.xrTable2.SizeF = new System.Drawing.SizeF(1971.146F, 768F);
             this.xrTable2.StylePriority.UseBorders = false;
             this.xrTable2.StylePriority.UsePadding = false;
             this.xrTable2.StylePriority.UseTextAlignment = false;
@@ -125,14 +130,13 @@
             this.TC_DMoney});
             this.xrTableRow2.Dpi = 254F;
             this.xrTableRow2.Name = "xrTableRow2";
-            this.xrTableRow2.Weight = 1;
+            this.xrTableRow2.Weight = 12;
             // 
             // TC_Jiedai
             // 
             this.TC_Jiedai.Dpi = 254F;
             this.TC_Jiedai.Name = "TC_Jiedai";
             this.TC_Jiedai.StylePriority.UseTextAlignment = false;
-            this.TC_Jiedai.Text = "借貸";
             this.TC_Jiedai.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             this.TC_Jiedai.Weight = 0.153691274575515;
             // 
@@ -141,7 +145,6 @@
             this.TCSubId.Dpi = 254F;
             this.TCSubId.Name = "TCSubId";
             this.TCSubId.StylePriority.UseTextAlignment = false;
-            this.TCSubId.Text = "科目編號";
             this.TCSubId.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             this.TCSubId.Weight = 0.30637581066865116;
             // 
@@ -150,41 +153,37 @@
             this.TC_SubName.Dpi = 254F;
             this.TC_SubName.Name = "TC_SubName";
             this.TC_SubName.StylePriority.UseTextAlignment = false;
-            this.TC_SubName.Text = "科目名稱";
             this.TC_SubName.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.TC_SubName.Weight = 0.53993291475583383;
+            this.TC_SubName.Weight = 0.4565871750595763;
             // 
             // TC_Note
             // 
             this.TC_Note.Dpi = 254F;
             this.TC_Note.Name = "TC_Note";
             this.TC_Note.StylePriority.UseTextAlignment = false;
-            this.TC_Note.Text = "摘要";
             this.TC_Note.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.TC_Note.Weight = 1.2053691697238238;
+            this.TC_Note.Weight = 1.3893861039757149;
             // 
             // TC_JMoney
             // 
             this.TC_JMoney.Dpi = 254F;
             this.TC_JMoney.Name = "TC_JMoney";
             this.TC_JMoney.StylePriority.UseTextAlignment = false;
-            this.TC_JMoney.Text = "借方金額";
             this.TC_JMoney.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.TC_JMoney.Weight = 0.41140947521267368;
+            this.TC_JMoney.Weight = 0.35100698142225445;
             // 
             // TC_DMoney
             // 
             this.TC_DMoney.Dpi = 254F;
             this.TC_DMoney.Name = "TC_DMoney";
             this.TC_DMoney.StylePriority.UseTextAlignment = false;
-            this.TC_DMoney.Text = "貸方金額";
             this.TC_DMoney.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.TC_DMoney.Weight = 0.38322135506350252;
+            this.TC_DMoney.Weight = 0.342952654298288;
             // 
             // TopMargin
             // 
             this.TopMargin.Dpi = 254F;
-            this.TopMargin.HeightF = 50F;
+            this.TopMargin.HeightF = 51F;
             this.TopMargin.Name = "TopMargin";
             this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -192,7 +191,7 @@
             // BottomMargin
             // 
             this.BottomMargin.Dpi = 254F;
-            this.BottomMargin.HeightF = 50F;
+            this.BottomMargin.HeightF = 51F;
             this.BottomMargin.Name = "BottomMargin";
             this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -300,28 +299,28 @@
             this.xrTableCell5.Dpi = 254F;
             this.xrTableCell5.Name = "xrTableCell5";
             this.xrTableCell5.Text = "科目名稱";
-            this.xrTableCell5.Weight = 0.53993291475583383;
+            this.xrTableCell5.Weight = 0.4565871750595763;
             // 
             // xrTableCell2
             // 
             this.xrTableCell2.Dpi = 254F;
             this.xrTableCell2.Name = "xrTableCell2";
             this.xrTableCell2.Text = "摘要";
-            this.xrTableCell2.Weight = 1.2053691697238238;
+            this.xrTableCell2.Weight = 1.3893859181899144;
             // 
             // xrTableCell3
             // 
             this.xrTableCell3.Dpi = 254F;
             this.xrTableCell3.Name = "xrTableCell3";
             this.xrTableCell3.Text = "借方金額";
-            this.xrTableCell3.Weight = 0.41140947521267368;
+            this.xrTableCell3.Weight = 0.35100698142225445;
             // 
             // xrTableCell6
             // 
             this.xrTableCell6.Dpi = 254F;
             this.xrTableCell6.Name = "xrTableCell6";
             this.xrTableCell6.Text = "貸方金額";
-            this.xrTableCell6.Weight = 0.38322135506350252;
+            this.xrTableCell6.Weight = 0.34295284008408883;
             // 
             // lbl_Id
             // 
@@ -384,7 +383,7 @@
             this.xrTable4,
             this.xrTable3});
             this.ReportFooter.Dpi = 254F;
-            this.ReportFooter.HeightF = 164.0417F;
+            this.ReportFooter.HeightF = 166.5F;
             this.ReportFooter.Name = "ReportFooter";
             // 
             // xrTable4
@@ -398,7 +397,7 @@
             this.xrTable4.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 5, 5, 254F);
             this.xrTable4.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow4});
-            this.xrTable4.SizeF = new System.Drawing.SizeF(1971.146F, 100.5417F);
+            this.xrTable4.SizeF = new System.Drawing.SizeF(1971.146F, 103F);
             this.xrTable4.StylePriority.UseBorders = false;
             this.xrTable4.StylePriority.UsePadding = false;
             this.xrTable4.StylePriority.UseTextAlignment = false;
@@ -421,7 +420,7 @@
             this.xrTableCell16});
             this.xrTableRow4.Dpi = 254F;
             this.xrTableRow4.Name = "xrTableRow4";
-            this.xrTableRow4.Weight = 1;
+            this.xrTableRow4.Weight = 0.98095238095238091;
             // 
             // xrTableCell11
             // 
@@ -570,7 +569,7 @@
             this.xrTableCell8.StylePriority.UseTextAlignment = false;
             this.xrTableCell8.Text = "合計：";
             this.xrTableCell8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.xrTableCell8.Weight = 0.6026845848619119;
+            this.xrTableCell8.Weight = 0.68322161482073929;
             // 
             // TCJTotal
             // 
@@ -581,7 +580,7 @@
             this.TCJTotal.StylePriority.UseBorders = false;
             this.TCJTotal.StylePriority.UseTextAlignment = false;
             this.TCJTotal.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.TCJTotal.Weight = 0.41140947521267368;
+            this.TCJTotal.Weight = 0.37114114601906084;
             // 
             // TCDTotal
             // 
@@ -590,7 +589,16 @@
             this.TCDTotal.Dpi = 254F;
             this.TCDTotal.Name = "TCDTotal";
             this.TCDTotal.StylePriority.UseBorders = false;
-            this.TCDTotal.Weight = 0.38322135506350252;
+            this.TCDTotal.StylePriority.UseTextAlignment = false;
+            this.TCDTotal.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.TCDTotal.Weight = 0.342952654298288;
+            // 
+            // xrSubreport1
+            // 
+            this.xrSubreport1.Dpi = 254F;
+            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(13.22917F, 0F);
+            this.xrSubreport1.Name = "xrSubreport1";
+            this.xrSubreport1.SizeF = new System.Drawing.SizeF(1971.146F, 58.41997F);
             // 
             // ROTransferAccounts
             // 
@@ -602,7 +610,7 @@
             this.PageHeader,
             this.ReportFooter});
             this.Dpi = 254F;
-            this.Margins = new System.Drawing.Printing.Margins(80, 80, 50, 50);
+            this.Margins = new System.Drawing.Printing.Margins(79, 79, 51, 51);
             this.PageHeight = 1400;
             this.PageWidth = 2159;
             this.PaperKind = System.Drawing.Printing.PaperKind.Custom;
@@ -672,5 +680,6 @@
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell19;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell21;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell22;
+        private DevExpress.XtraReports.UI.XRSubreport xrSubreport1;
     }
 }

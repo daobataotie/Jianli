@@ -21,8 +21,9 @@ namespace Book.UI.Accounting.Report
 
             if (List == null || List.Count == 0)
             {
-                MessageBox.Show("無數據", "提示", MessageBoxButtons.OK);
-                return;
+                throw new Exception("無數據");
+                //MessageBox.Show("無數據", "提示", MessageBoxButtons.OK);
+                //return;
             }
 
             this.lbl_CompanyName.Text = BL.Settings.CompanyChineseName;

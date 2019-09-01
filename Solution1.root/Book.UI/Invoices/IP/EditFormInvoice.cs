@@ -30,6 +30,14 @@ namespace Book.UI.Invoices.IP
             this.action = "view";
 
             this.bindingSourcePort.DataSource = portManager.Select();
+
+            //设置单位
+            this.bindingSourcePort.DataSource = portManager.Select();
+            var unitList = new BL.ProductUnitManager().Select().GroupBy(U => U.CnName).Select(D => D.Key).ToList();
+            unitList.ForEach(U =>
+            {
+                this.cob_Unit.Properties.Items.Add(U);
+            });
         }
 
         int LastFlag = 0; //页面载 入时是否执行 last方法
@@ -120,6 +128,7 @@ namespace Book.UI.Invoices.IP
             this.lue_From.EditValue = this.packingInvoiceHeader.FromPortId;
             this.lue_TO.EditValue = this.packingInvoiceHeader.ToPortId;
             this.txt_MarkNos.Text = this.packingInvoiceHeader.MarkNos;
+            this.cob_Unit.Text = this.packingInvoiceHeader.Unit;
 
             switch (this.action)
             {
@@ -145,6 +154,7 @@ namespace Book.UI.Invoices.IP
             this.date_Sailing.Properties.ReadOnly = true;
             this.lue_From.Properties.ReadOnly = true;
             this.lue_TO.Properties.ReadOnly = true;
+            this.cob_Unit.Properties.ReadOnly = true;
 
             if (this.action == "update")
                 this.txt_InvoiceNo.Properties.ReadOnly = true;
@@ -172,6 +182,7 @@ namespace Book.UI.Invoices.IP
             this.packingInvoiceHeader.FromPortId = this.lue_From.EditValue == null ? null : this.lue_From.EditValue.ToString();
             this.packingInvoiceHeader.ToPortId = this.lue_TO.EditValue == null ? null : this.lue_TO.EditValue.ToString();
             this.packingInvoiceHeader.MarkNos = this.txt_MarkNos.Text;
+            this.packingInvoiceHeader.Unit = this.cob_Unit.Text;
 
             if (this.action == "insert")
                 this.packingInvoiceHeaderManager.Insert(this.packingInvoiceHeader);
@@ -323,6 +334,7 @@ namespace Book.UI.Invoices.IP
                     this.lue_From.EditValue = f.SelectItem.FromPortId;
                     this.lue_TO.EditValue = f.SelectItem.ToPortId;
                     this.txt_MarkNos.Text = f.SelectItem.MarkNos;
+                    this.cob_Unit.Text = f.SelectItem.Unit;
 
                     this.packingInvoiceHeader.Details = new List<Model.PackingInvoiceDetail>();
                     Model.PackingInvoiceDetail detail;
@@ -416,6 +428,14 @@ namespace Book.UI.Invoices.IP
 
                 this.gridControl3.RefreshDataSource();
             }
+        }
+
+        private void cob_Unit_EditValueChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(this.cob_Unit.Text))
+                this.gridColumn9.DisplayFormat.FormatString = string.Format("0.## {0}", this.cob_Unit.Text);
+            else
+                this.gridColumn9.DisplayFormat.FormatString = string.Format("0.## {0}", "PCS");
         }
     }
 }

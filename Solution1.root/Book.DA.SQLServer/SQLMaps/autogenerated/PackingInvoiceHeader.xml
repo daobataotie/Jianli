@@ -19,6 +19,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="CustomerFullName" column="CustomerFullName"/>
       <result property="CustomerAddress" column="CustomerAddress"/>
       <result property="TradingCondition" column="TradingCondition"/>
+      <result property="Unit" column="Unit"/>
       <result property="Customer" column="CustomerId" lazyLoad="false" select="Customer.select_by_primary_key" />
       <result property="FromPort" column="FromPortId" lazyLoad="false" select="Port.select_by_primary_key" />
       <result property="ToPort" column="ToPortId" lazyLoad="false" select="Port.select_by_primary_key" />
@@ -121,7 +122,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[UpdateTime],
         [CustomerFullName],
         [CustomerAddress],
-        [TradingCondition]
+        [TradingCondition],
+        [Unit]
 			FROM
 				[dbo].[PackingInvoiceHeader]
 			WHERE
@@ -187,7 +189,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[UpdateTime],
         [CustomerFullName],
         [CustomerAddress],
-        [TradingCondition]
+        [TradingCondition],
+        [Unit]
 			) 
 			VALUES 
 			(
@@ -203,7 +206,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				#UpdateTime#,
         #CustomerFullName#,
         #CustomerAddress#,
-        #TradingCondition#
+        #TradingCondition#,
+        #Unit#
 			)
              ]]>
     </insert>
@@ -222,7 +226,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[UpdateTime] = #UpdateTime#,
         [CustomerFullName]=#CustomerFullName#,
         [CustomerAddress]=#CustomerAddress#,
-        [TradingCondition]=#TradingCondition#
+        [TradingCondition]=#TradingCondition#,
+        [Unit]=#Unit#
 			WHERE
 				[InvoiceNo] = #InvoiceNo#
                     ]]>

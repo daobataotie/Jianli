@@ -30,20 +30,18 @@ namespace Book.Model
 
         public string ShowQty
         {
-
             get
             {
                 string str = "";
-                str = string.Format("@{0} PCS", this.BoxMaxQuantity) +
+                str = string.Format("@{0} {1}", this.BoxMaxQuantity, (string.IsNullOrEmpty(PackingListHeader.Unit) ? "PCS" : PackingListHeader.Unit)) +
                     "       " +
-                    string.Format("{0} PCS", this.Quantity);
+                    string.Format("{0} {1}", this.Quantity, (string.IsNullOrEmpty(PackingListHeader.Unit) ? "PCS" : PackingListHeader.Unit));
                 return str;
             }
         }
 
         public string ShowNetWeight
         {
-
             get
             {
                 string str = "";

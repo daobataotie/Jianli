@@ -148,9 +148,10 @@
             this.PageHeader,
             this.PageFooter});
             resources.ApplyResources(this, "$this");
-            this.Margins = new System.Drawing.Printing.Margins(80, 80, 80, 80);
-            this.PageHeight = 2794;
-            this.PageWidth = 2159;
+            this.Margins = new System.Drawing.Printing.Margins(76, 76, 80, 80);
+            this.PageHeight = 1400;
+            this.PageWidth = 2149;
+            this.PaperKind = System.Drawing.Printing.PaperKind.Custom;
             this.Version = "10.2";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 

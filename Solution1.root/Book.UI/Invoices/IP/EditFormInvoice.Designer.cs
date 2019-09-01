@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditFormInvoice));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.cob_Unit = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txt_TradingCondition = new DevExpress.XtraEditors.TextEdit();
             this.btn_Remove = new DevExpress.XtraEditors.SimpleButton();
             this.btn_ChooseInvoiceXO = new DevExpress.XtraEditors.SimpleButton();
@@ -74,14 +75,17 @@
             this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem29 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem33 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem35 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem37 = new DevExpress.XtraLayout.LayoutControlItem();
             this.bar_ChoosePackingList = new DevExpress.XtraBars.BarButtonItem();
+            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cob_Unit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_TradingCondition.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDetail)).BeginInit();
@@ -116,10 +120,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem33)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             this.SuspendLayout();
             // 
             // bar1
@@ -138,6 +144,7 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.cob_Unit);
             this.layoutControl1.Controls.Add(this.txt_TradingCondition);
             this.layoutControl1.Controls.Add(this.btn_Remove);
             this.layoutControl1.Controls.Add(this.btn_ChooseInvoiceXO);
@@ -156,6 +163,16 @@
             resources.ApplyResources(this.layoutControl1, "layoutControl1");
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
+            // 
+            // cob_Unit
+            // 
+            resources.ApplyResources(this.cob_Unit, "cob_Unit");
+            this.cob_Unit.MenuManager = this.barManager1;
+            this.cob_Unit.Name = "cob_Unit";
+            this.cob_Unit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("cob_Unit.Properties.Buttons"))))});
+            this.cob_Unit.StyleController = this.layoutControl1;
+            this.cob_Unit.EditValueChanged += new System.EventHandler(this.cob_Unit_EditValueChanged);
             // 
             // txt_TradingCondition
             // 
@@ -396,7 +413,8 @@
             this.layoutControlItem7,
             this.layoutControlItem19,
             this.layoutControlItem3,
-            this.layoutControlItem10});
+            this.layoutControlItem10,
+            this.layoutControlItem13});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(945, 464);
@@ -416,7 +434,7 @@
             // 
             this.layoutControlItem9.Control = this.txt_CustomerName;
             resources.ApplyResources(this.layoutControlItem9, "layoutControlItem9");
-            this.layoutControlItem9.Location = new System.Drawing.Point(0, 74);
+            this.layoutControlItem9.Location = new System.Drawing.Point(0, 75);
             this.layoutControlItem9.Name = "layoutControlItem9";
             this.layoutControlItem9.Size = new System.Drawing.Size(584, 25);
             this.layoutControlItem9.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
@@ -427,7 +445,7 @@
             // 
             this.layoutControlItem4.Control = this.ncc_Customer;
             resources.ApplyResources(this.layoutControlItem4, "layoutControlItem4");
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 49);
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 50);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(346, 25);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(114, 14);
@@ -436,7 +454,7 @@
             // 
             this.layoutControlItem5.Control = this.txt_ADDRESS;
             resources.ApplyResources(this.layoutControlItem5, "layoutControlItem5");
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 99);
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 100);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(584, 25);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(114, 14);
@@ -445,7 +463,7 @@
             // 
             this.layoutControlItem6.Control = this.date_Sailing;
             resources.ApplyResources(this.layoutControlItem6, "layoutControlItem6");
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 149);
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 150);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(584, 25);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(114, 14);
@@ -454,7 +472,7 @@
             // 
             this.layoutControlItem8.Control = this.txt_PerSS;
             resources.ApplyResources(this.layoutControlItem8, "layoutControlItem8");
-            this.layoutControlItem8.Location = new System.Drawing.Point(0, 124);
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 125);
             this.layoutControlItem8.Name = "layoutControlItem8";
             this.layoutControlItem8.Size = new System.Drawing.Size(584, 25);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(114, 14);
@@ -463,7 +481,7 @@
             // 
             this.layoutControlItem11.Control = this.lue_From;
             resources.ApplyResources(this.layoutControlItem11, "layoutControlItem11");
-            this.layoutControlItem11.Location = new System.Drawing.Point(0, 174);
+            this.layoutControlItem11.Location = new System.Drawing.Point(0, 175);
             this.layoutControlItem11.Name = "layoutControlItem11";
             this.layoutControlItem11.Size = new System.Drawing.Size(296, 25);
             this.layoutControlItem11.TextSize = new System.Drawing.Size(114, 14);
@@ -472,7 +490,7 @@
             // 
             this.layoutControlItem18.Control = this.lue_TO;
             resources.ApplyResources(this.layoutControlItem18, "layoutControlItem18");
-            this.layoutControlItem18.Location = new System.Drawing.Point(296, 174);
+            this.layoutControlItem18.Location = new System.Drawing.Point(296, 175);
             this.layoutControlItem18.Name = "layoutControlItem18";
             this.layoutControlItem18.Size = new System.Drawing.Size(288, 25);
             this.layoutControlItem18.TextSize = new System.Drawing.Size(114, 14);
@@ -483,7 +501,7 @@
             resources.ApplyResources(this.layoutControlItem17, "layoutControlItem17");
             this.layoutControlItem17.Location = new System.Drawing.Point(0, 25);
             this.layoutControlItem17.Name = "layoutControlItem17";
-            this.layoutControlItem17.Size = new System.Drawing.Size(584, 24);
+            this.layoutControlItem17.Size = new System.Drawing.Size(346, 25);
             this.layoutControlItem17.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem17.TextToControlDistance = 0;
             this.layoutControlItem17.TextVisible = false;
@@ -492,9 +510,9 @@
             // 
             this.layoutControlItem20.Control = this.gridControl3;
             resources.ApplyResources(this.layoutControlItem20, "layoutControlItem20");
-            this.layoutControlItem20.Location = new System.Drawing.Point(0, 199);
+            this.layoutControlItem20.Location = new System.Drawing.Point(0, 200);
             this.layoutControlItem20.Name = "layoutControlItem20";
-            this.layoutControlItem20.Size = new System.Drawing.Size(925, 219);
+            this.layoutControlItem20.Size = new System.Drawing.Size(925, 218);
             this.layoutControlItem20.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem20.TextToControlDistance = 0;
             this.layoutControlItem20.TextVisible = false;
@@ -527,7 +545,7 @@
             resources.ApplyResources(this.layoutControlItem19, "layoutControlItem19");
             this.layoutControlItem19.Location = new System.Drawing.Point(584, 25);
             this.layoutControlItem19.Name = "layoutControlItem19";
-            this.layoutControlItem19.Size = new System.Drawing.Size(341, 174);
+            this.layoutControlItem19.Size = new System.Drawing.Size(341, 175);
             this.layoutControlItem19.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem19.TextSize = new System.Drawing.Size(80, 14);
             this.layoutControlItem19.TextToControlDistance = 5;
@@ -547,12 +565,21 @@
             // 
             this.layoutControlItem10.Control = this.txt_TradingCondition;
             resources.ApplyResources(this.layoutControlItem10, "layoutControlItem10");
-            this.layoutControlItem10.Location = new System.Drawing.Point(346, 49);
+            this.layoutControlItem10.Location = new System.Drawing.Point(346, 50);
             this.layoutControlItem10.Name = "layoutControlItem10";
             this.layoutControlItem10.Size = new System.Drawing.Size(238, 25);
             this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem10.TextToControlDistance = 0;
             this.layoutControlItem10.TextVisible = false;
+            // 
+            // layoutControlItem13
+            // 
+            this.layoutControlItem13.Control = this.cob_Unit;
+            resources.ApplyResources(this.layoutControlItem13, "layoutControlItem13");
+            this.layoutControlItem13.Location = new System.Drawing.Point(346, 25);
+            this.layoutControlItem13.Name = "layoutControlItem13";
+            this.layoutControlItem13.Size = new System.Drawing.Size(238, 25);
+            this.layoutControlItem13.TextSize = new System.Drawing.Size(114, 14);
             // 
             // layoutControlItem29
             // 
@@ -601,6 +628,15 @@
             this.bar_ChoosePackingList.Name = "bar_ChoosePackingList";
             this.bar_ChoosePackingList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_ChoosePackingList_ItemClick);
             // 
+            // layoutControlItem12
+            // 
+            resources.ApplyResources(this.layoutControlItem12, "layoutControlItem12");
+            this.layoutControlItem12.Location = new System.Drawing.Point(347, 49);
+            this.layoutControlItem12.Name = "layoutControlItem1";
+            this.layoutControlItem12.Size = new System.Drawing.Size(207, 25);
+            this.layoutControlItem12.TextSize = new System.Drawing.Size(114, 14);
+            this.layoutControlItem12.TextToControlDistance = 5;
+            // 
             // EditFormInvoice
             // 
             resources.ApplyResources(this, "$this");
@@ -611,6 +647,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cob_Unit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_TradingCondition.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDetail)).EndInit();
@@ -645,10 +682,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem33)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -704,5 +743,8 @@
         private DevExpress.XtraEditors.MemoEdit txt_MarkNos;
         private DevExpress.XtraEditors.TextEdit txt_TradingCondition;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
+        private DevExpress.XtraEditors.ComboBoxEdit cob_Unit;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
     }
 }

@@ -32,6 +32,7 @@ namespace Book.UI.Accounting.Report
             Condition = new ConditionDetailLedger();
             if (this.date_Start.EditValue == null || this.date_End.EditValue == null)
             {
+                //throw new Exception("日期區間不完整！");
                 MessageBox.Show("日期區間不完整！", this.Text, MessageBoxButtons.OK);
                 return;
             }

@@ -94,7 +94,7 @@ namespace Book.Model
         {
             get
             {
-                return this.Lending == "借" ? this.AMoney : 0;
+                return this.Lending == "借" ? this.AMoney : null;
             }
         }
 
@@ -103,7 +103,7 @@ namespace Book.Model
         {
             get
             {
-                return this.Lending == "貸" ? this.AMoney : 0;
+                return this.Lending == "貸" ? this.AMoney : null;
             }
         }
 

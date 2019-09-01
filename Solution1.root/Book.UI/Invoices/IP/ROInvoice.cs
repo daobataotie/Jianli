@@ -14,11 +14,14 @@ namespace Book.UI.Invoices.IP
         {
             InitializeComponent();
 
+            if (!string.IsNullOrEmpty(invoiceList.Unit))
+                this.xrTableCell5.Text = string.Format("Quantity ({0})", invoiceList.Unit);
+
             this.DataSource = invoiceList.Details;
 
             this.lbl_PackingNo.Text = invoiceList.InvoiceNo;
             //this.lbl_PackingDate.Text = invoiceList.InvoiceDate.Value.ToString("yyyy-MM-dd");
-            this.lbl_PackingDate.Text = invoiceList.InvoiceDate.Value.ToString("MMM dd.yyyy",CultureInfo.CreateSpecificCulture("en-GB"));
+            this.lbl_PackingDate.Text = invoiceList.InvoiceDate.Value.ToString("MMM dd.yyyy", CultureInfo.CreateSpecificCulture("en-GB"));
             //this.lbl_CustomerFullName.Text = invoiceList.Customer.CustomerFullName;
             //this.lbl_address.Text = invoiceList.Customer.CustomerAddress;
             this.lbl_CustomerFullName.Text = invoiceList.CustomerFullName;
@@ -33,7 +36,10 @@ namespace Book.UI.Invoices.IP
                 this.lbl_TO.Text = invoiceList.ToPort.PortName;
             this.lbl_marks.Text = invoiceList.MarkNos;
 
-            this.lbl_TotalQTY.Text = invoiceList.Details.Sum(P => P.Quantity).Value.ToString("0.##") + " PCS";
+            if (!string.IsNullOrEmpty(invoiceList.Unit))
+                this.lbl_TotalQTY.Text = invoiceList.Details.Sum(P => P.Quantity).Value.ToString("0.##") + " " + invoiceList.Unit;
+            else
+                this.lbl_TotalQTY.Text = invoiceList.Details.Sum(P => P.Quantity).Value.ToString("0.##") + " PCS";
 
             if (invoiceList.Details != null && invoiceList.Details.Count > 0)
             {

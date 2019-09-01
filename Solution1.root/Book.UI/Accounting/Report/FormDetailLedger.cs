@@ -48,8 +48,9 @@ namespace Book.UI.Accounting.Report
 
             if (this.date_Start.EditValue == null || this.date_End.EditValue == null)
             {
-                MessageBox.Show("日期區間不完整！", this.Text, MessageBoxButtons.OK);
-                return;
+                throw new Exception("日期區間不完整！");
+                //MessageBox.Show("日期區間不完整！", this.Text, MessageBoxButtons.OK);
+                //return;
             }
             else
             {
@@ -59,8 +60,9 @@ namespace Book.UI.Accounting.Report
 
             if (this.lue_StartSubject.EditValue == null || this.lue_EndSubject.EditValue == null)
             {
-                MessageBox.Show("會計科目區間不完整", this.Text, MessageBoxButtons.OK);
-                return;
+                throw new Exception("會計科目區間不完整！");
+                //MessageBox.Show("會計科目區間不完整", this.Text, MessageBoxButtons.OK);
+                //return;
             }
             else
             {

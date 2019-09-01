@@ -353,10 +353,20 @@ namespace Book.Model
             set { _tradingCondition = value; }
         }
 
+        private string _unit;
+
+        public string Unit
+        {
+            get { return _unit; }
+            set { _unit = value; }
+        }
+
         public readonly static string PRO_CustomerFullName = "CustomerFullName";
 
         public readonly static string PRO_CustomerAddress = "CustomerAddress";
 
         public readonly static string PRO_TradingCondition = "TradingCondition";
+
+        public readonly static string PRO_Unit = "Unit";
 	}
 }

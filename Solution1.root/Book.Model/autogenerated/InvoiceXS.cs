@@ -81,6 +81,10 @@ namespace Book.Model
 
         private DateTime? _declareDate;
 
+        private string _fapiaoFangshi;
+
+        private string _fapiaoLianshi;
+
         /// <summary>
         /// 货运方式
         /// </summary>
@@ -411,6 +415,18 @@ namespace Book.Model
             set { _declareDate = value; }
         }
 
+        public string FapiaoFangshi
+        {
+            get { return _fapiaoFangshi; }
+            set { _fapiaoFangshi = value; }
+        }
+
+        public string FapiaoLianshi
+        {
+            get { return _fapiaoLianshi; }
+            set { _fapiaoLianshi = value; }
+        }
+
         /// <summary>
         /// 其他费用
         /// </summary>
@@ -485,6 +501,11 @@ namespace Book.Model
         public readonly static string PRO_InvoiceTaibiTotal = "InvoiceTaibiTotal";
 
         public readonly static string PRO_DeclareDate = "DeclareDate";
+
+        public readonly static string PRO_FapiaoFangshi = "FapiaoFangshi";
+
+        public readonly static string PRO_FapiaoLianshi = "FapiaoLianshi";
+
         #endregion
     }
 }

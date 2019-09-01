@@ -267,6 +267,8 @@ namespace Book.UI.Invoices.XS
             invoice.InvoiceTaibiTotal = this.spe_TaibiTotal.Value;
             if (this.date_DeclareDate.EditValue != null)
                 invoice.DeclareDate = this.date_DeclareDate.DateTime;
+            invoice.FapiaoFangshi = this.txt_FapiaoFangshi.Text;
+            invoice.FapiaoLianshi = this.cob_FapiaoLianshi.Text;
 
             switch (this.action)
             {
@@ -360,6 +362,10 @@ namespace Book.UI.Invoices.XS
             invoice.InvoiceId = this.invoiceManager.GetIdSimple(DateTime.Now);
             invoice.Details = new List<Model.InvoiceXSDetail>();
             invoice.Employee0 = BL.V.ActiveOperator.Employee;
+            invoice.FapiaoFangshi = "隨單開立";
+            invoice.TaxCaluType = 1;
+            this.flag = 1;
+            invoice.InvoiceTaxrate = 5;
             invoice.Setdetails.Clear();
             dic.Clear();
             if (this.invoicexo != null)
@@ -382,6 +388,7 @@ namespace Book.UI.Invoices.XS
                 invoice.InvoiceAllowance = 0;
                 //invoice.CustomerInvoiceXOId = this.invoicexo.CustomerInvoiceXOId;
                 this.invoicexo.Details = this.invoicexoDetailManager.Select(this.invoicexo, false);
+                invoice.FapiaoFangshi = "隨單開立"; 
 
                 foreach (Model.InvoiceXODetail detail in this.invoicexo.Details)
                 {
@@ -508,7 +515,8 @@ namespace Book.UI.Invoices.XS
             this.spe_TaibiTotal.EditValue = invoice.InvoiceTaibiTotal;
             this.date_DeclareDate.EditValue = invoice.DeclareDate;
             this.txt_PayCondition.Text = invoice.Customer == null ? null : invoice.Customer.PayCondition;
-
+            this.txt_FapiaoFangshi.Text = invoice.FapiaoFangshi;
+            this.cob_FapiaoLianshi.Text = invoice.FapiaoLianshi;
             //  this.textEditCustomerInvoiceXOId.Text = xo == null ? "" : xo.CustomerInvoiceXOId;
             //this.bindingSourceProduct.DataSource = this.customerProductsManager.Select(this.buttonEditCompany.EditValue as Model.Customer);
             // this.bindingSourceProduct.DataSource = this.productManager.Select(this.newChooseXScustomer.EditValue as Model.Customer);
@@ -1076,6 +1084,7 @@ namespace Book.UI.Invoices.XS
             UpdateMoneyFields();
         }
 
+        //稅率變化
         private void spinEditInvoiceTaxRate_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             int index = e.Button.Index - 1;
@@ -1535,6 +1544,18 @@ namespace Book.UI.Invoices.XS
                 this.spinEditInvoiceTaxRate.Properties.Buttons[3].Enabled = flag == 2 ? false : true;
                 this.UpdateMoneyFields();
             }
+        }
+
+        private void bar_NeixiaoPrint_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            R0_ZZD ro = new R0_ZZD(this.Invoice.InvoiceId);
+            ro.ShowPreviewDialog();
+        }
+
+        private void bar_NeixiaoPrintNoPrice_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            R0_ZZD_NoPrice ro = new R0_ZZD_NoPrice(this.Invoice.InvoiceId);
+            ro.ShowPreviewDialog();
         }
     }
 }

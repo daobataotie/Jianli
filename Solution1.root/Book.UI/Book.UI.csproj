@@ -3728,6 +3728,9 @@
     <EmbeddedResource Include="Accounting\AtSummon\ROTransferAccounts.resx">
       <DependentUpon>ROTransferAccounts.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\AtSummon\ROTransferAccounts_Sub.resx">
+      <DependentUpon>ROTransferAccounts_Sub.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Accounting\BankBill\BackleToCashForm.resx">
       <DependentUpon>BackleToCashForm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -4288,6 +4291,12 @@
     <EmbeddedResource Include="Accounting\Report\ROJournal.resx">
       <DependentUpon>ROJournal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\Report\ROJournal_Sub.resx">
+      <DependentUpon>ROJournal_Sub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\Report\ROJournal_Sub.zh-CHT.resx">
+      <DependentUpon>ROJournal_Sub.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Accounting\YPFP\EditForm.en.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -4779,6 +4788,22 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices\XS\ROHistoryXS.resx">
       <DependentUpon>ROHistoryXS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\XS\R0_ZZD.resx">
+      <DependentUpon>R0_ZZD.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\XS\R0_ZZD.zh-CHT.resx">
+      <DependentUpon>R0_ZZD.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\XS\R0_ZZD_NoPrice.resx">
+      <DependentUpon>R0_ZZD_NoPrice.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\XS\R0_ZZD_NoPrice.zh-CHT.resx">
+      <DependentUpon>R0_ZZD_NoPrice.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices\ZG\EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
@@ -11660,6 +11685,12 @@
     <Compile Include="Accounting\AtSummon\ROTransferAccounts.Designer.cs">
       <DependentUpon>ROTransferAccounts.cs</DependentUpon>
     </Compile>
+    <Compile Include="Accounting\AtSummon\ROTransferAccounts_Sub.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Accounting\AtSummon\ROTransferAccounts_Sub.Designer.cs">
+      <DependentUpon>ROTransferAccounts_Sub.cs</DependentUpon>
+    </Compile>
     <Compile Include="Accounting\Report\CashCreditSlipRO.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -11703,6 +11734,12 @@
     </Compile>
     <Compile Include="Accounting\Report\ROJournal.Designer.cs">
       <DependentUpon>ROJournal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\Report\ROJournal_Sub.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Accounting\Report\ROJournal_Sub.Designer.cs">
+      <DependentUpon>ROJournal_Sub.cs</DependentUpon>
     </Compile>
     <Compile Include="Accounting\YPFP\EditForm.cs">
       <SubType>Form</SubType>
@@ -12111,6 +12148,18 @@
     </Compile>
     <Compile Include="Invoices\XS\ROHistoryXS.Designer.cs">
       <DependentUpon>ROHistoryXS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\XS\R0_ZZD.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Invoices\XS\R0_ZZD.Designer.cs">
+      <DependentUpon>R0_ZZD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\XS\R0_ZZD_NoPrice.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Invoices\XS\R0_ZZD_NoPrice.Designer.cs">
+      <DependentUpon>R0_ZZD_NoPrice.cs</DependentUpon>
     </Compile>
     <Compile Include="Invoices\ZG\EditForm.cs">
       <SubType>Form</SubType>

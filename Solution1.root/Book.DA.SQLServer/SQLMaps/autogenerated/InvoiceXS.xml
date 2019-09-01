@@ -41,6 +41,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="Special" column="Special"/>
       <result property="InvoiceTaibiTotal" column="InvoiceTaibiTotal"/>
       <result property="DeclareDate" column="DeclareDate"/>
+      <result property="FapiaoFangshi" column="FapiaoFangshi"/>
+      <result property="FapiaoLianshi" column="FapiaoLianshi"/>
       <result property="AuditEmp" column="AuditEmpId" lazyLoad="false" select="Employee.select_SimpleEmployee" />
       <result property="ConveyanceMethod" column="ConveyanceMethodId" lazyLoad="false" select="ConveyanceMethod.select_by_primary_key" />
       <result property="Customer" column="CustomerId" lazyLoad="false" select="Customer.select_SimpleCustomer" />
@@ -172,7 +174,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[OtherChargeNote],
         [Special],
         [InvoiceTaibiTotal],
-        [DeclareDate]
+        [DeclareDate],
+        [FapiaoFangshi],
+        [FapiaoLianshi]
+        
 			FROM
 				[dbo].[InvoiceXS]
 			WHERE
@@ -260,7 +265,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[OtherChargeNote],
         [Special],
         [InvoiceTaibiTotal],
-        [DeclareDate]
+        [DeclareDate],        
+        [FapiaoFangshi],
+        [FapiaoLianshi]
 			) 
 			VALUES 
 			(
@@ -298,7 +305,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				#OtherChargeNote#,
         #Special#,
         #InvoiceTaibiTotal#,
-        #DeclareDate#
+        #DeclareDate#,
+        #FapiaoFangshi#,
+        #FapiaoLianshi#
 			)
              ]]>
     </insert>
@@ -339,7 +348,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[OtherChargeNote]=#OtherChargeNote#,
         [Special]=#Special#,
         [InvoiceTaibiTotal]=#InvoiceTaibiTotal#,
-        [DeclareDate]=#DeclareDate#
+        [DeclareDate]=#DeclareDate#,
+        [FapiaoFangshi]=#FapiaoFangshi#,
+        [FapiaoLianshi]=#FapiaoLianshi#
 			WHERE
 				[InvoiceId] = #InvoiceId#
                     ]]>

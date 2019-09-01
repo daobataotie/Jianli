@@ -44,16 +44,18 @@ namespace Book.UI.Accounting.Report
                 }
             }
 
-            this.DataSource = source;
+            xrSubreport1.ReportSource = new ROJournal_Sub(source);
 
-            this.TCDate.DataBindings.Add("Text", this.DataSource, "SummonDate", "{0:yyyy/MM/dd}");
-            this.TCID.DataBindings.Add("Text", this.DataSource, "Id");
-            this.TCCategory.DataBindings.Add("Text", this.DataSource, "SummonCategory");
-            this.TCSubId.DataBindings.Add("Text", this.DataSource, "Subject_Id");
-            this.TCSubName.DataBindings.Add("Text", this.DataSource, "SubjectName");
-            this.TCSummary.DataBindings.Add("Text", this.DataSource, "Summary");
-            this.TCJMoney.DataBindings.Add("Text", this.DataSource, "JMoney", "{0:0.00}");
-            this.TCDMoney.DataBindings.Add("Text", this.DataSource, "DMoney", "{0:0.00}");
+            //this.DataSource = source;
+
+            //this.TCDate.DataBindings.Add("Text", this.DataSource, "SummonDate", "{0:yyyy/MM/dd}");
+            //this.TCID.DataBindings.Add("Text", this.DataSource, "Id");
+            //this.TCCategory.DataBindings.Add("Text", this.DataSource, "SummonCategory");
+            //this.TCSubId.DataBindings.Add("Text", this.DataSource, "Subject_Id");
+            //this.TCSubName.DataBindings.Add("Text", this.DataSource, "SubjectName");
+            //this.TCSummary.DataBindings.Add("Text", this.DataSource, "Summary");
+            //this.TCJMoney.DataBindings.Add("Text", this.DataSource, "JMoney", "{0:0.00}");
+            //this.TCDMoney.DataBindings.Add("Text", this.DataSource, "DMoney", "{0:0.00}");
         }
 
     }

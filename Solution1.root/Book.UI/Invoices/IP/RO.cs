@@ -14,6 +14,9 @@ namespace Book.UI.Invoices.IP
         {
             InitializeComponent();
 
+            if (!string.IsNullOrEmpty(packingList.Unit))
+                this.xrTableCell5.Text = string.Format("Quantity              ({0})", packingList.Unit);
+
             var group = packingList.Details.GroupBy(P => P.PLTNo);
             foreach (var item in group)
             {
@@ -28,7 +31,7 @@ namespace Book.UI.Invoices.IP
 
             this.lbl_PackingNo.Text = packingList.PackingNo;
             //this.lbl_PackingDate.Text = packingList.PackingDate.Value.ToString("yyyy-MM-dd");
-            this.lbl_PackingDate.Text = packingList.PackingDate.Value.ToString("MMM dd.yyyy",CultureInfo.CreateSpecificCulture("en-GB"));
+            this.lbl_PackingDate.Text = packingList.PackingDate.Value.ToString("MMM dd.yyyy", CultureInfo.CreateSpecificCulture("en-GB"));
             //this.lbl_CustomerFullName.Text = packingList.Customer.CustomerFullName;
             //this.lbl_address.Text = packingList.Customer.CustomerAddress;
             this.lbl_CustomerFullName.Text = packingList.CustomerFullName;
@@ -55,7 +58,11 @@ namespace Book.UI.Invoices.IP
                 this.lblTotal.Text = packingList.Details.Max(P => Convert.ToInt32(string.IsNullOrEmpty(P.PLTNo) ? "0" : P.PLTNo)) + " PLT / " +
                                      totalCartonNo + " CARTON";
 
-            this.lbl_TotalQTY.Text = packingList.Details.Sum(P => P.Quantity).Value.ToString("0.##") + " PCS";
+            if (!string.IsNullOrEmpty(packingList.Unit))
+                this.lbl_TotalQTY.Text = packingList.Details.Sum(P => P.Quantity).Value.ToString("0.##") + " " + packingList.Unit;
+            else
+                this.lbl_TotalQTY.Text = packingList.Details.Sum(P => P.Quantity).Value.ToString("0.##") + " PCS";
+
             this.lbl_TotalNetWeight.Text = packingList.Details.Sum(P => P.NetWeight).Value.ToString("0.##") + " KGS";
             this.lbl_TotalGrossWeight.Text = packingList.Details.Sum(P => P.GrossWeight).Value.ToString("0.##") + " KGS";
 

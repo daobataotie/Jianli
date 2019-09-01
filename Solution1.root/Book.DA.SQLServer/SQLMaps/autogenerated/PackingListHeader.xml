@@ -18,6 +18,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="UpdateTime" column="UpdateTime" />
       <result property="CustomerFullName" column="CustomerFullName"/>
       <result property="CustomerAddress" column="CustomerAddress"/>
+      <result property="Unit" column="Unit"/>
       <result property="Customer" column="CustomerId" lazyLoad="false" select="Customer.select_by_primary_key" />
       <result property="FromPort" column="FromPortId" lazyLoad="false" select="Port.select_by_primary_key" />
       <result property="ToPort" column="ToPortId" lazyLoad="false" select="Port.select_by_primary_key" />
@@ -119,7 +120,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[InsertTime],
 				[UpdateTime],
         [CustomerFullName],
-        [CustomerAddress]
+        [CustomerAddress],
+        [Unit]
 			FROM
 				[dbo].[PackingListHeader]
 			WHERE
@@ -184,7 +186,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[InsertTime],
 				[UpdateTime],
         [CustomerFullName],
-        [CustomerAddress]
+        [CustomerAddress],
+        [Unit]
 			) 
 			VALUES 
 			(
@@ -199,7 +202,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				#InsertTime#,
 				#UpdateTime#,
         #CustomerFullName#,
-        #CustomerAddress#
+        #CustomerAddress#,
+        #Unit#
 			)
              ]]>
     </insert>
@@ -217,7 +221,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[InsertTime] = #InsertTime#,
 				[UpdateTime] = #UpdateTime#,
         [CustomerFullName]=#CustomerFullName#,
-        [CustomerAddress]=#CustomerAddress#
+        [CustomerAddress]=#CustomerAddress#,
+        [Unit]=#Unit#
 			WHERE
 				[PackingNo] = #PackingNo#
                     ]]>
