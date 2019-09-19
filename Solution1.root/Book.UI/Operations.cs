@@ -21,7 +21,9 @@ namespace Book.UI
         {
             operations = new Dictionary<string, Delegate>();
 
+            //销售订单明细表
             operations.Add("invoices.xo.edit-detail", (D1)delegate(System.Windows.Forms.Form form) { MM("Query.ROInvoiceXO", new Book.UI.Query.ConditionXChooseForm()); });
+            //客戶訂單明細表
             operations.Add("invoices.xo.edit-detail1", (D1)delegate(System.Windows.Forms.Form form) { MM("Query.ROInvoiceXOlist", new Book.UI.Query.ConditionXChooseForm()); });
             operations.Add("invoices.co.edit-detail", (D1)delegate(System.Windows.Forms.Form form) { MM("Query.ROInvoiceCO", new Book.UI.Query.ConditionCOChooseForm()); });
             operations.Add("invoices.co.edit-detail1", (D1)delegate(System.Windows.Forms.Form form) { MM("Query.ROInvoiceCOlist", new Book.UI.Query.ConditionCOChooseForm()); });
@@ -462,7 +464,7 @@ namespace Book.UI
             //operations.Add("invoices.cg.edit-detail", (D1)delegate(System.Windows.Forms.Form form) { MM("Query.Q16", new Book.UI.Query.ConditionCOChooseForm()); });
             operations.Add("invoices.cg.edit-detail", (D1)delegate(System.Windows.Forms.Form form) { MM("Query.ROInvoiceCGlist", new Book.UI.Query.ConditionCOChooseForm()); });
 
-
+            //出货明细表
             operations.Add("invoices.xs.edit-detail", (D1)delegate(System.Windows.Forms.Form form) { MM("Query.ROInvoiceXSlist", new Book.UI.Query.ConditionXChooseForm()); });
 
 
@@ -744,7 +746,7 @@ namespace Book.UI
             //港口
             operations.Add("Settings.BasicData.Port.EditForm", (D1)delegate(System.Windows.Forms.Form form) { M1("Settings.BasicData.Port.EditForm", form); });
 
-            //匯率
+            //设置匯率
             operations.Add("Settings.BasicData.ExchangeRate.EditForm", (D1)delegate(System.Windows.Forms.Form form) { M1("Settings.BasicData.ExchangeRate.EditForm", form); });
 
             //PackingList

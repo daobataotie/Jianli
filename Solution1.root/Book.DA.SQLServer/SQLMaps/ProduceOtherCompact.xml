@@ -22,10 +22,11 @@
       SELECT * FROM ProduceOtherCompact WHERE (InvoiceMaterialFlag<>2 or InvoiceMaterialFlag is null) and ProduceOtherCompactDate>=DateAdd(Month,-3,getdate()) order by ProduceOtherCompactId desc
        		]]>
     </select>
-
+    
+    <!--SELECT * FROM ProduceOtherCompact p left join InvoiceXO xo on p.InvoiceXOId=xo.InvoiceId WHERE (p.InvoiceMaterialFlag<>2 or p.InvoiceMaterialFlag is null) and p.ProduceOtherCompactDate between #startdate# and #enddate#  and ( p.ProduceOtherCompactId in(select ProduceOtherCompactId  from ProduceOtherCompactMaterial where productid=#sendProductId#) or #sendProductId# is null ) AND (p.CustomerId = #customerid# OR #customerid# IS NULL) AND (p.SupplierId = #supplierid# OR #supplierid# IS NULL) AND (p.ProduceOtherCompactId =#ProduceOtherCompactId# OR #ProduceOtherCompactId# IS NULL) AND (xo.CustomerInvoiceXOId Like '%$CustomerInvoiceXOId$%' or #CustomerInvoiceXOId# is null) AND (p.IsClose <> #isClose# or #isClose# is null) order by ProduceOtherCompactId desc-->
     <select id="select_GetToDate" resultMap="ProduceOtherCompactResult" parameterClass="string">
-      <![CDATA[
-      SELECT * FROM ProduceOtherCompact p left join InvoiceXO xo on p.InvoiceXOId=xo.InvoiceId WHERE (p.InvoiceMaterialFlag<>2 or p.InvoiceMaterialFlag is null) and p.ProduceOtherCompactDate between #startdate# and #enddate#  and ( p.ProduceOtherCompactId in(select ProduceOtherCompactId  from ProduceOtherCompactMaterial where productid=#sendProductId#) or #sendProductId# is null ) AND (p.CustomerId = #customerid# OR #customerid# IS NULL) AND (p.SupplierId = #supplierid# OR #supplierid# IS NULL) AND (p.ProduceOtherCompactId =#ProduceOtherCompactId# OR #ProduceOtherCompactId# IS NULL) AND (xo.CustomerInvoiceXOId Like '%$CustomerInvoiceXOId$%' or #CustomerInvoiceXOId# is null) AND (p.IsClose <> #isClose# or #isClose# is null) order by ProduceOtherCompactId desc
+      <![CDATA[     
+       SELECT * FROM ProduceOtherCompact p left join InvoiceXO xo on p.InvoiceXOId=xo.InvoiceId WHERE (p.InvoiceMaterialFlag<>2 or p.InvoiceMaterialFlag is null) and p.ProduceOtherCompactDate between #startdate# and #enddate#  and ( p.ProduceOtherCompactId in(select ProduceOtherCompactId  from ProduceOtherCompactMaterial where productid=#sendProductId#) or #sendProductId# is null ) AND (p.CustomerId = #customerid# OR #customerid# IS NULL) AND (p.SupplierId = #supplierid# OR #supplierid# IS NULL) AND (p.ProduceOtherCompactId =#ProduceOtherCompactId# OR #ProduceOtherCompactId# IS NULL) AND (p.CustomerInvoiceXOId Like '%$CustomerInvoiceXOId$%' or #CustomerInvoiceXOId# is null) AND (p.IsClose <> #isClose# or #isClose# is null) order by ProduceOtherCompactId desc
       ]]>
     </select>
 

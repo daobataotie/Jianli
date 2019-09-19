@@ -75,6 +75,43 @@ namespace Book.DA.SQLServer
             return sqlmapper.QueryForList<Book.Model.InvoiceXO>("InvoiceXO.select_byYJRQCustomEmp", ht);
         }
 
+        ///快速查询，不联查，只查InvoiceXO本表字段
+        public IList<Book.Model.InvoiceXO> SelectFast(Model.Customer customer1, Model.Customer customer2, DateTime startDate, DateTime endDate, DateTime yjrq1, DateTime yjrq2, Model.Employee employee1, Model.Employee employee2, string xoid1, string xoid2, string cusxoidkey, Model.Product product, Model.Product product2, bool isclose, bool mpsIsClose, bool isForeigntrade, string product_Id)
+        {
+            StringBuilder str = new StringBuilder();
+            //if (customer1 != null && customer2 != null)
+            //    str.Append(" and xocustomerId in (select CustomerId from customer where id between '" + customer1.Id + "' and '" + customer2.Id + "') ");
+            if (customer1 != null)
+                str.Append(" and CustomerId='" + customer1.CustomerId + "'");
+            if (customer2 != null)
+                str.Append(" and xocustomerId='" + customer2.CustomerId + "'");
+
+            if (employee1 != null && employee2 != null)
+                str.Append(" and  Employee0Id in(select EmployeeId from Employee where idno between '" + employee1.IDNo + "' and '" + employee2.IDNo + "') ");
+            if (!string.IsNullOrEmpty(xoid1) && !string.IsNullOrEmpty(xoid2))
+                str.Append(" and  InvoiceId between '" + xoid1 + "' and '" + xoid2 + "' ");
+            if (!string.IsNullOrEmpty(cusxoidkey))
+                str.Append(" and  CustomerInvoiceXOId like '%" + cusxoidkey + "%' ");
+            if (product != null && product2 != null)
+                str.Append(" and InvoiceId in (select invoiceid from invoicexodetail where productid in(select productid from product where productname between '" + product.ProductName + "' and '" + product2.ProductName + "'))  ");
+            if (!string.IsNullOrEmpty(product_Id))
+                str.Append(" and InvoiceId in (select invoiceid from invoicexodetail where productid in(select productid from product where id= '" + product_Id + "'))");
+            if (isclose)    //true 时只查询未结案
+                str.Append(" and IsClose=0");
+            if (mpsIsClose)  //true 只查询未排完单
+                str.Append(" and InvoiceMPSState<>2");
+            if (isForeigntrade)  //true 时只查询外销订单
+                str.Append(" and IsForeigntrade=1");
+            str.Append("   ORDER BY InvoiceId   ");
+            Hashtable ht = new Hashtable();
+            ht.Add("startDate", startDate);
+            ht.Add("endDate", endDate);
+            ht.Add("yjrq1", yjrq1);
+            ht.Add("yjrq2", yjrq2);
+            ht.Add("sql", str.ToString());
+            return sqlmapper.QueryForList<Book.Model.InvoiceXO>("InvoiceXO.select_byYJRQCustomEmpFast", ht);
+        }
+
         public IList<Book.Model.InvoiceXO> SelectByCustomers(Model.Customer customer)
         {
             return sqlmapper.QueryForList<Model.InvoiceXO>("InvoiceXO.select_byCustomers", customer.CustomerId);

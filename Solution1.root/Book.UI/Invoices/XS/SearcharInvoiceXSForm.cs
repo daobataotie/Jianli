@@ -40,7 +40,7 @@ namespace Book.UI.Invoices.XS
             this.newChooseCustom.Choose = new Settings.BasicData.Customs.ChooseCustoms();
             this.newChooseXOcustomer.Choose = new Settings.BasicData.Customs.ChooseCustoms();
             IList<Model.Employee> roles = employeeManager.Select(Book.UI.Settings.BasicData.Employees.EmployeeParameters.BUSINESS);
-            this.dateEdit1.DateTime = DateTime.Now.Date.AddDays(-7);
+            this.dateEdit1.DateTime = DateTime.Now.Date.AddMonths(-3);
             this.dateEdit2.DateTime = DateTime.Now;
             foreach (Model.Employee role in roles)
             {
@@ -48,6 +48,8 @@ namespace Book.UI.Invoices.XS
             }
             this.StartPosition = FormStartPosition.CenterParent;
 
+            this.bindingSourceCustomer.DataSource = new BL.CustomerManager().Select();
+            this.bindingSourceEmployee.DataSource = employeeManager.Select();
         }
 
         public SearcharInvoiceXSForm(Model.Customer customer)
@@ -64,7 +66,7 @@ namespace Book.UI.Invoices.XS
             Model.Customer customer = newChooseCustom.EditValue as Model.Customer;
             Model.Customer xocustomer = newChooseXOcustomer.EditValue as Model.Customer;
             Model.Employee emp = this.cbo_bussiness.EditValue as Model.Employee;
-            IList<Model.InvoiceXO> invoicesXO = invoiceXOManager.SelectByYJRQCustomEmpCusXOId(customer, xocustomer, this.dateEdit1.DateTime, this.dateEdit2.DateTime, global::Helper.DateTimeParse.NullDate, global::Helper.DateTimeParse.EndDate, emp, emp, null, null, this.textEditCustomerXOInvoiceId.Text, null, null, this.ceIsClose.Checked, false, this.ceIsForeigntrade.Checked, null);
+            IList<Model.InvoiceXO> invoicesXO = invoiceXOManager.SelectFast(customer, xocustomer, this.dateEdit1.DateTime, this.dateEdit2.DateTime, global::Helper.DateTimeParse.NullDate, global::Helper.DateTimeParse.EndDate, emp, emp, null, null, this.textEditCustomerXOInvoiceId.Text, null, null, this.ceIsClose.Checked, false, this.ceIsForeigntrade.Checked, null);
             this.bindingSource1.DataSource = invoicesXO;
             bandDetail();
         }
@@ -83,7 +85,7 @@ namespace Book.UI.Invoices.XS
             if (!this.LoadSearch)
                 return;
 
-            IList<Model.InvoiceXO> invoicesXO = invoiceXOManager.SelectByYJRQCustomEmpCusXOId(null, null, this.dateEdit1.DateTime, this.dateEdit2.DateTime, global::Helper.DateTimeParse.NullDate, global::Helper.DateTimeParse.EndDate, null, null, null, null, null, null, null, false, false, false, null);
+            IList<Model.InvoiceXO> invoicesXO = invoiceXOManager.SelectFast(null, null, this.dateEdit1.DateTime, this.dateEdit2.DateTime, global::Helper.DateTimeParse.NullDate, global::Helper.DateTimeParse.EndDate, null, null, null, null, null, null, null, false, false, false, null);
             this.bindingSource1.DataSource = invoicesXO;
         }
 
@@ -171,7 +173,6 @@ namespace Book.UI.Invoices.XS
                 {
                     int count = 0;
                     foreach (Model.InvoiceXODetail detail in detailList)
-
                     {
                         if (key.Contains(detail))
                         {

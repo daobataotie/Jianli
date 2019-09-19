@@ -98,14 +98,14 @@ namespace Book.BL
             return accessor.SelectByDateRange(startdate, enddate);
         }
 
-        public IList<Model.InvoiceXSDetail> SelectbyConditionX(DateTime StartDate, DateTime EndDate, DateTime Yjri1, DateTime Yjri2, Model.Customer Customer1, Model.Customer Customer2, string XOId1, string XOId2, Model.Product Product, Model.Product Product2, string CusXOId, int OrderColumn, int OrderType, Model.Employee startEmp, Model.Employee endEmp, string FreightedCompanyId, string ConveyanceMethodId, string product_Id)
+        public IList<Model.InvoiceXSDetail> SelectbyConditionX(DateTime StartDate, DateTime EndDate, DateTime Yjri1, DateTime Yjri2, Model.Customer Customer1, Model.Customer Customer2, string XOId1, string XOId2, Model.Product Product, Model.Product Product2, string CusXOId, int OrderColumn, int OrderType, Model.Employee startEmp, Model.Employee endEmp, string FreightedCompanyId, string ConveyanceMethodId, string product_Id, string productCategoryId)
         {
-            return accessor.SelectbyConditionX(StartDate, EndDate, Yjri1, Yjri2, Customer1, Customer2, XOId1, XOId2, Product, Product2, CusXOId, OrderColumn, OrderType, startEmp, endEmp, FreightedCompanyId, ConveyanceMethodId, product_Id);
+            return accessor.SelectbyConditionX(StartDate, EndDate, Yjri1, Yjri2, Customer1, Customer2, XOId1, XOId2, Product, Product2, CusXOId, OrderColumn, OrderType, startEmp, endEmp, FreightedCompanyId, ConveyanceMethodId, product_Id, productCategoryId);
         }
 
-        public System.Data.DataTable SelectbyConditionXBiao(DateTime StartDate, DateTime EndDate, DateTime Yjri1, DateTime Yjri2, Model.Customer Customer1, Model.Customer Customer2, string XOId1, string XOId2, Model.Product Product, Model.Product Product2, string CusXOId, int OrderColumn, int OrderType, bool? isSpecial, string product_Id)
+        public System.Data.DataTable SelectbyConditionXBiao(DateTime StartDate, DateTime EndDate, DateTime Yjri1, DateTime Yjri2, Model.Customer Customer1, Model.Customer Customer2, string XOId1, string XOId2, Model.Product Product, Model.Product Product2, string CusXOId, int OrderColumn, int OrderType, bool? isSpecial, string product_Id, string productCategoryId)
         {
-            return accessor.SelectbyConditionXBiao(StartDate, EndDate, Yjri1, Yjri2, Customer1, Customer2, XOId1, XOId2, Product, Product2, CusXOId, OrderColumn, OrderType, isSpecial, product_Id);
+            return accessor.SelectbyConditionXBiao(StartDate, EndDate, Yjri1, Yjri2, Customer1, Customer2, XOId1, XOId2, Product, Product2, CusXOId, OrderColumn, OrderType, isSpecial, product_Id, productCategoryId);
         }
 
         public IList<Model.InvoiceXSDetail> SelectByInvoiceXOId(string invoiceXOId)

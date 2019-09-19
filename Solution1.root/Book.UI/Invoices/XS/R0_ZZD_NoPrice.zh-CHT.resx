@@ -138,18 +138,6 @@
   <data name="xrLabel10.Text" xml:space="preserve">
     <value>發票聯式:</value>
   </data>
-  <data name="xrLabel9.Text" xml:space="preserve">
-    <value>應稅額:</value>
-  </data>
-  <data name="xrLabel8.Text" xml:space="preserve">
-    <value>課稅類別:</value>
-  </data>
-  <data name="xrLabelTax.Text" xml:space="preserve">
-    <value>稅額:</value>
-  </data>
-  <data name="xrLabelHeji.Text" xml:space="preserve">
-    <value>合計:</value>
-  </data>
   <data name="xrLabel21.Text" xml:space="preserve">
     <value>送貨地址:</value>
   </data>
@@ -194,14 +182,5 @@
   </data>
   <data name="xrTableCell5.Text" xml:space="preserve">
     <value>單位</value>
-  </data>
-  <data name="xrTableCell1.Text" xml:space="preserve">
-    <value>單價</value>
-  </data>
-  <data name="xrTableCell6.Text" xml:space="preserve">
-    <value>小計</value>
-  </data>
-  <data name="xrTableCell8.Text" xml:space="preserve">
-    <value>備註</value>
   </data>
 </root>

@@ -23,7 +23,7 @@ namespace Book.UI.Query
             this.newChooseCustomer2.Choose = new Settings.BasicData.Customs.ChooseCustoms();
             this.newChooseEmp1.Choose = new Settings.BasicData.Employees.ChooseEmployee();
             this.newChooseEmp2.Choose = new Settings.BasicData.Employees.ChooseEmployee();
-            this.dateEditStartDate.DateTime = DateTime.Now.Date.AddMonths(-1);
+            this.dateEditStartDate.DateTime = DateTime.Now.Date.AddMonths(-3);
             this.dateEditEndDate.DateTime = DateTime.Now.Date.AddDays(1).AddSeconds(-1);
         }
 

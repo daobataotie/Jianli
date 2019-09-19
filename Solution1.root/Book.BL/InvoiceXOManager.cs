@@ -363,6 +363,12 @@ namespace Book.BL
             return accessor.SelectByYJRQCustomEmpCusXOId(customer1, customer2, startDate, endDate, yjrq1, yjrq2, employee1, employee2, xoid1, xoid2, cusxoidkey, product, product2, isclose, mpsIsClose, isForeigntrade, product_Id);
         }
 
+        //快速查询，不联查，只查InvoiceXO本表字段
+        public IList<Book.Model.InvoiceXO> SelectFast(Model.Customer customer1, Model.Customer customer2, DateTime startDate, DateTime endDate, DateTime yjrq1, DateTime yjrq2, Model.Employee employee1, Model.Employee employee2, string xoid1, string xoid2, string cusxoidkey, Model.Product product, Model.Product product2, bool isclose, bool mpsIsClose, bool isForeigntrade, string product_Id)
+        {
+            return accessor.SelectFast(customer1, customer2, startDate, endDate, yjrq1, yjrq2, employee1, employee2, xoid1, xoid2, cusxoidkey, product, product2, isclose, mpsIsClose, isForeigntrade, product_Id);
+        }
+
         public IList<Book.Model.InvoiceXO> SelectByCustomers(Model.Customer customer)
         {
             return accessor.SelectByCustomers(customer);

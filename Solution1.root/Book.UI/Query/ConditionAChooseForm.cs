@@ -29,6 +29,8 @@ namespace Book.UI.Query
         {
             InitializeComponent();
             this.Load += new System.EventHandler(this.ConditionAChooseForm_Load);
+
+            Init();
         }
 
         #region  初始化时间虚方法
@@ -39,7 +41,6 @@ namespace Book.UI.Query
         }
         private void ConditionAChooseForm_Load(object sender, EventArgs e)
         {
-            Init();
         }
         #endregion
 

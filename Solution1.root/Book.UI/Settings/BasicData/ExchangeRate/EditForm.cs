@@ -24,8 +24,8 @@ namespace Book.UI.Settings.BasicData.ExchangeRate
 
             this.action = "view";
 
-            int year = DateTime.Now.Year + 1;
-            for (int i = 0; i < 10; i++)
+            int year = DateTime.Now.Year + 10;
+            for (int i = 0; i < 20; i++)
             {
                 this.repositoryItemComboBox2.Items.Add(year - i);
             }

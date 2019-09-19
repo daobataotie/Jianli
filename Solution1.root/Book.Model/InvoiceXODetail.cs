@@ -99,6 +99,8 @@ namespace Book.Model
 
         public string InternalDescription { get; set; }
 
+        public bool IsClose { get; set; }
+
         public readonly static string PRO_InvoiceDate = "InvoiceDate";
 
         public readonly static string PRO_InvoiceYjrq = "InvoiceYjrq";

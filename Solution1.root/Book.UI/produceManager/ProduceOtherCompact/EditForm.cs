@@ -131,10 +131,13 @@ namespace Book.UI.produceManager.ProduceOtherCompact
                 this._produceOtherCompact.Employee1Id = this._produceOtherCompact.Employee1.EmployeeId;
             }
             this._produceOtherCompact.AuditState = this.saveAuditState;
+            this._produceOtherCompact.CustomerInvoiceXOId = this.textEditCustomerXOId.Text;
+
             if (!this.gridView1.PostEditor() || !this.gridView1.UpdateCurrentRow())
                 return;
             if (!this.gridView2.PostEditor() || !this.gridView2.UpdateCurrentRow())
                 return;
+
             switch (this.action)
             {
                 case "insert":
@@ -259,15 +262,15 @@ namespace Book.UI.produceManager.ProduceOtherCompact
             Model.InvoiceXO invoicexo = this.invoiceXOManager.GetById(this._produceOtherCompact.InvoiceXOId);
             if (invoicexo != null)
             {
-                this.textEditCustomerXOId.Text = invoicexo.CustomerInvoiceXOId;
+                //this.textEditCustomerXOId.Text = invoicexo.CustomerInvoiceXOId;
                 this.txtLotNumber.Text = invoicexo.CustomerLotNumber;
             }
             else
             {
-                this.textEditCustomerXOId.Text = string.Empty;
+                //this.textEditCustomerXOId.Text = string.Empty;
                 this.txtLotNumber.Text = string.Empty;
             }
-
+            this.textEditCustomerXOId.Text = this._produceOtherCompact.CustomerInvoiceXOId;
             this.textEditAuditState.Text = this.GetAuditName(this._produceOtherCompact.AuditState);
             this.EmpAudit.EditValue = this._produceOtherCompact.AuditEmp;
             this.bindingSourceDetails.DataSource = this._produceOtherCompact.Details;
