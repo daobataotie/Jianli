@@ -63,9 +63,9 @@ namespace Book.BL
             return accessor.SelectByCondition(startDate, endDate, DepotOutIdStart, DepotOutIdEnd, depotStart, depotEnd);
         }
 
-        public IList<Model.DepotOutDetail> SelectByDateRange(DateTime startDate, DateTime endDate, string productid, string invoiceCusId)
+        public IList<Model.DepotOutDetail> SelectByDateRange(DateTime startDate, DateTime endDate, string productid, string invoiceCusId, string cusXOId)
         {
-            return accessor.SelectByDateRange(startDate, endDate, productid, invoiceCusId);
+            return accessor.SelectByDateRange(startDate, endDate, productid, invoiceCusId, cusXOId);
         }
     }
 }

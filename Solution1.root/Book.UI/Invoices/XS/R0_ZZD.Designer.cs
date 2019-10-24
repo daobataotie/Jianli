@@ -30,6 +30,7 @@ namespace Book.UI.Invoices.XS
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(R0_ZZD));
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.xrLine1 = new DevExpress.XtraReports.UI.XRLine();
             this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
             this.lblDetailNote = new DevExpress.XtraReports.UI.XRLabel();
             this.xrTable1 = new DevExpress.XtraReports.UI.XRTable();
@@ -104,7 +105,6 @@ namespace Book.UI.Invoices.XS
             this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
-            this.xrLine1 = new DevExpress.XtraReports.UI.XRLine();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -119,6 +119,14 @@ namespace Book.UI.Invoices.XS
             resources.ApplyResources(this.Detail, "Detail");
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
+            // 
+            // xrLine1
+            // 
+            resources.ApplyResources(this.xrLine1, "xrLine1");
+            this.xrLine1.LineStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.xrLine1.LineWidth = 2;
+            this.xrLine1.Name = "xrLine1";
+            this.xrLine1.StylePriority.UseBorderDashStyle = false;
             // 
             // xrLabel9
             // 
@@ -185,7 +193,6 @@ namespace Book.UI.Invoices.XS
             // 
             // xrTableCellCusPro
             // 
-            this.xrTableCellCusPro.CanGrow = false;
             resources.ApplyResources(this.xrTableCellCusPro, "xrTableCellCusPro");
             this.xrTableCellCusPro.Name = "xrTableCellCusPro";
             this.xrTableCellCusPro.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
@@ -833,14 +840,6 @@ namespace Book.UI.Invoices.XS
             // 
             resources.ApplyResources(this.bottomMarginBand1, "bottomMarginBand1");
             this.bottomMarginBand1.Name = "bottomMarginBand1";
-            // 
-            // xrLine1
-            // 
-            resources.ApplyResources(this.xrLine1, "xrLine1");
-            this.xrLine1.LineStyle = System.Drawing.Drawing2D.DashStyle.Dot;
-            this.xrLine1.LineWidth = 2;
-            this.xrLine1.Name = "xrLine1";
-            this.xrLine1.StylePriority.UseBorderDashStyle = false;
             // 
             // R0_ZZD
             // 

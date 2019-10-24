@@ -47,6 +47,9 @@ namespace Book.UI.Invoices.XS
         public EditForm()
         {
             InitializeComponent();
+
+            this.gridControl1.Dock = DockStyle.Fill;
+
             this.colInvoiceXSDetailPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colInvoiceXSDetailPrice.DisplayFormat.FormatString = this.GetFormat(BL.V.SetDataFormat.XSDJXiao.Value);
 
@@ -269,6 +272,7 @@ namespace Book.UI.Invoices.XS
                 invoice.DeclareDate = this.date_DeclareDate.DateTime;
             invoice.FapiaoFangshi = this.txt_FapiaoFangshi.Text;
             invoice.FapiaoLianshi = this.cob_FapiaoLianshi.Text;
+            invoice.Currency = this.comboBoxEditCurrency.Text;
 
             switch (this.action)
             {
@@ -367,6 +371,7 @@ namespace Book.UI.Invoices.XS
             this.flag = 1;
             invoice.InvoiceTaxrate = 5;
             invoice.Setdetails.Clear();
+            invoice.Currency = "美金";
             dic.Clear();
             if (this.invoicexo != null)
             {
@@ -388,7 +393,7 @@ namespace Book.UI.Invoices.XS
                 invoice.InvoiceAllowance = 0;
                 //invoice.CustomerInvoiceXOId = this.invoicexo.CustomerInvoiceXOId;
                 this.invoicexo.Details = this.invoicexoDetailManager.Select(this.invoicexo, false);
-                invoice.FapiaoFangshi = "隨單開立"; 
+                invoice.FapiaoFangshi = "隨單開立";
 
                 foreach (Model.InvoiceXODetail detail in this.invoicexo.Details)
                 {
@@ -468,7 +473,6 @@ namespace Book.UI.Invoices.XS
 
         public override void Refresh()
         {
-
             if (invoice == null)
             {
                 invoice = new Book.Model.InvoiceXS();
@@ -517,6 +521,7 @@ namespace Book.UI.Invoices.XS
             this.txt_PayCondition.Text = invoice.Customer == null ? null : invoice.Customer.PayCondition;
             this.txt_FapiaoFangshi.Text = invoice.FapiaoFangshi;
             this.cob_FapiaoLianshi.Text = invoice.FapiaoLianshi;
+            this.comboBoxEditCurrency.Text = invoice.Currency;
             //  this.textEditCustomerInvoiceXOId.Text = xo == null ? "" : xo.CustomerInvoiceXOId;
             //this.bindingSourceProduct.DataSource = this.customerProductsManager.Select(this.buttonEditCompany.EditValue as Model.Customer);
             // this.bindingSourceProduct.DataSource = this.productManager.Select(this.newChooseXScustomer.EditValue as Model.Customer);
@@ -525,13 +530,19 @@ namespace Book.UI.Invoices.XS
             switch (this.action)
             {
                 case "insert":
+                    this.barButtonItem5.Enabled = true;
+                    this.gridColumnPosition.OptionsColumn.AllowEdit = true;
+                    this.comboBoxEditCurrency.Enabled = true;
+                    break;
                 case "update":
                     this.barButtonItem5.Enabled = true;
                     this.gridColumnPosition.OptionsColumn.AllowEdit = true;
+                    this.comboBoxEditCurrency.Enabled = false;
                     break;
                 case "view":
                     this.barButtonItem5.Enabled = true;
                     this.gridColumnPosition.OptionsColumn.AllowEdit = false;
+                    this.comboBoxEditCurrency.Enabled = false;
                     break;
             }
             this.buttonEditEmployee.ShowButton = false;
@@ -844,6 +855,8 @@ namespace Book.UI.Invoices.XS
                     //invoice.Customer = xo.Customer;
                     //invoice.XSCustomer = xo.xocustomer;
                     //   textEditiInvoiceXOId.Text = xo.InvoiceId;
+                    this.comboBoxEditCurrency.Enabled = false;
+                    this.comboBoxEditCurrency.Text = xo.Invoice.Currency;
 
                     foreach (Model.InvoiceXODetail xos in form.key)
                     {
@@ -979,9 +992,8 @@ namespace Book.UI.Invoices.XS
                 currency = invoiceXOManager.GetCurrencyByInvoiceId(xodetail.InvoiceId);
 
             decimal rate = exchangeRateManager.GetRateByDateAndCurrency(this.dateEditInvoiceDate.DateTime, currency);
-            xsdetail.Currency = xodetail.Invoice.Currency;
+            xsdetail.Currency = currency;
             xsdetail.ExchangeRate = rate;
-
         }
 
         public static Model.InvoiceXS xs;
@@ -1545,13 +1557,15 @@ namespace Book.UI.Invoices.XS
                 this.UpdateMoneyFields();
             }
         }
-
+       
+        //内销打印
         private void bar_NeixiaoPrint_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             R0_ZZD ro = new R0_ZZD(this.Invoice.InvoiceId);
             ro.ShowPreviewDialog();
         }
 
+        //内销打印无价格
         private void bar_NeixiaoPrintNoPrice_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             R0_ZZD_NoPrice ro = new R0_ZZD_NoPrice(this.Invoice.InvoiceId);

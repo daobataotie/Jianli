@@ -44,6 +44,7 @@ namespace Book.UI.Query
             this.xrTableCell7 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell8 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell12 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell5 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell13 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTable3 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow3 = new DevExpress.XtraReports.UI.XRTableRow();
@@ -60,6 +61,7 @@ namespace Book.UI.Query
             this.tcJinE = new DevExpress.XtraReports.UI.XRTableCell();
             this.tcShuiE = new DevExpress.XtraReports.UI.XRTableCell();
             this.tcYingShou = new DevExpress.XtraReports.UI.XRTableCell();
+            this.TCCurrencyTotal = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell26 = new DevExpress.XtraReports.UI.XRTableCell();
             this.lblCustomerName = new DevExpress.XtraReports.UI.XRLabel();
             this.xrTable5 = new DevExpress.XtraReports.UI.XRTable();
@@ -72,6 +74,9 @@ namespace Book.UI.Query
             this.TCZZongJi = new DevExpress.XtraReports.UI.XRTableCell();
             this.lblDateRange = new DevExpress.XtraReports.UI.XRLabel();
             this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
+            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.lbTaibiTotal = new DevExpress.XtraReports.UI.XRLabel();
+            this.TCCurrency = new DevExpress.XtraReports.UI.XRTableCell();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
@@ -106,6 +111,8 @@ namespace Book.UI.Query
             // ReportFooter
             // 
             this.ReportFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.lbTaibiTotal,
+            this.xrLabel1,
             this.xrSubreport1,
             this.xrTable5});
             this.ReportFooter.Expanded = true;
@@ -205,6 +212,7 @@ namespace Book.UI.Query
             this.xrTableCell7,
             this.xrTableCell8,
             this.xrTableCell12,
+            this.xrTableCell5,
             this.xrTableCell13});
             resources.ApplyResources(this.xrTableRow2, "xrTableRow2");
             this.xrTableRow2.Name = "xrTableRow2";
@@ -252,11 +260,17 @@ namespace Book.UI.Query
             this.xrTableCell12.Name = "xrTableCell12";
             this.xrTableCell12.Weight = 0.37132213185771989;
             // 
+            // xrTableCell5
+            // 
+            resources.ApplyResources(this.xrTableCell5, "xrTableCell5");
+            this.xrTableCell5.Name = "xrTableCell5";
+            this.xrTableCell5.Weight = 0.42622769958816531;
+            // 
             // xrTableCell13
             // 
             resources.ApplyResources(this.xrTableCell13, "xrTableCell13");
             this.xrTableCell13.Name = "xrTableCell13";
-            this.xrTableCell13.Weight = 0.76192896668216259;
+            this.xrTableCell13.Weight = 0.33570126709399728;
             // 
             // xrTable3
             // 
@@ -272,6 +286,7 @@ namespace Book.UI.Query
             this.tcCHDH,
             this.tcCHRQ,
             this.tcProductName,
+            this.TCCurrency,
             this.tcKHDDBH});
             resources.ApplyResources(this.xrTableRow3, "xrTableRow3");
             this.xrTableRow3.Name = "xrTableRow3";
@@ -296,7 +311,7 @@ namespace Book.UI.Query
             this.tcProductName.Padding = new DevExpress.XtraPrinting.PaddingInfo(15, 0, 0, 0, 254F);
             this.tcProductName.StylePriority.UsePadding = false;
             this.tcProductName.StylePriority.UseTextAlignment = false;
-            this.tcProductName.Weight = 1.888753982947365;
+            this.tcProductName.Weight = 1.6562416942827802;
             // 
             // tcKHDDBH
             // 
@@ -326,6 +341,7 @@ namespace Book.UI.Query
             this.tcJinE,
             this.tcShuiE,
             this.tcYingShou,
+            this.TCCurrencyTotal,
             this.xrTableCell26});
             resources.ApplyResources(this.xrTableRow4, "xrTableRow4");
             this.xrTableRow4.Name = "xrTableRow4";
@@ -373,11 +389,17 @@ namespace Book.UI.Query
             this.tcYingShou.Name = "tcYingShou";
             this.tcYingShou.Weight = 0.37132213185771989;
             // 
+            // TCCurrencyTotal
+            // 
+            resources.ApplyResources(this.TCCurrencyTotal, "TCCurrencyTotal");
+            this.TCCurrencyTotal.Name = "TCCurrencyTotal";
+            this.TCCurrencyTotal.Weight = 0.42622769958816531;
+            // 
             // xrTableCell26
             // 
             resources.ApplyResources(this.xrTableCell26, "xrTableCell26");
             this.xrTableCell26.Name = "xrTableCell26";
-            this.xrTableCell26.Weight = 0.76192896668216259;
+            this.xrTableCell26.Weight = 0.33570126709399728;
             // 
             // lblCustomerName
             // 
@@ -413,7 +435,7 @@ namespace Book.UI.Query
             resources.ApplyResources(this.xrTableCell14, "xrTableCell14");
             this.xrTableCell14.Name = "xrTableCell14";
             this.xrTableCell14.StylePriority.UseTextAlignment = false;
-            this.xrTableCell14.Weight = 0.51946784783572264;
+            this.xrTableCell14.Weight = 0.35594314429808338;
             // 
             // TCZHeJi
             // 
@@ -451,7 +473,7 @@ namespace Book.UI.Query
             this.TCZZongJi.Name = "TCZZongJi";
             this.TCZZongJi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 0, 0, 0, 254F);
             this.TCZZongJi.StylePriority.UsePadding = false;
-            this.TCZZongJi.Weight = 0.64810304824186837;
+            this.TCZZongJi.Weight = 0.57996768306164381;
             // 
             // lblDateRange
             // 
@@ -463,6 +485,26 @@ namespace Book.UI.Query
             // 
             resources.ApplyResources(this.xrSubreport1, "xrSubreport1");
             this.xrSubreport1.Name = "xrSubreport1";
+            // 
+            // xrLabel1
+            // 
+            resources.ApplyResources(this.xrLabel1, "xrLabel1");
+            this.xrLabel1.Name = "xrLabel1";
+            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel1.StylePriority.UseTextAlignment = false;
+            // 
+            // lbTaibiTotal
+            // 
+            resources.ApplyResources(this.lbTaibiTotal, "lbTaibiTotal");
+            this.lbTaibiTotal.Name = "lbTaibiTotal";
+            this.lbTaibiTotal.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lbTaibiTotal.StylePriority.UseTextAlignment = false;
+            // 
+            // TCCurrency
+            // 
+            resources.ApplyResources(this.TCCurrency, "TCCurrency");
+            this.TCCurrency.Name = "TCCurrency";
+            this.TCCurrency.Weight = 0.23251228866458473;
             // 
             // ROInvoiceXSlistBiao
             // 
@@ -529,5 +571,10 @@ namespace Book.UI.Query
         private DevExpress.XtraReports.UI.XRTableCell TCZZongJi;
         private DevExpress.XtraReports.UI.XRLabel lblDateRange;
         private DevExpress.XtraReports.UI.XRSubreport xrSubreport1;
+        private DevExpress.XtraReports.UI.XRLabel lbTaibiTotal;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel1;
+        private DevExpress.XtraReports.UI.XRTableCell TCCurrencyTotal;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell5;
+        private DevExpress.XtraReports.UI.XRTableCell TCCurrency;
     }
 }

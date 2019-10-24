@@ -59,6 +59,11 @@ namespace Book.DA.SQLServer
             return sqlmapper.QueryForList<Model.DepotPosition>("DepotPosition.GetStockByDepotAndProduct", ht);
         }
 
+        public IList<string> GetDepotPositionByProduct(string productId)
+        {
+            return sqlmapper.QueryForList<string>("DepotPosition.GetDepotPositionByProduct", productId);
+        }
+
         #endregion
     }
 }

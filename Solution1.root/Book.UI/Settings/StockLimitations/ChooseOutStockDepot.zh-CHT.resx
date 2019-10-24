@@ -161,7 +161,7 @@
     <value>87</value>
   </data>
   <data name="gridColumn6.Caption" xml:space="preserve">
-    <value>訂單編號</value>
+    <value>來源單號</value>
   </data>
   <data name="gridColumn6.VisibleIndex" type="System.Int32, mscorlib">
     <value>7</value>

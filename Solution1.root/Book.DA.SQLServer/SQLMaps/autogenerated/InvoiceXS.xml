@@ -43,6 +43,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="DeclareDate" column="DeclareDate"/>
       <result property="FapiaoFangshi" column="FapiaoFangshi"/>
       <result property="FapiaoLianshi" column="FapiaoLianshi"/>
+      <result property="Currency" column="Currency"/>
       <result property="AuditEmp" column="AuditEmpId" lazyLoad="false" select="Employee.select_SimpleEmployee" />
       <result property="ConveyanceMethod" column="ConveyanceMethodId" lazyLoad="false" select="ConveyanceMethod.select_by_primary_key" />
       <result property="Customer" column="CustomerId" lazyLoad="false" select="Customer.select_SimpleCustomer" />
@@ -176,7 +177,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [InvoiceTaibiTotal],
         [DeclareDate],
         [FapiaoFangshi],
-        [FapiaoLianshi]
+        [FapiaoLianshi],
+        [Currency]
         
 			FROM
 				[dbo].[InvoiceXS]
@@ -267,7 +269,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [InvoiceTaibiTotal],
         [DeclareDate],        
         [FapiaoFangshi],
-        [FapiaoLianshi]
+        [FapiaoLianshi],
+        [Currency]
 			) 
 			VALUES 
 			(
@@ -307,7 +310,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         #InvoiceTaibiTotal#,
         #DeclareDate#,
         #FapiaoFangshi#,
-        #FapiaoLianshi#
+        #FapiaoLianshi#,
+        #Currency#
 			)
              ]]>
     </insert>
@@ -350,7 +354,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [InvoiceTaibiTotal]=#InvoiceTaibiTotal#,
         [DeclareDate]=#DeclareDate#,
         [FapiaoFangshi]=#FapiaoFangshi#,
-        [FapiaoLianshi]=#FapiaoLianshi#
+        [FapiaoLianshi]=#FapiaoLianshi#,
+        [Currency]=#Currency#
 			WHERE
 				[InvoiceId] = #InvoiceId#
                     ]]>

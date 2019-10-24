@@ -178,6 +178,10 @@ namespace Book.BL
                     throw new Helper.MessageValueException("" + detail.Product + "\r出貨數量不能大於貨位庫存");
 
                 detail.InvoiceId = invoice.InvoiceId;
+
+                if (string.IsNullOrEmpty(detail.Currency))
+                    detail.Currency = invoice.Currency;
+
                 invoiceXSDetailAccessor.Insert(detail);
                 Model.InvoiceXODetail xodetail = invoiceXODetailAccessor.Get(detail.InvoiceXODetailId);
                 if (xodetail != null)

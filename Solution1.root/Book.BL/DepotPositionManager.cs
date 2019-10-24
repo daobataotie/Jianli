@@ -13,19 +13,19 @@ namespace Book.BL
     /// <summary>
     /// Business logic for dbo.DepotPosition.
     /// </summary>
-    public partial class DepotPositionManager:BaseManager
+    public partial class DepotPositionManager : BaseManager
     {
-		
-		/// <summary>
-		/// Delete DepotPosition by primary key.
-		/// </summary>
-		public void Delete(string depotPositionID)
-		{
-			//
-			// todo:add other logic here
-			//
-			accessor.Delete(depotPositionID);
-		}
+
+        /// <summary>
+        /// Delete DepotPosition by primary key.
+        /// </summary>
+        public void Delete(string depotPositionID)
+        {
+            //
+            // todo:add other logic here
+            //
+            accessor.Delete(depotPositionID);
+        }
         /// <summary>
         /// Delete DepotPosition by primary key.
         /// </summary>
@@ -35,16 +35,16 @@ namespace Book.BL
             // todo:add other logic here
             //
             accessor.Delete(depotpositon.DepotPositionId);
-        } 
+        }
 
-		/// <summary>
-		/// Insert a DepotPosition.
-		/// </summary>
+        /// <summary>
+        /// Insert a DepotPosition.
+        /// </summary>
         public void Insert(Model.DepotPosition depotPosition)
         {
-			//
-			// todo:add other logic here
-			//
+            //
+            // todo:add other logic here
+            //
 
             this.Validate(depotPosition);
             if (this.Exists(depotPosition.Id))
@@ -52,19 +52,19 @@ namespace Book.BL
                 throw new Helper.InvalidValueException(Model.DepotPosition.PROPERTY_ID);
             }
             depotPosition.DepotPositionId = Guid.NewGuid().ToString();
-            depotPosition.DepotId = depotPosition.DepotId;          
+            depotPosition.DepotId = depotPosition.DepotId;
             depotPosition.InsertTime = DateTime.Now;
             accessor.Insert(depotPosition);
         }
-		
-		/// <summary>
-		/// Update a DepotPosition.
-		/// </summary>
+
+        /// <summary>
+        /// Update a DepotPosition.
+        /// </summary>
         public void Update(Model.DepotPosition depotPosition)
         {
-			//
-			// todo: add other logic here.
-			//
+            //
+            // todo: add other logic here.
+            //
             this.Validate(depotPosition);
             if (this.ExistsExcept(depotPosition))
             {
@@ -84,7 +84,7 @@ namespace Book.BL
             if (depotPosition.DepotId == null)
             {
                 throw new Helper.RequireValueException(Model.DepotPosition.PROPERTY_DEPOTID);
-            }       
+            }
         }
 
         public IList<Model.DepotPosition> Select(Book.Model.Depot depot)
@@ -100,7 +100,7 @@ namespace Book.BL
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-      
+
 
         //protected override string GetInvoiceKind()
         //{
@@ -129,6 +129,11 @@ namespace Book.BL
         public IList<Model.DepotPosition> GetStockByDepotAndProduct(string ProductId, string DepotId)
         {
             return accessor.GetStockByDepotAndProduct(ProductId, DepotId);
+        }
+
+        public IList<string> GetDepotPositionByProduct(string productId)
+        {
+            return accessor.GetDepotPositionByProduct(productId);
         }
     }
 }

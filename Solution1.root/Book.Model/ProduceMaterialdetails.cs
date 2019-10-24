@@ -47,6 +47,8 @@ namespace Book.Model
             set { _ProductName = value; }
         }
 
+        public string Product_Id { get; set; }
+
         private string _CustomerProductName;
 
         public string CustomerProductName
@@ -66,6 +68,11 @@ namespace Book.Model
         public string EmployeeName { get; set; }
 
         public string ProduceMaterialdesc { get; set; }
+
+        /// <summary>
+        /// 商品所有货位
+        /// </summary>
+        public string DepotPositionList { get; set; }
 
         public static readonly string PRO_ProductName = "ProductName";
         public static readonly string PRO_CustomerProductName = "CustomerProductName";

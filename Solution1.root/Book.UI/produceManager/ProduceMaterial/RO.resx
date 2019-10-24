@@ -175,10 +175,10 @@
   <data name="xrTableCellProductName.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
   </data>
-  <data name="xrTableCusProName.Dpi" type="System.Single, mscorlib">
+  <data name="TCDepotPosition.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
-  <data name="xrTableCusProName.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="TCDepotPosition.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 9pt</value>
   </data>
   <data name="xrTableCellQuantity.Dpi" type="System.Single, mscorlib">
@@ -636,7 +636,7 @@
     <value>Times New Roman, 9pt, style=Bold</value>
   </data>
   <data name="xrTableCell9.Text" xml:space="preserve">
-    <value>客户型号</value>
+    <value>货位</value>
   </data>
   <data name="xrTableCell2.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -954,9 +954,9 @@
   <data name="bottomMarginBand1.HeightF" type="System.Single, mscorlib">
     <value>80</value>
   </data>
-  <data name="$this.Localizable" type="System.Boolean, mscorlib">
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </data>
+  </metadata>
   <data name="$this.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>

@@ -297,6 +297,7 @@ namespace Book.UI.Settings.StockLimitations
             this.newChooseContorlAuditEmp.EditValue = this._depotOut.AuditEmp;
             this.txt_AuditState.EditValue = this.GetAuditName(this._depotOut.AuditState);
 
+            this.textEditCostumeXOId.Enabled = false;
             switch (this.action)
             {
                 case "insert":
@@ -938,6 +939,7 @@ namespace Book.UI.Settings.StockLimitations
 
         }
 
+        //搜寻
         private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             ChooseOutStockDepot form = new ChooseOutStockDepot();

@@ -22,6 +22,7 @@ namespace Book.DA
         bool existsInsertName(string id, Model.Depot depot);
         IList<Model.DepotPosition> GetDepotPositionsByDepotAndProduct(string ProductId, string DepotId);
         IList<Model.DepotPosition> GetStockByDepotAndProduct(string ProductId, string DepotId);
+        IList<string> GetDepotPositionByProduct(string productId);
     }
 }
 

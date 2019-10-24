@@ -85,6 +85,8 @@ namespace Book.Model
 
         private string _fapiaoLianshi;
 
+        private string _currency;
+
         /// <summary>
         /// 货运方式
         /// </summary>
@@ -427,6 +429,12 @@ namespace Book.Model
             set { _fapiaoLianshi = value; }
         }
 
+        public string Currency
+        {
+            get { return _currency; }
+            set { _currency = value; }
+        }
+
         /// <summary>
         /// 其他费用
         /// </summary>
@@ -505,6 +513,8 @@ namespace Book.Model
         public readonly static string PRO_FapiaoFangshi = "FapiaoFangshi";
 
         public readonly static string PRO_FapiaoLianshi = "FapiaoLianshi";
+
+        public readonly static string PRO_Currency = "Currency";
 
         #endregion
     }

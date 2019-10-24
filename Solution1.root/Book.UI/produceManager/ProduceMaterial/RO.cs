@@ -13,6 +13,8 @@ namespace Book.UI.produceManager.ProduceMaterial
         BL.InvoiceXOManager invoiceXoManager = new BL.InvoiceXOManager();
         BL.PronoteHeaderManager ph = new BL.PronoteHeaderManager();
         private Model.ProduceMaterial produceMaterial;
+        private BL.DepotPositionManager depotPositionManager = new Book.BL.DepotPositionManager();
+
         public RO(string produceMaterialID)
         {
             InitializeComponent();
@@ -29,6 +31,18 @@ namespace Book.UI.produceManager.ProduceMaterial
                 }
             }
             this.produceMaterial.Details = this.produceMaterialdetailsManager.Select(this.produceMaterial);
+
+            //查詢貨位
+            foreach (var item in this.produceMaterial.Details)
+            {
+                var depotPositionList = depotPositionManager.GetDepotPositionByProduct(item.ProductId);
+                foreach (var depotPositionId in depotPositionList)
+                {
+                    item.DepotPositionList += depotPositionId + ",";
+                }
+                item.DepotPositionList = string.IsNullOrEmpty(item.DepotPositionList) ? item.DepotPositionList : item.DepotPositionList.TrimEnd(',');
+            }
+
             this.DataSource = this.produceMaterial.Details;
             //CompanyInfo
             this.xrLabelCompanyInfoName.Text = BL.Settings.CompanyChineseName;
@@ -107,7 +121,8 @@ namespace Book.UI.produceManager.ProduceMaterial
             this.TC_ProId.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_Id);
             this.xrTableCellProductName.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProductName);
 
-            this.xrTableCusProName.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_CustomerProductName);
+            //this.TCDepotPosition.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_CustomerProductName);
+            this.TCDepotPosition.DataBindings.Add("Text", this.DataSource, "DepotPositionList");
 
             this.xrTableCellQuantity.DataBindings.Add("Text", this.DataSource, Model.ProduceMaterialdetails.PRO_Materialprocessum);
 

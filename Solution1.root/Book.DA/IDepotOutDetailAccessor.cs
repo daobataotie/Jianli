@@ -19,9 +19,9 @@ namespace Book.DA
         IList<Model.DepotOutDetail> GetDepotOutDetailByDepotOutId(string depotOutId);
         void Delete(Model.DepotOut depotOut);
 
-        IList<Model.DepotOutDetail> SelectByCondition(DateTime startDate, DateTime endDate, string DepotOutIdStart, string DepotOutIdEnd, string depotStart, string  depotEnd);
+        IList<Model.DepotOutDetail> SelectByCondition(DateTime startDate, DateTime endDate, string DepotOutIdStart, string DepotOutIdEnd, string depotStart, string depotEnd);
 
-        IList<Model.DepotOutDetail> SelectByDateRange(DateTime startDate, DateTime endDate, string productid, string invoiceCusId);
+        IList<Model.DepotOutDetail> SelectByDateRange(DateTime startDate, DateTime endDate, string productid, string invoiceCusId, string cusXOId);
     }
 }
 

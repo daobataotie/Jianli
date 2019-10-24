@@ -31,7 +31,7 @@ namespace Book.UI.Settings.StockLimitations
             : this()
         {
             this.tag = 1;
-            this.bindingSource1.DataSource = this.depotOutDetailManager.SelectByDateRange(global::Helper.DateTimeParse.NullDate, global::Helper.DateTimeParse.EndDate, null, invoiceCusId);
+            this.bindingSource1.DataSource = this.depotOutDetailManager.SelectByDateRange(global::Helper.DateTimeParse.NullDate, global::Helper.DateTimeParse.EndDate, null, invoiceCusId, null);
             this.gridControl1.RefreshDataSource();
         }
 
@@ -42,7 +42,7 @@ namespace Book.UI.Settings.StockLimitations
                 this.tag = 0;
                 return;
             }
-            this.bindingSource1.DataSource = this.depotOutDetailManager.SelectByDateRange(this.dateEditStartDate.EditValue == null ? DateTime.Now.AddMonths(-1) : this.dateEditStartDate.DateTime, this.dateEditEndate.EditValue == null ? DateTime.Now : this.dateEditEndate.DateTime, (this.buttonEditProduct.EditValue as Model.Product) == null ? "" : (this.buttonEditProduct.EditValue as Model.Product).ProductId, this.txt_InvoiceCusID.Text);
+            this.bindingSource1.DataSource = this.depotOutDetailManager.SelectByDateRange(this.dateEditStartDate.EditValue == null ? DateTime.Now.AddMonths(-1) : this.dateEditStartDate.DateTime, this.dateEditEndate.EditValue == null ? DateTime.Now : this.dateEditEndate.DateTime, (this.buttonEditProduct.EditValue as Model.Product) == null ? "" : (this.buttonEditProduct.EditValue as Model.Product).ProductId, this.txt_InvoiceCusID.Text, this.txt_CusXOIdManual.Text);
             this.gridControl1.RefreshDataSource();
         }
 

@@ -25,13 +25,13 @@ namespace Book.UI.Query
             this.lblDateRange.Text = "  •rég…^ég:" + condition.StartDate.ToString("yyyy-MM-dd") + " ~ " + condition.EndDate.ToString("yyyy-MM-dd");
             //bind
             //this.DataSource = this.detailManager.SelectbyConditionX(condition.StartDate, condition.EndDate, condition.Yjri1, condition.Yjri2, condition.Customer1, condition.Customer2, condition.XOId1, condition.XOId2, condition.Product, condition.Product2, condition.CusXOId, condition.OrderColumn, condition.OrderType);
-            if ((bool)condition.Special)
-            {
-                this.DataSource = this.detailManager.SelectbyConditionXBiao(condition.StartDate, condition.EndDate, condition.Yjri1, condition.Yjri2, condition.Customer1, condition.Customer2, condition.XOId1, condition.XOId2, condition.Product, condition.Product2, condition.CusXOId, condition.OrderColumn, condition.OrderType, false, condition.Product_Id,condition.ProductCategoryId);
-                dt = this.detailManager.SelectbyConditionXBiao(condition.StartDate, condition.EndDate, condition.Yjri1, condition.Yjri2, condition.Customer1, condition.Customer2, condition.XOId1, condition.XOId2, condition.Product, condition.Product2, condition.CusXOId, condition.OrderColumn, condition.OrderType, condition.Special, condition.Product_Id, condition.ProductCategoryId);
-            }
-            else
-                this.DataSource = this.detailManager.SelectbyConditionXBiao(condition.StartDate, condition.EndDate, condition.Yjri1, condition.Yjri2, condition.Customer1, condition.Customer2, condition.XOId1, condition.XOId2, condition.Product, condition.Product2, condition.CusXOId, condition.OrderColumn, condition.OrderType, null, condition.Product_Id, condition.ProductCategoryId);
+            //if ((bool)condition.Special)
+            //{
+            //    this.DataSource = this.detailManager.SelectbyConditionXBiao(condition.StartDate, condition.EndDate, condition.Yjri1, condition.Yjri2, condition.Customer1, condition.Customer2, condition.XOId1, condition.XOId2, condition.Product, condition.Product2, condition.CusXOId, condition.OrderColumn, condition.OrderType, false, condition.Product_Id,condition.ProductCategoryId);
+            //    dt = this.detailManager.SelectbyConditionXBiao(condition.StartDate, condition.EndDate, condition.Yjri1, condition.Yjri2, condition.Customer1, condition.Customer2, condition.XOId1, condition.XOId2, condition.Product, condition.Product2, condition.CusXOId, condition.OrderColumn, condition.OrderType, condition.Special, condition.Product_Id, condition.ProductCategoryId);
+            //}
+            //else
+            this.DataSource = this.detailManager.SelectbyConditionXBiao(condition.StartDate, condition.EndDate, condition.Yjri1, condition.Yjri2, condition.Customer1, condition.Customer2, condition.XOId1, condition.XOId2, condition.Product, condition.Product2, condition.CusXOId, condition.OrderColumn, condition.OrderType, null, condition.Product_Id, condition.ProductCategoryId, condition.Currency);
 
             //if (this.DataSource == null || (this.DataSource as IList<Model.InvoiceXSDetail>).Count == 0)
             if ((this.DataSource == null || (this.DataSource as System.Data.DataTable).Rows.Count == 0) && dt.Rows.Count == 0)
@@ -48,7 +48,11 @@ namespace Book.UI.Query
             this.tcZheRang.DataBindings.Add("Text", this.DataSource, "ZheRang", global::Helper.DateTimeParse.GetFormatA(BL.V.SetDataFormat.CGJEXiao.Value));
             this.tcJinE.DataBindings.Add("Text", this.DataSource, "JinE");
             this.tcShuiE.DataBindings.Add("Text", this.DataSource, "ShuiE", "{0:0}");
-            this.tcYingShou.DataBindings.Add("Text", this.DataSource, "YingShou");
+            this.tcYingShou.DataBindings.Add("Text", this.DataSource, "YingShou", global::Helper.DateTimeParse.GetFormatA(BL.V.SetDataFormat.CGDJXiao.Value));
+
+            this.TCCurrency.DataBindings.Add("Text", this.DataSource, "Currency");
+            this.TCCurrencyTotal.DataBindings.Add("Text", this.DataSource, "TaibiTotal", global::Helper.DateTimeParse.GetFormatA(BL.V.SetDataFormat.CGDJXiao.Value));
+
 
             if (dt.Rows.Count > 0)
                 this.xrSubreport1.ReportSource = new ROInvoiceXSlistBiaoSub(dt);
@@ -71,6 +75,12 @@ namespace Book.UI.Query
             this.TCZZongJi.Summary.Running = SummaryRunning.Report;
             this.TCZZongJi.DataBindings.Add("Text", this.DataSource, "YingShou");
 
+
+            this.lbTaibiTotal.Summary.FormatString = "{0:0}";
+            this.lbTaibiTotal.Summary.Func = SummaryFunc.Sum;
+            this.lbTaibiTotal.Summary.IgnoreNullValues = true;
+            this.lbTaibiTotal.Summary.Running = SummaryRunning.Report;
+            this.lbTaibiTotal.DataBindings.Add("Text", this.DataSource, "TaibiTotal");
         }
     }
 }

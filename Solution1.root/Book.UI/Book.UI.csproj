@@ -7963,6 +7963,14 @@
       <DependentUpon>ShouldPayForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Query\ROInvoiceXSlistBiaoForm.resx">
+      <DependentUpon>ROInvoiceXSlistBiaoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Query\ROInvoiceXSlistBiaoForm.zh-CHT.resx">
+      <DependentUpon>ROInvoiceXSlistBiaoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="ROStockPrompt.resx">
       <DependentUpon>ROStockPrompt.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -13217,6 +13225,12 @@
     </Compile>
     <Compile Include="Query\ShouldPayForm.Designer.cs">
       <DependentUpon>ShouldPayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Query\ROInvoiceXSlistBiaoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Query\ROInvoiceXSlistBiaoForm.Designer.cs">
+      <DependentUpon>ROInvoiceXSlistBiaoForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ROStockPrompt.cs">
       <SubType>Component</SubType>

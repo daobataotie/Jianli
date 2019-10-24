@@ -59,7 +59,7 @@ namespace Book.DA.SQLServer
             return sqlmapper.QueryForList<Model.DepotOutDetail>("DepotOutDetail.SelectByCondition", ht);
         }
 
-        public IList<Model.DepotOutDetail> SelectByDateRange(DateTime startDate, DateTime endDate, string productid, string invoiceCusId)
+        public IList<Model.DepotOutDetail> SelectByDateRange(DateTime startDate, DateTime endDate, string productid, string invoiceCusId, string cusXOId)
         {
             StringBuilder sql = new StringBuilder("select d.DepotOutId,d.DepotOutDate,d.SourceType,d.InvioiceId,dd.DepotOutDetailQuantity,e.EmployeeName,p.ProductName,dp.Id from DepotOutDetail dd left join DepotOut d on dd.DepotOutId=d.DepotOutId left join Employee e on e.EmployeeId=d.EmployeeId left join DepotPosition dp on dp.DepotPositionId=dd.DepotPositionId left join Product p on p.ProductId=dd.ProductId where 1=1");
             sql.Append(" And d.DepotOutDate between '" + startDate.ToString("yyyy-MM-dd") + "' and '" + endDate.Date.AddDays(1).AddSeconds(-1).ToString("yyyy-MM-dd HH:mm:ss") + "'");
@@ -67,6 +67,9 @@ namespace Book.DA.SQLServer
                 sql.Append(" And dd.ProductId='" + productid + "'");
             if (!string.IsNullOrEmpty(invoiceCusId))
                 sql.Append(" And  (d.InvioiceId in (select ProduceMaterialID from ProduceMaterial where InvoiceXOId=(select InvoiceId from InvoiceXO where CustomerInvoiceXOId='" + invoiceCusId + "')) or (d.InvioiceId in (select ProduceOtherMaterialId from ProduceOtherMaterial where ProduceOtherCompactId in (select ProduceOtherCompactId from ProduceOtherCompact where InvoiceXOId=(select InvoiceId from InvoiceXO where CustomerInvoiceXOId='" + invoiceCusId + "')))))");
+            if (!string.IsNullOrEmpty(cusXOId))   //明細裡面手動填寫的客戶訂單編號
+                sql.Append(" and dd.CusXOId='" + cusXOId + "'");
+
             sql.Append(" order by DepotOutId desc");
             return DataReaderBind<Model.DepotOutDetail>(sql.ToString(), null, CommandType.Text);
         }

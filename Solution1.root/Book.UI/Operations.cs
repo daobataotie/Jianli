@@ -40,7 +40,8 @@ namespace Book.UI
             //应收账款明细账
             operations.Add("accountpayable.accquery.customermaychoose", (D1)delegate(System.Windows.Forms.Form form) { MM("AccountPayable.AccQuery.CustomerMayDetail", new Book.UI.AccountPayable.AccQuery.CustomerMayChooseForm()); });
             //应收账款明细表
-            operations.Add("accountpayable.accquery.customermaychooseBiao", (D1)delegate(System.Windows.Forms.Form form) { MM("Query.ROInvoiceXSlistBiao", new Book.UI.Query.ConditionXChooseForm()); });
+            //operations.Add("accountpayable.accquery.customermaychooseBiao", (D1)delegate(System.Windows.Forms.Form form) { MM("Query.ROInvoiceXSlistBiao", new Book.UI.Query.ConditionXChooseForm()); });
+            operations.Add("accountpayable.accquery.customermaychooseBiao", (D1)delegate(System.Windows.Forms.Form form) { MM("Query.ROInvoiceXSlistBiao", new Book.UI.Query.ROInvoiceXSlistBiaoForm()); });
 
 
             operations.Add("accountpayable.accquery.colcuishou", (D1)delegate(System.Windows.Forms.Form form) { MM("AccountPayable.AccQuery.ColCuiShou", new Book.UI.AccountPayable.AccQuery.ChooseColCuiShouForm()); });

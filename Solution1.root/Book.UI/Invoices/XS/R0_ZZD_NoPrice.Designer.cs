@@ -181,7 +181,6 @@ namespace Book.UI.Invoices.XS
             // 
             // xrTableCellCusPro
             // 
-            this.xrTableCellCusPro.CanGrow = false;
             resources.ApplyResources(this.xrTableCellCusPro, "xrTableCellCusPro");
             this.xrTableCellCusPro.Name = "xrTableCellCusPro";
             this.xrTableCellCusPro.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);

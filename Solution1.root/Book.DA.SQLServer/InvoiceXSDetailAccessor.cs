@@ -156,69 +156,77 @@ namespace Book.DA.SQLServer
         }
 
         //应收账款明细表
-        public DataTable SelectbyConditionXBiao(DateTime StartDate, DateTime EndDate, DateTime Yjri1, DateTime Yjri2, Book.Model.Customer Customer1, Book.Model.Customer Customer2, string XOId1, string XOId2, Book.Model.Product Product, Book.Model.Product Product2, string CusXOId, int OrderColumn, int OrderType, bool? isSpecial, string product_Id, string productCategoryId)
+        public DataTable SelectbyConditionXBiao(DateTime StartDate, DateTime EndDate, DateTime Yjri1, DateTime Yjri2, Book.Model.Customer Customer1, Book.Model.Customer Customer2, string XOId1, string XOId2, Book.Model.Product Product, Book.Model.Product Product2, string CusXOId, int OrderColumn, int OrderType, bool? isSpecial, string product_Id, string productCategoryId, string currency)
         {
-            StringBuilder sb_xs = new StringBuilder("SELECT InvoiceId AS CHDH,(SELECT InvoiceDate FROM InvoiceXS WHERE InvoiceId = InvoiceXSDetail.InvoiceId) AS CHRQ,(SELECT ProductName+'{'+ISNULL(CustomerProductName,'')+'}' FROM Product WHERE ProductId = InvoiceXSDetail.ProductId) AS ProductName,(SELECT CustomerInvoiceXOId FROM InvoiceXO WHERE InvoiceId = InvoiceXOId ) AS KHDDBH,InvoiceXSDetailQuantity AS BCCHSL,InvoiceProductUnit AS DanWei,InvoiceXSDetailPrice AS DanJia,InvoiceAllowance AS ZheRang,ROUND(InvoiceXSDetailMoney,0) AS JinE,ROUND(InvoiceXSDetailTaxMoney,0)-ROUND(InvoiceXSDetailMoney,0) AS ShuiE,ROUND(InvoiceXSDetailTaxMoney,0) AS YingShou FROM InvoiceXSDetail WHERE 1 = 1 ");
-            //StringBuilder sb_xt = new StringBuilder("SELECT InvoiceId AS CHDH,(SELECT InvoiceDate FROM InvoiceXT WHERE InvoiceId = InvoiceXTDetail.InvoiceId) AS CHRQ,(SELECT ProductName+'{'+ISNULL(CustomerProductName,'')+'}' FROM Product WHERE ProductId = InvoiceXTDetail.ProductId ) AS ProductName,(SELECT CustomerInvoiceXOId FROM InvoiceXO WHERE InvoiceId = InvoiceXOId) AS KHDDBH,InvoiceXTDetailQuantity AS BCCHSL,InvoiceProductUnit AS DanWei,InvoiceXTDetailPrice AS DanJia,InvoiceXTDetailDiscount AS ZheRang,ROUND((0-InvoiceXTDetailMoney1),0) AS JinE,ROUND((0-InvoiceXTDetailMoney0)+(0-ISNULl(InvoiceXTDetailPrice,0)*isnull(InvoiceXTDetailQuantity,0)*0.05),0)-ROUND((0-InvoiceXTDetailMoney1),0) AS ShuiE,ROUND((0-InvoiceXTDetailMoney0)+(0-ISNULl(InvoiceXTDetailPrice,0)*isnull(InvoiceXTDetailQuantity,0)*0.05),0) AS YingShou FROM InvoiceXTDetail WHERE 1 = 1 ");
-            StringBuilder sb_xt = new StringBuilder("SELECT xd.InvoiceId AS CHDH,x.InvoiceDate AS CHRQ,(SELECT ProductName+'{'+ISNULL(CustomerProductName,'')+'}' FROM Product WHERE ProductId = xd.ProductId ) AS ProductName,(SELECT CustomerInvoiceXOId FROM InvoiceXO WHERE InvoiceId = InvoiceXOId) AS KHDDBH,InvoiceXTDetailQuantity AS BCCHSL,InvoiceProductUnit AS DanWei,InvoiceXTDetailPrice AS DanJia,InvoiceXTDetailDiscount AS ZheRang,ROUND((0-InvoiceXTDetailMoney1),0) AS JinE,ROUND((0-InvoiceXTDetailMoney1)*x.InvoiceTaxRate/100,0) AS ShuiE,ROUND((0-InvoiceXTDetailMoney1)*(1+x.InvoiceTaxRate/100),0) AS YingShou FROM InvoiceXTDetail xd left join InvoiceXT x on xd.InvoiceId=x.InvoiceId WHERE 1 = 1 ");
+            //StringBuilder sb_xs = new StringBuilder("SELECT InvoiceId AS CHDH,(SELECT InvoiceDate FROM InvoiceXS WHERE InvoiceId = InvoiceXSDetail.InvoiceId) AS CHRQ,(SELECT ProductName+'{'+ISNULL(CustomerProductName,'')+'}' FROM Product WHERE ProductId = InvoiceXSDetail.ProductId) AS ProductName,(SELECT CustomerInvoiceXOId FROM InvoiceXO WHERE InvoiceId = InvoiceXOId ) AS KHDDBH,InvoiceXSDetailQuantity AS BCCHSL,InvoiceProductUnit AS DanWei,InvoiceXSDetailPrice AS DanJia,InvoiceAllowance AS ZheRang,ROUND(InvoiceXSDetailMoney,0) AS JinE,ROUND(InvoiceXSDetailTaxMoney,0)-ROUND(InvoiceXSDetailMoney,0) AS ShuiE,ROUND(InvoiceXSDetailTaxMoney,0) AS YingShou FROM InvoiceXSDetail WHERE 1 = 1 ");
+            StringBuilder sb_xs = new StringBuilder("SELECT xs.InvoiceId AS CHDH,xs.InvoiceDate AS CHRQ,(SELECT ProductName+'{'+ISNULL(CustomerProductName,'')+'}' FROM Product WHERE ProductId = xsd.ProductId) AS ProductName,xo.CustomerInvoiceXOId  AS KHDDBH,xsd.InvoiceXSDetailQuantity AS BCCHSL,xsd.InvoiceProductUnit AS DanWei,xsd.InvoiceXSDetailPrice AS DanJia,xsd.InvoiceAllowance AS ZheRang,ROUND(xsd.InvoiceXSDetailMoney,0) AS JinE,ROUND(xsd.InvoiceXSDetailTaxMoney,0)-ROUND(xsd.InvoiceXSDetailMoney,0) AS ShuiE,ROUND(xsd.InvoiceXSDetailTaxMoney,0) AS YingShou ,ROUND((case when xsd.ExchangeRate=0 then 1 else xsd.ExchangeRate end)*xsd.InvoiceXSDetailTaxMoney,0) as TaibiTotal ,(case when xs.Currency='人民幣' then 'RMB' when xs.Currency='新台幣' then 'NTD' when xs.Currency='美金' then 'USD' when xs.Currency='歐元' then 'EURO' when xs.Currency='日圓' then 'JYP' end) as Currency FROM InvoiceXSDetail xsd left join InvoiceXS xs on xs.InvoiceId=xsd.InvoiceId left join InvoiceXO xo on xo.InvoiceId=xsd.InvoiceXOId WHERE 1 = 1  ");
+            //StringBuilder sb_xt = new StringBuilder("SELECT xd.InvoiceId AS CHDH,x.InvoiceDate AS CHRQ,(SELECT ProductName+'{'+ISNULL(CustomerProductName,'')+'}' FROM Product WHERE ProductId = xd.ProductId ) AS ProductName,(SELECT CustomerInvoiceXOId FROM InvoiceXO WHERE InvoiceId = InvoiceXOId) AS KHDDBH,InvoiceXTDetailQuantity AS BCCHSL,InvoiceProductUnit AS DanWei,InvoiceXTDetailPrice AS DanJia,InvoiceXTDetailDiscount AS ZheRang,ROUND((0-InvoiceXTDetailMoney1),0) AS JinE,ROUND((0-InvoiceXTDetailMoney1)*x.InvoiceTaxRate/100,0) AS ShuiE,ROUND((0-InvoiceXTDetailMoney1)*(1+x.InvoiceTaxRate/100),0) AS YingShou FROM InvoiceXTDetail xd left join InvoiceXT x on xd.InvoiceId=x.InvoiceId WHERE 1 = 1 ");
 
             //时间日期
-            sb_xs.Append(" AND InvoiceId IN (SELECT InvoiceId FROM InvoiceXS WHERE InvoiceDate BETWEEN '" + StartDate.ToString("yyyy-MM-dd") + "' AND '" + EndDate.Date.AddDays(1).ToString("yyyy-MM-dd") + "')");
-            sb_xt.Append(" AND xd.InvoiceId IN (SELECT InvoiceId FROM InvoiceXT WHERE InvoiceDate BETWEEN '" + StartDate.ToString("yyyy-MM-dd") + "' AND '" + EndDate.Date.AddDays(1).ToString("yyyy-MM-dd") + "')");
+            sb_xs.Append(" AND xs.InvoiceDate BETWEEN '" + StartDate.ToString("yyyy-MM-dd") + "' AND '" + EndDate.Date.AddDays(1).ToString("yyyy-MM-dd") + "'");
+            //sb_xt.Append(" AND xd.InvoiceId IN (SELECT InvoiceId FROM InvoiceXT WHERE InvoiceDate BETWEEN '" + StartDate.ToString("yyyy-MM-dd") + "' AND '" + EndDate.Date.AddDays(1).ToString("yyyy-MM-dd") + "')");
 
             //预交日期
             if (Yjri1 != global::Helper.DateTimeParse.NullDate && Yjri2 != global::Helper.DateTimeParse.EndDate)
-                sb_xs.Append(" AND InvoiceXOId IN (SELECT InvoiceId FROM InvoiceXO WHERE InvoiceYjrq BETWEEN '" + Yjri1.ToString("yyyy-MM-dd") + "' AND '" + Yjri2.Date.AddDays(1).ToString("yyyy-MM-dd") + "')");
+                sb_xs.Append(" AND xo.InvoiceYjrq BETWEEN '" + Yjri1.ToString("yyyy-MM-dd") + "' AND '" + Yjri2.Date.AddDays(1).ToString("yyyy-MM-dd") + "'");
 
             //客户
             if (Customer1 != null && Customer2 != null)
             {
-                sb_xs.Append(" AND InvoiceId IN (SELECT InvoiceId FROM InvoiceXS WHERE CustomerId IN (SELECT CustomerId FROM Customer WHERE Id BETWEEN '" + Customer1.Id + "' AND '" + Customer2.Id + "'))");
-                sb_xt.Append(" AND xd.InvoiceId IN (SELECT InvoiceId FROM InvoiceXT WHERE CustomerId IN (SELECT CustomerId FROM Customer WHERE Id BETWEEN '" + Customer1.Id + "' AND '" + Customer2.Id + "'))");
+                sb_xs.Append(" AND xs.CustomerId IN (SELECT CustomerId FROM Customer WHERE Id BETWEEN '" + Customer1.Id + "' AND '" + Customer2.Id + "')");
+                //sb_xt.Append(" AND xd.InvoiceId IN (SELECT InvoiceId FROM InvoiceXT WHERE CustomerId IN (SELECT CustomerId FROM Customer WHERE Id BETWEEN '" + Customer1.Id + "' AND '" + Customer2.Id + "'))");
             }
 
             //头编号
             if (!string.IsNullOrEmpty(XOId1) && !string.IsNullOrEmpty(XOId2))
-                sb_xs.Append(" AND InvoiceId BETWEEN '" + XOId1 + "' AND '" + XOId2 + "'");
+                sb_xs.Append(" AND xs.InvoiceId BETWEEN '" + XOId1 + "' AND '" + XOId2 + "'");
 
             //客户订单编号
             if (!string.IsNullOrEmpty(CusXOId))
             {
-                sb_xs.Append(" AND InvoiceXOId IN (SELECT InvoiceId FROM InvoiceXO WHERE CustomerInvoiceXOId = '" + CusXOId + "')");
-                sb_xt.Append(" AND xd.InvoiceXOId IN (SELECT InvoiceId FROM InvoiceXO WHERE CustomerInvoiceXOId = '" + CusXOId + "')");
+                sb_xs.Append(" AND xo.CustomerInvoiceXOId = '" + CusXOId + "'");
+                //sb_xt.Append(" AND xd.InvoiceXOId IN (SELECT InvoiceId FROM InvoiceXO WHERE CustomerInvoiceXOId = '" + CusXOId + "')");
             }
             //商品
             if (Product != null && Product2 != null)
             {
-                sb_xs.Append(" AND ProductId IN (SELECT Product.ProductId FROM Product WHERE Id BETWEEN '" + Product.Id + "' AND '" + Product2.Id + "')");
-                sb_xt.Append(" AND xd.ProductId IN (SELECT Product.ProductId FROM Product WHERE Id BETWEEN '" + Product.Id + "' AND '" + Product2.Id + "')");
+                sb_xs.Append(" AND xsd.ProductId IN (SELECT Product.ProductId FROM Product WHERE Id BETWEEN '" + Product.Id + "' AND '" + Product2.Id + "')");
+                //sb_xt.Append(" AND xd.ProductId IN (SELECT Product.ProductId FROM Product WHERE Id BETWEEN '" + Product.Id + "' AND '" + Product2.Id + "')");
             }
             //商品編號 2018年12月28日17:39:40
             if (!string.IsNullOrEmpty(product_Id))
             {
-                sb_xs.Append(" AND ProductId IN (SELECT Product.ProductId FROM Product WHERE Id ='" + product_Id + "')");
-                sb_xt.Append(" AND xd.ProductId IN (SELECT Product.ProductId FROM Product WHERE Id ='" + product_Id + "')");
+                sb_xs.Append(" AND xsd.ProductId IN (SELECT Product.ProductId FROM Product WHERE Id ='" + product_Id + "')");
+                //sb_xt.Append(" AND xd.ProductId IN (SELECT Product.ProductId FROM Product WHERE Id ='" + product_Id + "')");
             }
 
             //特殊  只在应收账款明细表使用，其他引用 传递 null
             if (isSpecial != null)
             {
                 if ((bool)isSpecial)
-                    sb_xs.Append(" AND InvoiceId in (select InvoiceId from InvoiceXS where Special='" + 1 + "')");
+                    sb_xs.Append(" AND xs.Special='" + 1 + "'");
                 else
-                    sb_xs.Append(" AND InvoiceId in (select InvoiceId from InvoiceXS where Special='" + 0 + "'  or Special is null)");
+                    sb_xs.Append(" AND xs.Special='" + 0 + "'  or xs.Special is null");
             }
             if (!string.IsNullOrEmpty(productCategoryId))
             {
-                sb_xs.Append(" AND ProductId IN (SELECT Product.ProductId FROM Product WHERE ProductCategoryId ='" + productCategoryId + "')");
-                sb_xt.Append(" AND xd.ProductId IN (SELECT Product.ProductId FROM Product WHERE ProductCategoryId ='" + productCategoryId + "')");
+                sb_xs.Append(" AND xsd.ProductId IN (SELECT Product.ProductId FROM Product WHERE ProductCategoryId ='" + productCategoryId + "')");
+                //sb_xt.Append(" AND xd.ProductId IN (SELECT Product.ProductId FROM Product WHERE ProductCategoryId ='" + productCategoryId + "')");
             }
 
             //赠送的不算做应收
-            sb_xs.Append(" AND InvoiceXODetailId not in (select InvoiceXODetailId from InvoiceXODetail where Islargess=1)");
-            sb_xt.Append(" AND xd.InvoiceXODetailId not in (select InvoiceXODetailId from InvoiceXODetail where Islargess=1)");
+            //sb_xs.Append(" AND InvoiceXODetailId not in (select InvoiceXODetailId from InvoiceXODetail where Islargess=1)");
+            //sb_xt.Append(" AND xd.InvoiceXODetailId not in (select InvoiceXODetailId from InvoiceXODetail where Islargess=1)");
 
-            string sql = sb_xs.ToString() + " UNION ALL " + sb_xt.ToString() + " order by CHDH,CHRQ";
+            //幣別
+            if (!string.IsNullOrEmpty(currency) && currency != "全部")
+            {
+                sb_xs.Append(" and xs.Currency = '" + currency + "' ");
+            }
+
+
+            //string sql = sb_xs.ToString() + " UNION ALL " + sb_xt.ToString() + " order by CHDH,CHRQ";
+            string sql = sb_xs.ToString() + " order by CHDH,CHRQ";
 
             using (SqlConnection con = new SqlConnection(sqlmapper.DataSource.ConnectionString))
             {
