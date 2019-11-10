@@ -858,6 +858,11 @@ namespace Book.UI.Invoices.XS
                     this.comboBoxEditCurrency.Enabled = false;
                     this.comboBoxEditCurrency.Text = xo.Invoice.Currency;
 
+                    if (xo.Invoice.Currency.Contains("台币") || xo.Invoice.Currency.Contains("台幣"))
+                        spinEditInvoiceTaxRate.EditValue = 5;
+                    else
+                        spinEditInvoiceTaxRate.EditValue = 0;
+
                     foreach (Model.InvoiceXODetail xos in form.key)
                     {
                         Model.InvoiceXSDetail xtdetail = new InvoiceXSDetail();
@@ -1094,32 +1099,6 @@ namespace Book.UI.Invoices.XS
             invoice.Details.Remove(detail);
             this.gridControl1.RefreshDataSource();
             UpdateMoneyFields();
-        }
-
-        //稅率變化
-        private void spinEditInvoiceTaxRate_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
-        {
-            int index = e.Button.Index - 1;
-            switch (index)
-            {
-                case 1:
-                    flag = 1;
-                    TaxMethod();
-                    break;
-                case 2:
-                    flag = 2;
-                    TaxMethod();
-                    break;
-                default:
-                    flag = 0;
-                    TaxMethod();
-                    //this.spinEditInvoiceTaxRate.Properties.Buttons[1].Enabled = false;
-                    //this.spinEditInvoiceTaxRate.Properties.Buttons[2].Enabled = true;
-                    //this.spinEditInvoiceTaxRate.Properties.Buttons[3].Enabled = true;
-
-                    break;
-            }
-            this.gridControl1.RefreshDataSource();
         }
 
         private void TaxMethod()
@@ -1513,6 +1492,32 @@ namespace Book.UI.Invoices.XS
             this.UpdateMoneyFields();
         }
 
+        //稅率變化
+        private void spinEditInvoiceTaxRate_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            int index = e.Button.Index - 1;
+            switch (index)
+            {
+                case 1:
+                    flag = 1;
+                    TaxMethod();
+                    break;
+                case 2:
+                    flag = 2;
+                    TaxMethod();
+                    break;
+                default:
+                    flag = 0;
+                    TaxMethod();
+                    //this.spinEditInvoiceTaxRate.Properties.Buttons[1].Enabled = false;
+                    //this.spinEditInvoiceTaxRate.Properties.Buttons[2].Enabled = true;
+                    //this.spinEditInvoiceTaxRate.Properties.Buttons[3].Enabled = true;
+
+                    break;
+            }
+            this.gridControl1.RefreshDataSource();
+        }
+
         private void spinEditInvoiceTaxRate_EditValueChanged(object sender, EventArgs e)
         {
             if (this.action != "view")
@@ -1557,7 +1562,7 @@ namespace Book.UI.Invoices.XS
                 this.UpdateMoneyFields();
             }
         }
-       
+
         //内销打印
         private void bar_NeixiaoPrint_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
