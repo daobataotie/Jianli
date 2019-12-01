@@ -1392,6 +1392,9 @@
   <data name="colDonatetowards.VisibleIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
+  <data name="colDonatetowards.Width" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
   <data name="colInvoiceAllowance.Caption" xml:space="preserve">
     <value>折让</value>
   </data>
@@ -1418,6 +1421,9 @@
   </data>
   <data name="colInvoiceAllowance.VisibleIndex" type="System.Int32, mscorlib">
     <value>12</value>
+  </data>
+  <data name="colInvoiceAllowance.Width" type="System.Int32, mscorlib">
+    <value>55</value>
   </data>
   <data name="colInvoiceXSDetailPrice.Caption" xml:space="preserve">
     <value>单价</value>

@@ -23,8 +23,10 @@ namespace Book.UI.Accounting.Report
             this.TCSubId.DataBindings.Add("Text", this.DataSource, "Subject_Id");
             this.TCSubName.DataBindings.Add("Text", this.DataSource, "SubjectName");
             this.TCSummary.DataBindings.Add("Text", this.DataSource, "Summary");
-            this.TCJMoney.DataBindings.Add("Text", this.DataSource, "JMoney", "{0:0.00}");
-            this.TCDMoney.DataBindings.Add("Text", this.DataSource, "DMoney", "{0:0.00}");
+            //this.TCJMoney.DataBindings.Add("Text", this.DataSource, "JMoney", "{0:0.00}");
+            //this.TCDMoney.DataBindings.Add("Text", this.DataSource, "DMoney", "{0:0.00}");
+            this.TCJMoney.DataBindings.Add("Text", this.DataSource, "JMoney", "{0:N0}");
+            this.TCDMoney.DataBindings.Add("Text", this.DataSource, "DMoney", "{0:N0}");
         }
 
     }

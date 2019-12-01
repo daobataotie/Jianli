@@ -73,137 +73,50 @@
             // 
             // imageCollection1
             // 
-            resources.ApplyResources(this.imageCollection1, "imageCollection1");
             this.imageCollection1.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection1.ImageStream")));
-            // 
-            // barButtonItemFirst
-            // 
-            this.barButtonItemFirst.AccessibleDescription = null;
-            this.barButtonItemFirst.AccessibleName = null;
-            resources.ApplyResources(this.barButtonItemFirst, "barButtonItemFirst");
-            // 
-            // barButtonItemPrint
-            // 
-            this.barButtonItemPrint.AccessibleDescription = null;
-            this.barButtonItemPrint.AccessibleName = null;
-            resources.ApplyResources(this.barButtonItemPrint, "barButtonItemPrint");
             // 
             // bar1
             // 
             this.bar1.OptionsBar.AllowQuickCustomization = false;
             this.bar1.OptionsBar.UseWholeRow = true;
-            resources.ApplyResources(this.bar1, "bar1");
-            // 
-            // barButtonItemNew
-            // 
-            this.barButtonItemNew.AccessibleDescription = null;
-            this.barButtonItemNew.AccessibleName = null;
-            resources.ApplyResources(this.barButtonItemNew, "barButtonItemNew");
             // 
             // layoutControl1
             // 
-            this.layoutControl1.AccessibleDescription = null;
-            this.layoutControl1.AccessibleName = null;
-            resources.ApplyResources(this.layoutControl1, "layoutControl1");
-            this.layoutControl1.BackgroundImage = null;
             this.layoutControl1.Controls.Add(this.txt_Address);
             this.layoutControl1.Controls.Add(this.txt_SWIFTCode);
             this.layoutControl1.Controls.Add(this.txt_Id);
             this.layoutControl1.Controls.Add(this.gridControl1);
             this.layoutControl1.Controls.Add(this.textEditName);
             this.layoutControl1.Controls.Add(this.textEditDescription);
-            this.layoutControl1.Font = null;
+            resources.ApplyResources(this.layoutControl1, "layoutControl1");
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
             // 
             // txt_Address
             // 
             resources.ApplyResources(this.txt_Address, "txt_Address");
-            this.txt_Address.BackgroundImage = null;
-            this.txt_Address.EditValue = null;
             this.txt_Address.MenuManager = this.barManager1;
             this.txt_Address.Name = "txt_Address";
-            this.txt_Address.Properties.AccessibleDescription = null;
-            this.txt_Address.Properties.AccessibleName = null;
-            this.txt_Address.Properties.AutoHeight = ((bool)(resources.GetObject("txt_Address.Properties.AutoHeight")));
-            this.txt_Address.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("txt_Address.Properties.Mask.AutoComplete")));
-            this.txt_Address.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("txt_Address.Properties.Mask.BeepOnError")));
-            this.txt_Address.Properties.Mask.EditMask = resources.GetString("txt_Address.Properties.Mask.EditMask");
-            this.txt_Address.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("txt_Address.Properties.Mask.IgnoreMaskBlank")));
-            this.txt_Address.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("txt_Address.Properties.Mask.MaskType")));
-            this.txt_Address.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("txt_Address.Properties.Mask.PlaceHolder")));
-            this.txt_Address.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("txt_Address.Properties.Mask.SaveLiteral")));
-            this.txt_Address.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("txt_Address.Properties.Mask.ShowPlaceHolders")));
-            this.txt_Address.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("txt_Address.Properties.Mask.UseMaskAsDisplayFormat")));
-            this.txt_Address.Properties.NullValuePrompt = resources.GetString("txt_Address.Properties.NullValuePrompt");
-            this.txt_Address.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("txt_Address.Properties.NullValuePromptShowForEmptyValue")));
             this.txt_Address.StyleController = this.layoutControl1;
             // 
             // txt_SWIFTCode
             // 
             resources.ApplyResources(this.txt_SWIFTCode, "txt_SWIFTCode");
-            this.txt_SWIFTCode.BackgroundImage = null;
-            this.txt_SWIFTCode.EditValue = null;
             this.txt_SWIFTCode.MenuManager = this.barManager1;
             this.txt_SWIFTCode.Name = "txt_SWIFTCode";
-            this.txt_SWIFTCode.Properties.AccessibleDescription = null;
-            this.txt_SWIFTCode.Properties.AccessibleName = null;
-            this.txt_SWIFTCode.Properties.AutoHeight = ((bool)(resources.GetObject("txt_SWIFTCode.Properties.AutoHeight")));
-            this.txt_SWIFTCode.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("txt_SWIFTCode.Properties.Mask.AutoComplete")));
-            this.txt_SWIFTCode.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("txt_SWIFTCode.Properties.Mask.BeepOnError")));
-            this.txt_SWIFTCode.Properties.Mask.EditMask = resources.GetString("txt_SWIFTCode.Properties.Mask.EditMask");
-            this.txt_SWIFTCode.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("txt_SWIFTCode.Properties.Mask.IgnoreMaskBlank")));
-            this.txt_SWIFTCode.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("txt_SWIFTCode.Properties.Mask.MaskType")));
-            this.txt_SWIFTCode.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("txt_SWIFTCode.Properties.Mask.PlaceHolder")));
-            this.txt_SWIFTCode.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("txt_SWIFTCode.Properties.Mask.SaveLiteral")));
-            this.txt_SWIFTCode.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("txt_SWIFTCode.Properties.Mask.ShowPlaceHolders")));
-            this.txt_SWIFTCode.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("txt_SWIFTCode.Properties.Mask.UseMaskAsDisplayFormat")));
-            this.txt_SWIFTCode.Properties.NullValuePrompt = resources.GetString("txt_SWIFTCode.Properties.NullValuePrompt");
-            this.txt_SWIFTCode.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("txt_SWIFTCode.Properties.NullValuePromptShowForEmptyValue")));
             this.txt_SWIFTCode.StyleController = this.layoutControl1;
             // 
             // txt_Id
             // 
             resources.ApplyResources(this.txt_Id, "txt_Id");
-            this.txt_Id.BackgroundImage = null;
-            this.txt_Id.EditValue = null;
             this.txt_Id.MenuManager = this.barManager1;
             this.txt_Id.Name = "txt_Id";
-            this.txt_Id.Properties.AccessibleDescription = null;
-            this.txt_Id.Properties.AccessibleName = null;
-            this.txt_Id.Properties.AutoHeight = ((bool)(resources.GetObject("txt_Id.Properties.AutoHeight")));
-            this.txt_Id.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("txt_Id.Properties.Mask.AutoComplete")));
-            this.txt_Id.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("txt_Id.Properties.Mask.BeepOnError")));
-            this.txt_Id.Properties.Mask.EditMask = resources.GetString("txt_Id.Properties.Mask.EditMask");
-            this.txt_Id.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("txt_Id.Properties.Mask.IgnoreMaskBlank")));
-            this.txt_Id.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("txt_Id.Properties.Mask.MaskType")));
-            this.txt_Id.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("txt_Id.Properties.Mask.PlaceHolder")));
-            this.txt_Id.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("txt_Id.Properties.Mask.SaveLiteral")));
-            this.txt_Id.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("txt_Id.Properties.Mask.ShowPlaceHolders")));
-            this.txt_Id.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("txt_Id.Properties.Mask.UseMaskAsDisplayFormat")));
-            this.txt_Id.Properties.NullValuePrompt = resources.GetString("txt_Id.Properties.NullValuePrompt");
-            this.txt_Id.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("txt_Id.Properties.NullValuePromptShowForEmptyValue")));
             this.txt_Id.StyleController = this.layoutControl1;
             // 
             // gridControl1
             // 
-            this.gridControl1.AccessibleDescription = null;
-            this.gridControl1.AccessibleName = null;
-            resources.ApplyResources(this.gridControl1, "gridControl1");
-            this.gridControl1.BackgroundImage = null;
             this.gridControl1.DataSource = this.bindingSourceBank;
-            this.gridControl1.EmbeddedNavigator.AccessibleDescription = null;
-            this.gridControl1.EmbeddedNavigator.AccessibleName = null;
-            this.gridControl1.EmbeddedNavigator.AllowHtmlTextInToolTip = ((DevExpress.Utils.DefaultBoolean)(resources.GetObject("gridControl1.EmbeddedNavigator.AllowHtmlTextInToolTip")));
-            this.gridControl1.EmbeddedNavigator.Anchor = ((System.Windows.Forms.AnchorStyles)(resources.GetObject("gridControl1.EmbeddedNavigator.Anchor")));
-            this.gridControl1.EmbeddedNavigator.BackgroundImage = null;
-            this.gridControl1.EmbeddedNavigator.BackgroundImageLayout = ((System.Windows.Forms.ImageLayout)(resources.GetObject("gridControl1.EmbeddedNavigator.BackgroundImageLayout")));
-            this.gridControl1.EmbeddedNavigator.ImeMode = ((System.Windows.Forms.ImeMode)(resources.GetObject("gridControl1.EmbeddedNavigator.ImeMode")));
-            this.gridControl1.EmbeddedNavigator.TextLocation = ((DevExpress.XtraEditors.NavigatorButtonsTextLocation)(resources.GetObject("gridControl1.EmbeddedNavigator.TextLocation")));
-            this.gridControl1.EmbeddedNavigator.ToolTip = resources.GetString("gridControl1.EmbeddedNavigator.ToolTip");
-            this.gridControl1.EmbeddedNavigator.ToolTipIconType = ((DevExpress.Utils.ToolTipIconType)(resources.GetObject("gridControl1.EmbeddedNavigator.ToolTipIconType")));
-            this.gridControl1.EmbeddedNavigator.ToolTipTitle = resources.GetString("gridControl1.EmbeddedNavigator.ToolTipTitle");
-            this.gridControl1.Font = null;
+            resources.ApplyResources(this.gridControl1, "gridControl1");
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -211,7 +124,6 @@
             // 
             // gridView1
             // 
-            resources.ApplyResources(this.gridView1, "gridView1");
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
             this.gridColumn2,
@@ -250,45 +162,13 @@
             // textEditName
             // 
             resources.ApplyResources(this.textEditName, "textEditName");
-            this.textEditName.BackgroundImage = null;
-            this.textEditName.EditValue = null;
             this.textEditName.Name = "textEditName";
-            this.textEditName.Properties.AccessibleDescription = null;
-            this.textEditName.Properties.AccessibleName = null;
-            this.textEditName.Properties.AutoHeight = ((bool)(resources.GetObject("textEditName.Properties.AutoHeight")));
-            this.textEditName.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("textEditName.Properties.Mask.AutoComplete")));
-            this.textEditName.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("textEditName.Properties.Mask.BeepOnError")));
-            this.textEditName.Properties.Mask.EditMask = resources.GetString("textEditName.Properties.Mask.EditMask");
-            this.textEditName.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("textEditName.Properties.Mask.IgnoreMaskBlank")));
-            this.textEditName.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("textEditName.Properties.Mask.MaskType")));
-            this.textEditName.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("textEditName.Properties.Mask.PlaceHolder")));
-            this.textEditName.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("textEditName.Properties.Mask.SaveLiteral")));
-            this.textEditName.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("textEditName.Properties.Mask.ShowPlaceHolders")));
-            this.textEditName.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("textEditName.Properties.Mask.UseMaskAsDisplayFormat")));
-            this.textEditName.Properties.NullValuePrompt = resources.GetString("textEditName.Properties.NullValuePrompt");
-            this.textEditName.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("textEditName.Properties.NullValuePromptShowForEmptyValue")));
             this.textEditName.StyleController = this.layoutControl1;
             // 
             // textEditDescription
             // 
             resources.ApplyResources(this.textEditDescription, "textEditDescription");
-            this.textEditDescription.BackgroundImage = null;
-            this.textEditDescription.EditValue = null;
             this.textEditDescription.Name = "textEditDescription";
-            this.textEditDescription.Properties.AccessibleDescription = null;
-            this.textEditDescription.Properties.AccessibleName = null;
-            this.textEditDescription.Properties.AutoHeight = ((bool)(resources.GetObject("textEditDescription.Properties.AutoHeight")));
-            this.textEditDescription.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("textEditDescription.Properties.Mask.AutoComplete")));
-            this.textEditDescription.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("textEditDescription.Properties.Mask.BeepOnError")));
-            this.textEditDescription.Properties.Mask.EditMask = resources.GetString("textEditDescription.Properties.Mask.EditMask");
-            this.textEditDescription.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("textEditDescription.Properties.Mask.IgnoreMaskBlank")));
-            this.textEditDescription.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("textEditDescription.Properties.Mask.MaskType")));
-            this.textEditDescription.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("textEditDescription.Properties.Mask.PlaceHolder")));
-            this.textEditDescription.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("textEditDescription.Properties.Mask.SaveLiteral")));
-            this.textEditDescription.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("textEditDescription.Properties.Mask.ShowPlaceHolders")));
-            this.textEditDescription.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("textEditDescription.Properties.Mask.UseMaskAsDisplayFormat")));
-            this.textEditDescription.Properties.NullValuePrompt = resources.GetString("textEditDescription.Properties.NullValuePrompt");
-            this.textEditDescription.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("textEditDescription.Properties.NullValuePromptShowForEmptyValue")));
             this.textEditDescription.StyleController = this.layoutControl1;
             // 
             // layoutControlGroup1
@@ -309,8 +189,6 @@
             // layoutControlItem3
             // 
             this.layoutControlItem3.AppearanceItemCaption.Font = ((System.Drawing.Font)(resources.GetObject("layoutControlItem3.AppearanceItemCaption.Font")));
-            this.layoutControlItem3.AppearanceItemCaption.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("layoutControlItem3.AppearanceItemCaption.GradientMode")));
-            this.layoutControlItem3.AppearanceItemCaption.Image = null;
             this.layoutControlItem3.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem3.Control = this.textEditName;
             resources.ApplyResources(this.layoutControlItem3, "layoutControlItem3");
@@ -368,12 +246,9 @@
             // 
             // EditForm
             // 
-            this.AccessibleDescription = null;
-            this.AccessibleName = null;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.layoutControl1);
-            this.Icon = null;
             this.Name = "EditForm";
             this.Controls.SetChildIndex(this.layoutControl1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
