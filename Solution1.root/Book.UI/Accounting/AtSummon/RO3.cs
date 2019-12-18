@@ -21,8 +21,8 @@ namespace Book.UI.Accounting.AtSummon
             this.lblDate.DataBindings.Add("Text", this.DataSource, Model.AtSummon.PRO_SummonDate, "{0:yyyy-MM-dd}");
             this.lblId.DataBindings.Add("Text", this.DataSource, Model.AtSummon.PRO_Id);
             this.lblCategory.DataBindings.Add("Text", this.DataSource, Model.AtSummon.PRO_SummonCategory);
-            this.lblJieTotal.DataBindings.Add("Text", this.DataSource, Model.AtSummon.PRO_TotalDebits, "{0:F2}");
-            this.lblDaiTotal.DataBindings.Add("Text", this.DataSource, Model.AtSummon.PRO_CreditTotal, "{0:F2}");
+            this.lblJieTotal.DataBindings.Add("Text", this.DataSource, Model.AtSummon.PRO_TotalDebits, "{0:N0}");
+            this.lblDaiTotal.DataBindings.Add("Text", this.DataSource, Model.AtSummon.PRO_CreditTotal, "{0:N0}");
             this.xrSubreport1.ReportSource = new RO2();
         }
 

@@ -156,11 +156,11 @@ namespace Book.DA.SQLServer
         }
 
         //应收账款明细表
-        public DataTable SelectbyConditionXBiao(DateTime StartDate, DateTime EndDate, DateTime Yjri1, DateTime Yjri2, Book.Model.Customer Customer1, Book.Model.Customer Customer2, string XOId1, string XOId2, Book.Model.Product Product, Book.Model.Product Product2, string CusXOId, int OrderColumn, int OrderType, bool? isSpecial, string product_Id, string productCategoryId, string currency)
+        public DataTable SelectbyConditionXBiao(DateTime StartDate, DateTime EndDate, DateTime Yjri1, DateTime Yjri2, Book.Model.Customer Customer1, Book.Model.Customer Customer2, Model.Employee startEmp, Model.Employee endEmp, string XOId1, string XOId2, Book.Model.Product Product, Book.Model.Product Product2, string CusXOId, int OrderColumn, int OrderType, bool? isSpecial, string product_Id, string productCategoryId, string currency)
         {
             //StringBuilder sb_xs = new StringBuilder("SELECT InvoiceId AS CHDH,(SELECT InvoiceDate FROM InvoiceXS WHERE InvoiceId = InvoiceXSDetail.InvoiceId) AS CHRQ,(SELECT ProductName+'{'+ISNULL(CustomerProductName,'')+'}' FROM Product WHERE ProductId = InvoiceXSDetail.ProductId) AS ProductName,(SELECT CustomerInvoiceXOId FROM InvoiceXO WHERE InvoiceId = InvoiceXOId ) AS KHDDBH,InvoiceXSDetailQuantity AS BCCHSL,InvoiceProductUnit AS DanWei,InvoiceXSDetailPrice AS DanJia,InvoiceAllowance AS ZheRang,ROUND(InvoiceXSDetailMoney,0) AS JinE,ROUND(InvoiceXSDetailTaxMoney,0)-ROUND(InvoiceXSDetailMoney,0) AS ShuiE,ROUND(InvoiceXSDetailTaxMoney,0) AS YingShou FROM InvoiceXSDetail WHERE 1 = 1 ");
-            StringBuilder sb_xs = new StringBuilder("SELECT xs.InvoiceId AS CHDH,xs.InvoiceDate AS CHRQ,(SELECT ProductName+'{'+ISNULL(CustomerProductName,'')+'}' FROM Product WHERE ProductId = xsd.ProductId) AS ProductName,xo.CustomerInvoiceXOId  AS KHDDBH,xsd.InvoiceXSDetailQuantity AS BCCHSL,xsd.InvoiceProductUnit AS DanWei,xsd.InvoiceXSDetailPrice AS DanJia,xsd.InvoiceAllowance AS ZheRang,ROUND(xsd.InvoiceXSDetailMoney,0) AS JinE,ROUND(xsd.InvoiceXSDetailTaxMoney,0)-ROUND(xsd.InvoiceXSDetailMoney,0) AS ShuiE,ROUND(xsd.InvoiceXSDetailTaxMoney,0) AS YingShou ,ROUND((case when xsd.ExchangeRate=0 then 1 else xsd.ExchangeRate end)*xsd.InvoiceXSDetailTaxMoney,0) as TaibiTotal ,(case when xs.Currency='人民幣' then 'RMB' when xs.Currency='新台幣' then 'NTD' when xs.Currency='美金' then 'USD' when xs.Currency='歐元' then 'EURO' when xs.Currency='日圓' then 'JYP' end) as Currency FROM InvoiceXSDetail xsd left join InvoiceXS xs on xs.InvoiceId=xsd.InvoiceId left join InvoiceXO xo on xo.InvoiceId=xsd.InvoiceXOId WHERE 1 = 1  ");
-            //StringBuilder sb_xt = new StringBuilder("SELECT xd.InvoiceId AS CHDH,x.InvoiceDate AS CHRQ,(SELECT ProductName+'{'+ISNULL(CustomerProductName,'')+'}' FROM Product WHERE ProductId = xd.ProductId ) AS ProductName,(SELECT CustomerInvoiceXOId FROM InvoiceXO WHERE InvoiceId = InvoiceXOId) AS KHDDBH,InvoiceXTDetailQuantity AS BCCHSL,InvoiceProductUnit AS DanWei,InvoiceXTDetailPrice AS DanJia,InvoiceXTDetailDiscount AS ZheRang,ROUND((0-InvoiceXTDetailMoney1),0) AS JinE,ROUND((0-InvoiceXTDetailMoney1)*x.InvoiceTaxRate/100,0) AS ShuiE,ROUND((0-InvoiceXTDetailMoney1)*(1+x.InvoiceTaxRate/100),0) AS YingShou FROM InvoiceXTDetail xd left join InvoiceXT x on xd.InvoiceId=x.InvoiceId WHERE 1 = 1 ");
+            StringBuilder sb_xs = new StringBuilder("SELECT xs.InvoiceId AS CHDH,xs.InvoiceDate AS CHRQ,xs.CustomerId,(SELECT ProductName+'{'+ISNULL(CustomerProductName,'')+'}' FROM Product WHERE ProductId = xsd.ProductId) AS ProductName,xo.CustomerInvoiceXOId  AS KHDDBH,xsd.InvoiceXSDetailQuantity AS BCCHSL,xsd.InvoiceProductUnit AS DanWei,xsd.InvoiceXSDetailPrice AS DanJia,xsd.InvoiceAllowance AS ZheRang,ROUND(xsd.InvoiceXSDetailMoney,0) AS JinE,ROUND(xsd.InvoiceXSDetailTaxMoney,0)-ROUND(xsd.InvoiceXSDetailMoney,0) AS ShuiE,ROUND(xsd.InvoiceXSDetailTaxMoney,0) AS YingShou ,ROUND((case when xsd.ExchangeRate=0 then 1 else xsd.ExchangeRate end)*xsd.InvoiceXSDetailTaxMoney,0) as TaibiTotal ,(case when xs.Currency='人民幣' then 'RMB' when xs.Currency='新台幣' then 'NTD' when xs.Currency='美金' then 'USD' when xs.Currency='歐元' then 'EURO' when xs.Currency='日圓' then 'JYP' end) as Currency FROM InvoiceXSDetail xsd left join InvoiceXS xs on xs.InvoiceId=xsd.InvoiceId left join InvoiceXO xo on xo.InvoiceId=xsd.InvoiceXOId WHERE 1 = 1  ");
+            //StringBuilder sb_xt = new StringBuilder("SELECT xd.InvoiceId AS CHDH,x.InvoiceDate AS CHRQ,(select CustomerId from InvoiceXT where InvoiceId =xd.InvoiceId) as CustomerId,(SELECT ProductName+'{'+ISNULL(CustomerProductName,'')+'}' FROM Product WHERE ProductId = xd.ProductId ) AS ProductName,(SELECT CustomerInvoiceXOId FROM InvoiceXO WHERE InvoiceId = InvoiceXOId) AS KHDDBH,InvoiceXTDetailQuantity AS BCCHSL,InvoiceProductUnit AS DanWei,InvoiceXTDetailPrice AS DanJia,InvoiceXTDetailDiscount AS ZheRang,ROUND((0-InvoiceXTDetailMoney1),0) AS JinE,ROUND((0-InvoiceXTDetailMoney1)*x.InvoiceTaxRate/100,0) AS ShuiE,ROUND((0-InvoiceXTDetailMoney1)*(1+x.InvoiceTaxRate/100),0) AS YingShou FROM InvoiceXTDetail xd left join InvoiceXT x on xd.InvoiceId=x.InvoiceId WHERE 1 = 1 ");
 
             //时间日期
             sb_xs.Append(" AND xs.InvoiceDate BETWEEN '" + StartDate.ToString("yyyy-MM-dd") + "' AND '" + EndDate.Date.AddDays(1).ToString("yyyy-MM-dd") + "'");
@@ -175,6 +175,10 @@ namespace Book.DA.SQLServer
             {
                 sb_xs.Append(" AND xs.CustomerId IN (SELECT CustomerId FROM Customer WHERE Id BETWEEN '" + Customer1.Id + "' AND '" + Customer2.Id + "')");
                 //sb_xt.Append(" AND xd.InvoiceId IN (SELECT InvoiceId FROM InvoiceXT WHERE CustomerId IN (SELECT CustomerId FROM Customer WHERE Id BETWEEN '" + Customer1.Id + "' AND '" + Customer2.Id + "'))");
+            }
+            if (startEmp != null && endEmp != null)
+            {
+                sb_xs.Append(" and xs.Employee0Id in (select EmployeeId from Employee where IDNo between '" + startEmp.IDNo + "' and '" + endEmp.IDNo + "')");
             }
 
             //头编号
@@ -226,7 +230,7 @@ namespace Book.DA.SQLServer
 
 
             //string sql = sb_xs.ToString() + " UNION ALL " + sb_xt.ToString() + " order by CHDH,CHRQ";
-            string sql = sb_xs.ToString() + " order by CHDH,CHRQ";
+            string sql = sb_xs.ToString() + " order by CustomerId,CHDH,CHRQ";
 
             using (SqlConnection con = new SqlConnection(sqlmapper.DataSource.ConnectionString))
             {

@@ -23,7 +23,7 @@ namespace Book.UI.Accounting.AtSummon
             this.TCKemuId.DataBindings.Add("Text", this.DataSource, "Subject." + Model.AtAccountSubject.PRO_Id);
             this.TCKemuName.DataBindings.Add("Text", this.DataSource, "Subject." + Model.AtAccountSubject.PRO_SubjectName);
             this.TCNote.DataBindings.Add("Text", this.DataSource, Model.AtSummonDetail.PRO_Summary);
-            this.TCMoney.DataBindings.Add("Text", this.DataSource, Model.AtSummonDetail.PRO_AMoney, "{0:F2}");
+            this.TCMoney.DataBindings.Add("Text", this.DataSource, Model.AtSummonDetail.PRO_AMoney, "{0:N0}");
         }
 
         void RO2_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)

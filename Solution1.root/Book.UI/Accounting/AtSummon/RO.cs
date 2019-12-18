@@ -20,15 +20,15 @@ namespace Book.UI.Accounting.AtSummon
             this.lblDate.Text = atSummon.SummonDate == null ? "" : atSummon.SummonDate.Value.ToString("yyyy-MM-dd");
             this.lblId.Text = atSummon.Id;
             this.lblCategory.Text = atSummon.SummonCategory;
-            this.lblJieTotal.Text = atSummon.TotalDebits == null ? "0" : atSummon.TotalDebits.Value.ToString("F2");
-            this.lblDaiTotal.Text = atSummon.CreditTotal == null ? "0" : atSummon.CreditTotal.Value.ToString("F2");
+            this.lblJieTotal.Text = atSummon.TotalDebits == null ? "0" : atSummon.TotalDebits.Value.ToString("N0");
+            this.lblDaiTotal.Text = atSummon.CreditTotal == null ? "0" : atSummon.CreditTotal.Value.ToString("N0");
 
             this.DataSource = atSummon.Details;
             this.TCJieDai.DataBindings.Add("Text", this.DataSource, Model.AtSummonDetail.PRO_Lending);
             this.TCKemuId.DataBindings.Add("Text", this.DataSource, "Subject." + Model.AtAccountSubject.PRO_Id);
             this.TCKemuName.DataBindings.Add("Text", this.DataSource, "Subject." + Model.AtAccountSubject.PRO_SubjectName);
             this.TCNote.DataBindings.Add("Text", this.DataSource, Model.AtSummonDetail.PRO_Summary);
-            this.TCMoney.DataBindings.Add("Text", this.DataSource, Model.AtSummonDetail.PRO_AMoney,"{0:F2}");
+            this.TCMoney.DataBindings.Add("Text", this.DataSource, Model.AtSummonDetail.PRO_AMoney, "{0:N0}");
         }
     }
 }

@@ -125,6 +125,12 @@ namespace Book.Model
             }
         }
 
+        public string PID
+        {
+            get;
+            set;
+        }
+
         private string _workHousename;
         public string WorkHousename
         {

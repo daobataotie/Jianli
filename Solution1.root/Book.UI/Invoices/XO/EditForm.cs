@@ -1748,6 +1748,18 @@ namespace Book.UI.Invoices.XO
 
         private void comboBoxEditCurrency_EditValueChanged(object sender, EventArgs e)
         {
+            if (this.action == "insert")
+            {
+                if ((comboBoxEditCurrency.Text.Contains("Ì¨±Ò") || comboBoxEditCurrency.Text.Contains("Ì¨ŽÅ")))
+                    spinEditInvoiceTaxRate1.EditValue = 5;
+                else
+                    spinEditInvoiceTaxRate1.EditValue = 0;
+
+                flag = 1;
+                this.spinEditInvoiceTaxRate1.Properties.Buttons[1].Enabled = flag == 1 ? false : true;
+                this.spinEditInvoiceTaxRate1.Properties.Buttons[2].Enabled = flag == 2 ? false : true;
+            }
+
             this.UpdateMoneyFields();
         }
 

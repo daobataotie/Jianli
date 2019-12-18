@@ -31,8 +31,8 @@ namespace Book.UI.Accounting.AtSummon
             this.TCSubId.DataBindings.Add("Text", this.DataSource, "Subject." + Model.AtAccountSubject.PRO_Id);
             this.TC_SubName.DataBindings.Add("Text", this.DataSource, "Subject." + Model.AtAccountSubject.PRO_SubjectName);
             this.TC_Note.DataBindings.Add("Text", this.DataSource, Model.AtSummonDetail.PRO_Summary);
-            this.TC_JMoney.DataBindings.Add("Text", this.DataSource, "JMoney", "{0:0.##}");
-            this.TC_DMoney.DataBindings.Add("Text", this.DataSource, "DMoney", "{0:0.##}");
+            this.TC_JMoney.DataBindings.Add("Text", this.DataSource, "JMoney", "{0:N0}");
+            this.TC_DMoney.DataBindings.Add("Text", this.DataSource, "DMoney", "{0:N0}");
         }
 
     }

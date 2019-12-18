@@ -31,7 +31,7 @@ namespace Book.UI.Query
             //    dt = this.detailManager.SelectbyConditionXBiao(condition.StartDate, condition.EndDate, condition.Yjri1, condition.Yjri2, condition.Customer1, condition.Customer2, condition.XOId1, condition.XOId2, condition.Product, condition.Product2, condition.CusXOId, condition.OrderColumn, condition.OrderType, condition.Special, condition.Product_Id, condition.ProductCategoryId);
             //}
             //else
-            this.DataSource = this.detailManager.SelectbyConditionXBiao(condition.StartDate, condition.EndDate, condition.Yjri1, condition.Yjri2, condition.Customer1, condition.Customer2, condition.XOId1, condition.XOId2, condition.Product, condition.Product2, condition.CusXOId, condition.OrderColumn, condition.OrderType, null, condition.Product_Id, condition.ProductCategoryId, condition.Currency);
+            this.DataSource = this.detailManager.SelectbyConditionXBiao(condition.StartDate, condition.EndDate, condition.Yjri1, condition.Yjri2, condition.Customer1, condition.Customer2, condition.Employee1, condition.Employee2, condition.XOId1, condition.XOId2, condition.Product, condition.Product2, condition.CusXOId, condition.OrderColumn, condition.OrderType, null, condition.Product_Id, condition.ProductCategoryId, condition.Currency);
 
             //if (this.DataSource == null || (this.DataSource as IList<Model.InvoiceXSDetail>).Count == 0)
             if ((this.DataSource == null || (this.DataSource as System.Data.DataTable).Rows.Count == 0) && dt.Rows.Count == 0)
