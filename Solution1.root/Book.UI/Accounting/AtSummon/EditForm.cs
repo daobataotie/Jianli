@@ -30,6 +30,7 @@ namespace Book.UI.Accounting.AtSummon
             //this.invalidValueExceptions.Add(Model.AtSummon.PRO_SummonId, new AA(Properties.Resources.EntityExists, this.textEditSummonId));
 
             this.bindingSource2.DataSource = new BL.AtAccountSubjectManager().Select();
+            this.ncc_Employee.Choose = new Settings.BasicData.Employees.ChooseEmployee();
             //this.comboBoxEditSummonCategory.SelectedIndex = 0;  //默认选择第一项
 
             this.action = "view";
@@ -60,12 +61,15 @@ namespace Book.UI.Accounting.AtSummon
             this.atSummon.Details = new List<Model.AtSummonDetail>();
             this.atSummon.CreditTotal = 0;
             this.atSummon.TotalDebits = 0;
+            this.atSummon.SummonCategory = "轉帳傳票";
+            this.atSummon.EmployeeDS = BL.V.ActiveOperator.Employee;
             //if (this.action == "insert")
             //{
             Model.AtSummonDetail detail = new Model.AtSummonDetail();
             detail.SummonDetailId = Guid.NewGuid().ToString();
             detail.AMoney = 0;
             detail.Subject = new Book.Model.AtAccountSubject();
+
             switch (this.comboBoxEditSummonCategory.SelectedIndex)
             {
                 case 0:
@@ -103,7 +107,8 @@ namespace Book.UI.Accounting.AtSummon
             }
             this.atSummon.TotalDebits = this.spinEditTotalDebits.EditValue == null ? 0 : decimal.Parse(this.spinEditTotalDebits.EditValue.ToString());
             this.atSummon.CreditTotal = this.spinEditCreditTotal.EditValue == null ? 0 : decimal.Parse(this.spinEditCreditTotal.EditValue.ToString());
-
+            if (this.ncc_Employee.EditValue != null)
+                this.atSummon.EmployeeDSId = (this.ncc_Employee.EditValue as Model.Employee).EmployeeId;
 
             //借贷平衡
             if (this.comboBoxEditSummonCategory.SelectedIndex == 2)
@@ -134,6 +139,8 @@ namespace Book.UI.Accounting.AtSummon
                     }
                 }
             }
+
+            #region 不用
             //else
             //{
             //    Model.AtSummonDetail _md;
@@ -209,7 +216,8 @@ namespace Book.UI.Accounting.AtSummon
             //        }
             //    }
 
-            //}
+            //} 
+            #endregion
 
             foreach (var item in atSummon.Details)
             {
@@ -263,6 +271,11 @@ namespace Book.UI.Accounting.AtSummon
                 {
                     this.atSummon = this.atSummonManager.GetDetails(atSummon.SummonId);
                 }
+                else if (this.action == "update")
+                {
+                    this.atSummon.EmployeeDS = BL.V.ActiveOperator.Employee;
+                }
+
             }
             this.textEditSummonId.Text = this.atSummon.Id;
 
@@ -282,6 +295,7 @@ namespace Book.UI.Accounting.AtSummon
             this.bindingSource1.DataSource = this.atSummon.Details.Where(d => (!d.Lending.Contains(this.atSummon.Id))).ToList<Model.AtSummonDetail>();
 
             this.comboBoxEditSummonCategory.EditValue = this.atSummon.SummonCategory;
+            this.ncc_Employee.EditValue = this.atSummon.EmployeeDS;
 
             switch (this.action)
             {
@@ -442,7 +456,7 @@ namespace Book.UI.Accounting.AtSummon
 
         private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
-            //    Model.AtSummonDetail _detail = this.gridView1.GetRow(e.RowHandle) as Model.AtSummonDetail;
+            Model.AtSummonDetail _detail = this.gridView1.GetRow(e.RowHandle) as Model.AtSummonDetail;
             IList<Model.AtSummonDetail> _detailList = this.bindingSource1.DataSource as IList<Model.AtSummonDetail>;
 
             if (e.Column == this.colJinE || e.Column == this.colJieorDai)
@@ -450,6 +464,18 @@ namespace Book.UI.Accounting.AtSummon
                 this.spinEditTotalDebits.EditValue = _detailList.Where(d => d.Lending == "借").ToList().Sum(d => d.AMoney);
                 this.spinEditCreditTotal.EditValue = _detailList.Where(d => d.Lending == "貸").ToList().Sum(d => d.AMoney);
             }
+            else if (e.Column == this.colKemuBianHao || e.Column == this.colKeMuMingCheng)
+            {
+                if (!string.IsNullOrEmpty(_detail.SubjectId))  //&& string.IsNullOrEmpty(_detail.Summary)
+                {
+                    var subject = new BL.AtAccountSubjectManager().Get(_detail.SubjectId);
+                    if (subject != null && !string.IsNullOrEmpty(subject.CommonSummary))
+                    {
+                        _detail.Summary = subject.CommonSummary;
+                    }
+                }
+            }
+
 
             //this.bindingSource1.Position = this.bindingSource1.IndexOf(_detail);
             this.gridControl1.RefreshDataSource();

@@ -66,6 +66,8 @@
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.bar_Print = new DevExpress.XtraBars.BarButtonItem();
             this.bar_PrintTrans = new DevExpress.XtraBars.BarButtonItem();
+            this.ncc_Employee = new Book.UI.Invoices.NewChooseContorl();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -93,6 +95,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -125,6 +128,7 @@
             this.layoutControl1.Controls.Add(this.simpleButton2);
             this.layoutControl1.Controls.Add(this.simpleButton1);
             this.layoutControl1.Controls.Add(this.spinEditCreditTotal);
+            this.layoutControl1.Controls.Add(this.ncc_Employee);
             this.layoutControl1.Controls.Add(this.spinEditTotalDebits);
             this.layoutControl1.Controls.Add(this.textEditSummonId);
             this.layoutControl1.Controls.Add(this.dateEditSummonDate);
@@ -167,7 +171,7 @@
             this.spinEditCreditTotal.Name = "spinEditCreditTotal";
             this.spinEditCreditTotal.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.spinEditCreditTotal.Properties.DisplayFormat.FormatString = "0";
+            this.spinEditCreditTotal.Properties.DisplayFormat.FormatString = "N0";
             this.spinEditCreditTotal.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.spinEditCreditTotal.StyleController = this.layoutControl1;
             // 
@@ -177,7 +181,7 @@
             this.spinEditTotalDebits.Name = "spinEditTotalDebits";
             this.spinEditTotalDebits.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.spinEditTotalDebits.Properties.DisplayFormat.FormatString = "0";
+            this.spinEditTotalDebits.Properties.DisplayFormat.FormatString = "N0";
             this.spinEditTotalDebits.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.spinEditTotalDebits.StyleController = this.layoutControl1;
             // 
@@ -297,6 +301,8 @@
             // colZhaiYao
             // 
             resources.ApplyResources(this.colZhaiYao, "colZhaiYao");
+            this.colZhaiYao.DisplayFormat.FormatString = "N0";
+            this.colZhaiYao.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colZhaiYao.FieldName = "Summary";
             this.colZhaiYao.Name = "colZhaiYao";
             // 
@@ -304,7 +310,7 @@
             // 
             resources.ApplyResources(this.colJinE, "colJinE");
             this.colJinE.ColumnEdit = this.repositoryItemSpinEdit1;
-            this.colJinE.DisplayFormat.FormatString = "0";
+            this.colJinE.DisplayFormat.FormatString = "N0";
             this.colJinE.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colJinE.FieldName = "AMoney";
             this.colJinE.Name = "colJinE";
@@ -327,7 +333,8 @@
             this.layoutControlItem6,
             this.layoutControlItem7,
             this.layoutControlItem8,
-            this.layoutControlItem5});
+            this.layoutControlItem5,
+            this.layoutControlItem9});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(1014, 360);
@@ -375,9 +382,9 @@
             // 
             this.layoutControlItem6.Control = this.spinEditCreditTotal;
             resources.ApplyResources(this.layoutControlItem6, "layoutControlItem6");
-            this.layoutControlItem6.Location = new System.Drawing.Point(749, 314);
+            this.layoutControlItem6.Location = new System.Drawing.Point(784, 314);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(245, 26);
+            this.layoutControlItem6.Size = new System.Drawing.Size(210, 26);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(60, 14);
             // 
             // layoutControlItem7
@@ -386,7 +393,7 @@
             resources.ApplyResources(this.layoutControlItem7, "layoutControlItem7");
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 314);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(248, 26);
+            this.layoutControlItem7.Size = new System.Drawing.Size(162, 26);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextToControlDistance = 0;
             this.layoutControlItem7.TextVisible = false;
@@ -395,9 +402,9 @@
             // 
             this.layoutControlItem8.Control = this.simpleButton2;
             resources.ApplyResources(this.layoutControlItem8, "layoutControlItem8");
-            this.layoutControlItem8.Location = new System.Drawing.Point(248, 314);
+            this.layoutControlItem8.Location = new System.Drawing.Point(162, 314);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(249, 26);
+            this.layoutControlItem8.Size = new System.Drawing.Size(162, 26);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextToControlDistance = 0;
             this.layoutControlItem8.TextVisible = false;
@@ -406,9 +413,9 @@
             // 
             this.layoutControlItem5.Control = this.spinEditTotalDebits;
             resources.ApplyResources(this.layoutControlItem5, "layoutControlItem5");
-            this.layoutControlItem5.Location = new System.Drawing.Point(497, 314);
+            this.layoutControlItem5.Location = new System.Drawing.Point(573, 314);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(252, 26);
+            this.layoutControlItem5.Size = new System.Drawing.Size(211, 26);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(60, 14);
             // 
             // barBtnSearch
@@ -444,6 +451,21 @@
             this.bar_PrintTrans.Name = "bar_PrintTrans";
             this.bar_PrintTrans.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_PrintTrans_ItemClick);
             // 
+            // ncc_Employee
+            // 
+            this.ncc_Employee.EditValue = null;
+            resources.ApplyResources(this.ncc_Employee, "ncc_Employee");
+            this.ncc_Employee.Name = "ncc_Employee";
+            // 
+            // layoutControlItem9
+            // 
+            this.layoutControlItem9.Control = this.ncc_Employee;
+            resources.ApplyResources(this.layoutControlItem9, "layoutControlItem9");
+            this.layoutControlItem9.Location = new System.Drawing.Point(324, 314);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(249, 26);
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(60, 14);
+            // 
             // EditForm
             // 
             resources.ApplyResources(this, "$this");
@@ -478,6 +500,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -519,5 +542,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.BarButtonItem bar_Print;
         private DevExpress.XtraBars.BarButtonItem bar_PrintTrans;
+        private Book.UI.Invoices.NewChooseContorl ncc_Employee;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
     }
 }

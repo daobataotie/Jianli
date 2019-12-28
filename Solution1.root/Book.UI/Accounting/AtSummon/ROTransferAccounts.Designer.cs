@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             this.xrTable2 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow2 = new DevExpress.XtraReports.UI.XRTableRow();
             this.TC_Jiedai = new DevExpress.XtraReports.UI.XRTableCell();
@@ -75,13 +76,12 @@
             this.xrTable3 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow3 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell7 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.tc = new DevExpress.XtraReports.UI.XRTableCell();
+            this.tc_Employee = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell9 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell10 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell8 = new DevExpress.XtraReports.UI.XRTableCell();
             this.TCJTotal = new DevExpress.XtraReports.UI.XRTableCell();
             this.TCDTotal = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).BeginInit();
@@ -100,6 +100,13 @@
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             this.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // xrSubreport1
+            // 
+            this.xrSubreport1.Dpi = 254F;
+            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(13.22917F, 0F);
+            this.xrSubreport1.Name = "xrSubreport1";
+            this.xrSubreport1.SizeF = new System.Drawing.SizeF(1971.146F, 58.41997F);
             // 
             // xrTable2
             // 
@@ -374,7 +381,7 @@
             this.xrLabel2.SizeF = new System.Drawing.SizeF(1971.146F, 66.3575F);
             this.xrLabel2.StylePriority.UseFont = false;
             this.xrLabel2.StylePriority.UseTextAlignment = false;
-            this.xrLabel2.Text = "轉賬傳票";
+            this.xrLabel2.Text = "轉帳傳票";
             this.xrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // ReportFooter
@@ -478,7 +485,7 @@
             // 
             this.xrTableCell21.Dpi = 254F;
             this.xrTableCell21.Name = "xrTableCell21";
-            this.xrTableCell21.Text = "登賬";
+            this.xrTableCell21.Text = "登帳";
             this.xrTableCell21.Weight = 0.088926324902104809;
             // 
             // xrTableCell15
@@ -522,7 +529,7 @@
             this.xrTableRow3.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrTableRow3.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.xrTableCell7,
-            this.tc,
+            this.tc_Employee,
             this.xrTableCell9,
             this.xrTableCell10,
             this.xrTableCell8,
@@ -543,11 +550,11 @@
             this.xrTableCell7.Text = "會計：";
             this.xrTableCell7.Weight = 0.20604025904239673;
             // 
-            // tc
+            // tc_Employee
             // 
-            this.tc.Dpi = 254F;
-            this.tc.Name = "tc";
-            this.tc.Weight = 0.25402675653208978;
+            this.tc_Employee.Dpi = 254F;
+            this.tc_Employee.Name = "tc_Employee";
+            this.tc_Employee.Weight = 0.25402675653208978;
             // 
             // xrTableCell9
             // 
@@ -576,8 +583,10 @@
             this.TCJTotal.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Right)
                         | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.TCJTotal.Dpi = 254F;
+            this.TCJTotal.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TCJTotal.Name = "TCJTotal";
             this.TCJTotal.StylePriority.UseBorders = false;
+            this.TCJTotal.StylePriority.UseFont = false;
             this.TCJTotal.StylePriority.UseTextAlignment = false;
             this.TCJTotal.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.TCJTotal.Weight = 0.37114114601906084;
@@ -587,18 +596,13 @@
             this.TCDTotal.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Right)
                         | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.TCDTotal.Dpi = 254F;
+            this.TCDTotal.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TCDTotal.Name = "TCDTotal";
             this.TCDTotal.StylePriority.UseBorders = false;
+            this.TCDTotal.StylePriority.UseFont = false;
             this.TCDTotal.StylePriority.UseTextAlignment = false;
             this.TCDTotal.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.TCDTotal.Weight = 0.342952654298288;
-            // 
-            // xrSubreport1
-            // 
-            this.xrSubreport1.Dpi = 254F;
-            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(13.22917F, 0F);
-            this.xrSubreport1.Name = "xrSubreport1";
-            this.xrSubreport1.SizeF = new System.Drawing.SizeF(1971.146F, 58.41997F);
             // 
             // ROTransferAccounts
             // 
@@ -660,7 +664,7 @@
         private DevExpress.XtraReports.UI.XRTable xrTable3;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow3;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell7;
-        private DevExpress.XtraReports.UI.XRTableCell tc;
+        private DevExpress.XtraReports.UI.XRTableCell tc_Employee;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell9;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell10;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell8;

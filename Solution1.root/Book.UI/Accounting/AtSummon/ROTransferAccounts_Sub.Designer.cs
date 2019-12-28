@@ -121,7 +121,9 @@
             // TC_JMoney
             // 
             this.TC_JMoney.Dpi = 254F;
+            this.TC_JMoney.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TC_JMoney.Name = "TC_JMoney";
+            this.TC_JMoney.StylePriority.UseFont = false;
             this.TC_JMoney.StylePriority.UseTextAlignment = false;
             this.TC_JMoney.Text = "借方金額";
             this.TC_JMoney.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
@@ -130,7 +132,9 @@
             // TC_DMoney
             // 
             this.TC_DMoney.Dpi = 254F;
+            this.TC_DMoney.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TC_DMoney.Name = "TC_DMoney";
+            this.TC_DMoney.StylePriority.UseFont = false;
             this.TC_DMoney.StylePriority.UseTextAlignment = false;
             this.TC_DMoney.Text = "貸方金額";
             this.TC_DMoney.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;

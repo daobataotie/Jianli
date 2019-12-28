@@ -15,6 +15,7 @@ namespace Book.UI.Accounting.AtSummon
             this.lbl_CompanyName.Text = BL.Settings.CompanyChineseName;
             this.lbl_Id.Text = atSummon.Id;
             this.lblDate.Text = atSummon.SummonDate.HasValue ? atSummon.SummonDate.Value.ToString("yyyy-MM-dd") : "";
+            this.tc_Employee.Text = atSummon.EmployeeDS == null ? "" : atSummon.EmployeeDS.EmployeeName;
 
             //一页补足12条数据
             //int pageCount = (int)(atSummon.Details.Count / 12);
