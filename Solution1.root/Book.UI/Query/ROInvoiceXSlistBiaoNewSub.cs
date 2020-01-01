@@ -1,47 +1,24 @@
-using System;
+锘縰sing System;
 using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using DevExpress.XtraReports.UI;
-using System.Collections.Generic;
 using System.Data;
 
 namespace Book.UI.Query
 {
-    public partial class ROInvoiceXSlistBiao : BaseReport
+    public partial class ROInvoiceXSlistBiaoNewSub : DevExpress.XtraReports.UI.XtraReport
     {
-        protected BL.InvoiceXSDetailManager detailManager = new Book.BL.InvoiceXSDetailManager();
+        public DataTable dt = null;
 
-        public ROInvoiceXSlistBiao()
+        public ROInvoiceXSlistBiaoNewSub()
         {
             InitializeComponent();
-        }
-
-        public ROInvoiceXSlistBiao(ConditionX condition)
-            : this()
-        {
-            this.xrLabelReportName.Text = "應收賬款明細表";
-            this.lblCustomerName.Text = condition.Customer1 == null ? "" : condition.Customer1.ToString();
-            this.lblDateRange.Text = "  時間區間:" + condition.StartDate.ToString("yyyy-MM-dd") + " ~ " + condition.EndDate.ToString("yyyy-MM-dd");
-            //bind
-            //this.DataSource = this.detailManager.SelectbyConditionX(condition.StartDate, condition.EndDate, condition.Yjri1, condition.Yjri2, condition.Customer1, condition.Customer2, condition.XOId1, condition.XOId2, condition.Product, condition.Product2, condition.CusXOId, condition.OrderColumn, condition.OrderType);
-            //if ((bool)condition.Special)
-            //{
-            //    this.DataSource = this.detailManager.SelectbyConditionXBiao(condition.StartDate, condition.EndDate, condition.Yjri1, condition.Yjri2, condition.Customer1, condition.Customer2, condition.XOId1, condition.XOId2, condition.Product, condition.Product2, condition.CusXOId, condition.OrderColumn, condition.OrderType, false, condition.Product_Id,condition.ProductCategoryId);
-            //    dt = this.detailManager.SelectbyConditionXBiao(condition.StartDate, condition.EndDate, condition.Yjri1, condition.Yjri2, condition.Customer1, condition.Customer2, condition.XOId1, condition.XOId2, condition.Product, condition.Product2, condition.CusXOId, condition.OrderColumn, condition.OrderType, condition.Special, condition.Product_Id, condition.ProductCategoryId);
-            //}
-            //else
-            this.DataSource = this.detailManager.SelectbyConditionXBiao(condition.StartDate, condition.EndDate, condition.Yjri1, condition.Yjri2, condition.Customer1, condition.Customer2, condition.Employee1, condition.Employee2, condition.XOId1, condition.XOId2, condition.Product, condition.Product2, condition.CusXOId, condition.OrderColumn, condition.OrderType, null, condition.Product_Id, condition.ProductCategoryId, condition.Currency);
-
-            //if (this.DataSource == null || (this.DataSource as IList<Model.InvoiceXSDetail>).Count == 0)
-            if ((this.DataSource == null || (this.DataSource as System.Data.DataTable).Rows.Count == 0))
-                throw new global::Helper.InvalidValueException("無記錄");
 
             this.tcCHDH.DataBindings.Add("Text", this.DataSource, "CHDH");
             this.tcCHRQ.DataBindings.Add("Text", this.DataSource, "CHRQ", "{0:yyyy-MM-dd}");
             this.tcProductName.DataBindings.Add("Text", this.DataSource, "ProductName");
             this.tcKHDDBH.DataBindings.Add("Text", this.DataSource, "KHDDBH");
-            //this.tcDDSL.DataBindings.Add("Text", this.DataSource, "");
             this.tcBCCHSL.DataBindings.Add("Text", this.DataSource, "BCCHSL", global::Helper.DateTimeParse.GetFormatA(BL.V.SetDataFormat.XSSLXiao.Value));
             this.tcDW.DataBindings.Add("Text", this.DataSource, "DanWei");
             this.tcDJ.DataBindings.Add("Text", this.DataSource, "DanJia", global::Helper.DateTimeParse.GetFormatA(BL.V.SetDataFormat.CGDJXiao.Value));
@@ -79,5 +56,12 @@ namespace Book.UI.Query
             this.lbTaibiTotal.Summary.Running = SummaryRunning.Report;
             this.lbTaibiTotal.DataBindings.Add("Text", this.DataSource, "TaibiTotal");
         }
+
+        private void ROInvoiceXSlistBiaoNewSub_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        {
+            this.DataSource = dt;
+            this.lblCustomerName.Text = dt.Rows[0]["CustomerFullName"].ToString();
+        }
+
     }
 }

@@ -120,18 +120,6 @@
   <metadata name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>172, 17</value>
   </metadata>
-  <data name="barBtnSearch.Caption" xml:space="preserve">
-    <value>搜索</value>
-  </data>
-  <data name="barButtonItem1.Caption" xml:space="preserve">
-    <value>條件打印1/3</value>
-  </data>
-  <data name="barButtonItem2.Caption" xml:space="preserve">
-    <value>條件打印A4</value>
-  </data>
-  <data name="bar_PrintTrans.Caption" xml:space="preserve">
-    <value>打印轉賬傳票</value>
-  </data>
   <metadata name="imageCollection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -578,11 +566,17 @@
     <value>True</value>
   </data>
   <data name="colJieorDai.VisibleIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>1</value>
+  </data>
+  <data name="colJieorDai.Width" type="System.Int32, mscorlib">
+    <value>184</value>
   </data>
   <data name="colKemuBianHao.Caption" xml:space="preserve">
     <value>科目编号</value>
   </data>
+  <metadata name="bindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>448, 17</value>
+  </metadata>
   <data name="repositoryItemLookUpEdit1.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -623,9 +617,6 @@
   <data name="repositoryItemLookUpEdit1.Columns10" xml:space="preserve">
     <value>科目名称</value>
   </data>
-  <metadata name="bindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>448, 17</value>
-  </metadata>
   <data name="repositoryItemLookUpEdit1.NullText" xml:space="preserve">
     <value />
   </data>
@@ -633,7 +624,10 @@
     <value>True</value>
   </data>
   <data name="colKemuBianHao.VisibleIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>2</value>
+  </data>
+  <data name="colKemuBianHao.Width" type="System.Int32, mscorlib">
+    <value>184</value>
   </data>
   <data name="colKeMuMingCheng.Caption" xml:space="preserve">
     <value>科目名称</value>
@@ -684,7 +678,10 @@
     <value>True</value>
   </data>
   <data name="colKeMuMingCheng.VisibleIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>3</value>
+  </data>
+  <data name="colKeMuMingCheng.Width" type="System.Int32, mscorlib">
+    <value>184</value>
   </data>
   <data name="colZhaiYao.Caption" xml:space="preserve">
     <value>摘要</value>
@@ -693,7 +690,10 @@
     <value>True</value>
   </data>
   <data name="colZhaiYao.VisibleIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>4</value>
+  </data>
+  <data name="colZhaiYao.Width" type="System.Int32, mscorlib">
+    <value>184</value>
   </data>
   <data name="colJinE.Caption" xml:space="preserve">
     <value>金额</value>
@@ -705,7 +705,22 @@
     <value>True</value>
   </data>
   <data name="colJinE.VisibleIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>5</value>
+  </data>
+  <data name="colJinE.Width" type="System.Int32, mscorlib">
+    <value>186</value>
+  </data>
+  <data name="gridColumn1.Caption" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="gridColumn1.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn1.VisibleIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gridColumn1.Width" type="System.Int32, mscorlib">
+    <value>50</value>
   </data>
   <data name="gridControl1.Size" type="System.Drawing.Size, System.Drawing">
     <value>990, 285</value>
@@ -812,6 +827,21 @@
   </data>
   <data name="&gt;&gt;layoutControl1.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <metadata name="bindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>448, 17</value>
+  </metadata>
+  <data name="barBtnSearch.Caption" xml:space="preserve">
+    <value>搜索</value>
+  </data>
+  <data name="barButtonItem1.Caption" xml:space="preserve">
+    <value>條件打印1/3</value>
+  </data>
+  <data name="barButtonItem2.Caption" xml:space="preserve">
+    <value>條件打印A4</value>
+  </data>
+  <data name="bar_PrintTrans.Caption" xml:space="preserve">
+    <value>打印轉賬傳票</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -933,6 +963,12 @@
   <data name="&gt;&gt;repositoryItemSpinEdit1.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;gridColumn1.Name" xml:space="preserve">
+    <value>gridColumn1</value>
+  </data>
+  <data name="&gt;&gt;gridColumn1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;layoutControlGroup1.Name" xml:space="preserve">
     <value>layoutControlGroup1</value>
   </data>
@@ -987,6 +1023,12 @@
   <data name="&gt;&gt;layoutControlItem5.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;layoutControlItem9.Name" xml:space="preserve">
+    <value>layoutControlItem9</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem9.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;barBtnSearch.Name" xml:space="preserve">
     <value>barBtnSearch</value>
   </data>
@@ -1016,12 +1058,6 @@
   </data>
   <data name="&gt;&gt;bar_PrintTrans.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem9.Name" xml:space="preserve">
-    <value>layoutControlItem9</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem9.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>EditForm</value>

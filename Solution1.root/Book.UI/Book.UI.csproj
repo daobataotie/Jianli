@@ -7879,6 +7879,12 @@
       <DependentUpon>ROInvoiceXSlist.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Query\ROInvoiceXSlistBiaoNew.resx">
+      <DependentUpon>ROInvoiceXSlistBiaoNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Query\ROInvoiceXSlistBiaoNewSub.resx">
+      <DependentUpon>ROInvoiceXSlistBiaoNewSub.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Query\ROInvoiceXSlistBiaoSub.resx">
       <DependentUpon>ROInvoiceXSlistBiaoSub.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -13158,6 +13164,18 @@
     </Compile>
     <Compile Include="Query\ROInvoiceXSlist.Designer.cs">
       <DependentUpon>ROInvoiceXSlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Query\ROInvoiceXSlistBiaoNew.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Query\ROInvoiceXSlistBiaoNew.Designer.cs">
+      <DependentUpon>ROInvoiceXSlistBiaoNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Query\ROInvoiceXSlistBiaoNewSub.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Query\ROInvoiceXSlistBiaoNewSub.Designer.cs">
+      <DependentUpon>ROInvoiceXSlistBiaoNewSub.cs</DependentUpon>
     </Compile>
     <Compile Include="Query\ROInvoiceXSlistBiaoSub.cs">
       <SubType>Component</SubType>

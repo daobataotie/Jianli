@@ -69,6 +69,7 @@ namespace Book.UI.Accounting.AtSummon
             detail.SummonDetailId = Guid.NewGuid().ToString();
             detail.AMoney = 0;
             detail.Subject = new Book.Model.AtAccountSubject();
+            detail.Number = 1;
 
             switch (this.comboBoxEditSummonCategory.SelectedIndex)
             {
@@ -233,14 +234,14 @@ namespace Book.UI.Accounting.AtSummon
                 case "insert":
                     if (this.atSummonManager.IsExistsId(this.atSummon.Id))
                     {
-                        throw new Helper.MessageValueException("SummonsId exists！");
+                        throw new Helper.MessageValueException("SummonsId exists!");
                     }
                     this.atSummonManager.Insert(this.atSummon);
                     break;
 
                 case "update":
                     if (this.atSummonManager.IsExistsIdUpdate(this.atSummon))
-                        throw new Helper.MessageValueException("SummonsId exists！");
+                        throw new Helper.MessageValueException("SummonsId exists!");
                     this.atSummonManager.Update(this.atSummon);
                     break;
             }
@@ -561,6 +562,7 @@ namespace Book.UI.Accounting.AtSummon
             mdetail.InsertTime = DateTime.Now;
             mdetail.UpdateTime = DateTime.Now;
             mdetail.AMoney = 0;
+            mdetail.Number = this.atSummon.Details.Count + 1;
 
             switch (this.comboBoxEditSummonCategory.SelectedIndex)
             {

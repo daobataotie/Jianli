@@ -94,6 +94,8 @@ namespace Book.Model
         /// </summary>
         private string _id;
 
+        private int _number;
+
         /// <summary>
         /// 传票主档
         /// </summary>
@@ -352,6 +354,15 @@ namespace Book.Model
         }
 
         /// <summary>
+        /// 序號
+        /// </summary>
+        public int Number
+        {
+            get { return _number; }
+            set { _number = value; }
+        }
+
+        /// <summary>
         /// 传票主档
         /// </summary>
         public virtual AtSummon Summon
@@ -476,6 +487,7 @@ namespace Book.Model
         /// </summary>
         public readonly static string PRO_Id = "Id";
 
+        public readonly static string PRO_Number = "Number";
 
         #endregion
     }

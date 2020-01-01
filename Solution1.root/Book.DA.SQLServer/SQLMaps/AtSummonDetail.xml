@@ -11,9 +11,10 @@
   </resultMaps>
   <statements>
 
+    <!--SELECT * FROM dbo.AtSummonDetail WHERE SummonId=#value# order by left(Id,1),cast(RIGHT(Id,LEN(Id)-1) as int) asc,Lending desc-->
     <select id="getBySummonId" resultMap="AtSummonDetailResult" parameterClass="string">
       <![CDATA[
-     SELECT * FROM dbo.AtSummonDetail WHERE SummonId=#value# order by left(Id,1),cast(RIGHT(Id,LEN(Id)-1) as int) asc,Lending desc
+     SELECT * FROM dbo.AtSummonDetail WHERE SummonId=#value# order by Number
       ]]>
     </select>
 

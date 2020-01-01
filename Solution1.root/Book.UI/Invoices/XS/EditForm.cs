@@ -532,17 +532,17 @@ namespace Book.UI.Invoices.XS
                 case "insert":
                     this.barButtonItem5.Enabled = true;
                     this.gridColumnPosition.OptionsColumn.AllowEdit = true;
-                    this.comboBoxEditCurrency.Enabled = true;
+                    //this.comboBoxEditCurrency.Enabled = true;
                     break;
                 case "update":
                     this.barButtonItem5.Enabled = true;
                     this.gridColumnPosition.OptionsColumn.AllowEdit = true;
-                    this.comboBoxEditCurrency.Enabled = false;
+                    //this.comboBoxEditCurrency.Enabled = false;
                     break;
                 case "view":
                     this.barButtonItem5.Enabled = true;
                     this.gridColumnPosition.OptionsColumn.AllowEdit = false;
-                    this.comboBoxEditCurrency.Enabled = false;
+                    //this.comboBoxEditCurrency.Enabled = false;
                     break;
             }
             this.buttonEditEmployee.ShowButton = false;
@@ -855,7 +855,7 @@ namespace Book.UI.Invoices.XS
                     //invoice.Customer = xo.Customer;
                     //invoice.XSCustomer = xo.xocustomer;
                     //   textEditiInvoiceXOId.Text = xo.InvoiceId;
-                    this.comboBoxEditCurrency.Enabled = false;
+                    //this.comboBoxEditCurrency.Enabled = false;
                     this.comboBoxEditCurrency.Text = xo.Invoice.Currency;
 
                     if (xo.Invoice.Currency.Contains("Ì¨±Ò") || xo.Invoice.Currency.Contains("Ì¨ŽÅ"))

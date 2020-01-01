@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditForm));
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.comboBoxEditSummonCategory = new DevExpress.XtraEditors.ComboBoxEdit();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.spinEditCreditTotal = new DevExpress.XtraEditors.SpinEdit();
+            this.ncc_Employee = new Book.UI.Invoices.NewChooseContorl();
             this.spinEditTotalDebits = new DevExpress.XtraEditors.SpinEdit();
             this.textEditSummonId = new DevExpress.XtraEditors.TextEdit();
             this.dateEditSummonDate = new DevExpress.XtraEditors.DateEdit();
@@ -52,6 +53,7 @@
             this.colZhaiYao = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colJinE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemSpinEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -61,13 +63,12 @@
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.barBtnSearch = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.bar_Print = new DevExpress.XtraBars.BarButtonItem();
             this.bar_PrintTrans = new DevExpress.XtraBars.BarButtonItem();
-            this.ncc_Employee = new Book.UI.Invoices.NewChooseContorl();
-            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -175,6 +176,12 @@
             this.spinEditCreditTotal.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.spinEditCreditTotal.StyleController = this.layoutControl1;
             // 
+            // ncc_Employee
+            // 
+            this.ncc_Employee.EditValue = null;
+            resources.ApplyResources(this.ncc_Employee, "ncc_Employee");
+            this.ncc_Employee.Name = "ncc_Employee";
+            // 
             // spinEditTotalDebits
             // 
             resources.ApplyResources(this.spinEditTotalDebits, "spinEditTotalDebits");
@@ -206,9 +213,9 @@
             // gridControl1
             // 
             this.gridControl1.DataSource = this.bindingSource1;
-            gridLevelNode1.RelationName = "Level1";
+            gridLevelNode2.RelationName = "Level1";
             this.gridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode2});
             resources.ApplyResources(this.gridControl1, "gridControl1");
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
@@ -227,7 +234,8 @@
             this.colKemuBianHao,
             this.colKeMuMingCheng,
             this.colZhaiYao,
-            this.colJinE});
+            this.colJinE,
+            this.gridColumn1});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsNavigation.EnterMoveNextColumn = true;
@@ -321,6 +329,12 @@
             this.repositoryItemSpinEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.repositoryItemSpinEdit1.Name = "repositoryItemSpinEdit1";
+            // 
+            // gridColumn1
+            // 
+            resources.ApplyResources(this.gridColumn1, "gridColumn1");
+            this.gridColumn1.FieldName = "Number";
+            this.gridColumn1.Name = "gridColumn1";
             // 
             // layoutControlGroup1
             // 
@@ -418,6 +432,15 @@
             this.layoutControlItem5.Size = new System.Drawing.Size(211, 26);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(60, 14);
             // 
+            // layoutControlItem9
+            // 
+            this.layoutControlItem9.Control = this.ncc_Employee;
+            resources.ApplyResources(this.layoutControlItem9, "layoutControlItem9");
+            this.layoutControlItem9.Location = new System.Drawing.Point(324, 314);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(249, 26);
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(60, 14);
+            // 
             // barBtnSearch
             // 
             resources.ApplyResources(this.barBtnSearch, "barBtnSearch");
@@ -450,21 +473,6 @@
             this.bar_PrintTrans.Id = 19;
             this.bar_PrintTrans.Name = "bar_PrintTrans";
             this.bar_PrintTrans.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_PrintTrans_ItemClick);
-            // 
-            // ncc_Employee
-            // 
-            this.ncc_Employee.EditValue = null;
-            resources.ApplyResources(this.ncc_Employee, "ncc_Employee");
-            this.ncc_Employee.Name = "ncc_Employee";
-            // 
-            // layoutControlItem9
-            // 
-            this.layoutControlItem9.Control = this.ncc_Employee;
-            resources.ApplyResources(this.layoutControlItem9, "layoutControlItem9");
-            this.layoutControlItem9.Location = new System.Drawing.Point(324, 314);
-            this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(249, 26);
-            this.layoutControlItem9.TextSize = new System.Drawing.Size(60, 14);
             // 
             // EditForm
             // 
@@ -544,5 +552,6 @@
         private DevExpress.XtraBars.BarButtonItem bar_PrintTrans;
         private Book.UI.Invoices.NewChooseContorl ncc_Employee;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
     }
 }

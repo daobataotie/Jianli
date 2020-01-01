@@ -22,6 +22,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="InsertTime" column="InsertTime" />
       <result property="UpdateTime" column="UpdateTime" />
       <result property="Id" column="Id" />
+      <result property="Number" column="Number"/>
       <result property="Summon" column="SummonId" lazyLoad="false" select="AtSummon.select_by_primary_key" />
       <result property="Subject" column="SubjectId" lazyLoad="false" select="AtAccountSubject.select_by_primary_key" />
       <result property="Department" column="DepartmentId" lazyLoad="false" select="Department.select_by_primary_key" />
@@ -116,7 +117,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       [CreditMoney],
       [InsertTime],
       [UpdateTime],
-      [Id]
+      [Id],
+      [Number]
       FROM
       [dbo].[AtSummonDetail]
       WHERE
@@ -178,7 +180,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       [CreditMoney],
       [InsertTime],
       [UpdateTime],
-      [Id]
+      [Id],
+      [Number]
       )
       VALUES
       (
@@ -197,7 +200,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       #CreditMoney#,
       #InsertTime#,
       #UpdateTime#,
-      #Id#
+      #Id#,
+      #Number#
       )
     </insert>
 
@@ -218,7 +222,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       [CreditMoney] = #CreditMoney#,
       [InsertTime] = #InsertTime#,
       [UpdateTime] = #UpdateTime#,
-      [Id] = #Id#
+      [Id] = #Id#,
+      [Number]=#Number#
       WHERE
       [SummonDetailId] = #SummonDetailId#
     </update>
