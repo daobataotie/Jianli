@@ -148,7 +148,7 @@
             // TopMargin
             // 
             this.TopMargin.Dpi = 254F;
-            this.TopMargin.HeightF = 80F;
+            this.TopMargin.HeightF = 79F;
             this.TopMargin.Name = "TopMargin";
             this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -156,7 +156,7 @@
             // BottomMargin
             // 
             this.BottomMargin.Dpi = 254F;
-            this.BottomMargin.HeightF = 80F;
+            this.BottomMargin.HeightF = 79F;
             this.BottomMargin.Name = "BottomMargin";
             this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -203,7 +203,7 @@
                         | DevExpress.XtraPrinting.BorderSide.Right)
                         | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrTable1.Dpi = 254F;
-            this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 240.7708F);
+            this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(0.0004037221F, 240.7708F);
             this.xrTable1.Name = "xrTable1";
             this.xrTable1.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow1});
@@ -419,8 +419,8 @@
             this.PageFooter});
             this.Dpi = 254F;
             this.Font = new System.Drawing.Font("新細明體", 9.75F);
-            this.Margins = new System.Drawing.Printing.Margins(200, 50, 80, 80);
-            this.PageHeight = 990;
+            this.Margins = new System.Drawing.Printing.Margins(201, 51, 79, 79);
+            this.PageHeight = 991;
             this.PageWidth = 2101;
             this.PaperKind = System.Drawing.Printing.PaperKind.Custom;
             this.ReportUnit = DevExpress.XtraReports.UI.ReportUnit.TenthsOfAMillimeter;

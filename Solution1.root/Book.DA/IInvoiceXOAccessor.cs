@@ -30,6 +30,8 @@ namespace Book.DA
         Model.InvoiceXO SelectByMPSDetailId(string mpsDetailId);
 
         string SelectCusXOIdByInvoiceId(string invoiceId);
+
+        IList<Model.InvoiceXO> AmountStatistics(string customerId, DateTime startDate, DateTime endDate, string currency);
     }
 }
 

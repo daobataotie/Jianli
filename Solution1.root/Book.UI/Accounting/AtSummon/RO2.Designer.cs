@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
-            this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
-            this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.xrTable1 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
             this.TCJieDai = new DevExpress.XtraReports.UI.XRTableCell();
@@ -38,6 +36,8 @@
             this.TCKemuName = new DevExpress.XtraReports.UI.XRTableCell();
             this.TCNote = new DevExpress.XtraReports.UI.XRTableCell();
             this.TCMoney = new DevExpress.XtraReports.UI.XRTableCell();
+            this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
+            this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -50,22 +50,6 @@
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             this.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // TopMargin
-            // 
-            this.TopMargin.Dpi = 254F;
-            this.TopMargin.HeightF = 79F;
-            this.TopMargin.Name = "TopMargin";
-            this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
-            this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // BottomMargin
-            // 
-            this.BottomMargin.Dpi = 254F;
-            this.BottomMargin.HeightF = 79F;
-            this.BottomMargin.Name = "BottomMargin";
-            this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
-            this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrTable1
             // 
@@ -124,6 +108,22 @@
             this.TCMoney.Name = "TCMoney";
             this.TCMoney.Weight = 1.4108154926827408;
             // 
+            // TopMargin
+            // 
+            this.TopMargin.Dpi = 254F;
+            this.TopMargin.HeightF = 79F;
+            this.TopMargin.Name = "TopMargin";
+            this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
+            this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // BottomMargin
+            // 
+            this.BottomMargin.Dpi = 254F;
+            this.BottomMargin.HeightF = 79F;
+            this.BottomMargin.Name = "BottomMargin";
+            this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
+            this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
             // RO2
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -132,7 +132,7 @@
             this.BottomMargin});
             this.Dpi = 254F;
             this.Font = new System.Drawing.Font("新細明體", 9.75F);
-            this.Margins = new System.Drawing.Printing.Margins(200, 50, 79, 79);
+            this.Margins = new System.Drawing.Printing.Margins(201, 50, 79, 79);
             this.PageHeight = 2969;
             this.PageWidth = 2101;
             this.PaperKind = System.Drawing.Printing.PaperKind.A4;

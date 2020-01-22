@@ -5,6 +5,9 @@ using Book.UI.Invoices;
 
 namespace Book.UI.Settings.BasicData.Customs
 {
+    /// <summary>
+    /// 選擇客戶界面
+    /// </summary>
     public class ChooseCustoms : IChoose
     {
         private Model.Customer ojb;

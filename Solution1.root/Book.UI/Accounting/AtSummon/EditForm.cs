@@ -630,11 +630,7 @@ namespace Book.UI.Accounting.AtSummon
             return new RO(this.atSummon);
         }
 
-        /// <summary>
-        /// 连续打印
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        //1/3
         private void barButtonItem1_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             ConditionForm f = new ConditionForm();
@@ -652,6 +648,7 @@ namespace Book.UI.Accounting.AtSummon
             }
         }
 
+        //A4
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             ConditionForm f = new ConditionForm();

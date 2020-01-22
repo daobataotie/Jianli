@@ -418,5 +418,6 @@
       select CustomerInvoiceXOId from InvoiceXO where InvoiceId=#value#
       ]]>
     </select>
+    
   </statements>
 </sqlMap>

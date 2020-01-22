@@ -491,6 +491,19 @@ namespace Book.BL
         {
             return accessor.SelectCusXOIdByInvoiceId(invoiceId);
         }
+
+        /// <summary>
+        /// 客户订单年度金额统计
+        /// </summary>
+        /// <param name="customerId"></param>
+        /// <param name="startDate"></param>
+        /// <param name="endDate"></param>
+        /// <param name="currency"></param>
+        /// <returns></returns>
+        public IList<Model.InvoiceXO> AmountStatistics(string customerId, DateTime startDate, DateTime endDate, string currency)
+        {
+            return accessor.AmountStatistics(customerId,startDate,endDate,currency);
+        }
     }
 }
 

@@ -767,6 +767,9 @@ namespace Book.UI
 
             //•þÓ‹-ÈÕÓ›Ù~
             operations.Add("Accounting.Report.FormJournal", (D1)delegate(System.Windows.Forms.Form form) { M1("Accounting.Report.FormJournal", form); });
+
+            //¿Í‘ôÓ††Î½ðî~½yÓ‹ 
+            operations.Add("Query.AmountStatisticsXO", (D1)delegate(System.Windows.Forms.Form form) { M1("Query.AmountStatisticsXO", form); });
         }
 
         static Form CreateForm(string formTypeName)

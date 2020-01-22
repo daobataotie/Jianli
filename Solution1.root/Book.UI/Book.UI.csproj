@@ -3725,6 +3725,9 @@
       <DependentUpon>RO3.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\AtSummon\RO3.zh-CHT.resx">
+      <DependentUpon>RO3.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtSummon\ROTransferAccounts.resx">
       <DependentUpon>ROTransferAccounts.cs</DependentUpon>
     </EmbeddedResource>
@@ -5254,6 +5257,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Query\AmountStatisticsXO.resx">
+      <DependentUpon>AmountStatisticsXO.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Query\ConditionCOChooseForm.zh-MO.resx">
       <DependentUpon>ConditionCOChooseForm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -12518,6 +12524,12 @@
     </Compile>
     <Compile Include="produceManager\PronoteHeader\ROJGZhishiDetail.Designer.cs">
       <DependentUpon>ROJGZhishiDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Query\AmountStatisticsXO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Query\AmountStatisticsXO.Designer.cs">
+      <DependentUpon>AmountStatisticsXO.cs</DependentUpon>
     </Compile>
     <Compile Include="Query\ConditionFP.cs" />
     <Compile Include="Query\ConditionPacking.cs">
