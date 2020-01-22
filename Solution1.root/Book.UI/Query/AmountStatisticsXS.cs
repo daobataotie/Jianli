@@ -12,13 +12,13 @@ using System.Linq;
 namespace Book.UI.Query
 {
     /// <summary>
-    /// 客戶訂單金額統計
+    /// 出貨單-金額統計 
     /// </summary>
-    public partial class AmountStatisticsXO : DevExpress.XtraEditors.XtraForm
+    public partial class AmountStatisticsXS : DevExpress.XtraEditors.XtraForm
     {
-        BL.InvoiceXOManager invoiceXOManager = new Book.BL.InvoiceXOManager();
+        BL.InvoiceXSManager invoiceXSManager = new Book.BL.InvoiceXSManager();
 
-        public AmountStatisticsXO()
+        public AmountStatisticsXS()
         {
             InitializeComponent();
 
@@ -48,7 +48,7 @@ namespace Book.UI.Query
             DateTime endDate = this.date_End.DateTime;
             string currency = this.comboBoxEditCurrency.Text;
 
-            IList<Model.InvoiceXO> list = invoiceXOManager.AmountStatistics(customer.CustomerId, startDate, endDate, currency);
+            IList<Model.InvoiceXS> list = invoiceXSManager.AmountStatistics(customer.CustomerId, startDate, endDate, currency);
             if (list == null || list.Count == 0)
             {
                 MessageBox.Show("無數據", "提示", MessageBoxButtons.OK);
@@ -82,7 +82,7 @@ namespace Book.UI.Query
                 sheet.get_Range(sheet.Cells[5, 1], sheet.Cells[18, col]).BorderAround(1, XlBorderWeight.xlMedium, XlColorIndex.xlColorIndexAutomatic, null);
                 sheet.get_Range(sheet.Cells[5, 1], sheet.Cells[18, col]).Borders.Value = 1;
 
-                sheet.Cells[1, 1] = "客戶訂單-金額統計";
+                sheet.Cells[1, 1] = "出貨單-金額統計";
                 sheet.Cells[2, 1] = string.Format("客戶編號：{0}", customer.Id);
                 sheet.Cells[2, 3] = string.Format("客戶名稱：{0}", customer.CustomerFullName);
                 sheet.Cells[3, 1] = string.Format("日期區間：{0} ~ {1}", startDate.ToString("yyyy-MM-dd"), endDate.ToString("yyyy-MM-dd"));

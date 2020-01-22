@@ -385,6 +385,11 @@ namespace Book.BL
         {
             return accessor.SelectByInvoiceCusID(ID);
         }
+
+        public IList<Model.InvoiceXS> AmountStatistics(string customerId, DateTime startDate, DateTime endDate, string currency)
+        {
+            return accessor.AmountStatistics(customerId, startDate, endDate, currency);
+        }
     }
 }
 

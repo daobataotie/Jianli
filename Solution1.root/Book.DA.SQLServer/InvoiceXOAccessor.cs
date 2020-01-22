@@ -161,7 +161,7 @@ namespace Book.DA.SQLServer
 
         public IList<Model.InvoiceXO> AmountStatistics(string customerId, DateTime startDate, DateTime endDate, string currency)
         {
-            string sql = "select InvoiceTotal,Currency,InvoiceDate from InvoiceXO where CustomerId='" + customerId + "' and InvoiceDate between '" + startDate.ToString("yyyy-MM-dd") + "' and '" + endDate.Date.AddDays(1).AddSeconds(-1).ToString("yyyy-MM-dd HH:mm:ss") + "' and Currency='" + currency + "' and InvoiceTotal >0";
+            string sql = "select InvoiceTotal,InvoiceDate from InvoiceXO where CustomerId='" + customerId + "' and InvoiceDate between '" + startDate.ToString("yyyy-MM-dd") + "' and '" + endDate.Date.AddDays(1).AddSeconds(-1).ToString("yyyy-MM-dd HH:mm:ss") + "' and Currency='" + currency + "' and InvoiceTotal >0";
 
             return this.DataReaderBind<Model.InvoiceXO>(sql, null, CommandType.Text);
         }

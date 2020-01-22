@@ -51,5 +51,7 @@ namespace Book.DA
         DataTable SelectDateRangAndWhereToTable(Model.Customer customerStart, Model.Customer customerEnd, DateTime? dateStart, DateTime? dateEnd, DateTime yjrq1, DateTime yjrq2, string cusxoid, Model.Product product1, Model.Product product2, string invoicexoid1, string invoicexoid2, string FreightedCompanyId, string ConveyanceMethodId, Model.Employee startEmp, Model.Employee endEmp, string product_Id, string productCategoryId);
 
         string SelectByInvoiceCusID(string ID);
+
+        IList<Model.InvoiceXS> AmountStatistics(string customerId, DateTime startDate, DateTime endDate, string currency);
     }
 }

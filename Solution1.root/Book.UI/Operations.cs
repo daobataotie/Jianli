@@ -768,8 +768,11 @@ namespace Book.UI
             //會計-日記賬
             operations.Add("Accounting.Report.FormJournal", (D1)delegate(System.Windows.Forms.Form form) { M1("Accounting.Report.FormJournal", form); });
 
-            //客戶訂單金額統計 
+            //客戶訂單-金額統計 
             operations.Add("Query.AmountStatisticsXO", (D1)delegate(System.Windows.Forms.Form form) { M1("Query.AmountStatisticsXO", form); });
+
+            //出貨單-金額統計 
+            operations.Add("Query.AmountStatisticsXS", (D1)delegate(System.Windows.Forms.Form form) { M1("Query.AmountStatisticsXS", form); });
         }
 
         static Form CreateForm(string formTypeName)
