@@ -40,7 +40,7 @@ namespace Book.DA.SQLServer
             return sqlmapper.QueryForObject<bool>("AtSummon.IsExistsIdUpdate", ht);
         }
 
-        public IList<Model.AtSummon> SelectByCondition(DateTime startDate, DateTime endDate, string startId, string endId, string StartSubjectId, string EndSubjectId)
+        public IList<Model.AtSummon> SelectByCondition(DateTime startDate, DateTime endDate, string startId, string endId, string summonCategory, string employeeId)
         {
             StringBuilder sql = new StringBuilder();
             sql.Append(" and SummonDate between '" + startDate.ToString("yyyy-MM-dd") + "' and '" + endDate.AddDays(1).AddSeconds(-1).ToString("yyyy-MM-dd HH:mm:ss") + "'");
@@ -51,13 +51,18 @@ namespace Book.DA.SQLServer
                 else
                     sql.Append(" and Id='" + (string.IsNullOrEmpty(startId) ? endId : startId) + "'");
             }
-            if (!string.IsNullOrEmpty(StartSubjectId) || !string.IsNullOrEmpty(EndSubjectId))
-            {
-                if (!string.IsNullOrEmpty(StartSubjectId) && !string.IsNullOrEmpty(EndSubjectId))
-                    sql.Append(" and SummonId in (select SummonId from AtSummonDetail where SubjectId in (select SubjectId from AtAccountSubject where Id between '" + StartSubjectId + "' and '" + EndSubjectId + "'))");
-                else
-                    sql.Append(" and SummonId in (select SummonId from AtSummonDetail where SubjectId in (select SubjectId from AtAccountSubject where Id='" + (string.IsNullOrEmpty(StartSubjectId) ? EndSubjectId : StartSubjectId) + "'))");
-            }
+            //if (!string.IsNullOrEmpty(StartSubjectId) || !string.IsNullOrEmpty(EndSubjectId))
+            //{
+            //    if (!string.IsNullOrEmpty(StartSubjectId) && !string.IsNullOrEmpty(EndSubjectId))
+            //        sql.Append(" and SummonId in (select SummonId from AtSummonDetail where SubjectId in (select SubjectId from AtAccountSubject where Id between '" + StartSubjectId + "' and '" + EndSubjectId + "'))");
+            //    else
+            //        sql.Append(" and SummonId in (select SummonId from AtSummonDetail where SubjectId in (select SubjectId from AtAccountSubject where Id='" + (string.IsNullOrEmpty(StartSubjectId) ? EndSubjectId : StartSubjectId) + "'))");
+            //}
+            if (!string.IsNullOrEmpty(summonCategory))
+                sql.Append(" and SummonCategory='" + summonCategory + "'");
+            if (!string.IsNullOrEmpty(employeeId))
+                sql.Append(" and EmployeeDSId='" + employeeId + "'");
+
             sql.Append(" order by Id");
 
             return sqlmapper.QueryForList<Model.AtSummon>("AtSummon.SelectByCondition", sql.ToString());

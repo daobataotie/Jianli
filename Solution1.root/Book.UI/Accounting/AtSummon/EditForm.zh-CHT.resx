@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="bar_Print.Caption" xml:space="preserve">
-    <value>打印轉賬傳票</value>
-  </data>
   <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="imageCollection1.ImageStream" type="DevExpress.Utils.ImageCollectionStreamer, DevExpress.Utils.v10.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -343,58 +340,55 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="comboBoxEditSummonCategory.Location" type="System.Drawing.Point, System.Drawing">
-    <value>657, 12</value>
+    <value>737, 12</value>
   </data>
   <data name="comboBoxEditSummonCategory.Size" type="System.Drawing.Size, System.Drawing">
-    <value>251, 21</value>
+    <value>291, 21</value>
   </data>
   <data name="simpleButton2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>236, 326</value>
+    <value>177, 387</value>
   </data>
   <data name="simpleButton2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 22</value>
+    <value>163, 22</value>
   </data>
   <data name="simpleButton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 22</value>
+    <value>161, 22</value>
   </data>
   <data name="spinEditCreditTotal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>741, 326</value>
+    <value>867, 387</value>
   </data>
   <data name="spinEditCreditTotal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 21</value>
+    <value>161, 21</value>
+  </data>
+  <data name="ncc_Employee.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 387</value>
+  </data>
+  <data name="ncc_Employee.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 21</value>
   </data>
   <data name="spinEditTotalDebits.Location" type="System.Drawing.Point, System.Drawing">
-    <value>513, 326</value>
+    <value>651, 387</value>
   </data>
   <data name="spinEditTotalDebits.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 21</value>
+    <value>160, 21</value>
   </data>
   <data name="textEditSummonId.Location" type="System.Drawing.Point, System.Drawing">
-    <value>368, 12</value>
+    <value>409, 12</value>
   </data>
   <data name="textEditSummonId.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 21</value>
+    <value>272, 21</value>
   </data>
   <data name="dateEditSummonDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>64, 12</value>
   </data>
   <data name="dateEditSummonDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>248, 21</value>
+    <value>289, 21</value>
   </data>
   <data name="repositoryItemLookUpEdit1.Columns3" xml:space="preserve">
     <value>科目編號</value>
   </data>
   <data name="repositoryItemLookUpEdit2.Columns3" xml:space="preserve">
     <value>科目編號</value>
-  </data>
-  <data name="gridControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>896, 285</value>
-  </data>
-  <data name="layoutControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>920, 360</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>920, 407</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>會計傳票</value>

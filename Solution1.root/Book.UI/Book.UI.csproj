@@ -3641,6 +3641,9 @@
       <DependentUpon>ConditionForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\AtSummon\CopyChooseDateForm.resx">
+      <DependentUpon>CopyChooseDateForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtSummon\EditForm.en.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -4564,8 +4567,14 @@
       <DependentUpon>R01ZYD.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\CO\R0ch.resx">
+      <DependentUpon>R0ch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Invoices\CO\R0ch.zh-CHT.resx">
       <DependentUpon>R0ch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\CO\R0ch_New.zh-CHT.resx">
+      <DependentUpon>R0ch_New.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices\CO\RO.resx">
@@ -4580,8 +4589,8 @@
       <DependentUpon>ROSub.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Invoices\CO\R0ch.resx">
-      <DependentUpon>R0ch.cs</DependentUpon>
+    <EmbeddedResource Include="Invoices\CO\R0ch_New.resx">
+      <DependentUpon>R0ch_New.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices\CO\R0en.resx">
@@ -11666,6 +11675,12 @@
     <Compile Include="Accounting\AtSummon\ConditionForm.Designer.cs">
       <DependentUpon>ConditionForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Accounting\AtSummon\CopyChooseDateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\AtSummon\CopyChooseDateForm.Designer.cs">
+      <DependentUpon>CopyChooseDateForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Accounting\AtSummon\List.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -11919,6 +11934,12 @@
     <Compile Include="Invoices\CG\R01ZYD.Designer.cs">
       <DependentUpon>R01ZYD.cs</DependentUpon>
     </Compile>
+    <Compile Include="Invoices\CO\R0ch.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Invoices\CO\R0ch.Designer.cs">
+      <DependentUpon>R0ch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Invoices\CO\RO.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -11931,11 +11952,11 @@
     <Compile Include="Invoices\CO\ROSub.Designer.cs">
       <DependentUpon>ROSub.cs</DependentUpon>
     </Compile>
-    <Compile Include="Invoices\CO\R0ch.cs">
+    <Compile Include="Invoices\CO\R0ch_New.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Invoices\CO\R0ch.Designer.cs">
-      <DependentUpon>R0ch.cs</DependentUpon>
+    <Compile Include="Invoices\CO\R0ch_New.Designer.cs">
+      <DependentUpon>R0ch_New.cs</DependentUpon>
     </Compile>
     <Compile Include="Invoices\CO\R0en.cs">
       <SubType>Component</SubType>

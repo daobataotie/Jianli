@@ -192,9 +192,9 @@ namespace Book.BL
             return accessor.IsExistsIdUpdate(model);
         }
 
-        public IList<Model.AtSummon> SelectByCondition(DateTime startDate, DateTime endDate, string startId, string endId, string StartSubjectId, string EndSubjectId)
+        public IList<Model.AtSummon> SelectByCondition(DateTime startDate, DateTime endDate, string startId, string endId, string summonCategory, string employeeId)
         {
-            return accessor.SelectByCondition(startDate, endDate, startId, endId, StartSubjectId, EndSubjectId);
+            return accessor.SelectByCondition(startDate, endDate, startId, endId, summonCategory, employeeId);
         }
     }
 }

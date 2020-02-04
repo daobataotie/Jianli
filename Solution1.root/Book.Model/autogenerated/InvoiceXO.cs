@@ -575,7 +575,7 @@ namespace Book.Model
         }
 
         /// <summary>
-        /// 
+        /// 客戶批號
         /// </summary>
         public string CustomerLotNumber
         {

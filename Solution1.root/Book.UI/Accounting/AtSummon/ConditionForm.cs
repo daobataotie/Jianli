@@ -17,9 +17,9 @@ namespace Book.UI.Accounting.AtSummon
             InitializeComponent();
             this.dateEditStart.EditValue = DateTime.Now.AddDays(-30);
             this.dateEditEnd.EditValue = DateTime.Now;
+            this.ncc_Employee.Choose = new Settings.BasicData.Employees.ChooseEmployee();
+
             this.StartPosition = FormStartPosition.CenterScreen;
-            this.nccStartSubject.Choose = new Accounting.AtAccountSubject.ChooseAccountSubject();
-            this.nccEndSubject.Choose = new Accounting.AtAccountSubject.ChooseAccountSubject();
         }
 
         private void simpleButtonOK_Click(object sender, EventArgs e)
@@ -28,8 +28,10 @@ namespace Book.UI.Accounting.AtSummon
             condition.EndDate = this.dateEditEnd.EditValue == null ? DateTime.Now : this.dateEditEnd.DateTime;
             condition.StartId = this.textEditStartId.Text;
             condition.EndId = this.textEditEndId.Text;
-            condition.StartSubjectId = this.nccStartSubject.EditValue == null ? "" : (this.nccStartSubject.EditValue as Model.AtAccountSubject).Id;
-            condition.EndSubjectId = this.nccEndSubject.EditValue == null ? "" : (this.nccEndSubject.EditValue as Model.AtAccountSubject).Id;
+            condition.SummonCategory = this.comboBoxEditSummonCategory.Text;
+
+            if (this.ncc_Employee.EditValue != null)
+                condition.EmployeeId = (this.ncc_Employee.EditValue as Model.Employee).EmployeeId;
 
             this.DialogResult = DialogResult.OK;
         }
@@ -38,12 +40,6 @@ namespace Book.UI.Accounting.AtSummon
         {
             this.Close();
             this.Dispose();
-        }
-
-        private void nccStartSubject_EditValueChanged(object sender, EventArgs e)
-        {
-            if (this.nccStartSubject.EditValue != null)
-                this.nccEndSubject.EditValue = this.nccStartSubject.EditValue;
         }
     }
 }

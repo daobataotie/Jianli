@@ -30,6 +30,7 @@ namespace Book.UI.Accounting.Report
             this.lbl_IdRange.Text += condition.StartId + " ~ " + condition.EndId;
 
             var group = list.GroupBy(D => new { D.SummonDate, D.Id });
+            //group = group.OrderBy(d => new { d.Key.SummonDate, d.Key.Id });
 
             List<Model.DetailLedger> source = new List<Book.Model.DetailLedger>();
             foreach (var item in group)

@@ -1467,5 +1467,12 @@ namespace Book.UI.Invoices.CO
             ro.ShowPreviewDialog();
         }
 
+        //馬來列印
+        private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            R0ch_New r = new R0ch_New(this.invoice.InvoiceId);
+            r.ShowPreviewDialog();
+        }
+
     }
 }

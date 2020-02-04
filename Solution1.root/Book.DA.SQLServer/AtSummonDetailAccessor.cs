@@ -213,7 +213,7 @@ namespace Book.DA.SQLServer
             }
             if (!string.IsNullOrEmpty(category))
                 sql.Append(" and at.SummonCategory in (" + category + ")");
-            sql.Append(" order by at.SummonDate,at.Id");
+            sql.Append(" order by Convert(varchar(50),at.SummonDate,23),at.Id,atd.Number");
 
             return DataReaderBind<Model.DetailLedger>(sql.ToString(), null, CommandType.Text);
         }

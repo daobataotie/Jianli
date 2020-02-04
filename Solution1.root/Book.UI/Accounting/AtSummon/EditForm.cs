@@ -636,7 +636,7 @@ namespace Book.UI.Accounting.AtSummon
             ConditionForm f = new ConditionForm();
             if (f.ShowDialog(this) == DialogResult.OK)
             {
-                IList<Model.AtSummon> list = this.atSummonManager.SelectByCondition(f.condition.StartDate, f.condition.EndDate, f.condition.StartId, f.condition.EndId, f.condition.StartSubjectId, f.condition.EndSubjectId);
+                IList<Model.AtSummon> list = this.atSummonManager.SelectByCondition(f.condition.StartDate, f.condition.EndDate, f.condition.StartId, f.condition.EndId, f.condition.SummonCategory, f.condition.EmployeeId);
                 if (list.Count == 0)
                 {
                     MessageBox.Show("No data！", this.Text);
@@ -654,7 +654,7 @@ namespace Book.UI.Accounting.AtSummon
             ConditionForm f = new ConditionForm();
             if (f.ShowDialog(this) == DialogResult.OK)
             {
-                IList<Model.AtSummon> list = this.atSummonManager.SelectByCondition(f.condition.StartDate, f.condition.EndDate, f.condition.StartId, f.condition.EndId, f.condition.StartSubjectId, f.condition.EndSubjectId);
+                IList<Model.AtSummon> list = this.atSummonManager.SelectByCondition(f.condition.StartDate, f.condition.EndDate, f.condition.StartId, f.condition.EndId, f.condition.SummonCategory, f.condition.EmployeeId);
                 if (list.Count == 0)
                 {
                     MessageBox.Show("No data！", this.Text);
@@ -677,6 +677,36 @@ namespace Book.UI.Accounting.AtSummon
             {
                 MessageBox.Show("本單據不是轉賬傳票", this.Text, MessageBoxButtons.OK);
                 return;
+            }
+        }
+
+        private void bar_Copy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            CopyChooseDateForm f = new CopyChooseDateForm();
+            if (f.ShowDialog() == DialogResult.OK)
+            {
+                Model.AtSummon newAtSummon = new Book.Model.AtSummon();
+                newAtSummon.SummonId = Guid.NewGuid().ToString();
+                newAtSummon.SummonDate = f.InvoiceDate;
+                newAtSummon.SummonCategory = atSummon.SummonCategory;
+                newAtSummon.TotalDebits = atSummon.TotalDebits;
+                newAtSummon.CreditTotal = atSummon.CreditTotal;
+                newAtSummon.Id = this.atSummonManager.GetId(f.InvoiceDate);
+                newAtSummon.EmployeeDSId = atSummon.EmployeeDSId;
+                newAtSummon.EmployeeDS = atSummon.EmployeeDS;
+                newAtSummon.AtSummonDesc = atSummon.AtSummonDesc;
+
+                newAtSummon.Details = new List<Model.AtSummonDetail>();
+                foreach (var item in atSummon.Details)
+                {
+                    newAtSummon.Details.Add(item);
+                }
+
+                this.atSummon = newAtSummon;
+
+                this.action = "insert";
+
+                Refresh();
             }
         }
 
