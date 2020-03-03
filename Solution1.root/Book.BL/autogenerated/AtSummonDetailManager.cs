@@ -119,14 +119,42 @@ namespace Book.BL
             return accessor.IsExistsDetailForUpdate(SummonDetailId, SummonCatetory, Lending, SubjectId, AMoney);
         }
 
+        /// <summary>
+        /// 明細分類賬
+        /// </summary>
+        /// <param name="dateStart"></param>
+        /// <param name="dateEnd"></param>
+        /// <param name="subIdStart"></param>
+        /// <param name="subIdEnd"></param>
+        /// <returns></returns>
         public IList<Model.DetailLedger> SelectDetailLedger(DateTime dateStart, DateTime dateEnd, string subIdStart, string subIdEnd)
         {
             return accessor.SelectDetailLedger(dateStart, dateEnd, subIdStart, subIdEnd);
         }
 
+        /// <summary>
+        /// 日記賬
+        /// </summary>
+        /// <param name="dateStart"></param>
+        /// <param name="dateEnd"></param>
+        /// <param name="startId"></param>
+        /// <param name="endId"></param>
+        /// <param name="category"></param>
+        /// <returns></returns>
         public IList<Model.DetailLedger> SelectJournal(DateTime dateStart, DateTime dateEnd, string startId, string endId, string category)
         {
             return accessor.SelectJournal(dateStart, dateEnd, startId, endId, category);
+        }
+
+        /// <summary>
+        /// 前期餘額
+        /// </summary>
+        /// <param name="subjectId"></param>
+        /// <param name="summonDate"></param>
+        /// <returns></returns>
+        public decimal GetQianqiYuE(string subjectId, DateTime summonDate)
+        {
+            return accessor.GetQianqiYuE(subjectId, summonDate);
         }
     }
 }

@@ -42,7 +42,8 @@ namespace Book.UI.Accounting.AtSummon
             xrSubreport1.ReportSource = new ROTransferAccounts_Sub(atSummon.Details);
 
             this.TCJTotal.Text = atSummon.TotalDebits.Value.ToString("N0");
-            this.TCDTotal.Text = atSummon.CreditTotal.Value.ToString("N0");
+            this.TCDTotal.Text = atSummon.CreditTotal.Value.ToString("N0");       
+
         }
 
     }

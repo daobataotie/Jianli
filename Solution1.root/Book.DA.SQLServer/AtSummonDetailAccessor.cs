@@ -164,7 +164,7 @@ namespace Book.DA.SQLServer
 
         public IList<Model.DetailLedger> SelectDetailLedger(DateTime dateStart, DateTime dateEnd, string subIdStart, string subIdEnd)
         {
-            string sql = "select at.SummonDate,at.Id,atd.Summary,atd.Lending,atd.AMoney,(case when atd.Lending='借' then AMoney else 0 end) as JMoney,(case when atd.Lending='貸' then AMoney else 0 end) as DMoney,ats.TheBalance,ats.SubjectName,ats.Id as Subject_Id from AtSummonDetail atd left join AtSummon at on at.SummonId=atd.SummonId left join AtAccountSubject ats on atd.SubjectId=ats.SubjectId  where at.SummonDate between '" + dateStart.ToString("yyyy-MM-dd") + "' and '" + dateEnd.Date.AddDays(1).AddSeconds(-1).ToString("yyyy-MM-dd HH:mm:ss") + "'  and ats.Id between '" + subIdStart + "' and '" + subIdEnd + "' order by ats.Id,at.SummonDate";
+            string sql = "select at.SummonDate,at.Id,atd.Summary,atd.Lending,atd.AMoney,(case when atd.Lending='借' then AMoney else 0 end) as JMoney,(case when atd.Lending='貸' then AMoney else 0 end) as DMoney,ats.TheBalance,ats.SubjectName,ats.Id as Subject_Id,ats.TheLending from AtSummonDetail atd left join AtSummon at on at.SummonId=atd.SummonId left join AtAccountSubject ats on atd.SubjectId=ats.SubjectId  where at.SummonDate between '" + dateStart.ToString("yyyy-MM-dd") + "' and '" + dateEnd.Date.AddDays(1).AddSeconds(-1).ToString("yyyy-MM-dd HH:mm:ss") + "'  and ats.Id between '" + subIdStart + "' and '" + subIdEnd + "' order by ats.Id,Convert(varchar(50),at.SummonDate,23),at.Id";
 
             #region MyRegion
             //List<Model.DetailLedger> list = new List<Book.Model.DetailLedger>();
@@ -216,6 +216,15 @@ namespace Book.DA.SQLServer
             sql.Append(" order by Convert(varchar(50),at.SummonDate,23),at.Id,atd.Number");
 
             return DataReaderBind<Model.DetailLedger>(sql.ToString(), null, CommandType.Text);
+        }
+
+        public decimal GetQianqiYuE(string subjectId, DateTime summonDate)
+        {
+            Hashtable ht = new Hashtable();
+            ht.Add("SubjectId", subjectId);
+            ht.Add("SummonDate", summonDate);
+
+            return sqlmapper.QueryForObject<decimal>("AtSummonDetail.GetQianqiYuE", ht);
         }
     }
 }

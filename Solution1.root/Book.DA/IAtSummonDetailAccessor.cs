@@ -36,6 +36,8 @@ namespace Book.DA
         IList<Model.DetailLedger> SelectDetailLedger(DateTime dateStart, DateTime dateEnd, string subIdStart, string subIdEnd);
 
         IList<Model.DetailLedger> SelectJournal(DateTime dateStart, DateTime dateEnd, string startId, string endId, string category);
+
+        decimal GetQianqiYuE(string subjectId, DateTime summonDate);
     }
 }
 

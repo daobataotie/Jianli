@@ -54,9 +54,8 @@
             // 
             // xrTable2
             // 
-            this.xrTable2.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
-                        | DevExpress.XtraPrinting.BorderSide.Right)
-                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrTable2.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
+                        | DevExpress.XtraPrinting.BorderSide.Right)));
             this.xrTable2.Dpi = 254F;
             this.xrTable2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrTable2.Name = "xrTable2";
@@ -84,8 +83,12 @@
             // 
             // TC_Jiedai
             // 
+            this.TC_Jiedai.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
+                        | DevExpress.XtraPrinting.BorderSide.Right)
+                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.TC_Jiedai.Dpi = 254F;
             this.TC_Jiedai.Name = "TC_Jiedai";
+            this.TC_Jiedai.StylePriority.UseBorders = false;
             this.TC_Jiedai.StylePriority.UseTextAlignment = false;
             this.TC_Jiedai.Text = "借貸";
             this.TC_Jiedai.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
@@ -93,8 +96,12 @@
             // 
             // TCSubId
             // 
+            this.TCSubId.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
+                        | DevExpress.XtraPrinting.BorderSide.Right)
+                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.TCSubId.Dpi = 254F;
             this.TCSubId.Name = "TCSubId";
+            this.TCSubId.StylePriority.UseBorders = false;
             this.TCSubId.StylePriority.UseTextAlignment = false;
             this.TCSubId.Text = "科目編號";
             this.TCSubId.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
@@ -102,8 +109,12 @@
             // 
             // TC_SubName
             // 
+            this.TC_SubName.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
+                        | DevExpress.XtraPrinting.BorderSide.Right)
+                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.TC_SubName.Dpi = 254F;
             this.TC_SubName.Name = "TC_SubName";
+            this.TC_SubName.StylePriority.UseBorders = false;
             this.TC_SubName.StylePriority.UseTextAlignment = false;
             this.TC_SubName.Text = "科目名稱";
             this.TC_SubName.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
@@ -111,8 +122,12 @@
             // 
             // TC_Note
             // 
+            this.TC_Note.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
+                        | DevExpress.XtraPrinting.BorderSide.Right)
+                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.TC_Note.Dpi = 254F;
             this.TC_Note.Name = "TC_Note";
+            this.TC_Note.StylePriority.UseBorders = false;
             this.TC_Note.StylePriority.UseTextAlignment = false;
             this.TC_Note.Text = "摘要";
             this.TC_Note.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
@@ -120,9 +135,13 @@
             // 
             // TC_JMoney
             // 
+            this.TC_JMoney.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
+                        | DevExpress.XtraPrinting.BorderSide.Right)
+                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.TC_JMoney.Dpi = 254F;
             this.TC_JMoney.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TC_JMoney.Name = "TC_JMoney";
+            this.TC_JMoney.StylePriority.UseBorders = false;
             this.TC_JMoney.StylePriority.UseFont = false;
             this.TC_JMoney.StylePriority.UseTextAlignment = false;
             this.TC_JMoney.Text = "借方金額";
@@ -131,9 +150,13 @@
             // 
             // TC_DMoney
             // 
+            this.TC_DMoney.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
+                        | DevExpress.XtraPrinting.BorderSide.Right)
+                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.TC_DMoney.Dpi = 254F;
             this.TC_DMoney.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TC_DMoney.Name = "TC_DMoney";
+            this.TC_DMoney.StylePriority.UseBorders = false;
             this.TC_DMoney.StylePriority.UseFont = false;
             this.TC_DMoney.StylePriority.UseTextAlignment = false;
             this.TC_DMoney.Text = "貸方金額";

@@ -120,4 +120,18 @@
   <data name="xrTableCell22.Text" xml:space="preserve">
     <value />
   </data>
+  <data name="xrTableCell13.Text" xml:space="preserve">
+    <value>前期餘額(台幣)：</value>
+  </data>
+  <assembly alias="DevExpress.Data.v10.2" name="DevExpress.Data.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="xrTableCell13.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleRight</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TC_QianqiBalance.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="TC_QianqiBalance.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleRight</value>
+  </data>
 </root>

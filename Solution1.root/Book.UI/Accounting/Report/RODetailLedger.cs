@@ -12,11 +12,14 @@ namespace Book.UI.Accounting.Report
     public partial class RODetailLedger : DevExpress.XtraReports.UI.XtraReport
     {
         IList<Model.DetailLedger> List = null;
+        BL.AtSummonDetailManager manager = new Book.BL.AtSummonDetailManager();
+        private DateTime startDate;
+
         public RODetailLedger(ConditionDetailLedger condition)
         {
             InitializeComponent();
 
-            BL.AtSummonDetailManager manager = new Book.BL.AtSummonDetailManager();
+            startDate = condition.DateStart.Date;
             List = manager.SelectDetailLedger(condition.DateStart, condition.DateEnd, condition.StartSubId, condition.EndSubId);
 
             if (List == null || List.Count == 0)
@@ -45,11 +48,19 @@ namespace Book.UI.Accounting.Report
 
             List<Model.DetailLedger> subList = new List<Book.Model.DetailLedger>();
             var group = List.Where(l => l.Subject_Id == this.GetCurrentRow().ToString());
-            decimal a = group.First().TheBalance;
+
+            group.First().TheBalance = manager.GetQianqiYuE(group.First().Subject_Id, startDate);
+            decimal qianqiYuE = group.First().TheBalance;
 
             foreach (var item in group)
             {
-                item.Total = a = item.AMoney + a;
+                //和会计科目的期初借贷相同即为+，否则-
+                if (item.Lending == item.TheLending)
+                    item.Total = qianqiYuE = qianqiYuE + item.AMoney;
+                else
+                    item.Total = qianqiYuE = qianqiYuE - item.AMoney;
+
+
                 subList.Add(item);
             }
 

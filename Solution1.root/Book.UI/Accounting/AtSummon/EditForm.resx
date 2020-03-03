@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="colJinE.Width" type="System.Int32, mscorlib">
-    <value>186</value>
+    <value>84</value>
   </data>
   <data name="&gt;&gt;barButtonItemNew.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
@@ -223,7 +223,7 @@
     <value>條件打印1/3</value>
   </data>
   <data name="simpleButton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>162, 22</value>
+    <value>161, 22</value>
   </data>
   <data name="&gt;&gt;layoutControlItem5.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
@@ -348,7 +348,7 @@
     <value>科目名称</value>
   </data>
   <data name="simpleButton2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>178, 387</value>
+    <value>177, 387</value>
   </data>
   <data name="&gt;&gt;comboBoxEditSummonCategory.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -429,7 +429,7 @@
     <value>0</value>
   </data>
   <data name="colZhaiYao.Width" type="System.Int32, mscorlib">
-    <value>184</value>
+    <value>498</value>
   </data>
   <data name="textEditSummonId.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -842,7 +842,7 @@
     <value>ncc_Employee</value>
   </data>
   <data name="gridColumn1.Width" type="System.Int32, mscorlib">
-    <value>50</value>
+    <value>51</value>
   </data>
   <data name="comboBoxEditSummonCategory.Properties.NullValuePrompt" xml:space="preserve">
     <value />
@@ -938,7 +938,7 @@
     <value>轉帳傳票</value>
   </data>
   <data name="simpleButton2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>162, 22</value>
+    <value>163, 22</value>
   </data>
   <data name="layoutControlItem3.Text" xml:space="preserve">
     <value>传票编号：</value>
@@ -1190,7 +1190,7 @@
     <value>True</value>
   </data>
   <data name="colJieorDai.Width" type="System.Int32, mscorlib">
-    <value>184</value>
+    <value>81</value>
   </data>
   <data name="dateEditSummonDate.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
@@ -1223,7 +1223,7 @@
     <value>会计传票</value>
   </data>
   <data name="colKeMuMingCheng.Width" type="System.Int32, mscorlib">
-    <value>184</value>
+    <value>170</value>
   </data>
   <data name="simpleButton2.Text" xml:space="preserve">
     <value>—</value>
@@ -1271,7 +1271,7 @@
     <value>None</value>
   </data>
   <data name="colKemuBianHao.Width" type="System.Int32, mscorlib">
-    <value>184</value>
+    <value>114</value>
   </data>
   <data name="&gt;&gt;spinEditTotalDebits.ZOrder" xml:space="preserve">
     <value>9</value>

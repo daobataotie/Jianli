@@ -15,7 +15,7 @@ namespace Book.UI.Accounting.AtSummon
         public ConditionForm()
         {
             InitializeComponent();
-            this.dateEditStart.EditValue = DateTime.Now.AddDays(-30);
+            this.dateEditStart.EditValue = DateTime.Now.AddMonths(-2);
             this.dateEditEnd.EditValue = DateTime.Now;
             this.ncc_Employee.Choose = new Settings.BasicData.Employees.ChooseEmployee();
 
@@ -24,7 +24,7 @@ namespace Book.UI.Accounting.AtSummon
 
         private void simpleButtonOK_Click(object sender, EventArgs e)
         {
-            condition.StartDate = this.dateEditStart.EditValue == null ? DateTime.Now.AddDays(-30) : this.dateEditStart.DateTime;
+            condition.StartDate = this.dateEditStart.EditValue == null ? DateTime.Now.AddMonths(-2) : this.dateEditStart.DateTime;
             condition.EndDate = this.dateEditEnd.EditValue == null ? DateTime.Now : this.dateEditEnd.DateTime;
             condition.StartId = this.textEditStartId.Text;
             condition.EndId = this.textEditEndId.Text;

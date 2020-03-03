@@ -633,6 +633,12 @@ namespace Book.UI.Accounting.AtSummon
         //1/3
         private void barButtonItem1_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            if (this.action != "view")
+            {
+                MessageBox.Show("請先保存單據！", "提示", MessageBoxButtons.OK);
+                return;
+            }
+
             ConditionForm f = new ConditionForm();
             if (f.ShowDialog(this) == DialogResult.OK)
             {
@@ -651,6 +657,12 @@ namespace Book.UI.Accounting.AtSummon
         //A4
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            if (this.action != "view")
+            {
+                MessageBox.Show("請先保存單據！", "提示", MessageBoxButtons.OK);
+                return;
+            }
+
             ConditionForm f = new ConditionForm();
             if (f.ShowDialog(this) == DialogResult.OK)
             {
@@ -666,8 +678,15 @@ namespace Book.UI.Accounting.AtSummon
             }
         }
 
+        //转账传票
         private void bar_PrintTrans_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            if (this.action != "view")
+            {
+                MessageBox.Show("請先保存單據！", "提示", MessageBoxButtons.OK);
+                return;
+            }
+
             if (this.atSummon.SummonCategory == "轉帳傳票")
             {
                 ROTransferAccounts ro = new ROTransferAccounts(this.atSummon);
@@ -682,6 +701,12 @@ namespace Book.UI.Accounting.AtSummon
 
         private void bar_Copy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            if (this.action != "view")
+            {
+                MessageBox.Show("請先保存單據！", "提示", MessageBoxButtons.OK);
+                return;
+            }
+
             CopyChooseDateForm f = new CopyChooseDateForm();
             if (f.ShowDialog() == DialogResult.OK)
             {

@@ -42,7 +42,7 @@ namespace Book.UI.Accounting.Report
             //this.TC_DTotal.Text = list.Sum(D => D.DMoney).ToString("F2");
             //this.TC_AllTotal.Text = list.Last().Total.ToString("F2");
 
-            this.TC_QichuBalance.Text = detail.TheBalance.ToString("N0");
+            this.TC_QianqiBalance.Text = detail.TheBalance.ToString("N0");
             this.TC_JTotal.Text = list.Sum(D => D.JMoney).ToString("N0");
             this.TC_DTotal.Text = list.Sum(D => D.DMoney).ToString("N0");
             this.TC_AllTotal.Text = list.Last().Total.ToString("N0");

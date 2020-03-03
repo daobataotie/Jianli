@@ -124,5 +124,12 @@
       SELECT CASE WHEN EXISTS (SELECT * FROM AtSummonDetail WHERE SummonCatetory=#SummonCatetory# AND Lending=#Lending# AND SubjectId=#SubjectId# AND AMoney=#AMoney# and SummonDetailId<>#SummonDetailId#) THEN 1 ELSE 0 end
       ]]>
     </select>
+
+    <select id="GetQianqiYuE" resultClass="decimal" parameterClass="Map">
+      <![CDATA[
+      select ISNULL(sum(case when a.Lending=a.TheLending then a.AMoney else -a.AMoney end),0)  from (
+select atd.Lending,atd.AMoney,(case when ats.TheLending='Borrow' then '借' else '貸' end) as TheLending  from AtSummonDetail atd  left join AtSummon at on atd.SummonId=at.SummonId left join AtAccountSubject ats on atd.SubjectId=ats.SubjectId where ats.Id=#SubjectId# and at.SummonDate<#SummonDate#) a
+      ]]>
+    </select>
   </statements>
 </sqlMap>

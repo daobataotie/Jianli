@@ -231,7 +231,8 @@ namespace Book.UI.Query
             if (!this.gridView3.PostEditor() || !this.gridView3.UpdateCurrentRow())
                 return;
 
-            //会计传票
+         
+            #region 会计传票
             this.atSummon.Id = this.txt_AtSummonId.Text;
             this.atSummon.SummonCategory = this.cobAtSummonCategory.EditValue == null ? null : this.cobAtSummonCategory.EditValue.ToString();
             if (global::Helper.DateTimeParse.DateTimeEquls(this.date_AtSummonDate.DateTime, new DateTime()))
@@ -307,7 +308,8 @@ namespace Book.UI.Query
                     if (this.atSummonManager.IsExistsIdUpdate(this.atSummon))
                         throw new Helper.MessageValueException("傳票編號已存在！");
                     break;
-            }
+            } 
+            #endregion
 
             //应付票据作业
             //this.AtBillsIncome.Id = this.txt_YFCheckId.Text;

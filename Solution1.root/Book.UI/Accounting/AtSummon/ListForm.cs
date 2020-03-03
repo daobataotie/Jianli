@@ -21,7 +21,7 @@ namespace Book.UI.Accounting.AtSummon
         protected override void RefreshData()
         {
             //this.bindingSource1.DataSource = (this.manager as BL.AtSummonManager).SelectByDateRage(DateTime.Now.AddMonths(-1), global::Helper.DateTimeParse.EndDate);
-            this.bindingSource1.DataSource = (this.manager as BL.AtSummonManager).SelectByCondition(DateTime.Now.AddMonths(-1), global::Helper.DateTimeParse.EndDate, null, null, null, null);
+            this.bindingSource1.DataSource = (this.manager as BL.AtSummonManager).SelectByCondition(DateTime.Now.AddMonths(-2), global::Helper.DateTimeParse.EndDate, null, null, null, null);
             this.gridView1.GroupPanelText = "The default display records in a month";
         }
 
