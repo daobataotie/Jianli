@@ -30,27 +30,37 @@ namespace Book.UI.Invoices.IP
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            Model.PackingInvoiceHeader model = this.bindingSourceHeader.Current as Model.PackingInvoiceHeader;
-
-            if (model != null)
-            {
-                this.bindingSourceDetail.DataSource = model.Details = detailManager.SelectByHeader(model.InvoiceNo);
-            }
-            else
-                this.bindingSourceDetail.DataSource = null;
-
-            this.gridControl3.RefreshDataSource();
-
-            this.SelectItem = model;
+            GetDetailInfo();
         }
 
         private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {
+            GetDetailInfo();
+        }
+
+        private void GetDetailInfo()
         {
             Model.PackingInvoiceHeader model = this.bindingSourceHeader.Current as Model.PackingInvoiceHeader;
 
             if (model != null)
             {
-                this.bindingSourceDetail.DataSource = model.Details = detailManager.SelectByHeader(model.InvoiceNo);
+                model.Details = detailManager.SelectByHeader(model.InvoiceNo);
+
+                if (model.Details != null && model.Details.Count > 0)
+                {
+                    string currency = new BL.InvoiceXOManager().GetCurrencyByInvoiceId(model.Details[0].InvoiceXODetail.InvoiceId);
+                    string currencyENName = Model.ExchangeRate.GetCurrencyENName(currency);
+                    string currencySign = Model.ExchangeRate.GetCurrencySign(currency);
+
+                    //model.Currency = currencySign;
+
+                    foreach (var detail in model.Details)
+                    {
+                        detail.Currency = currencySign;
+                    }
+                }
+
+                this.bindingSourceDetail.DataSource = model.Details;
             }
             else
                 this.bindingSourceDetail.DataSource = null;

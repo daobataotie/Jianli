@@ -29,7 +29,7 @@ namespace Book.UI.Invoices.IP
             this.lbl_PayCondition.Text = invoiceList.TradingCondition;
             this.lbl_PerSS.Text = invoiceList.PerSS;
             if (invoiceList.SailingOnOrAbout != null)
-                this.lbl_SailingDate.Text = invoiceList.SailingOnOrAbout.Value.ToString("yyyy-MM-dd");
+                this.lbl_SailingDate.Text = invoiceList.SailingOnOrAbout.Value.ToString("MMM dd.yyyy", CultureInfo.CreateSpecificCulture("en-GB"));
             if (invoiceList.FromPort != null)
                 this.lbl_From.Text = invoiceList.FromPort.PortName;
             if (invoiceList.ToPort != null)
@@ -37,9 +37,9 @@ namespace Book.UI.Invoices.IP
             this.lbl_marks.Text = invoiceList.MarkNos;
 
             if (!string.IsNullOrEmpty(invoiceList.Unit))
-                this.lbl_TotalQTY.Text = invoiceList.Details.Sum(P => P.Quantity).Value.ToString("0.##") + " " + invoiceList.Unit;
+                this.lbl_TotalQTY.Text = invoiceList.Details.Sum(P => P.Quantity).Value.ToString("0.00") + " " + invoiceList.Unit;
             else
-                this.lbl_TotalQTY.Text = invoiceList.Details.Sum(P => P.Quantity).Value.ToString("0.##") + " PCS";
+                this.lbl_TotalQTY.Text = invoiceList.Details.Sum(P => P.Quantity).Value.ToString("0.00") + " PCS";
 
             if (invoiceList.Details != null && invoiceList.Details.Count > 0)
             {

@@ -262,9 +262,7 @@
             // gridColumn18
             // 
             this.gridColumn18.Caption = "Quantity";
-            this.gridColumn18.DisplayFormat.FormatString = "0.## PCS";
-            this.gridColumn18.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.gridColumn18.FieldName = "Quantity";
+            this.gridColumn18.FieldName = "ShowQty";
             this.gridColumn18.Name = "gridColumn18";
             this.gridColumn18.Visible = true;
             this.gridColumn18.VisibleIndex = 6;
@@ -273,9 +271,7 @@
             // gridColumn19
             // 
             this.gridColumn19.Caption = "Unit Price";
-            this.gridColumn19.DisplayFormat.FormatString = "0.## KGS";
-            this.gridColumn19.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.gridColumn19.FieldName = "UnitPrice";
+            this.gridColumn19.FieldName = "ShowUnitPrice";
             this.gridColumn19.Name = "gridColumn19";
             this.gridColumn19.Visible = true;
             this.gridColumn19.VisibleIndex = 4;
@@ -284,9 +280,7 @@
             // gridColumn20
             // 
             this.gridColumn20.Caption = "Amount";
-            this.gridColumn20.DisplayFormat.FormatString = "0.## KGS";
-            this.gridColumn20.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.gridColumn20.FieldName = "Amount";
+            this.gridColumn20.FieldName = "ShowAmount";
             this.gridColumn20.Name = "gridColumn20";
             this.gridColumn20.Visible = true;
             this.gridColumn20.VisibleIndex = 5;
@@ -343,7 +337,7 @@
             // gridColumn2
             // 
             this.gridColumn2.Caption = "Date";
-            this.gridColumn2.FieldName = "InvoiceNo";
+            this.gridColumn2.FieldName = "InvoiceDate";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;

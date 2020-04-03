@@ -38,6 +38,30 @@ namespace Book.Model
             }
         }
 
+        public string Currency { get; set; }
+
+        public string ShowUnitPrice
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Currency))
+                    return this.UnitPrice.Value.ToString("0.##");
+                else
+                    return string.Format("{0} {1}", this.UnitPrice, Currency);
+            }
+        }
+
+        public string ShowAmount
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Currency))
+                    return this.Amount.Value.ToString("0.##");
+                else
+                    return string.Format("{0} {1}", this.Amount, Currency);
+            }
+        }
+
         public readonly static string PRO_CUSTNO = "CUSTNO";
 
         public readonly static string PRO_ShowQty = "ShowQty";

@@ -37,7 +37,9 @@
             this.TC_CUSTNO = new DevExpress.XtraReports.UI.XRTableCell();
             this.TC_ProductName = new DevExpress.XtraReports.UI.XRTableCell();
             this.TCQTY = new DevExpress.XtraReports.UI.XRTableCell();
+            this.TCUnitPriceCurrency = new DevExpress.XtraReports.UI.XRTableCell();
             this.TC_UnitPrice = new DevExpress.XtraReports.UI.XRTableCell();
+            this.TCAmountCurrency = new DevExpress.XtraReports.UI.XRTableCell();
             this.TC_Amount = new DevExpress.XtraReports.UI.XRTableCell();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
@@ -84,8 +86,6 @@
             this.lbl_TotalQTY = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLine1 = new DevExpress.XtraReports.UI.XRLine();
-            this.TCUnitPriceCurrency = new DevExpress.XtraReports.UI.XRTableCell();
-            this.TCAmountCurrency = new DevExpress.XtraReports.UI.XRTableCell();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -167,26 +167,48 @@
             // 
             this.TCQTY.Dpi = 254F;
             this.TCQTY.Name = "TCQTY";
+            this.TCQTY.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 5, 0, 0, 254F);
+            this.TCQTY.StylePriority.UsePadding = false;
             this.TCQTY.StylePriority.UseTextAlignment = false;
             this.TCQTY.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.TCQTY.Weight = 0.35545317249020614;
+            // 
+            // TCUnitPriceCurrency
+            // 
+            this.TCUnitPriceCurrency.Borders = DevExpress.XtraPrinting.BorderSide.Left;
+            this.TCUnitPriceCurrency.Dpi = 254F;
+            this.TCUnitPriceCurrency.Name = "TCUnitPriceCurrency";
+            this.TCUnitPriceCurrency.StylePriority.UseBorders = false;
+            this.TCUnitPriceCurrency.Weight = 0.14113190658191718;
             // 
             // TC_UnitPrice
             // 
             this.TC_UnitPrice.Borders = DevExpress.XtraPrinting.BorderSide.Right;
             this.TC_UnitPrice.Dpi = 254F;
             this.TC_UnitPrice.Name = "TC_UnitPrice";
+            this.TC_UnitPrice.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 5, 0, 0, 254F);
             this.TC_UnitPrice.StylePriority.UseBorders = false;
+            this.TC_UnitPrice.StylePriority.UsePadding = false;
             this.TC_UnitPrice.StylePriority.UseTextAlignment = false;
             this.TC_UnitPrice.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.TC_UnitPrice.Weight = 0.16613994771211352;
+            // 
+            // TCAmountCurrency
+            // 
+            this.TCAmountCurrency.Borders = DevExpress.XtraPrinting.BorderSide.Left;
+            this.TCAmountCurrency.Dpi = 254F;
+            this.TCAmountCurrency.Name = "TCAmountCurrency";
+            this.TCAmountCurrency.StylePriority.UseBorders = false;
+            this.TCAmountCurrency.Weight = 0.14113190802051079;
             // 
             // TC_Amount
             // 
             this.TC_Amount.Borders = DevExpress.XtraPrinting.BorderSide.Right;
             this.TC_Amount.Dpi = 254F;
             this.TC_Amount.Name = "TC_Amount";
+            this.TC_Amount.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 5, 0, 0, 254F);
             this.TC_Amount.StylePriority.UseBorders = false;
+            this.TC_Amount.StylePriority.UsePadding = false;
             this.TC_Amount.StylePriority.UseTextAlignment = false;
             this.TC_Amount.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.TC_Amount.Weight = 0.29462401295802304;
@@ -607,7 +629,7 @@
             this.xrLabel19.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel19.SizeF = new System.Drawing.SizeF(305.6652F, 37.25338F);
             this.xrLabel19.StylePriority.UseTextAlignment = false;
-            this.xrLabel19.Text = "vvvvvvvvvvvvvvvv";
+            this.xrLabel19.Text = "vvvvvvvvvvvvvvvvv";
             this.xrLabel19.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // xrLabel17
@@ -618,7 +640,7 @@
             this.xrLabel17.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel17.SizeF = new System.Drawing.SizeF(258.0411F, 37.25338F);
             this.xrLabel17.StylePriority.UseTextAlignment = false;
-            this.xrLabel17.Text = "vvvvvvvvvvvvv";
+            this.xrLabel17.Text = "vvvvvvvvvvvvvv";
             this.xrLabel17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // lbl_TotalAmount
@@ -629,7 +651,7 @@
             this.lbl_TotalAmount.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.lbl_TotalAmount.SizeF = new System.Drawing.SizeF(305.6652F, 58.42004F);
             this.lbl_TotalAmount.StylePriority.UseTextAlignment = false;
-            this.lbl_TotalAmount.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.lbl_TotalAmount.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // lbl_TotalQTY
             // 
@@ -639,7 +661,7 @@
             this.lbl_TotalQTY.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.lbl_TotalQTY.SizeF = new System.Drawing.SizeF(258.0413F, 58.42004F);
             this.lbl_TotalQTY.StylePriority.UseTextAlignment = false;
-            this.lbl_TotalQTY.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.lbl_TotalQTY.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // xrLabel10
             // 
@@ -660,22 +682,6 @@
             this.xrLine1.Name = "xrLine1";
             this.xrLine1.SizeF = new System.Drawing.SizeF(1985F, 5F);
             this.xrLine1.StylePriority.UseBorders = false;
-            // 
-            // TCUnitPriceCurrency
-            // 
-            this.TCUnitPriceCurrency.Borders = DevExpress.XtraPrinting.BorderSide.Left;
-            this.TCUnitPriceCurrency.Dpi = 254F;
-            this.TCUnitPriceCurrency.Name = "TCUnitPriceCurrency";
-            this.TCUnitPriceCurrency.StylePriority.UseBorders = false;
-            this.TCUnitPriceCurrency.Weight = 0.14113190658191718;
-            // 
-            // TCAmountCurrency
-            // 
-            this.TCAmountCurrency.Borders = DevExpress.XtraPrinting.BorderSide.Left;
-            this.TCAmountCurrency.Dpi = 254F;
-            this.TCAmountCurrency.Name = "TCAmountCurrency";
-            this.TCAmountCurrency.StylePriority.UseBorders = false;
-            this.TCAmountCurrency.Weight = 0.14113190802051079;
             // 
             // ROInvoice
             // 

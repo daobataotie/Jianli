@@ -8,12 +8,12 @@
 using System;
 namespace Book.Model
 {
-	/// <summary>
-	/// 
-	/// </summary>
-	[Serializable]
-	public partial class PackingInvoiceHeader:Invoice
-	{
+    /// <summary>
+    /// 
+    /// </summary>
+    [Serializable]
+    public partial class PackingInvoiceHeader : Invoice
+    {
         System.Collections.Generic.IList<Model.PackingInvoiceDetail> _details = new System.Collections.Generic.List<Model.PackingInvoiceDetail>();
 
         public System.Collections.Generic.IList<Model.PackingInvoiceDetail> Details
@@ -21,5 +21,6 @@ namespace Book.Model
             get { return _details; }
             set { _details = value; }
         }
-	}
+
+    }
 }

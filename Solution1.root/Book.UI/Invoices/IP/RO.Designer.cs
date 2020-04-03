@@ -176,6 +176,8 @@
             // 
             this.TCQTY.Dpi = 254F;
             this.TCQTY.Name = "TCQTY";
+            this.TCQTY.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 5, 0, 0, 254F);
+            this.TCQTY.StylePriority.UsePadding = false;
             this.TCQTY.StylePriority.UseTextAlignment = false;
             this.TCQTY.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.TCQTY.Weight = 0.35545194522562973;
@@ -184,6 +186,8 @@
             // 
             this.TC_NetWeight.Dpi = 254F;
             this.TC_NetWeight.Name = "TC_NetWeight";
+            this.TC_NetWeight.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 5, 0, 0, 254F);
+            this.TC_NetWeight.StylePriority.UsePadding = false;
             this.TC_NetWeight.StylePriority.UseTextAlignment = false;
             this.TC_NetWeight.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.TC_NetWeight.Weight = 0.36749963182069523;
@@ -192,6 +196,8 @@
             // 
             this.TC_GrossWeight.Dpi = 254F;
             this.TC_GrossWeight.Name = "TC_GrossWeight";
+            this.TC_GrossWeight.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 5, 0, 0, 254F);
+            this.TC_GrossWeight.StylePriority.UsePadding = false;
             this.TC_GrossWeight.StylePriority.UseTextAlignment = false;
             this.TC_GrossWeight.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.TC_GrossWeight.Weight = 0.35946841392060486;
@@ -611,7 +617,7 @@
             this.xrLabel19.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel19.SizeF = new System.Drawing.SizeF(236.8748F, 37.25338F);
             this.xrLabel19.StylePriority.UseTextAlignment = false;
-            this.xrLabel19.Text = "vvvvvvvvvvvv";
+            this.xrLabel19.Text = "vvvvvvvvvvvvv";
             this.xrLabel19.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // xrLabel18
@@ -622,7 +628,7 @@
             this.xrLabel18.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel18.SizeF = new System.Drawing.SizeF(242.167F, 37.25338F);
             this.xrLabel18.StylePriority.UseTextAlignment = false;
-            this.xrLabel18.Text = "vvvvvvvvvvvv";
+            this.xrLabel18.Text = "vvvvvvvvvvvvv";
             this.xrLabel18.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // xrLabel17
@@ -633,7 +639,7 @@
             this.xrLabel17.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel17.SizeF = new System.Drawing.SizeF(258.0411F, 37.25338F);
             this.xrLabel17.StylePriority.UseTextAlignment = false;
-            this.xrLabel17.Text = "vvvvvvvvvvvvv";
+            this.xrLabel17.Text = "vvvvvvvvvvvvvv";
             this.xrLabel17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // lbl_TotalGrossWeight
@@ -645,7 +651,7 @@
             this.lbl_TotalGrossWeight.SizeF = new System.Drawing.SizeF(236.8748F, 58.42004F);
             this.lbl_TotalGrossWeight.StylePriority.UseTextAlignment = false;
             this.lbl_TotalGrossWeight.Text = "From:";
-            this.lbl_TotalGrossWeight.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.lbl_TotalGrossWeight.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // lbl_TotalNetWeight
             // 
@@ -656,7 +662,7 @@
             this.lbl_TotalNetWeight.SizeF = new System.Drawing.SizeF(242.1669F, 58.42004F);
             this.lbl_TotalNetWeight.StylePriority.UseTextAlignment = false;
             this.lbl_TotalNetWeight.Text = "From:";
-            this.lbl_TotalNetWeight.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.lbl_TotalNetWeight.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // lbl_TotalQTY
             // 
@@ -667,7 +673,7 @@
             this.lbl_TotalQTY.SizeF = new System.Drawing.SizeF(258.0413F, 58.42004F);
             this.lbl_TotalQTY.StylePriority.UseTextAlignment = false;
             this.lbl_TotalQTY.Text = "From:";
-            this.lbl_TotalQTY.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.lbl_TotalQTY.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // xrLabel10
             // 

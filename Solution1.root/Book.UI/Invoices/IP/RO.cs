@@ -38,7 +38,7 @@ namespace Book.UI.Invoices.IP
             this.lbl_address.Text = packingList.CustomerAddress;
             this.lbl_PerSS.Text = packingList.PerSS;
             if (packingList.SailingOnOrAbout != null)
-                this.lbl_SailingDate.Text = packingList.SailingOnOrAbout.Value.ToString("yyyy-MM-dd");
+                this.lbl_SailingDate.Text = packingList.SailingOnOrAbout.Value.ToString("MMM dd.yyyy", CultureInfo.CreateSpecificCulture("en-GB"));
             if (packingList.FromPort != null)
                 this.lbl_From.Text = packingList.FromPort.PortName;
             if (packingList.ToPort != null)
@@ -59,12 +59,12 @@ namespace Book.UI.Invoices.IP
                                      totalCartonNo + " CARTON";
 
             if (!string.IsNullOrEmpty(packingList.Unit))
-                this.lbl_TotalQTY.Text = packingList.Details.Sum(P => P.Quantity).Value.ToString("0.##") + " " + packingList.Unit;
+                this.lbl_TotalQTY.Text = packingList.Details.Sum(P => P.Quantity).Value.ToString("0.00") + " " + packingList.Unit;
             else
-                this.lbl_TotalQTY.Text = packingList.Details.Sum(P => P.Quantity).Value.ToString("0.##") + " PCS";
+                this.lbl_TotalQTY.Text = packingList.Details.Sum(P => P.Quantity).Value.ToString("0.00") + " PCS";
 
-            this.lbl_TotalNetWeight.Text = packingList.Details.Sum(P => P.NetWeight).Value.ToString("0.##") + " KGS";
-            this.lbl_TotalGrossWeight.Text = packingList.Details.Sum(P => P.GrossWeight).Value.ToString("0.##") + " KGS";
+            this.lbl_TotalNetWeight.Text = packingList.Details.Sum(P => P.NetWeight).Value.ToString("0.00") + " KGS";
+            this.lbl_TotalGrossWeight.Text = packingList.Details.Sum(P => P.GrossWeight).Value.ToString("0.00") + " KGS";
 
             TC_PLTNo.DataBindings.Add("Text", this.DataSource, Model.PackingListDetail.PRO_PLTNo);
             TC_CartonNo.DataBindings.Add("Text", this.DataSource, Model.PackingListDetail.PRO_CartonNo);
