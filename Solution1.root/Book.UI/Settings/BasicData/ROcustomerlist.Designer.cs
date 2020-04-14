@@ -293,9 +293,8 @@ namespace Book.UI.Settings.BasicData
             // 
             // ReportFooter
             // 
-            this.ReportFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrPageInfo1});
             resources.ApplyResources(this.ReportFooter, "ReportFooter");
+            this.ReportFooter.Expanded = false;
             this.ReportFooter.Name = "ReportFooter";
             // 
             // xrPageInfo1
@@ -306,6 +305,8 @@ namespace Book.UI.Settings.BasicData
             // 
             // PageFooter
             // 
+            this.PageFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrPageInfo1});
             resources.ApplyResources(this.PageFooter, "PageFooter");
             this.PageFooter.Name = "PageFooter";
             // 
@@ -320,7 +321,7 @@ namespace Book.UI.Settings.BasicData
             this.ReportFooter,
             this.PageFooter});
             resources.ApplyResources(this, "$this");
-            this.Margins = new System.Drawing.Printing.Margins(80, 80, 80, 80);
+            this.Margins = new System.Drawing.Printing.Margins(79, 77, 80, 80);
             this.PageHeight = 2794;
             this.PageWidth = 2159;
             this.Version = "10.2";

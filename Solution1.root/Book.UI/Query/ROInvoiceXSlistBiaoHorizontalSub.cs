@@ -7,11 +7,11 @@ using System.Data;
 
 namespace Book.UI.Query
 {
-    public partial class ROInvoiceXSlistBiaoNewSub : DevExpress.XtraReports.UI.XtraReport
+    public partial class ROInvoiceXSlistBiaoHorizontalSub : DevExpress.XtraReports.UI.XtraReport
     {
         public DataTable dt = null;
 
-        public ROInvoiceXSlistBiaoNewSub()
+        public ROInvoiceXSlistBiaoHorizontalSub()
         {
             InitializeComponent();
 
@@ -22,13 +22,13 @@ namespace Book.UI.Query
             this.tcBCCHSL.DataBindings.Add("Text", this.DataSource, "BCCHSL", "{0:0.00}"); //global::Helper.DateTimeParse.GetFormatA(BL.V.SetDataFormat.XSSLXiao.Value)
             this.tcDW.DataBindings.Add("Text", this.DataSource, "DanWei");
             this.tcDJ.DataBindings.Add("Text", this.DataSource, "DanJia", "{0:0.00}");
-            this.tcZheRang.DataBindings.Add("Text", this.DataSource, "ZheRang", "{0:0.00}");
+
             this.tcJinE.DataBindings.Add("Text", this.DataSource, "JinE", "{0:0.00}");
             this.tcShuiE.DataBindings.Add("Text", this.DataSource, "ShuiE", "{0:0.00}");
             this.tcYingShou.DataBindings.Add("Text", this.DataSource, "YingShou", "{0:0.00}");
 
-            this.TCCurrency.DataBindings.Add("Text", this.DataSource, "Currency");
-            this.TCCurrencyTotal.DataBindings.Add("Text", this.DataSource, "TaibiTotal", "{0:0.00}");
+            //this.TCCurrency.DataBindings.Add("Text", this.DataSource, "Currency");
+            //this.TCCurrencyTotal.DataBindings.Add("Text", this.DataSource, "TaibiTotal", global::Helper.DateTimeParse.GetFormatA(BL.V.SetDataFormat.CGDJXiao.Value));
 
 
             this.TCZHeJi.Summary.FormatString = "{0:0.00}";

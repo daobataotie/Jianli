@@ -7995,6 +7995,12 @@
     <EmbeddedResource Include="Query\AmountStatisticsXS.resx">
       <DependentUpon>AmountStatisticsXS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Query\ROInvoiceXSlistBiaoHorizontal.resx">
+      <DependentUpon>ROInvoiceXSlistBiaoHorizontal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Query\ROInvoiceXSlistBiaoHorizontalSub.resx">
+      <DependentUpon>ROInvoiceXSlistBiaoHorizontalSub.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ROStockPrompt.resx">
       <DependentUpon>ROStockPrompt.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -10374,6 +10380,22 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\UnitGroup\EditForm.zh-CHT.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\BasicData\ROcustomerlistHorizontal.resx">
+      <DependentUpon>ROcustomerlistHorizontal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\BasicData\ROcustomerlistHorizontal.zh-CHT.resx">
+      <DependentUpon>ROcustomerlistHorizontal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\BasicData\ROsupplierlistHorizontal.resx">
+      <DependentUpon>ROsupplierlistHorizontal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\BasicData\ROsupplierlistHorizontal.zh-CHT.resx">
+      <DependentUpon>ROsupplierlistHorizontal.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\Options\CompanyInfo.resx">
@@ -13292,6 +13314,18 @@
     <Compile Include="Query\AmountStatisticsXS.Designer.cs">
       <DependentUpon>AmountStatisticsXS.cs</DependentUpon>
     </Compile>
+    <Compile Include="Query\ROInvoiceXSlistBiaoHorizontal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Query\ROInvoiceXSlistBiaoHorizontal.Designer.cs">
+      <DependentUpon>ROInvoiceXSlistBiaoHorizontal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Query\ROInvoiceXSlistBiaoHorizontalSub.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Query\ROInvoiceXSlistBiaoHorizontalSub.Designer.cs">
+      <DependentUpon>ROInvoiceXSlistBiaoHorizontalSub.cs</DependentUpon>
+    </Compile>
     <Compile Include="ROStockPrompt.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -13464,6 +13498,18 @@
     </Compile>
     <Compile Include="Settings\BasicData\Supplier\SupplierProductProcesscategoryEdit.Designer.cs">
       <DependentUpon>SupplierProductProcesscategoryEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\BasicData\ROcustomerlistHorizontal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Settings\BasicData\ROcustomerlistHorizontal.Designer.cs">
+      <DependentUpon>ROcustomerlistHorizontal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\BasicData\ROsupplierlistHorizontal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Settings\BasicData\ROsupplierlistHorizontal.Designer.cs">
+      <DependentUpon>ROsupplierlistHorizontal.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings\Options\SettingDataFormat.cs">
       <SubType>Form</SubType>

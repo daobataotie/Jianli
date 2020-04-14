@@ -126,7 +126,7 @@
     <value>254</value>
   </data>
   <data name="TClblCustomerAddress.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9.75pt</value>
+    <value>新細明體, 9.75pt</value>
   </data>
   <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="TClblCustomerAddress.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
@@ -146,7 +146,7 @@
     <value>254</value>
   </data>
   <data name="xrLabel4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="xrLabel4.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>0, 63.5</value>
@@ -164,7 +164,7 @@
     <value>254</value>
   </data>
   <data name="xrTable2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9.75pt</value>
+    <value>新細明體, 9.75pt</value>
   </data>
   <data name="xrTable2.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>0, 0</value>
@@ -188,7 +188,7 @@
     <value>254</value>
   </data>
   <data name="TCShortName.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 10pt</value>
+    <value>新細明體, 10pt</value>
   </data>
   <data name="TCShortName.Text" xml:space="preserve">
     <value> </value>
@@ -206,7 +206,7 @@
     <value>254</value>
   </data>
   <data name="TCCustomerFax.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 10pt</value>
+    <value>新細明體, 10pt</value>
   </data>
   <data name="TCCustomerFax.Text" xml:space="preserve">
     <value> </value>
@@ -266,13 +266,13 @@
     <value>254</value>
   </data>
   <data name="lblCompanyName.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 20pt</value>
+    <value>新細明體, 20pt</value>
   </data>
   <data name="lblCompanyName.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>0, 0</value>
   </data>
   <data name="lblCompanyName.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>1998.99988, 147.1908</value>
+    <value>1998.99988, 100</value>
   </data>
   <data name="lblCompanyName.Text" xml:space="preserve">
     <value>lblCompanyName</value>
@@ -283,20 +283,17 @@
   <data name="ReportHeader.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
-  <data name="ReportHeader.HeightF" type="System.Single, mscorlib">
-    <value>147.1908</value>
-  </data>
   <data name="lblReportName.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
   <data name="lblReportName.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 16pt</value>
+    <value>新細明體, 16pt</value>
   </data>
   <data name="lblReportName.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>0, 0</value>
   </data>
   <data name="lblReportName.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>1998.99988, 92.81584</value>
+    <value>1998.99988, 80</value>
   </data>
   <data name="lblReportName.Text" xml:space="preserve">
     <value>lblReportName</value>
@@ -308,10 +305,10 @@
     <value>254</value>
   </data>
   <data name="xrTable1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9.75pt</value>
+    <value>新細明體, 9.75pt</value>
   </data>
   <data name="xrTable1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 179.916672</value>
+    <value>0, 154.916656</value>
   </data>
   <data name="xrTableCell4.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -329,7 +326,7 @@
     <value>254</value>
   </data>
   <data name="xrTableCell1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 10pt</value>
+    <value>新細明體, 10pt</value>
   </data>
   <data name="xrTableCell1.Text" xml:space="preserve">
     <value>客户简称</value>
@@ -347,7 +344,7 @@
     <value>254</value>
   </data>
   <data name="xrTableCell2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 10pt</value>
+    <value>新細明體, 10pt</value>
   </data>
   <data name="xrTableCell2.Text" xml:space="preserve">
     <value>传真号码</value>
@@ -380,10 +377,10 @@
     <value>254</value>
   </data>
   <data name="lblReportDate.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9.75pt</value>
+    <value>新細明體, 9.75pt</value>
   </data>
   <data name="lblReportDate.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1582.20837, 92.81588</value>
+    <value>1582.20837, 80</value>
   </data>
   <data name="lblReportDate.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>416.791626, 53.128334</value>
@@ -398,28 +395,28 @@
     <value>254</value>
   </data>
   <data name="PageHeader.HeightF" type="System.Single, mscorlib">
-    <value>243.416672</value>
-  </data>
-  <data name="xrPageInfo1.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
-  </data>
-  <data name="xrPageInfo1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1744.99976, 0</value>
-  </data>
-  <data name="xrPageInfo1.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>254, 39.89917</value>
+    <value>218.416656</value>
   </data>
   <data name="ReportFooter.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
   <data name="ReportFooter.HeightF" type="System.Single, mscorlib">
-    <value>39.89917</value>
+    <value>0</value>
+  </data>
+  <data name="xrPageInfo1.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrPageInfo1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1877.45837, 0</value>
+  </data>
+  <data name="xrPageInfo1.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>100.541626, 39.89917</value>
   </data>
   <data name="PageFooter.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
   <data name="PageFooter.HeightF" type="System.Single, mscorlib">
-    <value>0</value>
+    <value>39.89917</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

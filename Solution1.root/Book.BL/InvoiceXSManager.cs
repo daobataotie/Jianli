@@ -179,7 +179,8 @@ namespace Book.BL
 
                 detail.InvoiceId = invoice.InvoiceId;
 
-                if (string.IsNullOrEmpty(detail.Currency))
+                //当币别为空，或者该笔资料为手动添加不是从客户订单来的，那么币别带表头币别
+                if (string.IsNullOrEmpty(detail.Currency) || string.IsNullOrEmpty(detail.InvoiceXODetailId))
                     detail.Currency = invoice.Currency;
 
                 invoiceXSDetailAccessor.Insert(detail);

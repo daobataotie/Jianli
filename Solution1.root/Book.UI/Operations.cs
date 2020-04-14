@@ -42,6 +42,8 @@ namespace Book.UI
             //应收账款明细表
             //operations.Add("accountpayable.accquery.customermaychooseBiao", (D1)delegate(System.Windows.Forms.Form form) { MM("Query.ROInvoiceXSlistBiao", new Book.UI.Query.ConditionXChooseForm()); });
             operations.Add("accountpayable.accquery.customermaychooseBiao", (D1)delegate(System.Windows.Forms.Form form) { MM("Query.ROInvoiceXSlistBiaoNew", new Book.UI.Query.ROInvoiceXSlistBiaoForm()); });
+            //应收账款明细表-橫版
+            operations.Add("Query.ROInvoiceXSlistBiaoHorizontal", (D1)delegate(System.Windows.Forms.Form form) { MM("Query.ROInvoiceXSlistBiaoHorizontal", new Book.UI.Query.ROInvoiceXSlistBiaoForm()); });
 
 
             operations.Add("accountpayable.accquery.colcuishou", (D1)delegate(System.Windows.Forms.Form form) { MM("AccountPayable.AccQuery.ColCuiShou", new Book.UI.AccountPayable.AccQuery.ChooseColCuiShouForm()); });
@@ -647,8 +649,12 @@ namespace Book.UI
 
             //客户一览表
             operations.Add("settings.basicdata.ROcustomerlist", (D1)delegate(System.Windows.Forms.Form form) { M6("Settings.BasicData.ROcustomerlist"); });
+            //客户一览表-橫版
+            operations.Add("Settings.BasicData.ROcustomerlistHorizontal", (D1)delegate(System.Windows.Forms.Form form) { M6("Settings.BasicData.ROcustomerlistHorizontal"); });
             //供应商一览表
             operations.Add("settings.basicdata.ROsupplierlist", (D1)delegate(System.Windows.Forms.Form form) { M6("Settings.BasicData.ROsupplierlist"); });
+            //供应商一览表-橫版
+            operations.Add("Settings.BasicData.ROsupplierlistHorizontal", (D1)delegate(System.Windows.Forms.Form form) { M6("Settings.BasicData.ROsupplierlistHorizontal"); });
 
 
             //出货装箱 

@@ -6,9 +6,9 @@ using DevExpress.XtraReports.UI;
 
 namespace Book.UI.Settings.BasicData
 {
-    public partial class ROcustomerlist : DevExpress.XtraReports.UI.XtraReport
+    public partial class ROcustomerlistHorizontal : DevExpress.XtraReports.UI.XtraReport
     {
-        public ROcustomerlist()
+        public ROcustomerlistHorizontal()
         {
             InitializeComponent();
 
@@ -22,12 +22,12 @@ namespace Book.UI.Settings.BasicData
             //BindData
             this.TCId.DataBindings.Add("Text", this.DataSource, Model.Customer.PRO_Id);
             this.TCFullName.DataBindings.Add("Text", this.DataSource, Model.Customer.PRO_CustomerFullName);
-            this.TCShortName.DataBindings.Add("Text", this.DataSource, Model.Customer.PRO_CustomerShortName);
+            //this.TCShortName.DataBindings.Add("Text", this.DataSource, Model.Customer.PRO_CustomerShortName);
             this.TCCustomerPhone.DataBindings.Add("Text", this.DataSource, Model.Customer.PRO_CustomerPhone);
             this.TCCustomerFax.DataBindings.Add("Text", this.DataSource, Model.Customer.PRO_CustomerFax);
             this.TCCustomerMobile.DataBindings.Add("Text", this.DataSource, Model.Customer.PRO_CustomerMobile);
             this.TCEmail.DataBindings.Add("Text", this.DataSource, Model.Customer.PRO_CustomerEMail);
-            this.TClblCustomerAddress.DataBindings.Add("Text", this.DataSource, Model.Customer.PRO_CustomerAddress);
+            this.TCCustomerAddress.DataBindings.Add("Text", this.DataSource, Model.Customer.PRO_CustomerAddress);
         }
     }
 }
