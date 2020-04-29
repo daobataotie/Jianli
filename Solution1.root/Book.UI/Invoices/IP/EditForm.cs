@@ -34,6 +34,7 @@ namespace Book.UI.Invoices.IP
             this.requireValueExceptions.Add(Model.PackingListDetail.PRO_CartonNo, new AA("CartonNo 不能為空！", this.gridControl3));
 
             this.action = "view";
+            this.gridControl3.Dock = DockStyle.Fill;
 
             //设置单位
             this.bindingSourcePort.DataSource = portManager.Select();

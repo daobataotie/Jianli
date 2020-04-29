@@ -26,12 +26,12 @@ namespace Book.UI.produceManager.ProduceInDepot
                         group n by new { n.CusXOId } into nn
                         select new { id = nn.Key.CusXOId };
 
-            foreach (var item in cusid)
-            {
-                this.lblInvoiceCusId.Text += item.id + ",";
-            }
-            if (this.lblInvoiceCusId.Text.Length > 0)
-                this.lblInvoiceCusId.Text = this.lblInvoiceCusId.Text.Substring(0, this.lblInvoiceCusId.Text.Length - 1);
+            //foreach (var item in cusid)
+            //{
+            //    this.lblInvoiceCusId.Text += item.id + ",";
+            //}
+            //if (this.lblInvoiceCusId.Text.Length > 0)
+            //    this.lblInvoiceCusId.Text = this.lblInvoiceCusId.Text.Substring(0, this.lblInvoiceCusId.Text.Length - 1);
             //Details
             this.DataSource = details;
 

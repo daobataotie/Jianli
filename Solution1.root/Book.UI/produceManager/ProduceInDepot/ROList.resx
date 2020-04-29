@@ -241,33 +241,6 @@
   <data name="ReportHeader.HeightF" type="System.Single, mscorlib">
     <value>135.149216</value>
   </data>
-  <data name="lblInvoiceCusId.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
-  </data>
-  <data name="lblInvoiceCusId.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>195.791672, 71.6492157</value>
-  </data>
-  <data name="lblInvoiceCusId.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>899.5833, 58.42</value>
-  </data>
-  <data name="lblInvoiceCusId.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="xrLabel1.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
-  </data>
-  <data name="xrLabel1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 71.6492157</value>
-  </data>
-  <data name="xrLabel1.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>195.791672, 58.42</value>
-  </data>
-  <data name="xrLabel1.Text" xml:space="preserve">
-    <value>訂單號碼：</value>
-  </data>
-  <data name="xrLabel1.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
-    <value>MiddleLeft</value>
-  </data>
   <data name="xrTable1.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>

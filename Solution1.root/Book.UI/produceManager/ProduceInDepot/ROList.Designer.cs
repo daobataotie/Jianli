@@ -64,8 +64,6 @@ namespace Book.UI.produceManager.ProduceInDepot
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
             this.xrPageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
-            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
-            this.lblInvoiceCusId = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -196,8 +194,6 @@ namespace Book.UI.produceManager.ProduceInDepot
             // PageHeader
             // 
             this.PageHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.lblInvoiceCusId,
-            this.xrLabel1,
             this.xrTable1,
             this.lblReportDate,
             this.lblReportName});
@@ -323,20 +319,6 @@ namespace Book.UI.produceManager.ProduceInDepot
             this.xrPageInfo2.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrPageInfo2.StylePriority.UseTextAlignment = false;
             // 
-            // xrLabel1
-            // 
-            resources.ApplyResources(this.xrLabel1, "xrLabel1");
-            this.xrLabel1.Name = "xrLabel1";
-            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel1.StylePriority.UseTextAlignment = false;
-            // 
-            // lblInvoiceCusId
-            // 
-            resources.ApplyResources(this.lblInvoiceCusId, "lblInvoiceCusId");
-            this.lblInvoiceCusId.Name = "lblInvoiceCusId";
-            this.lblInvoiceCusId.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.lblInvoiceCusId.StylePriority.UseTextAlignment = false;
-            // 
             // ROList
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -395,7 +377,5 @@ namespace Book.UI.produceManager.ProduceInDepot
         private DevExpress.XtraReports.UI.XRTableCell TCRuKuShuLiang;
         private DevExpress.XtraReports.UI.XRTableCell TCInvoiceQuantity;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell10;
-        private DevExpress.XtraReports.UI.XRLabel lblInvoiceCusId;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel1;
     }
 }

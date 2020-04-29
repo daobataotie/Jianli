@@ -1143,8 +1143,14 @@ namespace Book.UI.Invoices.XS
                 }
                 else
                 {
-                    //ÔÝÎ´¿¼ÂÇÄÚº¬Ë°
-                    //detail.InvoiceCODetailPrice = detail.TotalMoney / decimal.Parse(detail.OrderQuantity.ToString()) / decimal.Parse(ta.ToString());
+                    if (detail.InvoiceXSDetailPrice == null)
+                    {
+                        detail.InvoiceXSDetailPrice = 0;
+                    }
+                    detail.InvoiceXSDetailTaxPrice = 0;
+                    detail.InvoiceXSDetailTax = detail.InvoiceXSDetailMoney - detail.InvoiceXSDetailMoney / (1 + decimal.Parse(this.spinEditInvoiceTaxRate.Text) / 100);
+                    detail.InvoiceXSDetailTax = this.GetDecimal(detail.InvoiceXSDetailTax.Value, BL.V.SetDataFormat.XSZJXiao.Value);
+                    detail.InvoiceXSDetailTaxMoney = detail.InvoiceXSDetailMoney;
                 }
 
                 // detail.InvoiceCODetailMoney = decimal.Parse(detail.OrderQuantity.ToString()) * detail.InvoiceCODetailPrice;
@@ -1200,6 +1206,9 @@ namespace Book.UI.Invoices.XS
                 else
                 {
                     this.comboBoxEditInvoiceKslb.SelectedIndex = 2;
+                    this.calcEditInvoiceHejiset.EditValue = this.GetDecimal(yse / (1 + this.spinEditInvoiceTaxRate.Value / 100), BL.V.SetDataFormat.XSZJXiao.Value);
+                    this.calcEditInvoiceTaxset.EditValue = this.GetDecimal(yse - (yse / (1 + this.spinEditInvoiceTaxRate.Value / 100)), BL.V.SetDataFormat.XSZJXiao.Value);
+                    this.calcEditInvoiceTotalset.EditValue = this.GetDecimal(yse - this.calcInvoiceAllowance.Value + decimal.Parse(this.textEditOtherChargeMoneyset.Text), BL.V.SetDataFormat.XSZJXiao.Value);
                 }
 
                 this.spe_TaibiTotal.Text = totalTaibi.ToString();
@@ -1550,8 +1559,14 @@ namespace Book.UI.Invoices.XS
                     }
                     else
                     {
-                        //ÔÝÎ´¿¼ÂÇÄÚº¬Ë°
-                        //detail.InvoiceCODetailPrice = detail.TotalMoney / decimal.Parse(detail.OrderQuantity.ToString()) / decimal.Parse(ta.ToString());
+                        if (detail.InvoiceXSDetailPrice == null)
+                        {
+                            detail.InvoiceXSDetailPrice = 0;
+                        }
+                        detail.InvoiceXSDetailTaxPrice = 0;
+                        detail.InvoiceXSDetailTax = detail.InvoiceXSDetailMoney - detail.InvoiceXSDetailMoney / (1 + decimal.Parse(this.spinEditInvoiceTaxRate.Text) / 100);
+                        detail.InvoiceXSDetailTax = this.GetDecimal(detail.InvoiceXSDetailTax.Value, BL.V.SetDataFormat.XSZJXiao.Value);
+                        detail.InvoiceXSDetailTaxMoney = detail.InvoiceXSDetailMoney;
                     }
 
                 }

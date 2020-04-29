@@ -649,6 +649,9 @@
   <data name="comboBoxEditInvoiceKslb.EditValue" xml:space="preserve">
     <value />
   </data>
+  <data name="comboBoxEditInvoiceKslb.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="comboBoxEditInvoiceKslb.Location" type="System.Drawing.Point, System.Drawing">
     <value>758, 458</value>
   </data>

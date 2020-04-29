@@ -535,6 +535,7 @@
             resources.GetString("comboBoxEditInvoiceKslb.Properties.Items1"),
             resources.GetString("comboBoxEditInvoiceKslb.Properties.Items2")});
             this.comboBoxEditInvoiceKslb.Properties.NullValuePrompt = null;
+            this.comboBoxEditInvoiceKslb.Properties.ReadOnly = true;
             this.comboBoxEditInvoiceKslb.StyleController = this.layoutControl1;
             // 
             // calcEditInvoiceHejiset

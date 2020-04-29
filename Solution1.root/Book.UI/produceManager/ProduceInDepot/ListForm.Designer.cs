@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListForm));
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -62,9 +62,6 @@
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.barCheckPercent = new DevExpress.XtraBars.BarButtonItem();
             this.barCheckSum = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonProduceSum = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonCheckSum = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonCheckPercent = new DevExpress.XtraBars.BarButtonItem();
             this.gridColumnDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemDateEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -112,9 +109,6 @@
             this.barButtonItem4,
             this.barCheckPercent,
             this.barCheckSum,
-            this.barButtonProduceSum,
-            this.barButtonCheckSum,
-            this.barButtonCheckPercent,
             this.barBtnPrint});
             this.barManager1.MaxItemId = 24;
             // 
@@ -122,65 +116,44 @@
             // 
             this.bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonProduceSum, true),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonCheckSum),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonCheckPercent),
             new DevExpress.XtraBars.LinkPersistInfo(this.barBtnPrint)});
             this.bar1.OptionsBar.UseWholeRow = true;
-            resources.ApplyResources(this.bar1, "bar1");
             // 
             // imageCollection1
             // 
-            resources.ApplyResources(this.imageCollection1, "imageCollection1");
             this.imageCollection1.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection1.ImageStream")));
             // 
             // barStaticItem1
             // 
-            this.barStaticItem1.AccessibleDescription = null;
-            this.barStaticItem1.AccessibleName = null;
             resources.ApplyResources(this.barStaticItem1, "barStaticItem1");
             // 
             // layoutControl1
             // 
-            this.layoutControl1.AccessibleDescription = null;
-            this.layoutControl1.AccessibleName = null;
-            resources.ApplyResources(this.layoutControl1, "layoutControl1");
-            this.layoutControl1.BackgroundImage = null;
             this.layoutControl1.Controls.Add(this.layoutControl2);
-            this.layoutControl1.Font = null;
+            resources.ApplyResources(this.layoutControl1, "layoutControl1");
             this.layoutControl1.Controls.SetChildIndex(this.layoutControl2, 0);
             this.layoutControl1.Controls.SetChildIndex(this.gridControl1, 0);
             // 
             // gridControl1
             // 
-            this.gridControl1.AccessibleDescription = null;
-            this.gridControl1.AccessibleName = null;
-            resources.ApplyResources(this.gridControl1, "gridControl1");
-            this.gridControl1.BackgroundImage = null;
-            this.gridControl1.EmbeddedNavigator.AccessibleDescription = null;
-            this.gridControl1.EmbeddedNavigator.AccessibleName = null;
             this.gridControl1.EmbeddedNavigator.AllowHtmlTextInToolTip = ((DevExpress.Utils.DefaultBoolean)(resources.GetObject("gridControl1.EmbeddedNavigator.AllowHtmlTextInToolTip")));
             this.gridControl1.EmbeddedNavigator.Anchor = ((System.Windows.Forms.AnchorStyles)(resources.GetObject("gridControl1.EmbeddedNavigator.Anchor")));
-            this.gridControl1.EmbeddedNavigator.BackgroundImage = null;
             this.gridControl1.EmbeddedNavigator.BackgroundImageLayout = ((System.Windows.Forms.ImageLayout)(resources.GetObject("gridControl1.EmbeddedNavigator.BackgroundImageLayout")));
             this.gridControl1.EmbeddedNavigator.ImeMode = ((System.Windows.Forms.ImeMode)(resources.GetObject("gridControl1.EmbeddedNavigator.ImeMode")));
             this.gridControl1.EmbeddedNavigator.TextLocation = ((DevExpress.XtraEditors.NavigatorButtonsTextLocation)(resources.GetObject("gridControl1.EmbeddedNavigator.TextLocation")));
-            this.gridControl1.EmbeddedNavigator.ToolTip = resources.GetString("gridControl1.EmbeddedNavigator.ToolTip");
             this.gridControl1.EmbeddedNavigator.ToolTipIconType = ((DevExpress.Utils.ToolTipIconType)(resources.GetObject("gridControl1.EmbeddedNavigator.ToolTipIconType")));
-            this.gridControl1.EmbeddedNavigator.ToolTipTitle = resources.GetString("gridControl1.EmbeddedNavigator.ToolTipTitle");
-            this.gridControl1.Font = null;
-            gridLevelNode2.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
             this.gridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
+            gridLevelNode1});
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemDateEdit1,
             this.repositoryItemHyperLinkEdit1,
             this.repositoryItemHyperLinkEdit2,
             this.repositoryItemCheckEdit1});
+            resources.ApplyResources(this.gridControl1, "gridControl1");
             // 
             // gridView1
             // 
-            resources.ApplyResources(this.gridView1, "gridView1");
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumnDate,
             this.gridColumn21,
@@ -212,8 +185,6 @@
             // 
             // barButtonItem1
             // 
-            this.barButtonItem1.AccessibleDescription = null;
-            this.barButtonItem1.AccessibleName = null;
             resources.ApplyResources(this.barButtonItem1, "barButtonItem1");
             this.barButtonItem1.Id = 13;
             this.barButtonItem1.Name = "barButtonItem1";
@@ -274,18 +245,7 @@
             // 
             // repositoryItemHyperLinkEdit1
             // 
-            this.repositoryItemHyperLinkEdit1.AccessibleDescription = null;
-            this.repositoryItemHyperLinkEdit1.AccessibleName = null;
             resources.ApplyResources(this.repositoryItemHyperLinkEdit1, "repositoryItemHyperLinkEdit1");
-            this.repositoryItemHyperLinkEdit1.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("repositoryItemHyperLinkEdit1.Mask.AutoComplete")));
-            this.repositoryItemHyperLinkEdit1.Mask.BeepOnError = ((bool)(resources.GetObject("repositoryItemHyperLinkEdit1.Mask.BeepOnError")));
-            this.repositoryItemHyperLinkEdit1.Mask.EditMask = resources.GetString("repositoryItemHyperLinkEdit1.Mask.EditMask");
-            this.repositoryItemHyperLinkEdit1.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("repositoryItemHyperLinkEdit1.Mask.IgnoreMaskBlank")));
-            this.repositoryItemHyperLinkEdit1.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("repositoryItemHyperLinkEdit1.Mask.MaskType")));
-            this.repositoryItemHyperLinkEdit1.Mask.PlaceHolder = ((char)(resources.GetObject("repositoryItemHyperLinkEdit1.Mask.PlaceHolder")));
-            this.repositoryItemHyperLinkEdit1.Mask.SaveLiteral = ((bool)(resources.GetObject("repositoryItemHyperLinkEdit1.Mask.SaveLiteral")));
-            this.repositoryItemHyperLinkEdit1.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("repositoryItemHyperLinkEdit1.Mask.ShowPlaceHolders")));
-            this.repositoryItemHyperLinkEdit1.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("repositoryItemHyperLinkEdit1.Mask.UseMaskAsDisplayFormat")));
             this.repositoryItemHyperLinkEdit1.Name = "repositoryItemHyperLinkEdit1";
             this.repositoryItemHyperLinkEdit1.Click += new System.EventHandler(this.repositoryItemHyperLinkEdit1_Click);
             // 
@@ -337,37 +297,27 @@
             // 
             // labelProceduresSum
             // 
-            this.labelProceduresSum.AccessibleDescription = null;
-            this.labelProceduresSum.AccessibleName = null;
             resources.ApplyResources(this.labelProceduresSum, "labelProceduresSum");
             this.labelProceduresSum.Name = "labelProceduresSum";
             this.labelProceduresSum.StyleController = this.layoutControl2;
             // 
             // layoutControl2
             // 
-            this.layoutControl2.AccessibleDescription = null;
-            this.layoutControl2.AccessibleName = null;
-            resources.ApplyResources(this.layoutControl2, "layoutControl2");
-            this.layoutControl2.BackgroundImage = null;
             this.layoutControl2.Controls.Add(this.labelBadPercent);
             this.layoutControl2.Controls.Add(this.labelCheckOutSum);
             this.layoutControl2.Controls.Add(this.labelProceduresSum);
-            this.layoutControl2.Font = null;
+            resources.ApplyResources(this.layoutControl2, "layoutControl2");
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.Root = this.Root;
             // 
             // labelBadPercent
             // 
-            this.labelBadPercent.AccessibleDescription = null;
-            this.labelBadPercent.AccessibleName = null;
             resources.ApplyResources(this.labelBadPercent, "labelBadPercent");
             this.labelBadPercent.Name = "labelBadPercent";
             this.labelBadPercent.StyleController = this.layoutControl2;
             // 
             // labelCheckOutSum
             // 
-            this.labelCheckOutSum.AccessibleDescription = null;
-            this.labelCheckOutSum.AccessibleName = null;
             resources.ApplyResources(this.labelCheckOutSum, "labelCheckOutSum");
             this.labelCheckOutSum.Name = "labelCheckOutSum";
             this.labelCheckOutSum.StyleController = this.layoutControl2;
@@ -466,67 +416,28 @@
             // 
             // barproduceSum
             // 
-            this.barproduceSum.AccessibleDescription = null;
-            this.barproduceSum.AccessibleName = null;
-            resources.ApplyResources(this.barproduceSum, "barproduceSum");
             this.barproduceSum.Id = 14;
             this.barproduceSum.Name = "barproduceSum";
             // 
             // barButtonItem3
             // 
-            this.barButtonItem3.AccessibleDescription = null;
-            this.barButtonItem3.AccessibleName = null;
-            resources.ApplyResources(this.barButtonItem3, "barButtonItem3");
             this.barButtonItem3.Id = 15;
             this.barButtonItem3.Name = "barButtonItem3";
             // 
             // barButtonItem4
             // 
-            this.barButtonItem4.AccessibleDescription = null;
-            this.barButtonItem4.AccessibleName = null;
-            resources.ApplyResources(this.barButtonItem4, "barButtonItem4");
             this.barButtonItem4.Id = 16;
             this.barButtonItem4.Name = "barButtonItem4";
             // 
             // barCheckPercent
             // 
-            this.barCheckPercent.AccessibleDescription = null;
-            this.barCheckPercent.AccessibleName = null;
-            resources.ApplyResources(this.barCheckPercent, "barCheckPercent");
             this.barCheckPercent.Id = 17;
             this.barCheckPercent.Name = "barCheckPercent";
             // 
             // barCheckSum
             // 
-            this.barCheckSum.AccessibleDescription = null;
-            this.barCheckSum.AccessibleName = null;
-            resources.ApplyResources(this.barCheckSum, "barCheckSum");
             this.barCheckSum.Id = 18;
             this.barCheckSum.Name = "barCheckSum";
-            // 
-            // barButtonProduceSum
-            // 
-            this.barButtonProduceSum.AccessibleDescription = null;
-            this.barButtonProduceSum.AccessibleName = null;
-            resources.ApplyResources(this.barButtonProduceSum, "barButtonProduceSum");
-            this.barButtonProduceSum.Id = 19;
-            this.barButtonProduceSum.Name = "barButtonProduceSum";
-            // 
-            // barButtonCheckSum
-            // 
-            this.barButtonCheckSum.AccessibleDescription = null;
-            this.barButtonCheckSum.AccessibleName = null;
-            resources.ApplyResources(this.barButtonCheckSum, "barButtonCheckSum");
-            this.barButtonCheckSum.Id = 20;
-            this.barButtonCheckSum.Name = "barButtonCheckSum";
-            // 
-            // barButtonCheckPercent
-            // 
-            this.barButtonCheckPercent.AccessibleDescription = null;
-            this.barButtonCheckPercent.AccessibleName = null;
-            resources.ApplyResources(this.barButtonCheckPercent, "barButtonCheckPercent");
-            this.barButtonCheckPercent.Id = 21;
-            this.barButtonCheckPercent.Name = "barButtonCheckPercent";
             // 
             // gridColumnDate
             // 
@@ -538,37 +449,24 @@
             // 
             // repositoryItemDateEdit1
             // 
-            this.repositoryItemDateEdit1.AccessibleDescription = null;
-            this.repositoryItemDateEdit1.AccessibleName = null;
             resources.ApplyResources(this.repositoryItemDateEdit1, "repositoryItemDateEdit1");
             this.repositoryItemDateEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemDateEdit1.Buttons"))))});
-            this.repositoryItemDateEdit1.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("repositoryItemDateEdit1.Mask.AutoComplete")));
-            this.repositoryItemDateEdit1.Mask.BeepOnError = ((bool)(resources.GetObject("repositoryItemDateEdit1.Mask.BeepOnError")));
             this.repositoryItemDateEdit1.Mask.EditMask = null;
             this.repositoryItemDateEdit1.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("repositoryItemDateEdit1.Mask.IgnoreMaskBlank")));
             this.repositoryItemDateEdit1.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("repositoryItemDateEdit1.Mask.MaskType")));
-            this.repositoryItemDateEdit1.Mask.PlaceHolder = ((char)(resources.GetObject("repositoryItemDateEdit1.Mask.PlaceHolder")));
             this.repositoryItemDateEdit1.Mask.SaveLiteral = ((bool)(resources.GetObject("repositoryItemDateEdit1.Mask.SaveLiteral")));
             this.repositoryItemDateEdit1.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("repositoryItemDateEdit1.Mask.ShowPlaceHolders")));
-            this.repositoryItemDateEdit1.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("repositoryItemDateEdit1.Mask.UseMaskAsDisplayFormat")));
             this.repositoryItemDateEdit1.Name = "repositoryItemDateEdit1";
-            this.repositoryItemDateEdit1.VistaTimeProperties.AccessibleDescription = null;
-            this.repositoryItemDateEdit1.VistaTimeProperties.AccessibleName = null;
             this.repositoryItemDateEdit1.VistaTimeProperties.AutoHeight = ((bool)(resources.GetObject("repositoryItemDateEdit1.VistaTimeProperties.AutoHeight")));
             this.repositoryItemDateEdit1.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.repositoryItemDateEdit1.VistaTimeProperties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("repositoryItemDateEdit1.VistaTimeProperties.Mask.AutoComplete")));
-            this.repositoryItemDateEdit1.VistaTimeProperties.Mask.BeepOnError = ((bool)(resources.GetObject("repositoryItemDateEdit1.VistaTimeProperties.Mask.BeepOnError")));
             this.repositoryItemDateEdit1.VistaTimeProperties.Mask.EditMask = null;
             this.repositoryItemDateEdit1.VistaTimeProperties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("repositoryItemDateEdit1.VistaTimeProperties.Mask.IgnoreMaskBlank")));
             this.repositoryItemDateEdit1.VistaTimeProperties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("repositoryItemDateEdit1.VistaTimeProperties.Mask.MaskType")));
-            this.repositoryItemDateEdit1.VistaTimeProperties.Mask.PlaceHolder = ((char)(resources.GetObject("repositoryItemDateEdit1.VistaTimeProperties.Mask.PlaceHolder")));
             this.repositoryItemDateEdit1.VistaTimeProperties.Mask.SaveLiteral = ((bool)(resources.GetObject("repositoryItemDateEdit1.VistaTimeProperties.Mask.SaveLiteral")));
             this.repositoryItemDateEdit1.VistaTimeProperties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("repositoryItemDateEdit1.VistaTimeProperties.Mask.ShowPlaceHolders")));
-            this.repositoryItemDateEdit1.VistaTimeProperties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("repositoryItemDateEdit1.VistaTimeProperties.Mask.UseMaskAsDisplayFormat")));
             this.repositoryItemDateEdit1.VistaTimeProperties.NullValuePrompt = null;
-            this.repositoryItemDateEdit1.VistaTimeProperties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("repositoryItemDateEdit1.VistaTimeProperties.NullValuePromptShowForEmptyValue")));
             // 
             // gridColumn13
             // 
@@ -579,8 +477,6 @@
             // 
             // barBtnPrint
             // 
-            this.barBtnPrint.AccessibleDescription = null;
-            this.barBtnPrint.AccessibleName = null;
             resources.ApplyResources(this.barBtnPrint, "barBtnPrint");
             this.barBtnPrint.Id = 23;
             this.barBtnPrint.Name = "barBtnPrint";
@@ -609,18 +505,7 @@
             // 
             // repositoryItemHyperLinkEdit2
             // 
-            this.repositoryItemHyperLinkEdit2.AccessibleDescription = null;
-            this.repositoryItemHyperLinkEdit2.AccessibleName = null;
             resources.ApplyResources(this.repositoryItemHyperLinkEdit2, "repositoryItemHyperLinkEdit2");
-            this.repositoryItemHyperLinkEdit2.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("repositoryItemHyperLinkEdit2.Mask.AutoComplete")));
-            this.repositoryItemHyperLinkEdit2.Mask.BeepOnError = ((bool)(resources.GetObject("repositoryItemHyperLinkEdit2.Mask.BeepOnError")));
-            this.repositoryItemHyperLinkEdit2.Mask.EditMask = resources.GetString("repositoryItemHyperLinkEdit2.Mask.EditMask");
-            this.repositoryItemHyperLinkEdit2.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("repositoryItemHyperLinkEdit2.Mask.IgnoreMaskBlank")));
-            this.repositoryItemHyperLinkEdit2.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("repositoryItemHyperLinkEdit2.Mask.MaskType")));
-            this.repositoryItemHyperLinkEdit2.Mask.PlaceHolder = ((char)(resources.GetObject("repositoryItemHyperLinkEdit2.Mask.PlaceHolder")));
-            this.repositoryItemHyperLinkEdit2.Mask.SaveLiteral = ((bool)(resources.GetObject("repositoryItemHyperLinkEdit2.Mask.SaveLiteral")));
-            this.repositoryItemHyperLinkEdit2.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("repositoryItemHyperLinkEdit2.Mask.ShowPlaceHolders")));
-            this.repositoryItemHyperLinkEdit2.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("repositoryItemHyperLinkEdit2.Mask.UseMaskAsDisplayFormat")));
             this.repositoryItemHyperLinkEdit2.Name = "repositoryItemHyperLinkEdit2";
             this.repositoryItemHyperLinkEdit2.Click += new System.EventHandler(this.repositoryItemHyperLinkEdit2_Click);
             // 
@@ -633,8 +518,6 @@
             // 
             // repositoryItemCheckEdit1
             // 
-            this.repositoryItemCheckEdit1.AccessibleDescription = null;
-            this.repositoryItemCheckEdit1.AccessibleName = null;
             resources.ApplyResources(this.repositoryItemCheckEdit1, "repositoryItemCheckEdit1");
             this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
             this.repositoryItemCheckEdit1.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
@@ -665,11 +548,8 @@
             // 
             // ListForm
             // 
-            this.AccessibleDescription = null;
-            this.AccessibleName = null;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Icon = null;
             this.Name = "ListForm";
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
@@ -730,9 +610,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
         private DevExpress.XtraBars.BarButtonItem barCheckPercent;
         private DevExpress.XtraBars.BarButtonItem barCheckSum;
-        private DevExpress.XtraBars.BarButtonItem barButtonProduceSum;
-        private DevExpress.XtraBars.BarButtonItem barButtonCheckSum;
-        private DevExpress.XtraBars.BarButtonItem barButtonCheckPercent;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnDate;
         private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryItemDateEdit1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;

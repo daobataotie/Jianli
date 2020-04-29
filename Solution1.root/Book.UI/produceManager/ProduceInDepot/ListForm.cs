@@ -23,7 +23,7 @@ namespace Book.UI.produceManager.ProduceInDepot
             : this()
         {
             this.tag = 1;
-            this.bindingSource1.DataSource = (this.manager as BL.ProduceInDepotDetailManager).SelectList(null, null, global::Helper.DateTimeParse.NullDate,global::Helper.DateTimeParse.EndDate, null, null, null, null, null, null, invoiceCusId, null, null, -1);
+            this.bindingSource1.DataSource = (this.manager as BL.ProduceInDepotDetailManager).SelectList(null, null, global::Helper.DateTimeParse.NullDate, global::Helper.DateTimeParse.EndDate, null, null, null, null, null, null, invoiceCusId, null, null, -1);
             this.gridControl1.RefreshDataSource();
         }
 
@@ -47,10 +47,10 @@ namespace Book.UI.produceManager.ProduceInDepot
             double? procedureSum, checkoutsum;
             procedureSum = (this.manager as BL.ProduceInDepotDetailManager).select_SumPronoteHeaderWorkhouseDateRang(DateTime.Now.Date.AddDays(-3), global::Helper.DateTimeParse.EndDate, null, null);
             checkoutsum = (this.manager as BL.ProduceInDepotDetailManager).select_CheckOutSumPronoteHeaderWorkhouseDateRang(DateTime.Now.Date.AddDays(-3), global::Helper.DateTimeParse.EndDate, null, null);
-            this.barButtonProduceSum.Caption += procedureSum + "   ";
-            this.barButtonCheckSum.Caption += checkoutsum + "   ";
-            if (procedureSum != 0)
-                this.barButtonCheckPercent.Caption += ((procedureSum - (checkoutsum == null ? 0 : checkoutsum)) / procedureSum * 100).Value.ToString("F1") + "%";
+            //this.barButtonProduceSum.Caption += procedureSum + "   ";
+            //this.barButtonCheckSum.Caption += checkoutsum + "   ";
+            //if (procedureSum != 0)
+            //    this.barButtonCheckPercent.Caption += ((procedureSum - (checkoutsum == null ? 0 : checkoutsum)) / procedureSum * 100).Value.ToString("F1") + "%";
 
             this.gridView1.OptionsBehavior.Editable = true;
         }
@@ -64,34 +64,31 @@ namespace Book.UI.produceManager.ProduceInDepot
                 Query.ConditionProInDepotChoose con = condition.Condition as Query.ConditionProInDepotChoose;
                 this.bindingSource1.DataSource = (this.manager as BL.ProduceInDepotDetailManager).SelectList(con.StartPronoteHeader, con.EndPronoteHeader, con.StartDate, con.EndDate, con.Product_Id, con.WorkHouse, con.MDepot, con.MDepotPosition, con.Id1, con.Id2, con.Cusxoid, con.Customer1, con.Customer2, con.ProductState);
                 this.gridView1.GroupPanelText = "時間從 " + con.StartDate.ToString("yyyy年MM月dd日") + " 到 " + con.EndDate.ToString("yyyy年MM月dd日");
-                double? procedureSum, checkoutsum;
-                if (this.bindingSource1.DataSource == null)
-                {
-                    procedureSum = 0;
-                    checkoutsum = 0;
-                    this.barStaticItem1.Caption = "0";
-                }
-                else
-                {
-                    this.barStaticItem1.Caption = (this.bindingSource1.DataSource as IList<Model.ProduceInDepotDetail>).Count.ToString();
-                    procedureSum = (this.manager as BL.ProduceInDepotDetailManager).select_SumPronoteHeaderWorkhouseDateRang(con.StartDate, con.EndDate, con.StartPronoteHeader == null ? null : con.StartPronoteHeader, con.WorkHouse == null ? null : con.WorkHouse.WorkHouseId);
-                    checkoutsum = (this.manager as BL.ProduceInDepotDetailManager).select_CheckOutSumPronoteHeaderWorkhouseDateRang(con.StartDate, con.EndDate, con.StartPronoteHeader == null ? null : con.StartPronoteHeader, con.WorkHouse == null ? null : con.WorkHouse.WorkHouseId);
-                }
-                this.barButtonProduceSum.Caption = "總生產數量" + procedureSum + "   ";
-                this.barButtonCheckSum.Caption = "總合格數量" + checkoutsum + "   ";
-                if (procedureSum != 0)
-                    this.barButtonCheckPercent.Caption = "總不良率" + ((procedureSum - (checkoutsum == null ? 0 : checkoutsum)) / procedureSum * 100).Value.ToString("F1") + "%";
-                else
-                    this.barButtonCheckPercent.Caption = "總不良率:0";
+                //double? procedureSum, checkoutsum;
+                //if (this.bindingSource1.DataSource == null)
+                //{
+                //    procedureSum = 0;
+                //    checkoutsum = 0;
+                //}
+                //else
+                //{
+                //    procedureSum = (this.manager as BL.ProduceInDepotDetailManager).select_SumPronoteHeaderWorkhouseDateRang(con.StartDate, con.EndDate, con.StartPronoteHeader == null ? null : con.StartPronoteHeader, con.WorkHouse == null ? null : con.WorkHouse.WorkHouseId);
+                //    checkoutsum = (this.manager as BL.ProduceInDepotDetailManager).select_CheckOutSumPronoteHeaderWorkhouseDateRang(con.StartDate, con.EndDate, con.StartPronoteHeader == null ? null : con.StartPronoteHeader, con.WorkHouse == null ? null : con.WorkHouse.WorkHouseId);
+                //}
+                //this.barButtonProduceSum.Caption = "總生產數量" + procedureSum + "   ";
+                //this.barButtonCheckSum.Caption = "總合格數量" + checkoutsum + "   ";
+                //if (procedureSum != 0)
+                //    this.barButtonCheckPercent.Caption = "總不良率" + ((procedureSum - (checkoutsum == null ? 0 : checkoutsum)) / procedureSum * 100).Value.ToString("F1") + "%";
+                //else
+                //    this.barButtonCheckPercent.Caption = "總不良率:0";
                 this.barStaticItem1.Caption = string.Format("{0}项", this.bindingSource1.Count);
-
             }
         }
 
         public override void gridView1_DoubleClick(object sender, EventArgs e)
         {
             //Form f = this.GetEditForm(new object[] { this.bindingSource1.Current == null ? null : (this.bindingSource1.Current as Model.ProduceInDepotDetail).ProduceInDepotId });
-            Form f = this.GetEditForm(new object[] { this.bindingSource1.Current});
+            Form f = this.GetEditForm(new object[] { this.bindingSource1.Current });
             if (f != null)
                 f.ShowDialog();
         }
