@@ -702,6 +702,7 @@ namespace Book.UI.Invoices.XS
 
         private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
+            //undone ÄÚº¬Ë°
             if (e.Column == this.BeenQuantity || e.Column == this.colDonatetowards || e.Column == this.colInvoiceAllowance || e.Column == this.colInvoiceXSDetailPrice)
             {
                 decimal price = decimal.Zero;
