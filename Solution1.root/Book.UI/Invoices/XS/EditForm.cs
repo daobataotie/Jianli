@@ -702,7 +702,6 @@ namespace Book.UI.Invoices.XS
 
         private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
-            //undone ÄÚº¬Ë°
             if (e.Column == this.BeenQuantity || e.Column == this.colDonatetowards || e.Column == this.colInvoiceAllowance || e.Column == this.colInvoiceXSDetailPrice)
             {
                 decimal price = decimal.Zero;
@@ -771,9 +770,10 @@ namespace Book.UI.Invoices.XS
                         }
                         if (flag == 2) //ÄÚº¬
                         {
-                            //this.gridView1.SetRowCellValue(e.RowHandle, this.colInvoiceXODetailMoney, price * quantity - zherang);                   
-                            //this.gridView1.SetRowCellValue(e.RowHandle, this.colInvoiceCGDetailTax, price * quantity * this.spinEditInvoiceTaxRate.Value / 100);
-                            //this.gridView1.SetRowCellValue(e.RowHandle, this.gridColumn2, price * quantity - zherang);
+                            this.gridView1.SetRowCellValue(e.RowHandle, this.colInvoiceXSDetailMoney, this.GetDecimal(price * quantity - zherang, BL.V.SetDataFormat.XSJEXiao.Value));
+                            this.gridView1.SetRowCellValue(e.RowHandle, this.colInvoiceXSDetailTax, this.GetDecimal(price * quantity - (price * quantity / (1 + this.spinEditInvoiceTaxRate.Value / 100)), BL.V.SetDataFormat.XSJEXiao.Value));
+                            this.gridView1.SetRowCellValue(e.RowHandle, this.colInvoiceXSDetailTaxMoney, this.GetDecimal(price * quantity - zherang, BL.V.SetDataFormat.XSJEXiao.Value));
+                            this.gridView1.SetRowCellValue(e.RowHandle, this.colInvoiceXSDetailTaxPrice, 0);
                         }
                     }
                 }
@@ -1118,10 +1118,10 @@ namespace Book.UI.Invoices.XS
 
             foreach (Model.InvoiceXSDetail detail in invoice.Details)
             {
-                this.textEditInvoiceId.Text.Equals(null);
+                //this.textEditInvoiceId.Text.Equals(null);
                 if (detail.Product == null || string.IsNullOrEmpty(detail.Product.ProductId)) continue;
                 if (detail.Donatetowards != null && detail.Donatetowards == true) continue;
-                if (detail.InvoiceXODetailQuantity == 0 || detail.InvoiceXODetailQuantity == 0) continue;
+                //if (detail.InvoiceXODetailQuantity == 0 || detail.InvoiceXODetailQuantity == 0) continue;
                 if (flag == 0)
                 {
                     detail.InvoiceXSDetailTaxPrice = 0;
