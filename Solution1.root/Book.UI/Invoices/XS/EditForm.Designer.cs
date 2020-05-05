@@ -341,6 +341,7 @@
             this.comboBoxEditCurrency.Properties.NullValuePrompt = null;
             this.comboBoxEditCurrency.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.comboBoxEditCurrency.StyleController = this.layoutControl1;
+            this.comboBoxEditCurrency.SelectedIndexChanged += new System.EventHandler(this.comboBoxEditCurrency_SelectedIndexChanged);
             // 
             // cob_FapiaoLianshi
             // 

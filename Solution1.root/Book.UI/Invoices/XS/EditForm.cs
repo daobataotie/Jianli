@@ -948,9 +948,7 @@ namespace Book.UI.Invoices.XS
             //this.action = "insert";
         }
 
-        /// <summary>
-        /// 根据汇率，将不同的币种全部转为台币
-        /// </summary>
+        // 根据汇率，将不同的币种全部转为台币
         private void ConvertPrice(Model.InvoiceXODetail xodetail, Model.InvoiceXSDetail xsdetail)
         {
             //if (xodetail.InvoiceXODetailPrice == 0 || xodetail.Invoice.Currency == "新台幣")
@@ -1302,6 +1300,9 @@ namespace Book.UI.Invoices.XS
                         invoice.Details.Add(detail);
                     }
                 }
+
+                CountExchangeRate();
+
                 this.gridControl1.RefreshDataSource();
                 f.Dispose();
             }
@@ -1445,63 +1446,6 @@ namespace Book.UI.Invoices.XS
             UpdateMoneyFields();
         }
 
-        private void dateEditInvoiceDate_EditValueChanged(object sender, EventArgs e)
-        {
-            //2019年4月3日18:43:04 改日期，ID也改
-            if (this.action == "insert" && dateEditInvoiceDate.EditValue != null)
-            {
-                this.Invoice.InvoiceId = this.invoiceManager.GetIdByMonth(dateEditInvoiceDate.DateTime);
-                this.textEditInvoiceId.Text = this.Invoice.InvoiceId;
-            }
-
-
-            //2018年11月26日20:51:47：计算总价时才换算台币
-
-            if (this.action == "view")
-                return;
-
-            string currency = null;
-
-            foreach (var item in invoice.Details)
-            {
-                if (item.InvoiceXODetail == null)
-                    continue;
-
-                currency = invoiceXOManager.GetCurrencyByInvoiceId(item.InvoiceXODetail.InvoiceId);
-
-                if (item.InvoiceXODetail.InvoiceXODetailPrice == 0 || currency == "新台幣")
-                    continue;
-                else
-                {
-                    //decimal price = 0;
-                    decimal rate = exchangeRateManager.GetRateByDateAndCurrency(this.dateEditInvoiceDate.DateTime, currency);
-                    //if (rate != 0)
-                    //    price = item.InvoiceXODetail.InvoiceXODetailPrice.Value * rate;
-                    //else
-                    //    price = item.InvoiceXODetail.InvoiceXODetailPrice.Value;
-
-                    //item.InvoiceXSDetailPrice = price;
-                    item.Currency = currency;
-                    item.ExchangeRate = rate;
-
-
-                    //if (flag == 0) //免税
-                    //{
-                    //    item.InvoiceXSDetailMoney = item.InvoiceXSDetailTaxMoney = this.GetDecimal(price * Convert.ToDecimal(item.InvoiceXSDetailQuantity) - Convert.ToDecimal(item.InvoiceAllowance), BL.V.SetDataFormat.XSJEXiao.Value);
-                    //}
-                    //if (flag == 1) //外加
-                    //{
-                    //    item.InvoiceXSDetailMoney = this.GetDecimal(price * Convert.ToDecimal(item.InvoiceXSDetailQuantity) - Convert.ToDecimal(item.InvoiceAllowance), BL.V.SetDataFormat.XSJEXiao.Value);
-                    //    item.InvoiceXSDetailTax = this.GetDecimal(price * Convert.ToDecimal(item.InvoiceXSDetailQuantity) * this.spinEditInvoiceTaxRate.Value / 100, BL.V.SetDataFormat.XSJEXiao.Value);
-                    //    item.InvoiceXSDetailTaxMoney = item.InvoiceXSDetailMoney + item.InvoiceXSDetailTax;
-                    //}
-                }
-            }
-
-            this.gridControl1.RefreshDataSource();
-            this.UpdateMoneyFields();
-        }
-
         //稅率變化
         private void spinEditInvoiceTaxRate_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
@@ -1591,6 +1535,95 @@ namespace Book.UI.Invoices.XS
         {
             R0_ZZD_NoPrice ro = new R0_ZZD_NoPrice(this.Invoice.InvoiceId);
             ro.ShowPreviewDialog();
+        }
+
+        //日期变化，税率变化
+        private void dateEditInvoiceDate_EditValueChanged(object sender, EventArgs e)
+        {
+            //2019年4月3日18:43:04 改日期，ID也改
+            if (this.action == "insert" && dateEditInvoiceDate.EditValue != null)
+            {
+                this.Invoice.InvoiceId = this.invoiceManager.GetIdByMonth(dateEditInvoiceDate.DateTime);
+                this.textEditInvoiceId.Text = this.Invoice.InvoiceId;
+            }
+
+
+            //2018年11月26日20:51:47：计算总价时才换算台币
+
+            if (this.action == "view")
+                return;
+
+            string currency = null;
+
+            foreach (var item in invoice.Details)
+            {
+                if (item.InvoiceXODetail == null)
+                    continue;
+
+                currency = invoiceXOManager.GetCurrencyByInvoiceId(item.InvoiceXODetail.InvoiceId);
+
+                if (item.InvoiceXODetail.InvoiceXODetailPrice == 0 || currency == "新台幣")
+                    continue;
+                else
+                {
+                    //decimal price = 0;
+                    decimal rate = exchangeRateManager.GetRateByDateAndCurrency(this.dateEditInvoiceDate.DateTime, currency);
+                    //if (rate != 0)
+                    //    price = item.InvoiceXODetail.InvoiceXODetailPrice.Value * rate;
+                    //else
+                    //    price = item.InvoiceXODetail.InvoiceXODetailPrice.Value;
+
+                    //item.InvoiceXSDetailPrice = price;
+                    item.Currency = currency;
+                    item.ExchangeRate = rate;
+
+
+                    //if (flag == 0) //免税
+                    //{
+                    //    item.InvoiceXSDetailMoney = item.InvoiceXSDetailTaxMoney = this.GetDecimal(price * Convert.ToDecimal(item.InvoiceXSDetailQuantity) - Convert.ToDecimal(item.InvoiceAllowance), BL.V.SetDataFormat.XSJEXiao.Value);
+                    //}
+                    //if (flag == 1) //外加
+                    //{
+                    //    item.InvoiceXSDetailMoney = this.GetDecimal(price * Convert.ToDecimal(item.InvoiceXSDetailQuantity) - Convert.ToDecimal(item.InvoiceAllowance), BL.V.SetDataFormat.XSJEXiao.Value);
+                    //    item.InvoiceXSDetailTax = this.GetDecimal(price * Convert.ToDecimal(item.InvoiceXSDetailQuantity) * this.spinEditInvoiceTaxRate.Value / 100, BL.V.SetDataFormat.XSJEXiao.Value);
+                    //    item.InvoiceXSDetailTaxMoney = item.InvoiceXSDetailMoney + item.InvoiceXSDetailTax;
+                    //}
+                }
+            }
+
+            this.gridControl1.RefreshDataSource();
+            this.UpdateMoneyFields();
+        }
+
+        //币别变化，税率变化
+        private void comboBoxEditCurrency_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (this.action != "view")
+            {
+                CountExchangeRate();
+            }
+        }
+
+        private void CountExchangeRate()
+        {
+            foreach (var item in invoice.Details)
+            {
+                //只针对手动添加商品，从客户订单来的商品不在这里计算
+                if (string.IsNullOrEmpty(item.InvoiceXODetailId))
+                {
+                    string currency = comboBoxEditCurrency.Text;
+
+                    if (!string.IsNullOrEmpty(currency))
+                    {
+                        decimal rate = exchangeRateManager.GetRateByDateAndCurrency(this.dateEditInvoiceDate.DateTime, currency);
+                        item.Currency = currency;
+                        item.ExchangeRate = rate;
+                    }
+                }
+            }
+
+            this.gridControl1.RefreshDataSource();
+            this.UpdateMoneyFields();
         }
     }
 }
