@@ -26,6 +26,7 @@ namespace Book.DA
         IList<Book.Model.InvoiceCO> SelectDateRangAndWhere(string costartid, string coendid, Model.Supplier SupplierStart, Model.Supplier SupplierEnd, DateTime? dateStart, DateTime? dateEnd, Model.Product productStart, Model.Product productEnd, string cusxoid, DateTime dateJHStart, DateTime dateJHEnd, int invoiceFlag, string InvoiceCGIdStart, string InvoiceCGIdEnd);
         string SelectByInvoiceCusID(string id);
         DateTime GetInvoiceYjrq(string id);
+        void UpdateMRSState(string invoiceid);
     }
 }
 

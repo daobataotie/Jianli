@@ -106,5 +106,10 @@ namespace Book.DA.SQLServer
         {
             return sqlmapper.QueryForObject<DateTime>("InvoiceCO.GetInvoiceYjrq", id);
         }
+
+        public void UpdateMRSState(string invoiceid)
+        {
+            sqlmapper.Update("InvoiceCO.UpdateMRSState", invoiceid);
+        }
     }
 }
