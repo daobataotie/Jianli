@@ -258,7 +258,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn13.VisibleIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="gridColumn13.Width" type="System.Int32, mscorlib">
     <value>49</value>
@@ -273,7 +273,7 @@
     <value>5</value>
   </data>
   <data name="gridColumn14.Width" type="System.Int32, mscorlib">
-    <value>70</value>
+    <value>80</value>
   </data>
   <data name="gridColumn9.Caption" xml:space="preserve">
     <value>折让</value>
@@ -297,22 +297,22 @@
     <value>True</value>
   </data>
   <data name="gridColumnStock.VisibleIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="gridColumnStock.Width" type="System.Int32, mscorlib">
     <value>58</value>
   </data>
   <data name="gridColumn16.Caption" xml:space="preserve">
-    <value>说明</value>
+    <value>未出货数量</value>
   </data>
   <data name="gridColumn16.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="gridColumn16.VisibleIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>6</value>
   </data>
   <data name="gridColumn16.Width" type="System.Int32, mscorlib">
-    <value>60</value>
+    <value>67</value>
   </data>
   <data name="gridColumnCheck.Caption" xml:space="preserve">
     <value>选择</value>
@@ -339,7 +339,7 @@
     <value>1</value>
   </data>
   <data name="gridColumn11.Width" type="System.Int32, mscorlib">
-    <value>150</value>
+    <value>132</value>
   </data>
   <data name="gridControl1.Size" type="System.Drawing.Size, System.Drawing">
     <value>772, 220</value>
@@ -428,6 +428,9 @@
   <data name="gridColumn2.Caption" xml:space="preserve">
     <value>经手人</value>
   </data>
+  <metadata name="bindingSourceEmployee.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>522, 17</value>
+  </metadata>
   <data name="repositoryItemLookUpEdit1.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -441,9 +444,6 @@
   <data name="repositoryItemLookUpEdit1.Columns1" xml:space="preserve">
     <value>Name</value>
   </data>
-  <metadata name="bindingSourceEmployee.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>522, 17</value>
-  </metadata>
   <data name="repositoryItemLookUpEdit1.NullText" xml:space="preserve">
     <value />
   </data>
@@ -483,6 +483,9 @@
   <data name="gridColumn4.Caption" xml:space="preserve">
     <value>客户</value>
   </data>
+  <metadata name="bindingSourceCustomer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>327, 17</value>
+  </metadata>
   <data name="repositoryItemLookUpEdit3.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -495,9 +498,6 @@
   <data name="repositoryItemLookUpEdit3.Columns1" xml:space="preserve">
     <value>Name</value>
   </data>
-  <metadata name="bindingSourceCustomer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>327, 17</value>
-  </metadata>
   <data name="repositoryItemLookUpEdit3.NullText" xml:space="preserve">
     <value />
   </data>
@@ -880,6 +880,12 @@
   <data name="&gt;&gt;layoutControl1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="bindingSourceEmployee.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>522, 17</value>
+  </metadata>
+  <metadata name="bindingSourceCustomer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>327, 17</value>
+  </metadata>
   <data name="layoutControlItem46.CustomizationFormText" xml:space="preserve">
     <value>客户订单编号:</value>
   </data>

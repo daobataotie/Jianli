@@ -256,7 +256,7 @@
     <value>庫存</value>
   </data>
   <data name="gridColumn16.Caption" xml:space="preserve">
-    <value>說明</value>
+    <value>未出貨數量</value>
   </data>
   <data name="gridColumnCheck.Caption" xml:space="preserve">
     <value>選擇</value>

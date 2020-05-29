@@ -288,7 +288,7 @@
             // gridColumn16
             // 
             resources.ApplyResources(this.gridColumn16, "gridColumn16");
-            this.gridColumn16.FieldName = "InvoiceXODetailNote";
+            this.gridColumn16.FieldName = "WeichuQty";
             this.gridColumn16.Name = "gridColumn16";
             // 
             // gridColumnCheck
