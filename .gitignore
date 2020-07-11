@@ -43,3 +43,4 @@ bld/
 /Solution1.root/UT/obj
 /Solution1.root/Book.UI/bin/x86/connections.xml
 /Solution1.root/Book.UI/bin/x86/*.docx
+/Solution1.root/Book.UI/bin
