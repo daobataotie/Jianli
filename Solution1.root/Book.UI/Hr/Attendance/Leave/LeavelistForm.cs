@@ -292,7 +292,7 @@ namespace Book.UI.Hr.Attendance.Leave
         {
             if (this._leave == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             this.leaveManamer.Delete(this._leave);
             this._leave = this.leaveManamer.GetPrevForEmployeeYear(_employee.EmployeeId, this._leave.LeaveDate.Value);

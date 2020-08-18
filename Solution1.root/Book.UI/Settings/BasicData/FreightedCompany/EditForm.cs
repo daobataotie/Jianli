@@ -87,7 +87,7 @@ namespace Book.UI.Settings.BasicData.FreightedCompany
         {
             if (this.company == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             this.companyManager.Delete(this.company.FreightedCompanyId);
             this.company = this.companyManager.GetNext(this.company);

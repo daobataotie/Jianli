@@ -80,7 +80,7 @@ namespace Book.UI.Settings.BasicData.Depots
         {
             if (this.depot == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             this.depotManager.Delete(this.depot);
             this.depot = this.depotManager.GetNext(this.depot);

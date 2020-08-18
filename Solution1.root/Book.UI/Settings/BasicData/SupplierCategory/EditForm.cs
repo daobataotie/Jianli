@@ -50,7 +50,7 @@ namespace Book.UI.Settings.BasicData.SupplierCategory
         {
             if (this._supplierCategory == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             this.supplierCategoryManager.Delete(this._supplierCategory.SupplierCategoryId);
             this._supplierCategory = this.supplierCategoryManager.GetNext(this._supplierCategory);

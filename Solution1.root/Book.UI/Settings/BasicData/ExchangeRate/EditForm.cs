@@ -43,7 +43,7 @@ namespace Book.UI.Settings.BasicData.ExchangeRate
         {
             if ((this.bindingSource1.Current as Model.ExchangeRate) != null)
             {
-                if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+                if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                     return;
                 this.exchangeRateManager.Delete((this.bindingSource1.Current as Model.ExchangeRate).Id);
             }

@@ -45,7 +45,7 @@ namespace Book.UI.produceManager.MouldCategory
         {
             //if (this.mouldCategory == null)
             //    return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             Model.MouldCategory mouldCategory = this.bindingSource1.Current as Model.MouldCategory;
             this.mouldCateManager.Delete(mouldCategory.MouldCategoryId);

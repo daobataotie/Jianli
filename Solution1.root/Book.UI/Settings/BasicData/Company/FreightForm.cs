@@ -44,7 +44,7 @@ namespace Book.UI.Settings.BasicData.Company
         protected override void Delete()
         {
             if ((bindingSource1.DataSource as IList<Model.ConveyanceMethod>).Count == 0) return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             Model.ConveyanceMethod convert = this.bindingSource1.Current as Model.ConveyanceMethod;
             this.conveyanceManager.Delete(convert.ConveyanceMethodId);

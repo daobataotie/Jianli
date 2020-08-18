@@ -407,7 +407,7 @@ namespace Book.UI.Query
         {
             if (this.shouldPayAccount == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 Model.ShouldPayAccount model = this.manager.GetNext(this.shouldPayAccount);
                 this.manager.Delete(this.shouldPayAccount.ShouldPayAccountId);

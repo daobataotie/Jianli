@@ -174,7 +174,7 @@ namespace Book.UI.Settings.BasicData.Company
         {
             if (this._company == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
 
             this._company = this.bindingSourceCompany.Current as Model.Company;

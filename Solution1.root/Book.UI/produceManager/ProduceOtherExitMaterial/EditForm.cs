@@ -139,7 +139,7 @@ namespace Book.UI.produceManager.ProduceOtherExitMaterial
         {
             if (this.produceOtherExitMaterial == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             this.produceOtherExitMaterialManager.Delete(this.produceOtherExitMaterial);
             this.produceOtherExitMaterial = this.produceOtherExitMaterialManager.GetNext(this.produceOtherExitMaterial);

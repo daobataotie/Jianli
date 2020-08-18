@@ -84,7 +84,7 @@ namespace Book.UI.produceManager.PCImpactCheck
         {
             if (this._PCIC == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             this._PCICManager.Delete(this._PCIC);
             this._PCIC = this._PCICManager.GetNext(this._PCIC);

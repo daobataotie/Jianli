@@ -28,7 +28,7 @@ namespace Book.UI.Accounting.AccountingCategories
         protected override void Delete()
         {
 
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             this.AtAccountingCategoriesManager.Delete(this.bindingSource1.Current as Model.AtAccountingCategories);
 

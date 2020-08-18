@@ -115,7 +115,7 @@ namespace Book.UI.Accounting.AtParameterSet
         {
             if (this._atParameterSet == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             this._atParameterManager.Delete(this._atParameterSet.AtParameterSetId);
             this._atParameterSet = this._atParameterManager.GetNext(this._atParameterSet);

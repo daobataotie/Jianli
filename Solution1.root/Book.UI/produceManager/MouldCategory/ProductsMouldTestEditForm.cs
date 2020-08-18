@@ -304,7 +304,7 @@ namespace Book.UI.produceManager.MouldCategory
         {
             if (this._ProductMouldTest == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             this._ProductMouldTestManager.Delete(this._ProductMouldTest.ProductMouldTestId);
 

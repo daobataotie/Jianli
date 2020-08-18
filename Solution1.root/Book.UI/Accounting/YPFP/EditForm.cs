@@ -54,7 +54,7 @@ namespace Book.UI.Accounting.YPFP
         {
             if (this._shouldPayAccountDetail == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
                 this.shouldPayAccountDetailManager.Delete(this._shouldPayAccountDetail.ShouldPayAccountDetailId);
                 MessageBox.Show("Delete success!");

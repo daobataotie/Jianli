@@ -64,7 +64,7 @@ namespace Book.UI.AccountPayable.APParameterSet
 
         protected override void Delete()
         {
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             this._ACitemManager.Delete((this.bindingSource1.Current as Model.AcItem).AcItemId);
         }
@@ -98,7 +98,7 @@ namespace Book.UI.AccountPayable.APParameterSet
 
         protected override void grid_KeyDelete()
         {
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             this._ACitemManager.Delete((this.bindingSource1.Current as Model.AcItem).AcItemId);
             this._detail.Remove(this.bindingSource1.Current as Model.AcItem);

@@ -58,7 +58,7 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
         {
             if (this._ThicknessTest == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             //this._ThicknessTestManager.DeleteByPCPGOnlineCheckDetailId(this._ThicknessTest.ThicknessTestId);
             this._ThicknessTestManager.Delete(this._ThicknessTest.ThicknessTestId);

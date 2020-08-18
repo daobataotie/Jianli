@@ -250,7 +250,7 @@ namespace Book.UI.Invoices.IP
         {
             if (this.proformaInvoice == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 this.proformaInvoiceManager.Delete(this.proformaInvoice.PO);
                 this.proformaInvoice = this.proformaInvoiceManager.GetNext(this.proformaInvoice);

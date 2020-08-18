@@ -27,7 +27,7 @@ namespace Book.UI.Settings.BasicData.Duty
 
         protected override void Delete()
         {
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             this._dutymanager.Delete(bindingSource1.Current as Model.Duty);
         }

@@ -114,7 +114,7 @@ namespace Book.UI.Settings.BasicData.CustomerCategory
         {
             if (this.customerCategory == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             this.customerCategoryManager.Delete(this.customerCategory);
             this.customerCategory = this.customerCategoryManager.GetNext(this.customerCategory);

@@ -136,7 +136,7 @@ namespace Book.UI.produceManager.ProduceMaterialExit
 
             if (this._produceMaterialExit == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             this.produceMaterialExitManager.Delete(this._produceMaterialExit);
             this._produceMaterialExit = this.produceMaterialExitManager.GetNext(this._produceMaterialExit);

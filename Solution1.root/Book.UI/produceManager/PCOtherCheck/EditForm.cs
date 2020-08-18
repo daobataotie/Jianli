@@ -207,7 +207,7 @@ namespace Book.UI.produceManager.PCOtherCheck
         {
             if (this._PCOtherCM == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             this._PCOtherCM.Delete(this._PCOtherCheck);
             this._PCOtherCheck = this._PCOtherCM.GetNext(this._PCOtherCheck);

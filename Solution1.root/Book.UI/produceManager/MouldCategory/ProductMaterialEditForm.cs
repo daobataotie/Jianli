@@ -105,7 +105,7 @@ namespace Book.UI.produceManager.MouldCategory
 
         protected override void Delete()
         {
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             Model.ProductMaterial productMaterial = this.bindingSource1.Current as Model.ProductMaterial;
             this.productMateManager.Delete(productMaterial.ProductMaterialId);

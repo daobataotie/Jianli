@@ -41,8 +41,8 @@ namespace Book.UI.Settings.BasicData.OutgoingKinds
         #region Override
         protected override void Delete()
         {
-          
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             this.outgoingKindManager.Delete(this.bindingSource1.Current as Model.OutgoingKind);
      

@@ -426,7 +426,7 @@ namespace Book.UI.Invoices.CG
         {
             if (invoicecg == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
 
             this.invoiceManager.TurnNull(invoicecg.InvoiceId);

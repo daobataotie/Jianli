@@ -132,7 +132,7 @@ namespace Book.UI.CustomsClearance.HandbookRange
         {
             if (this._BGHandbookRange == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             this._manager.Delete(this._BGHandbookRange.BGHandbookRangeId);
             this._BGHandbookRange = this._manager.GetNext(this._BGHandbookRange);

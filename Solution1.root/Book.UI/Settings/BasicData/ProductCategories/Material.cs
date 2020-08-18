@@ -76,7 +76,7 @@ namespace Book.UI.Settings.BasicData.ProductCategories
         {
             if (this.bindingSource1.Current != null)
             {
-                if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+                if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                     return;
                 this.materialManager.Delete((this.bindingSource1.Current as Model.Material).MaterialId);
             }

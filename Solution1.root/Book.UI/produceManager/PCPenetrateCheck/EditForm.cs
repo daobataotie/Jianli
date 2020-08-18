@@ -193,7 +193,7 @@ namespace Book.UI.produceManager.PCPenetrateCheck
 
             if (this._PCPC == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             this._PCPCManager.Delete(this._PCPC.PCPenetrateCheckId);
             this._PCPC = this._PCPCManager.GetNext(this._PCPC);

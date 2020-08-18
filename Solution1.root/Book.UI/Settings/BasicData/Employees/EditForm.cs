@@ -103,7 +103,7 @@ namespace Book.UI.Settings.BasicData.Employees
         {
             if (this.employee == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             this.employeeManager.Delete(this.employee);
             this.employee = this.employeeManager.GetNext(this.employee);

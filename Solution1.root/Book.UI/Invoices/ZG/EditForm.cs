@@ -105,7 +105,7 @@ namespace Book.UI.Invoices.ZG
         {
             if (this._invoiceZG == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 this._invoiceZGManager.Delete(this._invoiceZG.InvoiceZGId);
                 this._invoiceZG = this._invoiceZGManager.GetNext(this._invoiceZG);

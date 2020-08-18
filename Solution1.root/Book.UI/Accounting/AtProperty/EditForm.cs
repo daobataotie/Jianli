@@ -98,7 +98,7 @@ namespace Book.UI.Accounting.AtProperty
         {
             if (this.atProperty == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             this.atPropertyManager.Delete(this.atProperty.PropertyId);
             this.atProperty = this.atPropertyManager.GetNext(this.atProperty);

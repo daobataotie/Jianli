@@ -112,7 +112,7 @@ namespace Book.UI.produceManager.ProductOnlineCheck
         {
             if (this._ProductOnlineCheck == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 Model.ProductOnlineCheck model = this._ProductOnlineCheckManager.GetNext(this._ProductOnlineCheck);
                 this._ProductOnlineCheckManager.Delete(this._ProductOnlineCheck.ProductOnlineCheckId);

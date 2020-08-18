@@ -251,7 +251,7 @@ namespace Book.UI.Accounting.AtSummon
         {
             if (this.atSummon == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
                 this.atSummonManager.Delete(this.atSummon);
                 MessageBox.Show("Delete successfully!");

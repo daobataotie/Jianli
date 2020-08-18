@@ -47,7 +47,7 @@ namespace Book.UI.Settings.BasicData.Customs
         {
             if (this.bindingSource1.Current != null)
             {
-                if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+                if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                     return;
                 this.settingManager.Delete((this.bindingSource1.Current as Model.Setting).SettingId);
             }

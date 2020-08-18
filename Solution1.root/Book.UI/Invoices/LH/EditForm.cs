@@ -250,7 +250,7 @@ namespace Book.UI.Invoices.LH
         {
             if (this.invoice == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
 
             this.invoiceLHManager.Delete(this.invoice.InvoiceId);

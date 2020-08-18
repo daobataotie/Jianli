@@ -84,7 +84,7 @@ namespace Book.UI.Settings.BasicData.CompanyLevels
         {
             if (this.companyLevel == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             this.companyLevelManager.Delete(this.companyLevel);
             this.companyLevel = this.companyLevelManager.GetNext(this.companyLevel);

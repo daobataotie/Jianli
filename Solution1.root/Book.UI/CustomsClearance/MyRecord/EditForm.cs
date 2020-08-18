@@ -153,7 +153,7 @@ namespace Book.UI.CustomsClearance.MyRecord
         {
             if (this._bGProduct == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 Model.BGProduct model = this._manager.GetNext(this._bGProduct);
                 this._manager.Delete(this._bGProduct.BGProductId);

@@ -373,7 +373,7 @@ namespace Book.UI.Hr.Attendance.FlecTime
         private void sbtn_Delete_Click(object sender, EventArgs e)
         {
             if (FlexTimeSource.Current == null) return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
 
             Model.Flextime _flex = FlexTimeSource.Current as Model.Flextime;

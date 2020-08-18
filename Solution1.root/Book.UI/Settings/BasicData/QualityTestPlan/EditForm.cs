@@ -111,7 +111,7 @@ namespace Book.UI.Settings.BasicData.QualityTestPlan
         {
             if (this.qualityTextPlan == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             this.qualityTextPlanManager.Delete(this.qualityTextPlan);
           //  this.qualityTextPlan = this.qualityTextPlanManager.GetNext(this.customInspection);

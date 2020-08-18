@@ -184,7 +184,7 @@ namespace Book.UI.Invoices.ZX
         {
             if (this._invoicePacking == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 this._invoicePackingManager.Delete(this._invoicePacking.InvoicePackingId);
                 this._invoicePacking = this._invoicePackingManager.GetNext(this._invoicePacking);
@@ -197,7 +197,7 @@ namespace Book.UI.Invoices.ZX
         {
             if (this._invoicePacking == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 this._invoicePackingManager.Delete(this._invoicePacking.InvoicePackingId);
                 this._invoicePacking = this._invoicePackingManager.GetNext(this._invoicePacking);

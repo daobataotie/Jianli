@@ -120,7 +120,7 @@ namespace Book.UI.Settings.BasicData.Supplier
         {
             if (this._supplier == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             this.supplierManager.Delete(this._supplier.SupplierId);
             this._supplier = this.supplierManager.GetNext(this._supplier);

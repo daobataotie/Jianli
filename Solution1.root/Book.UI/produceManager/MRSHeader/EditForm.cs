@@ -188,7 +188,7 @@ namespace Book.UI.produceManager.MRSHeader
         {
             if (this.mrsheader == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             this.mrsheaderManager.Delete(this.mrsheader);
             this.mrsheader = this.mrsheaderManager.GetNext(this.mrsheader);
@@ -747,7 +747,7 @@ namespace Book.UI.produceManager.MRSHeader
 
         private void simpleButtonRemove_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             if (this.bindingSourceDetails.Current != null)
             {

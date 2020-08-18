@@ -52,7 +52,7 @@ namespace Book.UI.Settings.BasicData.AreaCategory
         {
             if (this._areaCategory == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             this.areaCategoryManager.Delete(this._areaCategory.AreaCategoryId);
             this._areaCategory = this.areaCategoryManager.GetNext(this._areaCategory);

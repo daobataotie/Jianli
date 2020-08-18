@@ -67,7 +67,7 @@ namespace Book.UI.Settings.BasicData.PayMethods
         {
             if (this.paymethod == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             this.paymethodManager.Delete(this.paymethod);
             this.paymethod = this.paymethodManager.GetNext(this.paymethod);

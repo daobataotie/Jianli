@@ -66,7 +66,7 @@ namespace Book.UI.produceManager.ProduceOtherReturnMaterial
         {
             if (this._produceOtherReturnMaterial == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             this._produceOtherReturnMaterialManager.Delete(this._produceOtherReturnMaterial);
             this._produceOtherReturnMaterial = this._produceOtherReturnMaterialManager.GetNext(this._produceOtherReturnMaterial);

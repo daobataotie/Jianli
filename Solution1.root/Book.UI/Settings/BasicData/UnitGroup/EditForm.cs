@@ -59,7 +59,7 @@ namespace Book.UI.Settings.BasicData.UnitGroup
         {
             if (this._unitGroup == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             this.unitGroupManager.Delete(this._unitGroup.UnitGroupId);
             this._unitGroup = this.unitGroupManager.GetNext(this._unitGroup);

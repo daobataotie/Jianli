@@ -236,7 +236,7 @@ namespace Book.UI.produceManager.PCFinishCheck
         {
             if (this._PCFC == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             this._PCFCManager.Delete(this._PCFC.PCFinishCheckID);
             this._PCFC = this._PCFCManager.GetNext(this._PCFC);

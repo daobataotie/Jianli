@@ -108,7 +108,7 @@ namespace Book.UI.produceManager.ProductScrap
         {
             if (this._productScrap == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 Model.ProductScrap model = this._manager.GetNext(this._productScrap);
                 this._manager.Delete(this._productScrap.ProductScrapId);

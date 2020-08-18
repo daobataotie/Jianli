@@ -97,7 +97,7 @@ namespace Book.UI.Accounting.AtCashAccount
         {
             if (this._atCashAccount == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             Model.AtCashAccount model = this.manager.GetNext(this._atCashAccount);
             this.manager.Delete(this._atCashAccount.AtCashAccountId);

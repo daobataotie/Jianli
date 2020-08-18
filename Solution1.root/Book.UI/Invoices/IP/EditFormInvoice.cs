@@ -253,7 +253,7 @@ namespace Book.UI.Invoices.IP
         {
             if (this.packingInvoiceHeader == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 this.packingInvoiceHeaderManager.Delete(this.packingInvoiceHeader.InvoiceNo);
                 this.packingInvoiceHeader = this.packingInvoiceHeaderManager.GetNext(this.packingInvoiceHeader);

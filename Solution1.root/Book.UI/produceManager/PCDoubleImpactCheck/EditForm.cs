@@ -87,7 +87,7 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
 
             if (this._pcdic == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             this._pcdicManage.Delete(this._pcdic);
 

@@ -65,7 +65,7 @@ namespace Book.UI.Settings.Privileges.Roles
         {
             if (this.role == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             this.roleManager.Delete(this.role);
             this.role = this.roleManager.GetNext(this.role);

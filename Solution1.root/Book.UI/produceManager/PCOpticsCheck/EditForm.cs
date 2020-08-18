@@ -197,7 +197,7 @@ namespace Book.UI.produceManager.PCOpticsCheck
         {
             if (this._PCOPC == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             this._PCOCManager.Delete(this._PCOPC.PCOpticsCheckId);
             this._PCOPC = this._PCOCManager.GetNext(this._PCOPC);

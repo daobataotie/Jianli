@@ -89,7 +89,7 @@ namespace Book.UI.Accounting.PropertyDebt
         {
             if (this.AtPropertyDebt == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             this.AtPropertyDebtManager.Delete(this.AtPropertyDebt.PropertyDebtId);
             this.AtPropertyDebt = this.AtPropertyDebtManager.GetNext(this.AtPropertyDebt);

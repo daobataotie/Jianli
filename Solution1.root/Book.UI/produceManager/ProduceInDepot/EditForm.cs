@@ -193,7 +193,7 @@ namespace Book.UI.produceManager.ProduceInDepot
 
             if (this.produceInDepot == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             this.produceInDepotManager.Delete(this.produceInDepot);
             this.produceInDepot = this.produceInDepotManager.GetNext(this.produceInDepot);

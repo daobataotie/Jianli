@@ -55,7 +55,7 @@ namespace Book.UI.Settings.BasicData.TradeCategory
         {
             if (this._tradeCategory == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             this.tradeCategoryManager.Delete(this._tradeCategory.TradeCategoryId);
             this._tradeCategory = this.tradeCategoryManager.GetNext(this._tradeCategory);

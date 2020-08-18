@@ -190,7 +190,7 @@ namespace Book.UI.CustomsClearance.PassNoteBook
         {
             if (this._passNoteBook == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 Model.PassNoteBook model = this._manager.GetNext(this._passNoteBook);
                 this._manager.Delete(this._passNoteBook.PassNoteBookId);

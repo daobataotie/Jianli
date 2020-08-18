@@ -133,7 +133,7 @@ namespace Book.UI.Settings.ProduceManager
         {
             if (this._bomParmentPartInfo == null)
                 return;
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             try
             {
@@ -776,7 +776,7 @@ namespace Book.UI.Settings.ProduceManager
 
         private void simpleButtonRemove_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+            if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             if (this.bindingSourceBomComponentInfo.Current != null)
             {
