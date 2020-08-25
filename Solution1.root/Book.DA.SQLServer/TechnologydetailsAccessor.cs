@@ -39,10 +39,15 @@ namespace Book.DA.SQLServer
             ht.Add("no", TechnologydetailsNo);
             return sqlmapper.QueryForList<Model.Technologydetails>("Technologydetails.SelectByProceduresId", ht);
         }
-        public  void Delete(Model.TechonlogyHeader techonlogyHeader)
+        public void Delete(Model.TechonlogyHeader techonlogyHeader)
         {
-            sqlmapper.Delete("Technologydetails.deleteByTechnology", techonlogyHeader.TechonlogyHeaderId);               
-        
+            sqlmapper.Delete("Technologydetails.deleteByTechnology", techonlogyHeader.TechonlogyHeaderId);
+
+        }
+
+        public IList<Book.Model.Technologydetails> SelectByTechonlogyHeaderId(string techonlogyHeaderId)
+        {
+            return sqlmapper.QueryForList<Model.Technologydetails>("Technologydetails.select_byTechnologyId", techonlogyHeaderId);
         }
     }
 }

@@ -17,11 +17,11 @@ namespace Book.DA
     public partial interface ITechnologydetailsAccessor : IAccessor
     {
         Book.Model.Technologydetails Select(string proceduresId);
-        IList<Book.Model.Technologydetails>  Select(Model.TechonlogyHeader TechonlogyHeader);
+        IList<Book.Model.Technologydetails> Select(Model.TechonlogyHeader TechonlogyHeader);
         bool IsExists_TechnologydetailsNo(Model.Technologydetails tec);
         IList<Model.Technologydetails> SelectByProceduresId(string ProceduresId, string TechnologydetailsNo);
         void Delete(Model.TechonlogyHeader techonlogyHeader);
-       
+        IList<Book.Model.Technologydetails> SelectByTechonlogyHeaderId(string techonlogyHeaderId);
     }
 }
 

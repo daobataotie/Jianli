@@ -8,12 +8,12 @@
 using System;
 namespace Book.Model
 {
-	/// <summary>
-	/// 工艺 路线明细
-	/// </summary>
-	[Serializable]
-	public partial class Technologydetails
-	{
+    /// <summary>
+    /// 工艺 路线明细
+    /// </summary>
+    [Serializable]
+    public partial class Technologydetails
+    {
         private System.Collections.Generic.IList<Model.Procedures> _detail = new System.Collections.Generic.List<Model.Procedures>();
         public System.Collections.Generic.IList<Model.Procedures> detail
         {
@@ -22,7 +22,7 @@ namespace Book.Model
 
         }
 
-        private  bool? _isOtherProduceOther;
+        private bool? _isOtherProduceOther;
         /// <summary>
         /// 
         /// </summary>
@@ -69,5 +69,6 @@ namespace Book.Model
             }
         }
 
-	}
+        public bool IsChecked { get; set; }
+    }
 }

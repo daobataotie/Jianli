@@ -81,7 +81,7 @@ namespace Book.BL
                     str.Add(detail.TechnologydetailsNo);
                 }
                 BL.V.BeginTransaction();
-               
+
                 //techonlogyHeader.TechonlogyHeaderId = GetNewId();
                 accessor.Insert(techonlogyHeader);
                 foreach (Model.Technologydetails detail in techonlogyHeader.detail)
@@ -169,8 +169,8 @@ namespace Book.BL
         public Model.TechonlogyHeader GetDetail(string TechonlogyHeaderId)
         {
             Model.TechonlogyHeader TechonlogyHeader = accessor.Get(TechonlogyHeaderId);
-            if (TechonlogyHeader!=null)
-            TechonlogyHeader.detail = accessorDetails.Select(TechonlogyHeader);
+            if (TechonlogyHeader != null)
+                TechonlogyHeader.detail = accessorDetails.Select(TechonlogyHeader);
             return TechonlogyHeader;
         }
 
@@ -207,6 +207,15 @@ namespace Book.BL
         //    return rule.Replace("{N1}", n1).Replace("{N2}", n2).Replace("{N3}", n3).Replace("{N4}", n4).Replace("{N5}", n5).Replace("{N6}", n6).Replace("{N7}", n7).Replace("{N8}", n8).Replace("{N9}", n9).Replace("{N10}", n10);
         //}
 
+        public int GetSameNameCount(string techonlogyHeadername)
+        {
+            return accessor.GetSameNameCount(techonlogyHeadername);
+        }
+
+        public IList<Model.TechonlogyHeader> GetSameNameList(string techonlogyHeadername)
+        {
+            return accessor.GetSameNameList(techonlogyHeadername);
+        }
     }
 }
 

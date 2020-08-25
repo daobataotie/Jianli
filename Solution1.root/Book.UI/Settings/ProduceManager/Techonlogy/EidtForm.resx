@@ -1050,6 +1050,12 @@
   <data name="&gt;&gt;bar1.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.Bar, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;barButtonItemNew.Name" xml:space="preserve">
+    <value>barButtonItemNew</value>
+  </data>
+  <data name="&gt;&gt;barButtonItemNew.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;treeListColumn.Name" xml:space="preserve">
     <value>treeListColumn</value>
   </data>

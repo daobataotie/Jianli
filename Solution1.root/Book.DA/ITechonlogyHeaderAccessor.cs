@@ -16,6 +16,9 @@ namespace Book.DA
     /// </summary>
     public partial interface ITechonlogyHeaderAccessor : IAccessor
     {
+        int GetSameNameCount(string techonlogyHeadername);
+
+        IList<Model.TechonlogyHeader> GetSameNameList(string techonlogyHeadername);
     }
 }
 

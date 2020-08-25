@@ -13,28 +13,28 @@ namespace Book.BL
     /// <summary>
     /// Business logic for dbo.Technologydetails.
     /// </summary>
-    public partial class TechnologydetailsManager:BaseManager
+    public partial class TechnologydetailsManager : BaseManager
     {
-		
-		/// <summary>
-		/// Delete Technologydetails by primary key.
-		/// </summary>
-		public void Delete(string technologydetailsID)
-		{
-			//
-			// todo:add other logic here
-			//
-			accessor.Delete(technologydetailsID);
-		}
 
-		/// <summary>
-		/// Insert a Technologydetails.
-		/// </summary>
+        /// <summary>
+        /// Delete Technologydetails by primary key.
+        /// </summary>
+        public void Delete(string technologydetailsID)
+        {
+            //
+            // todo:add other logic here
+            //
+            accessor.Delete(technologydetailsID);
+        }
+
+        /// <summary>
+        /// Insert a Technologydetails.
+        /// </summary>
         public void Insert(Model.Technologydetails technologydetails)
         {
-			//
-			// todo:add other logic here
-			//
+            //
+            // todo:add other logic here
+            //
             //if (this.Exists(technologydetails.ProceduresId))
             //{
             //    throw new Helper.InvalidValueException(Model.Technologydetails.PROPERTY_PROCEDURESID);
@@ -48,15 +48,15 @@ namespace Book.BL
             technologydetails.TechnologydetailsID = Guid.NewGuid().ToString();
             accessor.Insert(technologydetails);
         }
-		
-		/// <summary>
-		/// Update a Technologydetails.
-		/// </summary>
+
+        /// <summary>
+        /// Update a Technologydetails.
+        /// </summary>
         public void Update(Model.Technologydetails technologydetails)
         {
-			//
-			// todo: add other logic here.
-			//
+            //
+            // todo: add other logic here.
+            //
             Validate(technologydetails);
             technologydetails.UpdateTime = DateTime.Now;
             accessor.Update(technologydetails);
@@ -74,7 +74,7 @@ namespace Book.BL
         }
         public Book.Model.Technologydetails Select(Model.Procedures Procedures)
         {
-            return  accessor.Select(Procedures.ProceduresId);
+            return accessor.Select(Procedures.ProceduresId);
         }
         public IList<Book.Model.Technologydetails> Select(Model.TechonlogyHeader TechonlogyHeader)
         {
@@ -92,6 +92,11 @@ namespace Book.BL
         {
             accessor.Delete(techonlogyHeader);
 
+        }
+
+        public IList<Book.Model.Technologydetails> SelectByTechonlogyHeaderId(string techonlogyHeaderId)
+        {
+            return accessor.SelectByTechonlogyHeaderId(techonlogyHeaderId);
         }
     }
 }

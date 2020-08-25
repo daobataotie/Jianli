@@ -19,5 +19,14 @@ namespace Book.DA.SQLServer
     /// </summary>
     public partial class TechonlogyHeaderAccessor : EntityAccessor, ITechonlogyHeaderAccessor
     {
+        public int GetSameNameCount(string techonlogyHeadername)
+        {
+            return sqlmapper.QueryForObject<int>("TechonlogyHeader.GetSameNameCount", techonlogyHeadername + "%");
+        }
+
+        public IList<Model.TechonlogyHeader> GetSameNameList(string techonlogyHeadername)
+        {
+            return sqlmapper.QueryForList<Model.TechonlogyHeader>("TechonlogyHeader.GetSameNameList", techonlogyHeadername + "%");
+        }
     }
 }

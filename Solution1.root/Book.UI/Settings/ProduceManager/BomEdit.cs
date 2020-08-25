@@ -264,7 +264,7 @@ namespace Book.UI.Settings.ProduceManager
                     {
                         this._bomParmentPartInfo.BomPackageDetails = this.package.Select(this._bomParmentPartInfo.BomId);
                         //   this._bomParmentPartInfo.BOMProductProcess = this.bomProductProcess.Select(this._bomParmentPartInfo.BomId);
-                        this._bomParmentPartInfo.ProductProcessDetail = this.productProcessManager.SelectByBomId(this._bomParmentPartInfo.BomId);
+                        //this._bomParmentPartInfo.ProductProcessDetail = this.productProcessManager.SelectByBomId(this._bomParmentPartInfo.BomId);
                         // this._bomParmentPartInfo.CustomerProcessingDetail = this.CustomerProcessingDetailManager.SelectbyBomId(this._bomParmentPartInfo.BomId);
 
                     }
@@ -329,10 +329,16 @@ namespace Book.UI.Settings.ProduceManager
 
             //////this.bindingSourceBomPackageDetails.DataSource = this.customerPackageDetailManager.GetByPackageId(this._bomParmentPartInfo.CustomerPackageId);
 
-            this.bindingSourceBOMProcess.DataSource = this._bomParmentPartInfo.ProductProcessDetail;
-            // this.bindingSourceBOMProcess.DataSource=this._bomParmentPartInfo.ProductProcessDetail;
+            //this.bindingSourceBOMProcess.DataSource = this._bomParmentPartInfo.ProductProcessDetail;
             if (this._techonlogyHeader != null)
-                this.bindingSourceBOMProcess.DataSource = this.technologydetailsManager.Select(this._techonlogyHeader);
+            {
+                this._techonlogyHeader.detail = this.technologydetailsManager.Select(this._techonlogyHeader);
+                foreach (var item in this._techonlogyHeader.detail)
+                {
+                    item.IsChecked = true;
+                }
+                this.bindingSourceBOMProcess.DataSource = this._techonlogyHeader.detail;
+            }
             else
                 this.bindingSourceBOMProcess.DataSource = null;
 
@@ -400,7 +406,7 @@ namespace Book.UI.Settings.ProduceManager
                     //this.textEditBomVersion.Properties.ReadOnly = false;
 
                     this.gridView1.OptionsBehavior.Editable = true;
-                    this.gridView3.OptionsBehavior.Editable = false;
+                    //this.gridView3.OptionsBehavior.Editable = false;
 
                     //this.dateEditEffectiveDate.Properties.ReadOnly = false;
                     //this.dateEditEffectiveDate.Properties.Buttons[0].Visible = true;
@@ -457,7 +463,7 @@ namespace Book.UI.Settings.ProduceManager
                     this.newChooseContorlProductId.Properties.Buttons[0].Visible = true;
                     this.barButtonItemCopy.Enabled = false;
                     this.simpleButton1Add.Enabled = true;
-                    this.gridView3.OptionsBehavior.Editable = false;
+                    //this.gridView3.OptionsBehavior.Editable = false;
 
                     this.barButtonItem1.Enabled = false;
 
@@ -490,7 +496,7 @@ namespace Book.UI.Settings.ProduceManager
 
 
                     this.simpleButton2Remove.Enabled = false;
-                    this.gridView3.OptionsBehavior.Editable = false;
+                    //this.gridView3.OptionsBehavior.Editable = false;
 
                     this.barButtonItem1.Enabled = true;
 
@@ -541,6 +547,108 @@ namespace Book.UI.Settings.ProduceManager
             this.gridView2.UpdateCurrentRow();
             this.gridView3.PostEditor();
             this.gridView3.UpdateCurrentRow();
+
+            //2020年8月24日22:51:05 应客户要求，他们不想建太多工艺，所以选择一个工艺，点选其中某个工序，然后保存为新的工艺流程
+
+            if (this._techonlogyHeader != null)
+            {
+                this._techonlogyHeader.detail = this.bindingSourceBOMProcess.DataSource as IList<Model.Technologydetails>;
+                var checkDatas = this._techonlogyHeader.detail.Where(d => d.IsChecked);
+
+                //原來的工藝全部選中，意思為 直接用原來的，否則按照選中數據新增一筆
+                if (checkDatas.Count() != this._techonlogyHeader.detail.Count())
+                {
+                    Model.TechonlogyHeader header = new Book.Model.TechonlogyHeader();
+                    header.TechonlogyHeaderId = Guid.NewGuid().ToString();
+                    header.Id = this.techonlogyHeaderManager.GetId(DateTime.Now);
+                    header.Statrdate = global::Helper.DateTimeParse.NullDate;
+                    header.Enddate = global::Helper.DateTimeParse.EndDate;
+                    header.detail = new List<Model.Technologydetails>();
+
+                    foreach (var item in checkDatas)
+                    {
+                        item.TechnologydetailsID = Guid.NewGuid().ToString();
+                        item.TechonlogyHeaderId = header.TechonlogyHeaderId;
+                        item.TechnologydetailsNo = (header.detail.Count() + 1).ToString();
+
+                        header.detail.Add(item);
+                    }
+
+
+                    //檢測同名工藝下，是否已存在相同工序
+                    string techonlogyHeadername = this._techonlogyHeader.TechonlogyHeadername;
+                    if (this._techonlogyHeader.TechonlogyHeadername.Contains('-'))
+                    {
+                        var lastStr = this._techonlogyHeader.TechonlogyHeadername.Substring(this._techonlogyHeader.TechonlogyHeadername.LastIndexOf('-') + 1).Trim();
+                        int i = 0;
+                        string tempStr = this._techonlogyHeader.TechonlogyHeadername.Substring(0, this._techonlogyHeader.TechonlogyHeadername.LastIndexOf('-'));
+                        if (int.TryParse(lastStr, out i))          //最後為 “-序號”，取“-”前面的為工藝名
+                        {
+                            techonlogyHeadername = tempStr.Trim();
+                        }
+                        else if (tempStr.Contains('-'))
+                        {
+                            techonlogyHeadername = tempStr.Substring(0, tempStr.LastIndexOf('-')).Trim();
+                        }
+                    }
+
+                    bool isExistsData = true;
+                    IList<Model.TechonlogyHeader> sameNameList = techonlogyHeaderManager.GetSameNameList(techonlogyHeadername);
+                    foreach (var item in sameNameList)
+                    {
+                        isExistsData = true;
+
+                        item.detail = technologydetailsManager.Select(item);
+                        if (item.detail.Count() == header.detail.Count())
+                        {
+                            foreach (var detail in item.detail)
+                            {
+                                Model.Technologydetails td = header.detail[item.detail.IndexOf(detail)];
+                                if (td.ProceduresId != detail.ProceduresId)
+                                {
+                                    isExistsData = false;
+                                    break;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            isExistsData = false;
+                        }
+
+                        if (isExistsData == true)
+                        {
+                            this._bomParmentPartInfo.TechonlogyHeaderId = item.TechonlogyHeaderId;
+                            break;
+                        }
+                    }
+
+                    //不存在相同工藝名下工序相同的數據，則新增一筆
+                    if (isExistsData == false)
+                    {
+                        header.TechonlogyHeadername = this._techonlogyHeader.TechonlogyHeadername + "-" + techonlogyHeaderManager.GetSameNameCount(this._techonlogyHeader.TechonlogyHeadername);
+                        if (!this.buttonEditTechonlogyHeaderid.Text.Contains(header.TechonlogyHeadername))
+                        {
+                            //說明已經手動修改過工藝名，但不合規
+                            if (this.buttonEditTechonlogyHeaderid.Text != this._techonlogyHeader.TechonlogyHeadername)
+                                throw new Exception("工藝名稱必須包含\"原工藝名稱-X\"，例如：" + header.TechonlogyHeadername);
+                        }
+                        else
+                            header.TechonlogyHeadername = this.buttonEditTechonlogyHeaderid.Text;
+
+                        if (MessageBox.Show(string.Format("將新增加工工藝\"{0}\",是否繼續", header.TechonlogyHeadername), "提示", MessageBoxButtons.OKCancel) != DialogResult.OK)
+                            throw new Exception("請重新修改工藝名稱");
+
+                        techonlogyHeaderManager.Insert(header);
+                        this._techonlogyHeader = header;
+
+                        this._bomParmentPartInfo.TechonlogyHeaderId = header.TechonlogyHeaderId;
+                    }
+                }
+                else
+                    this._bomParmentPartInfo.TechonlogyHeaderId = this._techonlogyHeader.TechonlogyHeaderId;
+            }
+
             //if (this.newChooseCustomer.EditValue != null)
             //    this._bomParmentPartInfo.Customer = this.newChooseCustomer.EditValue as Model.Customer;
             //if (this._bomParmentPartInfo.Customer != null)
@@ -562,10 +670,10 @@ namespace Book.UI.Settings.ProduceManager
             //this._bomParmentPartInfo.EffectiveDate = this.dateEditEffectiveDate.DateTime;
             this._bomParmentPartInfo.CreateMan = BL.V.ActiveOperator.OperatorName;
             this._bomParmentPartInfo.ModifyMan = null;
-            if (this.buttonEditTechonlogyHeaderid.EditValue != null && this.buttonEditTechonlogyHeaderid.Text != "")
-                this._bomParmentPartInfo.TechonlogyHeaderId = (this.buttonEditTechonlogyHeaderid.EditValue as Model.TechonlogyHeader).TechonlogyHeaderId;
-            else
-                this._bomParmentPartInfo.TechonlogyHeaderId = null;
+            //if (this.buttonEditTechonlogyHeaderid.EditValue != null && this.buttonEditTechonlogyHeaderid.Text != "")
+            //    this._bomParmentPartInfo.TechonlogyHeaderId = (this.buttonEditTechonlogyHeaderid.EditValue as Model.TechonlogyHeader).TechonlogyHeaderId;
+            //else
+            //    this._bomParmentPartInfo.TechonlogyHeaderId = null;
             double lossRate = 0;
             this._bomParmentPartInfo.LossRate = lossRate;
             if (this._bomParmentPartInfo.Product != null)
@@ -2304,6 +2412,7 @@ namespace Book.UI.Settings.ProduceManager
             // }
         }
 
+        //选择工艺
         private void buttonEditTechonlogyHeaderid_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             ProduceManager.Techonlogy.ChooseTechonlogyForm f = new Book.UI.Settings.ProduceManager.Techonlogy.ChooseTechonlogyForm();
@@ -2311,16 +2420,19 @@ namespace Book.UI.Settings.ProduceManager
             {
                 this._techonlogyHeader = f.SelectedItem as Model.TechonlogyHeader;
 
-                //if (this._techonlogyHeader != null)
-                //{
-                this.buttonEditTechonlogyHeaderid.EditValue = this._techonlogyHeader;
-                //this.newChooseContorlCustomer.ShowButton = true;
-                //this.newChooseContorlCustomer.ButtonReadOnly = false;
                 if (this._techonlogyHeader != null)
-                    this.bindingSourceBOMProcess.DataSource = this.technologydetailsManager.Select(this._techonlogyHeader);
+                {
+                    this._techonlogyHeader.detail = this.technologydetailsManager.Select(this._techonlogyHeader);
+                    foreach (var item in this._techonlogyHeader.detail)
+                    {
+                        item.IsChecked = true;
+                    }
+                    this.bindingSourceBOMProcess.DataSource = this._techonlogyHeader.detail;
+                }
                 else
                     this.bindingSourceBOMProcess.DataSource = null;
 
+                this.buttonEditTechonlogyHeaderid.EditValue = this._techonlogyHeader;
             }
             f.Dispose();
             GC.Collect();
