@@ -32,6 +32,7 @@ namespace Book.DA
         string SelectCusXOIdByInvoiceId(string invoiceId);
 
         IList<Model.InvoiceXO> AmountStatistics(string customerId, DateTime startDate, DateTime endDate, string currency);
+        bool IsHasMPSheader(string invoiceid);
     }
 }
 

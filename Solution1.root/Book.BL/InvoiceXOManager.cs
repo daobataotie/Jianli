@@ -504,6 +504,16 @@ namespace Book.BL
         {
             return accessor.AmountStatistics(customerId,startDate,endDate,currency);
         }
+        
+        /// <summary>
+        /// 是否有对应的生产計劃(用于删除订单时校验)
+        /// </summary>
+        /// <param name="invoiceid"></param>
+        /// <returns></returns>
+        public bool IsHasMPSheader(string invoiceid)
+        {
+            return accessor.IsHasMPSheader(invoiceid);
+        }
     }
 }
 

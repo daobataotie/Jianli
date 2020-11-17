@@ -166,6 +166,11 @@ namespace Book.DA.SQLServer
             return this.DataReaderBind<Model.InvoiceXO>(sql, null, CommandType.Text);
         }
 
+        public bool IsHasMPSheader(string invoiceid)
+        {
+            return sqlmapper.QueryForObject<bool>("InvoiceXO.IsHasMPSheader", invoiceid);
+        }
+
         #endregion
     }
 }

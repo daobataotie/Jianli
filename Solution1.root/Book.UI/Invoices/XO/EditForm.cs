@@ -773,6 +773,10 @@ namespace Book.UI.Invoices.XO
         {
             if (this.invoice == null)
                 return;
+
+            if (this.invoiceManager.IsHasMPSheader(this.invoice.InvoiceId))
+                throw new Exception("該訂單已經生成對應的生產計劃，請勿刪除");
+            
             if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
 
