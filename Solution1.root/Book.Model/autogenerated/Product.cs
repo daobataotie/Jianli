@@ -529,6 +529,7 @@ namespace Book.Model
 
         private string _internalDescription;
 
+        private string _productItemNo;
 
         /// <summary>
         /// 客户
@@ -2170,6 +2171,15 @@ namespace Book.Model
             get { return _internalDescription; }
             set { _internalDescription = value; }
         }
+                
+        /// <summary>
+        /// 料號
+        /// </summary>
+        public string ProductItemNo
+        {
+            get { return _productItemNo; }
+            set { _productItemNo = value; }
+        }
         
         /// <summary>
         /// 客户
@@ -3033,6 +3043,8 @@ namespace Book.Model
         public readonly static string PRO_ChangeModelTime = "ChangeModelTime";
 
         public readonly static string PRO_InternalDescription = "InternalDescription";
+
+        public readonly static string PRO_ProductItemNo = "ProductItemNo";
 
         #endregion
     }

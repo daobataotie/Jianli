@@ -10278,6 +10278,10 @@
       <DependentUpon>EditForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Settings\BasicData\Products\ProductItemNoForm.resx">
+      <DependentUpon>ProductItemNoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Supplier\ChooseSupplierForm.resx">
       <DependentUpon>ChooseSupplierForm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -13465,6 +13469,12 @@
     </Compile>
     <Compile Include="Settings\BasicData\ROsupplierlist.Designer.cs">
       <DependentUpon>ROsupplierlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\BasicData\Products\ProductItemNoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\BasicData\Products\ProductItemNoForm.Designer.cs">
+      <DependentUpon>ProductItemNoForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings\BasicData\Supplier\RO1.cs">
       <SubType>Component</SubType>

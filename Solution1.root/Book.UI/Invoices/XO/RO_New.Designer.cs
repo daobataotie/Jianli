@@ -28,10 +28,10 @@ namespace Book.UI.Invoices.XO
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RO_New));
             DevExpress.XtraReports.UI.XRSummary xrSummary1 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.XtraReports.UI.XRSummary xrSummary2 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.XtraReports.UI.XRSummary xrSummary3 = new DevExpress.XtraReports.UI.XRSummary();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RO_New));
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.lbl_Note = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
@@ -94,6 +94,7 @@ namespace Book.UI.Invoices.XO
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
+            this.lbl_ProductItemNo = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.lblRemark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
@@ -102,6 +103,7 @@ namespace Book.UI.Invoices.XO
             // Detail
             // 
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.lbl_ProductItemNo,
             this.lbl_Note,
             this.xrLabel2,
             this.lblRemark,
@@ -271,8 +273,8 @@ namespace Book.UI.Invoices.XO
             // 
             // TCYujiaoriqi
             // 
-            resources.ApplyResources(this.TCYujiaoriqi, "TCYujiaoriqi");
             this.TCYujiaoriqi.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            resources.ApplyResources(this.TCYujiaoriqi, "TCYujiaoriqi");
             this.TCYujiaoriqi.Name = "TCYujiaoriqi";
             this.TCYujiaoriqi.StylePriority.UseBorderColor = false;
             this.TCYujiaoriqi.StylePriority.UseBorders = false;
@@ -309,7 +311,6 @@ namespace Book.UI.Invoices.XO
             this.lblTotalJine.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.lblTotalJine.StylePriority.UseFont = false;
             this.lblTotalJine.StylePriority.UseTextAlignment = false;
-            resources.ApplyResources(xrSummary2, "xrSummary2");
             xrSummary2.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.lblTotalJine.Summary = xrSummary2;
             // 
@@ -345,7 +346,6 @@ namespace Book.UI.Invoices.XO
             this.xrLabelCount.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabelCount.StylePriority.UseFont = false;
             this.xrLabelCount.StylePriority.UseTextAlignment = false;
-            resources.ApplyResources(xrSummary3, "xrSummary3");
             xrSummary3.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.xrLabelCount.Summary = xrSummary3;
             // 
@@ -676,6 +676,15 @@ namespace Book.UI.Invoices.XO
             resources.ApplyResources(this.bottomMarginBand1, "bottomMarginBand1");
             this.bottomMarginBand1.Name = "bottomMarginBand1";
             // 
+            // lbl_ProductItemNo
+            // 
+            this.lbl_ProductItemNo.AutoWidth = true;
+            resources.ApplyResources(this.lbl_ProductItemNo, "lbl_ProductItemNo");
+            this.lbl_ProductItemNo.Name = "lbl_ProductItemNo";
+            this.lbl_ProductItemNo.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lbl_ProductItemNo.StylePriority.UseFont = false;
+            this.lbl_ProductItemNo.StylePriority.UseTextAlignment = false;
+            // 
             // RO_New
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -763,5 +772,6 @@ namespace Book.UI.Invoices.XO
         private DevExpress.XtraReports.UI.XRLabel lbl_Note;
         private DevExpress.XtraReports.UI.XRLabel xrLabel11;
         private DevExpress.XtraReports.UI.XRLabel lbl_Customer_Id;
+        private DevExpress.XtraReports.UI.XRLabel lbl_ProductItemNo;
     }
 }

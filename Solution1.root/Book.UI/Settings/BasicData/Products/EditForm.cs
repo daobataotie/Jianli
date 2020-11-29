@@ -65,6 +65,8 @@ namespace Book.UI.Settings.BasicData.Products
         private int idIsChange = 0;
         private BL.SupplierManager supplierManager = new Book.BL.SupplierManager();
         BL.BomParentPartInfoManager BomparentManager = new Book.BL.BomParentPartInfoManager();
+        BL.ProductItemNoManager productItemNoManager = new Book.BL.ProductItemNoManager();
+        IList<Model.ProductItemNo> ListProductItemNo = new List<Model.ProductItemNo>();
 
         /// <summary>
         /// 构造函数——添加
@@ -114,6 +116,7 @@ namespace Book.UI.Settings.BasicData.Products
             this.dateEditStockStart.DateTime = DateTime.Now.Date.AddMonths(-1);
             this.dateEditStockEnd.DateTime = DateTime.Now.Date.AddDays(1).AddSeconds(-1);
 
+            this.bindingSourceProductItemNo.DataSource = ListProductItemNo = productItemNoManager.Select();
         }
 
         //一览窗口传递类型
@@ -621,6 +624,9 @@ namespace Book.UI.Settings.BasicData.Products
             {
                 throw new Exception("請先選擇客戶，再填寫客戶貨品名稱");
             }
+
+            //2020年11月29日20:04:14
+            this.product.ProductItemNo = this.lue_ProdyctItemNo.EditValue == null ? null : this.lue_ProdyctItemNo.EditValue.ToString();
 
             switch (this.action)
             {
@@ -1149,6 +1155,9 @@ namespace Book.UI.Settings.BasicData.Products
 
             //2018年10月3日22:31:12
             this.txt_InternalDescription.EditValue = this.product.InternalDescription;
+
+            //2020年11月29日20:03:25
+            this.lue_ProdyctItemNo.EditValue = this.product.ProductItemNo;
 
             if (!string.IsNullOrEmpty(this.product.SunhaoRage))
             {
@@ -2098,6 +2107,11 @@ namespace Book.UI.Settings.BasicData.Products
             this.btn_StockExportExcel.Enabled = true;
 
             this.dateEditInsertTime.Enabled = false;
+
+            if (string.IsNullOrEmpty(this.product.ProductItemNo))
+                this.txt_InternalDescription.Enabled = true;
+            else
+                this.txt_InternalDescription.Enabled = false;
         }
 
         protected override bool HasRows()
@@ -3834,6 +3848,33 @@ namespace Book.UI.Settings.BasicData.Products
             EmpIdList.Add("39f972ba-c5cc-4cd8-b85e-4f51b7de9c99");  //陳建華
             EmpIdList.Add("37c7b303-7cd2-4fed-b8e7-26343fddce59");  //方怡玲
             EmpIdList.Add("2cd62d37-b1c8-421a-a700-ac762db5aeca");  //劉嘉娟
+        }
+
+        //料號改變，對應的改變內部描述，切不能 手動輸入
+        private void lue_ProdyctItemNo_EditValueChanged(object sender, EventArgs e)
+        {
+            if (lue_ProdyctItemNo.EditValue == null)
+                this.txt_InternalDescription.Enabled = true;
+            else
+            {
+                if (ListProductItemNo != null)
+                {
+                    var itemNo = ListProductItemNo.FirstOrDefault(l => l.ItemNo == lue_ProdyctItemNo.EditValue.ToString());
+                    if (itemNo != null)
+                    {
+                        this.txt_InternalDescription.Text = itemNo.ItemNo;
+                        this.txt_InternalDescription.Enabled = false;
+                    }
+                }
+            }
+
+        }
+
+        //刪除料號，對應的內部描述可以手動輸入
+        private void lue_ProdyctItemNo_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            if (e.Button.Index == 1)
+                lue_ProdyctItemNo.EditValue = null;
         }
     }
 }

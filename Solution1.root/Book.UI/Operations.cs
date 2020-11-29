@@ -779,6 +779,10 @@ namespace Book.UI
 
             //出貨單-金額統計 
             operations.Add("Query.AmountStatisticsXS", (D1)delegate(System.Windows.Forms.Form form) { M1("Query.AmountStatisticsXS", form); });
+
+            //商品料號-內部描述對應表
+            operations.Add("Settings.BasicData.SupplierCategory.ProductItemNoForm", (D1)delegate(System.Windows.Forms.Form form) { M1("Settings.BasicData.SupplierCategory.ProductItemNoForm", form); });
+
         }
 
         static Form CreateForm(string formTypeName)

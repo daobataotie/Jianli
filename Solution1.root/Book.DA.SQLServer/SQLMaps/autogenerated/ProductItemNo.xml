@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<sqlMap namespace="ProductItemNo" xmlns="http://ibatis.apache.org/mapping" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <alias>
+        <typeAlias alias="ProductItemNo" type="Book.Model.ProductItemNo, Book.Model" />
+    </alias>
+    <resultMaps>                                    
+        <resultMap id="ProductItemNoResult" class="ProductItemNo">
+			<result property="ItemNo" column="ItemNo" />
+			<result property="InternalDescription" column="InternalDescription" />
+			<result property="InsertTime" column="InsertTime" />
+			<result property="UpdateTime" column="UpdateTime" />
+        </resultMap>
+    </resultMaps>
+		
+    <statements>
+		<select id="has_rows_of" resultClass="bool">
+			<![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[ProductItemNo]
+				WHERE
+				[ItemNo] = #ItemNo#
+                        			                   
+				) then 1 else 0 end
+                ]]>
+		</select>
+		<select id="has_rows" resultClass="bool">
+			<![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[ProductItemNo]
+ 								
+				) then 1 else 0 end
+                ]]>
+		</select>
+		<select id="get_first" resultMap="ProductItemNoResult">
+			<![CDATA[
+			select top 1 *
+			from dbo.ProductItemNo
+			 
+			order by InsertTime 
+			]]>
+		</select>
+		<select id="get_last" resultMap="ProductItemNoResult">
+			<![CDATA[
+			select top 1 *
+			from dbo.ProductItemNo
+						
+            order by InsertTime desc
+			]]>
+            
+		</select>
+		<select id="get_prev" resultMap="ProductItemNoResult" parameterClass="ProductItemNo">
+			<![CDATA[
+			select top 1 *
+			from dbo.ProductItemNo
+			where InsertTime < #InsertTime#	
+            			          
+            order by InsertTime desc
+			]]>
+		</select>
+		<select id="get_next" resultMap="ProductItemNoResult" parameterClass="ProductItemNo">
+			<![CDATA[
+			select top 1 *
+			from dbo.ProductItemNo
+			where InsertTime > #InsertTime#	
+                			                   
+            order by InsertTime
+			]]>
+		</select>
+		
+		<select id="has_rows_before" resultClass="bool" parameterClass="ProductItemNo">
+			<![CDATA[
+			select case when exists(
+				select * 
+				from dbo.ProductItemNo
+				where InsertTime < #InsertTime#
+                			                   
+				) then 1 else 0 end
+			]]>
+		</select>
+		
+		<select id="has_rows_after" resultClass="bool" parameterClass="ProductItemNo">
+			<![CDATA[
+			select case when exists(
+				select * 
+				from dbo.ProductItemNo
+				where InsertTime > #InsertTime#
+                			          
+         
+				) then 1 else 0 end
+			]]>
+		</select>
+		<!-- select by primary key -->
+        <select id="select_by_primary_key" resultMap="ProductItemNoResult" parameterClass="ProductItemNo">
+			<![CDATA[SELECT
+				[ItemNo],
+				[InternalDescription],
+				[InsertTime],
+				[UpdateTime]
+			FROM
+				[dbo].[ProductItemNo]
+			WHERE
+				[ItemNo] = #ItemNo#
+                			          
+         		]]>
+        </select>
+		
+		<!-- delete -->
+        <delete id="delete" parameterClass="string">
+				<![CDATA[                
+                DELETE FROM [dbo].[ProductItemNo]
+			WHERE            
+				[ItemNo] = #ItemNo#
+                    		]]>
+        </delete>
+
+		<!-- select all -->
+        <select id="select_all" resultMap="ProductItemNoResult" >
+			<![CDATA[SELECT *
+			FROM 
+				[dbo].[ProductItemNo]
+                			                   
+  ORDER BY InsertTime DESC  
+			]]>
+        </select>
+        
+		<select id="count_all" resultClass="int">
+		<![CDATA[	select count(*)
+			from 
+				[dbo].[ProductItemNo]
+                			          
+         ]]>
+		</select>
+		
+		<select id="select_all_with_paging" resultMap="ProductItemNoResult">
+        <![CDATA[    SELECT *
+            FROM
+            (
+                SELECT *, row_number() over(order by $OrderStatement$) rownumber
+                FROM    
+                    [dbo].[ProductItemNo]
+                    			          
+         
+            ) t
+            WHERE t.rownumber between #Row1# and #Row2#
+             ]]>
+		</select>
+		
+		<!-- insert -->
+        <insert id="insert" parameterClass="ProductItemNo">
+			 <![CDATA[ INSERT INTO [dbo].[ProductItemNo] 
+			(
+				[ItemNo],
+				[InternalDescription],
+				[InsertTime],
+				[UpdateTime]
+			) 
+			VALUES 
+			(
+				#ItemNo#,
+				#InternalDescription#,
+				#InsertTime#,
+				#UpdateTime#
+			)
+             ]]>
+        </insert>
+		
+		<!-- update -->
+        <update id="update" parameterClass="ProductItemNo">
+		 <![CDATA[ 	UPDATE [ProductItemNo] SET
+				[InternalDescription] = #InternalDescription#,
+				[InsertTime] = #InsertTime#,
+				[UpdateTime] = #UpdateTime#
+			WHERE
+				[ItemNo] = #ItemNo#
+                    ]]>
+        </update>
+		<select id="existsPrimary" resultClass="bool" parameterClass="string">
+			<![CDATA[
+			select case when exists(
+				select *
+				from [dbo].[ProductItemNo]
+				where  ItemNo = #value#                 			                   
+				)
+				then 1 else 0 end
+			]]>
+		</select>
+		
+    </statements>
+</sqlMap>
