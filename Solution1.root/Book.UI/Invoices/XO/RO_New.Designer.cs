@@ -28,11 +28,12 @@ namespace Book.UI.Invoices.XO
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RO_New));
             DevExpress.XtraReports.UI.XRSummary xrSummary1 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.XtraReports.UI.XRSummary xrSummary2 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.XtraReports.UI.XRSummary xrSummary3 = new DevExpress.XtraReports.UI.XRSummary();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RO_New));
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.lbl_ProductItemNo = new DevExpress.XtraReports.UI.XRLabel();
             this.lbl_Note = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.lblRemark = new DevExpress.XtraReports.UI.XRRichText();
@@ -94,7 +95,6 @@ namespace Book.UI.Invoices.XO
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
-            this.lbl_ProductItemNo = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.lblRemark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
@@ -115,6 +115,15 @@ namespace Book.UI.Invoices.XO
             resources.ApplyResources(this.Detail, "Detail");
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
+            // 
+            // lbl_ProductItemNo
+            // 
+            this.lbl_ProductItemNo.AutoWidth = true;
+            resources.ApplyResources(this.lbl_ProductItemNo, "lbl_ProductItemNo");
+            this.lbl_ProductItemNo.Name = "lbl_ProductItemNo";
+            this.lbl_ProductItemNo.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lbl_ProductItemNo.StylePriority.UseFont = false;
+            this.lbl_ProductItemNo.StylePriority.UseTextAlignment = false;
             // 
             // lbl_Note
             // 
@@ -675,15 +684,6 @@ namespace Book.UI.Invoices.XO
             // 
             resources.ApplyResources(this.bottomMarginBand1, "bottomMarginBand1");
             this.bottomMarginBand1.Name = "bottomMarginBand1";
-            // 
-            // lbl_ProductItemNo
-            // 
-            this.lbl_ProductItemNo.AutoWidth = true;
-            resources.ApplyResources(this.lbl_ProductItemNo, "lbl_ProductItemNo");
-            this.lbl_ProductItemNo.Name = "lbl_ProductItemNo";
-            this.lbl_ProductItemNo.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.lbl_ProductItemNo.StylePriority.UseFont = false;
-            this.lbl_ProductItemNo.StylePriority.UseTextAlignment = false;
             // 
             // RO_New
             // 

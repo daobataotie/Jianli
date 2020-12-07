@@ -312,5 +312,10 @@ namespace Book.DA.SQLServer
         {
             return sqlmapper.QueryForObject<double>("Product.SelectStocksQuantityByStock", productId);
         }
+
+        public IList<Model.Product> SelectIdAndName()
+        {
+            return sqlmapper.QueryForList<Model.Product>("Product.SelectIdAndName", null);
+        }
     }
 }

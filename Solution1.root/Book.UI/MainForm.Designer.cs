@@ -76,6 +76,7 @@
             this.barButtonItem467 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem475 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem476 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem495 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem246 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem165 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem245 = new DevExpress.XtraBars.BarButtonItem();
@@ -657,7 +658,6 @@
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.pe_JieAn = new DevExpress.XtraEditors.PictureEdit();
-            this.barButtonItem495 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
@@ -1605,8 +1605,7 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem3),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.None, false, this.barButtonItem467, false),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem475),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem476),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem495)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem476)});
             this.barSubItem37.Name = "barSubItem37";
             // 
             // barButtonItem147
@@ -1678,6 +1677,13 @@
             this.barButtonItem476.Id = 634;
             this.barButtonItem476.Name = "barButtonItem476";
             this.barButtonItem476.Tag = "Settings.BasicData.Products.BarCodeSearchForm";
+            // 
+            // barButtonItem495
+            // 
+            resources.ApplyResources(this.barButtonItem495, "barButtonItem495");
+            this.barButtonItem495.Id = 655;
+            this.barButtonItem495.Name = "barButtonItem495";
+            this.barButtonItem495.Tag = "Settings.BasicData.SupplierCategory.ProductItemNoForm";
             // 
             // barButtonItem246
             // 
@@ -6233,13 +6239,6 @@
             this.pe_JieAn.MenuManager = this.barManager1;
             this.pe_JieAn.Name = "pe_JieAn";
             this.pe_JieAn.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            // 
-            // barButtonItem495
-            // 
-            resources.ApplyResources(this.barButtonItem495, "barButtonItem495");
-            this.barButtonItem495.Id = 655;
-            this.barButtonItem495.Name = "barButtonItem495";
-            this.barButtonItem495.Tag = "Settings.BasicData.SupplierCategory.ProductItemNoForm";
             // 
             // MainForm
             // 

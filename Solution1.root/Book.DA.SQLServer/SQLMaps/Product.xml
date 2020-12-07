@@ -58,6 +58,10 @@
       <result property="CustomerProductName" column="CustomerProductName"/>
       <result property="ProductDescription" column="ProductDescription"/>
     </resultMap>
+    <resultMap id="ProductResult8" class="Product">
+      <result property="Id" column="Id" />
+      <result property="InternalDescription" column="InternalDescription" />
+    </resultMap>
     <resultMap id="ProductResult4" class="Product">
       <result property="ProductId" column="ProductId" />
       <result property="Id" column="Id" />
@@ -873,6 +877,13 @@ where ProductId = #productid#
     <select id="SelectStocksQuantityByStock" resultClass="double" parameterClass="string">
       <![CDATA[
       select ISNULL(sum(stockquantity1),0) from Stock where ProductId=#value#
+      ]]>
+    </select>
+
+
+    <select id="SelectIdAndName" resultMap="ProductResult3">
+      <![CDATA[
+      select ProductId,Id,ProductName from Product 
       ]]>
     </select>
   </statements>

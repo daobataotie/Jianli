@@ -65,8 +65,10 @@ namespace Book.UI.Settings.BasicData.Products
         private int idIsChange = 0;
         private BL.SupplierManager supplierManager = new Book.BL.SupplierManager();
         BL.BomParentPartInfoManager BomparentManager = new Book.BL.BomParentPartInfoManager();
-        BL.ProductItemNoManager productItemNoManager = new Book.BL.ProductItemNoManager();
-        IList<Model.ProductItemNo> ListProductItemNo = new List<Model.ProductItemNo>();
+
+        //用List的速度比较慢，改为用Dictionary
+        //IList<Model.Product> listIdAndName = new List<Model.Product>();
+        Dictionary<string, string> dicIdAndName = new Dictionary<string, string>();
 
         /// <summary>
         /// 构造函数——添加
@@ -116,7 +118,11 @@ namespace Book.UI.Settings.BasicData.Products
             this.dateEditStockStart.DateTime = DateTime.Now.Date.AddMonths(-1);
             this.dateEditStockEnd.DateTime = DateTime.Now.Date.AddDays(1).AddSeconds(-1);
 
-            this.bindingSourceProductItemNo.DataSource = ListProductItemNo = productItemNoManager.Select();
+            var listIdAndName = productManager.SelectIdAndName();
+            foreach (var item in listIdAndName)
+            {
+                dicIdAndName[item.Id.ToLower()] = item.ProductName;
+            }
         }
 
         //一览窗口传递类型
@@ -626,7 +632,7 @@ namespace Book.UI.Settings.BasicData.Products
             }
 
             //2020年11月29日20:04:14
-            this.product.ProductItemNo = this.lue_ProdyctItemNo.EditValue == null ? null : this.lue_ProdyctItemNo.EditValue.ToString();
+            this.product.ProductItemNo = this.txt_ProductItemNo.Text;
 
             switch (this.action)
             {
@@ -1157,7 +1163,7 @@ namespace Book.UI.Settings.BasicData.Products
             this.txt_InternalDescription.EditValue = this.product.InternalDescription;
 
             //2020年11月29日20:03:25
-            this.lue_ProdyctItemNo.EditValue = this.product.ProductItemNo;
+            this.txt_ProductItemNo.EditValue = this.product.ProductItemNo;
 
             if (!string.IsNullOrEmpty(this.product.SunhaoRage))
             {
@@ -2107,11 +2113,6 @@ namespace Book.UI.Settings.BasicData.Products
             this.btn_StockExportExcel.Enabled = true;
 
             this.dateEditInsertTime.Enabled = false;
-
-            if (string.IsNullOrEmpty(this.product.ProductItemNo))
-                this.txt_InternalDescription.Enabled = true;
-            else
-                this.txt_InternalDescription.Enabled = false;
         }
 
         protected override bool HasRows()
@@ -3850,31 +3851,17 @@ namespace Book.UI.Settings.BasicData.Products
             EmpIdList.Add("2cd62d37-b1c8-421a-a700-ac762db5aeca");  //劉嘉娟
         }
 
-        //料號改變，對應的改變內部描述，切不能 手動輸入
-        private void lue_ProdyctItemNo_EditValueChanged(object sender, EventArgs e)
+        //料號改變，對應的改變內部描述
+        private void txt_ProductItemNo_EditValueChanged(object sender, EventArgs e)
         {
-            if (lue_ProdyctItemNo.EditValue == null)
-                this.txt_InternalDescription.Enabled = true;
-            else
+            if (!string.IsNullOrEmpty(txt_ProductItemNo.Text) && this.action != "view" && dicIdAndName.Keys.Contains(txt_ProductItemNo.Text.ToLower()))
             {
-                if (ListProductItemNo != null)
-                {
-                    var itemNo = ListProductItemNo.FirstOrDefault(l => l.ItemNo == lue_ProdyctItemNo.EditValue.ToString());
-                    if (itemNo != null)
-                    {
-                        this.txt_InternalDescription.Text = itemNo.ItemNo;
-                        this.txt_InternalDescription.Enabled = false;
-                    }
-                }
+                //var itemNo = listIdAndName.FirstOrDefault(l => l.Id.ToLower() == txt_ProductItemNo.Text.ToLower());
+                //if (itemNo != null)
+                //{
+                this.txt_InternalDescription.Text = dicIdAndName[txt_ProductItemNo.Text.ToLower()];
+                //}
             }
-
-        }
-
-        //刪除料號，對應的內部描述可以手動輸入
-        private void lue_ProdyctItemNo_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
-        {
-            if (e.Button.Index == 1)
-                lue_ProdyctItemNo.EditValue = null;
         }
     }
 }
