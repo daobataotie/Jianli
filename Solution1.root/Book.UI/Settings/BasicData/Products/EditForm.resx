@@ -549,10 +549,10 @@
     <value>0, 0</value>
   </data>
   <data name="txt_InternalDescription.Location" type="System.Drawing.Point, System.Drawing">
-    <value>269, 62</value>
+    <value>92, 62</value>
   </data>
   <data name="txt_InternalDescription.Size" type="System.Drawing.Size, System.Drawing">
-    <value>317, 21</value>
+    <value>494, 21</value>
   </data>
   <data name="txt_InternalDescription.TabIndex" type="System.Int32, mscorlib">
     <value>46</value>
@@ -1810,30 +1810,6 @@
   <data name="&gt;&gt;textEditProductBarCode.ZOrder" xml:space="preserve">
     <value>37</value>
   </data>
-  <data name="txt_ProductItemNo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>Disable</value>
-  </data>
-  <data name="txt_ProductItemNo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>92, 62</value>
-  </data>
-  <data name="txt_ProductItemNo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 21</value>
-  </data>
-  <data name="txt_ProductItemNo.TabIndex" type="System.Int32, mscorlib">
-    <value>47</value>
-  </data>
-  <data name="&gt;&gt;txt_ProductItemNo.Name" xml:space="preserve">
-    <value>txt_ProductItemNo</value>
-  </data>
-  <data name="&gt;&gt;txt_ProductItemNo.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;txt_ProductItemNo.Parent" xml:space="preserve">
-    <value>layoutControl1</value>
-  </data>
-  <data name="&gt;&gt;txt_ProductItemNo.ZOrder" xml:space="preserve">
-    <value>38</value>
-  </data>
   <data name="layoutControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -2064,12 +2040,6 @@
   </data>
   <data name="layoutControlItem4.Text" xml:space="preserve">
     <value>生产国家:</value>
-  </data>
-  <data name="layoutControlItem79.CustomizationFormText" xml:space="preserve">
-    <value>料號：</value>
-  </data>
-  <data name="layoutControlItem79.Text" xml:space="preserve">
-    <value>料號：</value>
   </data>
   <data name="layoutControlGroup2.Text" xml:space="preserve">
     <value>Root</value>
@@ -8141,12 +8111,6 @@
     <value>layoutControlItem4</value>
   </data>
   <data name="&gt;&gt;layoutControlItem4.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem79.Name" xml:space="preserve">
-    <value>layoutControlItem79</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem79.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;layoutControlGroup16.Name" xml:space="preserve">

@@ -78,7 +78,6 @@ namespace Book.UI.Settings.BasicData.Products
             this.textEditProductSpecification = new DevExpress.XtraEditors.TextEdit();
             this.textEditProductName = new DevExpress.XtraEditors.TextEdit();
             this.textEditProductBarCode = new DevExpress.XtraEditors.TextEdit();
-            this.txt_ProductItemNo = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -116,7 +115,6 @@ namespace Book.UI.Settings.BasicData.Products
             this.layoutControlItem114 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem79 = new DevExpress.XtraLayout.LayoutControlItem();
             this.xtraTabPage7 = new DevExpress.XtraTab.XtraTabPage();
             this.layoutControl4 = new DevExpress.XtraLayout.LayoutControl();
             this.xtraTabControl2 = new DevExpress.XtraTab.XtraTabControl();
@@ -553,7 +551,6 @@ namespace Book.UI.Settings.BasicData.Products
             ((System.ComponentModel.ISupportInitialize)(this.textEditProductSpecification.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditProductName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditProductBarCode.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_ProductItemNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
@@ -591,7 +588,6 @@ namespace Book.UI.Settings.BasicData.Products
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem114)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem79)).BeginInit();
             this.xtraTabPage7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl4)).BeginInit();
             this.layoutControl4.SuspendLayout();
@@ -1077,7 +1073,6 @@ namespace Book.UI.Settings.BasicData.Products
             this.layoutControl1.Controls.Add(this.textEditProductSpecification);
             this.layoutControl1.Controls.Add(this.textEditProductName);
             this.layoutControl1.Controls.Add(this.textEditProductBarCode);
-            this.layoutControl1.Controls.Add(this.txt_ProductItemNo);
             resources.ApplyResources(this.layoutControl1, "layoutControl1");
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(246, 349, 250, 350);
@@ -1509,14 +1504,6 @@ namespace Book.UI.Settings.BasicData.Products
             this.textEditProductBarCode.Properties.ReadOnly = true;
             this.textEditProductBarCode.StyleController = this.layoutControl1;
             // 
-            // txt_ProductItemNo
-            // 
-            resources.ApplyResources(this.txt_ProductItemNo, "txt_ProductItemNo");
-            this.txt_ProductItemNo.MenuManager = this.barManager1;
-            this.txt_ProductItemNo.Name = "txt_ProductItemNo";
-            this.txt_ProductItemNo.StyleController = this.layoutControl1;
-            this.txt_ProductItemNo.EditValueChanged += new System.EventHandler(this.txt_ProductItemNo_EditValueChanged);
-            // 
             // layoutControlGroup2
             // 
             resources.ApplyResources(this.layoutControlGroup2, "layoutControlGroup2");
@@ -1556,8 +1543,7 @@ namespace Book.UI.Settings.BasicData.Products
             this.layoutControlItem113,
             this.layoutControlItem114,
             this.layoutControlItem14,
-            this.layoutControlItem4,
-            this.layoutControlItem79});
+            this.layoutControlItem4});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "Root";
             this.layoutControlGroup2.Size = new System.Drawing.Size(598, 406);
@@ -1913,9 +1899,9 @@ namespace Book.UI.Settings.BasicData.Products
             // 
             this.layoutControlItem114.Control = this.txt_InternalDescription;
             resources.ApplyResources(this.layoutControlItem114, "layoutControlItem114");
-            this.layoutControlItem114.Location = new System.Drawing.Point(177, 50);
+            this.layoutControlItem114.Location = new System.Drawing.Point(0, 50);
             this.layoutControlItem114.Name = "layoutControlItem114";
-            this.layoutControlItem114.Size = new System.Drawing.Size(401, 25);
+            this.layoutControlItem114.Size = new System.Drawing.Size(578, 25);
             this.layoutControlItem114.TextSize = new System.Drawing.Size(76, 14);
             // 
             // layoutControlItem14
@@ -1940,15 +1926,6 @@ namespace Book.UI.Settings.BasicData.Products
             this.layoutControlItem4.TextSize = new System.Drawing.Size(76, 20);
             this.layoutControlItem4.TextToControlDistance = 5;
             this.layoutControlItem4.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
-            // 
-            // layoutControlItem79
-            // 
-            this.layoutControlItem79.Control = this.txt_ProductItemNo;
-            resources.ApplyResources(this.layoutControlItem79, "layoutControlItem79");
-            this.layoutControlItem79.Location = new System.Drawing.Point(0, 50);
-            this.layoutControlItem79.Name = "layoutControlItem79";
-            this.layoutControlItem79.Size = new System.Drawing.Size(177, 25);
-            this.layoutControlItem79.TextSize = new System.Drawing.Size(76, 14);
             // 
             // xtraTabPage7
             // 
@@ -5857,7 +5834,6 @@ namespace Book.UI.Settings.BasicData.Products
             ((System.ComponentModel.ISupportInitialize)(this.textEditProductSpecification.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditProductName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditProductBarCode.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_ProductItemNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
@@ -5895,7 +5871,6 @@ namespace Book.UI.Settings.BasicData.Products
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem114)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem79)).EndInit();
             this.xtraTabPage7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl4)).EndInit();
             this.layoutControl4.ResumeLayout(false);
@@ -6687,7 +6662,5 @@ namespace Book.UI.Settings.BasicData.Products
         private DevExpress.XtraEditors.SimpleButton btn_StockExportExcel;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem78;
         private DevExpress.XtraBars.BarButtonItem barBOM;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem79;
-        private DevExpress.XtraEditors.TextEdit txt_ProductItemNo;
     }
 }

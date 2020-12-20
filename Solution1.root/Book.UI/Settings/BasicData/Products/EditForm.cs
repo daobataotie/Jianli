@@ -66,10 +66,6 @@ namespace Book.UI.Settings.BasicData.Products
         private BL.SupplierManager supplierManager = new Book.BL.SupplierManager();
         BL.BomParentPartInfoManager BomparentManager = new Book.BL.BomParentPartInfoManager();
 
-        //用List的速度比较慢，改为用Dictionary
-        //IList<Model.Product> listIdAndName = new List<Model.Product>();
-        Dictionary<string, string> dicIdAndName = new Dictionary<string, string>();
-
         /// <summary>
         /// 构造函数——添加
         /// </summary>
@@ -118,11 +114,6 @@ namespace Book.UI.Settings.BasicData.Products
             this.dateEditStockStart.DateTime = DateTime.Now.Date.AddMonths(-1);
             this.dateEditStockEnd.DateTime = DateTime.Now.Date.AddDays(1).AddSeconds(-1);
 
-            var listIdAndName = productManager.SelectIdAndName();
-            foreach (var item in listIdAndName)
-            {
-                dicIdAndName[item.Id.ToLower()] = item.ProductName;
-            }
         }
 
         //一览窗口传递类型
@@ -630,9 +621,6 @@ namespace Book.UI.Settings.BasicData.Products
             {
                 throw new Exception("請先選擇客戶，再填寫客戶貨品名稱");
             }
-
-            //2020年11月29日20:04:14
-            this.product.ProductItemNo = this.txt_ProductItemNo.Text;
 
             switch (this.action)
             {
@@ -1161,9 +1149,6 @@ namespace Book.UI.Settings.BasicData.Products
 
             //2018年10月3日22:31:12
             this.txt_InternalDescription.EditValue = this.product.InternalDescription;
-
-            //2020年11月29日20:03:25
-            this.txt_ProductItemNo.EditValue = this.product.ProductItemNo;
 
             if (!string.IsNullOrEmpty(this.product.SunhaoRage))
             {
@@ -3849,19 +3834,6 @@ namespace Book.UI.Settings.BasicData.Products
             EmpIdList.Add("39f972ba-c5cc-4cd8-b85e-4f51b7de9c99");  //陳建華
             EmpIdList.Add("37c7b303-7cd2-4fed-b8e7-26343fddce59");  //方怡玲
             EmpIdList.Add("2cd62d37-b1c8-421a-a700-ac762db5aeca");  //劉嘉娟
-        }
-
-        //料號改變，對應的改變內部描述
-        private void txt_ProductItemNo_EditValueChanged(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrEmpty(txt_ProductItemNo.Text) && this.action != "view" && dicIdAndName.Keys.Contains(txt_ProductItemNo.Text.ToLower()))
-            {
-                //var itemNo = listIdAndName.FirstOrDefault(l => l.Id.ToLower() == txt_ProductItemNo.Text.ToLower());
-                //if (itemNo != null)
-                //{
-                this.txt_InternalDescription.Text = dicIdAndName[txt_ProductItemNo.Text.ToLower()];
-                //}
-            }
         }
     }
 }

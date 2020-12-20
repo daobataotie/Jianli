@@ -24,9 +24,9 @@ namespace Book.UI.produceManager.MouldCategory
             {
                 string s = string.Empty;
                 //取得服务器附件存储地址
-                if (System.Configuration.ConfigurationManager.OpenExeConfiguration(System.Configuration.ConfigurationUserLevel.None) != null && System.Configuration.ConfigurationManager.OpenExeConfiguration(System.Configuration.ConfigurationUserLevel.None).AppSettings.Settings["AllAttachment"] != null)
+                if (System.Configuration.ConfigurationManager.OpenExeConfiguration(System.Configuration.ConfigurationUserLevel.None) != null && System.Configuration.ConfigurationManager.OpenExeConfiguration(System.Configuration.ConfigurationUserLevel.None).AppSettings.Settings["ProductSize"] != null)
                 {
-                    s = System.Configuration.ConfigurationManager.OpenExeConfiguration(System.Configuration.ConfigurationUserLevel.None).AppSettings.Settings["AllAttachment"].Value;
+                    s = System.Configuration.ConfigurationManager.OpenExeConfiguration(System.Configuration.ConfigurationUserLevel.None).AppSettings.Settings["ProductSize"].Value;
                 }
                 return s;
             }
@@ -123,6 +123,7 @@ namespace Book.UI.produceManager.MouldCategory
                 if (b != null)
                     this._productMouldSize.Picture = b;
             }
+
             //上传附件信息
             if (this.pictureList != null && this.pictureList.Count > 0)
             {
@@ -255,18 +256,15 @@ namespace Book.UI.produceManager.MouldCategory
                 ofd.InitialDirectory = "C:\\";
                 if (ofd.ShowDialog(this) == DialogResult.OK)
                 {
-                    foreach (string str in ofd.FileNames)
-                    {
-                        PictureHelp ph = new PictureHelp();
-                        ph.FileFullName = str;
-                        ph.FileName = str.Substring(str.LastIndexOf("\\") + 1);
+                    PictureHelp ph = new PictureHelp();
+                    ph.FileFullName = ofd.FileName;
+                    ph.FileName = ofd.FileName.Substring(ofd.FileName.LastIndexOf("\\") + 1);
 
-                        FileInfo fi = new FileInfo(str);
-                        ph.FileSize = fi.Length.ToString();
+                    FileInfo fi = new FileInfo(ofd.FileName);
+                    ph.FileSize = fi.Length.ToString();
 
-                        this.pictureEdit1.Image = Image.FromFile(ph.FileFullName);
-                        this.PicturePath = ph.FileFullName;
-                    }
+                    this.pictureEdit1.Image = Image.FromFile(ph.FileFullName);
+                    this.PicturePath = ph.FileFullName;
                 }
             }
             catch
@@ -485,6 +483,8 @@ namespace Book.UI.produceManager.MouldCategory
         {
             this.pictureEdit1.Image = null;
             this.PicturePath = string.Empty;
+
+            this._productMouldSize.Picture = new byte[0];
         }
     }
 }

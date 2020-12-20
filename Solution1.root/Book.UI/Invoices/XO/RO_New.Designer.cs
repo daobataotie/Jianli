@@ -33,7 +33,6 @@ namespace Book.UI.Invoices.XO
             DevExpress.XtraReports.UI.XRSummary xrSummary2 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.XtraReports.UI.XRSummary xrSummary3 = new DevExpress.XtraReports.UI.XRSummary();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
-            this.lbl_ProductItemNo = new DevExpress.XtraReports.UI.XRLabel();
             this.lbl_Note = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.lblRemark = new DevExpress.XtraReports.UI.XRRichText();
@@ -103,7 +102,6 @@ namespace Book.UI.Invoices.XO
             // Detail
             // 
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.lbl_ProductItemNo,
             this.lbl_Note,
             this.xrLabel2,
             this.lblRemark,
@@ -115,15 +113,6 @@ namespace Book.UI.Invoices.XO
             resources.ApplyResources(this.Detail, "Detail");
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
-            // 
-            // lbl_ProductItemNo
-            // 
-            this.lbl_ProductItemNo.AutoWidth = true;
-            resources.ApplyResources(this.lbl_ProductItemNo, "lbl_ProductItemNo");
-            this.lbl_ProductItemNo.Name = "lbl_ProductItemNo";
-            this.lbl_ProductItemNo.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.lbl_ProductItemNo.StylePriority.UseFont = false;
-            this.lbl_ProductItemNo.StylePriority.UseTextAlignment = false;
             // 
             // lbl_Note
             // 
@@ -282,8 +271,8 @@ namespace Book.UI.Invoices.XO
             // 
             // TCYujiaoriqi
             // 
-            this.TCYujiaoriqi.Borders = DevExpress.XtraPrinting.BorderSide.None;
             resources.ApplyResources(this.TCYujiaoriqi, "TCYujiaoriqi");
+            this.TCYujiaoriqi.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.TCYujiaoriqi.Name = "TCYujiaoriqi";
             this.TCYujiaoriqi.StylePriority.UseBorderColor = false;
             this.TCYujiaoriqi.StylePriority.UseBorders = false;
@@ -320,6 +309,7 @@ namespace Book.UI.Invoices.XO
             this.lblTotalJine.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.lblTotalJine.StylePriority.UseFont = false;
             this.lblTotalJine.StylePriority.UseTextAlignment = false;
+            resources.ApplyResources(xrSummary2, "xrSummary2");
             xrSummary2.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.lblTotalJine.Summary = xrSummary2;
             // 
@@ -355,6 +345,7 @@ namespace Book.UI.Invoices.XO
             this.xrLabelCount.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabelCount.StylePriority.UseFont = false;
             this.xrLabelCount.StylePriority.UseTextAlignment = false;
+            resources.ApplyResources(xrSummary3, "xrSummary3");
             xrSummary3.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.xrLabelCount.Summary = xrSummary3;
             // 
@@ -772,6 +763,5 @@ namespace Book.UI.Invoices.XO
         private DevExpress.XtraReports.UI.XRLabel lbl_Note;
         private DevExpress.XtraReports.UI.XRLabel xrLabel11;
         private DevExpress.XtraReports.UI.XRLabel lbl_Customer_Id;
-        private DevExpress.XtraReports.UI.XRLabel lbl_ProductItemNo;
     }
 }
