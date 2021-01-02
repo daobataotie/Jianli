@@ -4758,6 +4758,9 @@
     <EmbeddedResource Include="Invoices\XO\ROInvoiceXOlist.resx">
       <DependentUpon>ROInvoiceXOlist.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\XO\ROSearchInvoiceByData.resx">
+      <DependentUpon>ROSearchInvoiceByData.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Invoices\XO\RO_New.resx">
       <DependentUpon>RO_New.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -4789,6 +4792,9 @@
     <EmbeddedResource Include="Invoices\XO\RO1ZYD.zh-CHT.resx">
       <DependentUpon>RO1ZYD.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\XO\SearchInvoiceByData.resx">
+      <DependentUpon>SearchInvoiceByData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices\XS\RO1ZYD.resx">
       <DependentUpon>RO1ZYD.cs</DependentUpon>
@@ -12182,6 +12188,12 @@
     <Compile Include="Invoices\XO\ROInvoiceXOlist.Designer.cs">
       <DependentUpon>ROInvoiceXOlist.cs</DependentUpon>
     </Compile>
+    <Compile Include="Invoices\XO\ROSearchInvoiceByData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Invoices\XO\ROSearchInvoiceByData.Designer.cs">
+      <DependentUpon>ROSearchInvoiceByData.cs</DependentUpon>
+    </Compile>
     <Compile Include="Invoices\XO\RO_New.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -12205,6 +12217,12 @@
     </Compile>
     <Compile Include="Invoices\XO\RO1ZYD.Designer.cs">
       <DependentUpon>RO1ZYD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\XO\SearchInvoiceByData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoices\XO\SearchInvoiceByData.Designer.cs">
+      <DependentUpon>SearchInvoiceByData.cs</DependentUpon>
     </Compile>
     <Compile Include="Invoices\XS\RO1ZYD.cs">
       <SubType>Component</SubType>

@@ -133,5 +133,6 @@
       SELECT * FROM InvoiceXODetail d LEFT JOIN InvoiceXO i ON i.InvoiceId = d.InvoiceId WHERE  $value$
       ]]>
     </select>
+
   </statements>
 </sqlMap>

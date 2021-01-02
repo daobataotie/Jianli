@@ -783,6 +783,8 @@ namespace Book.UI
             ////商品料號-內部描述對應表
             //operations.Add("Settings.BasicData.SupplierCategory.ProductItemNoForm", (D1)delegate(System.Windows.Forms.Form form) { M1("Settings.BasicData.SupplierCategory.ProductItemNoForm", form); });
 
+            //下單型號查詢
+            operations.Add("Invoices.XO.SearchInvoiceByData", (D1)delegate(System.Windows.Forms.Form form) { M1("Invoices.XO.SearchInvoiceByData", form); });
         }
 
         static Form CreateForm(string formTypeName)

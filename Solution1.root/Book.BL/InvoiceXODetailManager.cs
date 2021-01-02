@@ -7,6 +7,7 @@
 //------------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
+using System.Data;
 
 namespace Book.BL
 {
@@ -107,6 +108,11 @@ namespace Book.BL
         public IList<Book.Model.InvoiceXODetail> SelectDetailMPSState(Book.Model.InvoiceXO invoiceXO, bool isNeedMps)
         {
             return accessor.SelectDetailMPSState(invoiceXO, isNeedMps);
+        }
+
+        public DataTable SearchInvoiceByData(DateTime startDate, DateTime endDate, string customerId, string productId)
+        {
+            return accessor.SearchInvoiceByData(startDate, endDate, customerId, productId);
         }
     }
 }

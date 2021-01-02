@@ -8,6 +8,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 
 namespace Book.DA
 {
@@ -29,6 +30,7 @@ namespace Book.DA
         IList<Model.InvoiceXODetail> Select(Model.Customer customer1, Model.Customer customer2, DateTime startDate, DateTime endDate, DateTime yjrq1, DateTime yjrq2, Model.Employee employee1, Model.Employee employee2, string xoid1, string xoid2, string cusxoidkey, Model.Product product, Model.Product product2, bool isclose, bool mpsIsClose, int orderColumn, int orderType, bool detailFlag, string product_Id, string productCategoryId);
         void UpdateProofUnitPrice(Model.InvoiceXODetail e);
         IList<Book.Model.InvoiceXODetail> SelectDetailMPSState(Book.Model.InvoiceXO invoiceXO, bool isNeedMps);
+        DataTable SearchInvoiceByData(DateTime startDate, DateTime endDate, string customerId, string productId);
     }
 }
 
