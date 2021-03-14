@@ -182,6 +182,7 @@
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemHyperLinkEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem86 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -297,7 +298,6 @@
             this.barButtonSearch = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -535,7 +535,6 @@
             // 
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.barButtonItem1});
-            this.barManager1.MaxItemId = 15;
             // 
             // imageCollection1
             // 
@@ -662,10 +661,10 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("LookPrductMaterial.Properties.Columns"), resources.GetString("LookPrductMaterial.Properties.Columns1")),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("LookPrductMaterial.Properties.Columns2"), resources.GetString("LookPrductMaterial.Properties.Columns3"))});
             this.LookPrductMaterial.Properties.DataSource = this.bindingMouldMaterial;
-            this.LookPrductMaterial.Properties.DisplayMember = "MouldCategoryName";
+            this.LookPrductMaterial.Properties.DisplayMember = "ProductMaterialName";
             this.LookPrductMaterial.Properties.NullText = resources.GetString("LookPrductMaterial.Properties.NullText");
             this.LookPrductMaterial.Properties.ReadOnly = true;
-            this.LookPrductMaterial.Properties.ValueMember = "MouldCategoryId";
+            this.LookPrductMaterial.Properties.ValueMember = "ProductMaterialId";
             this.LookPrductMaterial.StyleController = this.layoutControl1;
             // 
             // LookTestMouldMachine
@@ -1962,6 +1961,12 @@
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowEdit = false;
             // 
+            // gridColumn3
+            // 
+            resources.ApplyResources(this.gridColumn3, "gridColumn3");
+            this.gridColumn3.FieldName = "Description";
+            this.gridColumn3.Name = "gridColumn3";
+            // 
             // layoutControlGroup4
             // 
             resources.ApplyResources(this.layoutControlGroup4, "layoutControlGroup4");
@@ -3057,12 +3062,6 @@
             this.emptySpaceItem1.Name = "emptySpaceItem1";
             this.emptySpaceItem1.Size = new System.Drawing.Size(898, 10);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // gridColumn3
-            // 
-            resources.ApplyResources(this.gridColumn3, "gridColumn3");
-            this.gridColumn3.FieldName = "Description";
-            this.gridColumn3.Name = "gridColumn3";
             // 
             // ProductsMouldTestEditForm
             // 

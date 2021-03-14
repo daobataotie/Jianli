@@ -6524,10 +6524,6 @@
       <DependentUpon>SendMailList.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="produceManager\MouldCategory\ProductMouldEditForm.zh-CHS.resx">
-      <DependentUpon>ProductMouldEditForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="produceManager\MouldCategory\ProductsMouldTestEditForm.resx">
       <DependentUpon>ProductsMouldTestEditForm.cs</DependentUpon>
       <SubType>Designer</SubType>

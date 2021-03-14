@@ -9,7 +9,7 @@ using System;
 namespace Book.Model
 {
 	/// <summary>
-	/// 模具类型
+	/// 模具材質
 	/// </summary>
 	[Serializable]
 	public partial class MouldCategory

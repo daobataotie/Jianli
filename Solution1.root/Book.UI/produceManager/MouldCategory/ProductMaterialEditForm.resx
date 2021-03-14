@@ -117,9 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="imageCollection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="imageCollection1.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>17, 17</value>
-  </metadata>
+  </data>
   <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="imageCollection1.ImageStream" type="DevExpress.Utils.ImageCollectionStreamer, DevExpress.Utils.v10.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -347,7 +348,6 @@
         G7VaG416h2uErdlFs9VFu/2D50cPvwGXmUgZ0muHuwAAAABJRU5ErkJgggs=
 </value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="memoEditProductMaterialDescription.Location" type="System.Drawing.Point, System.Drawing">
     <value>76, 37</value>
   </data>
@@ -412,9 +412,9 @@
   <data name="&gt;&gt;textEditId.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <metadata name="bindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="bindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>270, 17</value>
-  </metadata>
+  </data>
   <data name="gridControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 81</value>
   </data>
@@ -521,9 +521,9 @@
   <data name="&gt;&gt;layoutControl1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="$this.Localizable" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>7, 14</value>
   </data>
@@ -531,7 +531,7 @@
     <value>650, 469</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>模具材质</value>
+    <value>成品材质</value>
   </data>
   <data name="&gt;&gt;imageCollection1.Name" xml:space="preserve">
     <value>imageCollection1</value>

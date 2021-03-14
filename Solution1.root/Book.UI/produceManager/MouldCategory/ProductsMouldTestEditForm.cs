@@ -57,7 +57,7 @@ namespace Book.UI.produceManager.MouldCategory
             //模具、机台、成品材质、成品类别页面加载绑定
             this.bindingSourceMould.DataSource = this._ProductMouldManager.Select();
             this.bindingSourcePronteMachine.DataSource = this._PronoteMachineManager.Select();
-            this.bindingMouldMaterial.DataSource = this._MouldCategoryManager.Select();
+            this.bindingMouldMaterial.DataSource = this._ProductMaterialManager.Select();
 
             /*试模人员、射出人员、强化人员、安规、清晰、光学
             雷射人员、冲击人员、内容人员、开发备注人员、主管1、主管2绑定*/

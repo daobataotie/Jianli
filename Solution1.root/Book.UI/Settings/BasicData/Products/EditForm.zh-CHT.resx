@@ -1047,4 +1047,10 @@
   <data name="layoutControlItem33.Text" xml:space="preserve">
     <value>商品描述</value>
   </data>
+  <data name="layoutControlItem104.Text" xml:space="preserve">
+    <value>委外發料單已分配數量：</value>
+  </data>
+  <data name="layoutControlItem98.Text" xml:space="preserve">
+    <value>領料單已分配數量：</value>
+  </data>
 </root>

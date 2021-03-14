@@ -847,10 +847,10 @@
     <value>生產進度計劃</value>
   </data>
   <data name="barButtonItem252.Caption" xml:space="preserve">
-    <value>成品材質</value>
+    <value>模具材質</value>
   </data>
   <data name="barButtonItem253.Caption" xml:space="preserve">
-    <value>模具材質</value>
+    <value>成品材質</value>
   </data>
   <data name="barButtonItem254.Caption" xml:space="preserve">
     <value>產品模具</value>
