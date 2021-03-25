@@ -120,13 +120,13 @@ namespace Book.UI.Settings.BasicData.Customs
             return true;
         }
 
-        protected override void Undo()
+        protected override bool Undo()
         {
             this._CustomerProductPriceList = this._manage.SelectByCustomerId((this.bindingSourceCustomer.Current as Model.Customer).CustomerId);
             AnalyzePriceRange((this.bindingSourceCustomerProduct.Current as Model.CustomerProductPrice).CustomerProductPriceRage);
             this.gridControl2.RefreshDataSource();
             this.gridControl3.RefreshDataSource();
-            base.Undo();
+            return base.Undo();
         }
 
         protected override void Save()

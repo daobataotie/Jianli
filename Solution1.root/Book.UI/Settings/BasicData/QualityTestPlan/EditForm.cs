@@ -127,10 +127,6 @@ namespace Book.UI.Settings.BasicData.QualityTestPlan
             //this.qualityTextPlan.QualityTestPlanId = this.qualityTextPlanManager.GetId();
         }
 
-        protected override void Undo()
-        {
-        }
-
         protected override void MovePrev()
         {
             Model.QualityTestPlan qualitytestplan = this.qualityTextPlanManager.GetPrev(this.qualityTextPlan);

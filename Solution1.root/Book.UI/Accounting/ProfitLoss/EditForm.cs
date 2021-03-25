@@ -105,10 +105,6 @@ namespace Book.UI.Accounting.ProfitLoss
             //this.AtProfitLoss.CustomInspectionRuleId = this.AtProfitLossManager.GetId();
         }
 
-        protected override void Undo()
-        {
-        }
-
         protected override void MovePrev()
         {
             Model.AtProfitLoss AtProfitLoss = this.AtProfitLossManager.GetPrev(this.AtProfitLoss);

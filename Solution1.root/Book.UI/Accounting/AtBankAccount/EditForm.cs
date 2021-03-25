@@ -105,10 +105,6 @@ namespace Book.UI.Accounting.AtBankAccount
             this.AtBankAccount.Id = this.AtBankAccountManager.GetId();
         }
 
-        protected override void Undo()
-        {
-        }
-
         protected override void MovePrev()
         {
             Model.AtBankAccount AtBankAccount = this.AtBankAccountManager.GetPrev(this.AtBankAccount);

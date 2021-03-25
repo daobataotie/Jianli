@@ -129,10 +129,6 @@ namespace Book.UI.Settings.BasicData.CustomerCategory
             this.customerCategory = new Model.CustomerCategory();            
         }
 
-        protected override void Undo()
-        {
-        }
-
         protected override void MovePrev()
         {
             Model.CustomerCategory customerCategory = this.customerCategoryManager.GetPrev(this.customerCategory);

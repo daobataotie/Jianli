@@ -164,9 +164,16 @@ namespace Book.UI.Settings.BasicData
                     ClickSave(flagAut, KeyIdName, tableName, tableKeyId, tableDesc);
                     break;
                 case "undo":
-                    this.MoveLast();
-                    this.action = "view";
-                    this.Refresh();
+                    if (this.Undo())
+                    {
+                        this.MoveLast();
+                        this.action = "view";
+                        this.Refresh();
+                    }
+                    else
+                    {
+                        ClickSave(flagAut, KeyIdName, tableName, tableKeyId, tableDesc);
+                    }
                     break;
                 case "new":
                     this.AddNew();
@@ -174,7 +181,7 @@ namespace Book.UI.Settings.BasicData
                     this.Refresh();
                     break;
                 case "update":
-                    if (MessageBox.Show("確定要修改？", "提示", MessageBoxButtons.OKCancel,MessageBoxIcon.Question) == DialogResult.OK)
+                    if (MessageBox.Show("確定要修改？", "提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                     {
                         this.action = "update";
                         this.Refresh();
@@ -538,8 +545,13 @@ namespace Book.UI.Settings.BasicData
         {
         }
 
-        protected virtual void Undo()
+        /// <summary>
+        /// 取消，默认为true，取消编辑，移到最后一笔；可重写，为false，则调用保存。
+        /// </summary>
+        /// <returns></returns>
+        protected virtual bool Undo()
         {
+            return true;
         }
 
         protected virtual void MovePrev()

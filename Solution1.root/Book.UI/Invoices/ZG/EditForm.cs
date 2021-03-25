@@ -134,11 +134,6 @@ namespace Book.UI.Invoices.ZG
                 this._invoiceZGManager.Update(this._invoiceZG);
         }
 
-        protected override void Undo()
-        {
-
-        }
-
         protected override void MoveFirst()
         {
             this._invoiceZG = this._invoiceZGManager.GetFirst();

@@ -409,6 +409,16 @@ namespace Book.UI.Accounting.AtSummon
             return this.atSummonManager.HasRowsBefore(this.atSummon);
         }
 
+        protected override bool Undo()
+        {
+            if (MessageBox.Show("確定，保存單據\r\n取消，取消編輯", "單據尚未保存，是否保存？", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
         private void gridView1_CustomColumnDisplayText(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventArgs e)
         {
             //if (e.ListSourceRowIndex < 0) return;

@@ -128,10 +128,6 @@ namespace Book.UI.Accounting.AtBillsIncome
             //this.AtBillsIncome.CustomInspectionRuleId = this.AtBillsIncomeManager.GetId();
         }
 
-        protected override void Undo()
-        {
-        }
-
         protected override void MovePrev()
         {
             Model.AtBillsIncome AtBillsIncome = this.AtBillsIncomeManager.GetPrev(this.AtBillsIncome);

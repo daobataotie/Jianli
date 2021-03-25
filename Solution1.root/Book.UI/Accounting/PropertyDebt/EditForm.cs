@@ -105,10 +105,6 @@ namespace Book.UI.Accounting.PropertyDebt
             //this.AtPropertyDebt.CustomInspectionRuleId = this.AtPropertyDebtManager.GetId();
         }
 
-        protected override void Undo()
-        {
-        }
-
         protected override void MovePrev()
         {
             Model.AtPropertyDebt AtPropertyDebt = this.AtPropertyDebtManager.GetPrev(this.AtPropertyDebt);

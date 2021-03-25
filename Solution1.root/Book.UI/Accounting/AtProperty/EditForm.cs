@@ -114,10 +114,6 @@ namespace Book.UI.Accounting.AtProperty
             this.atProperty.Id = this.atPropertyManager.GetId();
         }
 
-        protected override void Undo()
-        {
-        }
-
         protected override void MovePrev()
         {
             Model.AtProperty atProperty = this.atPropertyManager.GetPrev(this.atProperty);

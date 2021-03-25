@@ -122,10 +122,6 @@ namespace Book.UI.Settings.BasicData.CustomInspectionRule
             //this.customInspection.CustomInspectionRuleId = this.customInspectionRuleManager.GetId();
         }
 
-        protected override void Undo()
-        {
-        }
-
         protected override void MovePrev()
         {
             Model.CustomInspectionRule customInspection = this.customInspectionRuleManager.GetPrev(this.customInspection);

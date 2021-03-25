@@ -103,10 +103,6 @@ namespace Book.UI.Settings.BasicData.FreightedCompany
             //this.company.CustomInspectionRuleId = this.companyManager.GetId();
         }
 
-        protected override void Undo()
-        {
-        }
-
         protected override void MovePrev()
        {
            Model.FreightedCompany company = this.companyManager.GetPrev(this.company);
