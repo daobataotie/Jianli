@@ -17,11 +17,9 @@ namespace Book.UI.Invoices.XS
         {
             InitializeComponent();
 
-            this.invoice = this.InvoiceXSManager.Get(invoiceid);
+            this.invoice = this.InvoiceXSManager.GetDetails(invoiceid);
             if (invoice == null)
                 return;
-
-            this.invoice.Details = this.InvoiceXSDetailManager.Select(this.invoice);
 
             this.DataSource = this.invoice.Details;
 
@@ -70,11 +68,15 @@ namespace Book.UI.Invoices.XS
 
             this.TCCurrency.DataBindings.Add("Text", this.DataSource, Model.InvoiceXSDetail.PRO_CurrencyEN);
 
+            this.lblDetailNote.DataBindings.Add("Text", this.DataSource, Model.InvoiceXSDetail.PRO_InvoiceXSDetailNote);
+
+            this.lbl_CusXOId.DataBindings.Add("Text", this.DataSource, "InvoiceXO." + Model.InvoiceXO.PRO_CustomerInvoiceXOId);
+
+            //…R¿‚
             this.xrLabelHeji.Text += this.invoice.InvoiceHeji == null ? "0" : this.invoice.InvoiceHeji.Value.ToString("N");
             this.xrLabelTax.Text += this.invoice.InvoiceTax == null ? "0" : this.invoice.InvoiceTax.Value.ToString("N");
             this.xrLabelTatol.Text += this.invoice.InvoiceTotal == null ? "0" : this.invoice.InvoiceTotal.Value.ToString("N");
             this.lbl_TotalTaibi.Text += this.invoice.InvoiceTaibiTotal == null ? "0" : this.invoice.InvoiceTaibiTotal.Value.ToString("N");
-            this.lblDetailNote.DataBindings.Add("Text", this.DataSource, Model.InvoiceXSDetail.PRO_InvoiceXSDetailNote);
         }
     }
 }

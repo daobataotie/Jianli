@@ -17,11 +17,9 @@ namespace Book.UI.Invoices.XS
         {
             InitializeComponent();
 
-            this.invoice = this.InvoiceXSManager.Get(invoiceid);
+            this.invoice = this.InvoiceXSManager.GetDetails(invoiceid);
             if (invoice == null)
                 return;
-
-            this.invoice.Details = this.InvoiceXSDetailManager.Select(this.invoice);
 
             this.DataSource = this.invoice.Details;
 
@@ -68,6 +66,7 @@ namespace Book.UI.Invoices.XS
 
             this.TCCurrency.DataBindings.Add("Text", this.DataSource, Model.InvoiceXSDetail.PRO_CurrencyEN);
             this.lblDetailNote.DataBindings.Add("Text", this.DataSource, Model.InvoiceXSDetail.PRO_InvoiceXSDetailNote);
+            this.lbl_CusXOId.DataBindings.Add("Text", this.DataSource, "InvoiceXO." + Model.InvoiceXO.PRO_CustomerInvoiceXOId);
         }
     }
 }
