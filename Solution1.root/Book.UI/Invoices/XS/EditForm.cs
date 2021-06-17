@@ -371,7 +371,7 @@ namespace Book.UI.Invoices.XS
             this.flag = 1;
             invoice.InvoiceTaxrate = 5;
             invoice.Setdetails.Clear();
-            invoice.Currency = "美金";
+            invoice.Currency = "新台幣";
             dic.Clear();
             if (this.invoicexo != null)
             {
